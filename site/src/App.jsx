@@ -47,25 +47,69 @@ export default function App() {
         <div className="version">{version}{build ? ` · build ${build}` : ""}</div>
       </header>
 
-      <Section title="External Offsets">
+      <Section title="Build">
+        <FileLink href={`${base}/build.json`}>Build.json</FileLink>
+        <FileLink href={`${base}/hashes.json`}>Hashes.json</FileLink>
+        <FileLink href={`${base}/info.json`}>Info.json</FileLink>
+        <FileLink href={`${base}/version.txt`}>Version.txt</FileLink>
+      </Section>
+
+      <Section title="Offsets">
         <FileLink href={`${base}/offsets.hpp`}>Offsets.hpp</FileLink>
         <FileLink href={`${base}/offsets.cs`}>Offsets.cs</FileLink>
         <FileLink href={`${base}/offsets.json`}>Offsets.json</FileLink>
         <FileLink href={`${base}/OffsetsHex.json`}>OffsetsHex.json</FileLink>
         <FileLink href={`${base}/offsets.txt`}>Offsets.txt</FileLink>
+        <FileLink href={`${base}/offsets_all.json`}>OffsetsAll.json</FileLink>
       </Section>
 
-      <Section title="FFlags">
-        <FileLink href={`${base}/fflags.hpp`}>FFlags.hpp</FileLink>
-        <FileLink href={`${base}/fflags.cs`}>FFlags.cs</FileLink>
-        <FileLink href={`${base}/fflags.json`}>FFlags.json</FileLink>
-        <FileLink href={`${base}/FFlagsHex.json`}>FFlagsHex.json</FileLink>
-        <FileLink href={`${base}/fflags.txt`}>FFlags.txt</FileLink>
+      <Section title="Patterns">
+        <FileLink href={`${base}/patterns.json`}>Patterns.json</FileLink>
+        <FileLink href={`${base}/patterns.hpp`}>Patterns.hpp</FileLink>
+        <FileLink href={`${base}/recovered_patterns.json`}>RecoveredPatterns.json</FileLink>
+        <FileLink href={`${base}/scanner_patterns.txt`}>ScannerPatterns.txt</FileLink>
+        <FileLink href={`${base}/re_targets.json`}>ReverseTargets.json</FileLink>
       </Section>
 
-      <Section title="Misc">
-        <FileLink href={`${base}/struct.hpp`}>Struct.hpp</FileLink>
+      <Section title="Classes">
+        <FileLink href={`${base}/client_dll.hpp`}>Client.hpp</FileLink>
+        <FileLink href={`${base}/client_dll.cs`}>Client.cs</FileLink>
+        <FileLink href={`${base}/client_dll.json`}>Client.json</FileLink>
+        <FileLink href={`${base}/server_dll.hpp`}>Server.hpp</FileLink>
         <FileLink href={`${base}/types.json`}>Types.json</FileLink>
+      </Section>
+
+      <Section title="Interfaces">
+        <FileLink href={`${base}/interfaces.hpp`}>Interfaces.hpp</FileLink>
+        <FileLink href={`${base}/interfaces.cs`}>Interfaces.cs</FileLink>
+        <FileLink href={`${base}/interfaces.json`}>Interfaces.json</FileLink>
+        <FileLink href={`${base}/sdk/interfaces/vtables.json`}>VTables.json</FileLink>
+      </Section>
+
+      <Section title="ConVars">
+        <FileLink href={`${base}/sdk/convars/convars.json`}>ConVars.json</FileLink>
+        <FileLink href={`${base}/sdk/convars/convars.hpp`}>ConVars.hpp</FileLink>
+      </Section>
+
+      <Section title="Game Events">
+        <FileLink href={`${base}/sdk/gameevents/gameevents.json`}>GameEvents.json</FileLink>
+      </Section>
+
+      <Section title="Entities">
+        <FileLink href={`${base}/sdk/entities/entities.json`}>Entities.json</FileLink>
+      </Section>
+
+      <Section title="Engine">
+        <FileLink href={`${base}/sdk/engine/engine_structs.json`}>EngineStructs.json</FileLink>
+      </Section>
+
+      <Section title="Features">
+        <FileLink href={`${base}/sdk/verified_features.json`}>Features.json</FileLink>
+      </Section>
+
+      <Section title="SDK">
+        <FileLink href={`${base}/struct.hpp`}>Struct.hpp</FileLink>
+        <FileLink href={`${base}/sdk/cs2.hpp`}>CS2.hpp</FileLink>
       </Section>
     </main>
   );
