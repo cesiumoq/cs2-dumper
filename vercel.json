@@ -4,6 +4,14 @@
     "outputDirectory":  "site/dist",
     "rewrites":  [
                      {
+                         "destination":  "/data/version-:version/:path*",
+                         "source":  "/version-:version/:path*"
+                     },
+                     {
+                         "destination":  "/data/builds/:build/:path*",
+                         "source":  "/build-:build/:path*"
+                     },
+                     {
                          "destination":  "/data/builds/:build/offsets.hpp",
                          "source":  "/build-:build/Offsets.hpp"
                      },

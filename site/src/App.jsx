@@ -1,203 +1,72 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
-const fmt = (n) => new Intl.NumberFormat("fr-FR").format(n ?? 0);
-const pct = (a, b) => (b ? ((a / b) * 100).toFixed(2) : "0.00");
+const FILE_ICON = "M56 20h96l56 56v140a20 20 0 0 1-20 20H56a20 20 0 0 1-20-20V40a20 20 0 0 1 20-20Zm92 24v40h40";
 
-async function getJson(path) {
-  const response = await fetch(path, { cache: "no-store" });
-  if (!response.ok) throw new Error(`${path}: ${response.status}`);
-  return response.json();
+function FileLink({ href, children }) {
+  return (
+    <a className="link-button" href={href} target="_blank" rel="noreferrer">
+      <span className="link-icon" aria-hidden="true">
+        <svg viewBox="0 0 256 256" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round">
+          <path d={FILE_ICON} />
+        </svg>
+      </span>
+      <span className="link-text">{children}</span>
+    </a>
+  );
+}
+
+function Section({ title, children }) {
+  return (
+    <section className="section">
+      <h2>{title}</h2>
+      <div className="links">{children}</div>
+    </section>
+  );
 }
 
 export default function App() {
-  const [index, setIndex] = useState(null);
-  const [build, setBuild] = useState(null);
-  const [patterns, setPatterns] = useState([]);
-  const [offsets, setOffsets] = useState([]);
-  const [tab, setTab] = useState("patterns");
-  const [query, setQuery] = useState("");
-  const [error, setError] = useState("");
+  const [version, setVersion] = useState("latest");
+  const [build, setBuild] = useState("");
 
   useEffect(() => {
-    (async () => {
-      try {
-        const idx = await getJson("./data/index.json");
-        setIndex(idx);
-        const b = await getJson(`./data/builds/${idx.latest}/build.json`);
-        setBuild(b);
-        const p = await getJson(`./data/builds/${idx.latest}/patterns.json`);
-        const recovered = await getJson(`./data/builds/${idx.latest}/recovered_patterns.json`).catch(() => ({}));
-        const recoveredRows = Object.entries(recovered).map(([name, item]) => ({
-          name,
-          module: item.module,
-          rva: item.rva,
-          resolve: item.resolve,
-        }));
-        setPatterns([...(Array.isArray(p.patterns) ? p.patterns : []), ...recoveredRows]);
-        const o = await getJson(`./data/builds/${idx.latest}/offsets_all.json`);
-        const rows = [];
-        for (const [module, entries] of Object.entries(o.modules || {})) {
-          for (const entry of entries) rows.push({ module, ...entry });
-        }
-        setOffsets(rows);
-      } catch (e) {
-        setError(e.message);
-      }
-    })();
+    fetch("./data/latest/build.json", { cache: "no-store" })
+      .then((r) => r.json())
+      .then((data) => {
+        setBuild(String(data.build_number ?? ""));
+        setVersion(data.version || `version-${String(data.build_number ?? "latest")}`);
+      })
+      .catch(() => {});
   }, []);
 
-  const sig = build?.signatures || {};
-  const coverage = pct(sig.found, sig.total);
-
-  const filteredPatterns = useMemo(() => {
-    const q = query.toLowerCase().trim();
-    return patterns
-      .filter((p) => !q || `${p.name} ${p.module} ${p.rva}`.toLowerCase().includes(q))
-      .slice(0, 500);
-  }, [patterns, query]);
-
-  const filteredOffsets = useMemo(() => {
-    const q = query.toLowerCase().trim();
-    return offsets
-      .filter((o) => !q || `${o.name} ${o.module} ${o.kind} ${o.rva}`.toLowerCase().includes(q))
-      .slice(0, 500);
-  }, [offsets, query]);
+  const base = `./${version}`;
 
   return (
-    <main>
-      <header className="hero">
-        <div className="eyebrow">OFFSETS · SIGNATURES · SCHEMAS · SDK</div>
-        <div className="title-row">
-          <h1>CS2 Dumper</h1>
-          <span className={`pill ${build?.valid ? "ok" : "warn"}`}>
-            {build ? (build.valid ? "valid" : "preview") : "loading"}
-          </span>
-        </div>
-        <p className="lead">
-          Complete CS2 offsets, signatures, schemas and SDK, published by build.
-        </p>
-        <div className="stats">
-          <Stat label="build" value={build?.build_number ?? "—"} />
-          <Stat label="signatures" value={`${fmt(sig.found)} / ${fmt(sig.total)}`} />
-          <Stat label="coverage" value={`${coverage}%`} />
-          <Stat label="offsets" value={fmt(build?.offsets?.count)} />
-          <Stat label="modules" value={fmt(Object.keys(build?.modules || {}).length)} />
-        </div>
-        {error && <div className="alert">Unable to load data: {error}</div>}
+    <main className="page">
+      <header className="header">
+        <h1>CS2 Dumper</h1>
+        <div className="version">{version}{build ? ` · build ${build}` : ""}</div>
       </header>
 
-      <section className="panel">
-        <div className="toolbar">
-          <div className="tabs">
-            <button className={tab === "patterns" ? "active" : ""} onClick={() => setTab("patterns")}>
-              Patterns <span>{fmt(build?.signatures?.found ?? patterns.length)}</span>
-            </button>
-            <button className={tab === "offsets" ? "active" : ""} onClick={() => setTab("offsets")}>
-              Offsets <span>{fmt(offsets.length)}</span>
-            </button>
-            <button className={tab === "builds" ? "active" : ""} onClick={() => setTab("builds")}>
-              Builds <span>{fmt(index?.builds?.length)}</span>
-            </button>
-          </div>
-          {tab !== "builds" && (
-            <input
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search name, module, RVA…"
-              aria-label="Search"
-            />
-          )}
-        </div>
+      <Section title="External Offsets">
+        <FileLink href={`${base}/offsets.hpp`}>Offsets.hpp</FileLink>
+        <FileLink href={`${base}/offsets.cs`}>Offsets.cs</FileLink>
+        <FileLink href={`${base}/offsets.json`}>Offsets.json</FileLink>
+        <FileLink href={`${base}/OffsetsHex.json`}>OffsetsHex.json</FileLink>
+        <FileLink href={`${base}/offsets.txt`}>Offsets.txt</FileLink>
+      </Section>
 
-        {tab === "patterns" && (
-          <Table
-            head={["Name", "Module", "RVA", "Type"]}
-            rows={filteredPatterns.map((p) => [p.name, p.module, p.rva ?? "—", p.resolve ?? "—"])}
-          />
-        )}
-        {tab === "offsets" && (
-          <Table
-            head={["Name", "Module", "RVA", "Type"]}
-            rows={filteredOffsets.map((o) => [o.name, o.module, o.rva ?? "—", o.kind ?? "—"])}
-          />
-        )}
-        {tab === "builds" && (
-          <Table
-            head={["Build", "Status", "Published", "Data"]}
-            rows={(index?.builds || []).map((b) => [
-              b.build,
-              b.valid ? "valid" : "preview",
-              new Date(b.published_at).toLocaleString("fr-FR"),
-              "build.json",
-            ])}
-          />
-        )}
-        <div className="foot">
-          {tab === "patterns" && filteredPatterns.length === 500 && <span>Showing the first 500 results.</span>}
-          {tab === "offsets" && filteredOffsets.length === 500 && <span>Showing the first 500 results.</span>}
-          {build && !build.valid && <span className="muted">Preview build: {build.reason}</span>}
-        </div>
-      </section>
+      <Section title="FFlags">
+        <FileLink href={`${base}/fflags.hpp`}>FFlags.hpp</FileLink>
+        <FileLink href={`${base}/fflags.cs`}>FFlags.cs</FileLink>
+        <FileLink href={`${base}/fflags.json`}>FFlags.json</FileLink>
+        <FileLink href={`${base}/FFlagsHex.json`}>FFlagsHex.json</FileLink>
+        <FileLink href={`${base}/fflags.txt`}>FFlags.txt</FileLink>
+      </Section>
 
-      <section className="panel api-panel">
-        <div className="api-head">
-          <h2>API</h2>
-          <span>GET · no auth</span>
-        </div>
-        <p className="api-lead">
-          Every build is served as plain files under <code>/build-{build?.build_number ?? "xxxx"}/</code>.
-        </p>
-        <div className="api-grid">
-          {[
-            ["offsets.hpp", "C++ offsets"],
-            ["offsets.cs", "C# offsets"],
-            ["offsets.json", "JSON offsets"],
-            ["offsets_hex.json", "hex JSON"],
-            ["offsets.txt", "text offsets"],
-            ["fflags.hpp", "C++ flags"],
-            ["fflags.json", "JSON flags"],
-            ["misc/struct.hpp", "SDK header"],
-            ["misc/types.json", "schema types"],
-            ["version.txt", "build version"],
-          ].map(([path, label]) => (
-            <a key={path} href={`./build-${build?.build_number ?? "xxxx"}/${path}`}>
-              <b>{label}</b>
-              <span>/{`build-${build?.build_number ?? "xxxx"}/${path}`}</span>
-            </a>
-          ))}
-        </div>
-      </section>
+      <Section title="Misc">
+        <FileLink href={`${base}/struct.hpp`}>Struct.hpp</FileLink>
+        <FileLink href={`${base}/types.json`}>Types.json</FileLink>
+      </Section>
     </main>
-  );
-}
-
-function Stat({ label, value }) {
-  return (
-    <div className="stat">
-      <b>{value}</b>
-      <span>{label}</span>
-    </div>
-  );
-}
-
-function Table({ head, rows }) {
-  return (
-    <div className="table-wrap">
-      <table>
-        <thead>
-          <tr>{head.map((h) => <th key={h}>{h}</th>)}</tr>
-        </thead>
-        <tbody>
-          {rows.map((row, i) => (
-            <tr key={i}>
-              {row.map((cell, j) => <td key={j} className={j === 0 ? "mono" : ""}>{cell}</td>)}
-            </tr>
-          ))}
-          {!rows.length && (
-            <tr><td colSpan={head.length} className="empty">No results.</td></tr>
-          )}
-        </tbody>
-      </table>
-    </div>
   );
 }
