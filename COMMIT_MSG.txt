@@ -1,11 +1,11 @@
-Build 14194
+Update the build 14194
 
 Pattern scan
-561 found / 578 scanned
+577 found / 578 scanned
 Missing
-17
+1
 Coverage
-97.06%
+99.83%
 
 Patterns
 578
@@ -20,12 +20,10 @@ ConVars
 Game Events
 273
 Weapons
-17 (session snapshot)
+5 (session snapshot)
 Entities
-182
+167
 Engine
 12
 Features
 6
-
-Status: preview (signature resolution incomplete)

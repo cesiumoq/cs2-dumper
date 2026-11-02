@@ -3,7 +3,7 @@
 // module:        resourcesystem.dll
 // classes:       61
 // enums:         5
-// generated_at:  2026-11-02T20:59:47.486319200+00:00
+// generated_at:  2026-11-02T23:19:40.149674800+00:00
 //
 // Use:
 //   auto* pawn = reinterpret_cast<C_CSPlayerPawn*>(addr);
@@ -117,14 +117,6 @@ namespace resourcesystem {
         READ_ONLY = 0x1,
     };
 
-    // InfoForResourceTypeCRenderMesh
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCRenderMesh {
-    public:
-    };
-
     // InfoForResourceTypeCTextureBase
     //   fields: 0
     //   size: 0x1
@@ -133,44 +125,55 @@ namespace resourcesystem {
     public:
     };
 
-    // InfoForResourceTypeISmartProp
+    // InfoForResourceTypeCPanoramaStyle
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeISmartProp {
+    class InfoForResourceTypeCPanoramaStyle {
     public:
     };
 
-    // InfoForResourceTypeCResponseRulesList
+    // InfoForResourceTypeCVPhysXSurfacePropertiesList
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCResponseRulesList {
+    class InfoForResourceTypeCVPhysXSurfacePropertiesList {
     public:
     };
 
-    // InfoForResourceTypeCTestResourceData
+    // InfoForResourceTypeIPulseGraphDef
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCTestResourceData {
+    class InfoForResourceTypeIPulseGraphDef {
     public:
     };
 
-    // InfoForResourceTypeCJavaScriptResource
+    // ManifestTestResource_t
+    //   fields: 2
+    //   size: 0x10
+    //   @MGetKV3ClassDefaults
+    class ManifestTestResource_t {
+    public:
+        SCHEMA_FIELD(::CUtlString                    , m_name                                          , 0x0) // CUtlString [MKV3TransferName]
+        SCHEMA_FIELD(CStrongHandle<InfoForResourceTypeManifestTestResource_t>, m_child                                         , 0x8) // CStrongHandle<InfoForResourceTypeManifestTestResource_t> [MKV3TransferName]
+    };
+
+    // InfoForResourceTypeCTypeScriptResource
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCJavaScriptResource {
+    class InfoForResourceTypeCTypeScriptResource {
     public:
     };
 
-    // InfoForResourceTypeCPostProcessingResource
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCPostProcessingResource {
+    // PackedAABB_t
+    //   fields: 2
+    //   size: 0x8
+    class PackedAABB_t {
     public:
+        SCHEMA_FIELD(std::uint32_t                   , m_nPackedMin                                    , 0x0) // uint32
+        SCHEMA_FIELD(std::uint32_t                   , m_nPackedMax                                    , 0x4) // uint32
     };
 
     // NoiseStreamDef_t
@@ -193,33 +196,99 @@ namespace resourcesystem {
         SCHEMA_FIELD(CUtlVector<NoiseOscillatorDef_t>, m_Oscillators                                   , 0x38) // CUtlVector<NoiseOscillatorDef_t>
     };
 
-    // InfoForResourceTypeCNmSkeleton
+    // InfoForResourceTypeCPanoramaLayout
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCNmSkeleton {
+    class InfoForResourceTypeCPanoramaLayout {
     public:
     };
 
-    // InfoForResourceTypeCSurfaceGraph
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCSurfaceGraph {
-    public:
-    };
-
-    // FunctionInfo_t
-    //   fields: 5
-    //   size: 0x20
+    // CFuseProgram
+    //   fields: 4
+    //   size: 0x50
     //   @MGetKV3ClassDefaults
-    class FunctionInfo_t {
+    class CFuseProgram {
     public:
-        SCHEMA_FIELD(::CUtlString                    , m_name                                          , 0x8) // CUtlString
-        SCHEMA_FIELD(CUtlStringToken                 , m_nameToken                                     , 0x10) // CUtlStringToken
-        SCHEMA_FIELD(std::int32_t                    , m_nParamCount                                   , 0x14) // int32
-        SCHEMA_FIELD(FuseFunctionIndex_t             , m_nIndex                                        , 0x18) // FuseFunctionIndex_t
-        SCHEMA_FIELD(bool                            , m_bIsPure                                       , 0x1A) // bool
+        SCHEMA_FIELD(CUtlVector<uint8>               , m_programBuffer                                 , 0x0) // CUtlVector<uint8>
+        SCHEMA_FIELD(CUtlVector<FuseVariableIndex_t> , m_variablesRead                                 , 0x18) // CUtlVector<FuseVariableIndex_t>
+        SCHEMA_FIELD(CUtlVector<FuseVariableIndex_t> , m_variablesWritten                              , 0x30) // CUtlVector<FuseVariableIndex_t>
+        SCHEMA_FIELD(std::int32_t                    , m_nMaxTempVarsUsed                              , 0x48) // int32
+    };
+
+    // InfoForResourceTypeCPanoramaDynamicImages
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCPanoramaDynamicImages {
+    public:
+    };
+
+    // InfoForResourceTypeIParticleSystemDefinition
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeIParticleSystemDefinition {
+    public:
+    };
+
+    // InfoForResourceTypeCDOTAPatchNotesList
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCDOTAPatchNotesList {
+    public:
+    };
+
+    // ConstantInfo_t
+    //   fields: 3
+    //   size: 0x10
+    //   @MGetKV3ClassDefaults
+    class ConstantInfo_t {
+    public:
+        SCHEMA_FIELD(::CUtlString                    , m_name                                          , 0x0) // CUtlString
+        SCHEMA_FIELD(CUtlStringToken                 , m_nameToken                                     , 0x8) // CUtlStringToken
+        SCHEMA_FIELD(float                           , m_flValue                                       , 0xC) // float32
+    };
+
+    // FuseFunctionIndex_t
+    //   fields: 1
+    //   size: 0x2
+    class FuseFunctionIndex_t {
+    public:
+        SCHEMA_FIELD(std::uint16_t                   , m_Value                                         , 0x0) // uint16
+    };
+
+    // InfoForResourceTypeCAnimationGroup
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCAnimationGroup {
+    public:
+    };
+
+    // InfoForResourceTypeWorld_t
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeWorld_t {
+    public:
+    };
+
+    // FuseVariableIndex_t
+    //   fields: 1
+    //   size: 0x2
+    class FuseVariableIndex_t {
+    public:
+        SCHEMA_FIELD(std::uint16_t                   , m_Value                                         , 0x0) // uint16
+    };
+
+    // InfoForResourceTypeCVDSPResource
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCVDSPResource {
+    public:
     };
 
     // InfoForResourceTypeCDotaItemDefinitionResource
@@ -230,11 +299,19 @@ namespace resourcesystem {
     public:
     };
 
-    // InfoForResourceTypeCVDSPResource
+    // InfoForResourceTypeCEntityLump
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCVDSPResource {
+    class InfoForResourceTypeCEntityLump {
+    public:
+    };
+
+    // InfoForResourceTypeCPhysAggregateData
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCPhysAggregateData {
     public:
     };
 
@@ -252,91 +329,20 @@ namespace resourcesystem {
         SCHEMA_FIELD(FuseVariableAccess_t            , m_eAccess                                       , 0x10) // FuseVariableAccess_t
     };
 
-    // NoiseOscillatorDef_t
-    //   fields: 3
-    //   size: 0xC
-    //   @MGetKV3ClassDefaults
-    class NoiseOscillatorDef_t {
-    public:
-        SCHEMA_FIELD(float                           , m_flPhase                                       , 0x0) // float32 [MPropertyAttributeRange]
-        SCHEMA_FIELD(float                           , m_flFrequency                                   , 0x4) // float32 [MPropertyAttributeRange]
-        SCHEMA_FIELD(float                           , m_flAmplitude                                   , 0x8) // float32 [MPropertyAttributeRange]
-    };
-
-    // InfoForResourceTypeCNmGraphDefinition
+    // InfoForResourceTypeCVDataResource
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCNmGraphDefinition {
+    class InfoForResourceTypeCVDataResource {
     public:
     };
 
-    // InfoForResourceTypeCPhysAggregateData
+    // InfoForResourceTypeCMorphSetData
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCPhysAggregateData {
+    class InfoForResourceTypeCMorphSetData {
     public:
-    };
-
-    // InfoForResourceTypeCModel
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCModel {
-    public:
-    };
-
-    // ConstantInfo_t
-    //   fields: 3
-    //   size: 0x10
-    //   @MGetKV3ClassDefaults
-    class ConstantInfo_t {
-    public:
-        SCHEMA_FIELD(::CUtlString                    , m_name                                          , 0x0) // CUtlString
-        SCHEMA_FIELD(CUtlStringToken                 , m_nameToken                                     , 0x8) // CUtlStringToken
-        SCHEMA_FIELD(float                           , m_flValue                                       , 0xC) // float32
-    };
-
-    // InfoForResourceTypeCDOTANovelsList
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCDOTANovelsList {
-    public:
-    };
-
-    // InfoForResourceTypeIAnimGraphModelBinding
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeIAnimGraphModelBinding {
-    public:
-    };
-
-    // InfoForResourceTypeCAnimationGroup
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCAnimationGroup {
-    public:
-    };
-
-    // InfoForResourceTypeCCompositeMaterialKit
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCCompositeMaterialKit {
-    public:
-    };
-
-    // PackedAABB_t
-    //   fields: 2
-    //   size: 0x8
-    class PackedAABB_t {
-    public:
-        SCHEMA_FIELD(std::uint32_t                   , m_nPackedMin                                    , 0x0) // uint32
-        SCHEMA_FIELD(std::uint32_t                   , m_nPackedMax                                    , 0x4) // uint32
     };
 
     // FourQuaternions
@@ -350,40 +356,6 @@ namespace resourcesystem {
         SCHEMA_FIELD(fltx4                           , w                                               , 0x30) // fltx4
     };
 
-    // InfoForResourceTypeIVectorGraphic
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeIVectorGraphic {
-    public:
-    };
-
-    // InfoForResourceTypeIParticleSystemDefinition
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeIParticleSystemDefinition {
-    public:
-    };
-
-    // ManifestTestResource_t
-    //   fields: 2
-    //   size: 0x10
-    //   @MGetKV3ClassDefaults
-    class ManifestTestResource_t {
-    public:
-        SCHEMA_FIELD(::CUtlString                    , m_name                                          , 0x0) // CUtlString [MKV3TransferName]
-        SCHEMA_FIELD(CStrongHandle<InfoForResourceTypeManifestTestResource_t>, m_child                                         , 0x8) // CStrongHandle<InfoForResourceTypeManifestTestResource_t> [MKV3TransferName]
-    };
-
-    // InfoForResourceTypeCMorphSetData
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCMorphSetData {
-    public:
-    };
-
     // AABB_t
     //   fields: 2
     //   size: 0x18
@@ -393,19 +365,59 @@ namespace resourcesystem {
         SCHEMA_FIELD(::Vector                        , m_vMaxBounds                                    , 0xC) // Vector
     };
 
-    // InfoForResourceTypeCCSGOEconItem
+    // InfoForResourceTypeCVSoundEventScriptList
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCCSGOEconItem {
+    class InfoForResourceTypeCVSoundEventScriptList {
     public:
     };
 
-    // InfoForResourceTypeCChoreoSceneResource
+    // InfoForResourceTypeCSurfaceGraph
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCChoreoSceneResource {
+    class InfoForResourceTypeCSurfaceGraph {
+    public:
+    };
+
+    // InfoForResourceTypeCVoiceContainerBase
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCVoiceContainerBase {
+    public:
+    };
+
+    // InfoForResourceTypeCSequenceGroupData
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCSequenceGroupData {
+    public:
+    };
+
+    // InfoForResourceTypeCRenderMesh
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCRenderMesh {
+    public:
+    };
+
+    // InfoForResourceTypeCVoxelVisibility
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCVoxelVisibility {
+    public:
+    };
+
+    // InfoForResourceTypeProceduralTestResource_t
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeProceduralTestResource_t {
     public:
     };
 
@@ -417,11 +429,95 @@ namespace resourcesystem {
     public:
     };
 
+    // InfoForResourceTypeManifestTestResource_t
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeManifestTestResource_t {
+    public:
+    };
+
+    // InfoForResourceTypeCModel
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCModel {
+    public:
+    };
+
+    // InfoForResourceTypeIMaterial2
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeIMaterial2 {
+    public:
+    };
+
+    // InfoForResourceTypeCNmClip
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCNmClip {
+    public:
+    };
+
+    // InfoForResourceTypeCGcExportableExternalData
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCGcExportableExternalData {
+    public:
+    };
+
+    // AABBWS_t
+    //   fields: 2
+    //   size: 0x18
+    class AABBWS_t {
+    public:
+        SCHEMA_FIELD(VectorWS                        , m_vMinBounds                                    , 0x0) // VectorWS
+        SCHEMA_FIELD(VectorWS                        , m_vMaxBounds                                    , 0xC) // VectorWS
+    };
+
+    // InfoForResourceTypeCAnimData
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCAnimData {
+    public:
+    };
+
+    // NoiseOscillatorDef_t
+    //   fields: 3
+    //   size: 0xC
+    //   @MGetKV3ClassDefaults
+    class NoiseOscillatorDef_t {
+    public:
+        SCHEMA_FIELD(float                           , m_flPhase                                       , 0x0) // float32 [MPropertyAttributeRange]
+        SCHEMA_FIELD(float                           , m_flFrequency                                   , 0x4) // float32 [MPropertyAttributeRange]
+        SCHEMA_FIELD(float                           , m_flAmplitude                                   , 0x8) // float32 [MPropertyAttributeRange]
+    };
+
+    // InfoForResourceTypeCDOTANovelsList
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCDOTANovelsList {
+    public:
+    };
+
     // InfoForResourceTypeCWorldNode
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
     class InfoForResourceTypeCWorldNode {
+    public:
+    };
+
+    // InfoForResourceTypeCResponseRulesList
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCResponseRulesList {
     public:
     };
 
@@ -442,107 +538,32 @@ namespace resourcesystem {
         SCHEMA_FIELD(_Type2                          , m_functionMap                                   , 0x88) // CUtlHashtable<CUtlStringToken,int32>
     };
 
-    // InfoForResourceTypeCPanoramaDynamicImages
+    // InfoForResourceTypeISmartProp
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCPanoramaDynamicImages {
+    class InfoForResourceTypeISmartProp {
     public:
     };
 
-    // InfoForResourceTypeCDOTAPatchNotesList
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCDOTAPatchNotesList {
+    // FunctionInfo_t
+    //   fields: 5
+    //   size: 0x20
+    //   @MGetKV3ClassDefaults
+    class FunctionInfo_t {
     public:
+        SCHEMA_FIELD(::CUtlString                    , m_name                                          , 0x8) // CUtlString
+        SCHEMA_FIELD(CUtlStringToken                 , m_nameToken                                     , 0x10) // CUtlStringToken
+        SCHEMA_FIELD(std::int32_t                    , m_nParamCount                                   , 0x14) // int32
+        SCHEMA_FIELD(FuseFunctionIndex_t             , m_nIndex                                        , 0x18) // FuseFunctionIndex_t
+        SCHEMA_FIELD(bool                            , m_bIsPure                                       , 0x1A) // bool
     };
 
-    // InfoForResourceTypeCAnimData
+    // InfoForResourceTypeIVectorGraphic
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCAnimData {
-    public:
-    };
-
-    // InfoForResourceTypeCGcExportableExternalData
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCGcExportableExternalData {
-    public:
-    };
-
-    // InfoForResourceTypeCVoxelVisibility
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCVoxelVisibility {
-    public:
-    };
-
-    // InfoForResourceTypeManifestTestResource_t
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeManifestTestResource_t {
-    public:
-    };
-
-    // InfoForResourceTypeCVPhysXSurfacePropertiesList
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCVPhysXSurfacePropertiesList {
-    public:
-    };
-
-    // InfoForResourceTypeProceduralTestResource_t
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeProceduralTestResource_t {
-    public:
-    };
-
-    // InfoForResourceTypeCTypeScriptResource
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCTypeScriptResource {
-    public:
-    };
-
-    // InfoForResourceTypeIMaterial2
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeIMaterial2 {
-    public:
-    };
-
-    // InfoForResourceTypeCVDataItemDefs
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCVDataItemDefs {
-    public:
-    };
-
-    // InfoForResourceTypeCVSoundEventScriptList
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCVSoundEventScriptList {
-    public:
-    };
-
-    // InfoForResourceTypeWorld_t
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeWorld_t {
+    class InfoForResourceTypeIVectorGraphic {
     public:
     };
 
@@ -554,105 +575,84 @@ namespace resourcesystem {
     public:
     };
 
-    // InfoForResourceTypeCSequenceGroupData
+    // InfoForResourceTypeCChoreoSceneResource
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCSequenceGroupData {
+    class InfoForResourceTypeCChoreoSceneResource {
     public:
     };
 
-    // InfoForResourceTypeCNmClip
+    // InfoForResourceTypeCNmSkeleton
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCNmClip {
+    class InfoForResourceTypeCNmSkeleton {
     public:
     };
 
-    // FuseVariableIndex_t
-    //   fields: 1
-    //   size: 0x2
-    class FuseVariableIndex_t {
-    public:
-        SCHEMA_FIELD(std::uint16_t                   , m_Value                                         , 0x0) // uint16
-    };
-
-    // InfoForResourceTypeCPanoramaStyle
+    // InfoForResourceTypeCTestResourceData
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCPanoramaStyle {
+    class InfoForResourceTypeCTestResourceData {
     public:
     };
 
-    // InfoForResourceTypeIPulseGraphDef
+    // InfoForResourceTypeIAnimGraphModelBinding
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeIPulseGraphDef {
+    class InfoForResourceTypeIAnimGraphModelBinding {
     public:
     };
 
-    // AABBWS_t
-    //   fields: 2
-    //   size: 0x18
-    class AABBWS_t {
-    public:
-        SCHEMA_FIELD(VectorWS                        , m_vMinBounds                                    , 0x0) // VectorWS
-        SCHEMA_FIELD(VectorWS                        , m_vMaxBounds                                    , 0xC) // VectorWS
-    };
-
-    // CFuseProgram
-    //   fields: 4
-    //   size: 0x50
-    //   @MGetKV3ClassDefaults
-    class CFuseProgram {
-    public:
-        SCHEMA_FIELD(CUtlVector<uint8>               , m_programBuffer                                 , 0x0) // CUtlVector<uint8>
-        SCHEMA_FIELD(CUtlVector<FuseVariableIndex_t> , m_variablesRead                                 , 0x18) // CUtlVector<FuseVariableIndex_t>
-        SCHEMA_FIELD(CUtlVector<FuseVariableIndex_t> , m_variablesWritten                              , 0x30) // CUtlVector<FuseVariableIndex_t>
-        SCHEMA_FIELD(std::int32_t                    , m_nMaxTempVarsUsed                              , 0x48) // int32
-    };
-
-    // InfoForResourceTypeCEntityLump
+    // InfoForResourceTypeCCSGOEconItem
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCEntityLump {
+    class InfoForResourceTypeCCSGOEconItem {
     public:
     };
 
-    // InfoForResourceTypeCPanoramaLayout
+    // InfoForResourceTypeCCompositeMaterialKit
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCPanoramaLayout {
+    class InfoForResourceTypeCCompositeMaterialKit {
     public:
     };
 
-    // InfoForResourceTypeCVoiceContainerBase
+    // InfoForResourceTypeCVDataItemDefs
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCVoiceContainerBase {
+    class InfoForResourceTypeCVDataItemDefs {
     public:
     };
 
-    // InfoForResourceTypeCVDataResource
+    // InfoForResourceTypeCNmGraphDefinition
     //   fields: 0
     //   size: 0x1
     //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCVDataResource {
+    class InfoForResourceTypeCNmGraphDefinition {
     public:
     };
 
-    // FuseFunctionIndex_t
-    //   fields: 1
-    //   size: 0x2
-    class FuseFunctionIndex_t {
+    // InfoForResourceTypeCPostProcessingResource
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCPostProcessingResource {
     public:
-        SCHEMA_FIELD(std::uint16_t                   , m_Value                                         , 0x0) // uint16
+    };
+
+    // InfoForResourceTypeCJavaScriptResource
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCJavaScriptResource {
+    public:
     };
 
 } // namespace resourcesystem
