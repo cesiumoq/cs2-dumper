@@ -1,23 +1,111 @@
-{
-  "framework": "vite",
-  "buildCommand": "npm --prefix site install --no-audit --no-fund && npm --prefix site run build && rm -rf site/dist/data && cp -r docs/data site/dist/data",
-  "outputDirectory": "site/dist",
-  "rewrites": [
-    { "source": "/build-:build/offsets.hpp", "destination": "/data/builds/:build/offsets.hpp" },
-    { "source": "/build-:build/offsets.cs", "destination": "/data/builds/:build/offsets.cs" },
-    { "source": "/build-:build/offsets.json", "destination": "/data/builds/:build/offsets.json" },
-    { "source": "/build-:build/offsets_hex.json", "destination": "/data/builds/:build/offsets_hex.json" },
-    { "source": "/build-:build/OffsetsHex.json", "destination": "/data/builds/:build/OffsetsHex.json" },
-    { "source": "/build-:build/offsets.txt", "destination": "/data/builds/:build/offsets.txt" },
-    { "source": "/build-:build/fflags.hpp", "destination": "/data/builds/:build/fflags.hpp" },
-    { "source": "/build-:build/fflags.cs", "destination": "/data/builds/:build/fflags.cs" },
-    { "source": "/build-:build/fflags.json", "destination": "/data/builds/:build/fflags.json" },
-    { "source": "/build-:build/fflags.txt", "destination": "/data/builds/:build/fflags.txt" },
-    { "source": "/build-:build/misc/struct.hpp", "destination": "/data/builds/:build/struct.hpp" },
-    { "source": "/build-:build/misc/types.json", "destination": "/data/builds/:build/types.json" },
-    { "source": "/build-:build/version.txt", "destination": "/data/builds/:build/version.txt" },
-    { "source": "/build-:build", "destination": "/data/builds/:build/build.json" },
-    { "source": "/builds", "destination": "/data/index.json" },
-    { "source": "/version", "destination": "/data/latest/version.txt" }
-  ]
+﻿{
+    "framework":  "vite",
+    "buildCommand":  "npm --prefix site install --no-audit --no-fund \u0026\u0026 npm --prefix site run build \u0026\u0026 rm -rf site/dist/data \u0026\u0026 cp -r docs/data site/dist/data",
+    "outputDirectory":  "site/dist",
+    "rewrites":  [
+                     {
+                         "destination":  "/data/builds/:build/offsets.hpp",
+                         "source":  "/build-:build/Offsets.hpp"
+                     },
+                     {
+                         "destination":  "/data/builds/:build/offsets.cs",
+                         "source":  "/build-:build/Offsets.cs"
+                     },
+                     {
+                         "destination":  "/data/builds/:build/offsets.json",
+                         "source":  "/build-:build/Offsets.json"
+                     },
+                     {
+                         "destination":  "/data/builds/:build/offsets.txt",
+                         "source":  "/build-:build/Offsets.txt"
+                     },
+                     {
+                         "destination":  "/data/builds/:build/fflags.hpp",
+                         "source":  "/build-:build/FFlags.hpp"
+                     },
+                     {
+                         "destination":  "/data/builds/:build/fflags.cs",
+                         "source":  "/build-:build/FFlags.cs"
+                     },
+                     {
+                         "destination":  "/data/builds/:build/fflags.json",
+                         "source":  "/build-:build/FFlags.json"
+                     },
+                     {
+                         "destination":  "/data/builds/:build/fflags.txt",
+                         "source":  "/build-:build/FFlags.txt"
+                     },
+                     {
+                         "destination":  "/data/builds/:build/struct.hpp",
+                         "source":  "/build-:build/Misc/Struct.hpp"
+                     },
+                     {
+                         "destination":  "/data/builds/:build/types.json",
+                         "source":  "/build-:build/Misc/Types.json"
+                     },
+                     {
+                         "source":  "/build-:build/offsets.hpp",
+                         "destination":  "/data/builds/:build/offsets.hpp"
+                     },
+                     {
+                         "source":  "/build-:build/offsets.cs",
+                         "destination":  "/data/builds/:build/offsets.cs"
+                     },
+                     {
+                         "source":  "/build-:build/offsets.json",
+                         "destination":  "/data/builds/:build/offsets.json"
+                     },
+                     {
+                         "source":  "/build-:build/offsets_hex.json",
+                         "destination":  "/data/builds/:build/offsets_hex.json"
+                     },
+                     {
+                         "source":  "/build-:build/OffsetsHex.json",
+                         "destination":  "/data/builds/:build/OffsetsHex.json"
+                     },
+                     {
+                         "source":  "/build-:build/offsets.txt",
+                         "destination":  "/data/builds/:build/offsets.txt"
+                     },
+                     {
+                         "source":  "/build-:build/fflags.hpp",
+                         "destination":  "/data/builds/:build/fflags.hpp"
+                     },
+                     {
+                         "source":  "/build-:build/fflags.cs",
+                         "destination":  "/data/builds/:build/fflags.cs"
+                     },
+                     {
+                         "source":  "/build-:build/fflags.json",
+                         "destination":  "/data/builds/:build/fflags.json"
+                     },
+                     {
+                         "source":  "/build-:build/fflags.txt",
+                         "destination":  "/data/builds/:build/fflags.txt"
+                     },
+                     {
+                         "source":  "/build-:build/misc/struct.hpp",
+                         "destination":  "/data/builds/:build/struct.hpp"
+                     },
+                     {
+                         "source":  "/build-:build/misc/types.json",
+                         "destination":  "/data/builds/:build/types.json"
+                     },
+                     {
+                         "source":  "/build-:build/version.txt",
+                         "destination":  "/data/builds/:build/version.txt"
+                     },
+                     {
+                         "source":  "/build-:build",
+                         "destination":  "/data/builds/:build/build.json"
+                     },
+                     {
+                         "source":  "/builds",
+                         "destination":  "/data/index.json"
+                     },
+                     {
+                         "source":  "/version",
+                         "destination":  "/data/latest/version.txt"
+                     }
+                 ]
 }
