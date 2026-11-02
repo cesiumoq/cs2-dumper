@@ -32,5 +32,6 @@
     <text x="842" y="224"><tspan fill="#e0f2fe" font-size="24" font-weight="700">12</tspan>  engine structs</text>
   </g>
 
-  <text x="62" y="270" fill="#94a3b8" font-family="Consolas, monospace" font-size="14">LAST UPDATED 03/11/2026 AT 00:37</text>
+  <text x="62" y="270" fill="#94a3b8" font-family="Consolas, monospace" font-size="14"><tspan fill="#e0f2fe" font-weight="700">6</tspan> feature recipes</text>
+  <text x="62" y="290" fill="#94a3b8" font-family="Consolas, monospace" font-size="14">LAST UPDATED 03/11/2026 AT 00:37</text>
 </svg>
