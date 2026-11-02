@@ -1,0 +1,31 @@
+Build 14194
+
+Pattern scan
+561 found / 578 scanned
+Missing
+17
+Coverage
+97.06%
+
+Patterns
+578
+Offsets
+202
+Interfaces
+111
+Classes
+3300
+ConVars
+4131
+Game Events
+273
+Weapons
+17 (session snapshot)
+Entities
+182
+Engine
+12
+Features
+6
+
+Status: preview (signature resolution incomplete)
