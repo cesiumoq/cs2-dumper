@@ -1,5 +1,23 @@
 {
   "framework": "vite",
   "buildCommand": "npm install --no-audit --no-fund && npm run build && rm -rf dist/data && cp -r ../docs/data dist/data",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/build-:build/offsets.hpp", "destination": "/data/builds/:build/offsets.hpp" },
+    { "source": "/build-:build/offsets.cs", "destination": "/data/builds/:build/offsets.cs" },
+    { "source": "/build-:build/offsets.json", "destination": "/data/builds/:build/offsets.json" },
+    { "source": "/build-:build/offsets_hex.json", "destination": "/data/builds/:build/offsets_hex.json" },
+    { "source": "/build-:build/OffsetsHex.json", "destination": "/data/builds/:build/OffsetsHex.json" },
+    { "source": "/build-:build/offsets.txt", "destination": "/data/builds/:build/offsets.txt" },
+    { "source": "/build-:build/fflags.hpp", "destination": "/data/builds/:build/fflags.hpp" },
+    { "source": "/build-:build/fflags.cs", "destination": "/data/builds/:build/fflags.cs" },
+    { "source": "/build-:build/fflags.json", "destination": "/data/builds/:build/fflags.json" },
+    { "source": "/build-:build/fflags.txt", "destination": "/data/builds/:build/fflags.txt" },
+    { "source": "/build-:build/misc/struct.hpp", "destination": "/data/builds/:build/struct.hpp" },
+    { "source": "/build-:build/misc/types.json", "destination": "/data/builds/:build/types.json" },
+    { "source": "/build-:build/version.txt", "destination": "/data/builds/:build/version.txt" },
+    { "source": "/build-:build", "destination": "/data/builds/:build/build.json" },
+    { "source": "/builds", "destination": "/data/index.json" },
+    { "source": "/version", "destination": "/data/latest/version.txt" }
+  ]
 }

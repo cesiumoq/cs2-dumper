@@ -146,6 +146,17 @@ td { color: #c7d7ea; }
   border-radius: 10px;
   padding: 12px 14px;
 }
+.api-panel { margin-top: 22px; padding: 18px; }
+.api-head { display: flex; align-items: baseline; gap: 12px; }
+.api-head h2 { margin: 0; font-size: 18px; }
+.api-head span { color: var(--muted); font: 11px/1 Consolas, monospace; letter-spacing: 1px; }
+.api-lead { color: var(--muted); font-size: 13px; }
+.api-lead code { color: var(--blue); }
+.api-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; }
+.api-grid a { display: block; padding: 10px 12px; border: 1px solid #16304d; border-radius: 9px; background: #071426; }
+.api-grid a:hover { border-color: #0ea5e9; text-decoration: none; }
+.api-grid b { display: block; color: var(--text); font-size: 13px; }
+.api-grid span { display: block; color: var(--muted); font: 11px/1.4 Consolas, monospace; margin-top: 4px; overflow-wrap: anywhere; }
 @media (max-width: 700px) {
   main { padding-top: 24px; }
   h1 { font-size: 30px; }

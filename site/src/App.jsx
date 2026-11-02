@@ -138,6 +138,35 @@ export default function App() {
           {build && !build.valid && <span className="muted">Preview build: {build.reason}</span>}
         </div>
       </section>
+
+      <section className="panel api-panel">
+        <div className="api-head">
+          <h2>API</h2>
+          <span>GET · no auth</span>
+        </div>
+        <p className="api-lead">
+          Every build is served as plain files under <code>/build-{build?.build_number ?? "xxxx"}/</code>.
+        </p>
+        <div className="api-grid">
+          {[
+            ["offsets.hpp", "C++ offsets"],
+            ["offsets.cs", "C# offsets"],
+            ["offsets.json", "JSON offsets"],
+            ["offsets_hex.json", "hex JSON"],
+            ["offsets.txt", "text offsets"],
+            ["fflags.hpp", "C++ flags"],
+            ["fflags.json", "JSON flags"],
+            ["misc/struct.hpp", "SDK header"],
+            ["misc/types.json", "schema types"],
+            ["version.txt", "build version"],
+          ].map(([path, label]) => (
+            <a key={path} href={`./build-${build?.build_number ?? "xxxx"}/${path}`}>
+              <b>{label}</b>
+              <span>/{`build-${build?.build_number ?? "xxxx"}/${path}`}</span>
+            </a>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
