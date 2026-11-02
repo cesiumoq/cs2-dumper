@@ -25,33 +25,28 @@ function Section({ title, children }) {
 }
 
 export default function App() {
-  const [version, setVersion] = useState("latest");
-  const [build, setBuild] = useState("");
+  const [build, setBuild] = useState("14194");
 
   useEffect(() => {
     fetch("./data/latest/build.json", { cache: "no-store" })
       .then((r) => r.json())
-      .then((data) => {
-        setBuild(String(data.build_number ?? ""));
-        setVersion(data.version || `version-${String(data.build_number ?? "latest")}`);
-      })
+      .then((data) => setBuild(String(data.build_number ?? "14194")))
       .catch(() => {});
   }, []);
 
-  const base = `./${version}`;
+  const base = `./build-${build}`;
 
   return (
     <main className="page">
       <header className="header">
         <h1>CS2 Dumper</h1>
-        <div className="version">{version}{build ? ` · build ${build}` : ""}</div>
+        <div className="version">build-{build}</div>
       </header>
 
       <Section title="Build">
         <FileLink href={`${base}/build.json`}>Build.json</FileLink>
         <FileLink href={`${base}/hashes.json`}>Hashes.json</FileLink>
         <FileLink href={`${base}/info.json`}>Info.json</FileLink>
-        <FileLink href={`${base}/version.txt`}>Version.txt</FileLink>
       </Section>
 
       <Section title="Offsets">

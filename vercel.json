@@ -4,10 +4,6 @@
     "outputDirectory":  "site/dist",
     "rewrites":  [
                      {
-                         "destination":  "/data/version-:version/:path*",
-                         "source":  "/version-:version/:path*"
-                     },
-                     {
                          "destination":  "/data/builds/:build/:path*",
                          "source":  "/build-:build/:path*"
                      },
@@ -26,22 +22,6 @@
                      {
                          "destination":  "/data/builds/:build/offsets.txt",
                          "source":  "/build-:build/Offsets.txt"
-                     },
-                     {
-                         "destination":  "/data/builds/:build/fflags.hpp",
-                         "source":  "/build-:build/FFlags.hpp"
-                     },
-                     {
-                         "destination":  "/data/builds/:build/fflags.cs",
-                         "source":  "/build-:build/FFlags.cs"
-                     },
-                     {
-                         "destination":  "/data/builds/:build/fflags.json",
-                         "source":  "/build-:build/FFlags.json"
-                     },
-                     {
-                         "destination":  "/data/builds/:build/fflags.txt",
-                         "source":  "/build-:build/FFlags.txt"
                      },
                      {
                          "destination":  "/data/builds/:build/struct.hpp",
@@ -76,22 +56,6 @@
                          "destination":  "/data/builds/:build/offsets.txt"
                      },
                      {
-                         "source":  "/build-:build/fflags.hpp",
-                         "destination":  "/data/builds/:build/fflags.hpp"
-                     },
-                     {
-                         "source":  "/build-:build/fflags.cs",
-                         "destination":  "/data/builds/:build/fflags.cs"
-                     },
-                     {
-                         "source":  "/build-:build/fflags.json",
-                         "destination":  "/data/builds/:build/fflags.json"
-                     },
-                     {
-                         "source":  "/build-:build/fflags.txt",
-                         "destination":  "/data/builds/:build/fflags.txt"
-                     },
-                     {
                          "source":  "/build-:build/misc/struct.hpp",
                          "destination":  "/data/builds/:build/struct.hpp"
                      },
@@ -100,20 +64,12 @@
                          "destination":  "/data/builds/:build/types.json"
                      },
                      {
-                         "source":  "/build-:build/version.txt",
-                         "destination":  "/data/builds/:build/version.txt"
-                     },
-                     {
                          "source":  "/build-:build",
                          "destination":  "/data/builds/:build/build.json"
                      },
                      {
                          "source":  "/builds",
                          "destination":  "/data/index.json"
-                     },
-                     {
-                         "source":  "/version",
-                         "destination":  "/data/latest/version.txt"
                      }
                  ]
 }
