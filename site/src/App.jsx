@@ -26,7 +26,14 @@ export default function App() {
         const b = await getJson(`./data/builds/${idx.latest}/build.json`);
         setBuild(b);
         const p = await getJson(`./data/builds/${idx.latest}/patterns.json`);
-        setPatterns(Array.isArray(p.patterns) ? p.patterns : []);
+        const recovered = await getJson(`./data/builds/${idx.latest}/recovered_patterns.json`).catch(() => ({}));
+        const recoveredRows = Object.entries(recovered).map(([name, item]) => ({
+          name,
+          module: item.module,
+          rva: item.rva,
+          resolve: item.resolve,
+        }));
+        setPatterns([...(Array.isArray(p.patterns) ? p.patterns : []), ...recoveredRows]);
         const o = await getJson(`./data/builds/${idx.latest}/offsets_all.json`);
         const rows = [];
         for (const [module, entries] of Object.entries(o.modules || {})) {
@@ -83,7 +90,7 @@ export default function App() {
         <div className="toolbar">
           <div className="tabs">
             <button className={tab === "patterns" ? "active" : ""} onClick={() => setTab("patterns")}>
-              Patterns <span>{fmt(patterns.length)}</span>
+              Patterns <span>{fmt(build?.signatures?.found ?? patterns.length)}</span>
             </button>
             <button className={tab === "offsets" ? "active" : ""} onClick={() => setTab("offsets")}>
               Offsets <span>{fmt(offsets.length)}</span>

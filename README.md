@@ -31,8 +31,6 @@ A single Windows executable that produces a complete Counter-Strike 2 dump:
 - 6 feature recipes
 - multi-language schemas (`hpp`, `cs`, `rs`, `zig`)
 
-No command line is required. Launch `CS2Dumper.exe`, wait for the map to load, and the dump is written on its own.
-
 ---
 
 ## Current build
