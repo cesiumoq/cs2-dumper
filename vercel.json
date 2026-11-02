@@ -1,0 +1,5 @@
+{
+  "framework": "vite",
+  "buildCommand": "npm --prefix site install --no-audit --no-fund && npm --prefix site run build && cp -r docs/data site/dist/data",
+  "outputDirectory": "site/dist"
+}

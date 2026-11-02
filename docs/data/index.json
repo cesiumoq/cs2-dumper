@@ -1,0 +1,12 @@
+﻿{
+    "updated_at":  "2026-11-02T22:46:17.6693622+01:00",
+    "builds":  [
+                   {
+                       "build":  14194,
+                       "valid":  false,
+                       "published_at":  "2026-11-02T22:46:17.6361079+01:00",
+                       "reason":  "signature resolution incomplete"
+                   }
+               ],
+    "latest":  14194
+}

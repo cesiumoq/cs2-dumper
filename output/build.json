@@ -1,0 +1,32 @@
+{
+  "build_number": 14194,
+  "generated_at": "2026-11-02T22:16:20",
+  "patch_version": "1.41.9.4",
+  "valid": false,
+  "publish_ready": false,
+  "reason": "signature resolution incomplete",
+  "signatures": {"total": 578, "found": 561, "recovered": 0, "missing": [{"name": "BulkRegenIterator", "module": "client.dll"}, {"name": "DrawLegs", "module": "client.dll"}, {"name": "FirstPersonLegs", "module": "client.dll"}, {"name": "GetWeaponInAccuracyRecoveryTime", "module": "client.dll"}, {"name": "GloveApply_PerTick", "module": "client.dll"}, {"name": "IsOverwatch", "module": "client.dll"}, {"name": "RegenerateWeaponSkin", "module": "client.dll"}, {"name": "RegenerateWeaponSkin_v2", "module": "client.dll"}, {"name": "C_CSWeaponBase_GetRecoilOffset", "module": "client.dll"}, {"name": "pWeaponRecoilTable", "module": "client.dll"}, {"name": "ProcessMessages", "module": "networksystem.dll"}, {"name": "GameSystem_Think_CheckSteamBan", "module": "server.dll"}, {"name": "pSoundChannels", "module": "soundsystem.dll"}, {"name": "pSoundSystem", "module": "soundsystem.dll"}, {"name": "SomeUtlSymbolFunc", "module": "soundsystem.dll"}, {"name": "C_EconItemView_GetBasePlayerWeaponVData", "module": "client.dll"}, {"name": "C_CSWeaponBase_UpdateCompositeMaterialSet", "module": "client.dll"}]},
+  "recovered_patterns": "recovered_patterns.json",
+  "offsets": {"count": 202},
+  "modules": {
+    "client.dll": {"sha256": "d618bbf8e6afb36baa09b3a282035996a88300458c55d2aa5cb81f0495c0ec54", "size": 39224472},
+    "engine2.dll": {"sha256": "42e0549c7314321e1b69c8d60046efe94e0356f54d7a2fb79dd6b993e6e3658b", "size": 7498392},
+    "server.dll": {"sha256": "84a06ec3a3ef2ff9fe668aa7a77d0d6c0156e0b3bccdae22f628a9919ad082b6", "size": 34690200},
+    "schemasystem.dll": {"sha256": "6ea6c2e95360572d78352260f808e390bc24c9a4370184c067481f5b4d6e94c9", "size": 445592},
+    "animationsystem.dll": {"sha256": "e8803e6e1d6356c210cd66dbd23681e0ce52a5ff4216653fe91df1361960bfc7", "size": 9329816},
+    "materialsystem2.dll": {"sha256": "f96093bbbc3f1b6df0fba856e37af60e774d9049e4b83dfd8aa69cc6ae9ead8e", "size": 1428632},
+    "particles.dll": {"sha256": "e4b95f49392f990556c3f81198e55d019fb39a48bfeac841188128a2cbe7ab76", "size": 6460568},
+    "scenesystem.dll": {"sha256": "fc780a9d4cf2e96514714aceaf6c49aaeb6bfc21f31fef5965639fb879bac407", "size": 7094936},
+    "soundsystem.dll": {"sha256": "79c5583c71f5e3d5bd8f0f321d5db4801579540544a7c944cc99a6a430857a7b", "size": 5838488},
+    "tier0.dll": {"sha256": "f96f4f9666be66ee3dd42a015b305d954b5dd5582b0608a74e50548df426584d", "size": 3979928},
+    "vphysics2.dll": {"sha256": "07ed1ef6060de6a4a0c71702e10cb69d8d0b7384c860c04b029a32ab90acfcad", "size": 4829848},
+    "networksystem.dll": {"sha256": "4ca64d0c83c6f5a35d7d6ecbff027552718b64193ffdb9117ae080363c095450", "size": 2841752},
+    "host.dll": {"sha256": "216f086eb3fead58df28f5d3462a510e875f74816d56c59a40f76e8659a61a55", "size": 1389208},
+    "panorama.dll": {"sha256": "f98c04a7a3cfb1a8a40a6d6bf3bdcc376d6c9fda0d4861354a0383a3cfd9a39e", "size": 6108312},
+    "rendersystemdx11.dll": {"sha256": "4d517b70af02d1c835f53a2e43e9ec951f03a294102226f905763bafbe54a4ae", "size": 4545688},
+    "resourcesystem.dll": {"sha256": "62b0cda55540f02ce4ce240b28249f4abf9b894f6497d54c7fca14d4746eeeb0", "size": 532632},
+    "pulse_system.dll": {"sha256": "d36c2df6681ccdf13683fa103cfe450b96b01160e783bec6f75c5142bd869be1", "size": 2031768},
+    "inputsystem.dll": {"sha256": "6774a3922362b7505beb07c02da88364b6bfea3fc1a339fe4912d3090cff18c3", "size": 302232},
+    "filesystem_stdio.dll": {"sha256": "ed9c9016e121b1a3c28332a35fb1400ca4b3a5ad84cd68e4f1e14fe5e17bf613", "size": 2260120}
+  }
+}
