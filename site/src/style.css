@@ -35,15 +35,33 @@ body {
   text-decoration: none;
   margin-bottom: 22px;
 }
-.sidebar nav { display: flex; flex-direction: column; gap: 2px; }
-.sidebar nav a {
+.brand { margin-bottom: 22px; }
+.brand-title { font-size: 15px; font-weight: 700; }
+.brand-title span { color: var(--blue); }
+.brand-sub { color: var(--muted); font: 9px/1.4 Consolas, monospace; letter-spacing: 1px; text-transform: uppercase; }
+.sidebar nav { display: flex; flex-direction: column; gap: 1px; }
+.sidebar nav button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  border: 0;
+  background: transparent;
   color: var(--muted);
-  text-decoration: none;
+  text-align: left;
   padding: 7px 9px;
   border-radius: 7px;
+  font: inherit;
   font-size: 13px;
+  cursor: pointer;
 }
-.sidebar nav a:hover { color: var(--text); background: var(--panel-2); }
+.sidebar nav button:hover { color: var(--text); background: var(--panel-2); }
+.sidebar nav button.active { color: var(--blue); background: #18181b; }
+.sidebar nav button em { font: 10px Consolas, monospace; color: #71717a; font-style: normal; }
+.crumbs { display: flex; align-items: center; gap: 8px; color: var(--muted); font: 12px Consolas, monospace; margin-right: auto; }
+.crumbs i { color: #52525b; font-style: normal; }
+.crumbs b { color: var(--text); font-weight: 500; }
 .sidebar-foot {
   position: absolute;
   bottom: 22px;
@@ -86,6 +104,66 @@ body {
   font: 13px Inter, "Segoe UI", sans-serif;
 }
 .search-wrap input:focus { border-color: #52525b; }
+.search-dropdown {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 5px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #111113;
+  box-shadow: 0 18px 45px #000a;
+}
+.search-dropdown button {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 8px 9px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+.search-dropdown button:hover { background: #1c1c20; }
+.res-name { font: 11.5px Consolas, monospace; overflow-wrap: anywhere; }
+.res-meta { color: var(--muted); font-size: 10.5px; white-space: nowrap; }
+.empty-search { color: var(--muted); font-size: 12px; padding: 10px; }
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 8px;
+  margin: 22px 0;
+}
+.stat-card {
+  text-align: left;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+}
+.stat-card:hover { border-color: #52525b; }
+.stat-card b { display: block; font-size: 23px; letter-spacing: -0.5px; }
+.stat-card span { color: var(--muted); font: 10px Consolas, monospace; text-transform: uppercase; letter-spacing: 0.5px; }
+.table-panel { padding: 0; overflow: hidden; }
+.table-panel .panel-head { padding: 16px 18px 0; }
+.table-wrap { overflow: auto; max-height: calc(100vh - 210px); }
+.tbl, .table-wrap table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.table-wrap th, .table-wrap td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.table-wrap th { position: sticky; top: 0; background: #111113; color: #a1a1aa; font: 10px Consolas, monospace; text-transform: uppercase; letter-spacing: 0.6px; z-index: 1; }
+.table-wrap td { color: #d4d4d8; }
+.table-wrap .mono { color: #f4f4f5; font-family: Consolas, monospace; }
+.table-wrap .empty { text-align: center; color: var(--muted); padding: 28px; white-space: normal; }
+.kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.kv > div { display: flex; justify-content: space-between; gap: 10px; padding: 10px 12px; background: #0e0e10; }
+.kv span { color: var(--muted); font: 11px Consolas, monospace; text-transform: uppercase; }
+.kv b { color: var(--text); font: 11px Consolas, monospace; }
 .build-badge {
   display: flex;
   align-items: center;

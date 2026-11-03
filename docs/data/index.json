@@ -1,10 +1,10 @@
 {
-    "updated_at":  "2026-11-03T01:53:52.6539449+01:00",
+    "updated_at":  "2026-11-03T02:05:47.1001423+01:00",
     "builds":  [
                    {
                        "build":  14194,
                        "valid":  true,
-                       "published_at":  "2026-11-03T01:53:52.6303498+01:00",
+                       "published_at":  "2026-11-03T02:05:47.0582526+01:00",
                        "reason":  "1 signature allowed as unresolved"
                    }
                ],
