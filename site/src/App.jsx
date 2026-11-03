@@ -124,6 +124,14 @@ function Icon() {
   );
 }
 
+function Highlight({ text, query }) {
+  const value = String(text ?? "");
+  if (!query) return value;
+  const i = value.toLowerCase().indexOf(query.toLowerCase());
+  if (i < 0) return value;
+  return <>{value.slice(0, i)}<mark>{value.slice(i, i + query.length)}</mark>{value.slice(i + query.length)}</>;
+}
+
 function formatDate(value) {
   if (!value) return "unknown";
   const d = new Date(value);
@@ -219,14 +227,14 @@ export default function App() {
               <div className="search-dropdown">
                 {fileHits.map(({ group, file }) => (
                   <button key={`${group}-${file}`} onClick={() => selectView(group)}>
-                    <span className="res-name">{file}</span>
+                    <span className="res-name"><Highlight text={file} query={query} /></span>
                     <span className="res-meta">{group}</span>
                   </button>
                 ))}
                 {rowHits.map((row, i) => (
                   <button key={`row-${i}`} onClick={() => setQuery("")}>
-                    <span className="res-name">{row.name || row.classname || row.index}</span>
-                    <span className="res-meta">{view} · {row.module || row.type || row.category || ""}</span>
+                    <span className="res-name"><Highlight text={row.name || row.classname || row.index} query={query} /></span>
+                    <span className="res-meta">{view} · <Highlight text={row.module || row.type || row.category || ""} query={query} /></span>
                   </button>
                 ))}
                 {!fileHits.length && !rowHits.length && <div className="empty-search">No results</div>}
@@ -249,8 +257,10 @@ export default function App() {
         {view === "features" && (
           <Features data={cache.features} loading={loading} favorites={favorites} toggleFavorite={toggleFavorite} />
         )}
+        {view === "engine" && <EngineView data={cache.engine} loading={loading} query={query} />}
+        {view === "entities" && <EntitiesView data={cache.entities} loading={loading} query={query} />}
 
-        {COLUMNS[view] && view !== "features" && (
+        {COLUMNS[view] && !["features", "engine", "entities"].includes(view) && (
           <section className="panel table-panel">
             <div className="panel-head">
               <h2>{NAV.find(([id]) => id === view)?.[1]}</h2>
@@ -329,27 +339,57 @@ function Status({ build, meta, viewer }) {
   );
 }
 
-function Api({ build }) {
+function CodeBlock({ children, label = "copy" }) {
   return (
-    <section className="panel">
-      <div className="panel-head"><h2>API</h2><span className="muted">GET · CORS</span></div>
-      <p className="muted">Latest build, no build id needed.</p>
-      <pre className="code">{`GET https://cs2-dump.vercel.app/api/offsets.hpp
-GET https://cs2-dump.vercel.app/api/offsets.json
-GET https://cs2-dump.vercel.app/api/patterns.json
-GET https://cs2-dump.vercel.app/api/client_dll.hpp
-GET https://cs2-dump.vercel.app/api/build.json
-GET https://cs2-dump.vercel.app/api/version`}</pre>
+    <div className="code-wrap">
+      <CopyButton text={children} label={label} />
+      <pre className="code">{children}</pre>
+    </div>
+  );
+}
+
+function Api({ build }) {
+  const endpoints = [
+    ["/api/offsets.hpp", "C++ offsets"],
+    ["/api/offsets.cs", "C# offsets"],
+    ["/api/offsets.json", "JSON offsets"],
+    ["/api/patterns.json", "patterns and RVAs"],
+    ["/api/client_dll.hpp", "client SDK"],
+    ["/api/build.json", "build metadata"],
+    ["/api/version", "current build number"],
+  ];
+  return (
+    <section className="panel api-page">
+      <div className="panel-head"><h2>API</h2><span className="muted">GET · CORS · no auth</span></div>
+      <p className="muted">Latest build is automatic. No build id in the URL.</p>
+      <div className="api-base"><code>https://cs2-dump.vercel.app</code><CopyButton text="https://cs2-dump.vercel.app" label="copy host" /></div>
+      <div className="endpoint-list">
+        {endpoints.map(([path, label]) => (
+          <div className="endpoint" key={path}>
+            <code>GET {path}</code>
+            <span>{label}</span>
+          </div>
+        ))}
+      </div>
+      <h3>Response</h3>
+      <CodeBlock>{`GET /api/offsets.json
+
+{
+  "client.dll": {
+    "dwEntityList": "0x271EB28",
+    "dwLocalPlayerPawn": "0x25698C8"
+  }
+}`}</CodeBlock>
       <h3>Pinned build</h3>
-      <pre className="code">{`GET https://cs2-dump.vercel.app/build-${build}/offsets.hpp
-GET https://cs2-dump.vercel.app/build-${build}/patterns.json`}</pre>
+      <CodeBlock>{`GET /build-${build}/offsets.hpp
+GET /build-${build}/patterns.json`}</CodeBlock>
       <h3>Auto-update C++</h3>
-      <pre className="code">{`std::string live = HttpGet(L"cs2-dump.vercel.app", L"/api/version");
+      <CodeBlock>{`std::string live = HttpGet(L"cs2-dump.vercel.app", L"/api/version");
 std::string cached = ReadFile("offsets.version");
 if (live != cached) {
     WriteFile("offsets.json", HttpGet(L"cs2-dump.vercel.app", L"/api/offsets.json"));
     WriteFile("offsets.version", live);
-}`}</pre>
+}`}</CodeBlock>
     </section>
   );
 }
@@ -368,6 +408,98 @@ function Downloads({ viewer }) {
           </div>
         </div>
       ))}
+    </section>
+  );
+}
+
+function EngineView({ data, loading, query }) {
+  const q = query.trim().toLowerCase();
+  const [open, setOpen] = useState({});
+  const structs = (data?.structs || []).filter((s) =>
+    !q || `${s.name} ${s.module} ${s.desc} ${(s.fields || []).map((f) => `${f.name} ${f.type} ${f.note}`).join(" ")}`.toLowerCase().includes(q)
+  );
+  const fields = structs.reduce((n, s) => n + (s.fields || []).length, 0);
+
+  return (
+    <section className="panel">
+      <div className="panel-head">
+        <h2>Engine</h2>
+        <span className="muted">{structs.length} structs · {fields} fields</span>
+      </div>
+      <p className="muted">Non-schema structs reverse-engineered from the binary.</p>
+      <div className="feature-toolbar">
+        <button className="copy-btn" onClick={() => setOpen(Object.fromEntries(structs.map((s) => [s.name, true])))}>Expand</button>
+        <button className="copy-btn" onClick={() => setOpen({})}>Collapse</button>
+      </div>
+      <div className="engine-list">
+        {structs.map((s) => {
+          const expanded = open[s.name] !== false;
+          return (
+            <article className="engine-card" key={s.name}>
+              <div className="feature-head">
+                <div>
+                  <h3>{s.name}</h3>
+                  <div className="feature-tags">
+                    <span className="chip">{s.module}</span>
+                    {s.size && <span className="chip">size {s.size}</span>}
+                    <span className="chip">{(s.fields || []).length} fields</span>
+                  </div>
+                </div>
+                <div className="feature-actions">
+                  <CopyButton text={JSON.stringify(s, null, 2)} label="C++" />
+                  <button className="copy-btn" onClick={() => setOpen({ ...open, [s.name]: !expanded })}>{expanded ? ".h" : "show"}</button>
+                </div>
+              </div>
+              <p className="feature-summary">{s.desc}</p>
+              {s.instance && <div className="instance-box"><b>instance</b><code>{s.instance}</code></div>}
+              {expanded && (
+                <>
+                  <FeatureTable title="Functions" cols={[["name", "Function"], ["rva", "RVA"]]} rows={s.functions || []} />
+                  <FeatureTable title="Fields" cols={[["offset", "Offset"], ["name", "Field"], ["type", "Type"], ["note", "Notes"]]} rows={s.fields || []} />
+                </>
+              )}
+            </article>
+          );
+        })}
+        {!loading && !structs.length && <div className="muted">No structs.</div>}
+      </div>
+    </section>
+  );
+}
+
+function EntitiesView({ data, loading, query }) {
+  const q = query.trim().toLowerCase();
+  const entities = (data?.entities || []).filter((e) =>
+    !q || `${e.index} ${e.classname} ${e.team} ${e.health}`.toLowerCase().includes(q)
+  );
+  const byClass = data?.by_class || [];
+  const team = (t) => (t === 2 ? "T" : t === 3 ? "CT" : "unassigned");
+  return (
+    <section className="panel">
+      <div className="panel-head">
+        <h2>Entities</h2>
+        <span className="muted">{entities.length} of {data?.entity_count ?? entities.length} · {data?.class_count ?? byClass.length} classes</span>
+      </div>
+      <div className="class-chips">
+        {byClass.map((c) => <span key={c.classname} className="chip">{c.classname}<b>{c.count}</b></span>)}
+      </div>
+      <div className="table-wrap">
+        <table>
+          <thead><tr><th>Index</th><th>Class</th><th>Health</th><th>Team</th><th>Origin</th></tr></thead>
+          <tbody>
+            {entities.slice(0, 500).map((e) => (
+              <tr key={e.index}>
+                <td className="mono">{e.index}</td>
+                <td className="mono">{e.classname}</td>
+                <td>{e.health}{e.max_health ? `/${e.max_health}` : ""}</td>
+                <td>{team(e.team)}</td>
+                <td className="mono">{(e.origin || []).map((n) => Number(n.toFixed?.(1) ?? n)).join(", ")}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {entities.length > 500 && <div className="muted">Showing first 500 of {entities.length}.</div>}
     </section>
   );
 }
