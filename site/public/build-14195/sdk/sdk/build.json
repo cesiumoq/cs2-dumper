@@ -1,7 +1,7 @@
 {
   "build_number": 14195,
-  "dump_seconds": 4.9,
-  "generated_at": "2026-11-03T13:47:54",
+  "dump_seconds": 1.7,
+  "generated_at": "2026-11-03T15:42:05",
   "patch_version": "1.41.9.4",
   "valid": true,
   "publish_ready": true,
@@ -28,6 +28,7 @@
     "resourcesystem.dll": {"sha256": "4b86d2c2607178c1a8320e3a3b2bcce3d5dcedfbf0b43cf39a929a2e001d504f", "size": 532632},
     "pulse_system.dll": {"sha256": "646776a058fa34c89bae0bec1817f257dd9756eed8f5868a564e76470390b3d8", "size": 2031768},
     "inputsystem.dll": {"sha256": "7bb1dc2a787de5b6e2992b235f863924c3b512ba70fc39323ef5a861436b023a", "size": 302232},
-    "filesystem_stdio.dll": {"sha256": "8e4c94030146e4182efb1dbecb7ac5f0fd27c0a78d31a0de00b9e7d8461215f5", "size": 2260120}
+    "filesystem_stdio.dll": {"sha256": "8e4c94030146e4182efb1dbecb7ac5f0fd27c0a78d31a0de00b9e7d8461215f5", "size": 2260120},
+    "meshsystem.dll": {"sha256": "142b5749c114652bdb4de63731f4eed2fb59bff7089f6002bc11d33a35360805", "size": 1664664}
   }
 }

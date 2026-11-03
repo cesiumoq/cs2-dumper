@@ -229,6 +229,14 @@ body {
 .vpk-links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; }
 .vpk-links a { color: var(--blue); font: 10.5px Consolas, monospace; border: 1px solid var(--line); border-radius: 5px; padding: 4px 7px; text-decoration: none; }
 .vpk-links a:hover { border-color: #52525b; }
+.vt-card { border: 1px solid var(--line); border-radius: 10px; padding: 16px; background: #0e0e10; margin-bottom: 12px; }
+.vt-slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 4px; margin-top: 12px; }
+.vt-slots > div { display: flex; align-items: center; gap: 6px; padding: 4px 6px; border: 1px solid #1f1f23; border-radius: 4px; font: 10px Consolas, monospace; }
+.vt-slots > div > span { color: #52525b; width: 20px; }
+.vt-slots > div code { color: #a1a1aa; }
+.vt-slots > div.named { border-color: #1d4ed8; background: #0b1220; }
+.vt-slots > div.named code { color: #60a5fa; }
+.vt-slots > div b { color: #60a5fa; font-size: 8px; margin-left: auto; }
 .models-layout { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 12px; margin-top: 14px; }
 .model-list { display: flex; flex-direction: column; gap: 4px; }
 .model-item { display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--line); background: #0e0e10; color: #d4d4d8; border-radius: 6px; padding: 8px 9px; font: 11px Consolas, monospace; cursor: pointer; text-align: left; }

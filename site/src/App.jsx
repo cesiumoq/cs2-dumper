@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+﻿import { useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
@@ -11,6 +11,7 @@ const NAV = [
   ["patterns", "Patterns", "577"],
   ["offsets", "Offsets"],
   ["interfaces", "Interfaces", "111"],
+  ["vtables", "Vtables"],
   ["classes", "Classes", "3,300"],
   ["convars", "ConVars", "4,131"],
   ["weapons", "Weapons", "44"],
@@ -34,6 +35,7 @@ const SOURCES = {
   patterns: "api/patterns.json",
   offsets: "api/offsets_all.json",
   interfaces: "api/interfaces.json",
+  vtables: "api/vtables.json",
   classes: "api/types.json",
   convars: "api/sdk/convars/convars.json",
   weapons: "api/sdk/weapons/weapons.json",
@@ -321,9 +323,10 @@ export default function App() {
         {view === "entities" && <EntitiesView data={cache.entities} loading={loading} query={query} favorites={favorites} toggleFavorite={toggleFavorite} />}
         {view === "vpk" && <VpkView />}
         {view === "models" && <ModelsView />}
+        {view === "vtables" && <VtablesView />}
         {view === "favorites" && <FavoritesView favorites={favorites} go={selectView} />}
 
-        {COLUMNS[view] && !["features", "engine", "entities", "models", "favorites"].includes(view) && (
+        {COLUMNS[view] && !["features", "engine", "entities", "models", "favorites", "vtables"].includes(view) && (
           <section className="panel table-panel">
             <div className="panel-head">
               <h2>{NAV.find(([id]) => id === view)?.[1]}</h2>
@@ -752,6 +755,39 @@ function ModelsView() {
           </div>
         </div>
       </div>
+    </section>
+  );
+}
+
+function VtablesView() {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    fetch("./api/vtables.json", { cache: "no-store" }).then((r) => r.json()).then(setData).catch(() => {});
+  }, []);
+  const tables = data?.vtables || [];
+  return (
+    <section className="panel">
+      <div className="panel-head"><h2>Vtables</h2><span className="muted">{tables.length} classes</span></div>
+      <p className="muted">Virtual tables read from the installed binaries. Slot 36 of CSource2Client is FrameStageNotify.</p>
+      {tables.map((vt) => (
+        <article className="vt-card" key={vt.class}>
+          <div className="feature-head">
+            <div>
+              <h3>{vt.class}</h3>
+              <div className="feature-tags"><span className="chip">{vt.module}</span><span className="chip">{vt.rva}</span><span className="chip">{vt.slots?.length} slots</span></div>
+            </div>
+            <CopyButton text={JSON.stringify(vt, null, 2)} label="copy" />
+          </div>
+          <div className="vt-slots">
+            {(vt.slots || []).map((slot, i) => (
+              <div key={i} className={vt.names?.[String(i)] ? "named" : ""}>
+                <span>{i}</span><code>{slot}</code>{vt.names?.[String(i)] && <b>{vt.names[String(i)]}</b>}
+              </div>
+            ))}
+          </div>
+        </article>
+      ))}
+      {!tables.length && <div className="muted">No vtables published.</div>}
     </section>
   );
 }
