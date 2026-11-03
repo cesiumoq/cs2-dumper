@@ -357,6 +357,10 @@ h3 { margin: 24px 0 6px; font-size: 14px; color: #e4e4e7; }
 }
 .archive a:hover { border-color: #52525b; }
 .archive a .muted { margin-left: auto; font-size: 11px; }
+.api-tabs { margin-bottom: 8px; }
+.endpoint .method { color: #4ade80; font: 9px Consolas, monospace; border: 1px solid #14532d; background: #052e16; border-radius: 4px; padding: 2px 5px; }
+.endpoint .endpoint-label { color: #a1a1aa; }
+.endpoint .chip { margin-left: auto; }
 .api-base { display: flex; align-items: center; gap: 10px; margin: 8px 0 14px; }
 .api-base code { color: var(--blue); font: 12px Consolas, monospace; }
 .code-wrap { position: relative; margin-top: 10px; }

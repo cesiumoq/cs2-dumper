@@ -1,0 +1,18 @@
+{
+  "threshold": 0.80,
+  "functions": [
+    {"name": "BulkRegenIterator", "module": "client.dll", "old_rva": "0x805060", "candidate": "0x825E10", "score": 0.633957, "sim": 0.533333, "delta": 134576, "margin": 0.113596, "accepted": false},
+    {"name": "FirstPersonLegs", "module": "client.dll", "old_rva": "0x11D34A0", "candidate": "0x2D1C90", "score": 0.437500, "sim": 0.583333, "delta": 15734800, "margin": 0.025356, "accepted": false},
+    {"name": "GetWeaponInAccuracyRecoveryTime", "module": "client.dll", "old_rva": "0x80DF30", "candidate": "0x7FDAB0", "score": 0.742050, "sim": 0.666667, "delta": 66688, "margin": 0.048983, "accepted": false},
+    {"name": "GloveApply_PerTick", "module": "client.dll", "old_rva": "0xC65060", "candidate": "0xC283B0", "score": 0.470316, "sim": 0.333333, "delta": 249008, "margin": 0.005180, "accepted": false},
+    {"name": "IsOverwatch", "module": "client.dll", "old_rva": "0xFCAC50", "candidate": "0x152B260", "score": 0.666667, "sim": 0.888889, "delta": 5637648, "margin": 0.000000, "accepted": false},
+    {"name": "C_CSWeaponBase_GetRecoilOffset", "module": "client.dll", "old_rva": "0x7CF520", "candidate": "0x1675EB0", "score": 0.613636, "sim": 0.818182, "delta": 15362448, "margin": 0.068182, "accepted": false},
+    {"name": "pWeaponRecoilTable", "module": "client.dll", "old_rva": "0x2213838", "candidate": "0xE0EFB0", "score": 0.500000, "sim": 0.666667, "delta": 20990088, "margin": 0.000000, "accepted": false},
+    {"name": "ProcessMessages", "module": "networksystem.dll", "old_rva": "0xC0EB0", "candidate": "0x157390", "score": 0.864109, "sim": 0.916667, "delta": 615648, "margin": 0.006485, "accepted": false},
+    {"name": "pSoundChannels", "module": "soundsystem.dll", "old_rva": "0x657C58", "candidate": "0x94F90", "score": 0.375000, "sim": 0.500000, "delta": 6040776, "margin": 0.000000, "accepted": false},
+    {"name": "pSoundSystem", "module": "soundsystem.dll", "old_rva": "0x535340", "candidate": "0x3943A0", "score": 0.489580, "sim": 0.590909, "delta": 1707936, "margin": 0.012307, "accepted": false},
+    {"name": "SomeUtlSymbolFunc", "module": "soundsystem.dll", "old_rva": "0xACA40", "candidate": "0x8B890", "score": 0.668046, "sim": 0.578947, "delta": 135600, "margin": 0.073709, "accepted": false},
+    {"name": "C_EconItemView_GetBasePlayerWeaponVData", "module": "client.dll", "old_rva": "0x7CDCA0", "candidate": "0x8082E6", "score": 0.486194, "sim": 0.352941, "delta": 239174, "margin": 0.064648, "accepted": false},
+    {"name": "C_CSWeaponBase_UpdateCompositeMaterialSet", "module": "client.dll", "old_rva": "0x8034D0", "candidate": "0x7ACB90", "score": 0.616816, "sim": 0.545455, "delta": 354624, "margin": 0.036568, "accepted": false}
+  ]
+}

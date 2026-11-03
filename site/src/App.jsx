@@ -119,7 +119,7 @@ const COLUMNS = {
   interfaces: [["name", "Name"], ["module", "Module"], ["rva", "RVA"]],
   classes: [["name", "Class"], ["module", "Module"], ["parent", "Parent"], ["size", "Size"]],
   convars: [["name", "Name"], ["value", "Value"], ["type", "Type"], ["flags", "Flags"]],
-  weapons: [["name", "Weapon"], ["damage", "Damage"], ["hs", "HS Ãƒâ€”"], ["armor", "Armor"], ["pen", "Pen"], ["range", "Range"], ["cycle", "Cycle"], ["price", "Price"], ["spread", "Spread"], ["bullets", "Bullets"]],
+  weapons: [["name", "Weapon"], ["damage", "Damage"], ["hs", "HS x"], ["armor", "Armor"], ["pen", "Pen"], ["range", "Range"], ["cycle", "Cycle"], ["price", "Price"], ["spread", "Spread"], ["bullets", "Bullets"]],
   events: [["name", "Event"], ["id", "ID"], ["fields", "Fields"]],
   entities: [["index", "Index"], ["classname", "Classname"], ["health", "HP"], ["team", "Team"]],
   engine: [["name", "Struct"], ["module", "Module"], ["size", "Size"], ["fields", "Fields"]],
@@ -202,17 +202,17 @@ export default function App() {
       fetch("./api/sdk/verified_features.json").then((r) => r.json()).catch(() => ({ features: [] })),
     ]).then(([patterns, offsets, types, convars, weapons, events, engine, features]) => {
       const rows = [];
-      for (const p of patterns.patterns || []) rows.push({ view: "patterns", label: p.name, meta: `${p.module} Ã‚Â· ${p.rva}` });
+      for (const p of patterns.patterns || []) rows.push({ view: "patterns", label: p.name, meta: `${p.module}   /  ${p.rva}` });
       for (const [module, entries] of Object.entries(offsets.modules || {})) {
-        for (const entry of entries) rows.push({ view: "offsets", label: entry.name, meta: `${module} Ã‚Â· ${entry.rva}` });
+        for (const entry of entries) rows.push({ view: "offsets", label: entry.name, meta: `${module}   /  ${entry.rva}` });
       }
       for (const [module, data] of Object.entries(types || {})) {
         for (const c of data.classes || []) rows.push({ view: "classes", label: c.name, meta: module });
       }
       for (const c of convars.convars || []) rows.push({ view: "convars", label: c.name, meta: `${c.type || ""} = ${c.value ?? ""}` });
-      for (const w of weapons.weapons || []) rows.push({ view: "weapons", label: w.name, meta: `dmg ${w.damage} Ã‚Â· $${w.price}` });
+      for (const w of weapons.weapons || []) rows.push({ view: "weapons", label: w.name, meta: `dmg ${w.damage}   /  $${w.price}` });
       for (const e of events.events || []) rows.push({ view: "events", label: e.name, meta: `event ${e.id}` });
-      for (const s of engine.structs || []) rows.push({ view: "engine", label: s.name, meta: `${s.module} Ã‚Â· ${(s.fields || []).length} fields` });
+      for (const s of engine.structs || []) rows.push({ view: "engine", label: s.name, meta: `${s.module}   /  ${(s.fields || []).length} fields` });
       for (const f of features.features || []) rows.push({ view: "features", label: f.name, meta: f.category });
       setGlobalRows(rows);
     }).catch(() => {});
@@ -249,7 +249,7 @@ export default function App() {
       <aside className="sidebar">
         <div className="brand">
           <div className="brand-title">CS2 <span>Dump</span></div>
-          <div className="brand-sub">offsets Ã‚Â· patterns</div>
+          <div className="brand-sub">offsets   /  patterns</div>
         </div>
         <nav>
           {NAV.map(([id, label, count]) => (
@@ -265,8 +265,8 @@ export default function App() {
         <header className="topbar">
           <div className="crumbs"><span>SDK</span><i>/</i><b>{NAV.find(([id]) => id === view)?.[1]}</b></div>
           <div className="search-wrap">
-            <span className="search-icon">Ã¢Å’â€¢</span>
-            <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search dumpÃ¢â‚¬Â¦" />
+            <span className="search-icon">Ctrl</span>
+            <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search dump..." />
             {q && (
               <div className="search-dropdown">
                 {fileHits.map(({ group, file }) => (
@@ -278,7 +278,7 @@ export default function App() {
                 {rowHits.map((row, i) => (
                   <button key={`row-${i}`} onClick={() => { selectView(row.view); }}>
                     <span className="res-name"><Highlight text={row.label} query={query} /></span>
-                    <span className="res-meta">{row.view} Ã‚Â· <Highlight text={row.meta} query={query} /></span>
+                    <span className="res-meta">{row.view}   /  <Highlight text={row.meta} query={query} /></span>
                   </button>
                 ))}
                 {!fileHits.length && !rowHits.length && <div className="empty-search">No results</div>}
@@ -314,10 +314,10 @@ export default function App() {
           <section className="panel table-panel">
             <div className="panel-head">
               <h2>{NAV.find(([id]) => id === view)?.[1]}</h2>
-              <span className="muted">{loading ? "loadingÃ¢â‚¬Â¦" : `${rows.length} rows`}</span>
+              <span className="muted">{loading ? "loading..." : `${rows.length} rows`}</span>
             </div>
             {q ? (
-              <div className="muted">Showing matches for Ã¢â‚¬Å“{query}Ã¢â‚¬Â.</div>
+              <div className="muted">Showing matches for "{query}".</div>
             ) : null}
             <DataTable cols={cols} rows={q ? rowHits : rows} />
           </section>
@@ -399,47 +399,76 @@ function CodeBlock({ children, label = "copy" }) {
 }
 
 function Api({ build }) {
+  const [tab, setTab] = useState("curl");
+  const base = "https://cs2-dump.vercel.app";
   const endpoints = [
-    ["/api/offsets.hpp", "C++ offsets"],
-    ["/api/offsets.cs", "C# offsets"],
-    ["/api/offsets.json", "JSON offsets"],
-    ["/api/patterns.json", "patterns and RVAs"],
-    ["/api/client_dll.hpp", "client SDK"],
-    ["/api/build.json", "build metadata"],
-    ["/api/version", "current build number"],
+    ["/api/build.json", "build number, validity, counts, hashes", "build"],
+    ["/api/offsets.json", "all netvars and globals by module", "offsets"],
+    ["/api/patterns.json", "function signatures with RVA", "patterns"],
+    ["/api/offsets.hpp", "C++ constants", "C++"],
+    ["/api/client_dll.hpp", "client classes and fields", "SDK"],
+    ["/api/vpk/manifest.json", "VPK parse summary", "VPK"],
+    ["/api/version", "plain build number", "text"],
   ];
-  return (
-    <section className="panel api-page">
-      <div className="panel-head"><h2>API</h2><span className="muted">GET Ã‚Â· CORS Ã‚Â· no auth</span></div>
-      <p className="muted">Latest build is automatic. No build id in the URL.</p>
-      <div className="api-base"><code>https://cs2-dump.vercel.app</code><CopyButton text="https://cs2-dump.vercel.app" label="copy host" /></div>
-      <div className="endpoint-list">
-        {endpoints.map(([path, label]) => (
-          <div className="endpoint" key={path}>
-            <code>GET {path}</code>
-            <span>{label}</span>
-          </div>
-        ))}
-      </div>
-      <h3>Response</h3>
-      <CodeBlock>{`GET /api/offsets.json
+  const samples = {
+    curl: `curl -s ${base}/api/build.json
+curl -s ${base}/api/offsets.json | jq '.client.dll'
+curl -s ${base}/api/patterns.json | jq '.patterns[] | select(.name=="FrameStageNotify")'
+curl -s ${base}/api/vpk/manifest.json | jq '{entries:.entry_count, radar:.radar_count}'`,
+    powershell: `$base = "${base}"
+Invoke-RestMethod "$base/api/build.json" | Select-Object build_number,valid
+(Invoke-RestMethod "$base/api/patterns.json").patterns |
+    Where-Object name -eq "FrameStageNotify"
+Invoke-RestMethod "$base/api/vpk/manifest.json" |
+    Select-Object entry_count,radar_count`,
+    javascript: `const base = "${base}";
+const build = await (await fetch(\`\${base}/api/build.json\`)).json();
+const offsets = await (await fetch(\`\${base}/api/offsets.json\`)).json();
+const patterns = await (await fetch(\`\${base}/api/patterns.json\`)).json();
 
-{
-  "client.dll": {
-    "dwEntityList": "0x271EB28",
-    "dwLocalPlayerPawn": "0x25698C8"
-  }
-}`}</CodeBlock>
-      <h3>Pinned build</h3>
-      <CodeBlock>{`GET /build-${build}/offsets.hpp
-GET /build-${build}/patterns.json`}</CodeBlock>
-      <h3>Auto-update C++</h3>
-      <CodeBlock>{`std::string live = HttpGet(L"cs2-dump.vercel.app", L"/api/version");
+console.log(build.build_number, offsets["client.dll"].dwEntityList);`,
+    cpp: `std::string live = HttpGet(L"cs2-dump.vercel.app", L"/api/version");
 std::string cached = ReadFile("offsets.version");
 if (live != cached) {
     WriteFile("offsets.json", HttpGet(L"cs2-dump.vercel.app", L"/api/offsets.json"));
+    WriteFile("patterns.json", HttpGet(L"cs2-dump.vercel.app", L"/api/patterns.json"));
     WriteFile("offsets.version", live);
+}`,
+  };
+  return (
+    <section className="panel api-page">
+      <div className="panel-head"><h2>API</h2><span className="muted">GET / CORS / no auth</span></div>
+      <p className="muted">Latest build automatically. No build id in the URL.</p>
+      <div className="api-base"><code>{base}</code><CopyButton text={base} label="copy host" /></div>
+      <div className="endpoint-list">
+        {endpoints.map(([path, label, type]) => (
+          <div className="endpoint" key={path}>
+            <span className="method">GET</span>
+            <code>{path}</code>
+            <span className="endpoint-label">{label}</span>
+            <span className="chip">{type}</span>
+          </div>
+        ))}
+      </div>
+      <h3>Examples</h3>
+      <div className="segmented api-tabs">
+        {["curl", "powershell", "javascript", "cpp"].map((id) => (
+          <button key={id} className={tab === id ? "active" : ""} onClick={() => setTab(id)}>{id}</button>
+        ))}
+      </div>
+      <CodeBlock>{samples[tab]}</CodeBlock>
+      <h3>Response</h3>
+      <CodeBlock>{`{
+  "build_number": ${build},
+  "valid": true,
+  "signatures": { "found": 577, "total": 578 },
+  "offsets": { "count": 202 },
+  "modules": 19
 }`}</CodeBlock>
+      <h3>Pinned build</h3>
+      <CodeBlock>{`${base}/build-${build}/offsets.hpp
+${base}/build-${build}/patterns.json
+${base}/build-${build}/client_dll.hpp`}</CodeBlock>
     </section>
   );
 }
@@ -493,7 +522,7 @@ function VpkView() {
     <section className="panel">
       <div className="panel-head">
         <h2>VPK Assets</h2>
-        <span className="muted">{Object.keys(manifest?.maps || {}).length} maps Ã‚Â· {Object.keys(manifest?.weapons || {}).length} icons Ã‚Â· {Object.keys(manifest?.characters || {}).length} characters</span>
+        <span className="muted">{Object.keys(manifest?.maps || {}).length} maps   /  {Object.keys(manifest?.weapons || {}).length} icons   /  {Object.keys(manifest?.characters || {}).length} characters</span>
       </div>
       <p className="muted">Radar images, coordinate data, weapon icons and player thumbnails extracted from the game VPK.</p>
       {parsed && (
@@ -517,7 +546,7 @@ function VpkView() {
             <button key={id} className={tab === id ? "active" : ""} onClick={() => setTab(id)}>{id}</button>
           ))}
         </div>
-        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search maps, icons, charactersÃ¢â‚¬Â¦" />
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search maps, icons, characters..." />
       </div>
 
       {tab === "maps" && (
@@ -525,7 +554,7 @@ function VpkView() {
           {maps.map(([name, map]) => (
             <article className="vpk-card" key={name}>
               {map.images?.radar && <img src={`https://raw.githubusercontent.com/cesiumoq/cs2-dumper/main/assets/${map.images.radar}`} alt={`${name} radar`} loading="lazy" />}
-              <div><b>{name}</b><span>{map.map_type} Ã‚Â· scale {map.scale}</span></div>
+              <div><b>{name}</b><span>{map.map_type}   /  scale {map.scale}</span></div>
             </article>
           ))}
         </div>
@@ -579,7 +608,7 @@ function EngineView({ data, loading, query }) {
     <section className="panel">
       <div className="panel-head">
         <h2>Engine</h2>
-        <span className="muted">{structs.length} structs Ã‚Â· {fields} fields</span>
+        <span className="muted">{structs.length} structs   /  {fields} fields</span>
       </div>
       <p className="muted">Non-schema structs reverse-engineered from the binary.</p>
       <div className="feature-toolbar">
@@ -633,7 +662,7 @@ function EntitiesView({ data, loading, query }) {
     <section className="panel">
       <div className="panel-head">
         <h2>Entities</h2>
-        <span className="muted">{entities.length} of {data?.entity_count ?? entities.length} Ã‚Â· {data?.class_count ?? byClass.length} classes</span>
+        <span className="muted">{entities.length} of {data?.entity_count ?? entities.length}   /  {data?.class_count ?? byClass.length} classes</span>
       </div>
       <div className="class-chips">
         {byClass.map((c) => <span key={c.classname} className="chip">{c.classname}<b>{c.count}</b></span>)}
@@ -686,7 +715,7 @@ function RowCopy({ row }) {
         catch { setCopied(false); }
       }}
     >
-      {copied ? "Ã¢Å“â€œ" : "Ã¢Â§â€°"}
+      {copied ? "ok" : "copy"}
     </button>
   );
 }
@@ -745,10 +774,10 @@ function Features({ data, loading, favorites, toggleFavorite }) {
         <select value={category} onChange={(e) => setCategory(e.target.value)}>
           {categories.map((c) => <option key={c} value={c}>{c === "all" ? "All categories" : c}</option>)}
         </select>
-        <button className={`fav-filter ${onlyFavorites ? "active" : ""}`} onClick={() => setOnlyFavorites(!onlyFavorites)}>Ã¢Ëœâ€¦ Favorites</button>
-        <input value={filter} onChange={(e) => setFilter(e.target.value)} placeholder="Search featuresÃ¢â‚¬Â¦" />
+        <button className={`fav-filter ${onlyFavorites ? "active" : ""}`} onClick={() => setOnlyFavorites(!onlyFavorites)}>       Favorites</button>
+        <input value={filter} onChange={(e) => setFilter(e.target.value)} placeholder="Search features..." />
       </div>
-      {loading && <div className="muted">loadingÃ¢â‚¬Â¦</div>}
+      {loading && <div className="muted">loading...</div>}
       <div className="feature-list">
         {list.map((feature) => {
           const key = `feature:${feature.name}`;
@@ -775,7 +804,7 @@ function Features({ data, loading, favorites, toggleFavorite }) {
                   </div>
                 </div>
                 <div className="feature-actions">
-                  <button className={`icon-btn ${favorites.includes(key) ? "active" : ""}`} onClick={() => toggleFavorite(key)} title="Favorite">Ã¢Ëœâ€¦</button>
+                  <button className={`icon-btn ${favorites.includes(key) ? "active" : ""}`} onClick={() => toggleFavorite(key)} title="Favorite">      </button>
                   <CopyButton text={copyText} />
                 </div>
               </div>
