@@ -202,17 +202,17 @@ export default function App() {
       fetch("./api/sdk/verified_features.json").then((r) => r.json()).catch(() => ({ features: [] })),
     ]).then(([patterns, offsets, types, convars, weapons, events, engine, features]) => {
       const rows = [];
-      for (const p of patterns.patterns || []) rows.push({ view: "patterns", label: p.name, meta: `${p.module}   /  ${p.rva}` });
+      for (const p of patterns.patterns || []) rows.push({ view: "patterns", label: p.name, meta: `${p.module} / ${p.rva}` });
       for (const [module, entries] of Object.entries(offsets.modules || {})) {
-        for (const entry of entries) rows.push({ view: "offsets", label: entry.name, meta: `${module}   /  ${entry.rva}` });
+        for (const entry of entries) rows.push({ view: "offsets", label: entry.name, meta: `${module} / ${entry.rva}` });
       }
       for (const [module, data] of Object.entries(types || {})) {
         for (const c of data.classes || []) rows.push({ view: "classes", label: c.name, meta: module });
       }
       for (const c of convars.convars || []) rows.push({ view: "convars", label: c.name, meta: `${c.type || ""} = ${c.value ?? ""}` });
-      for (const w of weapons.weapons || []) rows.push({ view: "weapons", label: w.name, meta: `dmg ${w.damage}   /  $${w.price}` });
+      for (const w of weapons.weapons || []) rows.push({ view: "weapons", label: w.name, meta: `dmg ${w.damage} / $${w.price}` });
       for (const e of events.events || []) rows.push({ view: "events", label: e.name, meta: `event ${e.id}` });
-      for (const s of engine.structs || []) rows.push({ view: "engine", label: s.name, meta: `${s.module}   /  ${(s.fields || []).length} fields` });
+      for (const s of engine.structs || []) rows.push({ view: "engine", label: s.name, meta: `${s.module} / ${(s.fields || []).length} fields` });
       for (const f of features.features || []) rows.push({ view: "features", label: f.name, meta: f.category });
       setGlobalRows(rows);
     }).catch(() => {});
@@ -249,7 +249,7 @@ export default function App() {
       <aside className="sidebar">
         <div className="brand">
           <div className="brand-title">CS2 <span>Dump</span></div>
-          <div className="brand-sub">offsets   /  patterns</div>
+          <div className="brand-sub">offsets / patterns</div>
         </div>
         <nav>
           {NAV.map(([id, label, count]) => (
@@ -278,7 +278,7 @@ export default function App() {
                 {rowHits.map((row, i) => (
                   <button key={`row-${i}`} onClick={() => { selectView(row.view); }}>
                     <span className="res-name"><Highlight text={row.label} query={query} /></span>
-                    <span className="res-meta">{row.view}   /  <Highlight text={row.meta} query={query} /></span>
+                    <span className="res-meta">{row.view} / <Highlight text={row.meta} query={query} /></span>
                   </button>
                 ))}
                 {!fileHits.length && !rowHits.length && <div className="empty-search">No results</div>}
@@ -522,7 +522,7 @@ function VpkView() {
     <section className="panel">
       <div className="panel-head">
         <h2>VPK Assets</h2>
-        <span className="muted">{Object.keys(manifest?.maps || {}).length} maps   /  {Object.keys(manifest?.weapons || {}).length} icons   /  {Object.keys(manifest?.characters || {}).length} characters</span>
+        <span className="muted">{Object.keys(manifest?.maps || {}).length} maps / {Object.keys(manifest?.weapons || {}).length} icons / {Object.keys(manifest?.characters || {}).length} characters</span>
       </div>
       <p className="muted">Radar images, coordinate data, weapon icons and player thumbnails extracted from the game VPK.</p>
       {parsed && (
@@ -554,7 +554,7 @@ function VpkView() {
           {maps.map(([name, map]) => (
             <article className="vpk-card" key={name}>
               {map.images?.radar && <img src={`https://raw.githubusercontent.com/cesiumoq/cs2-dumper/main/assets/${map.images.radar}`} alt={`${name} radar`} loading="lazy" />}
-              <div><b>{name}</b><span>{map.map_type}   /  scale {map.scale}</span></div>
+              <div><b>{name}</b><span>{map.map_type} / scale {map.scale}</span></div>
             </article>
           ))}
         </div>
@@ -608,7 +608,7 @@ function EngineView({ data, loading, query }) {
     <section className="panel">
       <div className="panel-head">
         <h2>Engine</h2>
-        <span className="muted">{structs.length} structs   /  {fields} fields</span>
+        <span className="muted">{structs.length} structs / {fields} fields</span>
       </div>
       <p className="muted">Non-schema structs reverse-engineered from the binary.</p>
       <div className="feature-toolbar">
@@ -662,7 +662,7 @@ function EntitiesView({ data, loading, query }) {
     <section className="panel">
       <div className="panel-head">
         <h2>Entities</h2>
-        <span className="muted">{entities.length} of {data?.entity_count ?? entities.length}   /  {data?.class_count ?? byClass.length} classes</span>
+        <span className="muted">{entities.length} of {data?.entity_count ?? entities.length} / {data?.class_count ?? byClass.length} classes</span>
       </div>
       <div className="class-chips">
         {byClass.map((c) => <span key={c.classname} className="chip">{c.classname}<b>{c.count}</b></span>)}
