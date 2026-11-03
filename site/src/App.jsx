@@ -10,7 +10,7 @@ const NAV = [
   ["interfaces", "Interfaces", "111"],
   ["classes", "Classes", "3,300"],
   ["convars", "ConVars", "4,131"],
-  ["weapons", "Weapons", "5"],
+  ["weapons", "Weapons", "44"],
   ["events", "Game Events", "273"],
   ["entities", "Entities", "182"],
   ["engine", "Engine", "12"],
@@ -138,6 +138,18 @@ export default function App() {
   const [cache, setCache] = useState({});
   const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState("");
+  const [favorites, setFavorites] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("cs2-favorites") || "[]"); }
+    catch { return []; }
+  });
+
+  const toggleFavorite = (key) => {
+    setFavorites((current) => {
+      const next = current.includes(key) ? current.filter((x) => x !== key) : [...current, key];
+      localStorage.setItem("cs2-favorites", JSON.stringify(next));
+      return next;
+    });
+  };
 
   useEffect(() => {
     fetch("./data/latest/build.json", { cache: "no-store" })
@@ -234,8 +246,11 @@ export default function App() {
         {view === "status" && <Status build={build} meta={meta} viewer={viewer} />}
         {view === "api" && <Api build={build} />}
         {view === "downloads" && <Downloads viewer={viewer} />}
+        {view === "features" && (
+          <Features data={cache.features} loading={loading} favorites={favorites} toggleFavorite={toggleFavorite} />
+        )}
 
-        {COLUMNS[view] && (
+        {COLUMNS[view] && view !== "features" && (
           <section className="panel table-panel">
             <div className="panel-head">
               <h2>{NAV.find(([id]) => id === view)?.[1]}</h2>
@@ -268,7 +283,7 @@ function Overview({ build, meta, go, viewer }) {
           ["interfaces", "111", "interfaces"],
           ["classes", "3,300", "classes"],
           ["convars", "4,131", "ConVars"],
-          ["weapons", "5", "weapons"],
+          ["weapons", "44", "weapons"],
           ["events", "273", "game events"],
           ["entities", "182", "entities"],
           ["engine", "12", "structs"],
@@ -353,6 +368,139 @@ function Downloads({ viewer }) {
           </div>
         </div>
       ))}
+    </section>
+  );
+}
+
+function CopyButton({ text, label = "Copy as C++" }) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <button
+      className="copy-btn"
+      onClick={async () => {
+        try { await navigator.clipboard.writeText(text); setCopied(true); setTimeout(() => setCopied(false), 1200); }
+        catch { setCopied(false); }
+      }}
+    >
+      {copied ? "copied" : label}
+    </button>
+  );
+}
+
+function FeatureTable({ title, cols, rows }) {
+  if (!rows?.length) return null;
+  return (
+    <div className="feature-block">
+      <h4>{title}</h4>
+      <div className="mini-table">
+        <table>
+          <thead><tr>{cols.map(([, label]) => <th key={label}>{label}</th>)}</tr></thead>
+          <tbody>
+            {rows.map((row, i) => (
+              <tr key={i}>{cols.map(([key]) => <td key={key} className={key === "name" || key === "offset" || key === "rva" ? "mono" : ""}>{String(row[key] ?? "")}</td>)}</tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function Features({ data, loading, favorites, toggleFavorite }) {
+  const [mode, setMode] = useState("internal");
+  const [category, setCategory] = useState("all");
+  const [onlyFavorites, setOnlyFavorites] = useState(false);
+  const [filter, setFilter] = useState("");
+
+  const features = data?.features || [];
+  const categories = ["all", ...Array.from(new Set(features.map((f) => f.category).filter(Boolean)))];
+  const q = filter.trim().toLowerCase();
+  const list = features.filter((f) => {
+    const key = `feature:${f.name}`;
+    if (onlyFavorites && !favorites.includes(key)) return false;
+    if (category !== "all" && f.category !== category) return false;
+    if (q && !`${f.name} ${f.category} ${f.summary}`.toLowerCase().includes(q)) return false;
+    return true;
+  });
+
+  return (
+    <section className="panel features-panel">
+      <div className="panel-head">
+        <h2>Features</h2>
+        <span className="muted">{features.length} checked recipes</span>
+      </div>
+      <p className="muted">
+        Internal = hooks and game functions. External = a separate process reading memory.
+        Every offset and function is resolved from this dump.
+      </p>
+      <div className="feature-toolbar">
+        <div className="segmented">
+          <button className={mode === "internal" ? "active" : ""} onClick={() => setMode("internal")}>internal</button>
+          <button className={mode === "external" ? "active" : ""} onClick={() => setMode("external")}>external</button>
+        </div>
+        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+          {categories.map((c) => <option key={c} value={c}>{c === "all" ? "All categories" : c}</option>)}
+        </select>
+        <button className={`fav-filter ${onlyFavorites ? "active" : ""}`} onClick={() => setOnlyFavorites(!onlyFavorites)}>★ Favorites</button>
+        <input value={filter} onChange={(e) => setFilter(e.target.value)} placeholder="Search features…" />
+      </div>
+      {loading && <div className="muted">loading…</div>}
+      <div className="feature-list">
+        {list.map((feature) => {
+          const key = `feature:${feature.name}`;
+          const active = feature[mode] || feature;
+          const steps = active.steps || feature.steps || [];
+          const fields = active.fields || feature.fields || [];
+          const functions = active.functions || feature.functions || [];
+          const globals = active.globals || feature.globals || [];
+          const convars = active.convars || feature.convars || [];
+          const copyText = [
+            `// ${feature.name} (${feature.category})`,
+            feature.summary,
+            ...steps.map((s, i) => `// ${i + 1}. ${s}`),
+          ].join("\n");
+          return (
+            <article className="feature-card" key={feature.name}>
+              <div className="feature-head">
+                <div>
+                  <h3>{feature.name}</h3>
+                  <div className="feature-tags">
+                    <span className="chip">{feature.category}</span>
+                    {feature.status && <span className="chip">{feature.status}</span>}
+                    {feature.internal && feature.external && <span className="chip">internal + external</span>}
+                  </div>
+                </div>
+                <div className="feature-actions">
+                  <button className={`icon-btn ${favorites.includes(key) ? "active" : ""}`} onClick={() => toggleFavorite(key)} title="Favorite">★</button>
+                  <CopyButton text={copyText} />
+                </div>
+              </div>
+              <p className="feature-summary">{feature.summary}</p>
+              {steps.length > 0 && (
+                <ol className="feature-steps">
+                  {steps.map((step, i) => <li key={i}>{step}</li>)}
+                </ol>
+              )}
+              {convars.length > 0 && (
+                <div className="feature-convars">
+                  <h4>ConVars</h4>
+                  {convars.map((c) => <div key={c.name}><code>{c.name}</code><span>{c.use}</span></div>)}
+                </div>
+              )}
+              <FeatureTable title="Offsets" cols={[["class", "Class"], ["field", "Field"], ["offset", "Offset"], ["type", "Type"], ["note", "Note"]]} rows={fields} />
+              <FeatureTable title="Functions" cols={[["name", "Function"], ["module", "Module"], ["rva", "RVA"], ["purpose", "Purpose"]]} rows={functions} />
+              <FeatureTable title="Globals" cols={[["name", "Name"], ["value", "Value"], ["module", "Module"], ["note", "Note"]]} rows={globals} />
+              {feature.notes?.length > 0 && (
+                <div className="feature-notes">
+                  <h4>Notes</h4>
+                  {feature.notes.map((note, i) => <p key={i}>{note}</p>)}
+                </div>
+              )}
+            </article>
+          );
+        })}
+        {!loading && !list.length && <div className="muted">No features.</div>}
+      </div>
     </section>
   );
 }
