@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 
 const FILE_ICON = "M56 20h96l56 56v140a20 20 0 0 1-20 20H56a20 20 0 0 1-20-20V40a20 20 0 0 1 20-20Zm92 24v40h40";
 
@@ -15,8 +15,14 @@ const NAV = [
   ["entities", "Entities", "182"],
   ["engine", "Engine", "12"],
   ["features", "Features", "6"],
+  ["vpk", "VPK Assets"],
   ["api", "API"],
   ["downloads", "Downloads"],
+];
+
+const WORKSHOP_IDS = [
+  "3070244462", "3070247085", "3070389038", "3099883250", "3111582979",
+  "3149722721", "3152330869", "3298850698", "3349182536", "3747203695",
 ];
 
 const SOURCES = {
@@ -113,7 +119,7 @@ const COLUMNS = {
   interfaces: [["name", "Name"], ["module", "Module"], ["rva", "RVA"]],
   classes: [["name", "Class"], ["module", "Module"], ["parent", "Parent"], ["size", "Size"]],
   convars: [["name", "Name"], ["value", "Value"], ["type", "Type"], ["flags", "Flags"]],
-  weapons: [["name", "Weapon"], ["damage", "Damage"], ["hs", "HS ×"], ["armor", "Armor"], ["pen", "Pen"], ["range", "Range"], ["cycle", "Cycle"], ["price", "Price"], ["spread", "Spread"], ["bullets", "Bullets"]],
+  weapons: [["name", "Weapon"], ["damage", "Damage"], ["hs", "HS Ã—"], ["armor", "Armor"], ["pen", "Pen"], ["range", "Range"], ["cycle", "Cycle"], ["price", "Price"], ["spread", "Spread"], ["bullets", "Bullets"]],
   events: [["name", "Event"], ["id", "ID"], ["fields", "Fields"]],
   entities: [["index", "Index"], ["classname", "Classname"], ["health", "HP"], ["team", "Team"]],
   engine: [["name", "Struct"], ["module", "Module"], ["size", "Size"], ["fields", "Fields"]],
@@ -196,17 +202,17 @@ export default function App() {
       fetch("./api/sdk/verified_features.json").then((r) => r.json()).catch(() => ({ features: [] })),
     ]).then(([patterns, offsets, types, convars, weapons, events, engine, features]) => {
       const rows = [];
-      for (const p of patterns.patterns || []) rows.push({ view: "patterns", label: p.name, meta: `${p.module} · ${p.rva}` });
+      for (const p of patterns.patterns || []) rows.push({ view: "patterns", label: p.name, meta: `${p.module} Â· ${p.rva}` });
       for (const [module, entries] of Object.entries(offsets.modules || {})) {
-        for (const entry of entries) rows.push({ view: "offsets", label: entry.name, meta: `${module} · ${entry.rva}` });
+        for (const entry of entries) rows.push({ view: "offsets", label: entry.name, meta: `${module} Â· ${entry.rva}` });
       }
       for (const [module, data] of Object.entries(types || {})) {
         for (const c of data.classes || []) rows.push({ view: "classes", label: c.name, meta: module });
       }
       for (const c of convars.convars || []) rows.push({ view: "convars", label: c.name, meta: `${c.type || ""} = ${c.value ?? ""}` });
-      for (const w of weapons.weapons || []) rows.push({ view: "weapons", label: w.name, meta: `dmg ${w.damage} · $${w.price}` });
+      for (const w of weapons.weapons || []) rows.push({ view: "weapons", label: w.name, meta: `dmg ${w.damage} Â· $${w.price}` });
       for (const e of events.events || []) rows.push({ view: "events", label: e.name, meta: `event ${e.id}` });
-      for (const s of engine.structs || []) rows.push({ view: "engine", label: s.name, meta: `${s.module} · ${(s.fields || []).length} fields` });
+      for (const s of engine.structs || []) rows.push({ view: "engine", label: s.name, meta: `${s.module} Â· ${(s.fields || []).length} fields` });
       for (const f of features.features || []) rows.push({ view: "features", label: f.name, meta: f.category });
       setGlobalRows(rows);
     }).catch(() => {});
@@ -243,7 +249,7 @@ export default function App() {
       <aside className="sidebar">
         <div className="brand">
           <div className="brand-title">CS2 <span>Dump</span></div>
-          <div className="brand-sub">offsets · patterns</div>
+          <div className="brand-sub">offsets Â· patterns</div>
         </div>
         <nav>
           {NAV.map(([id, label, count]) => (
@@ -259,8 +265,8 @@ export default function App() {
         <header className="topbar">
           <div className="crumbs"><span>SDK</span><i>/</i><b>{NAV.find(([id]) => id === view)?.[1]}</b></div>
           <div className="search-wrap">
-            <span className="search-icon">⌕</span>
-            <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search dump…" />
+            <span className="search-icon">âŒ•</span>
+            <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search dumpâ€¦" />
             {q && (
               <div className="search-dropdown">
                 {fileHits.map(({ group, file }) => (
@@ -272,7 +278,7 @@ export default function App() {
                 {rowHits.map((row, i) => (
                   <button key={`row-${i}`} onClick={() => { selectView(row.view); }}>
                     <span className="res-name"><Highlight text={row.label} query={query} /></span>
-                    <span className="res-meta">{row.view} · <Highlight text={row.meta} query={query} /></span>
+                    <span className="res-meta">{row.view} Â· <Highlight text={row.meta} query={query} /></span>
                   </button>
                 ))}
                 {!fileHits.length && !rowHits.length && <div className="empty-search">No results</div>}
@@ -302,15 +308,16 @@ export default function App() {
         )}
         {view === "engine" && <EngineView data={cache.engine} loading={loading} query={query} />}
         {view === "entities" && <EntitiesView data={cache.entities} loading={loading} query={query} />}
+        {view === "vpk" && <VpkView />}
 
         {COLUMNS[view] && !["features", "engine", "entities"].includes(view) && (
           <section className="panel table-panel">
             <div className="panel-head">
               <h2>{NAV.find(([id]) => id === view)?.[1]}</h2>
-              <span className="muted">{loading ? "loading…" : `${rows.length} rows`}</span>
+              <span className="muted">{loading ? "loadingâ€¦" : `${rows.length} rows`}</span>
             </div>
             {q ? (
-              <div className="muted">Showing matches for “{query}”.</div>
+              <div className="muted">Showing matches for â€œ{query}â€.</div>
             ) : null}
             <DataTable cols={cols} rows={q ? rowHits : rows} />
           </section>
@@ -403,7 +410,7 @@ function Api({ build }) {
   ];
   return (
     <section className="panel api-page">
-      <div className="panel-head"><h2>API</h2><span className="muted">GET · CORS · no auth</span></div>
+      <div className="panel-head"><h2>API</h2><span className="muted">GET Â· CORS Â· no auth</span></div>
       <p className="muted">Latest build is automatic. No build id in the URL.</p>
       <div className="api-base"><code>https://cs2-dump.vercel.app</code><CopyButton text="https://cs2-dump.vercel.app" label="copy host" /></div>
       <div className="endpoint-list">
@@ -455,6 +462,91 @@ function Downloads({ viewer }) {
   );
 }
 
+function VpkView() {
+  const [manifest, setManifest] = useState(null);
+  const [tab, setTab] = useState("maps");
+  const [q, setQ] = useState("");
+  useEffect(() => {
+    fetch("./vpk/manifest.json", { cache: "no-store" })
+      .then((r) => r.json())
+      .then(setManifest)
+      .catch(() => {});
+  }, []);
+  const query = q.trim().toLowerCase();
+  const maps = Object.entries(manifest?.maps || {}).filter(([name, m]) =>
+    !query || `${name} ${m.map_type || ""}`.toLowerCase().includes(query)
+  );
+  const icons = Object.entries(manifest?.weapons || {}).filter(([, w]) =>
+    !query || `${w.name} ${w.display_name}`.toLowerCase().includes(query)
+  );
+  const characters = Object.entries(manifest?.characters || {}).filter(([name]) =>
+    !query || name.toLowerCase().includes(query)
+  );
+  const workshop = WORKSHOP_IDS.filter((id) => !query || id.includes(query));
+
+  return (
+    <section className="panel">
+      <div className="panel-head">
+        <h2>VPK Assets</h2>
+        <span className="muted">{Object.keys(manifest?.maps || {}).length} maps Â· {Object.keys(manifest?.weapons || {}).length} icons Â· {Object.keys(manifest?.characters || {}).length} characters</span>
+      </div>
+      <p className="muted">Radar images, coordinate data, weapon icons and player thumbnails extracted from the game VPK.</p>
+      <div className="feature-toolbar">
+        <div className="segmented">
+          {["maps", "workshop", "icons", "characters"].map((id) => (
+            <button key={id} className={tab === id ? "active" : ""} onClick={() => setTab(id)}>{id}</button>
+          ))}
+        </div>
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search maps, icons, charactersâ€¦" />
+      </div>
+
+      {tab === "maps" && (
+        <div className="vpk-grid">
+          {maps.map(([name, map]) => (
+            <article className="vpk-card" key={name}>
+              {map.images?.radar && <img src={`./vpk/${map.images.radar}`} alt={`${name} radar`} loading="lazy" />}
+              <div><b>{name}</b><span>{map.map_type} Â· scale {map.scale}</span></div>
+            </article>
+          ))}
+        </div>
+      )}
+
+      {tab === "workshop" && (
+        <div className="vpk-grid">
+          {workshop.map((id) => (
+            <article className="vpk-card" key={id}>
+              <img src={`./vpk/workshop/${id}/radar.png`} alt={`workshop ${id} radar`} loading="lazy" />
+              <div><b>workshop {id}</b><span>community map</span></div>
+            </article>
+          ))}
+        </div>
+      )}
+
+      {tab === "icons" && (
+        <div className="icon-grid">
+          {icons.map(([id, w]) => (
+            <a className="icon-card" key={id} href={`./vpk/${w.icon_svg}`} target="_blank" rel="noreferrer" title={w.name}>
+              <img src={`./vpk/${w.icon_svg}`} alt={w.name} loading="lazy" />
+              <span>{w.name.replace("weapon_", "")}</span>
+            </a>
+          ))}
+        </div>
+      )}
+
+      {tab === "characters" && (
+        <div className="character-grid">
+          {characters.map(([name, path]) => (
+            <figure key={name}>
+              <img src={`./vpk/${path}`} alt={name} loading="lazy" />
+              <figcaption>{name.replace("customplayer_", "")}</figcaption>
+            </figure>
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
+
 function EngineView({ data, loading, query }) {
   const q = query.trim().toLowerCase();
   const [open, setOpen] = useState({});
@@ -467,7 +559,7 @@ function EngineView({ data, loading, query }) {
     <section className="panel">
       <div className="panel-head">
         <h2>Engine</h2>
-        <span className="muted">{structs.length} structs · {fields} fields</span>
+        <span className="muted">{structs.length} structs Â· {fields} fields</span>
       </div>
       <p className="muted">Non-schema structs reverse-engineered from the binary.</p>
       <div className="feature-toolbar">
@@ -521,7 +613,7 @@ function EntitiesView({ data, loading, query }) {
     <section className="panel">
       <div className="panel-head">
         <h2>Entities</h2>
-        <span className="muted">{entities.length} of {data?.entity_count ?? entities.length} · {data?.class_count ?? byClass.length} classes</span>
+        <span className="muted">{entities.length} of {data?.entity_count ?? entities.length} Â· {data?.class_count ?? byClass.length} classes</span>
       </div>
       <div className="class-chips">
         {byClass.map((c) => <span key={c.classname} className="chip">{c.classname}<b>{c.count}</b></span>)}
@@ -574,7 +666,7 @@ function RowCopy({ row }) {
         catch { setCopied(false); }
       }}
     >
-      {copied ? "✓" : "⧉"}
+      {copied ? "âœ“" : "â§‰"}
     </button>
   );
 }
@@ -633,10 +725,10 @@ function Features({ data, loading, favorites, toggleFavorite }) {
         <select value={category} onChange={(e) => setCategory(e.target.value)}>
           {categories.map((c) => <option key={c} value={c}>{c === "all" ? "All categories" : c}</option>)}
         </select>
-        <button className={`fav-filter ${onlyFavorites ? "active" : ""}`} onClick={() => setOnlyFavorites(!onlyFavorites)}>★ Favorites</button>
-        <input value={filter} onChange={(e) => setFilter(e.target.value)} placeholder="Search features…" />
+        <button className={`fav-filter ${onlyFavorites ? "active" : ""}`} onClick={() => setOnlyFavorites(!onlyFavorites)}>â˜… Favorites</button>
+        <input value={filter} onChange={(e) => setFilter(e.target.value)} placeholder="Search featuresâ€¦" />
       </div>
-      {loading && <div className="muted">loading…</div>}
+      {loading && <div className="muted">loadingâ€¦</div>}
       <div className="feature-list">
         {list.map((feature) => {
           const key = `feature:${feature.name}`;
@@ -663,7 +755,7 @@ function Features({ data, loading, favorites, toggleFavorite }) {
                   </div>
                 </div>
                 <div className="feature-actions">
-                  <button className={`icon-btn ${favorites.includes(key) ? "active" : ""}`} onClick={() => toggleFavorite(key)} title="Favorite">★</button>
+                  <button className={`icon-btn ${favorites.includes(key) ? "active" : ""}`} onClick={() => toggleFavorite(key)} title="Favorite">â˜…</button>
                   <CopyButton text={copyText} />
                 </div>
               </div>
@@ -713,3 +805,4 @@ function DataTable({ cols, rows }) {
     </div>
   );
 }
+

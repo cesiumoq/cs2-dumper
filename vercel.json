@@ -1,20 +1,47 @@
-{
-  "framework": "vite",
-  "buildCommand": "npm --prefix site install --no-audit --no-fund && npm --prefix site run build && rm -rf site/dist/data site/dist/api site/dist/build-* && cp -r docs/data site/dist/data && cp -r docs/api site/dist/api && for d in docs/data/builds/*; do cp -r \"$d\" \"site/dist/build-$(basename \"$d\")\"; done",
-  "outputDirectory": "site/dist",
-  "headers": [
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Cache-Control", "value": "public, max-age=60" }
-      ]
-    },
-    {
-      "source": "/build-(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
-      ]
-    }
-  ]
+﻿{
+    "framework":  "vite",
+    "buildCommand":  "npm --prefix site install --no-audit --no-fund \u0026\u0026 npm --prefix site run build \u0026\u0026 rm -rf site/dist/data site/dist/api site/dist/vpk site/dist/build-* \u0026\u0026 cp -r docs/data site/dist/data \u0026\u0026 cp -r docs/api site/dist/api \u0026\u0026 cp -r assets site/dist/vpk \u0026\u0026 for d in docs/data/builds/*; do cp -r \"$d\" \"site/dist/build-$(basename \"$d\")\"; done",
+    "outputDirectory":  "site/dist",
+    "headers":  [
+                    {
+                        "headers":  [
+                                        {
+                                            "key":  "Content-Type",
+                                            "value":  "text/plain; charset=utf-8"
+                                        }
+                                    ],
+                        "source":  "/api/version"
+                    },
+                    {
+                        "headers":  [
+                                        {
+                                            "key":  "Content-Type",
+                                            "value":  "text/plain; charset=utf-8"
+                                        }
+                                    ],
+                        "source":  "/api/version.txt"
+                    },
+                    {
+                        "source":  "/api/(.*)",
+                        "headers":  [
+                                        {
+                                            "key":  "Access-Control-Allow-Origin",
+                                            "value":  "*"
+                                        },
+                                        {
+                                            "key":  "Cache-Control",
+                                            "value":  "public, max-age=60"
+                                        }
+                                    ]
+                    },
+                    {
+                        "source":  "/build-(.*)",
+                        "headers":  [
+                                        {
+                                            "key":  "Access-Control-Allow-Origin",
+                                            "value":  "*"
+                                        }
+                                    ]
+                    }
+                ]
 }
