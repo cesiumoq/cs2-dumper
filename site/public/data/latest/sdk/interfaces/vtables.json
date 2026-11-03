@@ -1385,303 +1385,85 @@
             "index": 0,
             "module": "client.dll",
             "name": null,
-            "rva": 7902096
+            "rva": 7902112
           },
           {
             "index": 1,
             "module": "client.dll",
             "name": null,
-            "rva": 7905136
+            "rva": 7905152
           },
           {
             "index": 2,
             "module": "client.dll",
             "name": null,
-            "rva": 7960528
+            "rva": 7960544
           },
           {
             "index": 3,
             "module": "client.dll",
             "name": null,
-            "rva": 7929056
+            "rva": 7929072
           },
           {
             "index": 4,
             "module": "client.dll",
             "name": null,
-            "rva": 7965840
+            "rva": 7965856
           },
           {
             "index": 5,
             "module": "client.dll",
             "name": null,
-            "rva": 7957968
+            "rva": 7957984
           },
           {
             "index": 6,
             "module": "client.dll",
             "name": null,
-            "rva": 7911744
+            "rva": 7911760
           },
           {
             "index": 7,
             "module": "client.dll",
             "name": null,
-            "rva": 7915680
+            "rva": 7915696
           },
           {
             "index": 8,
             "module": "client.dll",
             "name": null,
-            "rva": 7961296
+            "rva": 7961312
           },
           {
             "index": 9,
             "module": "client.dll",
             "name": null,
-            "rva": 7951664
+            "rva": 7951680
           },
           {
             "index": 10,
             "module": "client.dll",
             "name": null,
-            "rva": 7915184
+            "rva": 7915200
           },
           {
             "index": 11,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7914912
-          },
-          {
-            "index": 12,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7914384
-          },
-          {
-            "index": 13,
-            "module": "client.dll",
-            "name": null,
-            "rva": 11899408
-          },
-          {
-            "index": 14,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7956320
-          },
-          {
-            "index": 15,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7956544
-          },
-          {
-            "index": 16,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7951440
-          },
-          {
-            "index": 17,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7963824
-          },
-          {
-            "index": 18,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7964592
-          },
-          {
-            "index": 19,
-            "module": "client.dll",
-            "name": null,
-            "rva": 11899376
-          },
-          {
-            "index": 20,
             "module": "client.dll",
             "name": null,
             "rva": 7914928
           },
           {
-            "index": 21,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7964672
-          },
-          {
-            "index": 22,
-            "module": "client.dll",
-            "name": null,
-            "rva": 11899424
-          }
-        ],
-        "rtti_class": "CClientBugBugService",
-        "vtable_module": "client.dll",
-        "vtable_rva": 29771816
-      },
-      "ClientToolsInfo_001": {
-        "methods": [
-          {
-            "index": 0,
-            "module": "client.dll",
-            "name": null,
-            "rva": 11898288
-          },
-          {
-            "index": 1,
-            "module": "client.dll",
-            "name": null,
-            "rva": 11898384
-          },
-          {
-            "index": 2,
-            "module": "client.dll",
-            "name": null,
-            "rva": 11898208
-          },
-          {
-            "index": 3,
-            "module": "client.dll",
-            "name": null,
-            "rva": 11898544
-          },
-          {
-            "index": 4,
-            "module": "client.dll",
-            "name": null,
-            "rva": 11898592
-          },
-          {
-            "index": 5,
-            "module": "client.dll",
-            "name": null,
-            "rva": 11898224
-          },
-          {
-            "index": 6,
-            "module": "client.dll",
-            "name": null,
-            "rva": 11898608
-          },
-          {
-            "index": 7,
-            "module": "client.dll",
-            "name": null,
-            "rva": 11898272
-          },
-          {
-            "index": 8,
-            "module": "client.dll",
-            "name": null,
-            "rva": 11898448
-          },
-          {
-            "index": 9,
-            "module": "client.dll",
-            "name": null,
-            "rva": 11898240
-          },
-          {
-            "index": 10,
-            "module": "client.dll",
-            "name": null,
-            "rva": 11898256
-          }
-        ],
-        "rtti_class": "CClientToolsInfo",
-        "vtable_module": "client.dll",
-        "vtable_rva": 29769952
-      },
-      "EmptyWorldService001_Client": {
-        "methods": [
-          {
-            "index": 0,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7902096
-          },
-          {
-            "index": 1,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7905136
-          },
-          {
-            "index": 2,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7960528
-          },
-          {
-            "index": 3,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7929056
-          },
-          {
-            "index": 4,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7965840
-          },
-          {
-            "index": 5,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7957968
-          },
-          {
-            "index": 6,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7911744
-          },
-          {
-            "index": 7,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7915680
-          },
-          {
-            "index": 8,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7961296
-          },
-          {
-            "index": 9,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7951664
-          },
-          {
-            "index": 10,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7915184
-          },
-          {
-            "index": 11,
-            "module": "client.dll",
-            "name": null,
-            "rva": 7914912
-          },
-          {
             "index": 12,
             "module": "client.dll",
             "name": null,
-            "rva": 7914384
+            "rva": 7914400
           },
           {
             "index": 13,
             "module": "client.dll",
             "name": null,
-            "rva": 7965744
+            "rva": 11899424
           },
           {
             "index": 14,
@@ -1699,48 +1481,266 @@
             "index": 16,
             "module": "client.dll",
             "name": null,
-            "rva": 7951440
+            "rva": 7951456
           },
           {
             "index": 17,
             "module": "client.dll",
             "name": null,
-            "rva": 7963824
+            "rva": 7963840
           },
           {
             "index": 18,
             "module": "client.dll",
             "name": null,
-            "rva": 7964592
+            "rva": 7964608
           },
           {
             "index": 19,
             "module": "client.dll",
             "name": null,
-            "rva": 7961376
+            "rva": 11899392
           },
           {
             "index": 20,
             "module": "client.dll",
             "name": null,
-            "rva": 7914928
+            "rva": 7914944
           },
           {
             "index": 21,
             "module": "client.dll",
             "name": null,
-            "rva": 7964672
+            "rva": 7964688
           },
           {
             "index": 22,
             "module": "client.dll",
             "name": null,
-            "rva": 7880544
+            "rva": 11899440
+          }
+        ],
+        "rtti_class": "CClientBugBugService",
+        "vtable_module": "client.dll",
+        "vtable_rva": 29771832
+      },
+      "ClientToolsInfo_001": {
+        "methods": [
+          {
+            "index": 0,
+            "module": "client.dll",
+            "name": null,
+            "rva": 11898304
+          },
+          {
+            "index": 1,
+            "module": "client.dll",
+            "name": null,
+            "rva": 11898400
+          },
+          {
+            "index": 2,
+            "module": "client.dll",
+            "name": null,
+            "rva": 11898224
+          },
+          {
+            "index": 3,
+            "module": "client.dll",
+            "name": null,
+            "rva": 11898560
+          },
+          {
+            "index": 4,
+            "module": "client.dll",
+            "name": null,
+            "rva": 11898608
+          },
+          {
+            "index": 5,
+            "module": "client.dll",
+            "name": null,
+            "rva": 11898240
+          },
+          {
+            "index": 6,
+            "module": "client.dll",
+            "name": null,
+            "rva": 11898624
+          },
+          {
+            "index": 7,
+            "module": "client.dll",
+            "name": null,
+            "rva": 11898288
+          },
+          {
+            "index": 8,
+            "module": "client.dll",
+            "name": null,
+            "rva": 11898464
+          },
+          {
+            "index": 9,
+            "module": "client.dll",
+            "name": null,
+            "rva": 11898256
+          },
+          {
+            "index": 10,
+            "module": "client.dll",
+            "name": null,
+            "rva": 11898272
+          }
+        ],
+        "rtti_class": "CClientToolsInfo",
+        "vtable_module": "client.dll",
+        "vtable_rva": 29769968
+      },
+      "EmptyWorldService001_Client": {
+        "methods": [
+          {
+            "index": 0,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7902112
+          },
+          {
+            "index": 1,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7905152
+          },
+          {
+            "index": 2,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7960544
+          },
+          {
+            "index": 3,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7929072
+          },
+          {
+            "index": 4,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7965856
+          },
+          {
+            "index": 5,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7957984
+          },
+          {
+            "index": 6,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7911760
+          },
+          {
+            "index": 7,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7915696
+          },
+          {
+            "index": 8,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7961312
+          },
+          {
+            "index": 9,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7951680
+          },
+          {
+            "index": 10,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7915200
+          },
+          {
+            "index": 11,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7914928
+          },
+          {
+            "index": 12,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7914400
+          },
+          {
+            "index": 13,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7965760
+          },
+          {
+            "index": 14,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7956352
+          },
+          {
+            "index": 15,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7956576
+          },
+          {
+            "index": 16,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7951456
+          },
+          {
+            "index": 17,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7963840
+          },
+          {
+            "index": 18,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7964608
+          },
+          {
+            "index": 19,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7961392
+          },
+          {
+            "index": 20,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7914944
+          },
+          {
+            "index": 21,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7964688
+          },
+          {
+            "index": 22,
+            "module": "client.dll",
+            "name": null,
+            "rva": 7880560
           }
         ],
         "rtti_class": "CEmptyWorldService",
         "vtable_module": "client.dll",
-        "vtable_rva": 29106672
+        "vtable_rva": 29106688
       },
       "GameClientExports001": {
         "methods": [
@@ -1748,120 +1748,120 @@
             "index": 0,
             "module": "client.dll",
             "name": null,
-            "rva": 11898880
+            "rva": 11898896
           },
           {
             "index": 1,
             "module": "client.dll",
             "name": null,
-            "rva": 11898976
+            "rva": 11898992
           },
           {
             "index": 2,
             "module": "client.dll",
             "name": null,
-            "rva": 11898736
+            "rva": 11898752
           },
           {
             "index": 3,
             "module": "client.dll",
             "name": null,
-            "rva": 11898832
+            "rva": 11898848
           },
           {
             "index": 4,
             "module": "client.dll",
             "name": null,
-            "rva": 11898816
+            "rva": 11898832
           },
           {
             "index": 5,
             "module": "client.dll",
             "name": null,
-            "rva": 11898752
+            "rva": 11898768
           },
           {
             "index": 6,
             "module": "client.dll",
             "name": null,
-            "rva": 11898768
+            "rva": 11898784
           },
           {
             "index": 7,
             "module": "client.dll",
             "name": null,
-            "rva": 11898864
+            "rva": 11898880
           },
           {
             "index": 8,
             "module": "client.dll",
             "name": null,
-            "rva": 11899040
+            "rva": 11899056
           },
           {
             "index": 9,
             "module": "client.dll",
             "name": null,
-            "rva": 11898784
+            "rva": 11898800
           },
           {
             "index": 10,
             "module": "client.dll",
             "name": null,
-            "rva": 11898800
+            "rva": 11898816
           },
           {
             "index": 11,
             "module": "client.dll",
             "name": null,
-            "rva": 11899136
+            "rva": 11899152
           },
           {
             "index": 12,
             "module": "client.dll",
             "name": null,
-            "rva": 11899168
+            "rva": 11899184
           },
           {
             "index": 13,
             "module": "client.dll",
             "name": null,
-            "rva": 11899184
+            "rva": 11899200
           },
           {
             "index": 14,
             "module": "client.dll",
             "name": null,
-            "rva": 11899200
+            "rva": 11899216
           },
           {
             "index": 15,
             "module": "client.dll",
             "name": null,
-            "rva": 11899264
+            "rva": 11899280
           },
           {
             "index": 16,
             "module": "client.dll",
             "name": null,
-            "rva": 11899328
+            "rva": 11899344
           },
           {
             "index": 17,
             "module": "client.dll",
             "name": null,
-            "rva": 11899344
+            "rva": 11899360
           },
           {
             "index": 18,
             "module": "client.dll",
             "name": null,
-            "rva": 11899360
+            "rva": 11899376
           }
         ],
         "rtti_class": "CGameClientExports",
         "vtable_module": "client.dll",
-        "vtable_rva": 29771288
+        "vtable_rva": 29771304
       },
       "LegacyGameUI001": {
         "methods": [
@@ -1869,228 +1869,228 @@
             "index": 0,
             "module": "client.dll",
             "name": null,
-            "rva": 13990480
+            "rva": 13990496
           },
           {
             "index": 1,
             "module": "client.dll",
             "name": null,
-            "rva": 13994416
+            "rva": 13994432
           },
           {
             "index": 2,
             "module": "client.dll",
             "name": null,
-            "rva": 14006560
+            "rva": 14006576
           },
           {
             "index": 3,
             "module": "client.dll",
             "name": null,
-            "rva": 13995808
+            "rva": 13995824
           },
           {
             "index": 4,
             "module": "client.dll",
             "name": null,
-            "rva": 14010960
+            "rva": 14010976
           },
           {
             "index": 5,
             "module": "client.dll",
             "name": null,
-            "rva": 14006544
+            "rva": 14006560
           },
           {
             "index": 6,
             "module": "client.dll",
             "name": null,
-            "rva": 13995360
+            "rva": 13995376
           },
           {
             "index": 7,
             "module": "client.dll",
             "name": null,
-            "rva": 13995728
+            "rva": 13995744
           },
           {
             "index": 8,
             "module": "client.dll",
             "name": null,
-            "rva": 14006576
+            "rva": 14006592
           },
           {
             "index": 9,
             "module": "client.dll",
             "name": null,
-            "rva": 14001152
+            "rva": 14001168
           },
           {
             "index": 10,
             "module": "client.dll",
             "name": null,
-            "rva": 13995712
+            "rva": 13995728
           },
           {
             "index": 11,
             "module": "client.dll",
             "name": null,
-            "rva": 14006464
+            "rva": 14006480
           },
           {
             "index": 12,
             "module": "client.dll",
             "name": null,
-            "rva": 14011520
+            "rva": 14011536
           },
           {
             "index": 13,
             "module": "client.dll",
             "name": null,
-            "rva": 14009408
+            "rva": 14009424
           },
           {
             "index": 14,
             "module": "client.dll",
             "name": null,
-            "rva": 13991712
+            "rva": 13991728
           },
           {
             "index": 15,
             "module": "client.dll",
             "name": null,
-            "rva": 14002448
+            "rva": 14002464
           },
           {
             "index": 16,
             "module": "client.dll",
             "name": null,
-            "rva": 14002928
+            "rva": 14002944
           },
           {
             "index": 17,
             "module": "client.dll",
             "name": null,
-            "rva": 14003840
+            "rva": 14003856
           },
           {
             "index": 18,
             "module": "client.dll",
             "name": null,
-            "rva": 14003120
+            "rva": 14003136
           },
           {
             "index": 19,
             "module": "client.dll",
             "name": null,
-            "rva": 14014192
+            "rva": 14014208
           },
           {
             "index": 20,
             "module": "client.dll",
             "name": null,
-            "rva": 14010368
+            "rva": 14010384
           },
           {
             "index": 21,
             "module": "client.dll",
             "name": null,
-            "rva": 14001520
+            "rva": 14001536
           },
           {
             "index": 22,
             "module": "client.dll",
             "name": null,
-            "rva": 14010384
+            "rva": 14010400
           },
           {
             "index": 23,
             "module": "client.dll",
             "name": null,
-            "rva": 14001536
+            "rva": 14001552
           },
           {
             "index": 24,
             "module": "client.dll",
             "name": null,
-            "rva": 14001504
+            "rva": 14001520
           },
           {
             "index": 25,
             "module": "client.dll",
             "name": null,
-            "rva": 14010944
+            "rva": 14010960
           },
           {
             "index": 26,
             "module": "client.dll",
             "name": null,
-            "rva": 13986192
+            "rva": 13986208
           },
           {
             "index": 27,
             "module": "client.dll",
             "name": null,
-            "rva": 14001040
+            "rva": 14001056
           },
           {
             "index": 28,
             "module": "client.dll",
             "name": "ShowMessageBox",
-            "rva": 13990800
+            "rva": 13990816
           },
           {
             "index": 29,
             "module": "client.dll",
             "name": null,
-            "rva": 13991440
+            "rva": 13991456
           },
           {
             "index": 30,
             "module": "client.dll",
             "name": null,
-            "rva": 13992960
+            "rva": 13992976
           },
           {
             "index": 31,
             "module": "client.dll",
             "name": null,
-            "rva": 13993840
+            "rva": 13993856
           },
           {
             "index": 32,
             "module": "client.dll",
             "name": null,
-            "rva": 13993504
+            "rva": 13993520
           },
           {
             "index": 33,
             "module": "client.dll",
             "name": null,
-            "rva": 14001136
+            "rva": 14001152
           },
           {
             "index": 34,
             "module": "client.dll",
             "name": null,
-            "rva": 14001168
+            "rva": 14001184
           },
           {
             "index": 35,
             "module": "client.dll",
             "name": null,
-            "rva": 14010400
+            "rva": 14010416
           },
           {
             "index": 36,
             "module": "client.dll",
             "name": null,
-            "rva": 14010416
+            "rva": 14010432
           }
         ],
         "rtti_class": "CLegacyGameUI",
         "vtable_module": "client.dll",
-        "vtable_rva": 30093064
+        "vtable_rva": 30093080
       },
       "Source2Client002": {
         "methods": [
@@ -2098,1267 +2098,1267 @@
             "index": 0,
             "module": "client.dll",
             "name": null,
-            "rva": 11953744
+            "rva": 11953760
           },
           {
             "index": 1,
             "module": "client.dll",
             "name": null,
-            "rva": 11964592
+            "rva": 11964608
           },
           {
             "index": 2,
             "module": "client.dll",
             "name": null,
-            "rva": 12052768
+            "rva": 12052784
           },
           {
             "index": 3,
             "module": "client.dll",
             "name": null,
-            "rva": 12006736
+            "rva": 12006752
           },
           {
             "index": 4,
             "module": "client.dll",
             "name": "CSource2Client_Shutdown",
-            "rva": 12072224
+            "rva": 12072240
           },
           {
             "index": 5,
             "module": "client.dll",
             "name": null,
-            "rva": 12048160
+            "rva": 12048176
           },
           {
             "index": 6,
             "module": "client.dll",
             "name": null,
-            "rva": 11992976
+            "rva": 11992992
           },
           {
             "index": 7,
             "module": "client.dll",
             "name": null,
-            "rva": 12002608
+            "rva": 12002624
           },
           {
             "index": 8,
             "module": "client.dll",
             "name": null,
-            "rva": 12053792
+            "rva": 12053808
           },
           {
             "index": 9,
             "module": "client.dll",
             "name": null,
-            "rva": 12022336
+            "rva": 12022352
           },
           {
             "index": 10,
             "module": "client.dll",
             "name": null,
-            "rva": 12002592
+            "rva": 12002608
           },
           {
             "index": 11,
             "module": "client.dll",
             "name": "UpdateGlobalVars",
-            "rva": 12066752
+            "rva": 12066768
           },
           {
             "index": 12,
             "module": "client.dll",
             "name": null,
-            "rva": 12021200
+            "rva": 12021216
           },
           {
             "index": 13,
             "module": "client.dll",
             "name": null,
-            "rva": 12053248
+            "rva": 12053264
           },
           {
             "index": 14,
             "module": "client.dll",
             "name": null,
-            "rva": 12047504
+            "rva": 12047520
           },
           {
             "index": 15,
             "module": "client.dll",
             "name": null,
-            "rva": 11962400
+            "rva": 11962416
           },
           {
             "index": 16,
             "module": "client.dll",
             "name": null,
-            "rva": 11985392
+            "rva": 11985408
           },
           {
             "index": 17,
             "module": "client.dll",
             "name": null,
-            "rva": 12073632
+            "rva": 12073648
           },
           {
             "index": 18,
             "module": "client.dll",
             "name": null,
-            "rva": 11998400
+            "rva": 11998416
           },
           {
             "index": 19,
             "module": "client.dll",
             "name": null,
-            "rva": 11998448
+            "rva": 11998464
           },
           {
             "index": 20,
             "module": "client.dll",
             "name": null,
-            "rva": 11999520
+            "rva": 11999536
           },
           {
             "index": 21,
             "module": "client.dll",
             "name": null,
-            "rva": 12041376
+            "rva": 12041392
           },
           {
             "index": 22,
             "module": "client.dll",
             "name": null,
-            "rva": 12050864
+            "rva": 12050880
           },
           {
             "index": 23,
             "module": "client.dll",
             "name": null,
-            "rva": 12086288
+            "rva": 12086304
           },
           {
             "index": 24,
             "module": "client.dll",
             "name": null,
-            "rva": 11967216
+            "rva": 11967232
           },
           {
             "index": 25,
             "module": "client.dll",
             "name": null,
-            "rva": 11962464
+            "rva": 11962480
           },
           {
             "index": 26,
             "module": "client.dll",
             "name": null,
-            "rva": 12002864
+            "rva": 12002880
           },
           {
             "index": 27,
             "module": "client.dll",
             "name": null,
-            "rva": 12066720
+            "rva": 12066736
           },
           {
             "index": 28,
             "module": "client.dll",
             "name": null,
-            "rva": 12073728
+            "rva": 12073744
           },
           {
             "index": 29,
             "module": "client.dll",
             "name": null,
-            "rva": 11995264
+            "rva": 11995280
           },
           {
             "index": 30,
             "module": "client.dll",
             "name": null,
-            "rva": 11957536
+            "rva": 11957552
           },
           {
             "index": 31,
             "module": "client.dll",
             "name": null,
-            "rva": 11964336
+            "rva": 11964352
           },
           {
             "index": 32,
             "module": "client.dll",
             "name": null,
-            "rva": 12000112
+            "rva": 12000128
           },
           {
             "index": 33,
             "module": "client.dll",
             "name": null,
-            "rva": 12035344
+            "rva": 12035360
           },
           {
             "index": 34,
             "module": "client.dll",
             "name": null,
-            "rva": 11990480
+            "rva": 11990496
           },
           {
             "index": 35,
             "module": "client.dll",
             "name": null,
-            "rva": 12053696
+            "rva": 12053712
           },
           {
             "index": 36,
             "module": "client.dll",
             "name": "FrameStageNotify",
-            "rva": 11988576
+            "rva": 11988592
           },
           {
             "index": 37,
             "module": "client.dll",
             "name": null,
-            "rva": 12005120
+            "rva": 12005136
           },
           {
             "index": 38,
             "module": "client.dll",
             "name": null,
-            "rva": 12004640
+            "rva": 12004656
           },
           {
             "index": 39,
             "module": "client.dll",
             "name": null,
-            "rva": 12004624
+            "rva": 12004640
           },
           {
             "index": 40,
             "module": "client.dll",
             "name": null,
-            "rva": 12041008
+            "rva": 12041024
           },
           {
             "index": 41,
             "module": "client.dll",
             "name": null,
-            "rva": 11948736
+            "rva": 11948752
           },
           {
             "index": 42,
             "module": "client.dll",
             "name": null,
-            "rva": 12084944
+            "rva": 12084960
           },
           {
             "index": 43,
             "module": "client.dll",
             "name": null,
-            "rva": 12041504
+            "rva": 12041520
           },
           {
             "index": 44,
             "module": "client.dll",
             "name": null,
-            "rva": 12075072
+            "rva": 12075088
           },
           {
             "index": 45,
             "module": "client.dll",
             "name": null,
-            "rva": 11948720
+            "rva": 11948736
           },
           {
             "index": 46,
             "module": "client.dll",
             "name": null,
-            "rva": 12039664
+            "rva": 12039680
           },
           {
             "index": 47,
             "module": "client.dll",
             "name": null,
-            "rva": 12041392
+            "rva": 12041408
           },
           {
             "index": 48,
             "module": "client.dll",
             "name": null,
-            "rva": 12085296
+            "rva": 12085312
           },
           {
             "index": 49,
             "module": "client.dll",
             "name": null,
-            "rva": 11937344
+            "rva": 11937360
           },
           {
             "index": 50,
             "module": "client.dll",
             "name": null,
-            "rva": 11990096
+            "rva": 11990112
           },
           {
             "index": 51,
             "module": "client.dll",
             "name": null,
-            "rva": 11999840
+            "rva": 11999856
           },
           {
             "index": 52,
             "module": "client.dll",
             "name": null,
-            "rva": 12081616
+            "rva": 12081632
           },
           {
             "index": 53,
             "module": "client.dll",
             "name": null,
-            "rva": 12041360
+            "rva": 12041376
           },
           {
             "index": 54,
             "module": "client.dll",
             "name": null,
-            "rva": 12006240
+            "rva": 12006256
           },
           {
             "index": 55,
             "module": "client.dll",
             "name": null,
-            "rva": 12085248
+            "rva": 12085264
           },
           {
             "index": 56,
             "module": "client.dll",
             "name": null,
-            "rva": 12034720
+            "rva": 12034736
           },
           {
             "index": 57,
             "module": "client.dll",
             "name": null,
-            "rva": 11948656
+            "rva": 11948672
           },
           {
             "index": 58,
             "module": "client.dll",
             "name": null,
-            "rva": 11992960
+            "rva": 11992976
           },
           {
             "index": 59,
             "module": "client.dll",
             "name": null,
-            "rva": 11948512
+            "rva": 11948528
           },
           {
             "index": 60,
             "module": "client.dll",
             "name": null,
-            "rva": 12036880
+            "rva": 12036896
           },
           {
             "index": 61,
             "module": "client.dll",
             "name": null,
-            "rva": 12036896
+            "rva": 12036912
           },
           {
             "index": 62,
             "module": "client.dll",
             "name": null,
-            "rva": 12036304
+            "rva": 12036320
           },
           {
             "index": 63,
             "module": "client.dll",
             "name": null,
-            "rva": 12036736
+            "rva": 12036752
           },
           {
             "index": 64,
             "module": "client.dll",
             "name": null,
-            "rva": 12036272
+            "rva": 12036288
           },
           {
             "index": 65,
             "module": "client.dll",
             "name": null,
-            "rva": 12068752
+            "rva": 12068768
           },
           {
             "index": 66,
             "module": "client.dll",
             "name": null,
-            "rva": 12069552
+            "rva": 12069568
           },
           {
             "index": 67,
             "module": "client.dll",
             "name": null,
-            "rva": 12070400
+            "rva": 12070416
           },
           {
             "index": 68,
             "module": "client.dll",
             "name": null,
-            "rva": 11949200
+            "rva": 11949216
           },
           {
             "index": 69,
             "module": "client.dll",
             "name": null,
-            "rva": 12036912
+            "rva": 12036928
           },
           {
             "index": 70,
             "module": "client.dll",
             "name": null,
-            "rva": 12037328
+            "rva": 12037344
           },
           {
             "index": 71,
             "module": "client.dll",
             "name": null,
-            "rva": 12072176
+            "rva": 12072192
           },
           {
             "index": 72,
             "module": "client.dll",
             "name": null,
-            "rva": 12009392
+            "rva": 12009408
           },
           {
             "index": 73,
             "module": "client.dll",
             "name": null,
-            "rva": 11949184
+            "rva": 11949200
           },
           {
             "index": 74,
             "module": "client.dll",
             "name": null,
-            "rva": 12082576
+            "rva": 12082592
           },
           {
             "index": 75,
             "module": "client.dll",
             "name": null,
-            "rva": 12072208
+            "rva": 12072224
           },
           {
             "index": 76,
             "module": "client.dll",
             "name": null,
-            "rva": 11992080
+            "rva": 11992096
           },
           {
             "index": 77,
             "module": "client.dll",
             "name": null,
-            "rva": 12040624
+            "rva": 12040640
           },
           {
             "index": 78,
             "module": "client.dll",
             "name": null,
-            "rva": 11992192
+            "rva": 11992208
           },
           {
             "index": 79,
             "module": "client.dll",
             "name": null,
-            "rva": 11996960
+            "rva": 11996976
           },
           {
             "index": 80,
             "module": "client.dll",
             "name": null,
-            "rva": 12073648
+            "rva": 12073664
           },
           {
             "index": 81,
             "module": "client.dll",
             "name": null,
-            "rva": 11995712
+            "rva": 11995728
           },
           {
             "index": 82,
             "module": "client.dll",
             "name": null,
-            "rva": 11999328
+            "rva": 11999344
           },
           {
             "index": 83,
             "module": "client.dll",
             "name": null,
-            "rva": 12021536
+            "rva": 12021552
           },
           {
             "index": 84,
             "module": "client.dll",
             "name": null,
-            "rva": 11993888
+            "rva": 11993904
           },
           {
             "index": 85,
             "module": "client.dll",
             "name": null,
-            "rva": 11994048
+            "rva": 11994064
           },
           {
             "index": 86,
             "module": "client.dll",
             "name": null,
-            "rva": 11993744
+            "rva": 11993760
           },
           {
             "index": 87,
             "module": "client.dll",
             "name": null,
-            "rva": 11995424
+            "rva": 11995440
           },
           {
             "index": 88,
             "module": "client.dll",
             "name": null,
-            "rva": 11995184
+            "rva": 11995200
           },
           {
             "index": 89,
             "module": "client.dll",
             "name": null,
-            "rva": 11992736
+            "rva": 11992752
           },
           {
             "index": 90,
             "module": "client.dll",
             "name": null,
-            "rva": 11995328
+            "rva": 11995344
           },
           {
             "index": 91,
             "module": "client.dll",
             "name": null,
-            "rva": 11994160
+            "rva": 11994176
           },
           {
             "index": 92,
             "module": "client.dll",
             "name": null,
-            "rva": 11994464
+            "rva": 11994480
           },
           {
             "index": 93,
             "module": "client.dll",
             "name": null,
-            "rva": 11996912
+            "rva": 11996928
           },
           {
             "index": 94,
             "module": "client.dll",
             "name": null,
-            "rva": 11995040
+            "rva": 11995056
           },
           {
             "index": 95,
             "module": "client.dll",
             "name": null,
-            "rva": 11999456
+            "rva": 11999472
           },
           {
             "index": 96,
             "module": "client.dll",
             "name": null,
-            "rva": 11998176
+            "rva": 11998192
           },
           {
             "index": 97,
             "module": "client.dll",
             "name": null,
-            "rva": 12000176
+            "rva": 12000192
           },
           {
             "index": 98,
             "module": "client.dll",
             "name": null,
-            "rva": 12001024
+            "rva": 12001040
           },
           {
             "index": 99,
             "module": "client.dll",
             "name": null,
-            "rva": 11962592
+            "rva": 11962608
           },
           {
             "index": 100,
             "module": "client.dll",
             "name": null,
-            "rva": 12044976
+            "rva": 12044992
           },
           {
             "index": 101,
             "module": "client.dll",
             "name": null,
-            "rva": 12001456
+            "rva": 12001472
           },
           {
             "index": 102,
             "module": "client.dll",
             "name": null,
-            "rva": 11992112
+            "rva": 11992128
           },
           {
             "index": 103,
             "module": "client.dll",
             "name": null,
-            "rva": 12083088
+            "rva": 12083104
           },
           {
             "index": 104,
             "module": "client.dll",
             "name": null,
-            "rva": 11962528
+            "rva": 11962544
           },
           {
             "index": 105,
             "module": "client.dll",
             "name": null,
-            "rva": 12082496
+            "rva": 12082512
           },
           {
             "index": 106,
             "module": "client.dll",
             "name": null,
-            "rva": 11962512
+            "rva": 11962528
           },
           {
             "index": 107,
             "module": "client.dll",
             "name": null,
-            "rva": 12083792
+            "rva": 12083808
           },
           {
             "index": 108,
             "module": "client.dll",
             "name": null,
-            "rva": 11962560
+            "rva": 11962576
           },
           {
             "index": 109,
             "module": "client.dll",
             "name": null,
-            "rva": 12081792
+            "rva": 12081808
           },
           {
             "index": 110,
             "module": "client.dll",
             "name": null,
-            "rva": 11962480
+            "rva": 11962496
           },
           {
             "index": 111,
             "module": "client.dll",
             "name": null,
-            "rva": 12077840
+            "rva": 12077856
           },
           {
             "index": 112,
             "module": "client.dll",
             "name": null,
-            "rva": 12078096
+            "rva": 12078112
           },
           {
             "index": 113,
             "module": "client.dll",
             "name": null,
-            "rva": 12001488
+            "rva": 12001504
           },
           {
             "index": 114,
             "module": "client.dll",
             "name": null,
-            "rva": 12001520
+            "rva": 12001536
           },
           {
             "index": 115,
             "module": "client.dll",
             "name": null,
-            "rva": 12001552
+            "rva": 12001568
           },
           {
             "index": 116,
             "module": "client.dll",
             "name": null,
-            "rva": 12026736
+            "rva": 12026752
           },
           {
             "index": 117,
             "module": "client.dll",
             "name": null,
-            "rva": 11967136
+            "rva": 11967152
           },
           {
             "index": 118,
             "module": "client.dll",
             "name": null,
-            "rva": 12022304
+            "rva": 12022320
           },
           {
             "index": 119,
             "module": "client.dll",
             "name": null,
-            "rva": 12001472
+            "rva": 12001488
           },
           {
             "index": 120,
             "module": "client.dll",
             "name": null,
-            "rva": 11992448
+            "rva": 11992464
           },
           {
             "index": 121,
             "module": "client.dll",
             "name": null,
-            "rva": 11992432
+            "rva": 11992448
           },
           {
             "index": 122,
             "module": "client.dll",
             "name": null,
-            "rva": 12035328
+            "rva": 12035344
           },
           {
             "index": 123,
             "module": "client.dll",
             "name": null,
-            "rva": 12085280
+            "rva": 12085296
           },
           {
             "index": 124,
             "module": "client.dll",
             "name": null,
-            "rva": 12084720
+            "rva": 12084736
           },
           {
             "index": 125,
             "module": "client.dll",
             "name": null,
-            "rva": 12082560
+            "rva": 12082576
           },
           {
             "index": 126,
             "module": "client.dll",
             "name": null,
-            "rva": 11997872
+            "rva": 11997888
           },
           {
             "index": 127,
             "module": "client.dll",
             "name": null,
-            "rva": 12041344
+            "rva": 12041360
           },
           {
             "index": 128,
             "module": "client.dll",
             "name": null,
-            "rva": 12082512
+            "rva": 12082528
           },
           {
             "index": 129,
             "module": "client.dll",
             "name": null,
-            "rva": 11993680
+            "rva": 11993696
           },
           {
             "index": 130,
             "module": "client.dll",
             "name": null,
-            "rva": 11990400
+            "rva": 11990416
           },
           {
             "index": 131,
             "module": "client.dll",
             "name": null,
-            "rva": 12034944
+            "rva": 12034960
           },
           {
             "index": 132,
             "module": "client.dll",
             "name": null,
-            "rva": 11999680
+            "rva": 11999696
           },
           {
             "index": 133,
             "module": "client.dll",
             "name": null,
-            "rva": 11937392
+            "rva": 11937408
           },
           {
             "index": 134,
             "module": "client.dll",
             "name": null,
-            "rva": 11937504
+            "rva": 11937520
           },
           {
             "index": 135,
             "module": "client.dll",
             "name": null,
-            "rva": 11997888
+            "rva": 11997904
           },
           {
             "index": 136,
             "module": "client.dll",
             "name": null,
-            "rva": 12004608
+            "rva": 12004624
           },
           {
             "index": 137,
             "module": "client.dll",
             "name": null,
-            "rva": 12002848
+            "rva": 12002864
           },
           {
             "index": 138,
             "module": "client.dll",
             "name": null,
-            "rva": 11992464
+            "rva": 11992480
           },
           {
             "index": 139,
             "module": "client.dll",
             "name": null,
-            "rva": 12001888
+            "rva": 12001904
           },
           {
             "index": 140,
             "module": "client.dll",
             "name": null,
-            "rva": 11996800
+            "rva": 11996816
           },
           {
             "index": 141,
             "module": "client.dll",
             "name": null,
-            "rva": 12002816
+            "rva": 12002832
           },
           {
             "index": 142,
             "module": "client.dll",
             "name": null,
-            "rva": 11930112
+            "rva": 11930128
           },
           {
             "index": 143,
             "module": "client.dll",
             "name": null,
-            "rva": 11930128
+            "rva": 11930144
           },
           {
             "index": 144,
             "module": "client.dll",
             "name": null,
-            "rva": 12022352
+            "rva": 12022368
           },
           {
             "index": 145,
             "module": "client.dll",
             "name": null,
-            "rva": 12002240
+            "rva": 12002256
           },
           {
             "index": 146,
             "module": "client.dll",
             "name": null,
-            "rva": 11962416
+            "rva": 11962432
           },
           {
             "index": 147,
             "module": "client.dll",
             "name": null,
-            "rva": 11956784
+            "rva": 11956800
           },
           {
             "index": 148,
             "module": "client.dll",
             "name": null,
-            "rva": 12041888
+            "rva": 12041904
           },
           {
             "index": 149,
             "module": "client.dll",
             "name": null,
-            "rva": 11997904
+            "rva": 11997920
           },
           {
             "index": 150,
             "module": "client.dll",
             "name": null,
-            "rva": 11996816
+            "rva": 11996832
           },
           {
             "index": 151,
             "module": "client.dll",
             "name": null,
-            "rva": 11990512
+            "rva": 11990528
           },
           {
             "index": 152,
             "module": "client.dll",
             "name": null,
-            "rva": 12058208
+            "rva": 12058224
           },
           {
             "index": 153,
             "module": "client.dll",
             "name": null,
-            "rva": 12083760
+            "rva": 12083776
           },
           {
             "index": 154,
             "module": "client.dll",
             "name": null,
-            "rva": 11930144
+            "rva": 11930160
           },
           {
             "index": 155,
             "module": "client.dll",
             "name": null,
-            "rva": 11990912
+            "rva": 11990928
           },
           {
             "index": 156,
             "module": "client.dll",
             "name": null,
-            "rva": 11990624
+            "rva": 11990640
           },
           {
             "index": 157,
             "module": "client.dll",
             "name": null,
-            "rva": 12054800
+            "rva": 12054816
           },
           {
             "index": 158,
             "module": "client.dll",
             "name": null,
-            "rva": 12075088
+            "rva": 12075104
           },
           {
             "index": 159,
             "module": "client.dll",
             "name": null,
-            "rva": 12081584
+            "rva": 12081600
           },
           {
             "index": 160,
             "module": "client.dll",
             "name": null,
-            "rva": 12003568
+            "rva": 12003584
           },
           {
             "index": 161,
             "module": "client.dll",
             "name": null,
-            "rva": 11992544
+            "rva": 11992560
           },
           {
             "index": 162,
             "module": "client.dll",
             "name": null,
-            "rva": 12001952
+            "rva": 12001968
           },
           {
             "index": 163,
             "module": "client.dll",
             "name": null,
-            "rva": 11998544
+            "rva": 11998560
           },
           {
             "index": 164,
             "module": "client.dll",
             "name": null,
-            "rva": 12040560
+            "rva": 12040576
           },
           {
             "index": 165,
             "module": "client.dll",
             "name": null,
-            "rva": 12040592
+            "rva": 12040608
           },
           {
             "index": 166,
             "module": "client.dll",
             "name": null,
-            "rva": 11997952
+            "rva": 11997968
           },
           {
             "index": 167,
             "module": "client.dll",
             "name": null,
-            "rva": 12040496
+            "rva": 12040512
           },
           {
             "index": 168,
             "module": "client.dll",
             "name": null,
-            "rva": 12002224
+            "rva": 12002240
           },
           {
             "index": 169,
             "module": "client.dll",
             "name": null,
-            "rva": 11998496
+            "rva": 11998512
           },
           {
             "index": 170,
             "module": "client.dll",
             "name": null,
-            "rva": 12036816
+            "rva": 12036832
           },
           {
             "index": 171,
             "module": "client.dll",
             "name": null,
-            "rva": 11967472
+            "rva": 11967488
           },
           {
             "index": 172,
             "module": "client.dll",
             "name": null,
-            "rva": 11964576
+            "rva": 11964592
           },
           {
             "index": 173,
             "module": "client.dll",
             "name": null,
-            "rva": 12001088
+            "rva": 12001104
           },
           {
             "index": 174,
             "module": "client.dll",
             "name": null,
-            "rva": 11994896
+            "rva": 11994912
           },
           {
             "index": 175,
             "module": "client.dll",
             "name": null,
-            "rva": 11971552
+            "rva": 11971568
           },
           {
             "index": 176,
             "module": "client.dll",
             "name": null,
-            "rva": 11967120
+            "rva": 11967136
           },
           {
             "index": 177,
             "module": "client.dll",
             "name": null,
-            "rva": 11932896
+            "rva": 11932912
           },
           {
             "index": 178,
             "module": "client.dll",
             "name": null,
-            "rva": 12057552
+            "rva": 12057568
           },
           {
             "index": 179,
             "module": "client.dll",
             "name": null,
-            "rva": 11992512
+            "rva": 11992528
           },
           {
             "index": 180,
             "module": "client.dll",
             "name": null,
-            "rva": 11995296
+            "rva": 11995312
           },
           {
             "index": 181,
             "module": "client.dll",
             "name": null,
-            "rva": 12048704
+            "rva": 12048720
           },
           {
             "index": 182,
             "module": "client.dll",
             "name": null,
-            "rva": 12044080
+            "rva": 12044096
           },
           {
             "index": 183,
             "module": "client.dll",
             "name": null,
-            "rva": 12051488
+            "rva": 12051504
           },
           {
             "index": 184,
             "module": "client.dll",
             "name": null,
-            "rva": 12010448
+            "rva": 12010464
           },
           {
             "index": 185,
             "module": "client.dll",
             "name": null,
-            "rva": 12048816
+            "rva": 12048832
           },
           {
             "index": 186,
             "module": "client.dll",
             "name": null,
-            "rva": 12048112
+            "rva": 12048128
           },
           {
             "index": 187,
             "module": "client.dll",
             "name": null,
-            "rva": 12048848
+            "rva": 12048864
           },
           {
             "index": 188,
             "module": "client.dll",
             "name": null,
-            "rva": 12048144
+            "rva": 12048160
           },
           {
             "index": 189,
             "module": "client.dll",
             "name": null,
-            "rva": 12041296
+            "rva": 12041312
           },
           {
             "index": 190,
             "module": "client.dll",
             "name": null,
-            "rva": 11993664
+            "rva": 11993680
           },
           {
             "index": 191,
             "module": "client.dll",
             "name": null,
-            "rva": 11993648
+            "rva": 11993664
           },
           {
             "index": 192,
             "module": "client.dll",
             "name": null,
-            "rva": 11993712
+            "rva": 11993728
           },
           {
             "index": 193,
             "module": "client.dll",
             "name": null,
-            "rva": 11993696
+            "rva": 11993712
           },
           {
             "index": 194,
             "module": "client.dll",
             "name": null,
-            "rva": 11993632
+            "rva": 11993648
           },
           {
             "index": 195,
             "module": "client.dll",
             "name": null,
-            "rva": 11993728
+            "rva": 11993744
           },
           {
             "index": 196,
             "module": "client.dll",
             "name": null,
-            "rva": 11992944
+            "rva": 11992960
           },
           {
             "index": 197,
             "module": "client.dll",
             "name": null,
-            "rva": 11992928
+            "rva": 11992944
           },
           {
             "index": 198,
             "module": "client.dll",
             "name": null,
-            "rva": 11992400
+            "rva": 11992416
           },
           {
             "index": 199,
             "module": "client.dll",
             "name": null,
-            "rva": 11999792
+            "rva": 11999808
           },
           {
             "index": 200,
             "module": "client.dll",
             "name": null,
-            "rva": 11992416
+            "rva": 11992432
           },
           {
             "index": 201,
             "module": "client.dll",
             "name": null,
-            "rva": 11992880
+            "rva": 11992896
           },
           {
             "index": 202,
             "module": "client.dll",
             "name": null,
-            "rva": 12022112
+            "rva": 12022128
           },
           {
             "index": 203,
             "module": "client.dll",
             "name": null,
-            "rva": 12000096
+            "rva": 12000112
           },
           {
             "index": 204,
             "module": "client.dll",
             "name": null,
-            "rva": 11999504
+            "rva": 11999520
           },
           {
             "index": 205,
             "module": "client.dll",
             "name": null,
-            "rva": 12021792
+            "rva": 12021808
           },
           {
             "index": 206,
             "module": "client.dll",
             "name": null,
-            "rva": 12000368
+            "rva": 12000384
           },
           {
             "index": 207,
             "module": "client.dll",
             "name": null,
-            "rva": 11996128
+            "rva": 11996144
           },
           {
             "index": 208,
             "module": "client.dll",
             "name": null,
-            "rva": 11996224
+            "rva": 11996240
           },
           {
             "index": 209,
             "module": "client.dll",
             "name": null,
-            "rva": 12002256
+            "rva": 12002272
           },
           {
             "index": 210,
             "module": "client.dll",
             "name": null,
-            "rva": 11995808
+            "rva": 11995824
           },
           {
             "index": 211,
@@ -3370,7 +3370,7 @@
             "index": 212,
             "module": "client.dll",
             "name": null,
-            "rva": 12074592
+            "rva": 12074608
           },
           {
             "index": 213,
@@ -3382,7 +3382,7 @@
             "index": 214,
             "module": "client.dll",
             "name": null,
-            "rva": 12041872
+            "rva": 12041888
           },
           {
             "index": 215,
@@ -3394,43 +3394,43 @@
             "index": 216,
             "module": "client.dll",
             "name": null,
-            "rva": 11929968
+            "rva": 11929984
           },
           {
             "index": 217,
             "module": "client.dll",
             "name": null,
-            "rva": 10173280
+            "rva": 10173296
           },
           {
             "index": 218,
             "module": "client.dll",
             "name": null,
-            "rva": 10173264
+            "rva": 10173280
           },
           {
             "index": 219,
             "module": "client.dll",
             "name": null,
-            "rva": 10173296
+            "rva": 10173312
           },
           {
             "index": 220,
             "module": "client.dll",
             "name": null,
-            "rva": 10173376
+            "rva": 10173392
           },
           {
             "index": 221,
             "module": "client.dll",
             "name": null,
-            "rva": 10173536
+            "rva": 10173552
           },
           {
             "index": 222,
             "module": "client.dll",
             "name": null,
-            "rva": 10173552
+            "rva": 10173568
           },
           {
             "index": 223,
@@ -3442,61 +3442,61 @@
             "index": 224,
             "module": "client.dll",
             "name": null,
-            "rva": 11927552
+            "rva": 11927568
           },
           {
             "index": 225,
             "module": "client.dll",
             "name": null,
-            "rva": 19121152
+            "rva": 19121168
           },
           {
             "index": 226,
             "module": "client.dll",
             "name": null,
-            "rva": 6454784
+            "rva": 6455744
           },
           {
             "index": 227,
             "module": "client.dll",
             "name": null,
-            "rva": 6455152
+            "rva": 6456112
           },
           {
             "index": 228,
             "module": "client.dll",
             "name": null,
-            "rva": 6455552
+            "rva": 6456512
           },
           {
             "index": 229,
             "module": "client.dll",
             "name": null,
-            "rva": 19121200
+            "rva": 19121216
           },
           {
             "index": 230,
             "module": "client.dll",
             "name": null,
-            "rva": 19118176
+            "rva": 19118192
           },
           {
             "index": 231,
             "module": "client.dll",
             "name": null,
-            "rva": 6455680
+            "rva": 6456640
           },
           {
             "index": 232,
             "module": "client.dll",
             "name": null,
-            "rva": 6457104
+            "rva": 6458064
           },
           {
             "index": 233,
             "module": "client.dll",
             "name": null,
-            "rva": 6456064
+            "rva": 6457024
           },
           {
             "index": 234,
@@ -3508,42 +3508,42 @@
             "index": 235,
             "module": "client.dll",
             "name": null,
-            "rva": 6456960
+            "rva": 6457920
           },
           {
             "index": 236,
             "module": "client.dll",
             "name": null,
-            "rva": 19122512
+            "rva": 19122528
           },
           {
             "index": 237,
             "module": "client.dll",
             "name": null,
-            "rva": 19124336
+            "rva": 19124352
           },
           {
             "index": 238,
             "module": "client.dll",
             "name": null,
-            "rva": 6457312
+            "rva": 6458272
           },
           {
             "index": 239,
             "module": "client.dll",
             "name": null,
-            "rva": 6457376
+            "rva": 6458336
           },
           {
             "index": 240,
             "module": "client.dll",
             "name": null,
-            "rva": 6457360
+            "rva": 6458320
           }
         ],
         "rtti_class": "CSource2Client",
         "vtable_module": "client.dll",
-        "vtable_rva": 29782528
+        "vtable_rva": 29782544
       },
       "Source2ClientConfig001": {
         "methods": [
@@ -3563,7 +3563,7 @@
             "index": 2,
             "module": "client.dll",
             "name": null,
-            "rva": 10481056
+            "rva": 10481072
           },
           {
             "index": 3,
@@ -3617,7 +3617,7 @@
             "index": 11,
             "module": "client.dll",
             "name": null,
-            "rva": 10392928
+            "rva": 10392944
           },
           {
             "index": 12,
@@ -3635,13 +3635,13 @@
             "index": 14,
             "module": "client.dll",
             "name": null,
-            "rva": 11227648
+            "rva": 11227664
           },
           {
             "index": 15,
             "module": "client.dll",
             "name": null,
-            "rva": 11227632
+            "rva": 11227648
           },
           {
             "index": 16,
@@ -3653,7 +3653,7 @@
             "index": 17,
             "module": "client.dll",
             "name": null,
-            "rva": 10298384
+            "rva": 10298400
           },
           {
             "index": 18,
@@ -3689,13 +3689,13 @@
             "index": 23,
             "module": "client.dll",
             "name": null,
-            "rva": 11301360
+            "rva": 11301376
           },
           {
             "index": 24,
             "module": "client.dll",
             "name": null,
-            "rva": 10392944
+            "rva": 10392960
           },
           {
             "index": 25,
@@ -3707,19 +3707,19 @@
             "index": 26,
             "module": "client.dll",
             "name": null,
-            "rva": 11277328
+            "rva": 11277344
           },
           {
             "index": 27,
             "module": "client.dll",
             "name": null,
-            "rva": 10355792
+            "rva": 10355808
           },
           {
             "index": 28,
             "module": "client.dll",
             "name": null,
-            "rva": 10376704
+            "rva": 10376720
           },
           {
             "index": 29,
@@ -3731,7 +3731,7 @@
             "index": 30,
             "module": "client.dll",
             "name": null,
-            "rva": 11232336
+            "rva": 11232352
           },
           {
             "index": 31,
@@ -3743,13 +3743,13 @@
             "index": 32,
             "module": "client.dll",
             "name": null,
-            "rva": 10432656
+            "rva": 10432672
           },
           {
             "index": 33,
             "module": "client.dll",
             "name": null,
-            "rva": 10355616
+            "rva": 10355632
           },
           {
             "index": 34,
@@ -3851,13 +3851,13 @@
             "index": 50,
             "module": "client.dll",
             "name": null,
-            "rva": 10392912
+            "rva": 10392928
           },
           {
             "index": 51,
             "module": "client.dll",
             "name": null,
-            "rva": 10283376
+            "rva": 10283392
           },
           {
             "index": 52,
@@ -3875,25 +3875,25 @@
             "index": 54,
             "module": "client.dll",
             "name": null,
-            "rva": 10283360
+            "rva": 10283376
           },
           {
             "index": 55,
             "module": "client.dll",
             "name": null,
-            "rva": 10376736
+            "rva": 10376752
           },
           {
             "index": 56,
             "module": "client.dll",
             "name": null,
-            "rva": 10283392
+            "rva": 10283408
           },
           {
             "index": 57,
             "module": "client.dll",
             "name": null,
-            "rva": 10550480
+            "rva": 10550496
           },
           {
             "index": 58,
@@ -3929,12 +3929,12 @@
             "index": 63,
             "module": "client.dll",
             "name": null,
-            "rva": 10306368
+            "rva": 10306384
           }
         ],
         "rtti_class": "CCSGameConfiguration",
         "vtable_module": "client.dll",
-        "vtable_rva": 29055096
+        "vtable_rva": 29055160
       },
       "Source2ClientPrediction001": {
         "methods": [
@@ -3942,193 +3942,193 @@
             "index": 0,
             "module": "client.dll",
             "name": null,
-            "rva": 12405664
+            "rva": 12405680
           },
           {
             "index": 1,
             "module": "client.dll",
             "name": null,
-            "rva": 12412864
+            "rva": 12412880
           },
           {
             "index": 2,
             "module": "client.dll",
             "name": null,
-            "rva": 12505808
+            "rva": 12505824
           },
           {
             "index": 3,
             "module": "client.dll",
             "name": null,
-            "rva": 12442832
+            "rva": 12442848
           },
           {
             "index": 4,
             "module": "client.dll",
             "name": null,
-            "rva": 12527712
+            "rva": 12527728
           },
           {
             "index": 5,
             "module": "client.dll",
             "name": null,
-            "rva": 12496784
+            "rva": 12496800
           },
           {
             "index": 6,
             "module": "client.dll",
             "name": null,
-            "rva": 12430944
+            "rva": 12430960
           },
           {
             "index": 7,
             "module": "client.dll",
             "name": null,
-            "rva": 12438368
+            "rva": 12438384
           },
           {
             "index": 8,
             "module": "client.dll",
             "name": null,
-            "rva": 12507376
+            "rva": 12507392
           },
           {
             "index": 9,
             "module": "client.dll",
             "name": null,
-            "rva": 12468528
+            "rva": 12468544
           },
           {
             "index": 10,
             "module": "client.dll",
             "name": null,
-            "rva": 12438352
+            "rva": 12438368
           },
           {
             "index": 11,
             "module": "client.dll",
             "name": "CPrediction_Update",
-            "rva": 12536544
+            "rva": 12536560
           },
           {
             "index": 12,
             "module": "client.dll",
             "name": null,
-            "rva": 12482352
+            "rva": 12482368
           },
           {
             "index": 13,
             "module": "client.dll",
             "name": null,
-            "rva": 12482880
+            "rva": 12482896
           },
           {
             "index": 14,
             "module": "client.dll",
             "name": null,
-            "rva": 12492464
+            "rva": 12492480
           },
           {
             "index": 15,
             "module": "client.dll",
             "name": "C_BaseEntity_PostNetworkDataReceived",
-            "rva": 12493232
+            "rva": 12493248
           },
           {
             "index": 16,
             "module": "client.dll",
             "name": null,
-            "rva": 12487872
+            "rva": 12487888
           },
           {
             "index": 17,
             "module": "client.dll",
             "name": null,
-            "rva": 12396928
+            "rva": 12396944
           },
           {
             "index": 18,
             "module": "client.dll",
             "name": null,
-            "rva": 12001696
+            "rva": 12001712
           },
           {
             "index": 19,
             "module": "client.dll",
             "name": null,
-            "rva": 12393360
+            "rva": 12393376
           },
           {
             "index": 20,
             "module": "client.dll",
             "name": null,
-            "rva": 12440080
+            "rva": 12440096
           },
           {
             "index": 21,
             "module": "client.dll",
             "name": null,
-            "rva": 12440336
+            "rva": 12440352
           },
           {
             "index": 22,
             "module": "client.dll",
             "name": null,
-            "rva": 12440256
+            "rva": 12440272
           },
           {
             "index": 23,
             "module": "client.dll",
             "name": null,
-            "rva": 12432752
+            "rva": 12432768
           },
           {
             "index": 24,
             "module": "client.dll",
             "name": null,
-            "rva": 12524368
+            "rva": 12524384
           },
           {
             "index": 25,
             "module": "client.dll",
             "name": null,
-            "rva": 12524416
+            "rva": 12524432
           },
           {
             "index": 26,
             "module": "client.dll",
             "name": null,
-            "rva": 12468480
+            "rva": 12468496
           },
           {
             "index": 27,
             "module": "client.dll",
             "name": null,
-            "rva": 12527040
+            "rva": 12527056
           },
           {
             "index": 28,
             "module": "client.dll",
             "name": null,
-            "rva": 9762912
+            "rva": 9762928
           },
           {
             "index": 29,
             "module": "client.dll",
             "name": null,
-            "rva": 12468544
+            "rva": 12468560
           },
           {
             "index": 30,
             "module": "client.dll",
             "name": null,
-            "rva": 12440064
+            "rva": 12440080
           },
           {
             "index": 31,
             "module": "client.dll",
             "name": null,
-            "rva": 12486608
+            "rva": 12486624
           },
           {
             "index": 32,
@@ -4140,12 +4140,12 @@
             "index": 33,
             "module": "client.dll",
             "name": null,
-            "rva": 12480688
+            "rva": 12480704
           }
         ],
         "rtti_class": "CPrediction",
         "vtable_module": "client.dll",
-        "vtable_rva": 29842864
+        "vtable_rva": 29842880
       },
       "Source2ClientUI001": {
         "methods": [
@@ -4153,19 +4153,19 @@
             "index": 0,
             "module": "client.dll",
             "name": null,
-            "rva": 13523952
+            "rva": 13523968
           },
           {
             "index": 1,
             "module": "client.dll",
             "name": null,
-            "rva": 13526832
+            "rva": 13526848
           },
           {
             "index": 2,
             "module": "client.dll",
             "name": null,
-            "rva": 13661616
+            "rva": 13661632
           },
           {
             "index": 3,
@@ -4177,49 +4177,49 @@
             "index": 4,
             "module": "client.dll",
             "name": null,
-            "rva": 13681808
+            "rva": 13681824
           },
           {
             "index": 5,
             "module": "client.dll",
             "name": null,
-            "rva": 13658736
+            "rva": 13658752
           },
           {
             "index": 6,
             "module": "client.dll",
             "name": null,
-            "rva": 13564560
+            "rva": 13564576
           },
           {
             "index": 7,
             "module": "client.dll",
             "name": null,
-            "rva": 13573120
+            "rva": 13573136
           },
           {
             "index": 8,
             "module": "client.dll",
             "name": null,
-            "rva": 13666176
+            "rva": 13666192
           },
           {
             "index": 9,
             "module": "client.dll",
             "name": null,
-            "rva": 13625856
+            "rva": 13625872
           },
           {
             "index": 10,
             "module": "client.dll",
             "name": null,
-            "rva": 13573104
+            "rva": 13573120
           },
           {
             "index": 11,
             "module": "client.dll",
             "name": null,
-            "rva": 13525904
+            "rva": 13525920
           },
           {
             "index": 12,
@@ -4255,7 +4255,7 @@
             "index": 17,
             "module": "client.dll",
             "name": null,
-            "rva": 13625472
+            "rva": 13625488
           },
           {
             "index": 18,
@@ -4309,7 +4309,7 @@
             "index": 26,
             "module": "client.dll",
             "name": null,
-            "rva": 13501760
+            "rva": 13501776
           },
           {
             "index": 27,
@@ -4326,7 +4326,7 @@
         ],
         "rtti_class": "CCsgoClientUI",
         "vtable_module": "client.dll",
-        "vtable_rva": 30042896
+        "vtable_rva": 30042912
       }
     },
     "engine2.dll": {
@@ -26937,7 +26937,7 @@
             "index": 28,
             "module": "panoramauiclient.dll",
             "name": null,
-            "rva": 1822428
+            "rva": 1822524
           },
           {
             "index": 29,
@@ -26961,19 +26961,19 @@
             "index": 32,
             "module": "panoramauiclient.dll",
             "name": null,
-            "rva": 1822428
+            "rva": 1822524
           },
           {
             "index": 33,
             "module": "panoramauiclient.dll",
             "name": null,
-            "rva": 1822428
+            "rva": 1822524
           },
           {
             "index": 34,
             "module": "panoramauiclient.dll",
             "name": null,
-            "rva": 1822428
+            "rva": 1822524
           }
         ],
         "rtti_class": "CPanoramaUIClient",
@@ -27371,7 +27371,7 @@
         ],
         "rtti_class": "CParticleSystemMgr",
         "vtable_module": "particles.dll",
-        "vtable_rva": 5079024
+        "vtable_rva": 5079008
       }
     },
     "pulse_system.dll": {
@@ -32714,144 +32714,144 @@
             "index": 0,
             "module": "server.dll",
             "name": null,
-            "rva": 9980256
+            "rva": 9980240
           },
           {
             "index": 1,
             "module": "server.dll",
             "name": null,
-            "rva": 9980320
+            "rva": 9980304
           },
           {
             "index": 2,
             "module": "server.dll",
             "name": null,
-            "rva": 10016752
+            "rva": 10016736
           },
           {
             "index": 3,
             "module": "server.dll",
             "name": null,
-            "rva": 9988928
+            "rva": 9988912
           },
           {
             "index": 4,
             "module": "server.dll",
             "name": null,
-            "rva": 10020064
+            "rva": 10020048
           },
           {
             "index": 5,
             "module": "server.dll",
             "name": null,
-            "rva": 10016336
+            "rva": 10016320
           },
           {
             "index": 6,
             "module": "server.dll",
             "name": null,
-            "rva": 9982736
+            "rva": 9982720
           },
           {
             "index": 7,
             "module": "server.dll",
             "name": null,
-            "rva": 9985312
+            "rva": 9985296
           },
           {
             "index": 8,
             "module": "server.dll",
             "name": null,
-            "rva": 10016768
+            "rva": 10016752
           },
           {
             "index": 9,
             "module": "server.dll",
             "name": null,
-            "rva": 10009072
+            "rva": 10009056
           },
           {
             "index": 10,
             "module": "server.dll",
             "name": null,
-            "rva": 9984944
+            "rva": 9984928
           },
           {
             "index": 11,
             "module": "server.dll",
             "name": null,
-            "rva": 9984912
+            "rva": 9984896
           },
           {
             "index": 12,
             "module": "server.dll",
             "name": null,
-            "rva": 9984672
+            "rva": 9984656
           },
           {
             "index": 13,
             "module": "server.dll",
             "name": null,
-            "rva": 10020048
+            "rva": 10020032
           },
           {
             "index": 14,
             "module": "server.dll",
             "name": null,
-            "rva": 10014128
+            "rva": 10014112
           },
           {
             "index": 15,
             "module": "server.dll",
             "name": null,
-            "rva": 10014352
+            "rva": 10014336
           },
           {
             "index": 16,
             "module": "server.dll",
             "name": null,
-            "rva": 10009056
+            "rva": 10009040
           },
           {
             "index": 17,
             "module": "server.dll",
             "name": null,
-            "rva": 10018592
+            "rva": 10018576
           },
           {
             "index": 18,
             "module": "server.dll",
             "name": null,
-            "rva": 10019024
+            "rva": 10019008
           },
           {
             "index": 19,
             "module": "server.dll",
             "name": null,
-            "rva": 10016848
+            "rva": 10016832
           },
           {
             "index": 20,
             "module": "server.dll",
             "name": null,
-            "rva": 9984928
+            "rva": 9984912
           },
           {
             "index": 21,
             "module": "server.dll",
             "name": null,
-            "rva": 10019040
+            "rva": 10019024
           },
           {
             "index": 22,
             "module": "server.dll",
             "name": null,
-            "rva": 9973872
+            "rva": 9973856
           }
         ],
         "rtti_class": "CEmptyWorldService",
         "vtable_module": "server.dll",
-        "vtable_rva": 26056520
+        "vtable_rva": 26056552
       },
       "EntitySubclassUtilsV001": {
         "methods": [
@@ -32936,7 +32936,7 @@
         ],
         "rtti_class": "CServerEntitySubclassUtils",
         "vtable_module": "server.dll",
-        "vtable_rva": 25173288
+        "vtable_rva": 25173304
       },
       "NavGameTest001": {
         "methods": [
@@ -32944,78 +32944,78 @@
             "index": 0,
             "module": "server.dll",
             "name": null,
-            "rva": 17810288
+            "rva": 17810320
           },
           {
             "index": 1,
             "module": "server.dll",
             "name": null,
-            "rva": 17810448
+            "rva": 17810480
           },
           {
             "index": 2,
             "module": "server.dll",
             "name": null,
-            "rva": 17810192
+            "rva": 17810224
           },
           {
             "index": 3,
             "module": "server.dll",
             "name": null,
-            "rva": 17810416
+            "rva": 17810448
           },
           {
             "index": 4,
             "module": "server.dll",
             "name": null,
-            "rva": 17810272
+            "rva": 17810304
           },
           {
             "index": 5,
             "module": "server.dll",
             "name": null,
-            "rva": 17810208
+            "rva": 17810240
           },
           {
             "index": 6,
             "module": "server.dll",
             "name": null,
-            "rva": 17810224
+            "rva": 17810256
           },
           {
             "index": 7,
             "module": "server.dll",
             "name": null,
-            "rva": 17810512
+            "rva": 17810544
           },
           {
             "index": 8,
             "module": "server.dll",
             "name": null,
-            "rva": 17810352
+            "rva": 17810384
           },
           {
             "index": 9,
             "module": "server.dll",
             "name": null,
-            "rva": 17810240
+            "rva": 17810272
           },
           {
             "index": 10,
             "module": "server.dll",
             "name": null,
-            "rva": 17810256
+            "rva": 17810288
           },
           {
             "index": 11,
             "module": "server.dll",
             "name": null,
-            "rva": 17810528
+            "rva": 17810560
           }
         ],
         "rtti_class": "CNavGameTest",
         "vtable_module": "server.dll",
-        "vtable_rva": 27398960
+        "vtable_rva": 27399008
       },
       "ServerToolsInfo_001": {
         "methods": [
@@ -33023,78 +33023,78 @@
             "index": 0,
             "module": "server.dll",
             "name": null,
-            "rva": 14534800
+            "rva": 14534832
           },
           {
             "index": 1,
             "module": "server.dll",
             "name": null,
-            "rva": 14534896
+            "rva": 14534928
           },
           {
             "index": 2,
             "module": "server.dll",
             "name": null,
-            "rva": 14532704
+            "rva": 14532736
           },
           {
             "index": 3,
             "module": "server.dll",
             "name": null,
-            "rva": 14535360
+            "rva": 14535392
           },
           {
             "index": 4,
             "module": "server.dll",
             "name": null,
-            "rva": 14535440
+            "rva": 14535472
           },
           {
             "index": 5,
             "module": "server.dll",
             "name": null,
-            "rva": 14532720
+            "rva": 14532752
           },
           {
             "index": 6,
             "module": "server.dll",
             "name": null,
-            "rva": 14535456
+            "rva": 14535488
           },
           {
             "index": 7,
             "module": "server.dll",
             "name": null,
-            "rva": 14534784
+            "rva": 14534816
           },
           {
             "index": 8,
             "module": "server.dll",
             "name": null,
-            "rva": 14534960
+            "rva": 14534992
           },
           {
             "index": 9,
             "module": "server.dll",
             "name": null,
-            "rva": 14532736
+            "rva": 14532768
           },
           {
             "index": 10,
             "module": "server.dll",
             "name": null,
-            "rva": 14532752
+            "rva": 14532784
           },
           {
             "index": 11,
             "module": "server.dll",
             "name": null,
-            "rva": 14535984
+            "rva": 14536016
           }
         ],
         "rtti_class": "CServerToolsInfo",
         "vtable_module": "server.dll",
-        "vtable_rva": 26827792
+        "vtable_rva": 26828016
       },
       "Source2GameClients001": {
         "methods": [
@@ -33102,181 +33102,181 @@
             "index": 0,
             "module": "server.dll",
             "name": null,
-            "rva": 14598928
+            "rva": 14598960
           },
           {
             "index": 1,
             "module": "server.dll",
             "name": null,
-            "rva": 14600560
+            "rva": 14600592
           },
           {
             "index": 2,
             "module": "server.dll",
             "name": null,
-            "rva": 14640288
+            "rva": 14640320
           },
           {
             "index": 3,
             "module": "server.dll",
             "name": null,
-            "rva": 14613744
+            "rva": 14613776
           },
           {
             "index": 4,
             "module": "server.dll",
             "name": null,
-            "rva": 14652208
+            "rva": 14652240
           },
           {
             "index": 5,
             "module": "server.dll",
             "name": null,
-            "rva": 14637552
+            "rva": 14637584
           },
           {
             "index": 6,
             "module": "server.dll",
             "name": null,
-            "rva": 14608352
+            "rva": 14608384
           },
           {
             "index": 7,
             "module": "server.dll",
             "name": null,
-            "rva": 14613088
+            "rva": 14613120
           },
           {
             "index": 8,
             "module": "server.dll",
             "name": null,
-            "rva": 14640560
+            "rva": 14640592
           },
           {
             "index": 9,
             "module": "server.dll",
             "name": null,
-            "rva": 14620464
+            "rva": 14620496
           },
           {
             "index": 10,
             "module": "server.dll",
             "name": null,
-            "rva": 14613056
+            "rva": 14613088
           },
           {
             "index": 11,
             "module": "server.dll",
             "name": null,
-            "rva": 14635392
+            "rva": 14635424
           },
           {
             "index": 12,
             "module": "server.dll",
             "name": null,
-            "rva": 14592816
+            "rva": 14592848
           },
           {
             "index": 13,
             "module": "server.dll",
             "name": null,
-            "rva": 14596784
+            "rva": 14596816
           },
           {
             "index": 14,
             "module": "server.dll",
             "name": null,
-            "rva": 14591296
+            "rva": 14591328
           },
           {
             "index": 15,
             "module": "server.dll",
             "name": null,
-            "rva": 14595808
+            "rva": 14595840
           },
           {
             "index": 16,
             "module": "server.dll",
             "name": null,
-            "rva": 14594896
+            "rva": 14594928
           },
           {
             "index": 17,
             "module": "server.dll",
             "name": null,
-            "rva": 14592432
+            "rva": 14592464
           },
           {
             "index": 18,
             "module": "server.dll",
             "name": null,
-            "rva": 14598400
+            "rva": 14598432
           },
           {
             "index": 19,
             "module": "server.dll",
             "name": null,
-            "rva": 14597696
+            "rva": 14597728
           },
           {
             "index": 20,
             "module": "server.dll",
             "name": null,
-            "rva": 14597744
+            "rva": 14597776
           },
           {
             "index": 21,
             "module": "server.dll",
             "name": null,
-            "rva": 14637952
+            "rva": 14637984
           },
           {
             "index": 22,
             "module": "server.dll",
             "name": null,
-            "rva": 14620192
+            "rva": 14620224
           },
           {
             "index": 23,
             "module": "server.dll",
             "name": null,
-            "rva": 14620368
+            "rva": 14620400
           },
           {
             "index": 24,
             "module": "server.dll",
             "name": null,
-            "rva": 14612176
+            "rva": 14612208
           },
           {
             "index": 25,
             "module": "server.dll",
             "name": null,
-            "rva": 14595712
+            "rva": 14595744
           },
           {
             "index": 26,
             "module": "server.dll",
             "name": null,
-            "rva": 14607664
+            "rva": 14607696
           },
           {
             "index": 27,
             "module": "server.dll",
             "name": null,
-            "rva": 14598416
+            "rva": 14598448
           },
           {
             "index": 28,
             "module": "server.dll",
             "name": null,
-            "rva": 14592752
+            "rva": 14592784
           },
           {
             "index": 29,
             "module": "server.dll",
             "name": null,
-            "rva": 14593008
+            "rva": 14593040
           },
           {
             "index": 30,
@@ -33300,49 +33300,49 @@
             "index": 33,
             "module": "server.dll",
             "name": null,
-            "rva": 14658080
+            "rva": 14658112
           },
           {
             "index": 34,
             "module": "server.dll",
             "name": null,
-            "rva": 14647120
+            "rva": 14647152
           },
           {
             "index": 35,
             "module": "server.dll",
             "name": null,
-            "rva": 14608992
+            "rva": 14609024
           },
           {
             "index": 36,
             "module": "server.dll",
             "name": null,
-            "rva": 14596432
+            "rva": 14596464
           },
           {
             "index": 37,
             "module": "server.dll",
             "name": null,
-            "rva": 14596320
+            "rva": 14596352
           },
           {
             "index": 38,
             "module": "server.dll",
             "name": null,
-            "rva": 14598080
+            "rva": 14598112
           },
           {
             "index": 39,
             "module": "server.dll",
             "name": null,
-            "rva": 14609264
+            "rva": 14609296
           },
           {
             "index": 40,
             "module": "server.dll",
             "name": null,
-            "rva": 14596480
+            "rva": 14596512
           },
           {
             "index": 41,
@@ -33354,25 +33354,25 @@
             "index": 42,
             "module": "server.dll",
             "name": null,
-            "rva": 14651792
+            "rva": 14651824
           },
           {
             "index": 43,
             "module": "server.dll",
             "name": null,
-            "rva": 14611200
+            "rva": 14611232
           },
           {
             "index": 44,
             "module": "server.dll",
             "name": null,
-            "rva": 14584256
+            "rva": 14584288
           },
           {
             "index": 45,
             "module": "server.dll",
             "name": null,
-            "rva": 14635216
+            "rva": 14635248
           },
           {
             "index": 46,
@@ -33384,43 +33384,43 @@
             "index": 47,
             "module": "server.dll",
             "name": null,
-            "rva": 14576800
+            "rva": 14576832
           },
           {
             "index": 48,
             "module": "server.dll",
             "name": null,
-            "rva": 13223552
+            "rva": 13224816
           },
           {
             "index": 49,
             "module": "server.dll",
             "name": null,
-            "rva": 13223536
+            "rva": 13224800
           },
           {
             "index": 50,
             "module": "server.dll",
             "name": null,
-            "rva": 13223568
+            "rva": 13224832
           },
           {
             "index": 51,
             "module": "server.dll",
             "name": null,
-            "rva": 13223648
+            "rva": 13224912
           },
           {
             "index": 52,
             "module": "server.dll",
             "name": null,
-            "rva": 13223808
+            "rva": 13225072
           },
           {
             "index": 53,
             "module": "server.dll",
             "name": null,
-            "rva": 13223824
+            "rva": 13225088
           },
           {
             "index": 54,
@@ -33432,61 +33432,61 @@
             "index": 55,
             "module": "server.dll",
             "name": null,
-            "rva": 14574940
+            "rva": 14574972
           },
           {
             "index": 56,
             "module": "server.dll",
             "name": null,
-            "rva": 18005472
+            "rva": 18005504
           },
           {
             "index": 57,
             "module": "server.dll",
             "name": null,
-            "rva": 8612496
+            "rva": 8612592
           },
           {
             "index": 58,
             "module": "server.dll",
             "name": null,
-            "rva": 8614576
+            "rva": 8614672
           },
           {
             "index": 59,
             "module": "server.dll",
             "name": null,
-            "rva": 8615264
+            "rva": 8615360
           },
           {
             "index": 60,
             "module": "server.dll",
             "name": null,
-            "rva": 18005520
+            "rva": 18005552
           },
           {
             "index": 61,
             "module": "server.dll",
             "name": null,
-            "rva": 18002496
+            "rva": 18002528
           },
           {
             "index": 62,
             "module": "server.dll",
             "name": null,
-            "rva": 8615360
+            "rva": 8615456
           },
           {
             "index": 63,
             "module": "server.dll",
             "name": null,
-            "rva": 8615840
+            "rva": 8615936
           },
           {
             "index": 64,
             "module": "server.dll",
             "name": null,
-            "rva": 8615392
+            "rva": 8615488
           },
           {
             "index": 65,
@@ -33498,37 +33498,37 @@
             "index": 66,
             "module": "server.dll",
             "name": null,
-            "rva": 8615728
+            "rva": 8615824
           },
           {
             "index": 67,
             "module": "server.dll",
             "name": null,
-            "rva": 18006832
+            "rva": 18006864
           },
           {
             "index": 68,
             "module": "server.dll",
             "name": null,
-            "rva": 18008656
+            "rva": 18008688
           },
           {
             "index": 69,
             "module": "server.dll",
             "name": null,
-            "rva": 8615856
+            "rva": 8615952
           },
           {
             "index": 70,
             "module": "server.dll",
             "name": null,
-            "rva": 8615968
+            "rva": 8616064
           },
           {
             "index": 71,
             "module": "server.dll",
             "name": null,
-            "rva": 8615952
+            "rva": 8616048
           },
           {
             "index": 72,
@@ -33540,43 +33540,43 @@
             "index": 73,
             "module": "server.dll",
             "name": null,
-            "rva": 14576896
+            "rva": 14576928
           },
           {
             "index": 74,
             "module": "server.dll",
             "name": null,
-            "rva": 13225808
+            "rva": 13227072
           },
           {
             "index": 75,
             "module": "server.dll",
             "name": null,
-            "rva": 13225792
+            "rva": 13227040
           },
           {
             "index": 76,
             "module": "server.dll",
             "name": null,
-            "rva": 13225824
+            "rva": 13227088
           },
           {
             "index": 77,
             "module": "server.dll",
             "name": null,
-            "rva": 13225904
+            "rva": 13227168
           },
           {
             "index": 78,
             "module": "server.dll",
             "name": null,
-            "rva": 13226064
+            "rva": 13227328
           },
           {
             "index": 79,
             "module": "server.dll",
             "name": null,
-            "rva": 13226080
+            "rva": 13227344
           },
           {
             "index": 80,
@@ -33588,61 +33588,61 @@
             "index": 81,
             "module": "server.dll",
             "name": null,
-            "rva": 14574952
+            "rva": 14574984
           },
           {
             "index": 82,
             "module": "server.dll",
             "name": null,
-            "rva": 18005472
+            "rva": 18005504
           },
           {
             "index": 83,
             "module": "server.dll",
             "name": null,
-            "rva": 8621648
+            "rva": 8621744
           },
           {
             "index": 84,
             "module": "server.dll",
             "name": null,
-            "rva": 8621840
+            "rva": 8621936
           },
           {
             "index": 85,
             "module": "server.dll",
             "name": null,
-            "rva": 8621872
+            "rva": 8621968
           },
           {
             "index": 86,
             "module": "server.dll",
             "name": null,
-            "rva": 18005520
+            "rva": 18005552
           },
           {
             "index": 87,
             "module": "server.dll",
             "name": null,
-            "rva": 18002496
+            "rva": 18002528
           },
           {
             "index": 88,
             "module": "server.dll",
             "name": null,
-            "rva": 8621904
+            "rva": 8622000
           },
           {
             "index": 89,
             "module": "server.dll",
             "name": null,
-            "rva": 8622656
+            "rva": 8622752
           },
           {
             "index": 90,
             "module": "server.dll",
             "name": null,
-            "rva": 8621984
+            "rva": 8622080
           },
           {
             "index": 91,
@@ -33654,37 +33654,37 @@
             "index": 92,
             "module": "server.dll",
             "name": null,
-            "rva": 8622416
+            "rva": 8622512
           },
           {
             "index": 93,
             "module": "server.dll",
             "name": null,
-            "rva": 18006832
+            "rva": 18006864
           },
           {
             "index": 94,
             "module": "server.dll",
             "name": null,
-            "rva": 18008656
+            "rva": 18008688
           },
           {
             "index": 95,
             "module": "server.dll",
             "name": null,
-            "rva": 8623456
+            "rva": 8623552
           },
           {
             "index": 96,
             "module": "server.dll",
             "name": null,
-            "rva": 8623840
+            "rva": 8623936
           },
           {
             "index": 97,
             "module": "server.dll",
             "name": null,
-            "rva": 8623808
+            "rva": 8623904
           },
           {
             "index": 98,
@@ -33696,43 +33696,43 @@
             "index": 99,
             "module": "server.dll",
             "name": null,
-            "rva": 14576992
+            "rva": 14577024
           },
           {
             "index": 100,
             "module": "server.dll",
             "name": null,
-            "rva": 13216000
+            "rva": 13217248
           },
           {
             "index": 101,
             "module": "server.dll",
             "name": null,
-            "rva": 13215984
+            "rva": 13217232
           },
           {
             "index": 102,
             "module": "server.dll",
             "name": null,
-            "rva": 13216016
+            "rva": 13217264
           },
           {
             "index": 103,
             "module": "server.dll",
             "name": null,
-            "rva": 13216096
+            "rva": 13217344
           },
           {
             "index": 104,
             "module": "server.dll",
             "name": null,
-            "rva": 13216256
+            "rva": 13217504
           },
           {
             "index": 105,
             "module": "server.dll",
             "name": null,
-            "rva": 13216272
+            "rva": 13217520
           },
           {
             "index": 106,
@@ -33744,61 +33744,61 @@
             "index": 107,
             "module": "server.dll",
             "name": null,
-            "rva": 14574964
+            "rva": 14574996
           },
           {
             "index": 108,
             "module": "server.dll",
             "name": null,
-            "rva": 18005472
+            "rva": 18005504
           },
           {
             "index": 109,
             "module": "server.dll",
             "name": null,
-            "rva": 8639440
+            "rva": 8639536
           },
           {
             "index": 110,
             "module": "server.dll",
             "name": null,
-            "rva": 8639504
+            "rva": 8639600
           },
           {
             "index": 111,
             "module": "server.dll",
             "name": null,
-            "rva": 8639536
+            "rva": 8639632
           },
           {
             "index": 112,
             "module": "server.dll",
             "name": null,
-            "rva": 18005520
+            "rva": 18005552
           },
           {
             "index": 113,
             "module": "server.dll",
             "name": null,
-            "rva": 18002496
+            "rva": 18002528
           },
           {
             "index": 114,
             "module": "server.dll",
             "name": null,
-            "rva": 8639552
+            "rva": 8639648
           },
           {
             "index": 115,
             "module": "server.dll",
             "name": null,
-            "rva": 8640016
+            "rva": 8640112
           },
           {
             "index": 116,
             "module": "server.dll",
             "name": null,
-            "rva": 8639584
+            "rva": 8639680
           },
           {
             "index": 117,
@@ -33810,37 +33810,37 @@
             "index": 118,
             "module": "server.dll",
             "name": null,
-            "rva": 8639904
+            "rva": 8640000
           },
           {
             "index": 119,
             "module": "server.dll",
             "name": null,
-            "rva": 18006832
+            "rva": 18006864
           },
           {
             "index": 120,
             "module": "server.dll",
             "name": null,
-            "rva": 18008656
+            "rva": 18008688
           },
           {
             "index": 121,
             "module": "server.dll",
             "name": null,
-            "rva": 8640048
+            "rva": 8640144
           },
           {
             "index": 122,
             "module": "server.dll",
             "name": null,
-            "rva": 8640768
+            "rva": 8640864
           },
           {
             "index": 123,
             "module": "server.dll",
             "name": null,
-            "rva": 8640512
+            "rva": 8640608
           },
           {
             "index": 124,
@@ -33852,7 +33852,7 @@
             "index": 125,
             "module": "server.dll",
             "name": null,
-            "rva": 14575232
+            "rva": 14575264
           },
           {
             "index": 126,
@@ -33900,61 +33900,61 @@
             "index": 133,
             "module": "server.dll",
             "name": null,
-            "rva": 14574880
+            "rva": 14574912
           },
           {
             "index": 134,
             "module": "server.dll",
             "name": null,
-            "rva": 18005472
+            "rva": 18005504
           },
           {
             "index": 135,
             "module": "server.dll",
             "name": null,
-            "rva": 7506448
+            "rva": 7508176
           },
           {
             "index": 136,
             "module": "server.dll",
             "name": null,
-            "rva": 7506592
+            "rva": 7508320
           },
           {
             "index": 137,
             "module": "server.dll",
             "name": null,
-            "rva": 7506656
+            "rva": 7508384
           },
           {
             "index": 138,
             "module": "server.dll",
             "name": null,
-            "rva": 18005520
+            "rva": 18005552
           },
           {
             "index": 139,
             "module": "server.dll",
             "name": null,
-            "rva": 18002496
+            "rva": 18002528
           },
           {
             "index": 140,
             "module": "server.dll",
             "name": null,
-            "rva": 7506688
+            "rva": 7508416
           },
           {
             "index": 141,
             "module": "server.dll",
             "name": null,
-            "rva": 7507568
+            "rva": 7509296
           },
           {
             "index": 142,
             "module": "server.dll",
             "name": null,
-            "rva": 7506832
+            "rva": 7508560
           },
           {
             "index": 143,
@@ -33966,37 +33966,37 @@
             "index": 144,
             "module": "server.dll",
             "name": null,
-            "rva": 7507328
+            "rva": 7509056
           },
           {
             "index": 145,
             "module": "server.dll",
             "name": null,
-            "rva": 18006832
+            "rva": 18006864
           },
           {
             "index": 146,
             "module": "server.dll",
             "name": null,
-            "rva": 18008656
+            "rva": 18008688
           },
           {
             "index": 147,
             "module": "server.dll",
             "name": null,
-            "rva": 7508912
+            "rva": 7510640
           },
           {
             "index": 148,
             "module": "server.dll",
             "name": null,
-            "rva": 7510096
+            "rva": 7511824
           },
           {
             "index": 149,
             "module": "server.dll",
             "name": null,
-            "rva": 7510080
+            "rva": 7511808
           },
           {
             "index": 150,
@@ -34008,55 +34008,55 @@
             "index": 151,
             "module": "server.dll",
             "name": null,
-            "rva": 14611616
+            "rva": 14611648
           },
           {
             "index": 152,
             "module": "server.dll",
             "name": null,
-            "rva": 14613008
+            "rva": 14613040
           },
           {
             "index": 153,
             "module": "server.dll",
             "name": null,
-            "rva": 14659360
+            "rva": 14659392
           },
           {
             "index": 154,
             "module": "server.dll",
             "name": null,
-            "rva": 14608688
+            "rva": 14608720
           },
           {
             "index": 155,
             "module": "server.dll",
             "name": null,
-            "rva": 14608848
+            "rva": 14608880
           },
           {
             "index": 156,
             "module": "server.dll",
             "name": null,
-            "rva": 14607648
+            "rva": 14607680
           },
           {
             "index": 157,
             "module": "server.dll",
             "name": null,
-            "rva": 14580032
+            "rva": 14580064
           },
           {
             "index": 158,
             "module": "server.dll",
             "name": null,
-            "rva": 14635376
+            "rva": 14635408
           },
           {
             "index": 159,
             "module": "server.dll",
             "name": null,
-            "rva": 14620336
+            "rva": 14620368
           },
           {
             "index": 160,
@@ -34068,55 +34068,55 @@
             "index": 161,
             "module": "server.dll",
             "name": null,
-            "rva": 14611360
+            "rva": 14611392
           },
           {
             "index": 162,
             "module": "server.dll",
             "name": null,
-            "rva": 14612992
+            "rva": 14613024
           },
           {
             "index": 163,
             "module": "server.dll",
             "name": null,
-            "rva": 14659088
+            "rva": 14659120
           },
           {
             "index": 164,
             "module": "server.dll",
             "name": null,
-            "rva": 14608672
+            "rva": 14608704
           },
           {
             "index": 165,
             "module": "server.dll",
             "name": null,
-            "rva": 14608704
+            "rva": 14608736
           },
           {
             "index": 166,
             "module": "server.dll",
             "name": null,
-            "rva": 14607632
+            "rva": 14607664
           },
           {
             "index": 167,
             "module": "server.dll",
             "name": null,
-            "rva": 14579872
+            "rva": 14579904
           },
           {
             "index": 168,
             "module": "server.dll",
             "name": null,
-            "rva": 14635360
+            "rva": 14635392
           },
           {
             "index": 169,
             "module": "server.dll",
             "name": null,
-            "rva": 14620320
+            "rva": 14620352
           },
           {
             "index": 170,
@@ -34128,7 +34128,7 @@
             "index": 171,
             "module": "server.dll",
             "name": null,
-            "rva": 14613808
+            "rva": 14613840
           },
           {
             "index": 172,
@@ -34140,7 +34140,7 @@
             "index": 173,
             "module": "server.dll",
             "name": null,
-            "rva": 14652224
+            "rva": 14652256
           },
           {
             "index": 174,
@@ -34152,7 +34152,7 @@
             "index": 175,
             "module": "server.dll",
             "name": null,
-            "rva": 14607408
+            "rva": 14607440
           },
           {
             "index": 176,
@@ -34224,7 +34224,7 @@
             "index": 187,
             "module": "server.dll",
             "name": null,
-            "rva": 14637376
+            "rva": 14637408
           },
           {
             "index": 188,
@@ -34320,7 +34320,7 @@
             "index": 203,
             "module": "server.dll",
             "name": null,
-            "rva": 14607232
+            "rva": 14607264
           },
           {
             "index": 204,
@@ -34488,7 +34488,7 @@
             "index": 231,
             "module": "server.dll",
             "name": null,
-            "rva": 14649152
+            "rva": 14649184
           },
           {
             "index": 232,
@@ -34500,19 +34500,19 @@
             "index": 233,
             "module": "server.dll",
             "name": null,
-            "rva": 14600624
+            "rva": 14600656
           },
           {
             "index": 234,
             "module": "server.dll",
             "name": null,
-            "rva": 14575552
+            "rva": 14575584
           },
           {
             "index": 235,
             "module": "server.dll",
             "name": null,
-            "rva": 14664272
+            "rva": 14664304
           },
           {
             "index": 236,
@@ -34524,43 +34524,43 @@
             "index": 237,
             "module": "server.dll",
             "name": null,
-            "rva": 14577136
+            "rva": 14577168
           },
           {
             "index": 238,
             "module": "server.dll",
             "name": null,
-            "rva": 12391776
+            "rva": 12394304
           },
           {
             "index": 239,
             "module": "server.dll",
             "name": null,
-            "rva": 12391760
+            "rva": 12394288
           },
           {
             "index": 240,
             "module": "server.dll",
             "name": null,
-            "rva": 12391792
+            "rva": 12394320
           },
           {
             "index": 241,
             "module": "server.dll",
             "name": null,
-            "rva": 12391872
+            "rva": 12394400
           },
           {
             "index": 242,
             "module": "server.dll",
             "name": null,
-            "rva": 12392032
+            "rva": 12394560
           },
           {
             "index": 243,
             "module": "server.dll",
             "name": null,
-            "rva": 12392048
+            "rva": 12394576
           },
           {
             "index": 244,
@@ -34572,13 +34572,13 @@
             "index": 245,
             "module": "server.dll",
             "name": null,
-            "rva": 14574976
+            "rva": 14575008
           },
           {
             "index": 246,
             "module": "server.dll",
             "name": null,
-            "rva": 18005472
+            "rva": 18005504
           },
           {
             "index": 247,
@@ -34602,13 +34602,13 @@
             "index": 250,
             "module": "server.dll",
             "name": null,
-            "rva": 18005520
+            "rva": 18005552
           },
           {
             "index": 251,
             "module": "server.dll",
             "name": null,
-            "rva": 18002496
+            "rva": 18002528
           },
           {
             "index": 252,
@@ -34637,7 +34637,7 @@
         ],
         "rtti_class": "CSource2GameClients",
         "vtable_module": "server.dll",
-        "vtable_rva": 26837528
+        "vtable_rva": 26837592
       },
       "Source2GameDirector001": {
         "methods": [
@@ -34651,7 +34651,7 @@
             "index": 1,
             "module": "server.dll",
             "name": null,
-            "rva": 14620176
+            "rva": 14620208
           },
           {
             "index": 2,
@@ -34663,43 +34663,43 @@
             "index": 3,
             "module": "server.dll",
             "name": null,
-            "rva": 14641936
+            "rva": 14641968
           },
           {
             "index": 4,
             "module": "server.dll",
             "name": null,
-            "rva": 14609088
+            "rva": 14609120
           },
           {
             "index": 5,
             "module": "server.dll",
             "name": null,
-            "rva": 14609024
+            "rva": 14609056
           },
           {
             "index": 6,
             "module": "server.dll",
             "name": null,
-            "rva": 14608368
+            "rva": 14608400
           },
           {
             "index": 7,
             "module": "server.dll",
             "name": null,
-            "rva": 14612064
+            "rva": 14612096
           },
           {
             "index": 8,
             "module": "server.dll",
             "name": null,
-            "rva": 14612096
+            "rva": 14612128
           },
           {
             "index": 9,
             "module": "server.dll",
             "name": null,
-            "rva": 14608336
+            "rva": 14608368
           },
           {
             "index": 10,
@@ -34711,13 +34711,13 @@
             "index": 11,
             "module": "server.dll",
             "name": null,
-            "rva": 14637136
+            "rva": 14637168
           },
           {
             "index": 12,
             "module": "server.dll",
             "name": null,
-            "rva": 14637312
+            "rva": 14637344
           },
           {
             "index": 13,
@@ -34729,25 +34729,25 @@
             "index": 14,
             "module": "server.dll",
             "name": null,
-            "rva": 14585568
+            "rva": 14585600
           },
           {
             "index": 15,
             "module": "server.dll",
             "name": null,
-            "rva": 14599200
+            "rva": 14599232
           },
           {
             "index": 16,
             "module": "server.dll",
             "name": null,
-            "rva": 14636592
+            "rva": 14636624
           },
           {
             "index": 17,
             "module": "server.dll",
             "name": null,
-            "rva": 14636336
+            "rva": 14636368
           },
           {
             "index": 18,
@@ -35172,7 +35172,7 @@
         ],
         "rtti_class": "CCSHLTVDirector",
         "vtable_module": "server.dll",
-        "vtable_rva": 24711728
+        "vtable_rva": 24711720
       },
       "Source2GameEntities001": {
         "methods": [
@@ -35180,109 +35180,109 @@
             "index": 0,
             "module": "server.dll",
             "name": null,
-            "rva": 14537216
+            "rva": 14537248
           },
           {
             "index": 1,
             "module": "server.dll",
             "name": null,
-            "rva": 14537312
+            "rva": 14537344
           },
           {
             "index": 2,
             "module": "server.dll",
             "name": null,
-            "rva": 14537088
+            "rva": 14537120
           },
           {
             "index": 3,
             "module": "server.dll",
             "name": null,
-            "rva": 14537168
+            "rva": 14537200
           },
           {
             "index": 4,
             "module": "server.dll",
             "name": null,
-            "rva": 14540336
+            "rva": 14540368
           },
           {
             "index": 5,
             "module": "server.dll",
             "name": null,
-            "rva": 14537104
+            "rva": 14537136
           },
           {
             "index": 6,
             "module": "server.dll",
             "name": null,
-            "rva": 14537120
+            "rva": 14537152
           },
           {
             "index": 7,
             "module": "server.dll",
             "name": null,
-            "rva": 14537200
+            "rva": 14537232
           },
           {
             "index": 8,
             "module": "server.dll",
             "name": null,
-            "rva": 14537376
+            "rva": 14537408
           },
           {
             "index": 9,
             "module": "server.dll",
             "name": null,
-            "rva": 14537136
+            "rva": 14537168
           },
           {
             "index": 10,
             "module": "server.dll",
             "name": null,
-            "rva": 14537152
+            "rva": 14537184
           },
           {
             "index": 11,
             "module": "server.dll",
             "name": null,
-            "rva": 14540432
+            "rva": 14540464
           },
           {
             "index": 12,
             "module": "server.dll",
             "name": "CheckTransmit",
-            "rva": 14537472
+            "rva": 14537504
           },
           {
             "index": 13,
             "module": "server.dll",
             "name": null,
-            "rva": 14539440
+            "rva": 14539472
           },
           {
             "index": 14,
             "module": "server.dll",
             "name": null,
-            "rva": 14539488
+            "rva": 14539520
           },
           {
             "index": 15,
             "module": "server.dll",
             "name": null,
-            "rva": 14539872
+            "rva": 14539904
           },
           {
             "index": 16,
             "module": "server.dll",
             "name": null,
-            "rva": 14539968
+            "rva": 14540000
           },
           {
             "index": 17,
             "module": "server.dll",
             "name": null,
-            "rva": 14539648
+            "rva": 14539680
           },
           {
             "index": 18,
@@ -35300,13 +35300,13 @@
             "index": 20,
             "module": "server.dll",
             "name": null,
-            "rva": 14540096
+            "rva": 14540128
           },
           {
             "index": 21,
             "module": "server.dll",
             "name": null,
-            "rva": 14540240
+            "rva": 14540272
           },
           {
             "index": 22,
@@ -35317,7 +35317,7 @@
         ],
         "rtti_class": "CSource2GameEntities",
         "vtable_module": "server.dll",
-        "vtable_rva": 26830352
+        "vtable_rva": 26830576
       },
       "Source2Server001": {
         "methods": [
@@ -35325,67 +35325,67 @@
             "index": 0,
             "module": "server.dll",
             "name": null,
-            "rva": 14540608
+            "rva": 14540640
           },
           {
             "index": 1,
             "module": "server.dll",
             "name": null,
-            "rva": 14541760
+            "rva": 14541792
           },
           {
             "index": 2,
             "module": "server.dll",
             "name": null,
-            "rva": 14541840
+            "rva": 14541872
           },
           {
             "index": 3,
             "module": "server.dll",
             "name": null,
-            "rva": 14541856
+            "rva": 14541888
           },
           {
             "index": 4,
             "module": "server.dll",
             "name": null,
-            "rva": 14542512
+            "rva": 14542544
           },
           {
             "index": 5,
             "module": "server.dll",
             "name": null,
-            "rva": 14542800
+            "rva": 14542832
           },
           {
             "index": 6,
             "module": "server.dll",
             "name": null,
-            "rva": 14541824
+            "rva": 14541856
           },
           {
             "index": 7,
             "module": "server.dll",
             "name": null,
-            "rva": 14540496
+            "rva": 14540528
           },
           {
             "index": 8,
             "module": "server.dll",
             "name": null,
-            "rva": 14540512
+            "rva": 14540544
           },
           {
             "index": 9,
             "module": "server.dll",
             "name": null,
-            "rva": 14540400
+            "rva": 14540432
           },
           {
             "index": 10,
             "module": "server.dll",
             "name": null,
-            "rva": 14540416
+            "rva": 14540448
           },
           {
             "index": 11,
@@ -35397,37 +35397,37 @@
             "index": 12,
             "module": "server.dll",
             "name": null,
-            "rva": 14542928
+            "rva": 14542960
           },
           {
             "index": 13,
             "module": "server.dll",
             "name": null,
-            "rva": 14542992
+            "rva": 14543024
           },
           {
             "index": 14,
             "module": "server.dll",
             "name": null,
-            "rva": 14543120
+            "rva": 14543152
           },
           {
             "index": 15,
             "module": "server.dll",
             "name": null,
-            "rva": 14543376
+            "rva": 14543408
           },
           {
             "index": 16,
             "module": "server.dll",
             "name": null,
-            "rva": 14543600
+            "rva": 14543632
           },
           {
             "index": 17,
             "module": "server.dll",
             "name": null,
-            "rva": 14543632
+            "rva": 14543664
           },
           {
             "index": 18,
@@ -35439,31 +35439,31 @@
             "index": 19,
             "module": "server.dll",
             "name": null,
-            "rva": 14543888
+            "rva": 14543920
           },
           {
             "index": 20,
             "module": "server.dll",
             "name": null,
-            "rva": 14545488
+            "rva": 14545520
           },
           {
             "index": 21,
             "module": "server.dll",
             "name": null,
-            "rva": 14545504
+            "rva": 14545536
           },
           {
             "index": 22,
             "module": "server.dll",
             "name": null,
-            "rva": 14545520
+            "rva": 14545552
           },
           {
             "index": 23,
             "module": "server.dll",
             "name": null,
-            "rva": 14545536
+            "rva": 14545568
           },
           {
             "index": 24,
@@ -35475,265 +35475,265 @@
             "index": 25,
             "module": "server.dll",
             "name": null,
-            "rva": 14545552
+            "rva": 14545584
           },
           {
             "index": 26,
             "module": "server.dll",
             "name": null,
-            "rva": 14545584
+            "rva": 14545616
           },
           {
             "index": 27,
             "module": "server.dll",
             "name": null,
-            "rva": 14545616
+            "rva": 14545648
           },
           {
             "index": 28,
             "module": "server.dll",
             "name": null,
-            "rva": 14545680
+            "rva": 14545712
           },
           {
             "index": 29,
             "module": "server.dll",
             "name": null,
-            "rva": 14545712
+            "rva": 14545744
           },
           {
             "index": 30,
             "module": "server.dll",
             "name": null,
-            "rva": 14545744
+            "rva": 14545776
           },
           {
             "index": 31,
             "module": "server.dll",
             "name": null,
-            "rva": 14545808
+            "rva": 14545840
           },
           {
             "index": 32,
             "module": "server.dll",
             "name": null,
-            "rva": 14545840
+            "rva": 14545872
           },
           {
             "index": 33,
             "module": "server.dll",
             "name": null,
-            "rva": 14545856
+            "rva": 14545888
           },
           {
             "index": 34,
             "module": "server.dll",
             "name": null,
-            "rva": 14545872
+            "rva": 14545904
           },
           {
             "index": 35,
             "module": "server.dll",
             "name": null,
-            "rva": 14545888
+            "rva": 14545920
           },
           {
             "index": 36,
             "module": "server.dll",
             "name": null,
-            "rva": 14545904
+            "rva": 14545936
           },
           {
             "index": 37,
             "module": "server.dll",
             "name": null,
-            "rva": 14545936
+            "rva": 14545968
           },
           {
             "index": 38,
             "module": "server.dll",
             "name": null,
-            "rva": 14545952
+            "rva": 14545984
           },
           {
             "index": 39,
             "module": "server.dll",
             "name": null,
-            "rva": 14545968
+            "rva": 14546000
           },
           {
             "index": 40,
             "module": "server.dll",
             "name": null,
-            "rva": 14546400
+            "rva": 14546432
           },
           {
             "index": 41,
             "module": "server.dll",
             "name": null,
-            "rva": 14546416
+            "rva": 14546448
           },
           {
             "index": 42,
             "module": "server.dll",
             "name": null,
-            "rva": 14546480
+            "rva": 14546512
           },
           {
             "index": 43,
             "module": "server.dll",
             "name": null,
-            "rva": 14546560
+            "rva": 14546592
           },
           {
             "index": 44,
             "module": "server.dll",
             "name": null,
-            "rva": 14546784
+            "rva": 14546816
           },
           {
             "index": 45,
             "module": "server.dll",
             "name": null,
-            "rva": 14546816
+            "rva": 14546848
           },
           {
             "index": 46,
             "module": "server.dll",
             "name": null,
-            "rva": 14547088
+            "rva": 14547120
           },
           {
             "index": 47,
             "module": "server.dll",
             "name": null,
-            "rva": 14547104
+            "rva": 14547136
           },
           {
             "index": 48,
             "module": "server.dll",
             "name": null,
-            "rva": 14547584
+            "rva": 14547616
           },
           {
             "index": 49,
             "module": "server.dll",
             "name": null,
-            "rva": 14548528
+            "rva": 14548560
           },
           {
             "index": 50,
             "module": "server.dll",
             "name": null,
-            "rva": 14548960
+            "rva": 14548992
           },
           {
             "index": 51,
             "module": "server.dll",
             "name": null,
-            "rva": 14549120
+            "rva": 14549152
           },
           {
             "index": 52,
             "module": "server.dll",
             "name": null,
-            "rva": 14543664
+            "rva": 14543696
           },
           {
             "index": 53,
             "module": "server.dll",
             "name": null,
-            "rva": 14543856
+            "rva": 14543888
           },
           {
             "index": 54,
             "module": "server.dll",
             "name": null,
-            "rva": 14545408
+            "rva": 14545440
           },
           {
             "index": 55,
             "module": "server.dll",
             "name": null,
-            "rva": 14547360
+            "rva": 14547392
           },
           {
             "index": 56,
             "module": "server.dll",
             "name": null,
-            "rva": 14547472
+            "rva": 14547504
           },
           {
             "index": 57,
             "module": "server.dll",
             "name": null,
-            "rva": 14548240
+            "rva": 14548272
           },
           {
             "index": 58,
             "module": "server.dll",
             "name": null,
-            "rva": 14548336
+            "rva": 14548368
           },
           {
             "index": 59,
             "module": "server.dll",
             "name": null,
-            "rva": 14548432
+            "rva": 14548464
           },
           {
             "index": 60,
             "module": "server.dll",
             "name": null,
-            "rva": 14548384
+            "rva": 14548416
           },
           {
             "index": 61,
             "module": "server.dll",
             "name": null,
-            "rva": 14548480
+            "rva": 14548512
           },
           {
             "index": 62,
             "module": "server.dll",
             "name": null,
-            "rva": 14549232
+            "rva": 14549264
           },
           {
             "index": 63,
             "module": "server.dll",
             "name": null,
-            "rva": 14549344
+            "rva": 14549376
           },
           {
             "index": 64,
             "module": "server.dll",
             "name": null,
-            "rva": 14549472
+            "rva": 14549504
           },
           {
             "index": 65,
             "module": "server.dll",
             "name": null,
-            "rva": 14549600
+            "rva": 14549632
           },
           {
             "index": 66,
             "module": "server.dll",
             "name": null,
-            "rva": 14549632
+            "rva": 14549664
           },
           {
             "index": 67,
             "module": "server.dll",
             "name": null,
-            "rva": 14549696
+            "rva": 14549728
           },
           {
             "index": 68,
             "module": "server.dll",
             "name": null,
-            "rva": 14549728
+            "rva": 14549760
           },
           {
             "index": 69,
@@ -35745,13 +35745,13 @@
             "index": 70,
             "module": "server.dll",
             "name": null,
-            "rva": 14549664
+            "rva": 14549696
           },
           {
             "index": 71,
             "module": "server.dll",
             "name": null,
-            "rva": 14549760
+            "rva": 14549792
           },
           {
             "index": 72,
@@ -35763,31 +35763,31 @@
             "index": 73,
             "module": "server.dll",
             "name": null,
-            "rva": 14547040
+            "rva": 14547072
           },
           {
             "index": 74,
             "module": "server.dll",
             "name": null,
-            "rva": 14547072
+            "rva": 14547104
           },
           {
             "index": 75,
             "module": "server.dll",
             "name": null,
-            "rva": 14549808
+            "rva": 14549840
           },
           {
             "index": 76,
             "module": "server.dll",
             "name": null,
-            "rva": 14549872
+            "rva": 14549904
           },
           {
             "index": 77,
             "module": "server.dll",
             "name": null,
-            "rva": 14549888
+            "rva": 14549920
           },
           {
             "index": 78,
@@ -35799,49 +35799,49 @@
             "index": 79,
             "module": "server.dll",
             "name": null,
-            "rva": 14550016
+            "rva": 14550048
           },
           {
             "index": 80,
             "module": "server.dll",
             "name": null,
-            "rva": 14550032
+            "rva": 14550064
           },
           {
             "index": 81,
             "module": "server.dll",
             "name": null,
-            "rva": 14550368
+            "rva": 14550400
           },
           {
             "index": 82,
             "module": "server.dll",
             "name": null,
-            "rva": 14550416
+            "rva": 14550448
           },
           {
             "index": 83,
             "module": "server.dll",
             "name": null,
-            "rva": 14550464
+            "rva": 14550496
           },
           {
             "index": 84,
             "module": "server.dll",
             "name": null,
-            "rva": 14551568
+            "rva": 14551600
           },
           {
             "index": 85,
             "module": "server.dll",
             "name": null,
-            "rva": 14551584
+            "rva": 14551616
           },
           {
             "index": 86,
             "module": "server.dll",
             "name": null,
-            "rva": 14551616
+            "rva": 14551648
           },
           {
             "index": 87,
@@ -35883,55 +35883,55 @@
             "index": 93,
             "module": "server.dll",
             "name": null,
-            "rva": 14551632
+            "rva": 14551664
           },
           {
             "index": 94,
             "module": "server.dll",
             "name": null,
-            "rva": 14551648
+            "rva": 14551680
           },
           {
             "index": 95,
             "module": "server.dll",
             "name": null,
-            "rva": 14551664
+            "rva": 14551696
           },
           {
             "index": 96,
             "module": "server.dll",
             "name": null,
-            "rva": 14551680
+            "rva": 14551712
           },
           {
             "index": 97,
             "module": "server.dll",
             "name": null,
-            "rva": 14551696
+            "rva": 14551728
           },
           {
             "index": 98,
             "module": "server.dll",
             "name": null,
-            "rva": 14551728
+            "rva": 14551760
           },
           {
             "index": 99,
             "module": "server.dll",
             "name": null,
-            "rva": 14551792
+            "rva": 14551824
           },
           {
             "index": 100,
             "module": "server.dll",
             "name": null,
-            "rva": 14551808
+            "rva": 14551840
           },
           {
             "index": 101,
             "module": "server.dll",
             "name": null,
-            "rva": 14551824
+            "rva": 14551856
           },
           {
             "index": 102,
@@ -35949,12 +35949,12 @@
             "index": 104,
             "module": "server.dll",
             "name": null,
-            "rva": 14551712
+            "rva": 14551744
           }
         ],
         "rtti_class": "CSource2Server",
         "vtable_module": "server.dll",
-        "vtable_rva": 26830568
+        "vtable_rva": 26830792
       },
       "Source2ServerConfig001": {
         "methods": [
@@ -36135,7 +36135,7 @@
         ],
         "rtti_class": "CCSGameConfiguration",
         "vtable_module": "server.dll",
-        "vtable_rva": 25951024
+        "vtable_rva": 25950960
       },
       "customnavsystem001": {
         "methods": [
@@ -36226,7 +36226,7 @@
         ],
         "rtti_class": "CCustomNavGenSystem",
         "vtable_module": "server.dll",
-        "vtable_rva": 24953320
+        "vtable_rva": 24953336
       }
     },
     "soundsystem.dll": {

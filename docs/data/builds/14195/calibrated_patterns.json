@@ -1,0 +1,30 @@
+{
+  "client.dll": {
+    "dwCSGOInput": {"pattern": "CC CC CC CC CC CC CC CC CC CC CC CC 48 83 EC 28 48 8D 0D ?? ?? ?? ?? E8 10 EF A6 00 33 C9 C7 05 88 1F 49 02 FF FF FF", "rip_offset": 16},
+    "dwEntityList": {"pattern": "FF FF FF FF C7 45 1F FF FF FF FF E8 40 15 00 00 48 8B 05 ?? ?? ?? ?? 48 8B B0 10 02 00 00 48 85 F6 0F 84 65 01 00 00", "rip_offset": 16},
+    "dwGameEntitySystem": {"pattern": "FF FF FF FF C7 45 1F FF FF FF FF E8 40 15 00 00 48 8B 05 ?? ?? ?? ?? 48 8B B0 10 02 00 00 48 85 F6 0F 84 65 01 00 00", "rip_offset": 16},
+    "dwGameRules": {"pattern": "8D 4C 24 20 E8 79 44 9D 00 33 C9 E8 12 2E 7E 00 4C 8B 1D ?? ?? ?? ?? 48 8B D8 44 8B 87 C8 10 00 00 49 8B 13 48 8B B2", "rip_offset": 16},
+    "dwGlobalVars": {"pattern": "00 48 83 C4 48 C3 CC CC CC CC CC CC CC CC CC CC 48 8B 05 ?? ?? ?? ?? 0F 57 C0 8B 48 44 33 C0 89 0D 17 D2 18 02 48 8D", "rip_offset": 16},
+    "dwGlowManager": {"pattern": "27 00 48 8D 05 CA 91 B9 01 48 89 05 B3 E7 48 02 48 8D 05 ?? ?? ?? ?? 48 89 05 BD E7 48 02 48 83 C4 28 C3 CC CC CC CC", "rip_offset": 16},
+    "dwLocalPlayerController": {"pattern": "3B D8 0F 85 DF 01 00 00 48 89 B4 24 B0 00 00 00 48 8D 0D ?? ?? ?? ?? 33 F6 4C 89 34 F9 41 C6 86 90 07 00 00 01 85 FF", "rip_offset": 16},
+    "dwPlantedC4": {"pattern": "48 83 EC 20 48 8B DA E8 D2 00 02 00 84 C0 75 56 48 8B 05 ?? ?? ?? ?? 45 32 C0 48 85 C0 74 1D 44 38 80 88 12 00 00 75", "rip_offset": 16},
+    "dwPrediction": {"pattern": "E9 53 3C 92 01 CC CC CC CC CC CC CC 48 83 EC 28 48 8D 0D ?? ?? ?? ?? E8 A0 2F AF 00 48 8D 0D 99 77 9B 01 48 83 C4 28", "rip_offset": 16},
+    "dwViewMatrix": {"pattern": "CC CC CC CC CC CC CC CC CC CC CC CC CC 48 63 C1 48 8D 0D ?? ?? ?? ?? 48 C1 E0 06 48 03 C1 C3 CC CC CC CC CC CC CC CC", "rip_offset": 16},
+    "dwViewRender": {"pattern": "86 A4 11 00 48 8B F8 48 85 C0 0F 84 22 07 00 00 48 8B 0D ?? ?? ?? ?? 48 89 9C 24 E8 07 00 00 48 8B 11 4C 8B 42 40 BA", "rip_offset": 16},
+    "dwWeaponC4": {"pattern": "C2 D1 F8 8B D8 3B C7 7C F2 4C 63 0D DB 2C CD 01 48 8B 0D ?? ?? ?? ?? 49 C1 E1 03 4C 63 C3 49 C1 E0 03 F7 05 C3 2C CD", "rip_offset": 16}
+  },
+  "engine2.dll": {
+    "dwNetworkGameClient": {"pattern": "CC CC CC CC CC CC CC CC CC CC 40 53 48 83 EC 20 48 8B 05 ?? ?? ?? ?? 48 8B D9 83 B8 40 02 00 00 01 7E 37 48 8B 0D D8", "rip_offset": 16},
+    "dwWindowHeight": {"pattern": "8B D7 FF 50 30 EB 02 33 C0 48 8B 8D 58 02 00 00 4C 8D 05 ?? ?? ?? ?? 48 89 0D 05 2B 7B 00 48 8D 15 06 2B 7B 00 48 8B", "rip_offset": 16},
+    "dwWindowWidth": {"pattern": "00 00 4C 8D 05 18 2B 7B 00 48 89 0D 05 2B 7B 00 48 8D 15 ?? ?? ?? ?? 48 8B C8 48 89 05 E4 2A 7B 00 48 89 3D E5 2A 7B", "rip_offset": 16}
+  },
+  "inputsystem.dll": {
+    "dwInputSystem": {"pattern": "0F B6 10 48 FF A0 B8 01 00 00 C3 CC CC CC CC CC 48 8D 05 ?? ?? ?? ?? C3 CC CC CC CC CC CC CC CC 40 53 48 83 EC 20 33", "rip_offset": 16}
+  },
+  "matchmaking.dll": {
+    "dwGameTypes": {"pattern": "48 83 C4 20 5B C3 CC CC CC CC CC CC 48 83 EC 28 48 8B 05 ?? ?? ?? ?? 48 8D 0D 5E 81 1A 00 33 D2 FF 50 60 B8 01 00 00", "rip_offset": 16}
+  },
+  "soundsystem.dll": {
+    "dwSoundSystem": {"pattern": "48 83 C4 20 5F C3 CC CC CC CC CC CC CC CC CC CC 48 8D 05 ?? ?? ?? ?? C3 CC CC CC CC CC CC CC CC 40 53 48 83 EC 20 49", "rip_offset": 16}
+  }
+}

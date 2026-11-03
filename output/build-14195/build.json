@@ -1,12 +1,12 @@
 {
   "build_number": 14195,
-  "dump_seconds": 64.2,
-  "generated_at": "2026-11-03T13:42:36",
+  "dump_seconds": 4.9,
+  "generated_at": "2026-11-03T13:47:54",
   "patch_version": "1.41.9.4",
-  "valid": false,
-  "publish_ready": false,
-  "reason": "signature resolution incomplete",
-  "signatures": {"total": 578, "found": 574, "recovered": 13, "missing": [{"name": "DrawLegs", "module": "client.dll"}, {"name": "FirstPersonLegs", "module": "client.dll"}, {"name": "C_CSWeaponBase_GetRecoilOffset", "module": "client.dll"}, {"name": "GameSystem_Think_CheckSteamBan", "module": "server.dll"}]},
+  "valid": true,
+  "publish_ready": true,
+  "reason": "1 signature allowed as unresolved",
+  "signatures": {"total": 578, "found": 577, "recovered": 16, "missing": [{"name": "GameSystem_Think_CheckSteamBan", "module": "server.dll"}]},
   "recovered_patterns": "recovered_patterns.json",
   "offsets": {"count": 202},
   "modules": {

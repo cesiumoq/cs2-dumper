@@ -1,25 +1,31 @@
-// Generated using https://github.com/a2x/cs2-dumper
+/*
+   Generated using https://github.com/a2x/cs2-dumper
+*/
 // 2026-11-03 12:42:01.636437600 UTC
 
 namespace CS2Dumper.Schemas {
-    // Module: steamaudio.dll
-    // Class count: 17
-    // Enum count: 0
+/*
+   Module: steamaudio.dll
+   Class count: 17
+   Enum count: 0
+*/
     public static class SteamaudioDll {
-        // Parent: None
-        // Field count: 3
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 3
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class SteamAudioReverbClusteringSettings_t {
             public const nint m_bEnableClustering = 0x0; // bool
             public const nint m_nCubeMapResolution = 0x4; // int32
             public const nint m_flDepthThreshold = 0x8; // float32
         }
-        // Parent: None
-        // Field count: 5
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 5
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class SteamAudioCustomDataDimensionsSettings_t {
             public const nint m_nAmbisonicsOrderOutsideField = 0x0; // int32
@@ -28,10 +34,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_flSizeThreshold = 0xC; // float32
             public const nint m_flInsideThreshold = 0x10; // float32
         }
-        // Parent: None
-        // Field count: 4
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 4
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class SteamAudioPathSettings_t {
             public const nint m_nNumVisSamples = 0x0; // int32
@@ -39,28 +46,31 @@ namespace CS2Dumper.Schemas {
             public const nint m_flProbeVisThreshold = 0x8; // float32
             public const nint m_flProbePathRange = 0xC; // float32
         }
-        // Parent: None
-        // Field count: 1
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 1
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class CSteamAudioAmbisonicsField {
             public const nint m_field = 0x0; // CUtlVector<float32>
         }
-        // Parent: None
-        // Field count: 3
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 3
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class CSteamAudioBakedPathingData {
             public const nint m_nBands = 0x0; // int32
             public const nint m_probes = 0x8; // CSteamAudioProbeData
             public const nint m_movables = 0x10; // CSteamAudioMovableBakedData<CSteamAudioBakedPathingData>
         }
-        // Parent: None
-        // Field count: 5
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 5
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class SteamAudioReverbSettings_t {
             public const nint m_nNumRays = 0x0; // int32
@@ -69,37 +79,41 @@ namespace CS2Dumper.Schemas {
             public const nint m_nAmbisonicsOrder = 0xC; // int32
             public const nint m_bExportScene = 0x10; // bool
         }
-        // Parent: None
-        // Field count: 1
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 1
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class CSteamAudioProbeData {
             public const nint m_pProbeBatch = 0x0; // IPLProbeBatch
         }
-        // Parent: None
-        // Field count: 2
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 2
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class SteamAudioReverbCompressionSettings_t {
             public const nint m_bEnableCompression = 0x0; // bool
             public const nint m_flQuality = 0x4; // float32
         }
-        // Parent: None
-        // Field count: 3
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 3
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class CSteamAudioBakedMaterialsData {
             public const nint m_probes = 0x0; // CSteamAudioProbeData
             public const nint m_vecMaterialTokens = 0x8; // CUtlVector<uint32>
             public const nint m_vecMaterialWeights = 0x20; // CUtlVector<float32>
         }
-        // Parent: None
-        // Field count: 5
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 5
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class CSteamAudioBakedOcclusionData {
             public const nint m_settings = 0x0; // SteamAudioCustomDataOcclusionSettings_t
@@ -108,10 +122,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecPathingDeviation = 0x30; // CUtlVector<float32>
             public const nint m_vecReflectionEnergy = 0x48; // CUtlVector<float32>
         }
-        // Parent: None
-        // Field count: 12
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 12
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class CSteamAudioBakedReverbData {
             public const nint m_nBands = 0x0; // int32
@@ -127,10 +142,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_compressedClusteredData = 0x120; // CSteamAudioCompressedReverb
             public const nint m_movables = 0x180; // CSteamAudioMovableBakedData<CSteamAudioBakedReverbData>
         }
-        // Parent: None
-        // Field count: 4
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 4
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class CSteamAudioProbeLineSegment {
             public const nint m_vStart = 0x0; // Vector
@@ -138,10 +154,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecIntervals = 0x18; // CUtlVector<float32>
             public const nint m_vecProbeIndices = 0x30; // CUtlVector<int32>
         }
-        // Parent: None
-        // Field count: 4
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 4
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class SteamAudioCustomDataOcclusionSettings_t {
             public const nint m_bEnablePathing = 0x0; // bool
@@ -149,10 +166,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_nReflectionRays = 0x4; // int32
             public const nint m_nReflectionBounces = 0x8; // int32
         }
-        // Parent: None
-        // Field count: 7
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 7
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class CSteamAudioBakedDimensionsData {
             public const nint m_settings = 0x0; // SteamAudioCustomDataDimensionsSettings_t
@@ -163,19 +181,21 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecInsideSmallSizeField = 0x68; // CUtlVector<CSteamAudioAmbisonicsField>
             public const nint m_movables = 0x80; // CSteamAudioMovableBakedData<CSteamAudioBakedDimensionsData>
         }
-        // Parent: None
-        // Field count: 2
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 2
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class CSteamAudioSceneData {
             public const nint m_pScene = 0x0; // IPLScene
             public const nint m_pStaticMesh = 0x8; // IPLStaticMesh
         }
-        // Parent: None
-        // Field count: 7
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 7
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class CSteamAudioProbeGrid {
             public const nint m_aabb = 0x0; // AABB_t
@@ -186,10 +206,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecLineSegments = 0x28; // CUtlVector<CSteamAudioProbeLineSegment>
             public const nint m_vecProbes = 0x40; // CUtlVector<Vector>
         }
-        // Parent: None
-        // Field count: 8
-        //
-        // Metadata:
+/*
+   Parent: None
+   Field count: 8
+   Metadata:
+*/
         // MGetKV3ClassDefaults
         public static class CSteamAudioCompressedReverb {
             public const nint m_nChannels = 0x0; // int32

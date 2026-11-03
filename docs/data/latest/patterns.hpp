@@ -1,8 +1,8 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 11:49 03/11/2026 (GMT)
-/*  Dumped In       : 2,7s
+/*  Dumped At       : 12:48 03/11/2026 (GMT)
+/*  Dumped In       : 4,9s
 */
 
 #pragma once
@@ -16,10 +16,10 @@ namespace pattern {
         inline constexpr std::string_view pAnimationSystemUtils = "48 8D 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 48 83 EC 28 48 8B CA 48 8D 15";
     }
     namespace client {
-        inline constexpr std::string_view ActionAbandonOngoingMatch = "40 57 48 83 EC 50 33 FF F6 05 C1 E1 5F 01 01 0F";
+        inline constexpr std::string_view ActionAbandonOngoingMatch = "40 57 48 83 EC 50 33 FF F6 05 41 E2 5F 01 01 0F";
         inline constexpr std::string_view ActionAcknowledgePenalty = "E9 ? ? ? ? CC CC CC CC CC CC CC CC CC CC CC 48 89 5C 24 10 48 89 74 24 18 57 48 81 EC 40 01";
         inline constexpr std::string_view ActionMatchmaking = "48 89 5C 24 18 55 57 41 56 48 81 EC 60 01 00 00";
-        inline constexpr std::string_view ActionReconnectToOngoingMatch = "48 83 EC 38 F6 05 E5 D2 5F 01 01 74 5F 48 8B 0D";
+        inline constexpr std::string_view ActionReconnectToOngoingMatch = "48 83 EC 38 F6 05 65 D3 5F 01 01 74 5F 48 8B 0D";
         inline constexpr std::string_view AddInputHistoryEntry = "48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56 48 83 EC 40 4C 8B 51 38 45 0F";
         inline constexpr std::string_view AddKeychainEntity = "44 88 44 24 18 48 89 54 24 10 48 89 4C 24 08 55";
         inline constexpr std::string_view AddNametagEntity = "40 55 53 56 48 8D AC 24 90 FC FF FF 48 81 EC 70";
@@ -30,7 +30,7 @@ namespace pattern {
         inline constexpr std::string_view BuildBoneMergeWork = "40 55 56 57 41 54 41 55 41 56 41 57 48 83 EC 50 48 8D 6C 24 50 80 A1 06";
         inline constexpr std::string_view BuildTemplateMaterialFromFile = "48 89 4C 24 08 55 53 41 55 41 56 48 8D AC 24 08";
         inline constexpr std::string_view CAttributeStringFill = "48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56 48 83 EC 20 33 F6";
-        inline constexpr std::string_view CAttributeStringInit = "48 8B C2 48 83 C8 02 45 84 C0 48 0F 44 C2 48 89 41 08 48 8D 05 9F DC 56";
+        inline constexpr std::string_view CAttributeStringInit = "48 8B C2 48 83 C8 02 45 84 C0 48 0F 44 C2 48 89 41 08 48 8D 05 4F DD 56";
         inline constexpr std::string_view CBufferStringInit = "48 89 5C 24 10 57 48 83 EC 30 8B 41 04 48 8D 79";
         inline constexpr std::string_view CCSGOInputHistoryEntryPB_New = "48 89 5C 24 10 57 48 83 EC 20 33 DB 48 8B F9 48 85 C9 75 2D B9 78 00 00 00 E8 F2 09";
 /*
@@ -38,7 +38,7 @@ namespace pattern {
 */
         inline constexpr std::string_view CCSInventoryManager_Get = "48 8D 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 0F B6 81 6B";
         inline constexpr std::string_view CDynamicLightManager_Alloc = "48 89 5C 24 08 48 89 6C 24 18 48 89 74 24 20 57 48 83 EC 20 41 8B D8 48";
-        inline constexpr std::string_view CInButtonStatePB_New = "48 89 5C 24 10 57 48 83 EC 20 33 FF 48 8B D9 48 85 C9 75 23 B9 30 00 00 00 E8 12 AF";
+        inline constexpr std::string_view CInButtonStatePB_New = "48 89 5C 24 10 57 48 83 EC 20 33 FF 48 8B D9 48 85 C9 75 23 B9 30 00 00 00 E8 22 AF";
 /*
    also known as: pCSGOInput
 */
@@ -64,30 +64,30 @@ namespace pattern {
    also known as: UpdateSubClass
 */
         inline constexpr std::string_view C_BaseEntity_UpdateSubclass = "4C 8B DC 53 48 81 EC 90 01 00 00 48 8B 41 10 48";
-        inline constexpr std::string_view C_BaseModelEntity_SetBodygroupByName = "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 41 8B F8 48 8B F2 48 8B D9 E8 F3 7E 8B";
+        inline constexpr std::string_view C_BaseModelEntity_SetBodygroupByName = "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 41 8B F8 48 8B F2 48 8B D9 E8 E3 7E 8B";
         inline constexpr std::string_view C_BaseModelEntity_UpdateOnRemove = "40 53 48 83 EC 20 48 8B D9 48 81 C1 E8 0D 00 00";
         inline constexpr std::string_view C_CSPlayerPawn_GetAimPunch = "48 89 5C 24 08 55 56 57 48 8D 6C 24 B9 48 81 EC";
         inline constexpr std::string_view C_CSPlayerPawn_GetAimPunchAtTick = "4C 8B DC 49 89 5B 08 49 89 6B 10 49 89 73 18 57 48 83 EC 70 48 8B D9 44";
-        inline constexpr std::string_view C_CSPlayerPawn_GetInterpolatedShootPosition = "40 55 56 41 56 48 81 EC 20 01 00 00 48 8B 05 65";
+        inline constexpr std::string_view C_CSPlayerPawn_GetInterpolatedShootPosition = "40 55 56 41 56 48 81 EC 20 01 00 00 48 8B 05 55";
 /*
    also known as: GetInaccuracy
 */
         inline constexpr std::string_view C_CSWeaponBaseGun_GetInaccuracy = "48 89 5C 24 10 55 56 57 48 81 EC B0 00 00 00 44";
         inline constexpr std::string_view C_CSWeaponBaseGun_GetSpread = "48 63 91 00 1A 00 00 48 8B 81 88 03 00 00 85 D2 78 10 48 83 FA 02 73 0A F3 0F 10 84 90 50 07 00";
         inline constexpr std::string_view C_CSWeaponBase_GetEconWpnData = "40 53 48 83 EC 40 48 8B D9 E8 ? ? ? ? 48 8B C8 E8 FA 25";
-        inline constexpr std::string_view C_CSWeaponBase_GetModelPath = "48 89 5C 24 10 56 48 83 EC 20 48 8B 1D BF 4A 46";
+        inline constexpr std::string_view C_CSWeaponBase_GetModelPath = "48 89 5C 24 10 56 48 83 EC 20 48 8B 1D 2F 4B 46";
         inline constexpr std::string_view C_CSWeaponBase_GetViewModel = "40 53 48 83 EC 20 48 8B D9 E8 ? ? ? ? 48 83 BB 88 03 00";
         inline constexpr std::string_view C_CSWeaponBase_ReloadCustomEconVisuals = "48 89 5C 24 20 55 48 8D 6C 24 A9 48 81 EC E0 00";
         inline constexpr std::string_view C_CSWeaponBase_UpdateAccuracyPenalty = "40 57 41 56 48 83 EC 68 48 8B F9 E8 ? ? ? ?";
         inline constexpr std::string_view C_CSWeaponBase_UpdateCompositeMaterial = "48 89 5C 24 10 48 89 6C 24 18 48 89 74 24 20 57 41 56 41 57 48 83 EC 20 44 0F B6 F2";
         inline constexpr std::string_view C_EconEntity_BuildModernWeaponSkinMaterial = "48 85 C9 0F 84 ? ? ? ? 48 8B C4 48 89 50 10";
         inline constexpr std::string_view C_EconItemView_GetCustomName = "48 89 5C 24 08 57 48 83 EC 20 48 83 B9 00 02 00 00 00 0F B6";
-        inline constexpr std::string_view C_EconItemView_GetStaticData = "40 56 48 83 EC 20 48 89 5C 24 30 48 8B F1 48 8B 1D CB 41 46";
+        inline constexpr std::string_view C_EconItemView_GetStaticData = "40 56 48 83 EC 20 48 89 5C 24 30 48 8B F1 48 8B 1D 3B 42 46";
         inline constexpr std::string_view C_EconItemView_InvalidateDescription = "48 89 5C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8D B9 00 02";
         inline constexpr std::string_view C_EconItemView_RemoveAttribute = "40 53 48 83 EC 20 48 63 81 10 02 00 00 44 0F B7";
         inline constexpr std::string_view C_EconItemView_SetAttribute = "40 53 48 83 EC 20 48 8B D9 48 81 C1 08 02 00 00";
         inline constexpr std::string_view C_Inferno_SynchronizeDrawables = "48 8B C4 53 55 57 41 57 48 81 EC 38 01 00 00 48";
-        inline constexpr std::string_view CacheParticleEffect = "4C 8B DC 53 48 81 EC 90 00 00 00 F2 0F 10 05 F5";
+        inline constexpr std::string_view CacheParticleEffect = "4C 8B DC 53 48 81 EC 90 00 00 00 F2 0F 10 05 E5";
         inline constexpr std::string_view CalcLocalPlayerView = "48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56 48 83 EC 40 49 8B E9 49 8B F8";
         inline constexpr std::string_view CalcSpread = "48 8B C4 48 89 58 18 48 89 68 20 89 50 10 56 57";
         inline constexpr std::string_view CalcViewmodelView = "40 53 48 83 EC 60 48 8B 41 08 49 8B D8 8B 48 30";
@@ -98,10 +98,10 @@ namespace pattern {
 /*
    also known as: SetModel
 */
-        inline constexpr std::string_view ChangeModel = "40 53 48 83 EC 20 48 8B D9 4C 8B C2 48 8B 0D 3D";
+        inline constexpr std::string_view ChangeModel = "40 53 48 83 EC 20 48 8B D9 4C 8B C2 48 8B 0D AD";
         inline constexpr std::string_view ClearHUDWeaponIcon = "4C 8B DC 55 57 48 83 EC 48 48 63 41 68 48 8B F9";
         inline constexpr std::string_view ClientModeCSNormal_OnEvent = "40 53 57 48 81 EC 78 02 00 00 48 8B CA 48 8B FA";
-        inline constexpr std::string_view ClientModeShared_LevelInit = "48 89 74 24 10 57 48 83 EC 30 48 8B 0D 6F 5E 9B";
+        inline constexpr std::string_view ClientModeShared_LevelInit = "48 89 74 24 10 57 48 83 EC 30 48 8B 0D 5F 5E 9B";
 /*
    also known as: LevelShutdown
 */
@@ -123,7 +123,7 @@ namespace pattern {
    also known as: ThirdPersonOnHandler
 */
         inline constexpr std::string_view ConCommand_thirdperson = "48 83 EC 38 48 8B 0D ? ? ? ? 48 8D 54 24 40";
-        inline constexpr std::string_view ConvarGet = "4C 8B 49 08 49 8B 49 30 4D 8D 41 58 48 0F BA E1 0F 72 08 85 D2 7F 4A 49 8B C0 C3 48 C1 E9 ? ? ? ? 75 07 B8 01 00 00 00 EB 0A 48 8B 05 46 F8";
+        inline constexpr std::string_view ConvarGet = "4C 8B 49 08 49 8B 49 30 4D 8D 41 58 48 0F BA E1 0F 72 08 85 D2 7F 4A 49 8B C0 C3 48 C1 E9 ? ? ? ? 75 07 B8 01 00 00 00 EB 0A 48 8B 05 66 F8";
         inline constexpr std::string_view CooldownIsPermanent = "8B 0D ? ? ? ? 8D 41 F8 A9 F9 FF FF FF 75 08";
         inline constexpr std::string_view CreateBaseTypeCache = "40 57 48 83 EC 20 4C 8B 49 18 44 8B D2 4C 63 41";
         inline constexpr std::string_view CreateEconItemView = "48 89 5C 24 08 48 89 6C 24 18 48 89 74 24 20 57 41 54 41 55 41 56 41 57 48 83 EC 40 0F B7 FA 4C";
@@ -133,7 +133,7 @@ namespace pattern {
 /*
    also known as: CreateSubtickMoveStep
 */
-        inline constexpr std::string_view CreateNewSubtickMoveStep = "48 89 5C 24 10 57 48 83 EC 20 33 DB 48 8B F9 48 85 C9 75 2D B9 38 00 00 00 E8 92 AE";
+        inline constexpr std::string_view CreateNewSubtickMoveStep = "48 89 5C 24 10 57 48 83 EC 20 33 DB 48 8B F9 48 85 C9 75 2D B9 38 00 00 00 E8 A2 AE";
 /*
    also known as: CEconItemCreateInstance, CreateEconItem
 */
@@ -152,7 +152,7 @@ namespace pattern {
         inline constexpr std::string_view DrawFlashEffect = "85 D2 0F 88 ? ? ? ? 48 89 4C 24 08 55 56 41";
         inline constexpr std::string_view DrawScopeOverlay = "48 8B C4 53 57 48 83 EC 68 48 8B FA 44 0F 29 40";
         inline constexpr std::string_view DrawSmokeVertex = "48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 41 56 41 57 48 83 EC 40 48 8B 9C 24 88 00 00 00 4D 8B F8 48 8B FA 48 8B";
-        inline constexpr std::string_view EmitPanoramaSound = "40 53 48 81 EC B0 00 00 00 0F 10 02 48 8B 05 3D";
+        inline constexpr std::string_view EmitPanoramaSound = "40 53 48 81 EC B0 00 00 00 0F 10 02 48 8B 05 BD";
         inline constexpr std::string_view EmitSoundByHandle = "40 53 48 83 EC 30 4C 89 4C 24 20 48 8B D9 45 8B";
         inline constexpr std::string_view EquipItemInLoadout = "48 89 5C 24 08 48 89 6C 24 18 48 89 74 24 20 89 54 24 10 57 41 54 41 55 41 56 41 57 48 83 EC 70";
         inline constexpr std::string_view FX_FireBullets = "4C 89 4C 24 20 55 53 57 41 54 41 55 48 8D AC 24";
@@ -164,14 +164,14 @@ namespace pattern {
         inline constexpr std::string_view GameEventManager_UnserializeEvent = "48 8B C4 48 89 50 10 55 41 54 41 55 41 56 48 8D";
         inline constexpr std::string_view GameTraceLine = "4C 8B DC 49 89 5B 08 49 89 6B 10 49 89 73 18 57 48 81 EC 80";
         inline constexpr std::string_view GenerateDirectChallengeCode = "48 83 EC 28 E8 ? ? ? ? 48 8B 05 ? ? ? ?";
-        inline constexpr std::string_view GetAbsOrigin = "40 53 48 83 EC 20 48 8B 99 30 03 00 00 90 80 BB 10 01 00 00 00 74 08 48 8B CB E8 61";
+        inline constexpr std::string_view GetAbsOrigin = "40 53 48 83 EC 20 48 8B 99 30 03 00 00 90 80 BB 10 01 00 00 00 74 08 48 8B CB E8 71";
 /*
    also known as: GetAttributeDefByName
 */
         inline constexpr std::string_view GetAttributeDefinitionByName = "48 89 5C 24 10 48 89 6C 24 18 57 41 56 41 57 48 83 EC 60 48";
         inline constexpr std::string_view GetAttributeDefinitionInterface = "85 D2 78 17 3B 91 50 01 00 00 7D 0F 48 8B 81 58";
-        inline constexpr std::string_view GetBombsiteACenter = "48 89 5C 24 08 57 48 83 EC 20 48 8B F9 48 8B DA 48 8B 0D 21";
-        inline constexpr std::string_view GetBombsiteBCenter = "48 89 5C 24 08 57 48 83 EC 20 48 8B F9 48 8B DA 48 8B 0D C1";
+        inline constexpr std::string_view GetBombsiteACenter = "48 89 5C 24 08 57 48 83 EC 20 48 8B F9 48 8B DA 48 8B 0D 91";
+        inline constexpr std::string_view GetBombsiteBCenter = "48 89 5C 24 08 57 48 83 EC 20 48 8B F9 48 8B DA 48 8B 0D 31";
         inline constexpr std::string_view GetBoneIndex = "44 8B 42 08 48 8B 12 E9 ? ? ? ? CC CC CC CC";
         inline constexpr std::string_view GetCUserCmdArray = "48 89 4C 24 08 41 56 41 57 48 83 EC 48 4C 63 FA";
 /*
@@ -183,7 +183,7 @@ namespace pattern {
         inline constexpr std::string_view GetCooldownReason = "8B 05 ? ? ? ? 48 8D 15 ? ? ? ? FF C8 83";
         inline constexpr std::string_view GetCooldownSecondsRemaining = "48 83 EC 58 8B 05 ? ? ? ? C1 E8 ? ? ? ?";
         inline constexpr std::string_view GetCooldownType = "8B 15 ? ? ? ? 8D 42 F8 83 F8 0C 77 14 4C 8D";
-        inline constexpr std::string_view GetCustomPaintKitIndex = "48 89 5C 24 08 57 48 83 EC 40 8B 15 ? ? ? ? 48 8B F9 65 48 8B 04 25 58 00 00 00 B9 68 00 00 00 48 8B 04 D0 8B 04 01 39 05 1A 7F 46 01 0F 8F";
+        inline constexpr std::string_view GetCustomPaintKitIndex = "48 89 5C 24 08 57 48 83 EC 40 8B 15 ? ? ? ? 48 8B F9 65 48 8B 04 25 58 00 00 00 B9 68 00 00 00 48 8B 04 D0 8B 04 01 39 05 8A 7F 46 01 0F 8F";
         inline constexpr std::string_view GetDirectChallengeCode = "48 83 EC 28 F7 05 52 19 2B 01 FF FF FF 3F 75 05";
         inline constexpr std::string_view GetDirectChallengeCodeForClan = "48 81 EC A8 00 00 00 85 D2 75 0A 33 C0 48 81 C4";
 /*
@@ -207,17 +207,17 @@ namespace pattern {
         inline constexpr std::string_view GetItemSchema = "48 83 EC 28 48 8B 05 ? ? ? ? 48 85 C0 0F 85 ? ? ? ? 48 89 5C 24 30 B9 10 00 00 00 48 89 7C 24 20 E8 ? ? ? ? 33 FF 48 8B D8 48 85 C0";
         inline constexpr std::string_view GetItemViewByID = "48 89 54 24 10 53 48 83 EC 20 48 8B D9 48 85 D2";
         inline constexpr std::string_view GetItems = "48 85 C9 0F 84 ? ? ? ? 57 41 57 48 83 EC 38";
-        inline constexpr std::string_view GetLocalPawn = "48 83 EC 28 83 F9 FF 75 17 48 8B 0D ? ? ? ? 48 8D 54 24 30 48 8B 01 FF 90 10 03 00 00 8B 08 48 63 C1 4C 8D 05 8E 53";
-        inline constexpr std::string_view GetLocalPlayerController = "48 83 EC 28 83 F9 FF 75 17 48 8B 0D ? ? ? ? 48 8D 54 24 30 48 8B 01 FF 90 10 03 00 00 8B 08 48 63 C1 48 8D 0D CE 53";
+        inline constexpr std::string_view GetLocalPawn = "48 83 EC 28 83 F9 FF 75 17 48 8B 0D ? ? ? ? 48 8D 54 24 30 48 8B 01 FF 90 10 03 00 00 8B 08 48 63 C1 4C 8D 05 BE 54";
+        inline constexpr std::string_view GetLocalPlayerController = "48 83 EC 28 83 F9 FF 75 17 48 8B 0D ? ? ? ? 48 8D 54 24 30 48 8B 01 FF 90 10 03 00 00 8B 08 48 63 C1 48 8D 0D FE 54";
         inline constexpr std::string_view GetLootListByName = "48 89 5C 24 10 57 48 83 EC 20 48 8B D9 48 89 54";
         inline constexpr std::string_view GetMapBspName = "48 8B 0D ? ? ? ? 48 8B 01 48 FF A0 08 02 00";
         inline constexpr std::string_view GetMapName = "48 83 EC 28 48 8B 0D ? ? ? ? 48 8B 01 FF 90 08 02 00 00";
         inline constexpr std::string_view GetMatrixForView = "40 53 48 83 EC 60 0F 29 74 24 50 0F 57 DB F3 0F";
         inline constexpr std::string_view GetName = "8B 41 14 0F BA E0 1E 73 05 48 8D 41 18 C3 A9 FF";
-        inline constexpr std::string_view GetPersonaLevel = "48 83 EC 28 8B 05 ? ? ? ? C1 E8 ? ? ? ? 0B 8B 05 9D";
+        inline constexpr std::string_view GetPersonaLevel = "48 83 EC 28 8B 05 ? ? ? ? C1 E8 ? ? ? ? 0B 8B 05 1D";
         inline constexpr std::string_view GetPlayerController = "48 83 EC 38 8B 02 4C 8D 44 24 20 89 44 24 20 8B";
         inline constexpr std::string_view GetPlayerInterp = "40 53 48 83 EC 20 48 8B D9 48 8B 0D ? ? ? ? 48 83 C1 08";
-        inline constexpr std::string_view GetPlayerModel = "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48 8B CA FF 15 D8 C3 AF 00";
+        inline constexpr std::string_view GetPlayerModel = "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48 8B CA FF 15 C8 C3 AF 00";
         inline constexpr std::string_view GetPlayerPawn = "48 89 5C 24 10 48 89 74 24 18 48 89 7C 24 20 55 41 54 41 55 41 56 41 57 48 8D 6C 24 B0 48 81 EC 50 01 00 00 33 C0 C7 44";
         inline constexpr std::string_view GetPlayerTeamName = "48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 20 57 48 83 EC 30 48 8B CA 48";
 /*
@@ -225,17 +225,17 @@ namespace pattern {
 */
         inline constexpr std::string_view GetRemovedAimpunch = "40 53 48 83 EC 20 48 8B 89 98 15 00 00 48 8B DA";
         inline constexpr std::string_view GetRotatingOfficialMapGroupCurrentState = "48 81 EC 38 04 00 00 48 8B CA 48 8D 15 DF DB BF";
-        inline constexpr std::string_view GetServerName = "40 53 48 83 EC 20 48 8B D9 48 8B 0D ? ? ? ? 48 85 C9 74 35 E8 06 37";
+        inline constexpr std::string_view GetServerName = "40 53 48 83 EC 20 48 8B D9 48 8B 0D ? ? ? ? 48 85 C9 74 35 E8 F6 36";
         inline constexpr std::string_view GetString = "48 83 EC 38 8B 02 48 83 C1 58 89 44 24 20 8B 42 04 89 44 24 24 48 8B 42 08 48 8D 54 24 20 48 89 44 24 28 E8 ? ? ? ? 48 83 C4 38 C3 CC CC CC";
         inline constexpr std::string_view GetSurfaceData = "48 63 41 10 48 8B 0D ? ? ? ? 48 C1 E0 05 48";
         inline constexpr std::string_view GetTickBase = "8B 81 B8 06 00 00 C3 CC CC CC CC CC CC CC CC CC";
         inline constexpr std::string_view GetTournamentStageCount = "40 53 48 83 EC 20 8B 05 ? ? ? ? 33 DB C1 E8 ? ? ? ? 43 48 8B 05 ? ? ? ? 48 8D 0D ? ? ? ? 48 85 C0 48 0F 45 C8 8B 41 10 D1 E8 A8";
-        inline constexpr std::string_view GetTournamentStageNameByIndex = "40 53 48 83 EC 20 8B 05 ? ? ? ? C1 E8 ? ? ? ? A8 01 74 79 48 8B 05 8B FD 5B";
+        inline constexpr std::string_view GetTournamentStageNameByIndex = "40 53 48 83 EC 20 8B 05 ? ? ? ? C1 E8 ? ? ? ? A8 01 74 79 48 8B 05 0B FE 5B";
         inline constexpr std::string_view GetTournamentTeamCount = "40 53 48 83 EC 20 8B 05 ? ? ? ? 33 DB C1 E8 ? ? ? ? 43 48 8B 05 ? ? ? ? 48 8D 0D ? ? ? ? 48 85 C0 48 0F 45 C8 8B 41 10 D1 E8 A8";
         inline constexpr std::string_view GetTournamentTeamFlagByID = "48 89 5C 24 08 57 48 83 EC 20 8B 05 ? ? ? ? 33 DB C1 E8 ? ? ? ? A8 01 0F 84 ? ? ? ? 48 8B 05 ? ? ? ? 48 8D 0D ? ? ? ? 48 85";
         inline constexpr std::string_view GetTournamentTeamFlagByIndex = "40 53 48 83 EC 20 8B 05 ? ? ? ? C1 E8 ? ? ? ? A8 01 74 78 48 8B";
         inline constexpr std::string_view GetTournamentTeamNameByID = "48 89 5C 24 08 57 48 83 EC 20 8B 05 ? ? ? ? 33 DB C1 E8 ? ? ? ? A8 01 0F 84 ? ? ? ? 48 8B 05 ? ? ? ? 48 8D 0D ? ? ? ? 48 85";
-        inline constexpr std::string_view GetTournamentTeamNameByIndex = "40 53 48 83 EC 20 8B 05 ? ? ? ? C1 E8 ? ? ? ? A8 01 74 79 48 8B 05 2B FA 5B";
+        inline constexpr std::string_view GetTournamentTeamNameByIndex = "40 53 48 83 EC 20 8B 05 ? ? ? ? C1 E8 ? ? ? ? A8 01 74 79 48 8B 05 AB FA 5B";
         inline constexpr std::string_view GetTournamentTeamTagByID = "48 89 5C 24 08 57 48 83 EC 20 8B 05 ? ? ? ? 33 DB C1 E8 ? ? ? ? A8 01 74 76";
         inline constexpr std::string_view GetTournamentTeamTagByIndex = "40 53 48 83 EC 20 8B 05 ? ? ? ? C1 E8 ? ? ? ? A8 01 74 75 48 8B";
         inline constexpr std::string_view GetTransformsForHitboxList = "48 89 5C 24 20 55 56 57 41 54 41 55 48 81 EC D0";
@@ -249,50 +249,50 @@ namespace pattern {
         inline constexpr std::string_view GetWorldFovResolver = "40 53 48 83 EC 50 48 8B D9 E8 ? ? ? ? 48 85";
         inline constexpr std::string_view GetWorldGroupHandle = "40 55 48 8B EC 48 83 EC 60 85 D2 75 16 48 8B 0D";
         inline constexpr std::string_view GetWorldGroupId = "48 8B 41 30 48 85 C0 74 0D 48 8B 40 10 8B 48 38";
-        inline constexpr std::string_view GlobalLightUpdateState = "4C 8B DC 57 48 81 EC C0 00 00 00 48 8B 05 1E A1";
+        inline constexpr std::string_view GlobalLightUpdateState = "4C 8B DC 57 48 81 EC C0 00 00 00 48 8B 05 8E A1";
         inline constexpr std::string_view GlowObjectManager_GetInstance = "48 8B 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 8B 41 38 C3";
         inline constexpr std::string_view HandleEntityList = "8B 02 39 01 75 1D 48 8B 42 10 48 39 41 10 75 13";
         inline constexpr std::string_view HandleTeamIntro = "48 83 EC 28 45 0F B6 08 44 38 89 0C 0F 00 00 74";
-        inline constexpr std::string_view HasOngoingMatch = "0F B6 05 29 DF 5B 01 24 01 C3 CC CC CC CC CC CC";
+        inline constexpr std::string_view HasOngoingMatch = "0F B6 05 A9 DF 5B 01 24 01 C3 CC CC CC CC CC CC";
         inline constexpr std::string_view HudChatPrintf = "4C 89 44 24 18 4C 89 4C 24 20 53 B8 40 10 00 00";
         inline constexpr std::string_view HudChat_OnSayText2 = "48 89 5C 24 08 55 56 57 41 54 41 55 41 56 41 57 48 8D AC 24 70 F3 FF FF";
         inline constexpr std::string_view HudDeathNotice_ClearNotices = "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48 8B 71 60 33";
         inline constexpr std::string_view HudVoiceStatus_SetVoiceData = "48 89 5C 24 10 48 89 74 24 18 48 89 7C 24 20 55 41 56 41 57 48 8D AC 24 A0 F0 FF FF";
-        inline constexpr std::string_view InfoForResourceTypeCCompositeMaterial_TypeManager = "40 55 41 56 48 83 EC 68 48 8B EA 83 F9 06 0F 87 ? ? ? ? 48 63 C1 48 8D 15 22 34";
+        inline constexpr std::string_view InfoForResourceTypeCCompositeMaterial_TypeManager = "40 55 41 56 48 83 EC 68 48 8B EA 83 F9 06 0F 87 ? ? ? ? 48 63 C1 48 8D 15 12 34";
         inline constexpr std::string_view InitPlayerMovementTraceFilter = "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 0F B6 41 39 33 FF C7 41 34";
 /*
    also known as: TraceInitInfo
 */
-        inline constexpr std::string_view InitTraceInfo = "40 55 41 55 41 57 48 83 EC 30 4C 8B 3D FF AB FB";
+        inline constexpr std::string_view InitTraceInfo = "40 55 41 55 41 57 48 83 EC 30 4C 8B 3D 6F AC FB";
         inline constexpr std::string_view InsecureEmitter = "48 89 5C 24 20 56 48 83 EC 20 48 8B D9 48 89 6C 24 30 48 8B E9 48 8B 0D";
         inline constexpr std::string_view InventoryCategoryTree_AddItem = "48 89 5C 24 10 48 89 6C 24 20 48 89 4C 24 08 56";
-        inline constexpr std::string_view InventoryCategoryTree_RemoveItem = "48 89 6C 24 20 56 48 83 EC 20 48 8B 05 AF 41 DB";
+        inline constexpr std::string_view InventoryCategoryTree_RemoveItem = "48 89 6C 24 20 56 48 83 EC 20 48 8B 05 1F 42 DB";
         inline constexpr std::string_view InventoryUI_IsFilteredOut = "48 89 5C 24 08 55 56 57 41 54 41 55 41 56 41 57 48 8B EC 48 83 EC 50 65";
         inline constexpr std::string_view InventoryUI_RebuildDisplayList = "48 89 54 24 10 53 55 56 57 41 54 41 55 41 56 48 83 EC 30 49";
         inline constexpr std::string_view IsDemoOrHltv = "48 83 EC 28 48 8B 0D ? ? ? ? 48 8B 01 FF 90 50 01 00 00 84 C0 75 0D";
         inline constexpr std::string_view IsGlowing = "0F B6 41 51 C3 CC CC CC CC CC CC CC CC CC CC CC";
         inline constexpr std::string_view IsInventoryUnlocked = "48 89 5C 24 08 48 89 6C 24 18 48 89 74 24 20 57 48 83 EC 20 48 8B E9 48";
         inline constexpr std::string_view IsLatched = "0F B6 81 20 02 00 00 C3 CC CC CC CC CC CC CC CC";
-        inline constexpr std::string_view IsLocalPlayerWatchingOwnDemo = "48 89 5C 24 08 48 89 6C 24 18 48 89 74 24 20 57 48 83 EC 20 48 8B 0D D5";
+        inline constexpr std::string_view IsLocalPlayerWatchingOwnDemo = "48 89 5C 24 08 48 89 6C 24 18 48 89 74 24 20 57 48 83 EC 20 48 8B 0D 45";
         inline constexpr std::string_view IsPlayerMuted = "40 53 48 83 EC 20 48 8B 0D ? ? ? ? 48 8B DA 48 8B 01 FF 90 38 01 00";
         inline constexpr std::string_view IsRenderingEnabledForSlot = "40 53 48 83 EC 20 48 8B D9 83 FA FF 75 17 48 8B";
         inline constexpr std::string_view IsReportCategoryEnabled = "48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 48 8B CA 49";
         inline constexpr std::string_view KillFeedbackEmitter = "48 89 5C 24 08 48 89 74 24 18 48 89 7C 24 20 55 41 56 41 57 48 8B EC 48 81 EC 80 00 00 00 44 8B";
         inline constexpr std::string_view LevelInit = "40 55 56 41 56 48 8D 6C 24 90 48 81 EC 70 01 00";
         inline constexpr std::string_view ManageGlowSceneObject = "48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56 48 83 EC 60 48 8B F2 45 33 F6";
-        inline constexpr std::string_view MarkInterpLatchFlagsDirty = "40 53 56 57 48 83 EC 40 80 3D 4D A5 33 02 00 8B";
+        inline constexpr std::string_view MarkInterpLatchFlagsDirty = "40 53 56 57 48 83 EC 40 80 3D CD A5 33 02 00 8B";
         inline constexpr std::string_view MatchFoundHandler = "48 85 D2 0F 84 ? ? ? ? 48 8B C4 55 53 56 57 48 8D A8 98";
         inline constexpr std::string_view Matchmaking_BuildPingSample = "48 8B C4 55 53 56 57 41 54 41 55 41 56 41 57 48 8D A8 68 F7";
-        inline constexpr std::string_view Matchmaking_GetSearchTime = "40 53 48 83 EC 20 48 8B D9 FF 15 11 06 AF 00 2B";
+        inline constexpr std::string_view Matchmaking_GetSearchTime = "40 53 48 83 EC 20 48 8B D9 FF 15 01 06 AF 00 2B";
         inline constexpr std::string_view Matchmaking_StopSearch = "48 8B 41 10 48 8D 15 ? ? ? ? 48 83 C1 10 48";
         inline constexpr std::string_view ModernSubtickJumpCheck = "48 89 5C 24 08 48 89 6C 24 10 57 48 83 EC 30 48";
         inline constexpr std::string_view ModulationUpdate = "48 89 5C 24 08 57 48 83 EC 20 8B FA 48 8B D9 E8 ? ? ? ? 84 C0 0F 84";
         inline constexpr std::string_view MovementServices_CheckJumpButton = "40 55 53 56 57 41 56 41 57 48 8D 6C 24 D1 48 81 EC 88 00 00 00 8B 9A D4";
         inline constexpr std::string_view MovementServices_SetupMove = "80 21 FE 44 08 09 41 0F B6 C1 83 F0 01 44 89 81";
-        inline constexpr std::string_view NoClipOnChange = "8B 91 BC 06 00 00 83 FA FF 74 58 48 8B 0D FE CB";
+        inline constexpr std::string_view NoClipOnChange = "8B 91 BC 06 00 00 83 FA FF 74 58 48 8B 0D EE CB";
         inline constexpr std::string_view OnAddEntity = "48 89 74 24 10 57 48 83 EC 20 41 B9 FF 7F 00 00 41 8B C0 41 23 C1 48 8B F2 41 83 F8 FF 48 8B F9 44 0F 45 C8 41 81 F9 00 40 00 00 73 0D FF 81 20";
         inline constexpr std::string_view OnBodyGroupChoiceChanged = "48 89 5C 24 08 57 48 83 EC 20 49 63 D8 49 8B F9";
-        inline constexpr std::string_view OnGlowTypeChanged = "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48 8B 05 82 6E";
+        inline constexpr std::string_view OnGlowTypeChanged = "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48 8B 05 72 6E";
         inline constexpr std::string_view OnPostDataUpdate = "48 89 5C 24 08 48 89 74 24 18 55 57 41 56 48 8B EC 48 83 EC 50 45 8B F1";
         inline constexpr std::string_view OnRemoveEntity = "48 89 74 24 10 57 48 83 EC 20 41 B9 FF 7F 00 00 41 8B C0 41 23 C1 48 8B F2 41 83 F8 FF 48 8B F9 44 0F 45 C8 41 81 F9 00 40 00 00 73 08 FF 89 20";
         inline constexpr std::string_view OnSkeletonModelChanged = "49 8B 00 48 89 81 B8 00 00 00 C6 81 B0 00 00 00";
@@ -301,10 +301,10 @@ namespace pattern {
         inline constexpr std::string_view PanoramaEvent = "40 56 57 41 57 48 83 EC 40 48 8B 3D ? ? ? ?";
         inline constexpr std::string_view ParseSubtickDuration = "40 55 48 8D AC 24 70 FD FF FF 48 81 EC 90 03 00";
         inline constexpr std::string_view ParseSubtickFraction = "40 55 48 8D AC 24 40 FE FF FF 48 81 EC C0 02 00 00 F2 0F 10";
-        inline constexpr std::string_view ParticleCollection = "48 89 5C 24 08 57 48 83 EC 20 0F 28 05 FF 28 52";
+        inline constexpr std::string_view ParticleCollection = "48 89 5C 24 08 57 48 83 EC 20 0F 28 05 7F 29 52";
         inline constexpr std::string_view Particles_SetControlPoint = "48 83 EC 58 F3 41 0F 10 51 04 F3 41 0F 10 09 F3";
         inline constexpr std::string_view Particles_SetControlPointEntity = "41 54 41 55 41 57 48 81 EC 90 00 00 00 4D 8B F9";
-        inline constexpr std::string_view Particles_SetControlPointPosition = "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 50 F3 0F 10 1D 8D";
+        inline constexpr std::string_view Particles_SetControlPointPosition = "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 50 F3 0F 10 1D 7D";
         inline constexpr std::string_view Particles_SetControlPointTransform = "48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 40 48 8B F9 49";
         inline constexpr std::string_view PerformBatchedInvalidatePhysicsRecursive = "40 53 48 81 EC 90 00 00 00 84 C9 74 4D BB 01 00";
         inline constexpr std::string_view PhysicsRunThink_Ctrl = "48 89 5C 24 20 57 48 81 EC D0 06 00 00 48 8B 01";
@@ -312,13 +312,13 @@ namespace pattern {
         inline constexpr std::string_view PlayMusicSelection = "40 55 53 57 48 8D AC 24 F0 FE FF FF 48 81 EC 10";
         inline constexpr std::string_view PlayVSound_client = "48 89 5C 24 08 48 89 74 24 18 48 89 7C 24 20 55 48 8D 6C 24 A9 48 81 EC 90 00 00 00 33 FF 48 8B";
         inline constexpr std::string_view PostDataUpdate = "48 8B C4 4C 89 40 18 89 50 10 55 57 48 8D A8 68";
-        inline constexpr std::string_view PostProcessQuery = "48 89 5C 24 08 66 41 0F 6E C8 48 8D 1D 0F 66 F2";
+        inline constexpr std::string_view PostProcessQuery = "48 89 5C 24 08 66 41 0F 6E C8 48 8D 1D 1F 66 F2";
         inline constexpr std::string_view ProcessForceSubtickMoves = "40 55 53 48 8D AC 24 78 FF FF FF 48 81 EC 88 01 00 00 8B 15 ? ? ? ? 48 8B D9 65 48 8B 04 25 58 00 00 00 B9 68 00 00 00 48 8B 04 D0 8B 04 01";
         inline constexpr std::string_view ProcessImpacts = "48 8B C4 53 56 41 55 48 81 EC E0 00 00 00 44 0F";
         inline constexpr std::string_view ProcessInputEvent = "85 D2 0F 85 ? ? ? ? 48 8B C4 55 53 41 57 48";
         inline constexpr std::string_view ProcessMovement = "48 8B C4 53 56 48 81 EC 58 01 00 00 0F 29 78 A8";
         inline constexpr std::string_view ProcessSubTickInput = "89 54 24 10 48 89 4C 24 08 53 56 57 48 83 EC 70";
-        inline constexpr std::string_view QueueForceSubtickMove = "48 83 EC 28 8B 0D ? ? ? ? 65 48 8B 04 25 58 00 00 00 BA 68 00 00 00 48 8B 04 C8 8B 04 02 39 05 EB 59 AF 01 0F 8F 82";
+        inline constexpr std::string_view QueueForceSubtickMove = "48 83 EC 28 8B 0D ? ? ? ? 65 48 8B 04 25 58 00 00 00 BA 68 00 00 00 48 8B 04 C8 8B 04 02 39 05 DB 59 AF 01 0F 8F 82";
         inline constexpr std::string_view QueuePostDataUpdates = "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 40 80 B9 62 0C 00";
         inline constexpr std::string_view ReadFrameInput = "40 53 57 48 81 EC C8 00 00 00 80 B9 BD 0B 00 00";
         inline constexpr std::string_view RegenerateWeaponSkins = "48 83 EC 78 E8 ? ? ? ? 48 85 C0 0F 84 3A 01";
@@ -412,12 +412,12 @@ namespace pattern {
         inline constexpr std::string_view UpdateGlobalVars = "48 8B 0D ? ? ? ? 4C 8D 05 ? ? ? ? 48 85 D2 48 8D 05";
         inline constexpr std::string_view UpdateOnRemove = "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 40 48 8B D9 C6 05";
         inline constexpr std::string_view UpdatePlayerIdPanels = "48 89 4C 24 08 55 53 48 8D AC 24 E8 ? ? ? ?";
-        inline constexpr std::string_view UpdateSkybox = "48 89 5C 24 08 57 48 83 EC 30 48 8B F9 E8 CE EA";
+        inline constexpr std::string_view UpdateSkybox = "48 89 5C 24 08 57 48 83 EC 30 48 8B F9 E8 DE EA";
         inline constexpr std::string_view UpdateTurningInAccuracy = "40 56 48 83 EC 70 48 8B 05 ? ? ? ? 48 8B F1";
         inline constexpr std::string_view UseTool = "48 85 D2 0F 84 ? ? ? ? 53 41 57 48 83 EC 28";
         inline constexpr std::string_view UseToolWithIntArg = "48 85 D2 0F 84 ? ? ? ? 53 41 54 41 57 48 83";
         inline constexpr std::string_view ValidateDirectChallengeCode = "40 53 57 48 83 EC 48 49 8B F8 48 8B DA 48 85 D2";
-        inline constexpr std::string_view ViewModelHideZoomed = "40 55 53 56 57 48 8B EC 48 83 EC 58 48 8D 05 5D";
+        inline constexpr std::string_view ViewModelHideZoomed = "40 55 53 56 57 48 8B EC 48 83 EC 58 48 8D 05 6D";
         inline constexpr std::string_view WriteSubtickFromEntry = "48 89 5C 24 18 55 57 41 56 48 8D 6C 24 C9 48 81";
         inline constexpr std::string_view pCSGOInputInstance = "48 89 05 ? ? ? ? 0F 57 C0 0F 11 05";
         inline constexpr std::string_view pCSInventoryManager = "48 8B 05 ? ? ? ? 4C 8B 80";
@@ -609,7 +609,7 @@ namespace pattern {
     }
     namespace server {
         inline constexpr std::string_view AddEntityIOEvent = "48 89 5C 24 08 48 89 6C 24 18 48 89 74 24 20 57 41 54 41 55 41 56 41 57 48 83 EC 20 48 8B 6C 24";
-        inline constexpr std::string_view CBaseModelEntity_SetModel = "40 53 48 83 EC 20 48 8B D9 4C 8B C2 48 8B 0D 85";
+        inline constexpr std::string_view CBaseModelEntity_SetModel = "40 53 48 83 EC 20 48 8B D9 4C 8B C2 48 8B 0D 15";
 /*
    also known as: CGameRules_TerminateRound
 */
@@ -646,9 +646,9 @@ namespace pattern {
         inline constexpr std::string_view ItemServices_CanAcquire = "44 89 44 24 18 48 89 54 24 10 48 89 4C 24 08 55 53 56 57 41 55 41 56 41";
         inline constexpr std::string_view LegacyGameEventListener = "40 56 48 83 EC 60 48 63 42 58 48 8B F2 85 C0 74";
         inline constexpr std::string_view LoopDestroyAllSystems_s_GameSystems = "8B 05 ? ? ? ? 83 E8 ? ? ? ? 0F 88 AD 00";
-        inline constexpr std::string_view LoopPostInitAllSystems_pEventDispatcher = "48 39 1D 88 5E AA 01 74 4D 39 05 B8 5D AA 01 7E";
+        inline constexpr std::string_view LoopPostInitAllSystems_pEventDispatcher = "48 39 1D 08 5F AA 01 74 4D 39 05 38 5E AA 01 7E";
         inline constexpr std::string_view NetworkStateChanged = "4C 8B C2 48 8B D1 48 8B 09 48 85 C9 74 35 48 8B";
-        inline constexpr std::string_view PostThink = "40 57 48 81 EC 50 01 00 00 80 3D 55 6F EF 01 00";
+        inline constexpr std::string_view PostThink = "40 57 48 81 EC 50 01 00 00 80 3D D5 6F EF 01 00";
         inline constexpr std::string_view ProcessUsercmds = "48 8B C4 44 88 48 20 44 89 40 18 48 89 50 10 53";
         inline constexpr std::string_view RemovePlayerItem = "48 85 D2 0F 84 ? ? ? ? 48 89 5C 24 08 57 48 83 EC 30 48 8B DA 48 8B";
         inline constexpr std::string_view SetEntityName = "48 89 5C 24 10 57 48 83 EC 20 48 8B D9 4C 8B C2";
@@ -664,7 +664,7 @@ namespace pattern {
 /*
    also known as: CreateEntityByName
 */
-        inline constexpr std::string_view UTIL_CreateEntityByName = "48 83 EC 48 C6 44 24 30 00 4C 8B C1 48 8B 0D FD";
+        inline constexpr std::string_view UTIL_CreateEntityByName = "48 83 EC 48 C6 44 24 30 00 4C 8B C1 48 8B 0D 9D";
         inline constexpr std::string_view UTIL_Remove = "48 85 C9 74 0F 48 8B D1 48 8B 0D ? ? ? ? E9";
         inline constexpr std::string_view UTIL_SayText2Filter = "48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 20 55 41 56 41 57 48 8D 6C 24 D9 48 81 EC";
         inline constexpr std::string_view UTIL_SayTextFilter = "48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 55 41 56 41 57 48 8D 6C 24 B9 48 81 EC B0 00 00 00";

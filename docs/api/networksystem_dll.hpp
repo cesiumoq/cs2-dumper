@@ -1,15 +1,15 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 11:49 03/11/2026 (GMT)
-/*  Dumped In       : 2,7s
+/*  Dumped At       : 12:48 03/11/2026 (GMT)
+/*  Dumped In       : 4,9s
 */
 
 /*
    module:        networksystem.dll
    classes:       1
    enums:         0
-   generated_at:  2026-11-02T23:19:40.149674800+00:00
+   generated_at:  2026-11-03T12:42:04.450834200+00:00
    Use:
 */
 //   auto* pawn = reinterpret_cast<C_CSPlayerPawn*>(addr);

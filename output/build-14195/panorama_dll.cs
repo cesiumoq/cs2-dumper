@@ -1,13 +1,19 @@
-// Generated using https://github.com/a2x/cs2-dumper
+/*
+   Generated using https://github.com/a2x/cs2-dumper
+*/
 // 2026-11-03 12:42:01.636437600 UTC
 
 namespace CS2Dumper.Schemas {
-    // Module: panorama.dll
-    // Class count: 0
-    // Enum count: 2
+/*
+   Module: panorama.dll
+   Class count: 0
+   Enum count: 2
+*/
     public static class PanoramaDll {
-        // Alignment: 4
-        // Member count: 13
+/*
+   Alignment: 4
+   Member count: 13
+*/
         public enum ELayoutNodeType : uint {
             ROOT = 0x0,
             STYLES = 0x1,
@@ -23,8 +29,10 @@ namespace CS2Dumper.Schemas {
             REFERENCE_COMPILED = 0xB,
             REFERENCE_PASSTHROUGH = 0xC
         }
-        // Alignment: 4
-        // Member count: 17
+/*
+   Alignment: 4
+   Member count: 17
+*/
         public enum EStyleNodeType : uint {
             ROOT = 0x0,
             EXPRESSION = 0x1,

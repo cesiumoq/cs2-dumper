@@ -1,4 +1,4 @@
-// cinbuttonstatepb.h  -  CS2 build 14194  -  cs2-sdk.com
+// cinbuttonstatepb.h  -  CS2 build 14195  -  cs2-sdk.com
 // usercmd.proto CInButtonStatePB - the button masks as sent: buttonstate1 = held, buttonstate2 = changed, buttonstate3 = scroll.
 // Module: client.dll. Offsets drift between builds - regenerate after a CS2 update.
 #pragma once

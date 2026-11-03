@@ -5,17 +5,17 @@
       "name": "DispatchEffect",
       "old_pattern": "48 89 5C 24 ? 57 48 83 EC ? 48 8B F9 48 8B DA 48 8D 4C 24",
       "pattern": "48 89 5C 24 08 57 48 83 EC 40 48 8B F9 48 8B DA 48 8D 4C 24",
-      "to": "0x122E910"
+      "to": "0x122E920"
     },
     {
       "module": "client.dll",
       "name": "FrameStageNotify",
       "old_pattern": "48 89 5C 24 ? 48 89 6C 24 ? 57 48 83 EC ? 48 8B F9 33 ED",
       "pattern": "48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 40 48",
-      "to": "0xB6EE60"
+      "to": "0xB6EE70"
     }
   ],
-  "build_number": 14194,
+  "build_number": 14195,
   "checks": [
     {
       "detail": "561 of 578 entries resolve; 17 need re-anchoring",
@@ -106,14 +106,14 @@
           "name": "DispatchEffect",
           "old_pattern": "48 89 5C 24 ? 57 48 83 EC ? 48 8B F9 48 8B DA 48 8D 4C 24",
           "pattern": "48 89 5C 24 08 57 48 83 EC 40 48 8B F9 48 8B DA 48 8D 4C 24",
-          "rva": "0x122E910"
+          "rva": "0x122E920"
         },
         {
           "module": "client.dll",
           "name": "FrameStageNotify",
           "old_pattern": "48 89 5C 24 ? 48 89 6C 24 ? 57 48 83 EC ? 48 8B F9 33 ED",
           "pattern": "48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 40 48",
-          "rva": "0xB6EE60"
+          "rva": "0xB6EE70"
         }
       ],
       "name": "patterns_healed",
@@ -124,51 +124,51 @@
       "items": [
         {
           "global": "dwGameRules",
-          "global_rva": "0x2569378",
+          "global_rva": "0x25693F8",
           "module": "client.dll",
           "ok": true,
           "signature": "pGameRules",
-          "signature_rva": "0x2569378"
+          "signature_rva": "0x25693F8"
         },
         {
           "global": "dwSensitivity",
-          "global_rva": "0x2566BC8",
+          "global_rva": "0x2566C48",
           "module": "client.dll",
           "ok": true,
           "signature": "pSensitivity",
-          "signature_rva": "0x2566BC8"
+          "signature_rva": "0x2566C48"
         },
         {
           "global": "dwPrediction",
-          "global_rva": "0x25697D0",
+          "global_rva": "0x2569850",
           "module": "client.dll",
           "ok": true,
           "signature": "pPrediction",
-          "signature_rva": "0x25697D0"
+          "signature_rva": "0x2569850"
         },
         {
           "global": "dwGlowManager",
-          "global_rva": "0x25660A0",
+          "global_rva": "0x2566120",
           "module": "client.dll",
           "ok": true,
           "signature": "pGlowManager",
-          "signature_rva": "0x25660A0"
+          "signature_rva": "0x2566120"
         },
         {
           "global": "dwLocalPlayerController",
-          "global_rva": "0x25413F8",
+          "global_rva": "0x2541538",
           "module": "client.dll",
           "ok": true,
           "signature": "pLocalPlayerController",
-          "signature_rva": "0x25413F8"
+          "signature_rva": "0x2541538"
         },
         {
           "global": "dwCSGOInput",
-          "global_rva": "0x257F980",
+          "global_rva": "0x257FA10",
           "module": "client.dll",
           "ok": true,
           "signature": "pCSGOInputInstance",
-          "signature_rva": "0x257F980"
+          "signature_rva": "0x257FA10"
         },
         {
           "global": "dwBuildNumber",
@@ -221,7 +221,7 @@
       "status": "pass"
     },
     {
-      "detail": "0 function targets start after padding",
+      "detail": "454 function targets start after padding",
       "items": [],
       "name": "function_prologues",
       "status": "pass"
@@ -233,10 +233,10 @@
       "status": "pass"
     },
     {
-      "detail": "no client.dll protobuf tables read",
+      "detail": "62 fields agree with the hand-verified engine structs",
       "items": [],
       "name": "protobufs_vs_engine",
-      "status": "warn"
+      "status": "pass"
     },
     {
       "detail": "every field and global in the feature recipes resolves on this build",
@@ -299,18 +299,18 @@
       "status": "fail"
     },
     {
-      "detail": "only 5 weapons present in the session; dump in a match with every weapon spawned for full coverage",
+      "detail": "only 6 weapons present in the session; dump in a match with every weapon spawned for full coverage",
       "items": [],
       "name": "weapons_snapshot",
       "status": "warn"
     }
   ],
-  "client_version": null,
+  "client_version": "2000940",
   "dumper_version": "2.1.8",
-  "generated_at": "2026-11-03T00:19:38.745764400+01:00",
+  "generated_at": "2026-11-03T13:42:02.848705200+01:00",
   "note": "Written by cs2-sdk after every dump. `ok` is false when a check failed; warnings list what to look at. The auto-dump pipeline adds `update`, `auto_healed` and `known_issues`.",
   "ok": false,
-  "patch_version": null,
+  "patch_version": "1.41.9.5",
   "signatures": {
     "found": 561,
     "missing": [
@@ -388,7 +388,7 @@
   },
   "summary": {
     "fail": 1,
-    "pass": 5,
-    "warn": 6
+    "pass": 6,
+    "warn": 5
   }
 }

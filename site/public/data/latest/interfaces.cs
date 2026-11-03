@@ -1,14 +1,14 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 11:49 03/11/2026 (GMT)
-/*  Dumped In       : 2,7s
+/*  Dumped At       : 12:48 03/11/2026 (GMT)
+/*  Dumped In       : 4,9s
 */
 
 /*
    Generated using https://github.com/a2x/cs2-dumper
 */
-// 2026-11-02 23:19:37.100969900 UTC
+// 2026-11-03 12:42:01.636437600 UTC
 
 namespace CS2Dumper.Interfaces {
 /*
@@ -26,11 +26,11 @@ namespace CS2Dumper.Interfaces {
         public const nint ClientToolsInfo_001 = 0x2237730;
         public const nint EmptyWorldService001_Client = 0x221B160;
         public const nint GameClientExports001 = 0x22343D8;
-        public const nint LegacyGameUI001 = 0x2244180;
-        public const nint Source2Client002 = 0x25635A0;
-        public const nint Source2ClientConfig001 = 0x24C0150;
-        public const nint Source2ClientPrediction001 = 0x25697D0;
-        public const nint Source2ClientUI001 = 0x2242900;
+        public const nint LegacyGameUI001 = 0x2244190;
+        public const nint Source2Client002 = 0x2563620;
+        public const nint Source2ClientConfig001 = 0x24C0160;
+        public const nint Source2ClientPrediction001 = 0x2569850;
+        public const nint Source2ClientUI001 = 0x2242910;
     }
 /*
    Module: engine2.dll
@@ -170,7 +170,7 @@ namespace CS2Dumper.Interfaces {
    Module: particles.dll
 */
     public static class ParticlesDll {
-        public const nint ParticleSystemMgr003 = 0x65ADD0;
+        public const nint ParticleSystemMgr003 = 0x65ADE0;
     }
 /*
    Module: pulse_system.dll
@@ -217,15 +217,15 @@ namespace CS2Dumper.Interfaces {
    Module: server.dll
 */
     public static class ServerDll {
-        public const nint EmptyWorldService001_Server = 0x1E110C0;
-        public const nint EntitySubclassUtilsV001 = 0x1DC0C40;
-        public const nint NavGameTest001 = 0x1E58D38;
-        public const nint ServerToolsInfo_001 = 0x1E37C38;
-        public const nint Source2GameClients001 = 0x1E37160;
-        public const nint Source2GameDirector001 = 0x1FA1510;
-        public const nint Source2GameEntities001 = 0x1E373E0;
-        public const nint Source2Server001 = 0x1E37220;
-        public const nint Source2ServerConfig001 = 0x211CDE8;
+        public const nint EmptyWorldService001_Server = 0x1E11100;
+        public const nint EntitySubclassUtilsV001 = 0x1DC0C60;
+        public const nint NavGameTest001 = 0x1E58DB8;
+        public const nint ServerToolsInfo_001 = 0x1E37CB8;
+        public const nint Source2GameClients001 = 0x1E371E0;
+        public const nint Source2GameDirector001 = 0x1FA1590;
+        public const nint Source2GameEntities001 = 0x1E37460;
+        public const nint Source2Server001 = 0x1E372A0;
+        public const nint Source2ServerConfig001 = 0x211CE68;
         public const nint customnavsystem001 = 0x1DAE558;
     }
 /*

@@ -1,14 +1,14 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 11:49 03/11/2026 (GMT)
-/*  Dumped In       : 2,7s
+/*  Dumped At       : 12:48 03/11/2026 (GMT)
+/*  Dumped In       : 4,9s
 */
 
 /*
    Generated using https://github.com/a2x/cs2-dumper
 */
-// 2026-11-02 23:19:37.100969900 UTC
+// 2026-11-03 12:42:01.636437600 UTC
 
 namespace CS2Dumper {
 /*
@@ -22,14 +22,14 @@ namespace CS2Dumper {
         public const nint forward = 0x2238190;
         public const nint jump = 0x2238460;
         public const nint left = 0x22382B0;
-        public const nint lookatweapon = 0x257F8A0;
+        public const nint lookatweapon = 0x257F930;
         public const nint reload = 0x2237EC0;
         public const nint right = 0x2238340;
-        public const nint showscores = 0x257F780;
+        public const nint showscores = 0x257F810;
         public const nint sprint = 0x2237E30;
         public const nint turnleft = 0x2238070;
         public const nint turnright = 0x2238100;
         public const nint use = 0x22383D0;
-        public const nint zoom = 0x257F810;
+        public const nint zoom = 0x257F8A0;
     }
 }

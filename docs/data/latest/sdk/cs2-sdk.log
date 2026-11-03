@@ -1,2 +1,2 @@
-23:19:46 [WARN] DispatchEffect: pattern re-anchored via previous prologue: client.dll -> 0x122E910 (was 0x122E910); database needs the new pattern
-23:19:47 [WARN] FrameStageNotify: pattern re-anchored via previous prologue: client.dll -> 0xB6EE60 (was 0xB6EE60); database needs the new pattern
+12:42:09 [WARN] DispatchEffect: pattern re-anchored via previous prologue: client.dll -> 0x122E920 (was 0x122E910); database needs the new pattern
+12:42:11 [WARN] FrameStageNotify: pattern re-anchored via previous prologue: client.dll -> 0xB6EE70 (was 0xB6EE60); database needs the new pattern

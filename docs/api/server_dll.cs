@@ -1,14 +1,14 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 11:49 03/11/2026 (GMT)
-/*  Dumped In       : 2,7s
+/*  Dumped At       : 12:48 03/11/2026 (GMT)
+/*  Dumped In       : 4,9s
 */
 
 /*
    Generated using https://github.com/a2x/cs2-dumper
 */
-// 2026-11-02 23:19:37.100969900 UTC
+// 2026-11-03 12:42:01.636437600 UTC
 
 namespace CS2Dumper.Schemas {
 /*
@@ -10327,7 +10327,7 @@ namespace CS2Dumper.Schemas {
         }
 /*
    Parent: None
-   Field count: 190
+   Field count: 191
 */
         public static class CCSGameRules {
             public const nint m_bFreezePeriod = 0xD8; // bool
@@ -10431,10 +10431,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_numSpectatorsCountMax = 0xE04; // uint32
             public const nint m_numSpectatorsCountMaxTV = 0xE08; // uint32
             public const nint m_numSpectatorsCountMaxLnk = 0xE0C; // uint32
-            public const nint m_nCTsAliveAtFreezetimeEnd = 0xE18; // int32
-            public const nint m_nTerroristsAliveAtFreezetimeEnd = 0xE1C; // int32
-            public const nint m_bForceTeamChangeSilent = 0xE20; // bool
-            public const nint m_bLoadingRoundBackupData = 0xE21; // bool
+            public const nint m_bQueuedMatchmakingReportedRoundStatsPendingSend = 0xE18; // bool
+            public const nint m_nCTsAliveAtFreezetimeEnd = 0xE1C; // int32
+            public const nint m_nTerroristsAliveAtFreezetimeEnd = 0xE20; // int32
+            public const nint m_bForceTeamChangeSilent = 0xE24; // bool
+            public const nint m_bLoadingRoundBackupData = 0xE25; // bool
             public const nint m_nMatchInfoShowType = 0xE58; // int32
             public const nint m_flMatchInfoDecidedTime = 0xE5C; // float32
             public const nint mTeamDMLastWinningTeamNumber = 0xE78; // int32
