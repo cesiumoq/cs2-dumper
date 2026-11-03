@@ -1,8 +1,9 @@
 <p align="center">
-  <img src="docs/banner.svg" alt="CS2 Dumper build 14194" width="100%">
+  <img src="docs/banner.svg" alt="CS2 Dump build 14194" width="100%">
 </p>
 
 <p align="center">
+  <a href="https://cs2-dump.vercel.app/">cs2-dump.vercel.app</a><br>
   <sub>Last updated 03/11/2026 at 00:37</sub>
 </p>
 
