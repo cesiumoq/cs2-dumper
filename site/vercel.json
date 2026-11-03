@@ -1,47 +1,26 @@
-﻿{
-    "framework":  "vite",
-    "buildCommand":  "npm install --no-audit --no-fund \u0026\u0026 npm run build \u0026\u0026 rm -rf dist/data dist/api dist/build-* \u0026\u0026 cp -r ../docs/data dist/data \u0026\u0026 cp -r ../docs/api dist/api \u0026\u0026 for d in ../docs/data/builds/*; do cp -r \"$d\" \"dist/build-$(basename \"$d\")\"; done",
-    "outputDirectory":  "dist",
-    "headers":  [
-                    {
-                        "headers":  [
-                                        {
-                                            "key":  "Content-Type",
-                                            "value":  "text/plain; charset=utf-8"
-                                        }
-                                    ],
-                        "source":  "/api/version"
-                    },
-                    {
-                        "headers":  [
-                                        {
-                                            "key":  "Content-Type",
-                                            "value":  "text/plain; charset=utf-8"
-                                        }
-                                    ],
-                        "source":  "/api/version.txt"
-                    },
-                    {
-                        "source":  "/api/(.*)",
-                        "headers":  [
-                                        {
-                                            "key":  "Access-Control-Allow-Origin",
-                                            "value":  "*"
-                                        },
-                                        {
-                                            "key":  "Cache-Control",
-                                            "value":  "public, max-age=60"
-                                        }
-                                    ]
-                    },
-                    {
-                        "source":  "/build-(.*)",
-                        "headers":  [
-                                        {
-                                            "key":  "Access-Control-Allow-Origin",
-                                            "value":  "*"
-                                        }
-                                    ]
-                    }
-                ]
+{
+  "framework": "vite",
+  "buildCommand": "npm install --no-audit --no-fund && npm run build",
+  "outputDirectory": "dist",
+  "headers": [
+    {
+      "source": "/api/version",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Cache-Control", "value": "public, max-age=60" }
+      ]
+    },
+    {
+      "source": "/build-(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
 }
