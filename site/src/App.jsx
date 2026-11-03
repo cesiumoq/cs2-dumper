@@ -23,7 +23,7 @@ const SOURCES = {
   patterns: "api/patterns.json",
   offsets: "api/offsets_all.json",
   interfaces: "api/interfaces.json",
-  classes: "api/client_dll.json",
+  classes: "api/types.json",
   convars: "api/sdk/convars/convars.json",
   weapons: "api/sdk/weapons/weapons.json",
   events: "api/sdk/gameevents/gameevents.json",
@@ -66,9 +66,13 @@ function flattenInterfaces(data) {
 }
 
 function classesOf(data) {
-  const root = data?.["client.dll"] || data?.classes || {};
-  const classes = Array.isArray(root.classes) ? root.classes : [];
-  return classes.map((c) => ({ name: c.name, parent: c.parent || "", size: c.size ?? "" }));
+  const rows = [];
+  for (const [module, root] of Object.entries(data || {})) {
+    if (!root || typeof root !== "object") continue;
+    const classes = Array.isArray(root.classes) ? root.classes : [];
+    for (const c of classes) rows.push({ name: c.name, module, parent: c.parent || "", size: c.size ?? "" });
+  }
+  return rows;
 }
 
 function rowsFor(view, data) {
@@ -107,7 +111,7 @@ const COLUMNS = {
   patterns: [["name", "Name"], ["module", "Module"], ["rva", "RVA"], ["type", "Type"]],
   offsets: [["name", "Name"], ["module", "Module"], ["rva", "RVA"], ["kind", "Kind"]],
   interfaces: [["name", "Name"], ["module", "Module"], ["rva", "RVA"]],
-  classes: [["name", "Class"], ["parent", "Parent"], ["size", "Size"]],
+  classes: [["name", "Class"], ["module", "Module"], ["parent", "Parent"], ["size", "Size"]],
   convars: [["name", "Name"], ["value", "Value"], ["type", "Type"], ["flags", "Flags"]],
   weapons: [["name", "Weapon"], ["damage", "Damage"], ["hs", "HS ×"], ["armor", "Armor"], ["pen", "Pen"], ["range", "Range"], ["cycle", "Cycle"], ["price", "Price"], ["spread", "Spread"], ["bullets", "Bullets"]],
   events: [["name", "Event"], ["id", "ID"], ["fields", "Fields"]],
@@ -146,6 +150,8 @@ export default function App() {
   const [cache, setCache] = useState({});
   const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState("");
+  const [globalRows, setGlobalRows] = useState([]);
+  const [globalLoaded, setGlobalLoaded] = useState(false);
   const [favorites, setFavorites] = useState(() => {
     try { return JSON.parse(localStorage.getItem("cs2-favorites") || "[]"); }
     catch { return []; }
@@ -176,6 +182,36 @@ export default function App() {
       .finally(() => setLoading(false));
   }, [view, cache]);
 
+  useEffect(() => {
+    if (!query.trim() || globalLoaded) return;
+    setGlobalLoaded(true);
+    Promise.all([
+      fetch("./api/patterns.json").then((r) => r.json()),
+      fetch("./api/offsets_all.json").then((r) => r.json()),
+      fetch("./api/types.json").then((r) => r.json()),
+      fetch("./api/sdk/convars/convars.json").then((r) => r.json()),
+      fetch("./api/sdk/weapons/weapons.json").then((r) => r.json()),
+      fetch("./api/sdk/gameevents/gameevents.json").then((r) => r.json()),
+      fetch("./api/sdk/engine/engine_structs.json").then((r) => r.json()),
+      fetch("./api/sdk/verified_features.json").then((r) => r.json()).catch(() => ({ features: [] })),
+    ]).then(([patterns, offsets, types, convars, weapons, events, engine, features]) => {
+      const rows = [];
+      for (const p of patterns.patterns || []) rows.push({ view: "patterns", label: p.name, meta: `${p.module} · ${p.rva}` });
+      for (const [module, entries] of Object.entries(offsets.modules || {})) {
+        for (const entry of entries) rows.push({ view: "offsets", label: entry.name, meta: `${module} · ${entry.rva}` });
+      }
+      for (const [module, data] of Object.entries(types || {})) {
+        for (const c of data.classes || []) rows.push({ view: "classes", label: c.name, meta: module });
+      }
+      for (const c of convars.convars || []) rows.push({ view: "convars", label: c.name, meta: `${c.type || ""} = ${c.value ?? ""}` });
+      for (const w of weapons.weapons || []) rows.push({ view: "weapons", label: w.name, meta: `dmg ${w.damage} · $${w.price}` });
+      for (const e of events.events || []) rows.push({ view: "events", label: e.name, meta: `event ${e.id}` });
+      for (const s of engine.structs || []) rows.push({ view: "engine", label: s.name, meta: `${s.module} · ${(s.fields || []).length} fields` });
+      for (const f of features.features || []) rows.push({ view: "features", label: f.name, meta: f.category });
+      setGlobalRows(rows);
+    }).catch(() => {});
+  }, [query, globalLoaded]);
+
   const viewer = (file) => `./view.html?file=${file.split("/").map(encodeURIComponent).join("/")}`;
   const rows = useMemo(() => rowsFor(view, cache[view]), [view, cache]);
   const cols = COLUMNS[view] || [];
@@ -191,9 +227,11 @@ export default function App() {
   }, [q]);
 
   const rowHits = useMemo(() => {
-    if (!q || !rows.length) return [];
-    return rows.filter((r) => JSON.stringify(r).toLowerCase().includes(q)).slice(0, 10);
-  }, [q, rows]);
+    if (!q) return [];
+    return globalRows
+      .filter((r) => `${r.label} ${r.meta}`.toLowerCase().includes(q))
+      .slice(0, 12);
+  }, [q, globalRows]);
 
   const selectView = (next) => {
     setView(next);
@@ -232,9 +270,9 @@ export default function App() {
                   </button>
                 ))}
                 {rowHits.map((row, i) => (
-                  <button key={`row-${i}`} onClick={() => setQuery("")}>
-                    <span className="res-name"><Highlight text={row.name || row.classname || row.index} query={query} /></span>
-                    <span className="res-meta">{view} · <Highlight text={row.module || row.type || row.category || ""} query={query} /></span>
+                  <button key={`row-${i}`} onClick={() => { selectView(row.view); }}>
+                    <span className="res-name"><Highlight text={row.label} query={query} /></span>
+                    <span className="res-meta">{row.view} · <Highlight text={row.meta} query={query} /></span>
                   </button>
                 ))}
                 {!fileHits.length && !rowHits.length && <div className="empty-search">No results</div>}
@@ -485,7 +523,7 @@ function EntitiesView({ data, loading, query }) {
       </div>
       <div className="table-wrap">
         <table>
-          <thead><tr><th>Index</th><th>Class</th><th>Health</th><th>Team</th><th>Origin</th></tr></thead>
+          <thead><tr><th>Index</th><th>Class</th><th>Health</th><th>Team</th><th>Origin</th><th /></tr></thead>
           <tbody>
             {entities.slice(0, 500).map((e) => (
               <tr key={e.index}>
@@ -494,6 +532,7 @@ function EntitiesView({ data, loading, query }) {
                 <td>{e.health}{e.max_health ? `/${e.max_health}` : ""}</td>
                 <td>{team(e.team)}</td>
                 <td className="mono">{(e.origin || []).map((n) => Number(n.toFixed?.(1) ?? n)).join(", ")}</td>
+                <td><RowCopy row={e} /></td>
               </tr>
             ))}
           </tbody>
@@ -519,6 +558,22 @@ function CopyButton({ text, label = "Copy as C++" }) {
   );
 }
 
+function RowCopy({ row }) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <button
+      className="row-copy"
+      title="Copy row"
+      onClick={async () => {
+        try { await navigator.clipboard.writeText(JSON.stringify(row, null, 2)); setCopied(true); setTimeout(() => setCopied(false), 900); }
+        catch { setCopied(false); }
+      }}
+    >
+      {copied ? "✓" : "⧉"}
+    </button>
+  );
+}
+
 function FeatureTable({ title, cols, rows }) {
   if (!rows?.length) return null;
   return (
@@ -526,10 +581,10 @@ function FeatureTable({ title, cols, rows }) {
       <h4>{title}</h4>
       <div className="mini-table">
         <table>
-          <thead><tr>{cols.map(([, label]) => <th key={label}>{label}</th>)}</tr></thead>
+          <thead><tr>{cols.map(([, label]) => <th key={label}>{label}</th>)}<th /></tr></thead>
           <tbody>
             {rows.map((row, i) => (
-              <tr key={i}>{cols.map(([key]) => <td key={key} className={key === "name" || key === "offset" || key === "rva" ? "mono" : ""}>{String(row[key] ?? "")}</td>)}</tr>
+              <tr key={i}>{cols.map(([key]) => <td key={key} className={key === "name" || key === "offset" || key === "rva" ? "mono" : ""}>{String(row[key] ?? "")}</td>)}<td><RowCopy row={row} /></td></tr>
             ))}
           </tbody>
         </table>
@@ -641,12 +696,12 @@ function DataTable({ cols, rows }) {
   return (
     <div className="table-wrap">
       <table>
-        <thead><tr>{cols.map(([key, label]) => <th key={key}>{label}</th>)}</tr></thead>
+        <thead><tr>{cols.map(([key, label]) => <th key={key}>{label}</th>)}<th /></tr></thead>
         <tbody>
           {rows.slice(0, 500).map((row, i) => (
-            <tr key={i}>{cols.map(([key]) => <td key={key} className={key === "name" ? "mono" : ""}>{String(row[key] ?? "")}</td>)}</tr>
+            <tr key={i}>{cols.map(([key]) => <td key={key} className={key === "name" ? "mono" : ""}>{String(row[key] ?? "")}</td>)}<td><RowCopy row={row} /></td></tr>
           ))}
-          {!rows.length && <tr><td colSpan={cols.length} className="empty">No data.</td></tr>}
+          {!rows.length && <tr><td colSpan={cols.length + 1} className="empty">No data.</td></tr>}
         </tbody>
       </table>
       {rows.length > 500 && <div className="muted">Showing first 500 of {rows.length} rows.</div>}

@@ -185,6 +185,8 @@ body {
 .feature-actions { display: flex; gap: 6px; align-items: center; flex: 0 0 auto; }
 .copy-btn { border: 1px solid #3f3f46; background: #18181b; color: #d4d4d8; border-radius: 6px; padding: 6px 8px; font: 10.5px Consolas, monospace; cursor: pointer; }
 .copy-btn:hover { border-color: #71717a; }
+.row-copy { border: 1px solid #2a2a2e; background: transparent; color: #71717a; border-radius: 4px; padding: 2px 5px; font: 10px Consolas, monospace; cursor: pointer; }
+.row-copy:hover { color: var(--blue); border-color: #3f3f46; }
 .icon-btn { width: 29px; height: 29px; border: 1px solid #3f3f46; background: #18181b; color: #71717a; border-radius: 6px; cursor: pointer; }
 .icon-btn.active { color: #fbbf24; border-color: #854d0e; }
 .feature-summary { color: #d4d4d8; margin: 12px 0 10px; }
