@@ -1,6 +1,6 @@
 ﻿{
     "framework":  "vite",
-    "buildCommand":  "npm --prefix site install --no-audit --no-fund \u0026\u0026 npm --prefix site run build \u0026\u0026 rm -rf site/dist/data site/dist/api site/dist/vpk site/dist/build-* \u0026\u0026 cp -r docs/data site/dist/data \u0026\u0026 cp -r docs/api site/dist/api \u0026\u0026 cp -r assets site/dist/vpk \u0026\u0026 for d in docs/data/builds/*; do cp -r \"$d\" \"site/dist/build-$(basename \"$d\")\"; done",
+    "buildCommand":  "npm --prefix site install --no-audit --no-fund \u0026\u0026 npm --prefix site run build \u0026\u0026 rm -rf site/dist/data site/dist/api site/dist/vpk site/dist/build-* \u0026\u0026 cp -r docs/data site/dist/data \u0026\u0026 cp -r docs/api site/dist/api \u0026\u0026 for d in docs/data/builds/*; do cp -r \"$d\" \"site/dist/build-$(basename \"$d\")\"; done",
     "outputDirectory":  "site/dist",
     "headers":  [
                     {
