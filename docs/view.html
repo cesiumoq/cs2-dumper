@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Viewer</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: linear-gradient(180deg, #7bafbe 0%, #2d778c 100%) fixed;
+    color: #f0f9ff;
+    font: 14px/1.5 "Segoe UI", system-ui, sans-serif;
+    min-height: 100vh;
+  }
+  main { width: min(1100px, 100%); margin: 0 auto; padding: 26px 20px 60px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+  h1 { margin: 0; font: 600 18px/1.2 Consolas, monospace; overflow-wrap: anywhere; }
+  .actions { display: flex; gap: 8px; flex: 0 0 auto; }
+  a, button {
+    color: #06222c; background: #e5f6fb; border: 1px solid rgba(255,255,255,.45);
+    border-radius: 8px; padding: 7px 11px; text-decoration: none; font: 12px Consolas, monospace;
+  }
+  a:hover, button:hover { background: #fff; }
+  pre {
+    margin: 0; padding: 18px; border-radius: 12px; overflow: auto;
+    background: #071c26ee; border: 1px solid #ffffff33;
+    color: #d9f2f8; font: 12.5px/1.55 Consolas, monospace;
+    max-height: calc(100vh - 130px);
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1 id="title">loading…</h1>
+    <div class="actions">
+      <a id="raw" href="#" target="_blank" rel="noreferrer">raw</a>
+      <button type="button" onclick="history.back()">back</button>
+    </div>
+  </header>
+  <pre id="content">loading…</pre>
+</main>
+<script>
+  const params = new URLSearchParams(location.search);
+  const build = params.get("build") || "14194";
+  const file = params.get("file") || "offsets.hpp";
+  const url = `./build-${build}/${file}`;
+  const title = document.getElementById("title");
+  const raw = document.getElementById("raw");
+  const content = document.getElementById("content");
+  title.textContent = `build-${build}/${file}`;
+  raw.href = url;
+  fetch(url, { cache: "no-store" })
+    .then((r) => {
+      if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+      return r.text();
+    })
+    .then((text) => { content.textContent = text; })
+    .catch((e) => { content.textContent = `unable to load ${url}\n${e.message}`; });
+</script>
+</body>
+</html>

@@ -26,86 +26,120 @@ function Section({ title, children }) {
 
 export default function App() {
   const [build, setBuild] = useState("14194");
+  const [dumpSeconds, setDumpSeconds] = useState(null);
 
   useEffect(() => {
     fetch("./data/latest/build.json", { cache: "no-store" })
       .then((r) => r.json())
-      .then((data) => setBuild(String(data.build_number ?? "14194")))
+      .then((data) => {
+        setBuild(String(data.build_number ?? "14194"));
+        setDumpSeconds(data.dump_seconds ?? null);
+      })
       .catch(() => {});
   }, []);
 
-  const base = `./build-${build}`;
+  const base = `build-${build}`;
+  const viewer = (file) =>
+    `./view.html?build=${encodeURIComponent(build)}&file=${file.split("/").map(encodeURIComponent).join("/")}`;
 
   return (
     <main className="page">
       <header className="header">
-        <h1>CS2 Dumper</h1>
-        <div className="version">build-{build}</div>
+        <div>
+          <h1>CS2 Dumper</h1>
+          <div className="version">build-{build}</div>
+        </div>
+        {dumpSeconds != null && (
+          <div className="dumped">dumped in {Number(dumpSeconds).toFixed(1)}s</div>
+        )}
       </header>
 
-      <Section title="Build">
-        <FileLink href={`${base}/build.json`}>Build.json</FileLink>
-        <FileLink href={`${base}/hashes.json`}>Hashes.json</FileLink>
-        <FileLink href={`${base}/info.json`}>Info.json</FileLink>
-      </Section>
+      <div className="sections">
+        <Section title="Build">
+          <FileLink href={viewer("build.json")}>Build.json</FileLink>
+          <FileLink href={viewer("hashes.json")}>Hashes.json</FileLink>
+          <FileLink href={viewer("info.json")}>Info.json</FileLink>
+        </Section>
 
-      <Section title="Offsets">
-        <FileLink href={`${base}/offsets.hpp`}>Offsets.hpp</FileLink>
-        <FileLink href={`${base}/offsets.cs`}>Offsets.cs</FileLink>
-        <FileLink href={`${base}/offsets.json`}>Offsets.json</FileLink>
-        <FileLink href={`${base}/OffsetsHex.json`}>OffsetsHex.json</FileLink>
-        <FileLink href={`${base}/offsets.txt`}>Offsets.txt</FileLink>
-        <FileLink href={`${base}/offsets_all.json`}>OffsetsAll.json</FileLink>
-      </Section>
+        <Section title="Offsets">
+          <FileLink href={viewer("offsets.hpp")}>Offsets.hpp</FileLink>
+          <FileLink href={viewer("offsets.cs")}>Offsets.cs</FileLink>
+          <FileLink href={viewer("offsets.json")}>Offsets.json</FileLink>
+          <FileLink href={viewer("OffsetsHex.json")}>OffsetsHex.json</FileLink>
+          <FileLink href={viewer("offsets.txt")}>Offsets.txt</FileLink>
+          <FileLink href={viewer("offsets_all.json")}>OffsetsAll.json</FileLink>
+        </Section>
 
-      <Section title="Patterns">
-        <FileLink href={`${base}/patterns.json`}>Patterns.json</FileLink>
-        <FileLink href={`${base}/patterns.hpp`}>Patterns.hpp</FileLink>
-        <FileLink href={`${base}/recovered_patterns.json`}>RecoveredPatterns.json</FileLink>
-        <FileLink href={`${base}/scanner_patterns.txt`}>ScannerPatterns.txt</FileLink>
-        <FileLink href={`${base}/re_targets.json`}>ReverseTargets.json</FileLink>
-      </Section>
+        <Section title="Patterns">
+          <FileLink href={viewer("patterns.json")}>Patterns.json</FileLink>
+          <FileLink href={viewer("patterns.hpp")}>Patterns.hpp</FileLink>
+          <FileLink href={viewer("recovered_patterns.json")}>RecoveredPatterns.json</FileLink>
+          <FileLink href={viewer("scanner_patterns.txt")}>ScannerPatterns.txt</FileLink>
+        </Section>
 
-      <Section title="Classes">
-        <FileLink href={`${base}/client_dll.hpp`}>Client.hpp</FileLink>
-        <FileLink href={`${base}/client_dll.cs`}>Client.cs</FileLink>
-        <FileLink href={`${base}/client_dll.json`}>Client.json</FileLink>
-        <FileLink href={`${base}/server_dll.hpp`}>Server.hpp</FileLink>
-        <FileLink href={`${base}/types.json`}>Types.json</FileLink>
-      </Section>
+        <Section title="Classes">
+          <FileLink href={viewer("client_dll.hpp")}>Client.hpp</FileLink>
+          <FileLink href={viewer("client_dll.cs")}>Client.cs</FileLink>
+          <FileLink href={viewer("client_dll.json")}>Client.json</FileLink>
+          <FileLink href={viewer("server_dll.hpp")}>Server.hpp</FileLink>
+          <FileLink href={viewer("types.json")}>Types.json</FileLink>
+        </Section>
 
-      <Section title="Interfaces">
-        <FileLink href={`${base}/interfaces.hpp`}>Interfaces.hpp</FileLink>
-        <FileLink href={`${base}/interfaces.cs`}>Interfaces.cs</FileLink>
-        <FileLink href={`${base}/interfaces.json`}>Interfaces.json</FileLink>
-        <FileLink href={`${base}/sdk/interfaces/vtables.json`}>VTables.json</FileLink>
-      </Section>
+        <Section title="Interfaces">
+          <FileLink href={viewer("interfaces.hpp")}>Interfaces.hpp</FileLink>
+          <FileLink href={viewer("interfaces.cs")}>Interfaces.cs</FileLink>
+          <FileLink href={viewer("interfaces.json")}>Interfaces.json</FileLink>
+          <FileLink href={viewer("sdk/interfaces/vtables.json")}>VTables.json</FileLink>
+        </Section>
 
-      <Section title="ConVars">
-        <FileLink href={`${base}/sdk/convars/convars.json`}>ConVars.json</FileLink>
-        <FileLink href={`${base}/sdk/convars/convars.hpp`}>ConVars.hpp</FileLink>
-      </Section>
+        <Section title="ConVars">
+          <FileLink href={viewer("sdk/convars/convars.json")}>ConVars.json</FileLink>
+          <FileLink href={viewer("sdk/convars/convars.hpp")}>ConVars.hpp</FileLink>
+        </Section>
 
-      <Section title="Game Events">
-        <FileLink href={`${base}/sdk/gameevents/gameevents.json`}>GameEvents.json</FileLink>
-      </Section>
+        <Section title="Game Events">
+          <FileLink href={viewer("sdk/gameevents/gameevents.json")}>GameEvents.json</FileLink>
+        </Section>
 
-      <Section title="Entities">
-        <FileLink href={`${base}/sdk/entities/entities.json`}>Entities.json</FileLink>
-      </Section>
+        <Section title="Entities">
+          <FileLink href={viewer("sdk/entities/entities.json")}>Entities.json</FileLink>
+        </Section>
 
-      <Section title="Engine">
-        <FileLink href={`${base}/sdk/engine/engine_structs.json`}>EngineStructs.json</FileLink>
-      </Section>
+        <Section title="Engine">
+          <FileLink href={viewer("sdk/engine/engine_structs.json")}>EngineStructs.json</FileLink>
+        </Section>
 
-      <Section title="Features">
-        <FileLink href={`${base}/sdk/verified_features.json`}>Features.json</FileLink>
-      </Section>
+        <Section title="Features">
+          <FileLink href={viewer("sdk/verified_features.json")}>Features.json</FileLink>
+        </Section>
 
-      <Section title="SDK">
-        <FileLink href={`${base}/struct.hpp`}>Struct.hpp</FileLink>
-        <FileLink href={`${base}/sdk/cs2.hpp`}>CS2.hpp</FileLink>
-      </Section>
+        <Section title="SDK">
+          <FileLink href={viewer("struct.hpp")}>Struct.hpp</FileLink>
+          <FileLink href={viewer("sdk/cs2.hpp")}>CS2.hpp</FileLink>
+        </Section>
+      </div>
+
+      <section className="api">
+        <div className="api-head">
+          <h2>API</h2>
+          <span>GET · no auth</span>
+        </div>
+        <p>Every file is available directly under <code>/{base}/</code>.</p>
+        <div className="links">
+          <FileLink href={`./${base}/offsets.json`}>/offsets.json</FileLink>
+          <FileLink href={`./${base}/patterns.json`}>/patterns.json</FileLink>
+          <FileLink href={`./${base}/client_dll.hpp`}>/client_dll.hpp</FileLink>
+          <FileLink href="./data/index.json">/builds</FileLink>
+        </div>
+        <pre className="code">{`GET /${base}/offsets.json
+
+{
+  "client.dll": {
+    "dwEntityList": "0x...",
+    "dwLocalPlayerPawn": "0x..."
+  }
+}`}</pre>
+      </section>
     </main>
   );
 }

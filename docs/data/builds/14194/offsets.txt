@@ -1,4 +1,11 @@
-﻿client.dll.dwCSGOInput = 0x257F980
+/*                       jatos dumper
+/*                  discord.gg/thenwefuckin
+/*  Total Offsets   : 202
+/*  Dumped At       : 00:16 03/11/2026 (GMT)
+/*  Dumped In       : 2,0s
+*/
+
+client.dll.dwCSGOInput = 0x257F980
 client.dll.dwEntityList = 0x271EB28
 client.dll.dwGameEntitySystem = 0x271EB28
 client.dll.dwGameEntitySystem_highestEntityIndex = 0x2120
