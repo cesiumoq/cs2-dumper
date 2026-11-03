@@ -230,6 +230,8 @@ body {
 .badge-value { color: #e4e4e7; }
 .badge-sep { width: 1px; height: 14px; background: var(--line); }
 .badge-muted { color: #71717a; font-size: 10px; }
+.github-btn { width: 36px; height: 36px; display: grid; place-items: center; color: #a1a1aa; border: 1px solid var(--line); border-radius: 7px; background: #0e0e10; }
+.github-btn:hover { color: var(--text); border-color: #52525b; }
 
 .hero { padding-bottom: 30px; border-bottom: 1px solid var(--line); }
 .eyebrow { color: var(--blue); font: 11px/1 Consolas, monospace; letter-spacing: 1.5px; text-transform: uppercase; }
