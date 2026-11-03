@@ -1,4 +1,4 @@
-﻿<p align="center">
+<p align="center">
   <img src="docs/banner.svg" alt="CS2 Dump build 14194" width="100%">
 </p>
 
@@ -11,38 +11,41 @@
 
 ```text
 output/
-â”œâ”€ client_dll.json / .hpp / .cs / .rs / .zig
-â”œâ”€ engine2_dll.json / .hpp / .cs / .rs / .zig
-â”œâ”€ server_dll.json / .hpp / .cs / .rs / .zig
-â”œâ”€ ...
-â”œâ”€ offsets.json / .hpp / .cs / .rs / .zig
-â”œâ”€ offsets_all.json
-â”œâ”€ interfaces.json / .hpp
-â”œâ”€ buttons.json / .hpp
-â”œâ”€ info.json
-â”œâ”€ build.json
-â”œâ”€ hashes.json
-â”œâ”€ patterns.json / .hpp
-â”œâ”€ calibrated_patterns.json
-â”œâ”€ scanner_patterns.txt
-â”œâ”€ scanner_out.json
-â””â”€ sdk/
+  build-14194/
+    client_dll.json / .hpp / .cs / .rs / .zig
+    engine2_dll.json / .hpp / .cs / .rs / .zig
+    server_dll.json / .hpp / .cs / .rs / .zig
+    ...
+    offsets.json / .hpp / .cs / .rs / .zig
+    offsets_all.json
+    interfaces.json / .hpp
+    buttons.json / .hpp
+    info.json
+    build.json
+    hashes.json
+    patterns.json / .hpp
+    calibrated_patterns.json
+    scanner_patterns.txt
+    scanner_out.json
+    vpk/
+      manifest.json
+      overviews/
+      radar_raw/
+    sdk/
 ```
 
-The same data is mirrored to `cs2-dumper/output/` for publishing.
+The same files are mirrored to `cs2-dumper/output/build-14194/`.
 
 ## Repository layout
 
 ```text
 cs2-dumper/
-â”œâ”€ bin/              release binaries
-â”œâ”€ site/             React + Vite site
-â”œâ”€ docs/             built site and published data
-â”œâ”€ output/           current dump
-â””â”€ cs2-dumper/       publishing repository
+  bin/              release binaries
+  site/             React + Vite site
+  docs/             built site and published data
+  assets/           VPK assets (maps, workshop, icons, characters)
+  output/           current dump by build
+  cs2-dumper/       publishing repository
 ```
 
-<p align="center">
-  <sub>CS2 Dumper Â· build 14194</sub>
-</p>
-
+Only the three most recent builds are kept.
