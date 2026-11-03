@@ -1,4 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import * as THREE from "three";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 const FILE_ICON = "M56 20h96l56 56v140a20 20 0 0 1-20 20H56a20 20 0 0 1-20-20V40a20 20 0 0 1 20-20Zm92 24v40h40";
 
@@ -11,6 +14,7 @@ const NAV = [
   ["classes", "Classes", "3,300"],
   ["convars", "ConVars", "4,131"],
   ["weapons", "Weapons", "44"],
+  ["models", "3D Models"],
   ["events", "Game Events", "273"],
   ["entities", "Entities", "182"],
   ["engine", "Engine", "12"],
@@ -309,8 +313,9 @@ export default function App() {
         {view === "engine" && <EngineView data={cache.engine} loading={loading} query={query} />}
         {view === "entities" && <EntitiesView data={cache.entities} loading={loading} query={query} />}
         {view === "vpk" && <VpkView />}
+        {view === "models" && <ModelsView />}
 
-        {COLUMNS[view] && !["features", "engine", "entities"].includes(view) && (
+        {COLUMNS[view] && !["features", "engine", "entities", "models"].includes(view) && (
           <section className="panel table-panel">
             <div className="panel-head">
               <h2>{NAV.find(([id]) => id === view)?.[1]}</h2>
@@ -592,6 +597,153 @@ function VpkView() {
           ))}
         </div>
       )}
+    </section>
+  );
+}
+
+const MODELS = [
+  { id: "ak47", name: "AK-47", type: "rifle", file: "weapon_rif_ak47.glb" },
+  { id: "m4a4", name: "M4A4", type: "rifle", file: "weapon_rif_m4a4.glb" },
+  { id: "awp", name: "AWP", type: "sniper", file: "weapon_snip_awp.glb" },
+  { id: "deagle", name: "Desert Eagle", type: "pistol", file: "weapon_pist_deagle.glb" },
+  { id: "usp", name: "USP-S", type: "pistol", file: "weapon_pist_usp_silencer.glb" },
+  { id: "karambit", name: "Karambit", type: "knife", file: "weapon_knife_karambit.glb" },
+  { id: "ctm_fbi", name: "FBI Agent", type: "agent", file: "ctm_fbi.glb" },
+  { id: "tm_balkan", name: "Balkan Agent", type: "agent", file: "tm_balkan_variantf.glb" },
+];
+
+const MODEL_BASE = "https://raw.githubusercontent.com/cesiumoq/cs2-dumper/main/assets/models";
+
+function ModelsView() {
+  const [selected, setSelected] = useState(MODELS[0]);
+  const [tint, setTint] = useState("#ffffff");
+  const [status, setStatus] = useState("loading");
+  const mount = useRef(null);
+  const materials = useRef([]);
+  const sceneRef = useRef(null);
+
+  useEffect(() => {
+    const el = mount.current;
+    if (!el) return;
+    const width = el.clientWidth || 800;
+    const height = el.clientHeight || 520;
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(width, height);
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    el.appendChild(renderer.domElement);
+
+    const scene = new THREE.Scene();
+    sceneRef.current = scene;
+    const camera = new THREE.PerspectiveCamera(40, width / height, 0.01, 100);
+    camera.position.set(0, 0.8, 3.4);
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.08;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 1.4;
+    controls.minDistance = 0.6;
+    controls.maxDistance = 12;
+
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x111111, 2.4));
+    const key = new THREE.DirectionalLight(0xffffff, 3.2);
+    key.position.set(3, 5, 4);
+    scene.add(key);
+    const rim = new THREE.DirectionalLight(0x4f8cff, 1.4);
+    rim.position.set(-4, 1, -3);
+    scene.add(rim);
+
+    materials.current = [];
+    setStatus("loading");
+    const loader = new GLTFLoader();
+    loader.load(`${MODEL_BASE}/${selected.id}/${selected.file}`, (gltf) => {
+      const model = gltf.scene;
+      model.traverse((node) => {
+        if (node.isMesh) {
+          const list = Array.isArray(node.material) ? node.material : [node.material];
+          for (const mat of list) {
+            if (mat) materials.current.push(mat);
+          }
+        }
+      });
+      const box = new THREE.Box3().setFromObject(model);
+      const size = box.getSize(new THREE.Vector3());
+      const center = box.getCenter(new THREE.Vector3());
+      model.position.sub(center);
+      const max = Math.max(size.x, size.y, size.z) || 1;
+      const scale = 2.2 / max;
+      model.scale.setScalar(scale);
+      model.position.y += (size.y * scale) / 2 - 0.7;
+      scene.add(model);
+      camera.position.set(1.8, 1.1, 2.6);
+      camera.lookAt(0, 0, 0);
+      controls.target.set(0, 0, 0);
+      setStatus("ready");
+    }, undefined, () => setStatus("error"));
+
+    let raf = 0;
+    const animate = () => {
+      raf = requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    };
+    animate();
+
+    const resize = () => {
+      const w = el.clientWidth || width;
+      const h = el.clientHeight || height;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
+    };
+    window.addEventListener("resize", resize);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", resize);
+      controls.dispose();
+      renderer.dispose();
+      el.removeChild(renderer.domElement);
+    };
+  }, [selected]);
+
+  useEffect(() => {
+    for (const mat of materials.current) {
+      if (mat.color) mat.color.set(tint);
+    }
+  }, [tint, status]);
+
+  return (
+    <section className="panel models-page">
+      <div className="panel-head">
+        <h2>3D Models</h2>
+        <span className="muted">{MODELS.length} exported · glTF 2.0</span>
+      </div>
+      <p className="muted">Weapon and agent meshes exported from the game VPK, with materials and textures.</p>
+      <div className="models-layout">
+        <div className="model-list">
+          {MODELS.map((model) => (
+            <button key={model.id} className={`model-item ${selected.id === model.id ? "active" : ""}`} onClick={() => setSelected(model)}>
+              <span>{model.name}</span>
+              <em>{model.type}</em>
+            </button>
+          ))}
+        </div>
+        <div className="model-stage">
+          <div className="model-canvas" ref={mount}>
+            {status === "loading" && <span className="model-status">loading model...</span>}
+            {status === "error" && <span className="model-status">could not load model</span>}
+          </div>
+          <div className="model-controls">
+            <span className="chip">{selected.type}</span>
+            <div className="skin-picker">
+              {["#ffffff", "#ef4444", "#3b82f6", "#eab308", "#22c55e", "#a855f7"].map((color) => (
+                <button key={color} className={tint === color ? "active" : ""} style={{ background: color }} onClick={() => setTint(color)} title={color} />
+              ))}
+            </div>
+            <span className="muted">drag to orbit · scroll to zoom</span>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
