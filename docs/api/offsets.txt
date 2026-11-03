@@ -1,8 +1,7 @@
-/*                       jatos dumper
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 00:36 03/11/2026 (GMT)
+/*  Dumped At       : 00:53 03/11/2026 (GMT)
 /*  Dumped In       : 2,7s
 */
 

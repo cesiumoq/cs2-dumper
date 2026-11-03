@@ -1,59 +1,59 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const FILE_ICON = "M56 20h96l56 56v140a20 20 0 0 1-20 20H56a20 20 0 0 1-20-20V40a20 20 0 0 1 20-20Zm92 24v40h40";
 
 const GROUPS = [
   ["Build", [
-    ["Build.json", "api/build.json"],
-    ["Hashes.json", "api/hashes.json"],
-    ["Info.json", "api/info.json"],
+    ["Build.json", "api/build.json", "build, validation and dump time"],
+    ["Hashes.json", "api/hashes.json", "client, engine2, server and 16 more DLL hashes"],
+    ["Info.json", "api/info.json", "build number and generation timestamp"],
   ]],
   ["Offsets", [
-    ["Offsets.hpp", "api/offsets.hpp"],
-    ["Offsets.cs", "api/offsets.cs"],
-    ["Offsets.json", "api/offsets.json"],
-    ["OffsetsHex.json", "api/OffsetsHex.json"],
-    ["Offsets.txt", "api/offsets.txt"],
-    ["OffsetsAll.json", "api/offsets_all.json"],
+    ["Offsets.hpp", "api/offsets.hpp", "202 offsets · 5 modules"],
+    ["Offsets.cs", "api/offsets.cs", "202 offsets · C#"],
+    ["Offsets.json", "api/offsets.json", "202 offsets · JSON"],
+    ["OffsetsHex.json", "api/OffsetsHex.json", "202 offsets · hex values"],
+    ["Offsets.txt", "api/offsets.txt", "202 offsets · plain text"],
+    ["OffsetsAll.json", "api/offsets_all.json", "202 globals, signatures and interfaces"],
   ]],
   ["Patterns", [
-    ["Patterns.json", "api/patterns.json"],
-    ["Patterns.hpp", "api/patterns.hpp"],
-    ["Recovered.json", "api/recovered_patterns.json"],
-    ["Scanner.txt", "api/scanner_patterns.txt"],
+    ["Patterns.json", "api/patterns.json", "578 signatures · 577 resolved"],
+    ["Patterns.hpp", "api/patterns.hpp", "IDA-style byte patterns"],
+    ["RecoveredPatterns.json", "api/recovered_patterns.json", "16 recovered signatures"],
+    ["ScannerPatterns.txt", "api/scanner_patterns.txt", "in-process scanner patterns"],
   ]],
   ["Classes", [
-    ["Client.hpp", "api/client_dll.hpp"],
-    ["Client.cs", "api/client_dll.cs"],
-    ["Client.json", "api/client_dll.json"],
-    ["Server.hpp", "api/server_dll.hpp"],
-    ["Types.json", "api/types.json"],
+    ["Client.hpp", "api/client_dll.hpp", "client SDK header"],
+    ["Client.cs", "api/client_dll.cs", "client SDK · C#"],
+    ["Client.json", "api/client_dll.json", "client SDK · JSON"],
+    ["Server.hpp", "api/server_dll.hpp", "server SDK header"],
+    ["Types.json", "api/types.json", "3,300 classes · schema types"],
   ]],
   ["Interfaces", [
-    ["Interfaces.hpp", "api/interfaces.hpp"],
-    ["Interfaces.cs", "api/interfaces.cs"],
-    ["Interfaces.json", "api/interfaces.json"],
-    ["VTables.json", "api/sdk/interfaces/vtables.json"],
+    ["Interfaces.hpp", "api/interfaces.hpp", "111 interfaces"],
+    ["Interfaces.cs", "api/interfaces.cs", "111 interfaces · C#"],
+    ["Interfaces.json", "api/interfaces.json", "111 interfaces · JSON"],
+    ["VTables.json", "api/sdk/interfaces/vtables.json", "31 modules · vtable layouts"],
   ]],
   ["ConVars", [
-    ["ConVars.json", "api/sdk/convars/convars.json"],
-    ["ConVars.hpp", "api/sdk/convars/convars.hpp"],
+    ["ConVars.json", "api/sdk/convars/convars.json", "4,131 ConVars · 1,186 commands"],
+    ["ConVars.hpp", "api/sdk/convars/convars.hpp", "ConVar catalogue header"],
   ]],
   ["Game Events", [
-    ["GameEvents.json", "api/sdk/gameevents/gameevents.json"],
+    ["GameEvents.json", "api/sdk/gameevents/gameevents.json", "273 events"],
   ]],
   ["Entities", [
-    ["Entities.json", "api/sdk/entities/entities.json"],
+    ["Entities.json", "api/sdk/entities/entities.json", "182 live entities"],
   ]],
   ["Engine", [
-    ["EngineStructs.json", "api/sdk/engine/engine_structs.json"],
+    ["EngineStructs.json", "api/sdk/engine/engine_structs.json", "12 engine structs"],
   ]],
   ["Features", [
-    ["Features.json", "api/sdk/verified_features.json"],
+    ["Features.json", "api/sdk/verified_features.json", "6 feature recipes"],
   ]],
   ["SDK", [
-    ["Struct.hpp", "api/struct.hpp"],
-    ["CS2.hpp", "api/sdk/cs2.hpp"],
+    ["Struct.hpp", "api/struct.hpp", "single-include structs"],
+    ["CS2.hpp", "api/sdk/cs2.hpp", "SDK amalgamation"],
   ]],
 ];
 
@@ -74,19 +74,36 @@ function Icon() {
   );
 }
 
-function FileCard({ label, file, viewer }) {
+function FileCard({ label, file, desc, viewer }) {
   return (
     <a className="file-card" href={viewer(file)} target="_blank" rel="noreferrer">
       <span className="file-icon"><Icon /></span>
-      <span>{label}</span>
+      <span className="file-body">
+        <span>{label}</span>
+        {desc && <small>{desc}</small>}
+      </span>
     </a>
   );
+}
+
+function formatDate(value) {
+  if (!value) return "unknown";
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return value;
+  return d.toLocaleString("en-GB", {
+    day: "2-digit", month: "short", year: "numeric",
+    hour: "2-digit", minute: "2-digit",
+  });
 }
 
 export default function App() {
   const [build, setBuild] = useState("14194");
   const [seconds, setSeconds] = useState(null);
+  const [generated, setGenerated] = useState("");
   const [builds, setBuilds] = useState([]);
+  const [query, setQuery] = useState("");
+  const [patterns, setPatterns] = useState([]);
+  const [patternsLoaded, setPatternsLoaded] = useState(false);
 
   useEffect(() => {
     fetch("./data/latest/build.json", { cache: "no-store" })
@@ -94,6 +111,7 @@ export default function App() {
       .then((data) => {
         setBuild(String(data.build_number ?? "14194"));
         setSeconds(data.dump_seconds ?? null);
+        setGenerated(data.generated_at ?? "");
       })
       .catch(() => {});
     fetch("./data/index.json", { cache: "no-store" })
@@ -102,9 +120,34 @@ export default function App() {
       .catch(() => {});
   }, []);
 
+  useEffect(() => {
+    if (!query.trim() || patternsLoaded) return;
+    setPatternsLoaded(true);
+    fetch("./api/patterns.json", { cache: "no-store" })
+      .then((r) => r.json())
+      .then((data) => setPatterns(Array.isArray(data.patterns) ? data.patterns : []))
+      .catch(() => {});
+  }, [query, patternsLoaded]);
+
   const viewer = (file) =>
     `./view.html?file=${file.split("/").map(encodeURIComponent).join("/")}`;
   const pinned = `build-${build}`;
+  const q = query.trim().toLowerCase();
+
+  const groups = useMemo(
+    () => GROUPS.map(([title, files]) => [
+      title,
+      files.filter(([label, file, desc]) => !q || `${label} ${file} ${desc}`.toLowerCase().includes(q)),
+    ]).filter(([, files]) => files.length),
+    [q],
+  );
+
+  const patternHits = useMemo(
+    () => q
+      ? patterns.filter((p) => `${p.name} ${p.module} ${p.rva}`.toLowerCase().includes(q)).slice(0, 40)
+      : [],
+    [q, patterns],
+  );
 
   return (
     <div className="shell">
@@ -121,6 +164,27 @@ export default function App() {
       </aside>
 
       <main className="content">
+        <div className="topbar">
+          <div className="search-wrap">
+            <span className="search-icon">⌕</span>
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search dump… patterns, offsets, classes"
+              aria-label="Search dump"
+            />
+          </div>
+          <div className="build-badge" title={`Dump generated ${formatDate(generated)}`}>
+            <span className="dot" />
+            <span className="badge-label">build</span>
+            <span className="badge-value">{build}</span>
+            <span className="badge-sep" />
+            <span className="badge-label">dumped</span>
+            <span className="badge-value">{formatDate(generated)}</span>
+            {seconds != null && <span className="badge-muted">({Number(seconds).toFixed(1)}s)</span>}
+          </div>
+        </div>
+
         <section id="home" className="hero">
           <div className="eyebrow">Counter-Strike 2</div>
           <h1>Offset dumps, without the noise.</h1>
@@ -128,24 +192,43 @@ export default function App() {
             Latest CS2 offsets, patterns, interfaces, schemas and SDK files.
             One static API, no auth, no build id required.
           </p>
-          <div className="meta">
-            <span className="pill">build-{build}</span>
-            {seconds != null && <span className="muted">dumped in {Number(seconds).toFixed(1)}s</span>}
-            <a href="#docs">API documentation</a>
-          </div>
         </section>
+
+        {q && (
+          <section className="panel search-results">
+            <div className="panel-head">
+              <h2>Search results</h2>
+              <span className="muted">{groups.reduce((n, [, files]) => n + files.length, 0)} files</span>
+            </div>
+            {patternHits.length > 0 && (
+              <>
+                <h3>Patterns</h3>
+                <div className="search-list">
+                  {patternHits.map((p) => (
+                    <div key={`${p.module}-${p.name}`}>
+                      <code>{p.name}</code>
+                      <span>{p.module}</span>
+                      <span className="muted">{p.rva}</span>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+            {patternHits.length === 0 && <p className="muted">No pattern matches yet.</p>}
+          </section>
+        )}
 
         <section id="latest" className="panel">
           <div className="panel-head">
             <h2>Latest</h2>
             <code>/api/</code>
           </div>
-          {GROUPS.map(([title, files]) => (
+          {groups.map(([title, files]) => (
             <div className="group" key={title}>
               <h3>{title}</h3>
               <div className="file-grid">
-                {files.map(([label, file]) => (
-                  <FileCard key={file} label={label} file={file} viewer={viewer} />
+                {files.map(([label, file, desc]) => (
+                  <FileCard key={file} label={label} file={file} desc={desc} viewer={viewer} />
                 ))}
               </div>
             </div>
@@ -198,6 +281,14 @@ if (live != cached) {
     WriteFile("offsets.json", json);
     WriteFile("offsets.version", live);
 }`}</pre>
+
+          <h3>Find a pattern in IDA</h3>
+          <ol className="steps">
+            <li>Open the module, e.g. <code>client.dll</code>, in IDA and wait for auto-analysis.</li>
+            <li>Press <kbd>Alt</kbd>+<kbd>B</kbd> and paste a pattern from <code>/api/patterns.json</code>.</li>
+            <li>Go to the match and confirm the RVA from the JSON.</li>
+            <li>Use <kbd>X</kbd> to inspect cross-references, then rename the function.</li>
+          </ol>
         </section>
 
         <section id="archive" className="panel">

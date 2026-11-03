@@ -1,12 +1,13 @@
-/*                       jatos dumper
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 00:36 03/11/2026 (GMT)
+/*  Dumped At       : 00:53 03/11/2026 (GMT)
 /*  Dumped In       : 2,7s
 */
 
-// Generated using https://github.com/a2x/cs2-dumper
+/*
+   Generated using https://github.com/a2x/cs2-dumper
+*/
 // 2026-11-02 23:19:37.100969900 UTC
 
 #pragma once
@@ -15,7 +16,9 @@
 #include <cstdint>
 
 namespace cs2_dumper {
-    // Module: client.dll
+/*
+   Module: client.dll
+*/
     namespace buttons {
         constexpr std::ptrdiff_t attack = 0x2237F50;
         constexpr std::ptrdiff_t attack2 = 0x2237FE0;

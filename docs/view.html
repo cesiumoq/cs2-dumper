@@ -37,6 +37,7 @@
     <h1 id="title">loading…</h1>
     <div class="actions">
       <a id="raw" href="#" target="_blank" rel="noreferrer">raw</a>
+      <button type="button" id="copy">copy</button>
       <button type="button" onclick="history.back()">back</button>
     </div>
   </header>
@@ -50,14 +51,27 @@
   const title = document.getElementById("title");
   const raw = document.getElementById("raw");
   const content = document.getElementById("content");
-  title.textContent = `build-${build}/${file}`;
+  const copy = document.getElementById("copy");
+  let current = "";
+  title.textContent = (file.startsWith("api/") || file.startsWith("build-"))
+    ? file
+    : `build-${build}/${file}`;
   raw.href = url;
+  copy.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(current);
+      copy.textContent = "copied";
+      setTimeout(() => { copy.textContent = "copy"; }, 1200);
+    } catch {
+      copy.textContent = "copy failed";
+    }
+  });
   fetch(url, { cache: "no-store" })
     .then((r) => {
       if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
       return r.text();
     })
-    .then((text) => { content.textContent = text; })
+    .then((text) => { current = text; content.textContent = text; })
     .catch((e) => { content.textContent = `unable to load ${url}\n${e.message}`; });
 </script>
 </body>
