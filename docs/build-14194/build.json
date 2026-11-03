@@ -1,0 +1,15 @@
+{
+  "build_number": 14194,
+  "dump_seconds": 2.0,
+  "generated_at": "2026-11-03T01:16:17",
+  "patch_version": "1.41.9.4",
+  "valid": true,
+  "publish_ready": true,
+  "reason": "1 signature allowed as unresolved",
+  "signatures": {"total": 578, "found": 577, "recovered": 16, "missing": [{"name": "GameSystem_Think_CheckSteamBan", "module": "server.dll"}]},
+  "recovered_patterns": "recovered_patterns.json",
+  "offsets": {"count": 202},
+  "modules": {
+
+  }
+}

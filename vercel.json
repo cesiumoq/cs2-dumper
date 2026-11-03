@@ -1,5 +1,20 @@
 {
   "framework": "vite",
-  "buildCommand": "npm --prefix site install --no-audit --no-fund && npm --prefix site run build && rm -rf site/dist/data site/dist/build-* && cp -r docs/data site/dist/data && for d in docs/data/builds/*; do cp -r \"$d\" \"site/dist/build-$(basename \"$d\")\"; done",
-  "outputDirectory": "site/dist"
+  "buildCommand": "npm --prefix site install --no-audit --no-fund && npm --prefix site run build && rm -rf site/dist/data site/dist/api site/dist/build-* && cp -r docs/data site/dist/data && cp -r docs/api site/dist/api && for d in docs/data/builds/*; do cp -r \"$d\" \"site/dist/build-$(basename \"$d\")\"; done",
+  "outputDirectory": "site/dist",
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Cache-Control", "value": "public, max-age=60" }
+      ]
+    },
+    {
+      "source": "/build-(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
 }

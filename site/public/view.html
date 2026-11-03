@@ -9,8 +9,8 @@
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: linear-gradient(180deg, #7bafbe 0%, #2d778c 100%) fixed;
-    color: #f0f9ff;
+    background: #09090b;
+    color: #fafafa;
     font: 14px/1.5 "Segoe UI", system-ui, sans-serif;
     min-height: 100vh;
   }
@@ -46,7 +46,7 @@
   const params = new URLSearchParams(location.search);
   const build = params.get("build") || "14194";
   const file = params.get("file") || "offsets.hpp";
-  const url = `./build-${build}/${file}`;
+  const url = file.startsWith("api/") ? `./${file}` : `./build-${build}/${file}`;
   const title = document.getElementById("title");
   const raw = document.getElementById("raw");
   const content = document.getElementById("content");

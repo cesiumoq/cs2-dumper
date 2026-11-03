@@ -2,136 +2,125 @@ import { useEffect, useState } from "react";
 
 const FILE_ICON = "M56 20h96l56 56v140a20 20 0 0 1-20 20H56a20 20 0 0 1-20-20V40a20 20 0 0 1 20-20Zm92 24v40h40";
 
-function FileLink({ href, children }) {
+const LATEST = [
+  ["Offsets.hpp", "api/offsets.hpp"],
+  ["Offsets.cs", "api/offsets.cs"],
+  ["Offsets.json", "api/offsets.json"],
+  ["Patterns.json", "api/patterns.json"],
+  ["Client.hpp", "api/client_dll.hpp"],
+  ["Build.json", "api/build.json"],
+];
+
+const API_ROWS = [
+  ["GET /api/offsets.hpp", "latest C++ offsets"],
+  ["GET /api/offsets.json", "latest JSON offsets"],
+  ["GET /api/patterns.json", "latest patterns"],
+  ["GET /api/client_dll.hpp", "latest client SDK"],
+  ["GET /api/build.json", "current build metadata"],
+  ["GET /api/version", "current build number"],
+];
+
+function Icon() {
   return (
-    <a className="link-button" href={href} target="_blank" rel="noreferrer">
-      <span className="link-icon" aria-hidden="true">
-        <svg viewBox="0 0 256 256" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round">
-          <path d={FILE_ICON} />
-        </svg>
-      </span>
-      <span className="link-text">{children}</span>
-    </a>
+    <svg viewBox="0 0 256 256" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round">
+      <path d={FILE_ICON} />
+    </svg>
   );
 }
 
-function Section({ title, children }) {
+function FileCard({ label, file, viewer }) {
   return (
-    <section className="section">
-      <h2>{title}</h2>
-      <div className="links">{children}</div>
-    </section>
+    <a className="file-card" href={viewer(file)} target="_blank" rel="noreferrer">
+      <span className="file-icon"><Icon /></span>
+      <span>{label}</span>
+    </a>
   );
 }
 
 export default function App() {
   const [build, setBuild] = useState("14194");
-  const [dumpSeconds, setDumpSeconds] = useState(null);
+  const [seconds, setSeconds] = useState(null);
+  const [builds, setBuilds] = useState([]);
 
   useEffect(() => {
     fetch("./data/latest/build.json", { cache: "no-store" })
       .then((r) => r.json())
       .then((data) => {
         setBuild(String(data.build_number ?? "14194"));
-        setDumpSeconds(data.dump_seconds ?? null);
+        setSeconds(data.dump_seconds ?? null);
       })
+      .catch(() => {});
+    fetch("./data/index.json", { cache: "no-store" })
+      .then((r) => r.json())
+      .then((data) => setBuilds(Array.isArray(data.builds) ? data.builds : []))
       .catch(() => {});
   }, []);
 
-  const base = `build-${build}`;
   const viewer = (file) =>
-    `./view.html?build=${encodeURIComponent(build)}&file=${file.split("/").map(encodeURIComponent).join("/")}`;
+    `./view.html?file=${file.split("/").map(encodeURIComponent).join("/")}`;
+  const pinned = `build-${build}`;
 
   return (
-    <main className="page">
-      <header className="header">
-        <div>
-          <h1>CS2 Dumper</h1>
-          <div className="version">build-{build}</div>
-        </div>
-        {dumpSeconds != null && (
-          <div className="dumped">dumped in {Number(dumpSeconds).toFixed(1)}s</div>
-        )}
-      </header>
+    <div className="shell">
+      <aside className="sidebar">
+        <a className="logo" href="#home">CS2 Dumper</a>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#docs">Documentation</a>
+          <a href="#archive">Archive</a>
+          <a href="#discord">Discord</a>
+          <a href="#source">Source Code</a>
+        </nav>
+        <div className="sidebar-foot">build-{build}</div>
+      </aside>
 
-      <div className="sections">
-        <Section title="Build">
-          <FileLink href={viewer("build.json")}>Build.json</FileLink>
-          <FileLink href={viewer("hashes.json")}>Hashes.json</FileLink>
-          <FileLink href={viewer("info.json")}>Info.json</FileLink>
-        </Section>
+      <main className="content">
+        <section id="home" className="hero">
+          <div className="eyebrow">Counter-Strike 2</div>
+          <h1>Offset dumps, without the noise.</h1>
+          <p>
+            Latest CS2 offsets, patterns, interfaces, schemas and SDK files.
+            One static API, no auth, no build id required.
+          </p>
+          <div className="meta">
+            <span className="pill">build-{build}</span>
+            {seconds != null && <span className="muted">dumped in {Number(seconds).toFixed(1)}s</span>}
+            <a href="#docs">API documentation</a>
+          </div>
+        </section>
 
-        <Section title="Offsets">
-          <FileLink href={viewer("offsets.hpp")}>Offsets.hpp</FileLink>
-          <FileLink href={viewer("offsets.cs")}>Offsets.cs</FileLink>
-          <FileLink href={viewer("offsets.json")}>Offsets.json</FileLink>
-          <FileLink href={viewer("OffsetsHex.json")}>OffsetsHex.json</FileLink>
-          <FileLink href={viewer("offsets.txt")}>Offsets.txt</FileLink>
-          <FileLink href={viewer("offsets_all.json")}>OffsetsAll.json</FileLink>
-        </Section>
+        <section className="panel">
+          <div className="panel-head">
+            <h2>Latest</h2>
+            <code>/api/</code>
+          </div>
+          <div className="file-grid">
+            {LATEST.map(([label, file]) => (
+              <FileCard key={file} label={label} file={file} viewer={viewer} />
+            ))}
+          </div>
+        </section>
 
-        <Section title="Patterns">
-          <FileLink href={viewer("patterns.json")}>Patterns.json</FileLink>
-          <FileLink href={viewer("patterns.hpp")}>Patterns.hpp</FileLink>
-          <FileLink href={viewer("recovered_patterns.json")}>RecoveredPatterns.json</FileLink>
-          <FileLink href={viewer("scanner_patterns.txt")}>ScannerPatterns.txt</FileLink>
-        </Section>
+        <section id="docs" className="panel">
+          <div className="panel-head">
+            <h2>Documentation</h2>
+            <span className="muted">GET · CORS enabled</span>
+          </div>
 
-        <Section title="Classes">
-          <FileLink href={viewer("client_dll.hpp")}>Client.hpp</FileLink>
-          <FileLink href={viewer("client_dll.cs")}>Client.cs</FileLink>
-          <FileLink href={viewer("client_dll.json")}>Client.json</FileLink>
-          <FileLink href={viewer("server_dll.hpp")}>Server.hpp</FileLink>
-          <FileLink href={viewer("types.json")}>Types.json</FileLink>
-        </Section>
-
-        <Section title="Interfaces">
-          <FileLink href={viewer("interfaces.hpp")}>Interfaces.hpp</FileLink>
-          <FileLink href={viewer("interfaces.cs")}>Interfaces.cs</FileLink>
-          <FileLink href={viewer("interfaces.json")}>Interfaces.json</FileLink>
-          <FileLink href={viewer("sdk/interfaces/vtables.json")}>VTables.json</FileLink>
-        </Section>
-
-        <Section title="ConVars">
-          <FileLink href={viewer("sdk/convars/convars.json")}>ConVars.json</FileLink>
-          <FileLink href={viewer("sdk/convars/convars.hpp")}>ConVars.hpp</FileLink>
-        </Section>
-
-        <Section title="Game Events">
-          <FileLink href={viewer("sdk/gameevents/gameevents.json")}>GameEvents.json</FileLink>
-        </Section>
-
-        <Section title="Entities">
-          <FileLink href={viewer("sdk/entities/entities.json")}>Entities.json</FileLink>
-        </Section>
-
-        <Section title="Engine">
-          <FileLink href={viewer("sdk/engine/engine_structs.json")}>EngineStructs.json</FileLink>
-        </Section>
-
-        <Section title="Features">
-          <FileLink href={viewer("sdk/verified_features.json")}>Features.json</FileLink>
-        </Section>
-
-        <Section title="SDK">
-          <FileLink href={viewer("struct.hpp")}>Struct.hpp</FileLink>
-          <FileLink href={viewer("sdk/cs2.hpp")}>CS2.hpp</FileLink>
-        </Section>
-      </div>
-
-      <section className="api">
-        <div className="api-head">
-          <h2>API</h2>
-          <span>GET · no auth</span>
-        </div>
-        <p>Every file is available directly under <code>/{base}/</code>.</p>
-        <div className="links">
-          <FileLink href={`./${base}/offsets.json`}>/offsets.json</FileLink>
-          <FileLink href={`./${base}/patterns.json`}>/patterns.json</FileLink>
-          <FileLink href={`./${base}/client_dll.hpp`}>/client_dll.hpp</FileLink>
-          <FileLink href="./data/index.json">/builds</FileLink>
-        </div>
-        <pre className="code">{`GET /${base}/offsets.json
+          <h3>API</h3>
+          <p className="muted">
+            Fetch the latest files directly. The server always returns the current build;
+            no build id is needed in the URL.
+          </p>
+          <div className="endpoint-list">
+            {API_ROWS.map(([endpoint, desc]) => (
+              <div className="endpoint" key={endpoint}>
+                <code>{endpoint}</code>
+                <span>{desc}</span>
+              </div>
+            ))}
+          </div>
+          <pre className="code">{`GET https://cs2-dump.vercel.app/api/offsets.json
 
 {
   "client.dll": {
@@ -139,7 +128,59 @@ export default function App() {
     "dwLocalPlayerPawn": "0x..."
   }
 }`}</pre>
-      </section>
-    </main>
+
+          <h3>Pinned build</h3>
+          <p className="muted">
+            To pin a specific update, use its build directory:
+          </p>
+          <pre className="code">{`GET https://cs2-dump.vercel.app/${pinned}/offsets.hpp
+GET https://cs2-dump.vercel.app/${pinned}/patterns.json`}</pre>
+
+          <h3>Auto-updating in C++</h3>
+          <p className="muted">
+            Check <code>/api/version</code> at startup, then only re-download
+            <code> /api/offsets.json</code> when the build changes.
+          </p>
+          <pre className="code">{`static std::string HttpGet(const wchar_t* host, const wchar_t* path) {
+    // WinHTTP GET, returns the response body
+}
+
+std::string live = HttpGet(L"cs2-dump.vercel.app", L"/api/version");
+std::string cached = ReadFile("offsets.version");
+
+if (live != cached) {
+    std::string json = HttpGet(L"cs2-dump.vercel.app", L"/api/offsets.json");
+    WriteFile("offsets.json", json);
+    WriteFile("offsets.version", live);
+}`}</pre>
+        </section>
+
+        <section id="archive" className="panel">
+          <div className="panel-head">
+            <h2>Archive</h2>
+            <span className="muted">last {builds.length} builds</span>
+          </div>
+          <div className="archive">
+            {builds.map((item) => (
+              <a key={item.build} href={viewer(`build-${item.build}/offsets.hpp`)} target="_blank" rel="noreferrer">
+                <span className="pill">build-{item.build}</span>
+                <span>{item.valid ? "valid" : "preview"}</span>
+                <span className="muted">{item.reason}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section id="discord" className="panel slim">
+          <h2>Discord</h2>
+          <p className="muted">discord.gg/thenwefuckin</p>
+        </section>
+
+        <section id="source" className="panel slim">
+          <h2>Source Code</h2>
+          <p className="muted">github.com/cesiumoq/cs2-dumper</p>
+        </section>
+      </main>
+    </div>
   );
 }
