@@ -46,7 +46,7 @@
   const params = new URLSearchParams(location.search);
   const build = params.get("build") || "14194";
   const file = params.get("file") || "offsets.hpp";
-  const url = file.startsWith("api/") ? `./${file}` : `./build-${build}/${file}`;
+  const url = (file.startsWith("api/") || file.startsWith("build-")) ? `./${file}` : `./build-${build}/${file}`;
   const title = document.getElementById("title");
   const raw = document.getElementById("raw");
   const content = document.getElementById("content");

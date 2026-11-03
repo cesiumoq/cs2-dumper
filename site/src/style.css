@@ -87,6 +87,10 @@ h2 { margin: 0 0 14px; font-size: 17px; letter-spacing: -0.2px; }
 h3 { margin: 24px 0 6px; font-size: 14px; color: #e4e4e7; }
 .panel p { margin: 0 0 12px; }
 .panel-head code { color: var(--blue); font: 12px Consolas, monospace; }
+.group { margin-top: 18px; }
+.group:first-of-type { margin-top: 8px; }
+.group h3 { margin: 0 0 8px; font-size: 12px; color: var(--muted); font-weight: 600; letter-spacing: 0.4px; text-transform: uppercase; }
+.panel a { color: var(--blue); }
 .file-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
