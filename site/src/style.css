@@ -185,6 +185,15 @@ body {
 .feature-actions { display: flex; gap: 6px; align-items: center; flex: 0 0 auto; }
 .copy-btn { border: 1px solid #3f3f46; background: #18181b; color: #d4d4d8; border-radius: 6px; padding: 6px 8px; font: 10.5px Consolas, monospace; cursor: pointer; }
 .copy-btn:hover { border-color: #71717a; }
+.star-btn { border: 1px solid #2a2a2e; background: transparent; color: #52525b; border-radius: 4px; padding: 2px 5px; font: 12px Consolas, monospace; cursor: pointer; }
+.star-btn:hover { color: #a1a1aa; }
+.star-btn.active { color: #60a5fa; border-color: #1d4ed8; text-shadow: 0 0 8px #3b82f6; }
+.row-actions { display: flex; gap: 4px; align-items: center; }
+.favorite-list { display: grid; gap: 6px; margin-top: 12px; }
+.favorite-row { display: flex; align-items: center; gap: 10px; text-align: left; border: 1px solid var(--line); background: #0e0e10; color: #d4d4d8; border-radius: 7px; padding: 8px 10px; cursor: pointer; }
+.favorite-row:hover { border-color: #52525b; }
+.favorite-row b { font: 11.5px Consolas, monospace; }
+.favorite-row .muted { margin-left: auto; font-size: 10px; }
 .row-copy { border: 1px solid #2a2a2e; background: transparent; color: #71717a; border-radius: 4px; padding: 2px 5px; font: 10px Consolas, monospace; cursor: pointer; }
 .row-copy:hover { color: var(--blue); border-color: #3f3f46; }
 .icon-btn { width: 29px; height: 29px; border: 1px solid #3f3f46; background: #18181b; color: #71717a; border-radius: 6px; cursor: pointer; }

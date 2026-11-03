@@ -1,3 +1,10 @@
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Total Offsets   : 202
+/*  Dumped At       : 14:31 03/11/2026 (GMT)
+/*  Dumped In       : 4,9s
+*/
+
 [client.dll]
 dwCSGOInput=CC CC CC CC CC CC CC CC CC CC CC CC 48 83 EC 28 48 8D 0D ?? ?? ?? ?? E8 10 EF A6 00 33 C9 C7 05 88 1F 49 02 FF FF FF|16
 dwEntityList=FF FF FF FF C7 45 1F FF FF FF FF E8 40 15 00 00 48 8B 05 ?? ?? ?? ?? 48 8B B0 10 02 00 00 48 85 F6 0F 84 65 01 00 00|16

@@ -1,3 +1,10 @@
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Total Offsets   : 202
+/*  Dumped At       : 14:31 03/11/2026 (GMT)
+/*  Dumped In       : 4,9s
+*/
+
 // CS2 interfaces — typed vtable structs in `ifc::<module>::<Class>`.
 // Resolved singleton RVAs are exposed as constants in offsets.hpp
 // (with a `p` prefix when one runtime dereference is needed). Build

@@ -1,3 +1,10 @@
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Total Offsets   : 202
+/*  Dumped At       : 14:31 03/11/2026 (GMT)
+/*  Dumped In       : 4,9s
+*/
+
 /*
    module:        server.dll
    classes:       740

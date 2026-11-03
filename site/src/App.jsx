@@ -19,6 +19,7 @@ const NAV = [
   ["entities", "Entities", "182"],
   ["engine", "Engine", "12"],
   ["features", "Features", "6"],
+  ["favorites", "Favorites"],
   ["vpk", "VPK Assets"],
   ["api", "API"],
   ["downloads", "Downloads"],
@@ -167,10 +168,16 @@ export default function App() {
     catch { return []; }
   });
 
-  const toggleFavorite = (key) => {
+  const toggleFavorite = (view, label) => {
+    const key = `${view}:${label}`;
     setFavorites((current) => {
       const next = current.includes(key) ? current.filter((x) => x !== key) : [...current, key];
       localStorage.setItem("cs2-favorites", JSON.stringify(next));
+      try {
+        const meta = JSON.parse(localStorage.getItem("cs2-fav-meta") || "{}");
+        meta[key] = { view, label };
+        localStorage.setItem("cs2-fav-meta", JSON.stringify(meta));
+      } catch {}
       return next;
     });
   };
@@ -311,11 +318,12 @@ export default function App() {
           <Features data={cache.features} loading={loading} favorites={favorites} toggleFavorite={toggleFavorite} />
         )}
         {view === "engine" && <EngineView data={cache.engine} loading={loading} query={query} />}
-        {view === "entities" && <EntitiesView data={cache.entities} loading={loading} query={query} />}
+        {view === "entities" && <EntitiesView data={cache.entities} loading={loading} query={query} favorites={favorites} toggleFavorite={toggleFavorite} />}
         {view === "vpk" && <VpkView />}
         {view === "models" && <ModelsView />}
+        {view === "favorites" && <FavoritesView favorites={favorites} go={selectView} />}
 
-        {COLUMNS[view] && !["features", "engine", "entities", "models"].includes(view) && (
+        {COLUMNS[view] && !["features", "engine", "entities", "models", "favorites"].includes(view) && (
           <section className="panel table-panel">
             <div className="panel-head">
               <h2>{NAV.find(([id]) => id === view)?.[1]}</h2>
@@ -324,7 +332,7 @@ export default function App() {
             {q ? (
               <div className="muted">Showing matches for "{query}".</div>
             ) : null}
-            <DataTable cols={cols} rows={q ? rowHits : rows} />
+            <DataTable cols={cols} rows={q ? rowHits : rows} view={view} favorites={favorites} toggleFavorite={toggleFavorite} />
           </section>
         )}
       </main>
@@ -716,7 +724,7 @@ function ModelsView() {
     <section className="panel models-page">
       <div className="panel-head">
         <h2>3D Models</h2>
-        <span className="muted">{MODELS.length} exported · glTF 2.0</span>
+        <span className="muted">{MODELS.length} exported Ã‚Â· glTF 2.0</span>
       </div>
       <p className="muted">Weapon and agent meshes exported from the game VPK, with materials and textures.</p>
       <div className="models-layout">
@@ -740,7 +748,7 @@ function ModelsView() {
                 <button key={color} className={tint === color ? "active" : ""} style={{ background: color }} onClick={() => setTint(color)} title={color} />
               ))}
             </div>
-            <span className="muted">drag to orbit · scroll to zoom</span>
+            <span className="muted">drag to orbit Ã‚Â· scroll to zoom</span>
           </div>
         </div>
       </div>
@@ -803,7 +811,7 @@ function EngineView({ data, loading, query }) {
   );
 }
 
-function EntitiesView({ data, loading, query }) {
+function EntitiesView({ data, loading, query, favorites, toggleFavorite }) {
   const q = query.trim().toLowerCase();
   const entities = (data?.entities || []).filter((e) =>
     !q || `${e.index} ${e.classname} ${e.team} ${e.health}`.toLowerCase().includes(q)
@@ -830,7 +838,7 @@ function EntitiesView({ data, loading, query }) {
                 <td>{e.health}{e.max_health ? `/${e.max_health}` : ""}</td>
                 <td>{team(e.team)}</td>
                 <td className="mono">{(e.origin || []).map((n) => Number(n.toFixed?.(1) ?? n)).join(", ")}</td>
-                <td><RowCopy row={e} /></td>
+                <td className="row-actions"><Star active={favorites?.includes(`entities:${e.classname}`)} onClick={() => toggleFavorite?.("entities", e.classname)} /><RowCopy row={e} /></td>
               </tr>
             ))}
           </tbody>
@@ -901,7 +909,7 @@ function Features({ data, loading, favorites, toggleFavorite }) {
   const categories = ["all", ...Array.from(new Set(features.map((f) => f.category).filter(Boolean)))];
   const q = filter.trim().toLowerCase();
   const list = features.filter((f) => {
-    const key = `feature:${f.name}`;
+    const key = `features:${f.name}`;
     if (onlyFavorites && !favorites.includes(key)) return false;
     if (category !== "all" && f.category !== category) return false;
     if (q && !`${f.name} ${f.category} ${f.summary}`.toLowerCase().includes(q)) return false;
@@ -932,7 +940,7 @@ function Features({ data, loading, favorites, toggleFavorite }) {
       {loading && <div className="muted">loading...</div>}
       <div className="feature-list">
         {list.map((feature) => {
-          const key = `feature:${feature.name}`;
+          const key = `features:${feature.name}`;
           const active = feature[mode] || feature;
           const steps = active.steps || feature.steps || [];
           const fields = active.fields || feature.fields || [];
@@ -956,7 +964,7 @@ function Features({ data, loading, favorites, toggleFavorite }) {
                   </div>
                 </div>
                 <div className="feature-actions">
-                  <button className={`icon-btn ${favorites.includes(key) ? "active" : ""}`} onClick={() => toggleFavorite(key)} title="Favorite">      </button>
+                  <button className={`icon-btn ${favorites.includes(key) ? "active" : ""}`} onClick={() => toggleFavorite("features", feature.name)} title="Favorite">      </button>
                   <CopyButton text={copyText} />
                 </div>
               </div>
@@ -990,15 +998,60 @@ function Features({ data, loading, favorites, toggleFavorite }) {
   );
 }
 
-function DataTable({ cols, rows }) {
+function Star({ active, onClick }) {
+  return (
+    <button className={`star-btn ${active ? "active" : ""}`} onClick={onClick} title="Favorite">
+      *
+    </button>
+  );
+}
+
+function FavoritesView({ favorites, go }) {
+  const [meta, setMeta] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("cs2-fav-meta") || "{}"); }
+    catch { return {}; }
+  });
+  useEffect(() => {
+    try { setMeta(JSON.parse(localStorage.getItem("cs2-fav-meta") || "{}")); } catch {}
+  }, [favorites]);
+  const rows = favorites.map((key) => meta[key] || { view: key.split(":")[0], label: key.split(":").slice(1).join(":") });
+  return (
+    <section className="panel">
+      <div className="panel-head"><h2>Favorites</h2><span className="muted">{rows.length} saved on this browser</span></div>
+      <p className="muted">Saved names stay here across builds. Click one to open its category and search it in the new dump.</p>
+      <div className="favorite-list">
+        {rows.map((row, i) => (
+          <button key={i} className="favorite-row" onClick={() => go(row.view)}>
+            <span className="chip">{row.view}</span>
+            <b>{row.label}</b>
+            <span className="muted">open {row.view}</span>
+          </button>
+        ))}
+        {!rows.length && <div className="empty">No favorites yet. Click + in any table.</div>}
+      </div>
+    </section>
+  );
+}
+
+function DataTable({ cols, rows, view, favorites, toggleFavorite }) {
   return (
     <div className="table-wrap">
       <table>
         <thead><tr>{cols.map(([key, label]) => <th key={key}>{label}</th>)}<th /></tr></thead>
         <tbody>
-          {rows.slice(0, 500).map((row, i) => (
-            <tr key={i}>{cols.map(([key]) => <td key={key} className={key === "name" ? "mono" : ""}>{String(row[key] ?? "")}</td>)}<td><RowCopy row={row} /></td></tr>
-          ))}
+          {rows.slice(0, 500).map((row, i) => {
+            const label = row.name || row.classname || row.index;
+            const key = `${view}:${label}`;
+            return (
+              <tr key={i}>
+                {cols.map(([key]) => <td key={key} className={key === "name" ? "mono" : ""}>{String(row[key] ?? "")}</td>)}
+                <td className="row-actions">
+                  <Star active={favorites?.includes(key)} onClick={() => toggleFavorite?.(view, label)} />
+                  <RowCopy row={row} />
+                </td>
+              </tr>
+            );
+          })}
           {!rows.length && <tr><td colSpan={cols.length + 1} className="empty">No data.</td></tr>}
         </tbody>
       </table>
@@ -1006,4 +1059,5 @@ function DataTable({ cols, rows }) {
     </div>
   );
 }
+
 
