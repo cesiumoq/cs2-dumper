@@ -185,7 +185,7 @@ body {
 .feature-actions { display: flex; gap: 6px; align-items: center; flex: 0 0 auto; }
 .copy-btn { border: 1px solid #3f3f46; background: #18181b; color: #d4d4d8; border-radius: 6px; padding: 6px 8px; font: 10.5px Consolas, monospace; cursor: pointer; }
 .copy-btn:hover { border-color: #71717a; }
-.star-btn { border: 1px solid #2a2a2e; background: transparent; color: #52525b; border-radius: 4px; padding: 2px 5px; font: 12px Consolas, monospace; cursor: pointer; }
+.star-btn { display: grid; place-items: center; border: 1px solid #2a2a2e; background: transparent; color: #52525b; border-radius: 4px; width: 22px; height: 20px; cursor: pointer; }
 .star-btn:hover { color: #a1a1aa; }
 .star-btn.active { color: #60a5fa; border-color: #1d4ed8; text-shadow: 0 0 8px #3b82f6; }
 .row-actions { display: flex; gap: 4px; align-items: center; }

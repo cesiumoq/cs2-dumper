@@ -1,6 +1,6 @@
 {
     "total_scanned":  578,
-    "found":  535,
+    "found":  538,
     "unique_functions":  514,
     "missing":  17,
     "modules":  [
@@ -5959,6 +5959,27 @@
                          "rva":  "0xc15a23",
                          "resolve":  "raw",
                          "pattern":  "48 8D 0D 26 98 95 01 48 C1 E0 06 48 03 C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC CC C2 00 00"
+                     },
+                     {
+                         "name":  "worldGroup",
+                         "module":  "client.dll",
+                         "rva":  "0x3bab20",
+                         "resolve":  "raw",
+                         "pattern":  "40 55 48 8B EC 48 83 EC 60 85 D2 75 16 48 8B 0D 04 68 3E 02 48 8B 01 FF 90 E8 00 00 00 48 83 C4"
+                     },
+                     {
+                         "name":  "createScene",
+                         "module":  "meshsystem.dll",
+                         "rva":  "0x28730",
+                         "resolve":  "raw",
+                         "pattern":  "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 60 48 8B 84 24 A0 00 00 00 4D 8B D1 4C 8B 8C 24 98 00"
+                     },
+                     {
+                         "name":  "deleteScene",
+                         "module":  "scenesystem.dll",
+                         "rva":  "0xd7250",
+                         "resolve":  "raw",
+                         "pattern":  "48 85 D2 0F 84 7D 01 00 00 48 8B C4 48 89 50 10 53 41 56 48 83 EC 58 48 89 78 E8 48 8B DA 48 8B"
                      }
                  ]
 }

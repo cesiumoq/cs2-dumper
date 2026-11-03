@@ -3,134 +3,461 @@
   {
    "class": "CSource2Client",
    "module": "client.dll",
-   "rva": "0x1c65030",
+   "rva": "0x1c67210",
+   "rtti": "0x1F197D0",
    "slot_count": 64,
+   "slot_36": "0xb6ee70",
    "slots": [
-    "0xb79c00",
-    "0x0",
-    "0x65746e756f636e45",
-    "0x746c756d20646572",
-    "0x66696420656c7069",
-    "0x6520746e65726566",
-    "0x7720737463656666",
-    "0x2065687420687469",
-    "0x6d616e20656d6173",
-    "0xa21227325222065",
-    "0x0",
-    "0x6863746170736944",
-    "0x203a746365666645",
-    "0x2220746365666665",
-    "0x20746f6e20227325",
-    "0x6e6f20646e756f66",
-    "0xa746e65696c6320",
-    "0x0",
-    "0x6c675f726f727245",
-    "0x696c635f6c61626f",
-    "0x746e65",
-    "0x0",
-    "0x646c6975625c3a43",
-    "0x635c72656b726f77",
-    "0x5f6c65725f6f6773",
-    "0x75625c34366e6977",
-    "0x5c6372735c646c69",
-    "0x696c635c656d6167",
-    "0x65745f635c746e65",
-    "0x5f7463656666655f",
-    "0x6863746170736964",
-    "0x7070632e",
-    "0x656c636974726170",
-    "0x2f726f7272652f73",
-    "0x70762e726f727265",
-    "0x6663",
-    "0x1f19c00",
-    "0xb65a10",
-    "0x165350",
-    "0x165330",
-    "0x44b2b0",
-    "0xb607a0",
-    "0x212170",
-    "0x15e35a0",
-    "0x228050",
-    "0xae68a0",
-    "0xb83b30",
-    "0xae76e0",
-    "0xb08a70",
-    "0xb090f0",
-    "0xae4f80",
-    "0xb24050",
-    "0xb07ab0",
-    "0x160ac0",
-    "0x15ca60",
-    "0xb091a0",
-    "0x2168c0",
-    "0x215000",
-    "0xb1a1e0",
-    "0xb17990",
-    "0x2267d0",
-    "0xb07940",
-    "0xb06350",
-    "0xb06320"
-   ],
-   "names": {
-    "36": "FrameStageNotify"
-   }
-  },
-  {
-   "class": "CCStrike15ItemSchema",
-   "module": "client.dll",
-   "rva": "0x1c08e78",
-   "slot_count": 48,
-   "slots": [
-    "0x8297e0",
-    "0x9369f0",
-    "0x469860",
-    "0x469880",
-    "0x947f40",
-    "0x46b150",
-    "0x931430",
-    "0x80e230",
-    "0x46ba40",
-    "0x931800",
-    "0x46ba30",
-    "0x941a60",
-    "0x941b40",
-    "0x44a500",
-    "0x461b90",
-    "0x9344f0",
-    "0x944280",
-    "0x469ec0",
-    "0x944200",
-    "0x9561d0",
-    "0x92f200",
-    "0x4392a0",
-    "0x92f610",
-    "0x92f1f0",
-    "0x439290",
-    "0x469da0",
-    "0x92da90",
-    "0x7dd350",
-    "0x11433f0",
-    "0x1160980",
-    "0x1127590",
-    "0x1160970",
-    "0x117f250",
-    "0x117c3b0",
-    "0x117e210",
-    "0x7c7c30",
-    "0x117f280",
-    "0x117f290",
-    "0x11575c0",
-    "0x111deb0",
-    "0x117f260",
-    "0x117c0e0",
-    "0x7dd130",
-    "0x1138670",
-    "0x7cda90",
-    "0x7cdaa0",
-    "0x7cdac0",
-    "0x7cdab0"
-   ],
-   "names": {}
+    {
+     "index": 0,
+     "raw": "0xb66660",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb66660"
+    },
+    {
+     "index": 1,
+     "raw": "0xb690c0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb690c0"
+    },
+    {
+     "index": 2,
+     "raw": "0xb7e930",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7e930"
+    },
+    {
+     "index": 3,
+     "raw": "0xb73560",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb73560"
+    },
+    {
+     "index": 4,
+     "raw": "0xb83530",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb83530"
+    },
+    {
+     "index": 5,
+     "raw": "0xb7d730",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7d730"
+    },
+    {
+     "index": 6,
+     "raw": "0xb6ffa0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb6ffa0"
+    },
+    {
+     "index": 7,
+     "raw": "0xb72540",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb72540"
+    },
+    {
+     "index": 8,
+     "raw": "0xb7ed30",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7ed30"
+    },
+    {
+     "index": 9,
+     "raw": "0xb77250",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb77250"
+    },
+    {
+     "index": 10,
+     "raw": "0xb72530",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb72530"
+    },
+    {
+     "index": 11,
+     "raw": "0xb81fd0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb81fd0"
+    },
+    {
+     "index": 12,
+     "raw": "0xb76de0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb76de0"
+    },
+    {
+     "index": 13,
+     "raw": "0xb7eb10",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7eb10"
+    },
+    {
+     "index": 14,
+     "raw": "0xb7d4a0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7d4a0"
+    },
+    {
+     "index": 15,
+     "raw": "0xb68830",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb68830"
+    },
+    {
+     "index": 16,
+     "raw": "0xb6e200",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb6e200"
+    },
+    {
+     "index": 17,
+     "raw": "0xb83ab0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb83ab0"
+    },
+    {
+     "index": 18,
+     "raw": "0xb714d0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb714d0"
+    },
+    {
+     "index": 19,
+     "raw": "0xb71500",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb71500"
+    },
+    {
+     "index": 20,
+     "raw": "0xb71930",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb71930"
+    },
+    {
+     "index": 21,
+     "raw": "0xb7bcb0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7bcb0"
+    },
+    {
+     "index": 22,
+     "raw": "0xb7e1c0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7e1c0"
+    },
+    {
+     "index": 23,
+     "raw": "0xb86c20",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb86c20"
+    },
+    {
+     "index": 24,
+     "raw": "0xb69b00",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb69b00"
+    },
+    {
+     "index": 25,
+     "raw": "0xb68870",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb68870"
+    },
+    {
+     "index": 26,
+     "raw": "0xb72640",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb72640"
+    },
+    {
+     "index": 27,
+     "raw": "0xb81fb0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb81fb0"
+    },
+    {
+     "index": 28,
+     "raw": "0xb83b10",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb83b10"
+    },
+    {
+     "index": 29,
+     "raw": "0xb70890",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb70890"
+    },
+    {
+     "index": 30,
+     "raw": "0xb67530",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb67530"
+    },
+    {
+     "index": 31,
+     "raw": "0xb68fc0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb68fc0"
+    },
+    {
+     "index": 32,
+     "raw": "0xb71b80",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb71b80"
+    },
+    {
+     "index": 33,
+     "raw": "0xb7a520",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7a520"
+    },
+    {
+     "index": 34,
+     "raw": "0xb6f5e0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb6f5e0"
+    },
+    {
+     "index": 35,
+     "raw": "0xb7ecd0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7ecd0"
+    },
+    {
+     "index": 36,
+     "raw": "0xb6ee70",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb6ee70",
+     "name": "FrameStageNotify"
+    },
+    {
+     "index": 37,
+     "raw": "0xb72f10",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb72f10"
+    },
+    {
+     "index": 38,
+     "raw": "0xb72d30",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb72d30"
+    },
+    {
+     "index": 39,
+     "raw": "0xb72d20",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb72d20"
+    },
+    {
+     "index": 40,
+     "raw": "0xb7bb40",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7bb40"
+    },
+    {
+     "index": 41,
+     "raw": "0xb652d0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb652d0"
+    },
+    {
+     "index": 42,
+     "raw": "0xb866e0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb866e0"
+    },
+    {
+     "index": 43,
+     "raw": "0xb7bd30",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7bd30"
+    },
+    {
+     "index": 44,
+     "raw": "0xb84050",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb84050"
+    },
+    {
+     "index": 45,
+     "raw": "0xb652c0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb652c0"
+    },
+    {
+     "index": 46,
+     "raw": "0xb7b600",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7b600"
+    },
+    {
+     "index": 47,
+     "raw": "0xb7bcc0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7bcc0"
+    },
+    {
+     "index": 48,
+     "raw": "0xb86840",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb86840"
+    },
+    {
+     "index": 49,
+     "raw": "0xb62650",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb62650"
+    },
+    {
+     "index": 50,
+     "raw": "0xb6f460",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb6f460"
+    },
+    {
+     "index": 51,
+     "raw": "0xb71a70",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb71a70"
+    },
+    {
+     "index": 52,
+     "raw": "0xb859e0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb859e0"
+    },
+    {
+     "index": 53,
+     "raw": "0xb7bca0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7bca0"
+    },
+    {
+     "index": 54,
+     "raw": "0xb73370",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb73370"
+    },
+    {
+     "index": 55,
+     "raw": "0xb86810",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb86810"
+    },
+    {
+     "index": 56,
+     "raw": "0xb7a2b0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7a2b0"
+    },
+    {
+     "index": 57,
+     "raw": "0xb65280",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb65280"
+    },
+    {
+     "index": 58,
+     "raw": "0xb6ff90",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb6ff90"
+    },
+    {
+     "index": 59,
+     "raw": "0xb651f0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb651f0"
+    },
+    {
+     "index": 60,
+     "raw": "0xb7ab20",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7ab20"
+    },
+    {
+     "index": 61,
+     "raw": "0xb7ab30",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7ab30"
+    },
+    {
+     "index": 62,
+     "raw": "0xb7a8e0",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7a8e0"
+    },
+    {
+     "index": 63,
+     "raw": "0xb7aa90",
+     "kind": "function",
+     "module": "client.dll",
+     "target": "0xb7aa90"
+    }
+   ]
   }
  ]
 }

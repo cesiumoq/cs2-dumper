@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
@@ -774,16 +774,21 @@ function VtablesView() {
           <div className="feature-head">
             <div>
               <h3>{vt.class}</h3>
-              <div className="feature-tags"><span className="chip">{vt.module}</span><span className="chip">{vt.rva}</span><span className="chip">{vt.slots?.length} slots</span></div>
+              <div className="feature-tags"><span className="chip">{vt.module}</span><span className="chip">{vt.rva}</span>{vt.rtti && <span className="chip">rtti {vt.rtti}</span>}<span className="chip">{vt.slots?.length} slots</span></div>
             </div>
             <CopyButton text={JSON.stringify(vt, null, 2)} label="copy" />
           </div>
           <div className="vt-slots">
-            {(vt.slots || []).map((slot, i) => (
-              <div key={i} className={vt.names?.[String(i)] ? "named" : ""}>
-                <span>{i}</span><code>{slot}</code>{vt.names?.[String(i)] && <b>{vt.names[String(i)]}</b>}
-              </div>
-            ))}
+            {(vt.slots || []).map((slot, i) => {
+              const item = typeof slot === "string" ? { index: i, raw: slot, kind: "data" } : slot;
+              return (
+                <div key={i} className={item.name ? "named" : ""}>
+                  <span>{item.index ?? i}</span>
+                  <code>{item.raw}</code>
+                  <b>{item.name || item.kind}{item.target && item.target !== item.raw ? ` -> ${item.target}` : ""}</b>
+                </div>
+              );
+            })}
           </div>
         </article>
       ))}
@@ -1039,8 +1044,10 @@ function Features({ data, loading, favorites, toggleFavorite }) {
 
 function Star({ active, onClick }) {
   return (
-    <button className={`star-btn ${active ? "active" : ""}`} onClick={onClick} title="Favorite">
-      *
+    <button className={`star-btn ${active ? "active" : ""}`} onClick={onClick} title="Favorite" aria-label="Favorite">
+      <svg viewBox="0 0 24 24" width="13" height="13" fill={active ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.7">
+        <path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.3-5.6-3-5.6 3 1.1-6.3L2.9 9.4l6.3-.9L12 2.8z" />
+      </svg>
     </button>
   );
 }

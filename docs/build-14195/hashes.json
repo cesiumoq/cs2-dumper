@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T13:47:53",
+  "generated_at": "2026-11-03T15:42:05",
   "modules": {
     "client.dll": {"sha256": "57ee728e15c50881070d847d7516d632d70456e0648d486a53f2528ec53f6ee0", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\csgo\\bin\\win64\\client.dll"},
     "engine2.dll": {"sha256": "a1b682acb5cedf11bed4784b0191a5452e93ee8f3023f95fa11ab3c3676b0fbc", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\engine2.dll"},
@@ -19,6 +19,7 @@
     "resourcesystem.dll": {"sha256": "4b86d2c2607178c1a8320e3a3b2bcce3d5dcedfbf0b43cf39a929a2e001d504f", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\resourcesystem.dll"},
     "pulse_system.dll": {"sha256": "646776a058fa34c89bae0bec1817f257dd9756eed8f5868a564e76470390b3d8", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\pulse_system.dll"},
     "inputsystem.dll": {"sha256": "7bb1dc2a787de5b6e2992b235f863924c3b512ba70fc39323ef5a861436b023a", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\inputsystem.dll"},
-    "filesystem_stdio.dll": {"sha256": "8e4c94030146e4182efb1dbecb7ac5f0fd27c0a78d31a0de00b9e7d8461215f5", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\filesystem_stdio.dll"}
+    "filesystem_stdio.dll": {"sha256": "8e4c94030146e4182efb1dbecb7ac5f0fd27c0a78d31a0de00b9e7d8461215f5", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\filesystem_stdio.dll"},
+    "meshsystem.dll": {"sha256": "142b5749c114652bdb4de63731f4eed2fb59bff7089f6002bc11d33a35360805", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\meshsystem.dll"}
   }
 }
