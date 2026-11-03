@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const FILE_ICON = "M56 20h96l56 56v140a20 20 0 0 1-20 20H56a20 20 0 0 1-20-20V40a20 20 0 0 1 20-20Zm92 24v40h40";
 
@@ -464,12 +464,17 @@ function Downloads({ viewer }) {
 
 function VpkView() {
   const [manifest, setManifest] = useState(null);
+  const [parsed, setParsed] = useState(null);
   const [tab, setTab] = useState("maps");
   const [q, setQ] = useState("");
   useEffect(() => {
     fetch("./vpk/manifest.json", { cache: "no-store" })
       .then((r) => r.json())
       .then(setManifest)
+      .catch(() => {});
+    fetch("./api/vpk/manifest.json", { cache: "no-store" })
+      .then((r) => r.json())
+      .then(setParsed)
       .catch(() => {});
   }, []);
   const query = q.trim().toLowerCase();
@@ -491,6 +496,21 @@ function VpkView() {
         <span className="muted">{Object.keys(manifest?.maps || {}).length} maps Â· {Object.keys(manifest?.weapons || {}).length} icons Â· {Object.keys(manifest?.characters || {}).length} characters</span>
       </div>
       <p className="muted">Radar images, coordinate data, weapon icons and player thumbnails extracted from the game VPK.</p>
+      {parsed && (
+        <div className="vpk-parsed">
+          <div><b>{parsed.entry_count}</b><span>VPK entries parsed</span></div>
+          <div><b>{parsed.overview_count}</b><span>overview files extracted</span></div>
+          <div><b>{parsed.radar_count}</b><span>radar textures extracted</span></div>
+          <div className="vpk-links">
+            {(parsed.radars || []).slice(0, 3).map((file) => (
+              <a key={file} href={`./api/vpk/radar_raw/${file}`} target="_blank" rel="noreferrer">{file}</a>
+            ))}
+            {(parsed.overviews || []).slice(0, 3).map((file) => (
+              <a key={file} href={`./api/vpk/overviews/${file}`} target="_blank" rel="noreferrer">{file}</a>
+            ))}
+          </div>
+        </div>
+      )}
       <div className="feature-toolbar">
         <div className="segmented">
           {["maps", "workshop", "icons", "characters"].map((id) => (
