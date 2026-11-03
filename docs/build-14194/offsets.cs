@@ -1,16 +1,19 @@
-/*                       jatos dumper
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 00:36 03/11/2026 (GMT)
+/*  Dumped At       : 01:05 03/11/2026 (GMT)
 /*  Dumped In       : 2,7s
 */
 
-// Generated using https://github.com/a2x/cs2-dumper
+/*
+   Generated using https://github.com/a2x/cs2-dumper
+*/
 // 2026-11-02 23:19:37.100969900 UTC
 
 namespace CS2Dumper.Offsets {
-    // Module: client.dll
+/*
+   Module: client.dll
+*/
     public static class ClientDll {
         public const nint dwCSGOInput = 0x257F980;
         public const nint dwEntityList = 0x271EB28;
@@ -28,7 +31,9 @@ namespace CS2Dumper.Offsets {
         public const nint dwViewRender = 0x256FB98;
         public const nint dwWeaponC4 = 0x24CE108;
     }
-    // Module: engine2.dll
+/*
+   Module: engine2.dll
+*/
     public static class Engine2Dll {
         public const nint dwBuildNumber = 0x6BA028;
         public const nint dwNetworkGameClient = 0x9B88C0;
@@ -42,15 +47,21 @@ namespace CS2Dumper.Offsets {
         public const nint dwWindowHeight = 0x9BCFEC;
         public const nint dwWindowWidth = 0x9BCFE8;
     }
-    // Module: inputsystem.dll
+/*
+   Module: inputsystem.dll
+*/
     public static class InputsystemDll {
         public const nint dwInputSystem = 0x46BC0;
     }
-    // Module: matchmaking.dll
+/*
+   Module: matchmaking.dll
+*/
     public static class MatchmakingDll {
         public const nint dwGameTypes = 0x1B0FD0;
     }
-    // Module: soundsystem.dll
+/*
+   Module: soundsystem.dll
+*/
     public static class SoundsystemDll {
         public const nint dwSoundSystem = 0x532420;
     }

@@ -1,8 +1,7 @@
-/*                       jatos dumper
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 00:36 03/11/2026 (GMT)
+/*  Dumped At       : 01:05 03/11/2026 (GMT)
 /*  Dumped In       : 2,7s
 */
 
@@ -33,4 +32,3 @@ dwGameTypes=48 83 C4 20 5B C3 CC CC CC CC CC CC 48 83 EC 28 48 8B 05 ?? ?? ?? ??
 
 [soundsystem.dll]
 dwSoundSystem=48 83 C4 20 5F C3 CC CC CC CC CC CC CC CC CC CC 48 8D 05 ?? ?? ?? ?? C3 CC CC CC CC CC CC CC CC 40 53 48 83 EC 20 49|16
-
