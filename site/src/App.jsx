@@ -317,7 +317,7 @@ export default function App() {
         {view === "features" && (
           <Features data={cache.features} loading={loading} favorites={favorites} toggleFavorite={toggleFavorite} />
         )}
-        {view === "engine" && <EngineView data={cache.engine} loading={loading} query={query} />}
+        {view === "engine" && <EngineView data={cache.engine} loading={loading} query={query} favorites={favorites} toggleFavorite={toggleFavorite} />}
         {view === "entities" && <EntitiesView data={cache.entities} loading={loading} query={query} favorites={favorites} toggleFavorite={toggleFavorite} />}
         {view === "vpk" && <VpkView />}
         {view === "models" && <ModelsView />}
@@ -724,7 +724,7 @@ function ModelsView() {
     <section className="panel models-page">
       <div className="panel-head">
         <h2>3D Models</h2>
-        <span className="muted">{MODELS.length} exported Ã‚Â· glTF 2.0</span>
+        <span className="muted">{MODELS.length} exported ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· glTF 2.0</span>
       </div>
       <p className="muted">Weapon and agent meshes exported from the game VPK, with materials and textures.</p>
       <div className="models-layout">
@@ -748,7 +748,7 @@ function ModelsView() {
                 <button key={color} className={tint === color ? "active" : ""} style={{ background: color }} onClick={() => setTint(color)} title={color} />
               ))}
             </div>
-            <span className="muted">drag to orbit Ã‚Â· scroll to zoom</span>
+            <span className="muted">drag to orbit ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· scroll to zoom</span>
           </div>
         </div>
       </div>
@@ -756,7 +756,7 @@ function ModelsView() {
   );
 }
 
-function EngineView({ data, loading, query }) {
+function EngineView({ data, loading, query, favorites, toggleFavorite }) {
   const q = query.trim().toLowerCase();
   const [open, setOpen] = useState({});
   const structs = (data?.structs || []).filter((s) =>
@@ -798,8 +798,8 @@ function EngineView({ data, loading, query }) {
               {s.instance && <div className="instance-box"><b>instance</b><code>{s.instance}</code></div>}
               {expanded && (
                 <>
-                  <FeatureTable title="Functions" cols={[["name", "Function"], ["rva", "RVA"]]} rows={s.functions || []} />
-                  <FeatureTable title="Fields" cols={[["offset", "Offset"], ["name", "Field"], ["type", "Type"], ["note", "Notes"]]} rows={s.fields || []} />
+                  <FeatureTable title="Functions" cols={[["name", "Function"], ["rva", "RVA"]]} rows={s.functions || []} view="engine" favorites={favorites} toggleFavorite={toggleFavorite} />
+                  <FeatureTable title="Fields" cols={[["offset", "Offset"], ["name", "Field"], ["type", "Type"], ["note", "Notes"]]} rows={s.fields || []} view="engine" favorites={favorites} toggleFavorite={toggleFavorite} />
                 </>
               )}
             </article>
@@ -880,7 +880,7 @@ function RowCopy({ row }) {
   );
 }
 
-function FeatureTable({ title, cols, rows }) {
+function FeatureTable({ title, cols, rows, view, favorites, toggleFavorite }) {
   if (!rows?.length) return null;
   return (
     <div className="feature-block">
@@ -889,9 +889,12 @@ function FeatureTable({ title, cols, rows }) {
         <table>
           <thead><tr>{cols.map(([, label]) => <th key={label}>{label}</th>)}<th /></tr></thead>
           <tbody>
-            {rows.map((row, i) => (
-              <tr key={i}>{cols.map(([key]) => <td key={key} className={key === "name" || key === "offset" || key === "rva" ? "mono" : ""}>{String(row[key] ?? "")}</td>)}<td><RowCopy row={row} /></td></tr>
-            ))}
+            {rows.map((row, i) => {
+              const label = row.name || row.field || row.offset;
+              return (
+                <tr key={i}>{cols.map(([key]) => <td key={key} className={key === "name" || key === "offset" || key === "rva" ? "mono" : ""}>{String(row[key] ?? "")}</td>)}<td className="row-actions">{view && <Star active={favorites?.includes(`${view}:${label}`)} onClick={() => toggleFavorite?.(view, label)} />}<RowCopy row={row} /></td></tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
@@ -980,9 +983,9 @@ function Features({ data, loading, favorites, toggleFavorite }) {
                   {convars.map((c) => <div key={c.name}><code>{c.name}</code><span>{c.use}</span></div>)}
                 </div>
               )}
-              <FeatureTable title="Offsets" cols={[["class", "Class"], ["field", "Field"], ["offset", "Offset"], ["type", "Type"], ["note", "Note"]]} rows={fields} />
-              <FeatureTable title="Functions" cols={[["name", "Function"], ["module", "Module"], ["rva", "RVA"], ["purpose", "Purpose"]]} rows={functions} />
-              <FeatureTable title="Globals" cols={[["name", "Name"], ["value", "Value"], ["module", "Module"], ["note", "Note"]]} rows={globals} />
+              <FeatureTable title="Offsets" cols={[["class", "Class"], ["field", "Field"], ["offset", "Offset"], ["type", "Type"], ["note", "Note"]]} rows={fields} view="features" favorites={favorites} toggleFavorite={toggleFavorite} />
+              <FeatureTable title="Functions" cols={[["name", "Function"], ["module", "Module"], ["rva", "RVA"], ["purpose", "Purpose"]]} rows={functions} view="features" favorites={favorites} toggleFavorite={toggleFavorite} />
+              <FeatureTable title="Globals" cols={[["name", "Name"], ["value", "Value"], ["module", "Module"], ["note", "Note"]]} rows={globals} view="features" favorites={favorites} toggleFavorite={toggleFavorite} />
               {feature.notes?.length > 0 && (
                 <div className="feature-notes">
                   <h4>Notes</h4>
