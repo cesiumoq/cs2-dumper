@@ -1,14 +1,11 @@
-/*                       cesium dumper
-/*                  https://cs2-dump.vercel.app
-/*  Generated from the live CS2 schema system.
-*/
-
+/* cesium dumper | generated from live schema */
 #![allow(non_snake_case, non_camel_case_types, dead_code)]
 
-pub mod networksystem {
+pub mod networksystem_dll {
 
     #[repr(C)]
     pub struct ChangeAccessorFieldPathIndex_t {
-        pub m_Value: [u8; 0x4], // 0x0
+        pub _: [u8; 0x4], // 0x0
     }
+
 }

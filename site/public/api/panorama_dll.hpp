@@ -1,7 +1,7 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:50 04/11/2026 (GMT)
+/*  Dumped At       : 22:59 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
 
@@ -14,7 +14,7 @@
 #include <cstddef>
 #include <cstdint>
 
-namespace cs2::panorama {
+namespace cs2::panorama_dll {
 
 enum class ELayoutNodeType : std::int32_t {
     ROOT = 0,

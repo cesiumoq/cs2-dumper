@@ -1,7 +1,7 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:50 04/11/2026 (GMT)
+/*  Dumped At       : 22:59 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
 
@@ -14,7 +14,7 @@
 #include <cstddef>
 #include <cstdint>
 
-namespace cs2::scenesystem {
+namespace cs2::scenesystem_dll {
 
 enum class ESceneObjectMeshletVisualization : std::int32_t {
     SCENEOBJECT_MESHLET_VIS_NONE = 0,
@@ -81,28 +81,28 @@ enum class ESceneObjectVisualization : std::int32_t {
 
 struct CSSDSMsg_ViewTarget {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_Name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_TextureId[0x8]; // 0x8 uint64
-    std::uint8_t m_nWidth[0x4]; // 0x10 int32
-    std::uint8_t m_nHeight[0x4]; // 0x14 int32
-    std::uint8_t m_nRequestedWidth[0x4]; // 0x18 int32
-    std::uint8_t m_nRequestedHeight[0x4]; // 0x1C int32
-    std::uint8_t m_nNumMipLevels[0x4]; // 0x20 int32
-    std::uint8_t m_nDepth[0x4]; // 0x24 int32
-    std::uint8_t m_nMultisampleNumSamples[0x4]; // 0x28 int32
-    std::uint8_t m_nFormat[0x4]; // 0x2C int32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x4]; // 0x28 
+    std::uint8_t _[0x4]; // 0x2c 
 };
 
 struct SceneViewId_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_nViewId[0x8]; // 0x0 uint64
-    std::uint8_t m_nFrameCount[0x8]; // 0x8 uint64
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CSSDSEndFrameViewInfo {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_nViewId[0x8]; // 0x0 uint64
-    std::uint8_t m_ViewName[0x8]; // 0x8 CUtlString
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CSSDSMsg_PostLayer {
@@ -112,11 +112,11 @@ struct CSSDSMsg_PostLayer {
 
 struct CSSDSMsg_LayerBase {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_viewId[0x10]; // 0x0 SceneViewId_t
-    std::uint8_t m_ViewName[0x8]; // 0x10 CUtlString
-    std::uint8_t m_nLayerId[0x8]; // 0x18 uint64
-    std::uint8_t m_LayerName[0x8]; // 0x20 CUtlString
-    std::uint8_t m_displayText[0x8]; // 0x28 CUtlString
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
 };
 
 struct CSSDSMsg_PreLayer {
@@ -126,20 +126,20 @@ struct CSSDSMsg_PreLayer {
 
 struct CSSDSMsg_ViewTargetList {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_viewId[0x10]; // 0x0 SceneViewId_t
-    std::uint8_t m_ViewName[0x8]; // 0x10 CUtlString
-    std::uint8_t m_Targets[0x18]; // 0x18 CUtlVector<CSSDSMsg_ViewTarget>
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x18]; // 0x18 
 };
 
 struct CSSDSMsg_ViewRender {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_viewId[0x10]; // 0x0 SceneViewId_t
-    std::uint8_t m_ViewName[0x8]; // 0x10 CUtlString
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CSSDSMsg_EndFrame {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_Views[0x18]; // 0x0 CUtlVector<CSSDSEndFrameViewInfo>
+    std::uint8_t _[0x18]; // 0x0 
 };
 
 } // namespace

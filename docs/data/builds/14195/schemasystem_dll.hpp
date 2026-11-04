@@ -1,7 +1,7 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:50 04/11/2026 (GMT)
+/*  Dumped At       : 22:59 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
 
@@ -14,7 +14,7 @@
 #include <cstddef>
 #include <cstdint>
 
-namespace cs2::schemasystem {
+namespace cs2::schemasystem_dll {
 
 enum class fieldtype_t : std::int32_t {
     FIELD_VOID = 0,
@@ -116,58 +116,58 @@ struct InfoForResourceTypeCResourceManifestInternal {
 
 struct CSchemaSystemInternalRegistration {
     static constexpr std::size_t size = 0x180;
-    std::uint8_t m_Vector2D[0x8]; // 0x0 Vector2D
-    std::uint8_t m_Vector[0xC]; // 0x8 Vector
-    std::uint8_t m_VectorWS[0xC]; // 0x14 VectorWS
-    std::uint8_t m_VectorAligned[0x10]; // 0x20 VectorAligned
-    std::uint8_t m_Quaternion[0x10]; // 0x30 Quaternion
-    std::uint8_t m_QAngle[0xC]; // 0x40 QAngle
-    std::uint8_t m_RotationVector[0xC]; // 0x4C RotationVector
-    std::uint8_t m_RadianEuler[0xC]; // 0x58 RadianEuler
-    std::uint8_t m_DegreeEuler[0xC]; // 0x64 DegreeEuler
-    std::uint8_t m_QuaternionStorage[0x10]; // 0x70 QuaternionStorage
-    std::uint8_t m_matrix3x4_t[0x30]; // 0x80 matrix3x4_t
-    std::uint8_t m_matrix3x4a_t[0x30]; // 0xB0 matrix3x4a_t
-    std::uint8_t m_Color[0x4]; // 0xE0 Color
-    std::uint8_t m_Vector4D[0x1C]; // 0xE4 Vector4D
-    std::uint8_t m_CTransform[0x20]; // 0x100 CTransform
-    std::uint8_t m_pKeyValues[0x8]; // 0x120 KeyValues*
-    std::uint8_t m_CUtlBinaryBlock[0x10]; // 0x128 CUtlBinaryBlock
-    std::uint8_t m_CUtlString[0x8]; // 0x138 CUtlString
-    std::uint8_t m_CUtlSymbol[0x4]; // 0x140 CUtlSymbol
-    std::uint8_t m_stringToken[0x4]; // 0x144 CUtlStringToken
-    std::uint8_t m_stringTokenWithStorage[0x18]; // 0x148 CUtlStringTokenWithStorage
-    std::uint8_t m_ResourceTypes[0x8]; // 0x160 CResourceArray<CResourcePointer<CResourceString>>
-    std::uint8_t m_KV3[0x18]; // 0x168 KeyValues3
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0xc]; // 0x8 
+    std::uint8_t _[0xc]; // 0x14 
+    std::uint8_t _[0x10]; // 0x20 
+    std::uint8_t _[0x10]; // 0x30 
+    std::uint8_t _[0xc]; // 0x40 
+    std::uint8_t _[0xc]; // 0x4c 
+    std::uint8_t _[0xc]; // 0x58 
+    std::uint8_t _[0xc]; // 0x64 
+    std::uint8_t _[0x10]; // 0x70 
+    std::uint8_t _[0x30]; // 0x80 
+    std::uint8_t _[0x30]; // 0xb0 
+    std::uint8_t _[0x4]; // 0xe0 
+    std::uint8_t _[0x1c]; // 0xe4 
+    std::uint8_t _[0x20]; // 0x100 
+    std::uint8_t _[0x8]; // 0x120 
+    std::uint8_t _[0x10]; // 0x128 
+    std::uint8_t _[0x8]; // 0x138 
+    std::uint8_t _[0x4]; // 0x140 
+    std::uint8_t _[0x4]; // 0x144 
+    std::uint8_t _[0x18]; // 0x148 
+    std::uint8_t _[0x8]; // 0x160 
+    std::uint8_t _[0x18]; // 0x168 
 };
 
 struct CExampleSchemaVData_PolymorphicDerivedA {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nDerivedA[0x8]; // 0x10 int32
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CExampleSchemaVData_PolymorphicBase {
     static constexpr std::size_t size = 0x10;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_nBase[0x8]; // 0x8 int32
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CExampleSchemaVData_PolymorphicDerivedB {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nDerivedB[0x8]; // 0x10 int32
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct ResourceId_t {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_Value[0x8]; // 0x0 uint64
+    std::uint8_t _[0x8]; // 0x0 
 };
 
 struct CExampleSchemaVData_Monomorphic {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_nExample1[0x4]; // 0x0 int32
-    std::uint8_t m_nExample2[0x4]; // 0x4 int32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 } // namespace

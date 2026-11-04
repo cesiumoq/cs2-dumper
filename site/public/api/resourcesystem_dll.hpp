@@ -1,7 +1,7 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:50 04/11/2026 (GMT)
+/*  Dumped At       : 22:59 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
 
@@ -14,7 +14,7 @@
 #include <cstddef>
 #include <cstdint>
 
-namespace cs2::resourcesystem {
+namespace cs2::resourcesystem_dll {
 
 enum class NoiseStreamModifier_t : std::int32_t {
     NOISE_STREAM_MODIFIER_NONE = 0,
@@ -64,8 +64,8 @@ struct InfoForResourceTypeCResponseRulesList {
 
 struct AABBWS_t {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_vMinBounds[0xC]; // 0x0 VectorWS
-    std::uint8_t m_vMaxBounds[0xC]; // 0xC VectorWS
+    std::uint8_t _[0xc]; // 0x0 
+    std::uint8_t _[0xc]; // 0xc 
 };
 
 struct InfoForResourceTypeCDotaItemDefinitionResource {
@@ -85,8 +85,8 @@ struct InfoForResourceTypeCVSoundStackScriptList {
 
 struct PackedAABB_t {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_nPackedMin[0x4]; // 0x0 uint32
-    std::uint8_t m_nPackedMax[0x4]; // 0x4 uint32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct InfoForResourceTypeCVPhysXSurfacePropertiesList {
@@ -101,14 +101,14 @@ struct InfoForResourceTypeManifestTestResource_t {
 
 struct ConstantInfo_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_nameToken[0x4]; // 0x8 CUtlStringToken
-    std::uint8_t m_flValue[0x4]; // 0xC float32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
 };
 
 struct FuseFunctionIndex_t {
     static constexpr std::size_t size = 0x2;
-    std::uint8_t m_Value[0x2]; // 0x0 uint16
+    std::uint8_t _[0x2]; // 0x0 
 };
 
 struct InfoForResourceTypeCGcExportableExternalData {
@@ -127,13 +127,13 @@ struct InfoForResourceTypeCJavaScriptResource {
 };
 
 struct CFuseSymbolTable {
-    static constexpr std::size_t size = 0xB0;
-    std::uint8_t m_constants[0x18]; // 0x0 CUtlVector<ConstantInfo_t>
-    std::uint8_t m_variables[0x18]; // 0x18 CUtlVector<VariableInfo_t>
-    std::uint8_t m_functions[0x18]; // 0x30 CUtlVector<FunctionInfo_t>
-    std::uint8_t m_constantMap[0x20]; // 0x48 CUtlHashtable<CUtlStringToken,int32>
-    std::uint8_t m_variableMap[0x20]; // 0x68 CUtlHashtable<CUtlStringToken,int32>
-    std::uint8_t m_functionMap[0x28]; // 0x88 CUtlHashtable<CUtlStringToken,int32>
+    static constexpr std::size_t size = 0xb0;
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x20]; // 0x48 
+    std::uint8_t _[0x20]; // 0x68 
+    std::uint8_t _[0x28]; // 0x88 
 };
 
 struct InfoForResourceTypeCRenderMesh {
@@ -173,8 +173,8 @@ struct InfoForResourceTypeProceduralTestResource_t {
 
 struct AABB_t {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_vMinBounds[0xC]; // 0x0 Vector
-    std::uint8_t m_vMaxBounds[0xC]; // 0xC Vector
+    std::uint8_t _[0xc]; // 0x0 
+    std::uint8_t _[0xc]; // 0xc 
 };
 
 struct InfoForResourceTypeCPostProcessingResource {
@@ -184,12 +184,12 @@ struct InfoForResourceTypeCPostProcessingResource {
 
 struct VariableInfo_t {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_nameToken[0x4]; // 0x8 CUtlStringToken
-    std::uint8_t m_nIndex[0x2]; // 0xC FuseVariableIndex_t
-    std::uint8_t m_nNumComponents[0x1]; // 0xE uint8
-    std::uint8_t m_eVarType[0x1]; // 0xF FuseVariableType_t
-    std::uint8_t m_eAccess[0x8]; // 0x10 FuseVariableAccess_t
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x2]; // 0xc 
+    std::uint8_t _[0x1]; // 0xe 
+    std::uint8_t _[0x1]; // 0xf 
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct InfoForResourceTypeIParticleSnapshot {
@@ -199,10 +199,10 @@ struct InfoForResourceTypeIParticleSnapshot {
 
 struct FourQuaternions {
     static constexpr std::size_t size = 0x40;
-    std::uint8_t x[0x10]; // 0x0 fltx4
-    std::uint8_t y[0x10]; // 0x10 fltx4
-    std::uint8_t z[0x10]; // 0x20 fltx4
-    std::uint8_t w[0x10]; // 0x30 fltx4
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0x10]; // 0x20 
+    std::uint8_t _[0x10]; // 0x30 
 };
 
 struct InfoForResourceTypeCPanoramaLayout {
@@ -272,10 +272,10 @@ struct InfoForResourceTypeCNmGraphDefinition {
 
 struct CFuseProgram {
     static constexpr std::size_t size = 0x50;
-    std::uint8_t m_programBuffer[0x18]; // 0x0 CUtlVector<uint8>
-    std::uint8_t m_variablesRead[0x18]; // 0x18 CUtlVector<FuseVariableIndex_t>
-    std::uint8_t m_variablesWritten[0x18]; // 0x30 CUtlVector<FuseVariableIndex_t>
-    std::uint8_t m_nMaxTempVarsUsed[0x8]; // 0x48 int32
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x8]; // 0x48 
 };
 
 struct InfoForResourceTypeCCompositeMaterialKit {
@@ -321,11 +321,11 @@ struct InfoForResourceTypeCVDataItemDefs {
 struct FunctionInfo_t {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_name[0x8]; // 0x8 CUtlString
-    std::uint8_t m_nameToken[0x4]; // 0x10 CUtlStringToken
-    std::uint8_t m_nParamCount[0x4]; // 0x14 int32
-    std::uint8_t m_nIndex[0x2]; // 0x18 FuseFunctionIndex_t
-    std::uint8_t m_bIsPure[0x6]; // 0x1A bool
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x2]; // 0x18 
+    std::uint8_t _[0x6]; // 0x1a 
 };
 
 struct InfoForResourceTypeCVDataResource {
@@ -334,10 +334,10 @@ struct InfoForResourceTypeCVDataResource {
 };
 
 struct NoiseOscillatorDef_t {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_flPhase[0x4]; // 0x0 float32
-    std::uint8_t m_flFrequency[0x4]; // 0x4 float32
-    std::uint8_t m_flAmplitude[0x4]; // 0x8 float32
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
 };
 
 struct InfoForResourceTypeCModel {
@@ -352,18 +352,18 @@ struct InfoForResourceTypeCDOTANovelsList {
 
 struct NoiseStreamDef_t {
     static constexpr std::size_t size = 0x50;
-    std::uint8_t m_nType[0x4]; // 0x0 NoiseStreamType_t
-    std::uint8_t m_nModifier[0x4]; // 0x4 NoiseStreamModifier_t
-    std::uint8_t m_nTurbulence[0x4]; // 0x8 NoiseStreamTurbulence_t
-    std::uint8_t m_flOutputMin[0x4]; // 0xC float32
-    std::uint8_t m_flOutputMax[0x4]; // 0x10 float32
-    std::uint8_t m_flScale[0x4]; // 0x14 float32
-    std::uint8_t m_vOffsetRate[0xC]; // 0x18 Vector
-    std::uint8_t m_flOffset[0x4]; // 0x24 float32
-    std::uint8_t m_nOctaves[0x4]; // 0x28 int32
-    std::uint8_t m_flTurbulenceScale[0x4]; // 0x2C float32
-    std::uint8_t m_flTurbulenceMix[0x8]; // 0x30 float32
-    std::uint8_t m_Oscillators[0x18]; // 0x38 CUtlVector<NoiseOscillatorDef_t>
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0xc]; // 0x18 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x4]; // 0x28 
+    std::uint8_t _[0x4]; // 0x2c 
+    std::uint8_t _[0x8]; // 0x30 
+    std::uint8_t _[0x18]; // 0x38 
 };
 
 struct InfoForResourceTypeCTextureBase {
@@ -373,7 +373,7 @@ struct InfoForResourceTypeCTextureBase {
 
 struct FuseVariableIndex_t {
     static constexpr std::size_t size = 0x2;
-    std::uint8_t m_Value[0x2]; // 0x0 uint16
+    std::uint8_t _[0x2]; // 0x0 
 };
 
 struct InfoForResourceTypeIParticleSystemDefinition {
@@ -388,8 +388,8 @@ struct InfoForResourceTypeCSequenceGroupData {
 
 struct ManifestTestResource_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_child[0x8]; // 0x8 CStrongHandle<InfoForResourceTypeManifestTestResource_t>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct InfoForResourceTypeCEntityLump {

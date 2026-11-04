@@ -1,7 +1,7 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:50 04/11/2026 (GMT)
+/*  Dumped At       : 22:59 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
 
@@ -14,7 +14,7 @@
 #include <cstddef>
 #include <cstdint>
 
-namespace cs2::animationsystem {
+namespace cs2::animationsystem_dll {
 
 enum class PulseBestOutflowRules_t : std::int32_t {
     SORT_BY_NUMBER_OF_VALID_CRITERIA = 0,
@@ -74,7 +74,7 @@ enum class CNmEventRelevance_t : std::int32_t {
 };
 
 enum class BoneTransformSpace_t : std::int32_t {
-    BoneTransformSpace_Invalid = 18446744073709551615,
+    BoneTransformSpace_Invalid = -1,
     BoneTransformSpace_Parent = 0,
     BoneTransformSpace_Model = 1,
     BoneTransformSpace_World = 2,
@@ -122,7 +122,7 @@ enum class CNmParticleEvent__Type_t : std::int32_t {
 };
 
 enum class ParticleFloatBiasType_t : std::int32_t {
-    PF_BIAS_TYPE_INVALID = 18446744073709551615,
+    PF_BIAS_TYPE_INVALID = -1,
     PF_BIAS_TYPE_STANDARD = 0,
     PF_BIAS_TYPE_GAIN = 1,
     PF_BIAS_TYPE_EXPONENTIAL = 2,
@@ -137,7 +137,7 @@ enum class CNmTargetWarpNode__TargetUpdateRule_t : std::int32_t {
 };
 
 enum class SharedMovementGait_t : std::int32_t {
-    eInvalid = 18446744073709551615,
+    eInvalid = -1,
     eSlow = 0,
     eMedium = 1,
     eFast = 2,
@@ -168,7 +168,7 @@ enum class IKTargetCoordinateSystem : std::int32_t {
 };
 
 enum class ParticleFloatType_t : std::int32_t {
-    PF_TYPE_INVALID = 18446744073709551615,
+    PF_TYPE_INVALID = -1,
     PF_TYPE_LITERAL = 0,
     PF_TYPE_NAMED_VALUE = 1,
     PF_TYPE_RANDOM_UNIFORM = 2,
@@ -494,7 +494,7 @@ enum class CNmSyncEventIndexConditionNode__TriggerMode_t : std::int32_t {
 };
 
 enum class ParticleFloatRoundType_t : std::int32_t {
-    PF_ROUND_TYPE_INVALID = 18446744073709551615,
+    PF_ROUND_TYPE_INVALID = -1,
     PF_ROUND_TYPE_NEAREST = 0,
     PF_ROUND_TYPE_FLOOR = 1,
     PF_ROUND_TYPE_CEIL = 2,
@@ -549,7 +549,7 @@ enum class NmIKBlendMode_t : std::int32_t {
 };
 
 enum class ModelBoneFlexComponent_t : std::int32_t {
-    MODEL_BONE_FLEX_INVALID = 18446744073709551615,
+    MODEL_BONE_FLEX_INVALID = -1,
     MODEL_BONE_FLEX_TX = 0,
     MODEL_BONE_FLEX_TY = 1,
     MODEL_BONE_FLEX_TZ = 2,
@@ -700,7 +700,7 @@ enum class VPhysXConstraintParams_t__EnumFlags0_t : std::int32_t {
 };
 
 enum class ParticleFloatMapType_t : std::int32_t {
-    PF_MAP_TYPE_INVALID = 18446744073709551615,
+    PF_MAP_TYPE_INVALID = -1,
     PF_MAP_TYPE_DIRECT = 0,
     PF_MAP_TYPE_MULT = 1,
     PF_MAP_TYPE_REMAP = 2,
@@ -815,7 +815,7 @@ enum class NmPoseBlendMode_t : std::int32_t {
 };
 
 enum class ParticleFloatInputMode_t : std::int32_t {
-    PF_INPUT_MODE_INVALID = 18446744073709551615,
+    PF_INPUT_MODE_INVALID = -1,
     PF_INPUT_MODE_CLAMPED = 0,
     PF_INPUT_MODE_LOOPED = 1,
     PF_INPUT_MODE_COUNT = 2,
@@ -864,14 +864,14 @@ enum class NmGraphValueType_t : std::int32_t {
 };
 
 enum class ParticleFloatRandomMode_t : std::int32_t {
-    PF_RANDOM_MODE_INVALID = 18446744073709551615,
+    PF_RANDOM_MODE_INVALID = -1,
     PF_RANDOM_MODE_CONSTANT = 0,
     PF_RANDOM_MODE_VARYING = 1,
     PF_RANDOM_MODE_COUNT = 2,
 };
 
 enum class PulseValueType_t : std::int32_t {
-    PVAL_VOID = 18446744073709551615,
+    PVAL_VOID = -1,
     PVAL_BOOL = 0,
     PVAL_INT = 1,
     PVAL_FLOAT = 2,
@@ -916,7 +916,7 @@ enum class PFNoiseModifier_t : std::int32_t {
 };
 
 enum class ParticleVecType_t : std::int32_t {
-    PVEC_TYPE_INVALID = 18446744073709551615,
+    PVEC_TYPE_INVALID = -1,
     PVEC_TYPE_LITERAL = 0,
     PVEC_TYPE_LITERAL_COLOR = 1,
     PVEC_TYPE_NAMED_VALUE = 2,
@@ -1037,7 +1037,7 @@ enum class IkEndEffectorType : std::int32_t {
 };
 
 enum class AnimScriptType : std::int32_t {
-    ANIMSCRIPT_TYPE_INVALID = 18446744073709551615,
+    ANIMSCRIPT_TYPE_INVALID = -1,
     ANIMSCRIPT_FUSE_GENERAL = 0,
     ANIMSCRIPT_FUSE_STATEMACHINE = 1,
 };
@@ -1078,7 +1078,7 @@ enum class SelectorTagBehavior_t : std::int32_t {
 };
 
 enum class HandshakeTagType_t : std::int32_t {
-    eInvalid = 18446744073709551615,
+    eInvalid = -1,
     eTask = 0,
     eMovement = 1,
     eCount = 2,
@@ -1239,7 +1239,7 @@ enum class ParticleTransformType_t : std::int32_t {
 };
 
 enum class ParticleAttachment_t : std::int32_t {
-    PATTACH_INVALID = 18446744073709551615,
+    PATTACH_INVALID = -1,
     PATTACH_ABSORIGIN = 0,
     PATTACH_ABSORIGIN_FOLLOW = 1,
     PATTACH_CUSTOMORIGIN = 2,
@@ -1309,7 +1309,7 @@ enum class VPhysXJoint_t__Flags_t : std::int32_t {
 };
 
 enum class ScriptedHeldWeaponBehavior_t : std::int32_t {
-    eInvalid = 18446744073709551615,
+    eInvalid = -1,
     eHolster = 0,
     eDeploy = 1,
     eDrop = 2,
@@ -1403,7 +1403,7 @@ enum class IkTargetType : std::int32_t {
 };
 
 enum class RenderMeshSlotType_t : std::int32_t {
-    RENDERMESH_SLOT_INVALID = 18446744073709551615,
+    RENDERMESH_SLOT_INVALID = -1,
     RENDERMESH_SLOT_PER_VERTEX = 0,
     RENDERMESH_SLOT_PER_INSTANCE = 1,
 };
@@ -1430,7 +1430,7 @@ enum class MovementCapability_t : std::int32_t {
 };
 
 enum class ModelConfigAttachmentType_t : std::int32_t {
-    MODEL_CONFIG_ATTACHMENT_INVALID = 18446744073709551615,
+    MODEL_CONFIG_ATTACHMENT_INVALID = -1,
     MODEL_CONFIG_ATTACHMENT_BONE_OR_ATTACHMENT = 0,
     MODEL_CONFIG_ATTACHMENT_ROOT_RELATIVE = 1,
     MODEL_CONFIG_ATTACHMENT_BONEMERGE = 2,
@@ -1453,7 +1453,7 @@ enum class NPCPhysicsHullType_t : std::int32_t {
 };
 
 enum class PulseDomainValueType_t : std::int32_t {
-    INVALID = 18446744073709551615,
+    INVALID = -1,
     ENTITY_NAME = 0,
     PANEL_ID = 1,
     COUNT = 2,
@@ -1472,21 +1472,21 @@ enum class MoodType_t : std::int32_t {
 struct CPulseCell_WaitForCursorsWithTag {
     static constexpr std::size_t size = 0x130;
     std::uint8_t pad_0[0x128]; // 0x0
-    std::uint8_t m_bTagSelfWhenComplete[0x4]; // 0x128 bool
-    std::uint8_t m_nDesiredKillPriority[0x4]; // 0x12C PulseCursorCancelPriority_t
+    std::uint8_t _[0x4]; // 0x128 
+    std::uint8_t _[0x4]; // 0x12c 
 };
 
 struct CPulseCell_RaceCursors {
     static constexpr std::size_t size = 0x138;
-    std::uint8_t pad_0[0xD8]; // 0x0
-    std::uint8_t m_Outflows[0x18]; // 0xD8 CUtlVector<CPulse_OutflowConnection>
-    std::uint8_t m_OnFinished[0x48]; // 0xF0 CPulse_ResumePoint
+    std::uint8_t pad_0[0xd8]; // 0x0
+    std::uint8_t _[0x18]; // 0xd8 
+    std::uint8_t _[0x48]; // 0xf0 
 };
 
 struct CPulseCell_Base {
     static constexpr std::size_t size = 0x48;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_nEditorNodeID[0x40]; // 0x8 PulseDocNodeID_t
+    std::uint8_t _[0x40]; // 0x8 
 };
 
 struct CPulse_ResumePoint {
@@ -1497,71 +1497,71 @@ struct CPulse_ResumePoint {
 struct CPulseCell_PickBestOutflowSelector {
     static constexpr std::size_t size = 0x68;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_nCheckType[0x8]; // 0x48 PulseBestOutflowRules_t
-    std::uint8_t m_OutflowList[0x18]; // 0x50 PulseSelectorOutflowList_t
+    std::uint8_t _[0x8]; // 0x48 
+    std::uint8_t _[0x18]; // 0x50 
 };
 
 struct CParticleBindingRealPulse {
-    static constexpr std::size_t size = 0xA8;
-    std::uint8_t pad_0[0xA8]; // 0x0
+    static constexpr std::size_t size = 0xa8;
+    std::uint8_t pad_0[0xa8]; // 0x0
 };
 
 struct CPulseCell_WaitForObservable {
-    static constexpr std::size_t size = 0x1B0;
-    std::uint8_t pad_0[0xD8]; // 0x0
-    std::uint8_t m_Condition[0x90]; // 0xD8 CPulseObservableExpression<bool>
-    std::uint8_t m_OnTrue[0x48]; // 0x168 CPulse_ResumePoint
+    static constexpr std::size_t size = 0x1b0;
+    std::uint8_t pad_0[0xd8]; // 0x0
+    std::uint8_t _[0x90]; // 0xd8 
+    std::uint8_t _[0x48]; // 0x168 
 };
 
 struct CPulse_OutflowConnection {
     static constexpr std::size_t size = 0x48;
-    std::uint8_t m_SourceOutflowName[0x10]; // 0x0 PulseSymbol_t
-    std::uint8_t m_nDestChunk[0x4]; // 0x10 PulseRuntimeChunkIndex_t
-    std::uint8_t m_nInstruction[0x4]; // 0x14 int32
-    std::uint8_t m_OutflowRegisterMap[0x30]; // 0x18 PulseRegisterMap_t
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x30]; // 0x18 
 };
 
 struct CPulseGraphDef {
-    static constexpr std::size_t size = 0x1C0;
+    static constexpr std::size_t size = 0x1c0;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_DomainIdentifier[0x10]; // 0x8 PulseSymbol_t
-    std::uint8_t m_DomainSubType[0x18]; // 0x18 CPulseValueFullType
-    std::uint8_t m_ParentMapName[0x10]; // 0x30 PulseSymbol_t
-    std::uint8_t m_ParentXmlName[0x10]; // 0x40 PulseSymbol_t
-    std::uint8_t m_Chunks[0x18]; // 0x50 CUtlVector<CPulse_Chunk*>
-    std::uint8_t m_Cells[0x18]; // 0x68 CUtlVector<CPulseCell_Base*>
-    std::uint8_t m_Vars[0x18]; // 0x80 CUtlVector<CPulse_Variable>
-    std::uint8_t m_TempVarBanks[0x18]; // 0x98 CUtlVector<CPulse_TempVarBankDefinition*>
-    std::uint8_t m_PublicOutputs[0x18]; // 0xB0 CUtlVector<CPulse_PublicOutput>
-    std::uint8_t m_InvokeBindings[0x18]; // 0xC8 CUtlVector<CPulse_InvokeBinding*>
-    std::uint8_t m_CallInfos[0x18]; // 0xE0 CUtlVector<CPulse_CallInfo*>
-    std::uint8_t m_Constants[0x18]; // 0xF8 CUtlVector<CPulse_Constant>
-    std::uint8_t m_DomainValues[0x18]; // 0x110 CUtlVector<CPulse_DomainValue>
-    std::uint8_t m_BlackboardReferences[0x18]; // 0x128 CUtlVector<CPulse_BlackboardReference>
-    std::uint8_t m_OutputConnections[0x80]; // 0x140 CUtlVector<CPulse_OutputConnection*>
+    std::uint8_t _[0x10]; // 0x8 
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0x10]; // 0x30 
+    std::uint8_t _[0x10]; // 0x40 
+    std::uint8_t _[0x18]; // 0x50 
+    std::uint8_t _[0x18]; // 0x68 
+    std::uint8_t _[0x18]; // 0x80 
+    std::uint8_t _[0x18]; // 0x98 
+    std::uint8_t _[0x18]; // 0xb0 
+    std::uint8_t _[0x18]; // 0xc8 
+    std::uint8_t _[0x18]; // 0xe0 
+    std::uint8_t _[0x18]; // 0xf8 
+    std::uint8_t _[0x18]; // 0x110 
+    std::uint8_t _[0x18]; // 0x128 
+    std::uint8_t _[0x80]; // 0x140 
 };
 
 struct CPulseCell_FireCursors {
     static constexpr std::size_t size = 0x140;
-    std::uint8_t pad_0[0xD8]; // 0x0
-    std::uint8_t m_Outflows[0x18]; // 0xD8 CUtlVector<CPulse_OutflowConnection>
-    std::uint8_t m_bWaitForChildOutflows[0x8]; // 0xF0 bool
-    std::uint8_t m_OnFinished[0x48]; // 0xF8 CPulse_ResumePoint
+    std::uint8_t pad_0[0xd8]; // 0x0
+    std::uint8_t _[0x18]; // 0xd8 
+    std::uint8_t _[0x8]; // 0xf0 
+    std::uint8_t _[0x48]; // 0xf8 
 };
 
 struct CPulseCell_Timeline__TimelineEvent_t {
     static constexpr std::size_t size = 0x50;
-    std::uint8_t m_flTimeFromPrevious[0x8]; // 0x0 float32
-    std::uint8_t m_EventOutflow[0x48]; // 0x8 CPulse_OutflowConnection
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x48]; // 0x8 
 };
 
 struct CPulseCell_IntervalTimer__CursorState_t {
     static constexpr std::size_t size = 0x14;
-    std::uint8_t m_StartTime[0x4]; // 0x0 GameTime_t
-    std::uint8_t m_EndTime[0x4]; // 0x4 GameTime_t
-    std::uint8_t m_flWaitInterval[0x4]; // 0x8 float32
-    std::uint8_t m_flWaitIntervalHigh[0x4]; // 0xC float32
-    std::uint8_t m_bCompleteOnNextWake[0x4]; // 0x10 bool
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
 };
 
 struct CPulseCell_BaseRequirement {
@@ -1570,16 +1570,16 @@ struct CPulseCell_BaseRequirement {
 };
 
 struct CPulseCell_BaseState {
-    static constexpr std::size_t size = 0xD8;
-    std::uint8_t pad_0[0xD8]; // 0x0
+    static constexpr std::size_t size = 0xd8;
+    std::uint8_t pad_0[0xd8]; // 0x0
 };
 
 struct OutflowWithRequirements_t {
     static constexpr std::size_t size = 0x80;
-    std::uint8_t m_Connection[0x48]; // 0x0 CPulse_OutflowConnection
-    std::uint8_t m_DestinationFlowNodeID[0x8]; // 0x48 PulseDocNodeID_t
-    std::uint8_t m_RequirementNodeIDs[0x18]; // 0x50 CUtlVector<PulseDocNodeID_t>
-    std::uint8_t m_nCursorStateBlockIndex[0x18]; // 0x68 CUtlVector<int32>
+    std::uint8_t _[0x48]; // 0x0 
+    std::uint8_t _[0x8]; // 0x48 
+    std::uint8_t _[0x18]; // 0x50 
+    std::uint8_t _[0x18]; // 0x68 
 };
 
 struct CPulseCell_IsRequirementValid {
@@ -1590,13 +1590,13 @@ struct CPulseCell_IsRequirementValid {
 struct CPulseCell_Value_Gradient {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_Gradient[0x18]; // 0x48 CColorGradient
+    std::uint8_t _[0x18]; // 0x48 
 };
 
 struct PulseNodeDynamicOutflows_t__DynamicOutflow_t {
     static constexpr std::size_t size = 0x50;
-    std::uint8_t m_OutflowID[0x8]; // 0x0 CGlobalSymbol
-    std::uint8_t m_Connection[0x48]; // 0x8 CPulse_OutflowConnection
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x48]; // 0x8 
 };
 
 struct CBasePulseGraphInstance {
@@ -1607,7 +1607,7 @@ struct CBasePulseGraphInstance {
 struct CPulseCell_Inflow_GraphHook {
     static constexpr std::size_t size = 0x90;
     std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t m_HookName[0x10]; // 0x80 PulseSymbol_t
+    std::uint8_t _[0x10]; // 0x80 
 };
 
 struct SignatureOutflow_Resume {
@@ -1618,49 +1618,49 @@ struct SignatureOutflow_Resume {
 struct CPulseCell_Inflow_BaseEntrypoint {
     static constexpr std::size_t size = 0x80;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_EntryChunk[0x8]; // 0x48 PulseRuntimeChunkIndex_t
-    std::uint8_t m_RegisterMap[0x30]; // 0x50 PulseRegisterMap_t
+    std::uint8_t _[0x8]; // 0x48 
+    std::uint8_t _[0x30]; // 0x50 
 };
 
 struct CPulseCell_WaitForCursorsWithTagBase {
     static constexpr std::size_t size = 0x128;
-    std::uint8_t pad_0[0xD8]; // 0x0
-    std::uint8_t m_nCursorsAllowedToWait[0x8]; // 0xD8 int32
-    std::uint8_t m_WaitComplete[0x48]; // 0xE0 CPulse_ResumePoint
+    std::uint8_t pad_0[0xd8]; // 0x0
+    std::uint8_t _[0x8]; // 0xd8 
+    std::uint8_t _[0x48]; // 0xe0 
 };
 
 struct CPulse_InvokeBinding {
-    static constexpr std::size_t size = 0xB0;
-    std::uint8_t m_RegisterMap[0x30]; // 0x0 PulseRegisterMap_t
-    std::uint8_t m_FuncName[0x10]; // 0x30 PulseSymbol_t
-    std::uint8_t m_nCellIndex[0x4]; // 0x40 PulseRuntimeCellIndex_t
-    std::uint8_t m_nSrcChunk[0x4]; // 0x44 PulseRuntimeChunkIndex_t
-    std::uint8_t m_nSrcInstruction[0x68]; // 0x48 int32
+    static constexpr std::size_t size = 0xb0;
+    std::uint8_t _[0x30]; // 0x0 
+    std::uint8_t _[0x10]; // 0x30 
+    std::uint8_t _[0x4]; // 0x40 
+    std::uint8_t _[0x4]; // 0x44 
+    std::uint8_t _[0x68]; // 0x48 
 };
 
 struct CPulseCell_IntervalTimer {
     static constexpr std::size_t size = 0x168;
-    std::uint8_t pad_0[0xD8]; // 0x0
-    std::uint8_t m_Completed[0x48]; // 0xD8 CPulse_ResumePoint
-    std::uint8_t m_OnInterval[0x48]; // 0x120 SignatureOutflow_Continue
+    std::uint8_t pad_0[0xd8]; // 0x0
+    std::uint8_t _[0x48]; // 0xd8 
+    std::uint8_t _[0x48]; // 0x120 
 };
 
 struct CPulseCell_BaseLerp {
     static constexpr std::size_t size = 0x120;
-    std::uint8_t pad_0[0xD8]; // 0x0
-    std::uint8_t m_WakeResume[0x48]; // 0xD8 CPulse_ResumePoint
+    std::uint8_t pad_0[0xd8]; // 0x0
+    std::uint8_t _[0x48]; // 0xd8 
 };
 
 struct CPulseCell_Value_Curve {
     static constexpr std::size_t size = 0x88;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_Curve[0x40]; // 0x48 CPiecewiseCurve
+    std::uint8_t _[0x40]; // 0x48 
 };
 
 struct CPulseCell_Inflow_EventHandler {
     static constexpr std::size_t size = 0x90;
     std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t m_EventName[0x10]; // 0x80 PulseSymbol_t
+    std::uint8_t _[0x10]; // 0x80 
 };
 
 struct CPulseCell_BaseFlow {
@@ -1670,14 +1670,14 @@ struct CPulseCell_BaseFlow {
 
 struct CPulseCell_Outflow_CycleShuffled__InstanceState_t {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_Shuffle[0x20]; // 0x0 CUtlVectorFixedGrowable<uint8,8>
-    std::uint8_t m_nNextShuffle[0x8]; // 0x20 int32
+    std::uint8_t _[0x20]; // 0x0 
+    std::uint8_t _[0x8]; // 0x20 
 };
 
 struct CPulseCell_BaseLerp__CursorState_t {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_StartTime[0x4]; // 0x0 GameTime_t
-    std::uint8_t m_EndTime[0x4]; // 0x4 GameTime_t
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct SignatureOutflow_Continue {
@@ -1687,33 +1687,33 @@ struct SignatureOutflow_Continue {
 
 struct CPulseCell_Timeline {
     static constexpr std::size_t size = 0x140;
-    std::uint8_t pad_0[0xD8]; // 0x0
-    std::uint8_t m_TimelineEvents[0x18]; // 0xD8 CUtlVector<CPulseCell_Timeline::TimelineEvent_t>
-    std::uint8_t m_bWaitForChildOutflows[0x8]; // 0xF0 bool
-    std::uint8_t m_OnFinished[0x48]; // 0xF8 CPulse_ResumePoint
+    std::uint8_t pad_0[0xd8]; // 0x0
+    std::uint8_t _[0x18]; // 0xd8 
+    std::uint8_t _[0x8]; // 0xf0 
+    std::uint8_t _[0x48]; // 0xf8 
 };
 
 struct CPulseCell_Inflow_EntOutputHandler {
-    static constexpr std::size_t size = 0xB8;
+    static constexpr std::size_t size = 0xb8;
     std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t m_SourceEntity[0x10]; // 0x80 PulseSymbol_t
-    std::uint8_t m_SourceOutput[0x10]; // 0x90 PulseSymbol_t
-    std::uint8_t m_ExpectedParamType[0x18]; // 0xA0 CPulseValueFullType
+    std::uint8_t _[0x10]; // 0x80 
+    std::uint8_t _[0x10]; // 0x90 
+    std::uint8_t _[0x18]; // 0xa0 
 };
 
 struct CPulseCell_Outflow_CycleOrdered__InstanceState_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_nNextIndex[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CParticleCollectionBindingInstance {
-    static constexpr std::size_t size = 0xA8;
-    std::uint8_t pad_0[0xA8]; // 0x0
+    static constexpr std::size_t size = 0xa8;
+    std::uint8_t pad_0[0xa8]; // 0x0
 };
 
 struct CPulseCell_LimitCount__InstanceState_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_nCurrentCount[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CPulseCell_Step_DebugLog {
@@ -1722,60 +1722,60 @@ struct CPulseCell_Step_DebugLog {
 };
 
 struct CPulseCell_BaseYieldingInflow {
-    static constexpr std::size_t size = 0xD8;
+    static constexpr std::size_t size = 0xd8;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_BaseFlow_OnAfterCancel[0x48]; // 0x48 CPulse_ResumePoint
-    std::uint8_t m_BaseFlow_WhileActive[0x48]; // 0x90 CPulse_ResumePoint
+    std::uint8_t _[0x48]; // 0x48 
+    std::uint8_t _[0x48]; // 0x90 
 };
 
 struct PulseNodeDynamicOutflows_t {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_Outflows[0x18]; // 0x0 CUtlVector<PulseNodeDynamicOutflows_t::DynamicOutflow_t>
+    std::uint8_t _[0x18]; // 0x0 
 };
 
 struct CPulseCell_IsRequirementValid__Criteria_t {
     static constexpr std::size_t size = 0x1;
-    std::uint8_t m_bIsValid[0x1]; // 0x0 bool
+    std::uint8_t _[0x1]; // 0x0 
 };
 
 struct CPulseCell_Inflow_ObservableVariableListener {
     static constexpr std::size_t size = 0x88;
     std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t m_nBlackboardReference[0x2]; // 0x80 PulseRuntimeBlackboardReferenceIndex_t
-    std::uint8_t m_bSelfReference[0x6]; // 0x82 bool
+    std::uint8_t _[0x2]; // 0x80 
+    std::uint8_t _[0x6]; // 0x82 
 };
 
 struct CPulseCell_Outflow_CycleOrdered {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_Outputs[0x18]; // 0x48 CUtlVector<CPulse_OutflowConnection>
+    std::uint8_t _[0x18]; // 0x48 
 };
 
 struct PulseSelectorOutflowList_t {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_Outflows[0x18]; // 0x0 CUtlVector<OutflowWithRequirements_t>
+    std::uint8_t _[0x18]; // 0x0 
 };
 
 struct CPulseCell_Inflow_Wait {
     static constexpr std::size_t size = 0x120;
-    std::uint8_t pad_0[0xD8]; // 0x0
-    std::uint8_t m_WakeResume[0x48]; // 0xD8 CPulse_ResumePoint
+    std::uint8_t pad_0[0xd8]; // 0x0
+    std::uint8_t _[0x48]; // 0xd8 
 };
 
 struct CPulseCell_Outflow_CycleShuffled {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_Outputs[0x18]; // 0x48 CUtlVector<CPulse_OutflowConnection>
+    std::uint8_t _[0x18]; // 0x48 
 };
 
 struct CPulseCell_Inflow_Method {
-    static constexpr std::size_t size = 0xC0;
+    static constexpr std::size_t size = 0xc0;
     std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t m_MethodName[0x10]; // 0x80 PulseSymbol_t
-    std::uint8_t m_Description[0x8]; // 0x90 CUtlString
-    std::uint8_t m_bIsPublic[0x8]; // 0x98 bool
-    std::uint8_t m_Args[0x10]; // 0xA0 CUtlLeanVector<CPulseRuntimeMethodArg>
-    std::uint8_t m_ReturnValues[0x10]; // 0xB0 CUtlLeanVector<CPulseRuntimeMethodArg>
+    std::uint8_t _[0x10]; // 0x80 
+    std::uint8_t _[0x8]; // 0x90 
+    std::uint8_t _[0x8]; // 0x98 
+    std::uint8_t _[0x10]; // 0xa0 
+    std::uint8_t _[0x10]; // 0xb0 
 };
 
 struct CPulseCell_BaseValue {
@@ -1784,43 +1784,43 @@ struct CPulseCell_BaseValue {
 };
 
 struct CPulseCell_BooleanSwitchState {
-    static constexpr std::size_t size = 0x1F8;
-    std::uint8_t pad_0[0xD8]; // 0x0
-    std::uint8_t m_Condition[0x90]; // 0xD8 CPulseObservableExpression<bool>
-    std::uint8_t m_WhenTrue[0x48]; // 0x168 CPulse_OutflowConnection
-    std::uint8_t m_WhenFalse[0x48]; // 0x1B0 CPulse_OutflowConnection
+    static constexpr std::size_t size = 0x1f8;
+    std::uint8_t pad_0[0xd8]; // 0x0
+    std::uint8_t _[0x90]; // 0xd8 
+    std::uint8_t _[0x48]; // 0x168 
+    std::uint8_t _[0x48]; // 0x1b0 
 };
 
 struct CPulseCell_Inflow_Yield {
     static constexpr std::size_t size = 0x120;
-    std::uint8_t pad_0[0xD8]; // 0x0
-    std::uint8_t m_UnyieldResume[0x48]; // 0xD8 CPulse_ResumePoint
+    std::uint8_t pad_0[0xd8]; // 0x0
+    std::uint8_t _[0x48]; // 0xd8 
 };
 
 struct CPulseCell_Unknown {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_UnknownKeys[0x10]; // 0x48 KeyValues3
+    std::uint8_t _[0x10]; // 0x48 
 };
 
 struct CPulseCell_Outflow_CycleRandom {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_Outputs[0x18]; // 0x48 CUtlVector<CPulse_OutflowConnection>
+    std::uint8_t _[0x18]; // 0x48 
 };
 
 struct CPulseCell_Step_PublicOutput {
     static constexpr std::size_t size = 0x50;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_OutputIndex[0x8]; // 0x48 PulseRuntimeOutputIndex_t
+    std::uint8_t _[0x8]; // 0x48 
 };
 
 struct CPulse_BlackboardReference {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_hBlackboardResource[0x8]; // 0x0 CStrongHandle<InfoForResourceTypeIPulseGraphDef>
-    std::uint8_t m_BlackboardResource[0x10]; // 0x8 PulseSymbol_t
-    std::uint8_t m_nNodeID[0x8]; // 0x18 PulseDocNodeID_t
-    std::uint8_t m_NodeName[0x8]; // 0x20 CGlobalSymbol
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x10]; // 0x8 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
 };
 
 struct CPulseCell_ReturnValues {
@@ -1834,66 +1834,66 @@ struct CPulseCell_Value_RandomInt {
 };
 
 struct CAnimationLayer {
-    static constexpr std::size_t size = 0x4C;
-    std::uint8_t m_hSequence[0xC]; // 0x0 CAnimNetVar<int32>
-    std::uint8_t m_flPrevCycle[0x4]; // 0xC float32
-    std::uint8_t m_flCycle[0xC]; // 0x10 CAnimNetVar<float32>
-    std::uint8_t m_flWeight[0xC]; // 0x1C CAnimNetVar<float32>
-    std::uint8_t m_nOrder[0xC]; // 0x28 CAnimNetVar<int32>
-    std::uint8_t m_bLooping[0x4]; // 0x34 bool
-    std::uint8_t m_nFlags[0x4]; // 0x38 int32
-    std::uint8_t m_bSequenceFinished[0x4]; // 0x3C bool
-    std::uint8_t m_flKillRate[0x4]; // 0x40 float32
-    std::uint8_t m_flKillDelay[0x4]; // 0x44 float32
-    std::uint8_t m_nPriority[0x4]; // 0x48 int32
+    static constexpr std::size_t size = 0x4c;
+    std::uint8_t _[0xc]; // 0x0 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0xc]; // 0x10 
+    std::uint8_t _[0xc]; // 0x1c 
+    std::uint8_t _[0xc]; // 0x28 
+    std::uint8_t _[0x4]; // 0x34 
+    std::uint8_t _[0x4]; // 0x38 
+    std::uint8_t _[0x4]; // 0x3c 
+    std::uint8_t _[0x4]; // 0x40 
+    std::uint8_t _[0x4]; // 0x44 
+    std::uint8_t _[0x4]; // 0x48 
 };
 
 struct CPulse_CallInfo {
     static constexpr std::size_t size = 0x60;
-    std::uint8_t m_PortName[0x10]; // 0x0 PulseSymbol_t
-    std::uint8_t m_nEditorNodeID[0x8]; // 0x10 PulseDocNodeID_t
-    std::uint8_t m_RegisterMap[0x30]; // 0x18 PulseRegisterMap_t
-    std::uint8_t m_CallMethodID[0x4]; // 0x48 PulseDocNodeID_t
-    std::uint8_t m_nSrcChunk[0x4]; // 0x4C PulseRuntimeChunkIndex_t
-    std::uint8_t m_nSrcInstruction[0x4]; // 0x50 int32
-    std::uint8_t m_nBreakDestChunk[0x4]; // 0x54 PulseRuntimeChunkIndex_t
-    std::uint8_t m_nBreakDestInstruction[0x8]; // 0x58 int32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x30]; // 0x18 
+    std::uint8_t _[0x4]; // 0x48 
+    std::uint8_t _[0x4]; // 0x4c 
+    std::uint8_t _[0x4]; // 0x50 
+    std::uint8_t _[0x4]; // 0x54 
+    std::uint8_t _[0x8]; // 0x58 
 };
 
 struct CPulseCell_InlineNodeSkipSelector {
-    static constexpr std::size_t size = 0xB0;
+    static constexpr std::size_t size = 0xb0;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_nFlowNodeID[0x4]; // 0x48 PulseDocNodeID_t
-    std::uint8_t m_bAnd[0x4]; // 0x4C bool
-    std::uint8_t m_PassOutflow[0x18]; // 0x50 PulseSelectorOutflowList_t
-    std::uint8_t m_FailOutflow[0x48]; // 0x68 CPulse_OutflowConnection
+    std::uint8_t _[0x4]; // 0x48 
+    std::uint8_t _[0x4]; // 0x4c 
+    std::uint8_t _[0x18]; // 0x50 
+    std::uint8_t _[0x48]; // 0x68 
 };
 
 struct CPulseCell_LimitCount {
     static constexpr std::size_t size = 0x50;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_nLimitCount[0x8]; // 0x48 int32
+    std::uint8_t _[0x8]; // 0x48 
 };
 
 struct CPulseCell_Step_CallExternalMethod {
     static constexpr std::size_t size = 0x150;
-    std::uint8_t pad_0[0xD8]; // 0x0
-    std::uint8_t m_MethodName[0x10]; // 0xD8 PulseSymbol_t
-    std::uint8_t m_nBlackboardIndex[0x8]; // 0xE8 PulseRuntimeBlackboardReferenceIndex_t
-    std::uint8_t m_ExpectedArgs[0x10]; // 0xF0 CUtlLeanVector<CPulseRuntimeMethodArg>
-    std::uint8_t m_nAsyncCallMode[0x8]; // 0x100 PulseMethodCallMode_t
-    std::uint8_t m_OnFinished[0x48]; // 0x108 CPulse_ResumePoint
+    std::uint8_t pad_0[0xd8]; // 0x0
+    std::uint8_t _[0x10]; // 0xd8 
+    std::uint8_t _[0x8]; // 0xe8 
+    std::uint8_t _[0x10]; // 0xf0 
+    std::uint8_t _[0x8]; // 0x100 
+    std::uint8_t _[0x48]; // 0x108 
 };
 
 struct CPulseCell_LimitCount__Criteria_t {
     static constexpr std::size_t size = 0x1;
-    std::uint8_t m_bLimitCountPasses[0x1]; // 0x0 bool
+    std::uint8_t _[0x1]; // 0x0 
 };
 
 struct CPulseCell_CursorQueue {
     static constexpr std::size_t size = 0x130;
     std::uint8_t pad_0[0x128]; // 0x0
-    std::uint8_t m_nCursorsAllowedToRunParallel[0x8]; // 0x128 int32
+    std::uint8_t _[0x8]; // 0x128 
 };
 
 struct CPulseCell_Value_RandomFloat {
@@ -1902,15 +1902,15 @@ struct CPulseCell_Value_RandomFloat {
 };
 
 struct CPulseExecCursor {
-    static constexpr std::size_t size = 0xD8;
-    std::uint8_t pad_0[0xD8]; // 0x0
+    static constexpr std::size_t size = 0xd8;
+    std::uint8_t pad_0[0xd8]; // 0x0
 };
 
 struct CAnimFrameBlockAnim {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_nStartFrame[0x4]; // 0x0 int32
-    std::uint8_t m_nEndFrame[0x4]; // 0x4 int32
-    std::uint8_t m_segmentIndexArray[0x18]; // 0x8 CUtlVector<int32>
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x18]; // 0x8 
 };
 
 struct CZeroPoseUpdateNode {
@@ -1921,54 +1921,54 @@ struct CZeroPoseUpdateNode {
 struct CSlowDownOnSlopesUpdateNode {
     static constexpr std::size_t size = 0x78;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_flSlowDownStrength[0x8]; // 0x70 float32
+    std::uint8_t _[0x8]; // 0x70 
 };
 
 struct COrientationWarpUpdateNode {
-    static constexpr std::size_t size = 0xC0;
+    static constexpr std::size_t size = 0xc0;
     std::uint8_t pad_0[0x74]; // 0x0
-    std::uint8_t m_eMode[0x4]; // 0x74 OrientationWarpMode_t
-    std::uint8_t m_hTargetParam[0x2]; // 0x78 CAnimParamHandle
-    std::uint8_t m_hTargetPositionParam[0x2]; // 0x7A CAnimParamHandle
-    std::uint8_t m_hFallbackTargetPositionParam[0x4]; // 0x7C CAnimParamHandle
-    std::uint8_t m_eTargetOffsetMode[0x4]; // 0x80 OrientationWarpTargetOffsetMode_t
-    std::uint8_t m_flTargetOffset[0x4]; // 0x84 float32
-    std::uint8_t m_hTargetOffsetParam[0x8]; // 0x88 CAnimParamHandle
-    std::uint8_t m_damping[0x18]; // 0x90 CAnimInputDamping
-    std::uint8_t m_eRootMotionSource[0x4]; // 0xA8 OrientationWarpRootMotionSource_t
-    std::uint8_t m_flMaxRootMotionScale[0x4]; // 0xAC float32
-    std::uint8_t m_bEnablePreferredRotationDirection[0x4]; // 0xB0 bool
-    std::uint8_t m_ePreferredRotationDirection[0x4]; // 0xB4 AnimValueSource
-    std::uint8_t m_flPreferredRotationThreshold[0x8]; // 0xB8 float32
+    std::uint8_t _[0x4]; // 0x74 
+    std::uint8_t _[0x2]; // 0x78 
+    std::uint8_t _[0x2]; // 0x7a 
+    std::uint8_t _[0x4]; // 0x7c 
+    std::uint8_t _[0x4]; // 0x80 
+    std::uint8_t _[0x4]; // 0x84 
+    std::uint8_t _[0x8]; // 0x88 
+    std::uint8_t _[0x18]; // 0x90 
+    std::uint8_t _[0x4]; // 0xa8 
+    std::uint8_t _[0x4]; // 0xac 
+    std::uint8_t _[0x4]; // 0xb0 
+    std::uint8_t _[0x4]; // 0xb4 
+    std::uint8_t _[0x8]; // 0xb8 
 };
 
 struct CAnimParameterBase {
     static constexpr std::size_t size = 0x70;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_name[0x8]; // 0x18 CGlobalSymbol
-    std::uint8_t m_sComment[0x8]; // 0x20 CUtlString
-    std::uint8_t m_group[0x8]; // 0x28 CUtlString
-    std::uint8_t m_id[0x18]; // 0x30 AnimParamID
-    std::uint8_t m_componentName[0x20]; // 0x48 CUtlString
-    std::uint8_t m_bNetworkingRequested[0x1]; // 0x68 bool
-    std::uint8_t m_bIsReferenced[0x7]; // 0x69 bool
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x20]; // 0x48 
+    std::uint8_t _[0x1]; // 0x68 
+    std::uint8_t _[0x7]; // 0x69 
 };
 
 struct CSequenceFinishedAnimTag {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x58]; // 0x0
-    std::uint8_t m_sequenceName[0x8]; // 0x58 CUtlString
+    std::uint8_t _[0x8]; // 0x58 
 };
 
 struct CSceneObjectData {
-    static constexpr std::size_t size = 0xB8;
-    std::uint8_t m_vMinBounds[0xC]; // 0x0 Vector
-    std::uint8_t m_vMaxBounds[0xC]; // 0xC Vector
-    std::uint8_t m_drawCalls[0x10]; // 0x18 CUtlLeanVector<CMaterialDrawDescriptor>
-    std::uint8_t m_drawBounds[0x10]; // 0x28 CUtlLeanVector<AABB_t>
-    std::uint8_t m_meshlets[0x10]; // 0x38 CUtlLeanVector<CMeshletDescriptor>
-    std::uint8_t m_rtProxyDrawCalls[0x10]; // 0x48 CUtlLeanVector<CSceneObjectData::RTProxyDrawDescriptor_t>
-    std::uint8_t m_vTintColor[0x60]; // 0x58 Vector4D
+    static constexpr std::size_t size = 0xb8;
+    std::uint8_t _[0xc]; // 0x0 
+    std::uint8_t _[0xc]; // 0xc 
+    std::uint8_t _[0x10]; // 0x18 
+    std::uint8_t _[0x10]; // 0x28 
+    std::uint8_t _[0x10]; // 0x38 
+    std::uint8_t _[0x10]; // 0x48 
+    std::uint8_t _[0x60]; // 0x58 
 };
 
 struct CFootCycle {
@@ -1979,9 +1979,9 @@ struct CFootCycle {
 struct CParticleModelInput {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nType[0x8]; // 0x10 ParticleModelType_t
-    std::uint8_t m_NamedValue[0x40]; // 0x18 CParticleNamedValueRef
-    std::uint8_t m_nControlPoint[0x8]; // 0x58 int32
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x40]; // 0x18 
+    std::uint8_t _[0x8]; // 0x58 
 };
 
 struct CInputStreamUpdateNode {
@@ -1992,119 +1992,119 @@ struct CInputStreamUpdateNode {
 struct CNmFootIKTask {
     static constexpr std::size_t size = 0x140;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_nLeftEffectorBoneIdx[0x4]; // 0x70 int32
-    std::uint8_t m_nRightEffectorBoneIdx[0xC]; // 0x74 int32
-    std::uint8_t m_leftTargetTransform[0x20]; // 0x80 CTransform
-    std::uint8_t m_rightTargetTransform[0x20]; // 0xA0 CTransform
-    std::uint8_t m_nLeftTargetBoneIdx[0x4]; // 0xC0 int32
-    std::uint8_t m_nRightTargetBoneIdx[0xC]; // 0xC4 int32
-    std::uint8_t m_leftTarget[0x30]; // 0xD0 CNmTarget
-    std::uint8_t m_rightTarget[0x30]; // 0x100 CNmTarget
-    std::uint8_t m_blendMode[0x4]; // 0x130 NmIKBlendMode_t
-    std::uint8_t m_flBlendWeight[0x4]; // 0x134 float32
-    std::uint8_t m_bIsTargetInWorldSpace[0x1]; // 0x138 bool
-    std::uint8_t m_bIsRunningFromDeserializedData[0x7]; // 0x139 bool
+    std::uint8_t _[0x4]; // 0x70 
+    std::uint8_t _[0xc]; // 0x74 
+    std::uint8_t _[0x20]; // 0x80 
+    std::uint8_t _[0x20]; // 0xa0 
+    std::uint8_t _[0x4]; // 0xc0 
+    std::uint8_t _[0xc]; // 0xc4 
+    std::uint8_t _[0x30]; // 0xd0 
+    std::uint8_t _[0x30]; // 0x100 
+    std::uint8_t _[0x4]; // 0x130 
+    std::uint8_t _[0x4]; // 0x134 
+    std::uint8_t _[0x1]; // 0x138 
+    std::uint8_t _[0x7]; // 0x139 
 };
 
 struct CIntAnimParameter {
     static constexpr std::size_t size = 0x90;
     std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t m_defaultValue[0x4]; // 0x80 int32
-    std::uint8_t m_minValue[0x4]; // 0x84 int32
-    std::uint8_t m_maxValue[0x8]; // 0x88 int32
+    std::uint8_t _[0x4]; // 0x80 
+    std::uint8_t _[0x4]; // 0x84 
+    std::uint8_t _[0x8]; // 0x88 
 };
 
 struct CNmParameterizedBlendNode__CDefinition {
     static constexpr std::size_t size = 0x30;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_sourceNodeIndices[0x18]; // 0x10 CUtlLeanVectorFixedGrowable<int16,5>
-    std::uint8_t m_nInputParameterValueNodeIdx[0x2]; // 0x28 int16
-    std::uint8_t m_bAllowLooping[0x6]; // 0x2A bool
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x2]; // 0x28 
+    std::uint8_t _[0x6]; // 0x2a 
 };
 
 struct CNmScaleTask {
-    static constexpr std::size_t size = 0xD0;
-    std::uint8_t pad_0[0xD0]; // 0x0
+    static constexpr std::size_t size = 0xd0;
+    std::uint8_t pad_0[0xd0]; // 0x0
 };
 
 struct PerTickSettings_t {
-    static constexpr std::size_t size = 0x6C0;
-    std::uint8_t m_startingLocalToWorld[0x20]; // 0x0 CTransform
-    std::uint8_t m_prevLocalToWorld[0x20]; // 0x20 CTransform
-    std::uint8_t m_finalLocalToWorld[0x20]; // 0x40 CTransform
-    std::uint8_t m_rootMotion[0x63C]; // 0x60 CRootMotion
-    std::uint8_t m_updateID[0x8]; // 0x69C int32
-    std::uint8_t m_flLastTimeStep[0x4]; // 0x6A4 float32
-    std::uint8_t m_flPrevAnimTime[0x4]; // 0x6A8 float32
-    std::uint8_t m_flNextAnimTime[0x8]; // 0x6AC float32
-    std::uint8_t m_bAwaken[0x1]; // 0x6B4 bool
-    std::uint8_t m_bTeleported[0x1]; // 0x6B5 bool
-    std::uint8_t m_bIsClient[0x1]; // 0x6B6 bool
-    std::uint8_t m_bIsPredicted[0x9]; // 0x6B7 bool
+    static constexpr std::size_t size = 0x6c0;
+    std::uint8_t _[0x20]; // 0x0 
+    std::uint8_t _[0x20]; // 0x20 
+    std::uint8_t _[0x20]; // 0x40 
+    std::uint8_t _[0x63c]; // 0x60 
+    std::uint8_t _[0x8]; // 0x69c 
+    std::uint8_t _[0x4]; // 0x6a4 
+    std::uint8_t _[0x4]; // 0x6a8 
+    std::uint8_t _[0x8]; // 0x6ac 
+    std::uint8_t _[0x1]; // 0x6b4 
+    std::uint8_t _[0x1]; // 0x6b5 
+    std::uint8_t _[0x1]; // 0x6b6 
+    std::uint8_t _[0x9]; // 0x6b7 
 };
 
 struct CNmFrameSnapEvent {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_frameSnapMode[0x8]; // 0x18 NmFrameSnapEventMode_t
+    std::uint8_t _[0x8]; // 0x18 
 };
 
 struct CAnimNodePath {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_path[0x2C]; // 0x0 AnimNodeID[11]
-    std::uint8_t m_nCount[0x4]; // 0x2C int32
+    std::uint8_t _[0x2c]; // 0x0 
+    std::uint8_t _[0x4]; // 0x2c 
 };
 
 struct AnimNodeOutputID {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_id[0x4]; // 0x0 uint32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CNmSyncTrack {
-    static constexpr std::size_t size = 0xB0;
-    std::uint8_t m_syncEvents[0xA8]; // 0x0 CUtlLeanVectorFixedGrowable<CNmSyncTrack::Event_t,10>
-    std::uint8_t m_nStartEventOffset[0x8]; // 0xA8 int32
+    static constexpr std::size_t size = 0xb0;
+    std::uint8_t _[0xa8]; // 0x0 
+    std::uint8_t _[0x8]; // 0xa8 
 };
 
 struct CSeqBoneMaskList {
     static constexpr std::size_t size = 0x60;
-    std::uint8_t m_sName[0x10]; // 0x0 CBufferString
-    std::uint8_t m_nLocalBoneArray[0x18]; // 0x10 CUtlVector<int16>
-    std::uint8_t m_flBoneWeightArray[0x18]; // 0x28 CUtlVector<float32>
-    std::uint8_t m_flDefaultMorphCtrlWeight[0x8]; // 0x40 float32
-    std::uint8_t m_morphCtrlWeightArray[0x18]; // 0x48 CUtlVector<std::pair<CBufferString,float32>>
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x18]; // 0x28 
+    std::uint8_t _[0x8]; // 0x40 
+    std::uint8_t _[0x18]; // 0x48 
 };
 
 struct CAnimEncodedFrames {
-    static constexpr std::size_t size = 0xD8;
-    std::uint8_t m_fileName[0x10]; // 0x0 CBufferString
-    std::uint8_t m_nFrames[0x4]; // 0x10 int32
-    std::uint8_t m_nFramesPerBlock[0x4]; // 0x14 int32
-    std::uint8_t m_frameblockArray[0x18]; // 0x18 CUtlVector<CAnimFrameBlockAnim>
-    std::uint8_t m_usageDifferences[0xA8]; // 0x30 CAnimEncodeDifference
+    static constexpr std::size_t size = 0xd8;
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0xa8]; // 0x30 
 };
 
 struct SampleCode {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_subCode[0x8]; // 0x0 uint8[8]
+    std::uint8_t _[0x8]; // 0x0 
 };
 
 struct CCachedPose {
     static constexpr std::size_t size = 0x40;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_transforms[0x18]; // 0x8 CUtlVector<CTransform>
-    std::uint8_t m_morphWeights[0x18]; // 0x20 CUtlVector<float32>
-    std::uint8_t m_hSequence[0x4]; // 0x38 HSequence
-    std::uint8_t m_flCycle[0x4]; // 0x3C float32
+    std::uint8_t _[0x18]; // 0x8 
+    std::uint8_t _[0x18]; // 0x20 
+    std::uint8_t _[0x4]; // 0x38 
+    std::uint8_t _[0x4]; // 0x3c 
 };
 
 struct CNmTransitionEventConditionNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_requireRuleID[0x8]; // 0x10 CGlobalSymbol
-    std::uint8_t m_eventConditionRules[0x4]; // 0x18 CNmBitFlags
-    std::uint8_t m_nSourceStateNodeIdx[0x2]; // 0x1C int16
-    std::uint8_t m_ruleCondition[0x2]; // 0x1E NmTransitionRuleCondition_t
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x2]; // 0x1c 
+    std::uint8_t _[0x2]; // 0x1e 
 };
 
 struct CTaskStatusAnimTag {
@@ -2113,107 +2113,107 @@ struct CTaskStatusAnimTag {
 };
 
 struct CStateNodeInstanceData {
-    static constexpr std::size_t size = 0x4C;
-    std::uint8_t m_stateWeights[0x8]; // 0x0 CRelativeArray<float32>
-    std::uint8_t m_vTransitionVelocityDeltaWS[0x18]; // 0x8 Vector
-    std::uint8_t m_currentStateStartTime[0x1C]; // 0x20 CAnimNetVar<float32>
-    std::uint8_t m_resetCount[0x10]; // 0x3C CAnimNetVar<uint8>
+    static constexpr std::size_t size = 0x4c;
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x18]; // 0x8 
+    std::uint8_t _[0x1c]; // 0x20 
+    std::uint8_t _[0x10]; // 0x3c 
 };
 
 struct CMotionGraphConfig {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_paramValues[0x10]; // 0x0 float32[4]
-    std::uint8_t m_flDuration[0x4]; // 0x10 float32
-    std::uint8_t m_nMotionIndex[0x4]; // 0x14 MotionIndex
-    std::uint8_t m_nSampleStart[0x4]; // 0x18 int32
-    std::uint8_t m_nSampleCount[0x4]; // 0x1C int32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
 };
 
 struct CMotionSearchNode {
     static constexpr std::size_t size = 0x80;
-    std::uint8_t m_children[0x18]; // 0x0 CUtlVector<CMotionSearchNode*>
-    std::uint8_t m_quantizer[0x20]; // 0x18 CVectorQuantizer
-    std::uint8_t m_sampleCodes[0x18]; // 0x38 CUtlVector<CUtlVector<SampleCode>>
-    std::uint8_t m_sampleIndices[0x18]; // 0x50 CUtlVector<CUtlVector<int32>>
-    std::uint8_t m_selectableSamples[0x18]; // 0x68 CUtlVector<int32>
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x20]; // 0x18 
+    std::uint8_t _[0x18]; // 0x38 
+    std::uint8_t _[0x18]; // 0x50 
+    std::uint8_t _[0x18]; // 0x68 
 };
 
 struct CAnimActivity {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_name[0x10]; // 0x0 CBufferString
-    std::uint8_t m_nActivity[0x4]; // 0x10 int32
-    std::uint8_t m_nFlags[0x4]; // 0x14 int32
-    std::uint8_t m_nWeight[0x8]; // 0x18 int32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x8]; // 0x18 
 };
 
 struct CAnimScriptManager {
-    static constexpr std::size_t size = 0x1A0;
+    static constexpr std::size_t size = 0x1a0;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_scriptInfo[0x190]; // 0x10 CUtlVector<ScriptInfo_t>
+    std::uint8_t _[0x190]; // 0x10 
 };
 
 struct AnimationDecodeDebugDumpElement_t {
     static constexpr std::size_t size = 0x70;
-    std::uint8_t m_nEntityIndex[0x8]; // 0x0 int32
-    std::uint8_t m_modelName[0x8]; // 0x8 CUtlString
-    std::uint8_t m_poseParams[0x18]; // 0x10 CUtlVector<CUtlString>
-    std::uint8_t m_decodeOps[0x18]; // 0x28 CUtlVector<CUtlString>
-    std::uint8_t m_internalOps[0x18]; // 0x40 CUtlVector<CUtlString>
-    std::uint8_t m_decodedAnims[0x18]; // 0x58 CUtlVector<CUtlString>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x18]; // 0x28 
+    std::uint8_t _[0x18]; // 0x40 
+    std::uint8_t _[0x18]; // 0x58 
 };
 
 struct CChoreoInstanceData {
     static constexpr std::size_t size = 0x398;
-    std::uint8_t m_AnimOverlay[0x398]; // 0x0 CAnimationLayer[12]
+    std::uint8_t _[0x398]; // 0x0 
 };
 
 struct PulseRuntimeVarIndex_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_Value[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct ConfigIndex {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_nGroup[0x2]; // 0x0 uint16
-    std::uint8_t m_nConfig[0x2]; // 0x2 uint16
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
 };
 
 struct VPhysXCollisionAttributes_t {
-    static constexpr std::size_t size = 0xD0;
-    std::uint8_t m_nIncludeDetailLayerCount[0x4]; // 0x0 int32
-    std::uint8_t m_CollisionGroup[0x4]; // 0x4 uint32
-    std::uint8_t m_InteractAs[0x18]; // 0x8 CUtlVector<uint32>
-    std::uint8_t m_InteractWith[0x18]; // 0x20 CUtlVector<uint32>
-    std::uint8_t m_InteractExclude[0x18]; // 0x38 CUtlVector<uint32>
-    std::uint8_t m_DetailLayers[0x18]; // 0x50 CUtlVector<uint32>
-    std::uint8_t m_CollisionGroupString[0x8]; // 0x68 CUtlString
-    std::uint8_t m_InteractAsStrings[0x18]; // 0x70 CUtlVector<CUtlString>
-    std::uint8_t m_InteractWithStrings[0x18]; // 0x88 CUtlVector<CUtlString>
-    std::uint8_t m_InteractExcludeStrings[0x18]; // 0xA0 CUtlVector<CUtlString>
-    std::uint8_t m_DetailLayerStrings[0x18]; // 0xB8 CUtlVector<CUtlString>
+    static constexpr std::size_t size = 0xd0;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x18]; // 0x8 
+    std::uint8_t _[0x18]; // 0x20 
+    std::uint8_t _[0x18]; // 0x38 
+    std::uint8_t _[0x18]; // 0x50 
+    std::uint8_t _[0x8]; // 0x68 
+    std::uint8_t _[0x18]; // 0x70 
+    std::uint8_t _[0x18]; // 0x88 
+    std::uint8_t _[0x18]; // 0xa0 
+    std::uint8_t _[0x18]; // 0xb8 
 };
 
 struct CSequenceUpdateNode {
-    static constexpr std::size_t size = 0xB0;
+    static constexpr std::size_t size = 0xb0;
     std::uint8_t pad_0[0x78]; // 0x0
-    std::uint8_t m_hSequence[0x4]; // 0x78 HSequence
-    std::uint8_t m_duration[0x4]; // 0x7C float32
-    std::uint8_t m_paramSpans[0x18]; // 0x80 CParamSpanUpdater
-    std::uint8_t m_tags[0x18]; // 0x98 CUtlVector<TagSpan_t>
+    std::uint8_t _[0x4]; // 0x78 
+    std::uint8_t _[0x4]; // 0x7c 
+    std::uint8_t _[0x18]; // 0x80 
+    std::uint8_t _[0x18]; // 0x98 
 };
 
 struct CStateMachineInstanceData {
-    static constexpr std::size_t size = 0x1C;
-    std::uint8_t m_flTimeInState[0x4]; // 0x0 float32
-    std::uint8_t m_currentTransitionIndex[0xC]; // 0x4 CAnimNetVar<int32>
-    std::uint8_t m_prevStateIndex[0x4]; // 0x10 int32
-    std::uint8_t m_scheduledTransitionIndex[0x8]; // 0x14 int32
+    static constexpr std::size_t size = 0x1c;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0xc]; // 0x4 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x8]; // 0x14 
 };
 
 struct CNmPassthroughNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nChildNodeIdx[0x8]; // 0x10 int16
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CNmClipReferenceNode__CDefinition {
@@ -2223,140 +2223,140 @@ struct CNmClipReferenceNode__CDefinition {
 
 struct CNmGraphDefinition__ExternalGraphSlot_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_nNodeIdx[0x8]; // 0x0 int16
-    std::uint8_t m_slotID[0x8]; // 0x8 CGlobalSymbol
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct PulseRuntimeEntrypointIndex_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_Value[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CAimCameraUpdateNode {
-    static constexpr std::size_t size = 0xB8;
+    static constexpr std::size_t size = 0xb8;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_hParameterPosition[0x2]; // 0x70 CAnimParamHandle
-    std::uint8_t m_hParameterOrientation[0x2]; // 0x72 CAnimParamHandle
-    std::uint8_t m_hParameterPelvisOffset[0x2]; // 0x74 CAnimParamHandle
-    std::uint8_t m_hParameterCameraOnly[0x2]; // 0x76 CAnimParamHandle
-    std::uint8_t m_hParameterWeaponDepenetrationDistance[0x2]; // 0x78 CAnimParamHandle
-    std::uint8_t m_hParameterWeaponDepenetrationDelta[0x2]; // 0x7A CAnimParamHandle
-    std::uint8_t m_hParameterCameraClearanceDistance[0x4]; // 0x7C CAnimParamHandle
-    std::uint8_t m_opFixedSettings[0x38]; // 0x80 AimCameraOpFixedSettings_t
+    std::uint8_t _[0x2]; // 0x70 
+    std::uint8_t _[0x2]; // 0x72 
+    std::uint8_t _[0x2]; // 0x74 
+    std::uint8_t _[0x2]; // 0x76 
+    std::uint8_t _[0x2]; // 0x78 
+    std::uint8_t _[0x2]; // 0x7a 
+    std::uint8_t _[0x4]; // 0x7c 
+    std::uint8_t _[0x38]; // 0x80 
 };
 
 struct PulseRuntimeDomainValueIndex_t {
     static constexpr std::size_t size = 0x2;
-    std::uint8_t m_Value[0x2]; // 0x0 int16
+    std::uint8_t _[0x2]; // 0x0 
 };
 
 struct LookData {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_vLookTarget[0x18]; // 0x0 CAnimNetVar<Vector>
+    std::uint8_t _[0x18]; // 0x0 
 };
 
 struct CSeqSeqDescFlag {
-    static constexpr std::size_t size = 0xB;
-    std::uint8_t m_bLooping[0x1]; // 0x0 bool
-    std::uint8_t m_bSnap[0x1]; // 0x1 bool
-    std::uint8_t m_bAutoplay[0x1]; // 0x2 bool
-    std::uint8_t m_bPost[0x1]; // 0x3 bool
-    std::uint8_t m_bHidden[0x1]; // 0x4 bool
-    std::uint8_t m_bMulti[0x1]; // 0x5 bool
-    std::uint8_t m_bLegacyDelta[0x1]; // 0x6 bool
-    std::uint8_t m_bLegacyWorldspace[0x1]; // 0x7 bool
-    std::uint8_t m_bLegacyCyclepose[0x1]; // 0x8 bool
-    std::uint8_t m_bLegacyRealtime[0x1]; // 0x9 bool
-    std::uint8_t m_bModelDoc[0x1]; // 0xA bool
+    static constexpr std::size_t size = 0xb;
+    std::uint8_t _[0x1]; // 0x0 
+    std::uint8_t _[0x1]; // 0x1 
+    std::uint8_t _[0x1]; // 0x2 
+    std::uint8_t _[0x1]; // 0x3 
+    std::uint8_t _[0x1]; // 0x4 
+    std::uint8_t _[0x1]; // 0x5 
+    std::uint8_t _[0x1]; // 0x6 
+    std::uint8_t _[0x1]; // 0x7 
+    std::uint8_t _[0x1]; // 0x8 
+    std::uint8_t _[0x1]; // 0x9 
+    std::uint8_t _[0x1]; // 0xa 
 };
 
 struct PermModelInfo_t {
     static constexpr std::size_t size = 0x58;
-    std::uint8_t m_nFlags[0x4]; // 0x0 uint32
-    std::uint8_t m_vHullMin[0xC]; // 0x4 Vector
-    std::uint8_t m_vHullMax[0xC]; // 0x10 Vector
-    std::uint8_t m_vViewMin[0xC]; // 0x1C Vector
-    std::uint8_t m_vViewMax[0xC]; // 0x28 Vector
-    std::uint8_t m_flMass[0x4]; // 0x34 float32
-    std::uint8_t m_vEyePosition[0xC]; // 0x38 Vector
-    std::uint8_t m_flMaxEyeDeflection[0x4]; // 0x44 float32
-    std::uint8_t m_sSurfaceProperty[0x8]; // 0x48 CUtlString
-    std::uint8_t m_keyValueText[0x8]; // 0x50 CUtlString
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0xc]; // 0x4 
+    std::uint8_t _[0xc]; // 0x10 
+    std::uint8_t _[0xc]; // 0x1c 
+    std::uint8_t _[0xc]; // 0x28 
+    std::uint8_t _[0x4]; // 0x34 
+    std::uint8_t _[0xc]; // 0x38 
+    std::uint8_t _[0x4]; // 0x44 
+    std::uint8_t _[0x8]; // 0x48 
+    std::uint8_t _[0x8]; // 0x50 
 };
 
 struct StanceInfo_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_vPosition[0xC]; // 0x0 Vector
-    std::uint8_t m_flDirection[0x4]; // 0xC float32
+    std::uint8_t _[0xc]; // 0x0 
+    std::uint8_t _[0x4]; // 0xc 
 };
 
 struct IKBoneNameAndIndex_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_Name[0x10]; // 0x0 CUtlString
+    std::uint8_t _[0x10]; // 0x0 
 };
 
 struct CPulse_Chunk {
     static constexpr std::size_t size = 0x60;
-    std::uint8_t m_Instructions[0x10]; // 0x0 CUtlLeanVector<PGDInstruction_t>
-    std::uint8_t m_Registers[0x10]; // 0x10 CUtlLeanVector<CPulse_RegisterInfo>
-    std::uint8_t m_InstructionDebugInfos[0x10]; // 0x20 CUtlLeanVector<CPulse_InstructionDebug>
-    std::uint8_t m_nTempVarBank[0x30]; // 0x30 PulseRuntimeTempVarBankIndex_t
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0x10]; // 0x20 
+    std::uint8_t _[0x30]; // 0x30 
 };
 
 struct CStanceScaleUpdateNode {
     static constexpr std::size_t size = 0x78;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_hParam[0x8]; // 0x70 CAnimParamHandle
+    std::uint8_t _[0x8]; // 0x70 
 };
 
 struct CPulseBreakpointLocation {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_NodeID[0x8]; // 0x0 PulseDocNodeID_t
-    std::uint8_t m_SequencePoint[0x10]; // 0x8 PulseSymbol_t
-    std::uint8_t m_PortName[0x10]; // 0x18 PulseSymbol_t
-    std::uint8_t m_bDeferBreak[0x8]; // 0x28 bool
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x10]; // 0x8 
+    std::uint8_t _[0x10]; // 0x18 
+    std::uint8_t _[0x8]; // 0x28 
 };
 
 struct PulseRuntimeInvokeIndex_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_Value[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CNmBoneMaskBlendNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSourceMaskNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_nTargetMaskNodeIdx[0x2]; // 0x12 int16
-    std::uint8_t m_nBlendWeightValueNodeIdx[0x4]; // 0x14 int16
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct CNmIDEventNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSourceStateNodeIdx[0x4]; // 0x10 int16
-    std::uint8_t m_eventConditionRules[0x4]; // 0x14 CNmBitFlags
-    std::uint8_t m_defaultValue[0x8]; // 0x18 CGlobalSymbol
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x8]; // 0x18 
 };
 
 struct HitReactFixedSettings_t {
     static constexpr std::size_t size = 0x44;
-    std::uint8_t m_nWeightListIndex[0x4]; // 0x0 int32
-    std::uint8_t m_nEffectedBoneCount[0x4]; // 0x4 int32
-    std::uint8_t m_flMaxImpactForce[0x4]; // 0x8 float32
-    std::uint8_t m_flMinImpactForce[0x4]; // 0xC float32
-    std::uint8_t m_flWhipImpactScale[0x4]; // 0x10 float32
-    std::uint8_t m_flCounterRotationScale[0x4]; // 0x14 float32
-    std::uint8_t m_flDistanceFadeScale[0x4]; // 0x18 float32
-    std::uint8_t m_flPropagationScale[0x4]; // 0x1C float32
-    std::uint8_t m_flWhipDelay[0x4]; // 0x20 float32
-    std::uint8_t m_flSpringStrength[0x4]; // 0x24 float32
-    std::uint8_t m_flWhipSpringStrength[0x4]; // 0x28 float32
-    std::uint8_t m_flMaxAngleRadians[0x4]; // 0x2C float32
-    std::uint8_t m_nHipBoneIndex[0x4]; // 0x30 int32
-    std::uint8_t m_flHipBoneTranslationScale[0x4]; // 0x34 float32
-    std::uint8_t m_flHipDipSpringStrength[0x4]; // 0x38 float32
-    std::uint8_t m_flHipDipImpactScale[0x4]; // 0x3C float32
-    std::uint8_t m_flHipDipDelay[0x4]; // 0x40 float32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x4]; // 0x28 
+    std::uint8_t _[0x4]; // 0x2c 
+    std::uint8_t _[0x4]; // 0x30 
+    std::uint8_t _[0x4]; // 0x34 
+    std::uint8_t _[0x4]; // 0x38 
+    std::uint8_t _[0x4]; // 0x3c 
+    std::uint8_t _[0x4]; // 0x40 
 };
 
 struct CNmPoseNode__CDefinition {
@@ -2367,42 +2367,42 @@ struct CNmPoseNode__CDefinition {
 struct CAnimTagBase {
     static constexpr std::size_t size = 0x50;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_name[0x8]; // 0x18 CGlobalSymbol
-    std::uint8_t m_sComment[0x8]; // 0x20 CUtlString
-    std::uint8_t m_group[0x8]; // 0x28 CGlobalSymbol
-    std::uint8_t m_tagID[0x18]; // 0x30 AnimTagID
-    std::uint8_t m_bIsReferenced[0x8]; // 0x48 bool
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x8]; // 0x48 
 };
 
 struct CPerParticleVecInput {
-    static constexpr std::size_t size = 0x6D8;
-    std::uint8_t pad_0[0x6D8]; // 0x0
+    static constexpr std::size_t size = 0x6d8;
+    std::uint8_t pad_0[0x6d8]; // 0x0
 };
 
 struct CMotionGraph {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_paramSpans[0x18]; // 0x10 CParamSpanUpdater
-    std::uint8_t m_tags[0x18]; // 0x28 CUtlVector<TagSpan_t>
-    std::uint8_t m_pRootNode[0x8]; // 0x40 CSmartPtr<CMotionNode>
-    std::uint8_t m_nParameterCount[0x4]; // 0x48 int32
-    std::uint8_t m_nConfigStartIndex[0x4]; // 0x4C int32
-    std::uint8_t m_nConfigCount[0x4]; // 0x50 int32
-    std::uint8_t m_bLoop[0x4]; // 0x54 bool
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x18]; // 0x28 
+    std::uint8_t _[0x8]; // 0x40 
+    std::uint8_t _[0x4]; // 0x48 
+    std::uint8_t _[0x4]; // 0x4c 
+    std::uint8_t _[0x4]; // 0x50 
+    std::uint8_t _[0x4]; // 0x54 
 };
 
 struct CNmVectorInfoNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_desiredInfo[0x6]; // 0x12 CNmVectorInfoNode::Info_t
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x6]; // 0x12 
 };
 
 struct AnimationSnapshot_t {
     static constexpr std::size_t size = 0x120;
     std::uint8_t pad_0[0x110]; // 0x0
-    std::uint8_t m_nEntIndex[0x8]; // 0x110 int32
-    std::uint8_t m_modelName[0x8]; // 0x118 CUtlString
+    std::uint8_t _[0x8]; // 0x110 
+    std::uint8_t _[0x8]; // 0x118 
 };
 
 struct CNmBlendTask {
@@ -2417,8 +2417,8 @@ struct CNmVectorValueNode__CDefinition {
 
 struct CSeqTransition {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_flFadeInTime[0x4]; // 0x0 float32
-    std::uint8_t m_flFadeOutTime[0x4]; // 0x4 float32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct CNmPoseTask {
@@ -2434,25 +2434,25 @@ struct CAnimGraphSettingsGroup {
 struct CNmVirtualParameterTargetNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nChildNodeIdx[0x8]; // 0x10 int16
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CAnimGraphDebugReplay {
     static constexpr std::size_t size = 0x70;
     std::uint8_t pad_0[0x40]; // 0x0
-    std::uint8_t m_animGraphFileName[0x8]; // 0x40 CUtlString
-    std::uint8_t m_frameList[0x18]; // 0x48 CUtlVector<CSmartPtr<CAnimReplayFrame>>
-    std::uint8_t m_startIndex[0x4]; // 0x60 int32
-    std::uint8_t m_writeIndex[0x4]; // 0x64 int32
-    std::uint8_t m_frameCount[0x8]; // 0x68 int32
+    std::uint8_t _[0x8]; // 0x40 
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x4]; // 0x60 
+    std::uint8_t _[0x4]; // 0x64 
+    std::uint8_t _[0x8]; // 0x68 
 };
 
 struct CVectorAnimParameter {
     static constexpr std::size_t size = 0x98;
     std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t m_defaultValue[0xC]; // 0x80 Vector
-    std::uint8_t m_bInterpolate[0x4]; // 0x8C bool
-    std::uint8_t m_vectorType[0x8]; // 0x90 AnimParamVectorType_t
+    std::uint8_t _[0xc]; // 0x80 
+    std::uint8_t _[0x4]; // 0x8c 
+    std::uint8_t _[0x8]; // 0x90 
 };
 
 struct CNmCachedPoseReadTask {
@@ -2462,109 +2462,109 @@ struct CNmCachedPoseReadTask {
 
 struct CNmStateMachineNode__StateDefinition_t {
     static constexpr std::size_t size = 0x38;
-    std::uint8_t m_nStateNodeIdx[0x2]; // 0x0 int16
-    std::uint8_t m_nEntryConditionNodeIdx[0x6]; // 0x2 int16
-    std::uint8_t m_transitionDefinitions[0x30]; // 0x8 CUtlLeanVectorFixedGrowable<CNmStateMachineNode::TransitionDefinition_t,5>
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x6]; // 0x2 
+    std::uint8_t _[0x30]; // 0x8 
 };
 
 struct CStanceOverrideUpdateNode {
-    static constexpr std::size_t size = 0xA0;
+    static constexpr std::size_t size = 0xa0;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_footStanceInfo[0x18]; // 0x70 CUtlVector<StanceInfo_t>
-    std::uint8_t m_pStanceSourceNode[0x10]; // 0x88 CAnimUpdateNodeRef
-    std::uint8_t m_hParameter[0x4]; // 0x98 CAnimParamHandle
-    std::uint8_t m_eMode[0x4]; // 0x9C StanceOverrideMode
+    std::uint8_t _[0x18]; // 0x70 
+    std::uint8_t _[0x10]; // 0x88 
+    std::uint8_t _[0x4]; // 0x98 
+    std::uint8_t _[0x4]; // 0x9c 
 };
 
 struct CNmGraphDefinition__ExternalPoseSlot_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_nNodeIdx[0x8]; // 0x0 int16
-    std::uint8_t m_slotID[0x8]; // 0x8 CGlobalSymbol
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct PhysShapeMarkup_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_nBodyInAggregate[0x4]; // 0x0 int32
-    std::uint8_t m_nShapeInBody[0x4]; // 0x4 int32
-    std::uint8_t m_sHitGroup[0x8]; // 0x8 CGlobalSymbol
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CBlend2DInstanceData {
-    static constexpr std::size_t size = 0xA0;
+    static constexpr std::size_t size = 0xa0;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_dampedValue[0x3C]; // 0x8 Vector2D
-    std::uint8_t m_flCycle[0x4]; // 0x44 float32
-    std::uint8_t m_flPrevCycle[0x58]; // 0x48 float32
+    std::uint8_t _[0x3c]; // 0x8 
+    std::uint8_t _[0x4]; // 0x44 
+    std::uint8_t _[0x58]; // 0x48 
 };
 
 struct LookAtBone_t {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_index[0x4]; // 0x0 int32
-    std::uint8_t m_weight[0x4]; // 0x4 float32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct CDirectPlaybackInstanceData {
     static constexpr std::size_t size = 0x148;
-    std::uint8_t m_vTargetPosition[0xC]; // 0x0 Vector
-    std::uint8_t m_flTargetFacing[0x4]; // 0xC float32
-    std::uint8_t m_flInterpEndTime[0x4]; // 0x10 float32
-    std::uint8_t m_weights[0x10]; // 0x14 float32[4]
-    std::uint8_t m_sequences[0xE0]; // 0x24 SequenceData[4]
-    std::uint8_t m_currentSequenceIndex[0x4]; // 0x104 uint32
-    std::uint8_t m_currentSequenceData[0x10]; // 0x108 CAnimNetVar<uint64>
-    std::uint8_t m_flFadeInTime[0x4]; // 0x118 float32
-    std::uint8_t m_flFadeOutTime[0x4]; // 0x11C float32
-    std::uint8_t m_flForcedCycle[0x10]; // 0x120 CAnimNetVar<float32>
-    std::uint8_t m_bResetPending[0x8]; // 0x130 bool
-    std::uint8_t m_SequenceCycleZeroTime[0x10]; // 0x138 CAnimNetVar<float32>
+    std::uint8_t _[0xc]; // 0x0 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x10]; // 0x14 
+    std::uint8_t _[0xe0]; // 0x24 
+    std::uint8_t _[0x4]; // 0x104 
+    std::uint8_t _[0x10]; // 0x108 
+    std::uint8_t _[0x4]; // 0x118 
+    std::uint8_t _[0x4]; // 0x11c 
+    std::uint8_t _[0x10]; // 0x120 
+    std::uint8_t _[0x8]; // 0x130 
+    std::uint8_t _[0x10]; // 0x138 
 };
 
 struct CNmTransitionNode__CDefinition {
     static constexpr std::size_t size = 0x30;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nTargetStateNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_nDurationOverrideNodeIdx[0x2]; // 0x12 int16
-    std::uint8_t m_timeOffsetOverrideNodeIdx[0x2]; // 0x14 int16
-    std::uint8_t m_startBoneMaskNodeIdx[0x2]; // 0x16 int16
-    std::uint8_t m_flDuration[0x4]; // 0x18 float32
-    std::uint8_t m_boneMaskBlendInTimePercentage[0x4]; // 0x1C NmPercent_t
-    std::uint8_t m_flTimeOffset[0x4]; // 0x20 float32
-    std::uint8_t m_transitionOptions[0x4]; // 0x24 CNmBitFlags
-    std::uint8_t m_targetSyncIDNodeIdx[0x2]; // 0x28 int16
-    std::uint8_t m_blendWeightEasing[0x1]; // 0x2A NmEasingOperation_t
-    std::uint8_t m_rootMotionBlend[0x5]; // 0x2B NmRootMotionBlendMode_t
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x2]; // 0x14 
+    std::uint8_t _[0x2]; // 0x16 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x2]; // 0x28 
+    std::uint8_t _[0x1]; // 0x2a 
+    std::uint8_t _[0x5]; // 0x2b 
 };
 
 struct PulseRuntimeRegisterIndex_t {
     static constexpr std::size_t size = 0x2;
-    std::uint8_t m_Value[0x2]; // 0x0 int16
+    std::uint8_t _[0x2]; // 0x0 
 };
 
 struct CNmFloatEaseNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_flEaseTime[0x4]; // 0x10 float32
-    std::uint8_t m_flStartValue[0x4]; // 0x14 float32
-    std::uint8_t m_nInputValueNodeIdx[0x2]; // 0x18 int16
-    std::uint8_t m_easingOp[0x1]; // 0x1A NmEasingOperation_t
-    std::uint8_t m_bUseStartValue[0x5]; // 0x1B bool
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x2]; // 0x18 
+    std::uint8_t _[0x1]; // 0x1a 
+    std::uint8_t _[0x5]; // 0x1b 
 };
 
 struct CAnimationGraphInstance {
     static constexpr std::size_t size = 0x340;
     std::uint8_t pad_0[0x329]; // 0x0
-    std::uint8_t m_bTagDispatchDirty[0x17]; // 0x329 bool
+    std::uint8_t _[0x17]; // 0x329 
 };
 
 struct CAnimEncodeDifference {
-    static constexpr std::size_t size = 0xA8;
-    std::uint8_t m_boneArray[0x18]; // 0x0 CUtlVector<CAnimBoneDifference>
-    std::uint8_t m_morphArray[0x18]; // 0x18 CUtlVector<CAnimMorphDifference>
-    std::uint8_t m_userArray[0x18]; // 0x30 CUtlVector<CAnimUserDifference>
-    std::uint8_t m_bHasRotationBitArray[0x18]; // 0x48 CUtlVector<uint8>
-    std::uint8_t m_bHasMovementBitArray[0x18]; // 0x60 CUtlVector<uint8>
-    std::uint8_t m_bHasMorphBitArray[0x18]; // 0x78 CUtlVector<uint8>
-    std::uint8_t m_bHasUserBitArray[0x18]; // 0x90 CUtlVector<uint8>
+    static constexpr std::size_t size = 0xa8;
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x18]; // 0x60 
+    std::uint8_t _[0x18]; // 0x78 
+    std::uint8_t _[0x18]; // 0x90 
 };
 
 struct CRootUpdateNode {
@@ -2575,139 +2575,139 @@ struct CRootUpdateNode {
 struct CNmTargetOffsetNode__CDefinition {
     static constexpr std::size_t size = 0x40;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_bIsBoneSpaceOffset[0xE]; // 0x12 bool
-    std::uint8_t m_rotationOffset[0x10]; // 0x20 Quaternion
-    std::uint8_t m_translationOffset[0x10]; // 0x30 Vector
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0xe]; // 0x12 
+    std::uint8_t _[0x10]; // 0x20 
+    std::uint8_t _[0x10]; // 0x30 
 };
 
 struct MotionMatchingInstanceData {
     static constexpr std::size_t size = 0x120;
-    std::uint8_t pad_0[0x2C]; // 0x0
-    std::uint8_t m_currentSelection[0x58]; // 0x2C MotionSelection
-    std::uint8_t m_previousSelection[0x9C]; // 0x84 MotionSelection
+    std::uint8_t pad_0[0x2c]; // 0x0
+    std::uint8_t _[0x58]; // 0x2c 
+    std::uint8_t _[0x9c]; // 0x84 
 };
 
 struct CMotionGraphUpdateNode {
     static constexpr std::size_t size = 0x68;
     std::uint8_t pad_0[0x58]; // 0x0
-    std::uint8_t m_pMotionGraph[0x10]; // 0x58 CSmartPtr<CMotionGraph>
+    std::uint8_t _[0x10]; // 0x58 
 };
 
 struct CNmFloatAngleMathNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_operation[0x6]; // 0x12 CNmFloatAngleMathNode::Operation_t
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x6]; // 0x12 
 };
 
 struct PulseCursorID_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_Value[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CAnimParamHandle {
     static constexpr std::size_t size = 0x2;
-    std::uint8_t m_type[0x1]; // 0x0 AnimParamType_t
-    std::uint8_t m_index[0x1]; // 0x1 uint8
+    std::uint8_t _[0x1]; // 0x0 
+    std::uint8_t _[0x1]; // 0x1 
 };
 
 struct WeightList {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_weights[0x18]; // 0x8 CUtlVector<float32>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x18]; // 0x8 
 };
 
 struct MotionIndex {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_nGroup[0x2]; // 0x0 uint16
-    std::uint8_t m_nMotion[0x2]; // 0x2 uint16
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
 };
 
 struct FollowAttachmentSettings_t {
     static constexpr std::size_t size = 0x90;
-    std::uint8_t m_attachment[0x80]; // 0x0 CAnimAttachment
-    std::uint8_t m_boneIndex[0x4]; // 0x80 int32
-    std::uint8_t m_attachmentHandle[0x1]; // 0x84 AttachmentHandle_t
-    std::uint8_t m_bMatchTranslation[0x1]; // 0x85 bool
-    std::uint8_t m_bMatchRotation[0xA]; // 0x86 bool
+    std::uint8_t _[0x80]; // 0x0 
+    std::uint8_t _[0x4]; // 0x80 
+    std::uint8_t _[0x1]; // 0x84 
+    std::uint8_t _[0x1]; // 0x85 
+    std::uint8_t _[0xa]; // 0x86 
 };
 
 struct CNmReferencedGraphNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nReferencedGraphIdx[0x2]; // 0x10 int16
-    std::uint8_t m_nFallbackNodeIdx[0x6]; // 0x12 int16
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x6]; // 0x12 
 };
 
 struct AnimNodeID {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_id[0x4]; // 0x0 uint32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CNmClipSelectorNode__CDefinition {
     static constexpr std::size_t size = 0x40;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_optionNodeIndices[0x18]; // 0x10 CUtlLeanVectorFixedGrowable<int16,8>
-    std::uint8_t m_conditionNodeIndices[0x18]; // 0x28 CUtlLeanVectorFixedGrowable<int16,8>
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x18]; // 0x28 
 };
 
 struct CLookComponentUpdater {
     static constexpr std::size_t size = 0x48;
     std::uint8_t pad_0[0x34]; // 0x0
-    std::uint8_t m_hLookHeading[0x2]; // 0x34 CAnimParamHandle
-    std::uint8_t m_hLookHeadingNormalized[0x2]; // 0x36 CAnimParamHandle
-    std::uint8_t m_hLookHeadingVelocity[0x2]; // 0x38 CAnimParamHandle
-    std::uint8_t m_hLookPitch[0x2]; // 0x3A CAnimParamHandle
-    std::uint8_t m_hLookDistance[0x2]; // 0x3C CAnimParamHandle
-    std::uint8_t m_hLookDirection[0x2]; // 0x3E CAnimParamHandle
-    std::uint8_t m_hLookTarget[0x2]; // 0x40 CAnimParamHandle
-    std::uint8_t m_hLookTargetWorldSpace[0x2]; // 0x42 CAnimParamHandle
-    std::uint8_t m_bNetworkLookTarget[0x4]; // 0x44 bool
+    std::uint8_t _[0x2]; // 0x34 
+    std::uint8_t _[0x2]; // 0x36 
+    std::uint8_t _[0x2]; // 0x38 
+    std::uint8_t _[0x2]; // 0x3a 
+    std::uint8_t _[0x2]; // 0x3c 
+    std::uint8_t _[0x2]; // 0x3e 
+    std::uint8_t _[0x2]; // 0x40 
+    std::uint8_t _[0x2]; // 0x42 
+    std::uint8_t _[0x4]; // 0x44 
 };
 
 struct CNmIsExternalPoseSetNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nExternalPoseNodeIdx[0x8]; // 0x10 int16
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CAnimGraphNetworkSettings {
     static constexpr std::size_t size = 0x28;
     std::uint8_t pad_0[0x20]; // 0x0
-    std::uint8_t m_bNetworkingEnabled[0x8]; // 0x20 bool
+    std::uint8_t _[0x8]; // 0x20 
 };
 
 struct CSingleFrameUpdateNode {
     static constexpr std::size_t size = 0x80;
     std::uint8_t pad_0[0x58]; // 0x0
-    std::uint8_t m_actions[0x18]; // 0x58 CUtlVector<CSmartPtr<CAnimActionUpdater>>
-    std::uint8_t m_hPoseCacheHandle[0x4]; // 0x70 CPoseHandle
-    std::uint8_t m_hSequence[0x4]; // 0x74 HSequence
-    std::uint8_t m_flCycle[0x8]; // 0x78 float32
+    std::uint8_t _[0x18]; // 0x58 
+    std::uint8_t _[0x4]; // 0x70 
+    std::uint8_t _[0x4]; // 0x74 
+    std::uint8_t _[0x8]; // 0x78 
 };
 
 struct CNmChainLookatNode__CDefinition {
     static constexpr std::size_t size = 0x78;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_endEffectorBoneID[0x8]; // 0x18 CGlobalSymbol
-    std::uint8_t m_endEffectorForwardAxis[0xC]; // 0x20 Vector
-    std::uint8_t m_endEffectorOffset[0xC]; // 0x2C Vector
-    std::uint8_t m_nLookatTargetNodeIdx[0x2]; // 0x38 int16
-    std::uint8_t m_nEnabledNodeIdx[0x2]; // 0x3A int16
-    std::uint8_t m_flBlendTimeSeconds[0x4]; // 0x3C float32
-    std::uint8_t m_chainWeights[0x30]; // 0x40 CUtlVectorFixedGrowable<float32,5>
-    std::uint8_t m_nChainLength[0x1]; // 0x70 uint8
-    std::uint8_t m_bIsTargetInWorldSpace[0x7]; // 0x71 bool
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0xc]; // 0x20 
+    std::uint8_t _[0xc]; // 0x2c 
+    std::uint8_t _[0x2]; // 0x38 
+    std::uint8_t _[0x2]; // 0x3a 
+    std::uint8_t _[0x4]; // 0x3c 
+    std::uint8_t _[0x30]; // 0x40 
+    std::uint8_t _[0x1]; // 0x70 
+    std::uint8_t _[0x7]; // 0x71 
 };
 
 struct CNmFollowBoneNode__CDefinition {
     static constexpr std::size_t size = 0x30;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_bone[0x8]; // 0x18 CGlobalSymbol
-    std::uint8_t m_followTargetBone[0x8]; // 0x20 CGlobalSymbol
-    std::uint8_t m_nEnabledNodeIdx[0x2]; // 0x28 int16
-    std::uint8_t m_mode[0x6]; // 0x2A NmFollowBoneMode_t
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x2]; // 0x28 
+    std::uint8_t _[0x6]; // 0x2a 
 };
 
 struct CBlockSelectionMetricEvaluator {
@@ -2716,188 +2716,188 @@ struct CBlockSelectionMetricEvaluator {
 };
 
 struct MovementData {
-    static constexpr std::size_t size = 0xE8;
-    std::uint8_t m_goalWayPointPos[0xC]; // 0x0 Vector
-    std::uint8_t m_vMoveDir[0x14]; // 0xC CAnimNetVar<Vector>
-    std::uint8_t m_vAcceleration[0x14]; // 0x20 CAnimNetVar<Vector>
-    std::uint8_t m_flCurrentMoveSpeed[0xC]; // 0x34 CAnimNetVar<float32>
-    std::uint8_t m_flTargetMoveSpeed[0xC]; // 0x40 CAnimNetVar<float32>
-    std::uint8_t m_flGoalDistance[0xC]; // 0x4C CAnimNetVar<float32>
-    std::uint8_t m_flBoundaryRadius[0xC]; // 0x58 CAnimNetVar<float32>
-    std::uint8_t m_bGoalChanged[0x4]; // 0x64 bool
-    std::uint8_t m_bHasPath[0xC]; // 0x68 CAnimNetVar<bool>
-    std::uint8_t m_flFacingHeading[0xC]; // 0x74 CAnimNetVar<float32>
-    std::uint8_t m_vManualFacingDirection[0xC]; // 0x80 Vector
-    std::uint8_t m_vManualFacingTarget[0xC]; // 0x8C VectorWS
-    std::uint8_t m_nFacingMode[0xC]; // 0x98 CAnimNetVar<uint8>
-    std::uint8_t m_bForceFacing[0xC]; // 0xA4 CAnimNetVar<bool>
-    std::uint8_t m_nActiveMotorIndex[0xC]; // 0xB0 CAnimNetVar<int32>
-    std::uint8_t m_bOnGround[0xC]; // 0xBC CAnimNetVar<bool>
-    std::uint8_t m_vFacingPosition[0x14]; // 0xC8 CAnimNetVar<Vector>
-    std::uint8_t m_vPrevFacingPosition[0xC]; // 0xDC Vector
+    static constexpr std::size_t size = 0xe8;
+    std::uint8_t _[0xc]; // 0x0 
+    std::uint8_t _[0x14]; // 0xc 
+    std::uint8_t _[0x14]; // 0x20 
+    std::uint8_t _[0xc]; // 0x34 
+    std::uint8_t _[0xc]; // 0x40 
+    std::uint8_t _[0xc]; // 0x4c 
+    std::uint8_t _[0xc]; // 0x58 
+    std::uint8_t _[0x4]; // 0x64 
+    std::uint8_t _[0xc]; // 0x68 
+    std::uint8_t _[0xc]; // 0x74 
+    std::uint8_t _[0xc]; // 0x80 
+    std::uint8_t _[0xc]; // 0x8c 
+    std::uint8_t _[0xc]; // 0x98 
+    std::uint8_t _[0xc]; // 0xa4 
+    std::uint8_t _[0xc]; // 0xb0 
+    std::uint8_t _[0xc]; // 0xbc 
+    std::uint8_t _[0x14]; // 0xc8 
+    std::uint8_t _[0xc]; // 0xdc 
 };
 
 struct CRemapValueComponentUpdater {
     static constexpr std::size_t size = 0x48;
     std::uint8_t pad_0[0x30]; // 0x0
-    std::uint8_t m_items[0x18]; // 0x30 CUtlVector<CRemapValueUpdateItem>
+    std::uint8_t _[0x18]; // 0x30 
 };
 
 struct CModelConfigList {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_bHideMaterialGroupInTools[0x1]; // 0x0 bool
-    std::uint8_t m_bHideRenderColorInTools[0x7]; // 0x1 bool
-    std::uint8_t m_Configs[0x18]; // 0x8 CUtlVector<CModelConfig*>
+    std::uint8_t _[0x1]; // 0x0 
+    std::uint8_t _[0x7]; // 0x1 
+    std::uint8_t _[0x18]; // 0x8 
 };
 
 struct CSeqAutoLayerFlag {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_bPost[0x1]; // 0x0 bool
-    std::uint8_t m_bSpline[0x1]; // 0x1 bool
-    std::uint8_t m_bXFade[0x1]; // 0x2 bool
-    std::uint8_t m_bNoBlend[0x1]; // 0x3 bool
-    std::uint8_t m_bLocal[0x1]; // 0x4 bool
-    std::uint8_t m_bPose[0x1]; // 0x5 bool
-    std::uint8_t m_bFetchFrame[0x1]; // 0x6 bool
-    std::uint8_t m_bSubtract[0x1]; // 0x7 bool
+    std::uint8_t _[0x1]; // 0x0 
+    std::uint8_t _[0x1]; // 0x1 
+    std::uint8_t _[0x1]; // 0x2 
+    std::uint8_t _[0x1]; // 0x3 
+    std::uint8_t _[0x1]; // 0x4 
+    std::uint8_t _[0x1]; // 0x5 
+    std::uint8_t _[0x1]; // 0x6 
+    std::uint8_t _[0x1]; // 0x7 
 };
 
 struct AnimStateID {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_id[0x4]; // 0x0 uint32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CNmIDEventConditionNode__CDefinition {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSourceStateNodeIdx[0x4]; // 0x10 int16
-    std::uint8_t m_eventConditionRules[0x4]; // 0x14 CNmBitFlags
-    std::uint8_t m_eventIDs[0x40]; // 0x18 CUtlVectorFixedGrowable<CGlobalSymbol,5>
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x40]; // 0x18 
 };
 
 struct ModelBoneFlexDriver_t {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_boneName[0x8]; // 0x0 CUtlString
-    std::uint8_t m_boneNameToken[0x8]; // 0x8 uint32
-    std::uint8_t m_controls[0x18]; // 0x10 CUtlVector<ModelBoneFlexDriverControl_t>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x18]; // 0x10 
 };
 
 struct CMorphData {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_morphRectDatas[0x18]; // 0x8 CUtlVector<CMorphRectData>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x18]; // 0x8 
 };
 
 struct CFootPinningUpdateNode {
-    static constexpr std::size_t size = 0xD0;
+    static constexpr std::size_t size = 0xd0;
     std::uint8_t pad_0[0x78]; // 0x0
-    std::uint8_t m_poseOpFixedData[0x30]; // 0x78 FootPinningPoseOpFixedData_t
-    std::uint8_t m_eTimingSource[0x8]; // 0xA8 FootPinningTimingSource
-    std::uint8_t m_params[0x18]; // 0xB0 CUtlVector<CAnimParamHandle>
-    std::uint8_t m_bResetChild[0x8]; // 0xC8 bool
+    std::uint8_t _[0x30]; // 0x78 
+    std::uint8_t _[0x8]; // 0xa8 
+    std::uint8_t _[0x18]; // 0xb0 
+    std::uint8_t _[0x8]; // 0xc8 
 };
 
 struct CSeqPoseSetting {
     static constexpr std::size_t size = 0x40;
-    std::uint8_t m_sPoseParameter[0x10]; // 0x0 CBufferString
-    std::uint8_t m_sAttachment[0x10]; // 0x10 CBufferString
-    std::uint8_t m_sReferenceSequence[0x10]; // 0x20 CBufferString
-    std::uint8_t m_flValue[0x4]; // 0x30 float32
-    std::uint8_t m_bX[0x1]; // 0x34 bool
-    std::uint8_t m_bY[0x1]; // 0x35 bool
-    std::uint8_t m_bZ[0x2]; // 0x36 bool
-    std::uint8_t m_eType[0x8]; // 0x38 int32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0x10]; // 0x20 
+    std::uint8_t _[0x4]; // 0x30 
+    std::uint8_t _[0x1]; // 0x34 
+    std::uint8_t _[0x1]; // 0x35 
+    std::uint8_t _[0x2]; // 0x36 
+    std::uint8_t _[0x8]; // 0x38 
 };
 
 struct PulseGraphExecutionHistoryCursorDesc_t {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t vecAncestorCursorIDs[0x18]; // 0x0 CUtlVector<PulseCursorID_t>
-    std::uint8_t nSpawnNodeID[0x4]; // 0x18 PulseDocNodeID_t
-    std::uint8_t nRetiredAtNodeID[0x4]; // 0x1C PulseDocNodeID_t
-    std::uint8_t flLastReferenced[0x4]; // 0x20 float32
-    std::uint8_t nLastValidEntryIdx[0x4]; // 0x24 int32
-    std::uint8_t bWasAnObservableComputation[0x8]; // 0x28 bool
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x8]; // 0x28 
 };
 
 struct CNmVirtualParameterFloatNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nChildNodeIdx[0x8]; // 0x10 int16
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CAttachment {
     static constexpr std::size_t size = 0x90;
-    std::uint8_t m_name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_influenceNames[0x18]; // 0x8 CUtlString[3]
-    std::uint8_t m_vInfluenceRotations[0x30]; // 0x20 Quaternion[3]
-    std::uint8_t m_vInfluenceOffsets[0x24]; // 0x50 Vector[3]
-    std::uint8_t m_influenceWeights[0xC]; // 0x74 float32[3]
-    std::uint8_t m_bInfluenceRootTransform[0x3]; // 0x80 bool[3]
-    std::uint8_t m_nInfluences[0x1]; // 0x83 uint8
-    std::uint8_t m_bIgnoreRotation[0xC]; // 0x84 bool
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x18]; // 0x8 
+    std::uint8_t _[0x30]; // 0x20 
+    std::uint8_t _[0x24]; // 0x50 
+    std::uint8_t _[0xc]; // 0x74 
+    std::uint8_t _[0x3]; // 0x80 
+    std::uint8_t _[0x1]; // 0x83 
+    std::uint8_t _[0xc]; // 0x84 
 };
 
 struct CSequenceUpdateNodeBase {
     static constexpr std::size_t size = 0x78;
-    std::uint8_t pad_0[0x6C]; // 0x0
-    std::uint8_t m_playbackSpeed[0x4]; // 0x6C float32
-    std::uint8_t m_bLoop[0x8]; // 0x70 bool
+    std::uint8_t pad_0[0x6c]; // 0x0
+    std::uint8_t _[0x4]; // 0x6c 
+    std::uint8_t _[0x8]; // 0x70 
 };
 
 struct CDrawCullingData {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_ConeAxis[0x3]; // 0x0 int8[3]
-    std::uint8_t m_ConeCutoff[0x1]; // 0x3 int8
+    std::uint8_t _[0x3]; // 0x0 
+    std::uint8_t _[0x1]; // 0x3 
 };
 
 struct VPhysXJoint_t {
-    static constexpr std::size_t size = 0xD0;
-    std::uint8_t m_nType[0x2]; // 0x0 uint16
-    std::uint8_t m_nBody1[0x2]; // 0x2 uint16
-    std::uint8_t m_nBody2[0x2]; // 0x4 uint16
-    std::uint8_t m_nFlags[0xA]; // 0x6 uint16
-    std::uint8_t m_Frame1[0x20]; // 0x10 CTransform
-    std::uint8_t m_Frame2[0x20]; // 0x30 CTransform
-    std::uint8_t m_bEnableCollision[0x1]; // 0x50 bool
-    std::uint8_t m_bIsLinearConstraintDisabled[0x1]; // 0x51 bool
-    std::uint8_t m_bIsAngularConstraintDisabled[0x1]; // 0x52 bool
-    std::uint8_t m_bEnableLinearLimit[0x1]; // 0x53 bool
-    std::uint8_t m_LinearLimit[0x8]; // 0x54 VPhysXRange_t
-    std::uint8_t m_bEnableLinearMotor[0x4]; // 0x5C bool
-    std::uint8_t m_vLinearTargetVelocity[0xC]; // 0x60 Vector
-    std::uint8_t m_flMaxForce[0x4]; // 0x6C float32
-    std::uint8_t m_bEnableSwingLimit[0x4]; // 0x70 bool
-    std::uint8_t m_SwingLimit[0x8]; // 0x74 VPhysXRange_t
-    std::uint8_t m_bEnableTwistLimit[0x4]; // 0x7C bool
-    std::uint8_t m_TwistLimit[0x8]; // 0x80 VPhysXRange_t
-    std::uint8_t m_bEnableAngularMotor[0x4]; // 0x88 bool
-    std::uint8_t m_vAngularTargetVelocity[0xC]; // 0x8C Vector
-    std::uint8_t m_flMaxTorque[0x4]; // 0x98 float32
-    std::uint8_t m_flLinearFrequency[0x4]; // 0x9C float32
-    std::uint8_t m_flLinearDampingRatio[0x4]; // 0xA0 float32
-    std::uint8_t m_flAngularFrequency[0x4]; // 0xA4 float32
-    std::uint8_t m_flAngularDampingRatio[0x4]; // 0xA8 float32
-    std::uint8_t m_flFriction[0x4]; // 0xAC float32
-    std::uint8_t m_flElasticity[0x4]; // 0xB0 float32
-    std::uint8_t m_flElasticDamping[0x4]; // 0xB4 float32
-    std::uint8_t m_flPlasticity[0x8]; // 0xB8 float32
-    std::uint8_t m_Tag[0x10]; // 0xC0 CUtlString
+    static constexpr std::size_t size = 0xd0;
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
+    std::uint8_t _[0x2]; // 0x4 
+    std::uint8_t _[0xa]; // 0x6 
+    std::uint8_t _[0x20]; // 0x10 
+    std::uint8_t _[0x20]; // 0x30 
+    std::uint8_t _[0x1]; // 0x50 
+    std::uint8_t _[0x1]; // 0x51 
+    std::uint8_t _[0x1]; // 0x52 
+    std::uint8_t _[0x1]; // 0x53 
+    std::uint8_t _[0x8]; // 0x54 
+    std::uint8_t _[0x4]; // 0x5c 
+    std::uint8_t _[0xc]; // 0x60 
+    std::uint8_t _[0x4]; // 0x6c 
+    std::uint8_t _[0x4]; // 0x70 
+    std::uint8_t _[0x8]; // 0x74 
+    std::uint8_t _[0x4]; // 0x7c 
+    std::uint8_t _[0x8]; // 0x80 
+    std::uint8_t _[0x4]; // 0x88 
+    std::uint8_t _[0xc]; // 0x8c 
+    std::uint8_t _[0x4]; // 0x98 
+    std::uint8_t _[0x4]; // 0x9c 
+    std::uint8_t _[0x4]; // 0xa0 
+    std::uint8_t _[0x4]; // 0xa4 
+    std::uint8_t _[0x4]; // 0xa8 
+    std::uint8_t _[0x4]; // 0xac 
+    std::uint8_t _[0x4]; // 0xb0 
+    std::uint8_t _[0x4]; // 0xb4 
+    std::uint8_t _[0x8]; // 0xb8 
+    std::uint8_t _[0x10]; // 0xc0 
 };
 
 struct CStateNodeTransitionData {
-    static constexpr std::size_t size = 0x1C;
-    std::uint8_t m_curve[0x8]; // 0x0 CBlendCurve
-    std::uint8_t m_blendDuration[0x8]; // 0x8 CAnimValue<float32>
-    std::uint8_t m_resetCycleValue[0xC]; // 0x10 CAnimValue<float32>
+    static constexpr std::size_t size = 0x1c;
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0xc]; // 0x10 
 };
 
 struct CTimeRemainingMetricEvaluator {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x50]; // 0x0
-    std::uint8_t m_bMatchByTimeRemaining[0x4]; // 0x50 bool
-    std::uint8_t m_flMaxTimeRemaining[0x4]; // 0x54 float32
-    std::uint8_t m_bFilterByTimeRemaining[0x4]; // 0x58 bool
-    std::uint8_t m_flMinTimeRemaining[0x4]; // 0x5C float32
+    std::uint8_t _[0x4]; // 0x50 
+    std::uint8_t _[0x4]; // 0x54 
+    std::uint8_t _[0x4]; // 0x58 
+    std::uint8_t _[0x4]; // 0x5c 
 };
 
 struct CParticleInput {
@@ -2907,14 +2907,14 @@ struct CParticleInput {
 
 struct PulseRuntimeTempVarIndex_t {
     static constexpr std::size_t size = 0x2;
-    std::uint8_t m_Value[0x2]; // 0x0 int16
+    std::uint8_t _[0x2]; // 0x0 
 };
 
 struct CModelConfigElement {
     static constexpr std::size_t size = 0x48;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_ElementName[0x8]; // 0x8 CUtlString
-    std::uint8_t m_NestedElements[0x38]; // 0x10 CUtlVector<CModelConfigElement*>
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x38]; // 0x10 
 };
 
 struct CNmControlParameterVectorNode__CDefinition {
@@ -2924,171 +2924,171 @@ struct CNmControlParameterVectorNode__CDefinition {
 
 struct FootFixedSettings {
     static constexpr std::size_t size = 0x40;
-    std::uint8_t m_traceSettings[0x10]; // 0x0 TraceSettings_t
-    std::uint8_t m_vFootBaseBindPosePositionMS[0x10]; // 0x10 VectorAligned
-    std::uint8_t m_flFootBaseLength[0x4]; // 0x20 float32
-    std::uint8_t m_flMaxRotationLeft[0x4]; // 0x24 float32
-    std::uint8_t m_flMaxRotationRight[0x4]; // 0x28 float32
-    std::uint8_t m_footstepLandedTagIndex[0x4]; // 0x2C int32
-    std::uint8_t m_bEnableTracing[0x4]; // 0x30 bool
-    std::uint8_t m_flTraceAngleBlend[0x4]; // 0x34 float32
-    std::uint8_t m_nDisableTagIndex[0x4]; // 0x38 int32
-    std::uint8_t m_nFootIndex[0x4]; // 0x3C int32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x4]; // 0x28 
+    std::uint8_t _[0x4]; // 0x2c 
+    std::uint8_t _[0x4]; // 0x30 
+    std::uint8_t _[0x4]; // 0x34 
+    std::uint8_t _[0x4]; // 0x38 
+    std::uint8_t _[0x4]; // 0x3c 
 };
 
 struct CNmBoneMaskSwitchNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSwitchValueNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_nTrueValueNodeIdx[0x2]; // 0x12 int16
-    std::uint8_t m_nFalseValueNodeIdx[0x4]; // 0x14 int16
-    std::uint8_t m_flBlendTimeSeconds[0x4]; // 0x18 float32
-    std::uint8_t m_bSwitchDynamically[0x4]; // 0x1C bool
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
 };
 
 struct CModelConfig {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_ConfigName[0x8]; // 0x0 CUtlString
-    std::uint8_t m_Elements[0x18]; // 0x8 CUtlVector<CModelConfigElement*>
-    std::uint8_t m_bTopLevel[0x1]; // 0x20 bool
-    std::uint8_t m_bActiveInEditorByDefault[0x7]; // 0x21 bool
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x18]; // 0x8 
+    std::uint8_t _[0x1]; // 0x20 
+    std::uint8_t _[0x7]; // 0x21 
 };
 
 struct AnimComponentID {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_id[0x4]; // 0x0 uint32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct VPhysXAggregateData_t {
     static constexpr std::size_t size = 0x150;
-    std::uint8_t m_nFlags[0x2]; // 0x0 uint16
-    std::uint8_t m_nRefCounter[0x2]; // 0x2 uint16
-    std::uint8_t m_bCompoundsPacked[0x4]; // 0x4 bool
-    std::uint8_t m_bonesHash[0x18]; // 0x8 CUtlVector<uint32>
-    std::uint8_t m_boneNames[0x18]; // 0x20 CUtlVector<CUtlString>
-    std::uint8_t m_indexNames[0x18]; // 0x38 CUtlVector<uint16>
-    std::uint8_t m_indexHash[0x18]; // 0x50 CUtlVector<uint16>
-    std::uint8_t m_bindPose[0x18]; // 0x68 CUtlVector<matrix3x4a_t>
-    std::uint8_t m_parts[0x18]; // 0x80 CUtlVector<VPhysXBodyPart_t>
-    std::uint8_t m_shapeMarkups[0x18]; // 0x98 CUtlVector<PhysShapeMarkup_t>
-    std::uint8_t m_constraints2[0x18]; // 0xB0 CUtlVector<VPhysXConstraint2_t>
-    std::uint8_t m_joints[0x18]; // 0xC8 CUtlVector<VPhysXJoint_t>
-    std::uint8_t m_pFeModel[0x8]; // 0xE0 PhysFeModelDesc_t*
-    std::uint8_t m_boneParents[0x18]; // 0xE8 CUtlVector<uint16>
-    std::uint8_t m_surfacePropertyHashes[0x18]; // 0x100 CUtlVector<uint32>
-    std::uint8_t m_collisionAttributes[0x18]; // 0x118 CUtlVector<VPhysXCollisionAttributes_t>
-    std::uint8_t m_debugPartNames[0x18]; // 0x130 CUtlVector<CUtlString>
-    std::uint8_t m_embeddedKeyvalues[0x8]; // 0x148 CUtlString
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x18]; // 0x8 
+    std::uint8_t _[0x18]; // 0x20 
+    std::uint8_t _[0x18]; // 0x38 
+    std::uint8_t _[0x18]; // 0x50 
+    std::uint8_t _[0x18]; // 0x68 
+    std::uint8_t _[0x18]; // 0x80 
+    std::uint8_t _[0x18]; // 0x98 
+    std::uint8_t _[0x18]; // 0xb0 
+    std::uint8_t _[0x18]; // 0xc8 
+    std::uint8_t _[0x8]; // 0xe0 
+    std::uint8_t _[0x18]; // 0xe8 
+    std::uint8_t _[0x18]; // 0x100 
+    std::uint8_t _[0x18]; // 0x118 
+    std::uint8_t _[0x18]; // 0x130 
+    std::uint8_t _[0x8]; // 0x148 
 };
 
 struct CNmGraphDefinition {
-    static constexpr std::size_t size = 0x1B8;
-    std::uint8_t m_variationID[0x8]; // 0x0 CGlobalSymbol
-    std::uint8_t m_skeleton[0x8]; // 0x8 CStrongHandle<InfoForResourceTypeCNmSkeleton>
-    std::uint8_t m_supportedSecondarySkeletons[0x18]; // 0x10 CUtlVector<CStrongHandle<InfoForResourceTypeCNmSkeleton>>
-    std::uint8_t m_pUserData[0x8]; // 0x28 CNmGraphVariationUserData*
-    std::uint8_t m_persistentNodeIndices[0x18]; // 0x30 CUtlVector<int16>
-    std::uint8_t m_nRootNodeIdx[0x8]; // 0x48 int16
-    std::uint8_t m_controlParameterIDs[0x18]; // 0x50 CUtlVector<CGlobalSymbol>
-    std::uint8_t m_virtualParameterIDs[0x18]; // 0x68 CUtlVector<CGlobalSymbol>
-    std::uint8_t m_virtualParameterNodeIndices[0x18]; // 0x80 CUtlVector<int16>
-    std::uint8_t m_referencedGraphSlots[0x18]; // 0x98 CUtlVector<CNmGraphDefinition::ReferencedGraphSlot_t>
-    std::uint8_t m_externalGraphSlots[0x18]; // 0xB0 CUtlVector<CNmGraphDefinition::ExternalGraphSlot_t>
-    std::uint8_t m_externalPoseSlots[0x88]; // 0xC8 CUtlVector<CNmGraphDefinition::ExternalPoseSlot_t>
-    std::uint8_t m_nodePaths[0x18]; // 0x150 CUtlVector<CUtlString>
-    std::uint8_t m_resources[0x50]; // 0x168 CUtlVector<CStrongHandleVoid>
+    static constexpr std::size_t size = 0x1b8;
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x8]; // 0x48 
+    std::uint8_t _[0x18]; // 0x50 
+    std::uint8_t _[0x18]; // 0x68 
+    std::uint8_t _[0x18]; // 0x80 
+    std::uint8_t _[0x18]; // 0x98 
+    std::uint8_t _[0x18]; // 0xb0 
+    std::uint8_t _[0x88]; // 0xc8 
+    std::uint8_t _[0x18]; // 0x150 
+    std::uint8_t _[0x50]; // 0x168 
 };
 
 struct CNmSelectorNode__CDefinition {
     static constexpr std::size_t size = 0x40;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_optionNodeIndices[0x18]; // 0x10 CUtlLeanVectorFixedGrowable<int16,8>
-    std::uint8_t m_conditionNodeIndices[0x18]; // 0x28 CUtlLeanVectorFixedGrowable<int16,8>
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x18]; // 0x28 
 };
 
 struct CAnimDemoCaptureSettings {
     static constexpr std::size_t size = 0x80;
-    std::uint8_t m_vecErrorRangeSplineRotation[0x8]; // 0x0 Vector2D
-    std::uint8_t m_vecErrorRangeSplineTranslation[0x8]; // 0x8 Vector2D
-    std::uint8_t m_vecErrorRangeSplineScale[0x8]; // 0x10 Vector2D
-    std::uint8_t m_flIkRotation_MaxSplineError[0x4]; // 0x18 float32
-    std::uint8_t m_flIkTranslation_MaxSplineError[0x4]; // 0x1C float32
-    std::uint8_t m_vecErrorRangeQuantizationRotation[0x8]; // 0x20 Vector2D
-    std::uint8_t m_vecErrorRangeQuantizationTranslation[0x8]; // 0x28 Vector2D
-    std::uint8_t m_vecErrorRangeQuantizationScale[0x8]; // 0x30 Vector2D
-    std::uint8_t m_flIkRotation_MaxQuantizationError[0x4]; // 0x38 float32
-    std::uint8_t m_flIkTranslation_MaxQuantizationError[0x4]; // 0x3C float32
-    std::uint8_t m_baseSequence[0x8]; // 0x40 CUtlString
-    std::uint8_t m_nBaseSequenceFrame[0x4]; // 0x48 int32
-    std::uint8_t m_boneSelectionMode[0x4]; // 0x4C EDemoBoneSelectionMode
-    std::uint8_t m_bones[0x18]; // 0x50 CUtlVector<BoneDemoCaptureSettings_t>
-    std::uint8_t m_ikChains[0x18]; // 0x68 CUtlVector<IKDemoCaptureSettings_t>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x8]; // 0x30 
+    std::uint8_t _[0x4]; // 0x38 
+    std::uint8_t _[0x4]; // 0x3c 
+    std::uint8_t _[0x8]; // 0x40 
+    std::uint8_t _[0x4]; // 0x48 
+    std::uint8_t _[0x4]; // 0x4c 
+    std::uint8_t _[0x18]; // 0x50 
+    std::uint8_t _[0x18]; // 0x68 
 };
 
 struct IKDemoCaptureSettings_t {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_parentBoneName[0x8]; // 0x0 CUtlString
-    std::uint8_t m_eMode[0x8]; // 0x8 IKChannelMode
-    std::uint8_t m_ikChainName[0x8]; // 0x10 CUtlString
-    std::uint8_t m_oneBoneStart[0x8]; // 0x18 CUtlString
-    std::uint8_t m_oneBoneEnd[0x8]; // 0x20 CUtlString
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
 };
 
 struct CSeqMultiFetchFlag {
     static constexpr std::size_t size = 0x6;
-    std::uint8_t m_bRealtime[0x1]; // 0x0 bool
-    std::uint8_t m_bCylepose[0x1]; // 0x1 bool
-    std::uint8_t m_b0D[0x1]; // 0x2 bool
-    std::uint8_t m_b1D[0x1]; // 0x3 bool
-    std::uint8_t m_b2D[0x1]; // 0x4 bool
-    std::uint8_t m_b2D_TRI[0x1]; // 0x5 bool
+    std::uint8_t _[0x1]; // 0x0 
+    std::uint8_t _[0x1]; // 0x1 
+    std::uint8_t _[0x1]; // 0x2 
+    std::uint8_t _[0x1]; // 0x3 
+    std::uint8_t _[0x1]; // 0x4 
+    std::uint8_t _[0x1]; // 0x5 
 };
 
 struct PulseRegisterMap_t {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_Inparams[0x10]; // 0x0 KeyValues3
-    std::uint8_t m_InparamsWhichCanBeMoved[0x10]; // 0x10 CKV3MemberNameSet
-    std::uint8_t m_Outparams[0x10]; // 0x20 KeyValues3
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0x10]; // 0x20 
 };
 
 struct VPhysXRange_t {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_flMin[0x4]; // 0x0 float32
-    std::uint8_t m_flMax[0x4]; // 0x4 float32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct CStopAtGoalUpdateNode {
-    static constexpr std::size_t size = 0xA0;
+    static constexpr std::size_t size = 0xa0;
     std::uint8_t pad_0[0x74]; // 0x0
-    std::uint8_t m_flOuterRadius[0x4]; // 0x74 float32
-    std::uint8_t m_flInnerRadius[0x4]; // 0x78 float32
-    std::uint8_t m_flMaxScale[0x4]; // 0x7C float32
-    std::uint8_t m_flMinScale[0x8]; // 0x80 float32
-    std::uint8_t m_damping[0x18]; // 0x88 CAnimInputDamping
+    std::uint8_t _[0x4]; // 0x74 
+    std::uint8_t _[0x4]; // 0x78 
+    std::uint8_t _[0x4]; // 0x7c 
+    std::uint8_t _[0x8]; // 0x80 
+    std::uint8_t _[0x18]; // 0x88 
 };
 
 struct CNmIDEventPercentageThroughNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSourceStateNodeIdx[0x4]; // 0x10 int16
-    std::uint8_t m_eventConditionRules[0x4]; // 0x14 CNmBitFlags
-    std::uint8_t m_eventID[0x8]; // 0x18 CGlobalSymbol
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x8]; // 0x18 
 };
 
 struct CAnimBoneDifference {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_name[0x10]; // 0x0 CBufferString
-    std::uint8_t m_parent[0x10]; // 0x10 CBufferString
-    std::uint8_t m_posError[0xC]; // 0x20 Vector
-    std::uint8_t m_bHasRotation[0x1]; // 0x2C bool
-    std::uint8_t m_bHasMovement[0x3]; // 0x2D bool
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0xc]; // 0x20 
+    std::uint8_t _[0x1]; // 0x2c 
+    std::uint8_t _[0x3]; // 0x2d 
 };
 
 struct CNmCachedBoolNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x4]; // 0x10 int16
-    std::uint8_t m_mode[0x4]; // 0x14 NmCachedValueMode_t
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct CAnimCycle {
@@ -3099,128 +3099,128 @@ struct CAnimCycle {
 struct CActionComponentUpdater {
     static constexpr std::size_t size = 0x48;
     std::uint8_t pad_0[0x30]; // 0x0
-    std::uint8_t m_actions[0x18]; // 0x30 CUtlVector<CSmartPtr<CAnimActionUpdater>>
+    std::uint8_t _[0x18]; // 0x30 
 };
 
 struct CDirectionalBlendInstanceData {
     static constexpr std::size_t size = 0x50;
-    std::uint8_t m_dampedValue[0x14]; // 0x0 float32
-    std::uint8_t m_flCycle[0x4]; // 0x14 float32
-    std::uint8_t m_flPrevCycle[0x4]; // 0x18 float32
-    std::uint8_t m_flPlaybackRate[0xC]; // 0x1C CAnimNetVar<float32>
-    std::uint8_t m_flCycleZeroTime[0xC]; // 0x28 CAnimNetVar<float32>
-    std::uint8_t m_resetCycleValue[0xC]; // 0x34 CAnimNetVar<float32>
-    std::uint8_t m_resetCount[0x10]; // 0x40 CAnimNetVar<float32>
+    std::uint8_t _[0x14]; // 0x0 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0xc]; // 0x1c 
+    std::uint8_t _[0xc]; // 0x28 
+    std::uint8_t _[0xc]; // 0x34 
+    std::uint8_t _[0x10]; // 0x40 
 };
 
 struct CDampedPathAnimMotorUpdater {
     static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x2C]; // 0x0
-    std::uint8_t m_flAnticipationTime[0x4]; // 0x2C float32
-    std::uint8_t m_flMinSpeedScale[0x4]; // 0x30 float32
-    std::uint8_t m_hAnticipationPosParam[0x2]; // 0x34 CAnimParamHandle
-    std::uint8_t m_hAnticipationHeadingParam[0x2]; // 0x36 CAnimParamHandle
-    std::uint8_t m_flSpringConstant[0x4]; // 0x38 float32
-    std::uint8_t m_flMinSpringTension[0x4]; // 0x3C float32
-    std::uint8_t m_flMaxSpringTension[0x8]; // 0x40 float32
+    std::uint8_t pad_0[0x2c]; // 0x0
+    std::uint8_t _[0x4]; // 0x2c 
+    std::uint8_t _[0x4]; // 0x30 
+    std::uint8_t _[0x2]; // 0x34 
+    std::uint8_t _[0x2]; // 0x36 
+    std::uint8_t _[0x4]; // 0x38 
+    std::uint8_t _[0x4]; // 0x3c 
+    std::uint8_t _[0x8]; // 0x40 
 };
 
 struct CNmCachedFloatNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x4]; // 0x10 int16
-    std::uint8_t m_mode[0x4]; // 0x14 NmCachedValueMode_t
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct CNmFloatSwitchNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSwitchValueNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_nTrueValueNodeIdx[0x2]; // 0x12 int16
-    std::uint8_t m_nFalseValueNodeIdx[0x4]; // 0x14 int16
-    std::uint8_t m_flFalseValue[0x4]; // 0x18 float32
-    std::uint8_t m_flTrueValue[0x4]; // 0x1C float32
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
 };
 
 struct CModelConfigElement_SetMaterialGroupOnAttachedModels {
     static constexpr std::size_t size = 0x50;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_MaterialGroupName[0x8]; // 0x48 CUtlString
+    std::uint8_t _[0x8]; // 0x48 
 };
 
 struct CNmFloatChannelData {
     static constexpr std::size_t size = 0x58;
-    std::uint8_t m_skeleton[0x8]; // 0x0 CStrongHandle<InfoForResourceTypeCNmSkeleton>
-    std::uint8_t m_setID[0x8]; // 0x8 CGlobalSymbol
-    std::uint8_t m_channelSettings[0x18]; // 0x10 CUtlVector<CNmFloatChannelData::ChannelSettings_t>
-    std::uint8_t m_compressedData[0x18]; // 0x28 CUtlVector<uint16>
-    std::uint8_t m_compressedOffsets[0x18]; // 0x40 CUtlVector<uint32>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x18]; // 0x28 
+    std::uint8_t _[0x18]; // 0x40 
 };
 
 struct CNmEntityAttributeEventBase {
     static constexpr std::size_t size = 0x38;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_target[0x8]; // 0x18 CNmEventTargetEntity_t
-    std::uint8_t m_attributeName[0x18]; // 0x20 CUtlString
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x18]; // 0x20 
 };
 
 struct CNmVirtualParameterBoneMaskNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nChildNodeIdx[0x8]; // 0x10 int16
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct SequenceData {
     static constexpr std::size_t size = 0x38;
-    std::uint8_t m_hSequence[0x4]; // 0x0 HSequence
-    std::uint8_t m_cycle[0x34]; // 0x4 CNetworkedCycle
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x34]; // 0x4 
 };
 
 struct CPathHelperUpdateNode {
     static constexpr std::size_t size = 0x78;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_flStoppingRadius[0x4]; // 0x70 float32
-    std::uint8_t m_flStoppingSpeedScale[0x4]; // 0x74 float32
+    std::uint8_t _[0x4]; // 0x70 
+    std::uint8_t _[0x4]; // 0x74 
 };
 
 struct MaterialGroup_t {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_materials[0x18]; // 0x8 CUtlVector<CStrongHandle<InfoForResourceTypeIMaterial2>>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x18]; // 0x8 
 };
 
 struct CMorphBundleData {
     static constexpr std::size_t size = 0x38;
-    std::uint8_t m_flULeftSrc[0x4]; // 0x0 float32
-    std::uint8_t m_flVTopSrc[0x4]; // 0x4 float32
-    std::uint8_t m_offsets[0x18]; // 0x8 CUtlVector<float32>
-    std::uint8_t m_ranges[0x18]; // 0x20 CUtlVector<float32>
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x18]; // 0x8 
+    std::uint8_t _[0x18]; // 0x20 
 };
 
 struct CModelConfigElement_UserPick {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_Choices[0x18]; // 0x48 CUtlVector<CUtlString>
+    std::uint8_t _[0x18]; // 0x48 
 };
 
 struct CSolveIKTargetHandle_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_positionHandle[0x2]; // 0x0 CAnimParamHandle
-    std::uint8_t m_orientationHandle[0x2]; // 0x2 CAnimParamHandle
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
 };
 
 struct CFootAdjustmentUpdateNode {
-    static constexpr std::size_t size = 0xB0;
+    static constexpr std::size_t size = 0xb0;
     std::uint8_t pad_0[0x78]; // 0x0
-    std::uint8_t m_clips[0x18]; // 0x78 CUtlVector<HSequence>
-    std::uint8_t m_hBasePoseCacheHandle[0x4]; // 0x90 CPoseHandle
-    std::uint8_t m_facingTarget[0x4]; // 0x94 CAnimParamHandle
-    std::uint8_t m_flTurnTimeMin[0x4]; // 0x98 float32
-    std::uint8_t m_flTurnTimeMax[0x4]; // 0x9C float32
-    std::uint8_t m_flStepHeightMax[0x4]; // 0xA0 float32
-    std::uint8_t m_flStepHeightMaxAngle[0x4]; // 0xA4 float32
-    std::uint8_t m_bResetChild[0x1]; // 0xA8 bool
-    std::uint8_t m_bAnimationDriven[0x7]; // 0xA9 bool
+    std::uint8_t _[0x18]; // 0x78 
+    std::uint8_t _[0x4]; // 0x90 
+    std::uint8_t _[0x4]; // 0x94 
+    std::uint8_t _[0x4]; // 0x98 
+    std::uint8_t _[0x4]; // 0x9c 
+    std::uint8_t _[0x4]; // 0xa0 
+    std::uint8_t _[0x4]; // 0xa4 
+    std::uint8_t _[0x1]; // 0xa8 
+    std::uint8_t _[0x7]; // 0xa9 
 };
 
 struct CChoreoUpdateNode {
@@ -3231,69 +3231,69 @@ struct CChoreoUpdateNode {
 struct CAimConstraint {
     static constexpr std::size_t size = 0x80;
     std::uint8_t pad_0[0x60]; // 0x0
-    std::uint8_t m_qAimOffset[0x10]; // 0x60 Quaternion
-    std::uint8_t m_nUpType[0x10]; // 0x70 uint32
+    std::uint8_t _[0x10]; // 0x60 
+    std::uint8_t _[0x10]; // 0x70 
 };
 
 struct CMaterialDrawDescriptor__RigidMeshPart_t {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_nRigidBLASIndex[0x2]; // 0x0 uint16
-    std::uint8_t m_nBoneIndex[0x2]; // 0x2 int16
-    std::uint8_t m_nStartIndexOffset[0x4]; // 0x4 uint32
-    std::uint8_t m_nPrimitiveCount[0x4]; // 0x8 uint32
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
 };
 
 struct CFootFallAnimTag {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x58]; // 0x0
-    std::uint8_t m_foot[0x8]; // 0x58 FootFallTagFoot_t
+    std::uint8_t _[0x8]; // 0x58 
 };
 
 struct CMaterialDrawDescriptor {
     static constexpr std::size_t size = 0x120;
-    std::uint8_t m_flUvDensity[0x4]; // 0x0 float32
-    std::uint8_t m_vTintColor[0xC]; // 0x4 Vector
-    std::uint8_t m_flAlpha[0x8]; // 0x10 float32
-    std::uint8_t m_nNumMeshlets[0x8]; // 0x18 uint32
-    std::uint8_t m_nFirstMeshlet[0x4]; // 0x20 uint32
-    std::uint8_t m_nAppliedIndexOffset[0x4]; // 0x24 uint32
-    std::uint8_t m_nEmissivePrimitiveCount[0x4]; // 0x28 int32
-    std::uint8_t m_nDepthVertexBufferIndex[0x1]; // 0x2C uint8
-    std::uint8_t m_nMeshletPackedIVBIndex[0x3]; // 0x2D uint8
-    std::uint8_t m_rigidMeshParts[0x10]; // 0x30 CUtlLeanVector<CMaterialDrawDescriptor::RigidMeshPart_t>
-    std::uint8_t m_rootBvhNodes[0x10]; // 0x40 CUtlLeanVector<uint16>
-    std::uint8_t m_nPrimitiveType[0x4]; // 0x50 RenderPrimitiveType_t
-    std::uint8_t m_nBaseVertex[0x4]; // 0x54 int32
-    std::uint8_t m_nVertexCount[0x4]; // 0x58 int32
-    std::uint8_t m_nStartIndex[0x4]; // 0x5C int32
-    std::uint8_t m_nIndexCount[0x68]; // 0x60 int32
-    std::uint8_t m_indexBuffer[0x20]; // 0xC8 CRenderBufferBinding
-    std::uint8_t m_meshletPackedIVB[0x30]; // 0xE8 CRenderBufferBinding
-    std::uint8_t m_material[0x8]; // 0x118 CStrongHandle<InfoForResourceTypeIMaterial2>
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0xc]; // 0x4 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x4]; // 0x28 
+    std::uint8_t _[0x1]; // 0x2c 
+    std::uint8_t _[0x3]; // 0x2d 
+    std::uint8_t _[0x10]; // 0x30 
+    std::uint8_t _[0x10]; // 0x40 
+    std::uint8_t _[0x4]; // 0x50 
+    std::uint8_t _[0x4]; // 0x54 
+    std::uint8_t _[0x4]; // 0x58 
+    std::uint8_t _[0x4]; // 0x5c 
+    std::uint8_t _[0x68]; // 0x60 
+    std::uint8_t _[0x20]; // 0xc8 
+    std::uint8_t _[0x30]; // 0xe8 
+    std::uint8_t _[0x8]; // 0x118 
 };
 
 struct CNmSkeleton {
     static constexpr std::size_t size = 0x100;
-    std::uint8_t m_ID[0x8]; // 0x0 CGlobalSymbol
-    std::uint8_t m_boneIDs[0x10]; // 0x8 CUtlLeanVector<CGlobalSymbol>
-    std::uint8_t m_parentIndices[0x18]; // 0x18 CUtlVector<int32>
-    std::uint8_t m_parentSpaceReferencePose[0x18]; // 0x30 CUtlVector<CTransform>
-    std::uint8_t m_modelSpaceReferencePose[0x18]; // 0x48 CUtlVector<CTransform>
-    std::uint8_t m_numBonesToSampleAtLowLOD[0x4]; // 0x60 int32
-    std::uint8_t m_bIsPropSkeleton[0x24]; // 0x64 bool
-    std::uint8_t m_maskDefinitions[0x20]; // 0x88 CUtlLeanVector<NmBoneMaskSetDefinition_t>
-    std::uint8_t m_secondarySkeletons[0x10]; // 0xA8 CUtlLeanVector<CNmSkeleton::SecondarySkeleton_t>
-    std::uint8_t m_floatChannelSets[0x10]; // 0xB8 CUtlLeanVector<CNmFloatChannelSet_t>
-    std::uint8_t m_contactConfigs[0x18]; // 0xC8 CUtlVector<CNmSkeleton::ContactConfig_t>
-    std::uint8_t m_gameplayRelevantBoneIndices[0x18]; // 0xE0 CUtlVector<int32>
-    std::uint8_t m_nSpecialDependencyHash[0x8]; // 0xF8 int64
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x10]; // 0x8 
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x4]; // 0x60 
+    std::uint8_t _[0x24]; // 0x64 
+    std::uint8_t _[0x20]; // 0x88 
+    std::uint8_t _[0x10]; // 0xa8 
+    std::uint8_t _[0x10]; // 0xb8 
+    std::uint8_t _[0x18]; // 0xc8 
+    std::uint8_t _[0x18]; // 0xe0 
+    std::uint8_t _[0x8]; // 0xf8 
 };
 
 struct CStepsRemainingMetricEvaluator {
     static constexpr std::size_t size = 0x70;
     std::uint8_t pad_0[0x50]; // 0x0
-    std::uint8_t m_footIndices[0x18]; // 0x50 CUtlVector<int32>
-    std::uint8_t m_flMinStepsRemaining[0x8]; // 0x68 float32
+    std::uint8_t _[0x18]; // 0x50 
+    std::uint8_t _[0x8]; // 0x68 
 };
 
 struct CNmVelocityBlendNode__CDefinition {
@@ -3309,170 +3309,170 @@ struct CNmZeroPoseTask {
 struct CNmClothEvent {
     static constexpr std::size_t size = 0x40;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_type[0x4]; // 0x18 CNmClothEvent::Type_t
-    std::uint8_t m_flStiffness[0x4]; // 0x1C float32
-    std::uint8_t m_flSpeedIn[0x4]; // 0x20 float32
-    std::uint8_t m_flSpeedOut[0x4]; // 0x24 float32
-    std::uint8_t m_flLengthSeconds[0x8]; // 0x28 float32
-    std::uint8_t m_vertexSetName[0x8]; // 0x30 CUtlString
-    std::uint8_t m_effectName[0x8]; // 0x38 CUtlString
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x8]; // 0x30 
+    std::uint8_t _[0x8]; // 0x38 
 };
 
 struct CBodyGroupSetting {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_BodyGroupName[0x8]; // 0x0 CUtlString
-    std::uint8_t m_nBodyGroupOption[0x8]; // 0x8 int32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CVectorQuantizer {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_centroidVectors[0x18]; // 0x0 CUtlVector<float32>
-    std::uint8_t m_nCentroids[0x4]; // 0x18 int32
-    std::uint8_t m_nDimensions[0x4]; // 0x1C int32
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
 };
 
 struct ParticleNamedValueConfiguration_t {
     static constexpr std::size_t size = 0x38;
-    std::uint8_t m_ConfigName[0x8]; // 0x0 CUtlString
-    std::uint8_t m_ConfigValue[0x10]; // 0x8 KeyValues3
-    std::uint8_t m_BoundValuePath[0x8]; // 0x18 CUtlString
-    std::uint8_t m_iAttachType[0x8]; // 0x20 ParticleAttachment_t
-    std::uint8_t m_strEntityScope[0x8]; // 0x28 CUtlString
-    std::uint8_t m_strAttachmentName[0x8]; // 0x30 CUtlString
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x10]; // 0x8 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x8]; // 0x30 
 };
 
 struct CNmVectorCreateNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_inputVectorValueNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_inputValueXNodeIdx[0x2]; // 0x12 int16
-    std::uint8_t m_inputValueYNodeIdx[0x2]; // 0x14 int16
-    std::uint8_t m_inputValueZNodeIdx[0x2]; // 0x16 int16
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x2]; // 0x14 
+    std::uint8_t _[0x2]; // 0x16 
 };
 
 struct CParticleVecInput {
-    static constexpr std::size_t size = 0x6D8;
+    static constexpr std::size_t size = 0x6d8;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nType[0x4]; // 0x10 ParticleVecType_t
-    std::uint8_t m_vLiteralValue[0xC]; // 0x14 Vector
-    std::uint8_t m_LiteralColor[0x8]; // 0x20 Color
-    std::uint8_t m_NamedValue[0x40]; // 0x28 CParticleNamedValueRef
-    std::uint8_t m_bFollowNamedValue[0x4]; // 0x68 bool
-    std::uint8_t m_nVectorAttribute[0x4]; // 0x6C ParticleAttributeIndex_t
-    std::uint8_t m_vVectorAttributeScale[0xC]; // 0x70 Vector
-    std::uint8_t m_nControlPoint[0x4]; // 0x7C int32
-    std::uint8_t m_nDeltaControlPoint[0x4]; // 0x80 int32
-    std::uint8_t m_vCPValueScale[0xC]; // 0x84 Vector
-    std::uint8_t m_vCPRelativePosition[0xC]; // 0x90 Vector
-    std::uint8_t m_vCPRelativeDir[0xC]; // 0x9C Vector
-    std::uint8_t m_FloatComponentX[0x178]; // 0xA8 CParticleFloatInput
-    std::uint8_t m_FloatComponentY[0x178]; // 0x220 CParticleFloatInput
-    std::uint8_t m_FloatComponentZ[0x178]; // 0x398 CParticleFloatInput
-    std::uint8_t m_FloatInterp[0x178]; // 0x510 CParticleFloatInput
-    std::uint8_t m_flInterpInput0[0x4]; // 0x688 float32
-    std::uint8_t m_flInterpInput1[0x4]; // 0x68C float32
-    std::uint8_t m_vInterpOutput0[0xC]; // 0x690 Vector
-    std::uint8_t m_vInterpOutput1[0xC]; // 0x69C Vector
-    std::uint8_t m_Gradient[0x18]; // 0x6A8 CColorGradient
-    std::uint8_t m_vRandomMin[0xC]; // 0x6C0 Vector
-    std::uint8_t m_vRandomMax[0xC]; // 0x6CC Vector
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0xc]; // 0x14 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x40]; // 0x28 
+    std::uint8_t _[0x4]; // 0x68 
+    std::uint8_t _[0x4]; // 0x6c 
+    std::uint8_t _[0xc]; // 0x70 
+    std::uint8_t _[0x4]; // 0x7c 
+    std::uint8_t _[0x4]; // 0x80 
+    std::uint8_t _[0xc]; // 0x84 
+    std::uint8_t _[0xc]; // 0x90 
+    std::uint8_t _[0xc]; // 0x9c 
+    std::uint8_t _[0x178]; // 0xa8 
+    std::uint8_t _[0x178]; // 0x220 
+    std::uint8_t _[0x178]; // 0x398 
+    std::uint8_t _[0x178]; // 0x510 
+    std::uint8_t _[0x4]; // 0x688 
+    std::uint8_t _[0x4]; // 0x68c 
+    std::uint8_t _[0xc]; // 0x690 
+    std::uint8_t _[0xc]; // 0x69c 
+    std::uint8_t _[0x18]; // 0x6a8 
+    std::uint8_t _[0xc]; // 0x6c0 
+    std::uint8_t _[0xc]; // 0x6cc 
 };
 
 struct CNmStateNode__CDefinition {
-    static constexpr std::size_t size = 0xB0;
+    static constexpr std::size_t size = 0xb0;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nChildNodeIdx[0x8]; // 0x10 int16
-    std::uint8_t m_entryEvents[0x20]; // 0x18 CUtlLeanVectorFixedGrowable<CGlobalSymbol,3>
-    std::uint8_t m_executeEvents[0x20]; // 0x38 CUtlLeanVectorFixedGrowable<CGlobalSymbol,3>
-    std::uint8_t m_exitEvents[0x20]; // 0x58 CUtlLeanVectorFixedGrowable<CGlobalSymbol,3>
-    std::uint8_t m_timedRemainingEvents[0x18]; // 0x78 CUtlLeanVectorFixedGrowable<CNmStateNode::TimedEvent_t,1>
-    std::uint8_t m_timedElapsedEvents[0x18]; // 0x90 CUtlLeanVectorFixedGrowable<CNmStateNode::TimedEvent_t,1>
-    std::uint8_t m_nLayerWeightNodeIdx[0x2]; // 0xA8 int16
-    std::uint8_t m_nLayerRootMotionWeightNodeIdx[0x2]; // 0xAA int16
-    std::uint8_t m_nLayerBoneMaskNodeIdx[0x2]; // 0xAC int16
-    std::uint8_t m_bIsOffState[0x1]; // 0xAE bool
-    std::uint8_t m_bUseActualElapsedTimeInStateForTimedEvents[0x1]; // 0xAF bool
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x20]; // 0x18 
+    std::uint8_t _[0x20]; // 0x38 
+    std::uint8_t _[0x20]; // 0x58 
+    std::uint8_t _[0x18]; // 0x78 
+    std::uint8_t _[0x18]; // 0x90 
+    std::uint8_t _[0x2]; // 0xa8 
+    std::uint8_t _[0x2]; // 0xaa 
+    std::uint8_t _[0x2]; // 0xac 
+    std::uint8_t _[0x1]; // 0xae 
+    std::uint8_t _[0x1]; // 0xaf 
 };
 
 struct CNmBoneMaskSelectorNode__CDefinition {
     static constexpr std::size_t size = 0x78;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_defaultMaskNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_parameterValueNodeIdx[0x2]; // 0x12 int16
-    std::uint8_t m_bSwitchDynamically[0x4]; // 0x14 bool
-    std::uint8_t m_maskNodeIndices[0x18]; // 0x18 CUtlLeanVectorFixedGrowable<int16,8>
-    std::uint8_t m_parameterValues[0x40]; // 0x30 CUtlLeanVectorFixedGrowable<CGlobalSymbol,7>
-    std::uint8_t m_flBlendTimeSeconds[0x8]; // 0x70 float32
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0x40]; // 0x30 
+    std::uint8_t _[0x8]; // 0x70 
 };
 
 struct CNmVirtualParameterVectorNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nChildNodeIdx[0x8]; // 0x10 int16
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CFootCycleMetricEvaluator {
     static constexpr std::size_t size = 0x68;
     std::uint8_t pad_0[0x50]; // 0x0
-    std::uint8_t m_footIndices[0x18]; // 0x50 CUtlVector<int32>
+    std::uint8_t _[0x18]; // 0x50 
 };
 
 struct CNmConstIDNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_value[0x8]; // 0x10 CGlobalSymbol
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CHitBox {
     static constexpr std::size_t size = 0x70;
-    std::uint8_t m_name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_sSurfaceProperty[0x8]; // 0x8 CUtlString
-    std::uint8_t m_sBoneName[0x8]; // 0x10 CUtlString
-    std::uint8_t m_vMinBounds[0xC]; // 0x18 Vector
-    std::uint8_t m_vMaxBounds[0xC]; // 0x24 Vector
-    std::uint8_t m_flShapeRadius[0x4]; // 0x30 float32
-    std::uint8_t m_nBoneNameHash[0x4]; // 0x34 uint32
-    std::uint8_t m_nGroupId[0x4]; // 0x38 int32
-    std::uint8_t m_nShapeType[0x1]; // 0x3C uint8
-    std::uint8_t m_bTranslationOnly[0x3]; // 0x3D bool
-    std::uint8_t m_CRC[0x4]; // 0x40 uint32
-    std::uint8_t m_cRenderColor[0x4]; // 0x44 Color
-    std::uint8_t m_nHitBoxIndex[0x28]; // 0x48 uint16
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0xc]; // 0x18 
+    std::uint8_t _[0xc]; // 0x24 
+    std::uint8_t _[0x4]; // 0x30 
+    std::uint8_t _[0x4]; // 0x34 
+    std::uint8_t _[0x4]; // 0x38 
+    std::uint8_t _[0x1]; // 0x3c 
+    std::uint8_t _[0x3]; // 0x3d 
+    std::uint8_t _[0x4]; // 0x40 
+    std::uint8_t _[0x4]; // 0x44 
+    std::uint8_t _[0x28]; // 0x48 
 };
 
 struct CNmParameterizedSelectorNode__CDefinition {
     static constexpr std::size_t size = 0x40;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_optionNodeIndices[0x18]; // 0x10 CUtlLeanVectorFixedGrowable<int16,8>
-    std::uint8_t m_optionWeights[0x10]; // 0x28 CUtlLeanVectorFixedGrowable<uint8,8>
-    std::uint8_t m_parameterNodeIdx[0x2]; // 0x38 int16
-    std::uint8_t m_bIgnoreInvalidOptions[0x1]; // 0x3A bool
-    std::uint8_t m_bHasWeightsSet[0x5]; // 0x3B bool
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x10]; // 0x28 
+    std::uint8_t _[0x2]; // 0x38 
+    std::uint8_t _[0x1]; // 0x3a 
+    std::uint8_t _[0x5]; // 0x3b 
 };
 
 struct ModelSkeletonData_t {
-    static constexpr std::size_t size = 0xA8;
-    std::uint8_t m_boneName[0x18]; // 0x0 CUtlVector<CUtlString>
-    std::uint8_t m_nParent[0x18]; // 0x18 CUtlVector<int16>
-    std::uint8_t m_boneSphere[0x18]; // 0x30 CUtlVector<float32>
-    std::uint8_t m_nFlag[0x18]; // 0x48 CUtlVector<uint32>
-    std::uint8_t m_bonePosParent[0x18]; // 0x60 CUtlVector<Vector>
-    std::uint8_t m_boneRotParent[0x18]; // 0x78 CUtlVector<QuaternionStorage>
-    std::uint8_t m_boneScaleParent[0x18]; // 0x90 CUtlVector<float32>
+    static constexpr std::size_t size = 0xa8;
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x18]; // 0x60 
+    std::uint8_t _[0x18]; // 0x78 
+    std::uint8_t _[0x18]; // 0x90 
 };
 
 struct CNmEvent {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_flStartTime[0x4]; // 0x8 NmPercent_t
-    std::uint8_t m_flDuration[0x4]; // 0xC NmPercent_t
-    std::uint8_t m_syncID[0x8]; // 0x10 CGlobalSymbol
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct NmCompressionSettings_t__QuantizationRange_t {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_flRangeStart[0x4]; // 0x0 float32
-    std::uint8_t m_flRangeLength[0x4]; // 0x4 float32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct CNmBlendTaskBase {
@@ -3481,129 +3481,129 @@ struct CNmBlendTaskBase {
 };
 
 struct TagSpan_t {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_tagIndex[0x4]; // 0x0 int32
-    std::uint8_t m_startCycle[0x4]; // 0x4 float32
-    std::uint8_t m_endCycle[0x4]; // 0x8 float32
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
 };
 
 struct CNmConstTargetNode__CDefinition {
     static constexpr std::size_t size = 0x40;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_value[0x30]; // 0x10 CNmTarget
+    std::uint8_t _[0x30]; // 0x10 
 };
 
 struct CRemapValueUpdateItem {
     static constexpr std::size_t size = 0x14;
-    std::uint8_t m_hParamIn[0x2]; // 0x0 CAnimParamHandle
-    std::uint8_t m_hParamOut[0x2]; // 0x2 CAnimParamHandle
-    std::uint8_t m_flMinInputValue[0x4]; // 0x4 float32
-    std::uint8_t m_flMaxInputValue[0x4]; // 0x8 float32
-    std::uint8_t m_flMinOutputValue[0x4]; // 0xC float32
-    std::uint8_t m_flMaxOutputValue[0x4]; // 0x10 float32
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
 };
 
 struct PermModelDataAnimatedMaterialAttribute_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_AttributeName[0x8]; // 0x0 CUtlString
-    std::uint8_t m_nNumChannels[0x8]; // 0x8 int32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CMotionDataSet {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_groups[0x18]; // 0x0 CUtlVector<CMotionGraphGroup>
-    std::uint8_t m_nDimensionCount[0x8]; // 0x18 int32
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x8]; // 0x18 
 };
 
 struct ParticleAttributeIndex_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_Value[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CProductQuantizer {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_subQuantizers[0x18]; // 0x0 CUtlVector<CVectorQuantizer>
-    std::uint8_t m_nDimensions[0x8]; // 0x18 int32
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x8]; // 0x18 
 };
 
 struct CChoiceUpdateNode {
-    static constexpr std::size_t size = 0xC0;
+    static constexpr std::size_t size = 0xc0;
     std::uint8_t pad_0[0x60]; // 0x0
-    std::uint8_t m_children[0x18]; // 0x60 CUtlVector<CAnimUpdateNodeRef>
-    std::uint8_t m_weights[0x18]; // 0x78 CUtlVector<float32>
-    std::uint8_t m_blendTimes[0x18]; // 0x90 CUtlVector<float32>
-    std::uint8_t m_choiceMethod[0x4]; // 0xA8 ChoiceMethod
-    std::uint8_t m_choiceChangeMethod[0x4]; // 0xAC ChoiceChangeMethod
-    std::uint8_t m_blendMethod[0x4]; // 0xB0 ChoiceBlendMethod
-    std::uint8_t m_blendTime[0x4]; // 0xB4 float32
-    std::uint8_t m_bCrossFade[0x1]; // 0xB8 bool
-    std::uint8_t m_bResetChosen[0x1]; // 0xB9 bool
-    std::uint8_t m_bDontResetSameSelection[0x6]; // 0xBA bool
+    std::uint8_t _[0x18]; // 0x60 
+    std::uint8_t _[0x18]; // 0x78 
+    std::uint8_t _[0x18]; // 0x90 
+    std::uint8_t _[0x4]; // 0xa8 
+    std::uint8_t _[0x4]; // 0xac 
+    std::uint8_t _[0x4]; // 0xb0 
+    std::uint8_t _[0x4]; // 0xb4 
+    std::uint8_t _[0x1]; // 0xb8 
+    std::uint8_t _[0x1]; // 0xb9 
+    std::uint8_t _[0x6]; // 0xba 
 };
 
 struct SkeletonAnimCapture_t__Bone_t {
     static constexpr std::size_t size = 0x40;
-    std::uint8_t m_Name[0x10]; // 0x0 CUtlString
-    std::uint8_t m_BindPose[0x20]; // 0x10 CTransform
-    std::uint8_t m_nParent[0x10]; // 0x30 int32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x20]; // 0x10 
+    std::uint8_t _[0x10]; // 0x30 
 };
 
 struct CExpressionActionUpdater {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_hParam[0x2]; // 0x18 CAnimParamHandle
-    std::uint8_t m_eParamType[0x2]; // 0x1A AnimParamType_t
-    std::uint8_t m_hScript[0x4]; // 0x1C AnimScriptHandle
+    std::uint8_t _[0x2]; // 0x18 
+    std::uint8_t _[0x2]; // 0x1a 
+    std::uint8_t _[0x4]; // 0x1c 
 };
 
 struct CNmFloatMathNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdxA[0x2]; // 0x10 int16
-    std::uint8_t m_nInputValueNodeIdxB[0x2]; // 0x12 int16
-    std::uint8_t m_bReturnAbsoluteResult[0x1]; // 0x14 bool
-    std::uint8_t m_bReturnNegatedResult[0x1]; // 0x15 bool
-    std::uint8_t m_operator[0x2]; // 0x16 CNmFloatMathNode::Operator_t
-    std::uint8_t m_flValueB[0x8]; // 0x18 float32
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x1]; // 0x14 
+    std::uint8_t _[0x1]; // 0x15 
+    std::uint8_t _[0x2]; // 0x16 
+    std::uint8_t _[0x8]; // 0x18 
 };
 
 struct CAnimationGraphVisualizerLine {
     static constexpr std::size_t size = 0x70;
     std::uint8_t pad_0[0x40]; // 0x0
-    std::uint8_t m_vWsPositionStart[0x10]; // 0x40 VectorAligned
-    std::uint8_t m_vWsPositionEnd[0x10]; // 0x50 VectorAligned
-    std::uint8_t m_Color[0x10]; // 0x60 Color
+    std::uint8_t _[0x10]; // 0x40 
+    std::uint8_t _[0x10]; // 0x50 
+    std::uint8_t _[0x10]; // 0x60 
 };
 
 struct CCycleControlUpdateNode {
     static constexpr std::size_t size = 0x78;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_valueSource[0x4]; // 0x70 AnimValueSource
-    std::uint8_t m_paramIndex[0x2]; // 0x74 CAnimParamHandle
-    std::uint8_t m_bLockWhenWaning[0x2]; // 0x76 bool
+    std::uint8_t _[0x4]; // 0x70 
+    std::uint8_t _[0x2]; // 0x74 
+    std::uint8_t _[0x2]; // 0x76 
 };
 
 struct CNmTargetInfoNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x4]; // 0x10 int16
-    std::uint8_t m_infoType[0x4]; // 0x14 CNmTargetInfoNode::Info_t
-    std::uint8_t m_bIsWorldSpaceTarget[0x8]; // 0x18 bool
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x8]; // 0x18 
 };
 
 struct CDampedValueComponentUpdater {
     static constexpr std::size_t size = 0x48;
     std::uint8_t pad_0[0x30]; // 0x0
-    std::uint8_t m_items[0x18]; // 0x30 CUtlVector<CDampedValueUpdateItem>
+    std::uint8_t _[0x18]; // 0x30 
 };
 
 struct CBaseConstraint {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x20]; // 0x0
-    std::uint8_t m_name[0x8]; // 0x20 CUtlString
-    std::uint8_t m_vUpVector[0x10]; // 0x28 Vector
-    std::uint8_t m_slaves[0x10]; // 0x38 CUtlLeanVector<CConstraintSlave>
-    std::uint8_t m_targets[0x18]; // 0x48 CUtlVector<CConstraintTarget>
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x10]; // 0x28 
+    std::uint8_t _[0x10]; // 0x38 
+    std::uint8_t _[0x18]; // 0x48 
 };
 
 struct CNmControlParameterFloatNode__CDefinition {
@@ -3613,114 +3613,114 @@ struct CNmControlParameterFloatNode__CDefinition {
 
 struct BlendItem_t {
     static constexpr std::size_t size = 0x40;
-    std::uint8_t m_tags[0x18]; // 0x0 CUtlVector<TagSpan_t>
-    std::uint8_t m_pChild[0x10]; // 0x18 CAnimUpdateNodeRef
-    std::uint8_t m_hSequence[0x4]; // 0x28 HSequence
-    std::uint8_t m_vPos[0x8]; // 0x2C Vector2D
-    std::uint8_t m_flDuration[0x4]; // 0x34 float32
-    std::uint8_t m_bUseCustomDuration[0x8]; // 0x38 bool
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x10]; // 0x18 
+    std::uint8_t _[0x4]; // 0x28 
+    std::uint8_t _[0x8]; // 0x2c 
+    std::uint8_t _[0x4]; // 0x34 
+    std::uint8_t _[0x8]; // 0x38 
 };
 
 struct DampedPathMotorInstanceData_t {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_vVelocity[0xC]; // 0x0 Vector
-    std::uint8_t m_vAcceleration[0x18]; // 0xC Vector
-    std::uint8_t m_bStopping[0x4]; // 0x24 bool
+    std::uint8_t _[0xc]; // 0x0 
+    std::uint8_t _[0x18]; // 0xc 
+    std::uint8_t _[0x4]; // 0x24 
 };
 
 struct CNmIsExternalGraphSlotFilledNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nExternalGraphNodeIdx[0x8]; // 0x10 int16
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CNewParticleEffect {
-    static constexpr std::size_t size = 0xD8;
-    std::uint8_t m_bDontRemove[0x10]; // 0x0 bitfield:1
-    std::uint8_t m_pNext[0x8]; // 0x10 CNewParticleEffect*
-    std::uint8_t m_pPrev[0x8]; // 0x18 CNewParticleEffect*
-    std::uint8_t m_pParticles[0x8]; // 0x20 IParticleCollection*
-    std::uint8_t m_pDebugName[0x18]; // 0x28 char*
-    std::uint8_t m_vSortOrigin[0xC]; // 0x40 Vector
-    std::uint8_t m_flScale[0x4]; // 0x4C float32
-    std::uint8_t m_hOwner[0x8]; // 0x50 PARTICLE_EHANDLE__*
-    std::uint8_t m_pOwningParticleProperty[0x18]; // 0x58 CParticleProperty*
-    std::uint8_t m_flFreezeTransitionStart[0x4]; // 0x70 float32
-    std::uint8_t m_flFreezeTransitionDuration[0x4]; // 0x74 float32
-    std::uint8_t m_flFreezeTransitionOverride[0x4]; // 0x78 float32
-    std::uint8_t m_LastMin[0xC]; // 0x7C Vector
-    std::uint8_t m_LastMax[0xC]; // 0x88 Vector
-    std::uint8_t m_nSplitScreenUser[0x4]; // 0x94 CSplitScreenSlot
-    std::uint8_t m_vecAggregationCenter[0x38]; // 0x98 Vector
-    std::uint8_t m_RefCount[0x8]; // 0xD0 int32
+    static constexpr std::size_t size = 0xd8;
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x18]; // 0x28 
+    std::uint8_t _[0xc]; // 0x40 
+    std::uint8_t _[0x4]; // 0x4c 
+    std::uint8_t _[0x8]; // 0x50 
+    std::uint8_t _[0x18]; // 0x58 
+    std::uint8_t _[0x4]; // 0x70 
+    std::uint8_t _[0x4]; // 0x74 
+    std::uint8_t _[0x4]; // 0x78 
+    std::uint8_t _[0xc]; // 0x7c 
+    std::uint8_t _[0xc]; // 0x88 
+    std::uint8_t _[0x4]; // 0x94 
+    std::uint8_t _[0x38]; // 0x98 
+    std::uint8_t _[0x8]; // 0xd0 
 };
 
 struct CNmClipNode__CDefinition {
     static constexpr std::size_t size = 0x48;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nPlayInReverseValueNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_bSampleRootMotion[0x1]; // 0x12 bool
-    std::uint8_t m_bAllowLooping[0x1]; // 0x13 bool
-    std::uint8_t m_nDataSlotIdx[0x2]; // 0x14 int16
-    std::uint8_t m_nResetTimeValueNodeIdx[0x2]; // 0x16 int16
-    std::uint8_t m_graphEvents[0x28]; // 0x18 CUtlVectorFixedGrowable<CGlobalSymbol,2>
-    std::uint8_t m_flSpeedMultiplier[0x4]; // 0x40 float32
-    std::uint8_t m_nStartSyncEventOffset[0x4]; // 0x44 int32
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x1]; // 0x12 
+    std::uint8_t _[0x1]; // 0x13 
+    std::uint8_t _[0x2]; // 0x14 
+    std::uint8_t _[0x2]; // 0x16 
+    std::uint8_t _[0x28]; // 0x18 
+    std::uint8_t _[0x4]; // 0x40 
+    std::uint8_t _[0x4]; // 0x44 
 };
 
 struct CNmMaterialAttributeEvent {
     static constexpr std::size_t size = 0x130;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_target[0x8]; // 0x18 CNmEventTargetEntity_t
-    std::uint8_t m_attributeName[0x8]; // 0x20 CUtlString
-    std::uint8_t m_attributeNameToken[0x8]; // 0x28 CUtlStringToken
-    std::uint8_t m_x[0x40]; // 0x30 CPiecewiseCurve
-    std::uint8_t m_y[0x40]; // 0x70 CPiecewiseCurve
-    std::uint8_t m_z[0x40]; // 0xB0 CPiecewiseCurve
-    std::uint8_t m_w[0x40]; // 0xF0 CPiecewiseCurve
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x40]; // 0x30 
+    std::uint8_t _[0x40]; // 0x70 
+    std::uint8_t _[0x40]; // 0xb0 
+    std::uint8_t _[0x40]; // 0xf0 
 };
 
 struct TagStatus {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_TagStatus[0x4]; // 0x0 TagActionStatus
-    std::uint8_t m_flTagStartAnimTime[0x4]; // 0x4 float32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct CNmBlend1DNode__CDefinition {
     static constexpr std::size_t size = 0x80;
     std::uint8_t pad_0[0x30]; // 0x0
-    std::uint8_t m_parameterization[0x50]; // 0x30 CNmParameterizedBlendNode::Parameterization_t
+    std::uint8_t _[0x50]; // 0x30 
 };
 
 struct CConcreteAnimParameter {
     static constexpr std::size_t size = 0x80;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_previewButton[0x4]; // 0x70 AnimParamButton_t
-    std::uint8_t m_eNetworkSetting[0x4]; // 0x74 AnimParamNetworkSetting
-    std::uint8_t m_bUseMostRecentValue[0x1]; // 0x78 bool
-    std::uint8_t m_bAutoReset[0x1]; // 0x79 bool
-    std::uint8_t m_bGameWritable[0x1]; // 0x7A bool
-    std::uint8_t m_bGraphWritable[0x5]; // 0x7B bool
+    std::uint8_t _[0x4]; // 0x70 
+    std::uint8_t _[0x4]; // 0x74 
+    std::uint8_t _[0x1]; // 0x78 
+    std::uint8_t _[0x1]; // 0x79 
+    std::uint8_t _[0x1]; // 0x7a 
+    std::uint8_t _[0x5]; // 0x7b 
 };
 
 struct CNmBoneWeightList {
     static constexpr std::size_t size = 0x110;
-    std::uint8_t m_skeletonName[0xE0]; // 0x0 CResourceName
-    std::uint8_t m_boneIDs[0x18]; // 0xE0 CUtlVector<CGlobalSymbol>
-    std::uint8_t m_weights[0x18]; // 0xF8 CUtlVector<float32>
+    std::uint8_t _[0xe0]; // 0x0 
+    std::uint8_t _[0x18]; // 0xe0 
+    std::uint8_t _[0x18]; // 0xf8 
 };
 
 struct CPairedSequenceUpdateNode {
     static constexpr std::size_t size = 0x88;
     std::uint8_t pad_0[0x78]; // 0x0
-    std::uint8_t m_sPairedSequenceRole[0x10]; // 0x78 CGlobalSymbol
+    std::uint8_t _[0x10]; // 0x78 
 };
 
 struct CModelConfigElement_RandomPick {
     static constexpr std::size_t size = 0x80;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_Choices[0x18]; // 0x48 CUtlVector<CUtlString>
-    std::uint8_t m_ChoiceWeights[0x20]; // 0x60 CUtlVector<float32>
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x20]; // 0x60 
 };
 
 struct CNmReferencePoseTask {
@@ -3731,139 +3731,139 @@ struct CNmReferencePoseTask {
 struct CNmScaleNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_nMaskNodeIdx[0x2]; // 0x18 int16
-    std::uint8_t m_nEnableNodeIdx[0x6]; // 0x1A int16
+    std::uint8_t _[0x2]; // 0x18 
+    std::uint8_t _[0x6]; // 0x1a 
 };
 
 struct VPhysXConstraint2_t {
     static constexpr std::size_t size = 0x100;
-    std::uint8_t m_nFlags[0x4]; // 0x0 uint32
-    std::uint8_t m_nParent[0x2]; // 0x4 uint16
-    std::uint8_t m_nChild[0x2]; // 0x6 uint16
-    std::uint8_t m_params[0xF8]; // 0x8 VPhysXConstraintParams_t
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x2]; // 0x4 
+    std::uint8_t _[0x2]; // 0x6 
+    std::uint8_t _[0xf8]; // 0x8 
 };
 
 struct CConstraintTarget {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x20]; // 0x0
-    std::uint8_t m_qOffset[0x10]; // 0x20 Quaternion
-    std::uint8_t m_vOffset[0xC]; // 0x30 Vector
-    std::uint8_t m_nBoneHash[0x4]; // 0x3C uint32
-    std::uint8_t m_sName[0x8]; // 0x40 CUtlString
-    std::uint8_t m_flWeight[0x11]; // 0x48 float32
-    std::uint8_t m_bIsAttachment[0x7]; // 0x59 bool
+    std::uint8_t _[0x10]; // 0x20 
+    std::uint8_t _[0xc]; // 0x30 
+    std::uint8_t _[0x4]; // 0x3c 
+    std::uint8_t _[0x8]; // 0x40 
+    std::uint8_t _[0x11]; // 0x48 
+    std::uint8_t _[0x7]; // 0x59 
 };
 
 struct SkeletonAnimCapture_t {
-    static constexpr std::size_t size = 0xC0;
-    std::uint8_t m_nEntIndex[0x4]; // 0x0 CEntityIndex
-    std::uint8_t m_nEntParent[0x4]; // 0x4 CEntityIndex
-    std::uint8_t m_ImportedCollision[0x18]; // 0x8 CUtlVector<CEntityIndex>
-    std::uint8_t m_ModelName[0x8]; // 0x20 CUtlString
-    std::uint8_t m_CaptureName[0x8]; // 0x28 CUtlString
-    std::uint8_t m_ModelBindPose[0x18]; // 0x30 CUtlVector<SkeletonAnimCapture_t::Bone_t>
-    std::uint8_t m_FeModelInitPose[0x18]; // 0x48 CUtlVector<SkeletonAnimCapture_t::Bone_t>
-    std::uint8_t m_nFlexControllers[0x4]; // 0x60 int32
-    std::uint8_t m_bPredicted[0x44]; // 0x64 bool
-    std::uint8_t m_Frames[0x18]; // 0xA8 CUtlVector<SkeletonAnimCapture_t::Frame_t>
+    static constexpr std::size_t size = 0xc0;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x18]; // 0x8 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x4]; // 0x60 
+    std::uint8_t _[0x44]; // 0x64 
+    std::uint8_t _[0x18]; // 0xa8 
 };
 
 struct CAnimUser {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_name[0x10]; // 0x0 CBufferString
-    std::uint8_t m_nType[0x8]; // 0x10 int32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CPulse_TempVarBankDefinition {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_TempVars[0x28]; // 0x0 CUtlVector<CPulse_TempVarInfo>
+    std::uint8_t _[0x28]; // 0x0 
 };
 
 struct CRagdollComponentUpdater {
-    static constexpr std::size_t size = 0xD8;
+    static constexpr std::size_t size = 0xd8;
     std::uint8_t pad_0[0x30]; // 0x0
-    std::uint8_t m_ragdollNodePaths[0x18]; // 0x30 CUtlVector<CAnimNodePath>
-    std::uint8_t m_followAttachmentNodePaths[0x18]; // 0x48 CUtlVector<CAnimNodePath>
-    std::uint8_t m_boneIndices[0x18]; // 0x60 CUtlVector<int32>
-    std::uint8_t m_boneNames[0x18]; // 0x78 CUtlVector<CUtlString>
-    std::uint8_t m_weightLists[0x18]; // 0x90 CUtlVector<WeightList>
-    std::uint8_t m_boneToWeightIndices[0x18]; // 0xA8 CUtlVector<int32>
-    std::uint8_t m_flSpringFrequencyMin[0x4]; // 0xC0 float32
-    std::uint8_t m_flSpringFrequencyMax[0x4]; // 0xC4 float32
-    std::uint8_t m_flMaxStretch[0x4]; // 0xC8 float32
-    std::uint8_t m_bSolidCollisionAtZeroWeight[0xC]; // 0xCC bool
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x18]; // 0x60 
+    std::uint8_t _[0x18]; // 0x78 
+    std::uint8_t _[0x18]; // 0x90 
+    std::uint8_t _[0x18]; // 0xa8 
+    std::uint8_t _[0x4]; // 0xc0 
+    std::uint8_t _[0x4]; // 0xc4 
+    std::uint8_t _[0x4]; // 0xc8 
+    std::uint8_t _[0xc]; // 0xcc 
 };
 
 struct ParticleNamedValueSource_t {
     static constexpr std::size_t size = 0x60;
-    std::uint8_t m_Name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_IsPublic[0x8]; // 0x8 bool
-    std::uint8_t m_ValueType[0x18]; // 0x10 CPulseValueFullType
-    std::uint8_t m_DefaultConfig[0x38]; // 0x28 ParticleNamedValueConfiguration_t
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x38]; // 0x28 
 };
 
 struct CFootDefinition {
     static constexpr std::size_t size = 0x40;
-    std::uint8_t m_name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_ankleBoneName[0x8]; // 0x8 CUtlString
-    std::uint8_t m_toeBoneName[0x8]; // 0x10 CUtlString
-    std::uint8_t m_vBallOffset[0xC]; // 0x18 Vector
-    std::uint8_t m_vHeelOffset[0xC]; // 0x24 Vector
-    std::uint8_t m_flFootLength[0x4]; // 0x30 float32
-    std::uint8_t m_flBindPoseDirectionMS[0x4]; // 0x34 float32
-    std::uint8_t m_flTraceHeight[0x4]; // 0x38 float32
-    std::uint8_t m_flTraceRadius[0x4]; // 0x3C float32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0xc]; // 0x18 
+    std::uint8_t _[0xc]; // 0x24 
+    std::uint8_t _[0x4]; // 0x30 
+    std::uint8_t _[0x4]; // 0x34 
+    std::uint8_t _[0x4]; // 0x38 
+    std::uint8_t _[0x4]; // 0x3c 
 };
 
 struct CSeqSynthAnimDesc {
     static constexpr std::size_t size = 0x40;
-    std::uint8_t m_sName[0x10]; // 0x0 CBufferString
-    std::uint8_t m_flags[0xC]; // 0x10 CSeqSeqDescFlag
-    std::uint8_t m_transition[0x8]; // 0x1C CSeqTransition
-    std::uint8_t m_nLocalBaseReference[0x2]; // 0x24 int16
-    std::uint8_t m_nLocalBoneMask[0x2]; // 0x26 int16
-    std::uint8_t m_activityArray[0x18]; // 0x28 CUtlVector<CAnimActivity>
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0xc]; // 0x10 
+    std::uint8_t _[0x8]; // 0x1c 
+    std::uint8_t _[0x2]; // 0x24 
+    std::uint8_t _[0x2]; // 0x26 
+    std::uint8_t _[0x18]; // 0x28 
 };
 
 struct CNmLayerBlendNode__LayerDefinition_t {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_nInputNodeIdx[0x2]; // 0x0 int16
-    std::uint8_t m_nWeightValueNodeIdx[0x2]; // 0x2 int16
-    std::uint8_t m_nBoneMaskValueNodeIdx[0x2]; // 0x4 int16
-    std::uint8_t m_nRootMotionWeightValueNodeIdx[0x2]; // 0x6 int16
-    std::uint8_t m_bIsSynchronized[0x1]; // 0x8 bool
-    std::uint8_t m_bIgnoreEvents[0x1]; // 0x9 bool
-    std::uint8_t m_bIsStateMachineLayer[0x1]; // 0xA bool
-    std::uint8_t m_blendMode[0x1]; // 0xB NmPoseBlendMode_t
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
+    std::uint8_t _[0x2]; // 0x4 
+    std::uint8_t _[0x2]; // 0x6 
+    std::uint8_t _[0x1]; // 0x8 
+    std::uint8_t _[0x1]; // 0x9 
+    std::uint8_t _[0x1]; // 0xa 
+    std::uint8_t _[0x1]; // 0xb 
 };
 
 struct CAnimComponentUpdater {
     static constexpr std::size_t size = 0x30;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_name[0x8]; // 0x18 CUtlString
-    std::uint8_t m_id[0x4]; // 0x20 AnimComponentID
-    std::uint8_t m_networkMode[0x4]; // 0x24 AnimNodeNetworkMode
-    std::uint8_t m_bStartEnabled[0x8]; // 0x28 bool
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x8]; // 0x28 
 };
 
 struct CBlend2DUpdateNode {
-    static constexpr std::size_t size = 0xF8;
+    static constexpr std::size_t size = 0xf8;
     std::uint8_t pad_0[0x60]; // 0x0
-    std::uint8_t m_items[0x18]; // 0x60 CUtlVector<BlendItem_t>
-    std::uint8_t m_tags[0x18]; // 0x78 CUtlVector<TagSpan_t>
-    std::uint8_t m_paramSpans[0x18]; // 0x90 CParamSpanUpdater
-    std::uint8_t m_nodeItemIndices[0x18]; // 0xA8 CUtlVector<int32>
-    std::uint8_t m_damping[0x18]; // 0xC0 CAnimInputDamping
-    std::uint8_t m_blendSourceX[0x4]; // 0xD8 AnimValueSource
-    std::uint8_t m_paramX[0x4]; // 0xDC CAnimParamHandle
-    std::uint8_t m_blendSourceY[0x4]; // 0xE0 AnimValueSource
-    std::uint8_t m_paramY[0x4]; // 0xE4 CAnimParamHandle
-    std::uint8_t m_eBlendMode[0x4]; // 0xE8 Blend2DMode
-    std::uint8_t m_playbackSpeed[0x4]; // 0xEC float32
-    std::uint8_t m_bLoop[0x1]; // 0xF0 bool
-    std::uint8_t m_bLockBlendOnReset[0x1]; // 0xF1 bool
-    std::uint8_t m_bLockWhenWaning[0x1]; // 0xF2 bool
-    std::uint8_t m_bAnimEventsAndTagsOnMostWeightedOnly[0x5]; // 0xF3 bool
+    std::uint8_t _[0x18]; // 0x60 
+    std::uint8_t _[0x18]; // 0x78 
+    std::uint8_t _[0x18]; // 0x90 
+    std::uint8_t _[0x18]; // 0xa8 
+    std::uint8_t _[0x18]; // 0xc0 
+    std::uint8_t _[0x4]; // 0xd8 
+    std::uint8_t _[0x4]; // 0xdc 
+    std::uint8_t _[0x4]; // 0xe0 
+    std::uint8_t _[0x4]; // 0xe4 
+    std::uint8_t _[0x4]; // 0xe8 
+    std::uint8_t _[0x4]; // 0xec 
+    std::uint8_t _[0x1]; // 0xf0 
+    std::uint8_t _[0x1]; // 0xf1 
+    std::uint8_t _[0x1]; // 0xf2 
+    std::uint8_t _[0x5]; // 0xf3 
 };
 
 struct CNmVelocityBasedSpeedScaleNode__CDefinition {
@@ -3873,59 +3873,59 @@ struct CNmVelocityBasedSpeedScaleNode__CDefinition {
 
 struct CNPCPhysicsHull {
     static constexpr std::size_t size = 0x40;
-    std::uint8_t m_sName[0x8]; // 0x0 CGlobalSymbol
-    std::uint8_t m_eType[0x4]; // 0x8 NPCPhysicsHullType_t
-    std::uint8_t m_flCapsuleHeight[0x4]; // 0xC float32
-    std::uint8_t m_flCapsuleRadius[0x4]; // 0x10 float32
-    std::uint8_t m_vCapsuleCenter1[0xC]; // 0x14 Vector
-    std::uint8_t m_vCapsuleCenter2[0xC]; // 0x20 Vector
-    std::uint8_t m_flGroundBoxHeight[0x4]; // 0x2C float32
-    std::uint8_t m_flGroundBoxWidth[0x10]; // 0x30 float32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0xc]; // 0x14 
+    std::uint8_t _[0xc]; // 0x20 
+    std::uint8_t _[0x4]; // 0x2c 
+    std::uint8_t _[0x10]; // 0x30 
 };
 
 struct PermModelExtPart_t {
     static constexpr std::size_t size = 0x40;
-    std::uint8_t m_Transform[0x20]; // 0x0 CTransform
-    std::uint8_t m_Name[0x8]; // 0x20 CUtlString
-    std::uint8_t m_nParent[0x8]; // 0x28 int32
-    std::uint8_t m_refModel[0x10]; // 0x30 CStrongHandle<InfoForResourceTypeCModel>
+    std::uint8_t _[0x20]; // 0x0 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x10]; // 0x30 
 };
 
 struct CNmCachedIDNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x4]; // 0x10 int16
-    std::uint8_t m_mode[0x4]; // 0x14 NmCachedValueMode_t
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct CLeanMatrixUpdateNode {
-    static constexpr std::size_t size = 0xF0;
-    std::uint8_t pad_0[0x5C]; // 0x0
-    std::uint8_t m_frameCorners[0x24]; // 0x5C int32[3][3]
-    std::uint8_t m_poses[0x28]; // 0x80 CPoseHandle[9]
-    std::uint8_t m_damping[0x18]; // 0xA8 CAnimInputDamping
-    std::uint8_t m_blendSource[0x4]; // 0xC0 AnimVectorSource
-    std::uint8_t m_paramIndex[0x4]; // 0xC4 CAnimParamHandle
-    std::uint8_t m_verticalAxis[0xC]; // 0xC8 Vector
-    std::uint8_t m_horizontalAxis[0xC]; // 0xD4 Vector
-    std::uint8_t m_hSequence[0x4]; // 0xE0 HSequence
-    std::uint8_t m_flMaxValue[0x4]; // 0xE4 float32
-    std::uint8_t m_nSequenceMaxFrame[0x8]; // 0xE8 int32
+    static constexpr std::size_t size = 0xf0;
+    std::uint8_t pad_0[0x5c]; // 0x0
+    std::uint8_t _[0x24]; // 0x5c 
+    std::uint8_t _[0x28]; // 0x80 
+    std::uint8_t _[0x18]; // 0xa8 
+    std::uint8_t _[0x4]; // 0xc0 
+    std::uint8_t _[0x4]; // 0xc4 
+    std::uint8_t _[0xc]; // 0xc8 
+    std::uint8_t _[0xc]; // 0xd4 
+    std::uint8_t _[0x4]; // 0xe0 
+    std::uint8_t _[0x4]; // 0xe4 
+    std::uint8_t _[0x8]; // 0xe8 
 };
 
 struct CSymbolAnimParameter {
     static constexpr std::size_t size = 0x88;
     std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t m_defaultValue[0x8]; // 0x80 CGlobalSymbol
+    std::uint8_t _[0x8]; // 0x80 
 };
 
 struct CNmFloatCurveEventNode__CDefinition {
     static constexpr std::size_t size = 0x28;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_eventID[0x8]; // 0x10 CGlobalSymbol
-    std::uint8_t m_nDefaultNodeIdx[0x4]; // 0x18 int16
-    std::uint8_t m_flDefaultValue[0x4]; // 0x1C float32
-    std::uint8_t m_eventConditionRules[0x8]; // 0x20 CNmBitFlags
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x8]; // 0x20 
 };
 
 struct IAnimationGraphInstance {
@@ -3935,45 +3935,45 @@ struct IAnimationGraphInstance {
 
 struct CNmStateMachineNode__TransitionDefinition_t {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_nTargetStateIdx[0x2]; // 0x0 int16
-    std::uint8_t m_nConditionNodeIdx[0x2]; // 0x2 int16
-    std::uint8_t m_nTransitionNodeIdx[0x2]; // 0x4 int16
-    std::uint8_t m_bCanBeForced[0x2]; // 0x6 bool
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
+    std::uint8_t _[0x2]; // 0x4 
+    std::uint8_t _[0x2]; // 0x6 
 };
 
 struct CNmFloatSelectorNode__CDefinition {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_conditionNodeIndices[0x18]; // 0x10 CUtlLeanVectorFixedGrowable<int16,5>
-    std::uint8_t m_values[0x20]; // 0x28 CUtlLeanVectorFixedGrowable<float32,5>
-    std::uint8_t m_flDefaultValue[0x4]; // 0x48 float32
-    std::uint8_t m_flEaseTime[0x4]; // 0x4C float32
-    std::uint8_t m_easingOp[0x8]; // 0x50 NmEasingOperation_t
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x20]; // 0x28 
+    std::uint8_t _[0x4]; // 0x48 
+    std::uint8_t _[0x4]; // 0x4c 
+    std::uint8_t _[0x8]; // 0x50 
 };
 
 struct CTargetSelectorUpdateNode {
-    static constexpr std::size_t size = 0xA0;
+    static constexpr std::size_t size = 0xa0;
     std::uint8_t pad_0[0x60]; // 0x0
-    std::uint8_t m_eAngleMode[0x8]; // 0x60 TargetSelectorAngleMode_t
-    std::uint8_t m_children[0x1C]; // 0x68 CUtlVector<CAnimUpdateNodeRef>
-    std::uint8_t m_hTargetPosition[0x2]; // 0x84 CAnimParamHandle
-    std::uint8_t m_hTargetFacePositionParameter[0x2]; // 0x86 CAnimParamHandle
-    std::uint8_t m_hMoveHeadingParameter[0x2]; // 0x88 CAnimParamHandle
-    std::uint8_t m_hDesiredMoveHeadingParameter[0x2]; // 0x8A CAnimParamHandle
-    std::uint8_t m_bTargetPositionIsWorldSpace[0x1]; // 0x8C bool
-    std::uint8_t m_bTargetFacePositionIsWorldSpace[0x1]; // 0x8D bool
-    std::uint8_t m_bEnablePhaseMatching[0x2]; // 0x8E bool
-    std::uint8_t m_flPhaseMatchingMaxRootMotionSkip[0x10]; // 0x90 float32
+    std::uint8_t _[0x8]; // 0x60 
+    std::uint8_t _[0x1c]; // 0x68 
+    std::uint8_t _[0x2]; // 0x84 
+    std::uint8_t _[0x2]; // 0x86 
+    std::uint8_t _[0x2]; // 0x88 
+    std::uint8_t _[0x2]; // 0x8a 
+    std::uint8_t _[0x1]; // 0x8c 
+    std::uint8_t _[0x1]; // 0x8d 
+    std::uint8_t _[0x2]; // 0x8e 
+    std::uint8_t _[0x10]; // 0x90 
 };
 
 struct SlopeData {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_vSlopeNormal[0xC]; // 0x0 Vector
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0xc]; // 0x0 
 };
 
 struct CHitBoxSetList {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_HitBoxSets[0x18]; // 0x0 CUtlVector<CHitBoxSet>
+    std::uint8_t _[0x18]; // 0x0 
 };
 
 struct CNmIsInactiveBranchConditionNode__CDefinition {
@@ -3983,62 +3983,62 @@ struct CNmIsInactiveBranchConditionNode__CDefinition {
 
 struct MotionDBIndex {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_nIndex[0x4]; // 0x0 uint32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CDirectPlaybackTagData {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_sequenceName[0x8]; // 0x0 CUtlString
-    std::uint8_t m_tags[0x18]; // 0x8 CUtlVector<TagSpan_t>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x18]; // 0x8 
 };
 
 struct CParticleCollectionVecInput {
-    static constexpr std::size_t size = 0x6D8;
-    std::uint8_t pad_0[0x6D8]; // 0x0
+    static constexpr std::size_t size = 0x6d8;
+    std::uint8_t pad_0[0x6d8]; // 0x0
 };
 
 struct CNmGraphEventConditionNode__Condition_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_eventID[0x8]; // 0x0 CGlobalSymbol
-    std::uint8_t m_eventTypeCondition[0x8]; // 0x8 NmGraphEventTypeCondition_t
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CNmFloatRemapNode__RemapRange_t {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_flBegin[0x4]; // 0x0 float32
-    std::uint8_t m_flEnd[0x4]; // 0x4 float32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct CNmCurrentSyncEventIDNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSourceStateNodeIdx[0x8]; // 0x10 int16
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CNmStateCompletedConditionNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSourceStateNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_nTransitionDurationOverrideNodeIdx[0x2]; // 0x12 int16
-    std::uint8_t m_flTransitionDurationSeconds[0x4]; // 0x14 float32
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct CNmCameraFOVEvent {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_curve[0x40]; // 0x18 CPiecewiseCurve
+    std::uint8_t _[0x40]; // 0x18 
 };
 
 struct CNmTargetWarpEvent {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_rule[0x1]; // 0x18 NmTargetWarpRule_t
-    std::uint8_t m_algorithm[0x7]; // 0x19 NmTargetWarpAlgorithm_t
+    std::uint8_t _[0x1]; // 0x18 
+    std::uint8_t _[0x7]; // 0x19 
 };
 
 struct CParamSpanUpdater {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_spans[0x18]; // 0x0 CUtlVector<ParamSpan_t>
+    std::uint8_t _[0x18]; // 0x0 
 };
 
 struct CAnimActionUpdater {
@@ -4049,63 +4049,63 @@ struct CAnimActionUpdater {
 struct CParticleAnimTag {
     static constexpr std::size_t size = 0x98;
     std::uint8_t pad_0[0x58]; // 0x0
-    std::uint8_t m_hParticleSystem[0x8]; // 0x58 CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-    std::uint8_t m_particleSystemName[0x8]; // 0x60 CUtlString
-    std::uint8_t m_configName[0x8]; // 0x68 CUtlString
-    std::uint8_t m_bDetachFromOwner[0x1]; // 0x70 bool
-    std::uint8_t m_bAggregate[0x1]; // 0x71 bool
-    std::uint8_t m_bStopWhenTagEnds[0x1]; // 0x72 bool
-    std::uint8_t m_bTagEndStopIsInstant[0x5]; // 0x73 bool
-    std::uint8_t m_attachmentName[0x8]; // 0x78 CUtlString
-    std::uint8_t m_attachmentType[0x8]; // 0x80 ParticleAttachment_t
-    std::uint8_t m_attachmentCP1Name[0x8]; // 0x88 CUtlString
-    std::uint8_t m_attachmentCP1Type[0x8]; // 0x90 ParticleAttachment_t
+    std::uint8_t _[0x8]; // 0x58 
+    std::uint8_t _[0x8]; // 0x60 
+    std::uint8_t _[0x8]; // 0x68 
+    std::uint8_t _[0x1]; // 0x70 
+    std::uint8_t _[0x1]; // 0x71 
+    std::uint8_t _[0x1]; // 0x72 
+    std::uint8_t _[0x5]; // 0x73 
+    std::uint8_t _[0x8]; // 0x78 
+    std::uint8_t _[0x8]; // 0x80 
+    std::uint8_t _[0x8]; // 0x88 
+    std::uint8_t _[0x8]; // 0x90 
 };
 
 struct CCycleBase {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_flCycle[0x4]; // 0x0 float32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct FollowTargetOpFixedSettings_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_boneIndex[0x4]; // 0x0 int32
-    std::uint8_t m_bBoneTarget[0x4]; // 0x4 bool
-    std::uint8_t m_boneTargetIndex[0x4]; // 0x8 int32
-    std::uint8_t m_bWorldCoodinateTarget[0x1]; // 0xC bool
-    std::uint8_t m_bMatchTargetOrientation[0x3]; // 0xD bool
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x1]; // 0xc 
+    std::uint8_t _[0x3]; // 0xd 
 };
 
 struct CNmIDSwitchNode__CDefinition {
     static constexpr std::size_t size = 0x28;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSwitchValueNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_nTrueValueNodeIdx[0x2]; // 0x12 int16
-    std::uint8_t m_nFalseValueNodeIdx[0x4]; // 0x14 int16
-    std::uint8_t m_falseValue[0x8]; // 0x18 CGlobalSymbol
-    std::uint8_t m_trueValue[0x8]; // 0x20 CGlobalSymbol
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
 };
 
 struct CNmRootMotionEvent {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_flBlendTimeSeconds[0x8]; // 0x18 float32
+    std::uint8_t _[0x8]; // 0x18 
 };
 
 struct CPulse_PublicOutput {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_Name[0x10]; // 0x0 PulseSymbol_t
-    std::uint8_t m_Description[0x8]; // 0x10 CUtlString
-    std::uint8_t m_Args[0x10]; // 0x18 CUtlLeanVector<CPulseRuntimeMethodArg>
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x10]; // 0x18 
 };
 
 struct CChoiceInstanceData {
     static constexpr std::size_t size = 0x34;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_currentChoice[0xC]; // 0x10 CAnimNetVar<int32>
-    std::uint8_t m_previousChoice[0x4]; // 0x1C int32
-    std::uint8_t m_flClipStartTime[0xC]; // 0x20 CAnimNetVar<float32>
-    std::uint8_t m_choicePreviousCycle[0x8]; // 0x2C float32
+    std::uint8_t _[0xc]; // 0x10 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0xc]; // 0x20 
+    std::uint8_t _[0x8]; // 0x2c 
 };
 
 struct CNmContactAudioTypeVData {
@@ -4116,138 +4116,138 @@ struct CNmContactAudioTypeVData {
 struct CNmCameraDOFEvent {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_curve[0x40]; // 0x18 CPiecewiseCurve
+    std::uint8_t _[0x40]; // 0x18 
 };
 
 struct AnimationSnapshotBase_t {
     static constexpr std::size_t size = 0x110;
-    std::uint8_t m_flRealTime[0x10]; // 0x0 float32
-    std::uint8_t m_rootToWorld[0x30]; // 0x10 matrix3x4a_t
-    std::uint8_t m_bBonesInWorldSpace[0x8]; // 0x40 bool
-    std::uint8_t m_boneSetupMask[0x18]; // 0x48 CUtlVector<uint32>
-    std::uint8_t m_boneTransforms[0x18]; // 0x60 CUtlVector<matrix3x4a_t>
-    std::uint8_t m_flexControllers[0x18]; // 0x78 CUtlVector<float32>
-    std::uint8_t m_SnapshotType[0x4]; // 0x90 AnimationSnapshotType_t
-    std::uint8_t m_bHasDecodeDump[0x4]; // 0x94 bool
-    std::uint8_t m_DecodeDump[0x78]; // 0x98 AnimationDecodeDebugDumpElement_t
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x30]; // 0x10 
+    std::uint8_t _[0x8]; // 0x40 
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x18]; // 0x60 
+    std::uint8_t _[0x18]; // 0x78 
+    std::uint8_t _[0x4]; // 0x90 
+    std::uint8_t _[0x4]; // 0x94 
+    std::uint8_t _[0x78]; // 0x98 
 };
 
 struct CEmitTagActionUpdater {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_nTagIndex[0x4]; // 0x18 int32
-    std::uint8_t m_bIsZeroDuration[0x4]; // 0x1C bool
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
 };
 
 struct DynamicMeshDeformParams_t {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_flTensionCompressScale[0x4]; // 0x0 float32
-    std::uint8_t m_flTensionStretchScale[0x4]; // 0x4 float32
-    std::uint8_t m_bRecomputeSmoothNormalsAfterAnimation[0x1]; // 0x8 bool
-    std::uint8_t m_bComputeDynamicMeshTensionAfterAnimation[0x1]; // 0x9 bool
-    std::uint8_t m_bSmoothNormalsAcrossUvSeams[0x1]; // 0xA bool
-    std::uint8_t m_bEnableEyeBulgeDeformation[0x1]; // 0xB bool
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x1]; // 0x8 
+    std::uint8_t _[0x1]; // 0x9 
+    std::uint8_t _[0x1]; // 0xa 
+    std::uint8_t _[0x1]; // 0xb 
 };
 
 struct CNmTimeConditionNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_sourceStateNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_nInputValueNodeIdx[0x2]; // 0x12 int16
-    std::uint8_t m_flComparand[0x4]; // 0x14 float32
-    std::uint8_t m_type[0x1]; // 0x18 CNmTimeConditionNode::ComparisonType_t
-    std::uint8_t m_operator[0x7]; // 0x19 CNmTimeConditionNode::Operator_t
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x1]; // 0x18 
+    std::uint8_t _[0x7]; // 0x19 
 };
 
 struct CNmSyncEventIndexConditionNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSourceStateNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_triggerMode[0x2]; // 0x12 CNmSyncEventIndexConditionNode::TriggerMode_t
-    std::uint8_t m_syncEventIdx[0x4]; // 0x14 int32
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct CAnimStateMachineUpdater {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_states[0x18]; // 0x8 CUtlVector<CStateUpdateData>
-    std::uint8_t m_transitions[0x30]; // 0x20 CUtlVector<CTransitionUpdateData>
-    std::uint8_t m_startStateIndex[0x8]; // 0x50 int32
+    std::uint8_t _[0x18]; // 0x8 
+    std::uint8_t _[0x30]; // 0x20 
+    std::uint8_t _[0x8]; // 0x50 
 };
 
 struct CUnaryUpdateNode {
     static constexpr std::size_t size = 0x70;
     std::uint8_t pad_0[0x60]; // 0x0
-    std::uint8_t m_pChildNode[0x10]; // 0x60 CAnimUpdateNodeRef
+    std::uint8_t _[0x10]; // 0x60 
 };
 
 struct CNmIDToFloatNode__CDefinition {
     static constexpr std::size_t size = 0x68;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x4]; // 0x10 int16
-    std::uint8_t m_defaultValue[0x4]; // 0x14 float32
-    std::uint8_t m_IDs[0x30]; // 0x18 CUtlLeanVectorFixedGrowable<CGlobalSymbol,5>
-    std::uint8_t m_values[0x20]; // 0x48 CUtlLeanVectorFixedGrowable<float32,5>
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x30]; // 0x18 
+    std::uint8_t _[0x20]; // 0x48 
 };
 
 struct PlayerInputMotorInstanceData_t {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_vInputVectorWS[0xC]; // 0x0 Vector
-    std::uint8_t m_vVelocityWS[0xC]; // 0xC Vector
-    std::uint8_t m_vAccelerationWS[0x10]; // 0x18 Vector
+    std::uint8_t _[0xc]; // 0x0 
+    std::uint8_t _[0xc]; // 0xc 
+    std::uint8_t _[0x10]; // 0x18 
 };
 
 struct CSelectorUpdateNode {
-    static constexpr std::size_t size = 0xB8;
+    static constexpr std::size_t size = 0xb8;
     std::uint8_t pad_0[0x60]; // 0x0
-    std::uint8_t m_children[0x18]; // 0x60 CUtlVector<CAnimUpdateNodeRef>
-    std::uint8_t m_tags[0x1C]; // 0x78 CUtlVector<int8>
-    std::uint8_t m_blendCurve[0x8]; // 0x94 CBlendCurve
-    std::uint8_t m_flBlendTime[0x8]; // 0x9C CAnimValue<float32>
-    std::uint8_t m_hParameter[0x4]; // 0xA4 CAnimParamHandle
-    std::uint8_t m_nTagIndex[0x4]; // 0xA8 int32
-    std::uint8_t m_eTagBehavior[0x4]; // 0xAC SelectorTagBehavior_t
-    std::uint8_t m_bResetOnChange[0x1]; // 0xB0 bool
-    std::uint8_t m_bLockWhenWaning[0x1]; // 0xB1 bool
-    std::uint8_t m_bSyncCyclesOnChange[0x6]; // 0xB2 bool
+    std::uint8_t _[0x18]; // 0x60 
+    std::uint8_t _[0x1c]; // 0x78 
+    std::uint8_t _[0x8]; // 0x94 
+    std::uint8_t _[0x8]; // 0x9c 
+    std::uint8_t _[0x4]; // 0xa4 
+    std::uint8_t _[0x4]; // 0xa8 
+    std::uint8_t _[0x4]; // 0xac 
+    std::uint8_t _[0x1]; // 0xb0 
+    std::uint8_t _[0x1]; // 0xb1 
+    std::uint8_t _[0x6]; // 0xb2 
 };
 
 struct NmPercent_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_flValue[0x4]; // 0x0 float32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CStateMachineComponentUpdater {
     static constexpr std::size_t size = 0x88;
     std::uint8_t pad_0[0x30]; // 0x0
-    std::uint8_t m_stateMachine[0x58]; // 0x30 CAnimStateMachineUpdater
+    std::uint8_t _[0x58]; // 0x30 
 };
 
 struct CAnimUpdateNodeRef {
     static constexpr std::size_t size = 0x10;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_nodeIndex[0x8]; // 0x8 int32
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CPulse_OutputConnection {
     static constexpr std::size_t size = 0x40;
-    std::uint8_t m_SourceOutput[0x10]; // 0x0 PulseSymbol_t
-    std::uint8_t m_TargetEntity[0x10]; // 0x10 PulseSymbol_t
-    std::uint8_t m_TargetInput[0x10]; // 0x20 PulseSymbol_t
-    std::uint8_t m_Param[0x10]; // 0x30 PulseSymbol_t
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0x10]; // 0x20 
+    std::uint8_t _[0x10]; // 0x30 
 };
 
 struct CPhysSurfaceProperties {
-    static constexpr std::size_t size = 0xC8;
-    std::uint8_t m_name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_nameHash[0x4]; // 0x8 uint32
-    std::uint8_t m_baseNameHash[0xC]; // 0xC uint32
-    std::uint8_t m_bHidden[0x8]; // 0x18 bool
-    std::uint8_t m_description[0x8]; // 0x20 CUtlString
-    std::uint8_t m_physics[0x18]; // 0x28 CPhysSurfacePropertiesPhysics
-    std::uint8_t m_vehicleParams[0x8]; // 0x40 CPhysSurfacePropertiesVehicle
-    std::uint8_t m_audioSounds[0x60]; // 0x48 CPhysSurfacePropertiesSoundNames
-    std::uint8_t m_audioParams[0x20]; // 0xA8 CPhysSurfacePropertiesAudio
+    static constexpr std::size_t size = 0xc8;
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0xc]; // 0xc 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x18]; // 0x28 
+    std::uint8_t _[0x8]; // 0x40 
+    std::uint8_t _[0x60]; // 0x48 
+    std::uint8_t _[0x20]; // 0xa8 
 };
 
 struct CNmBoneMaskValueNode__CDefinition {
@@ -4257,29 +4257,29 @@ struct CNmBoneMaskValueNode__CDefinition {
 
 struct CSeqPoseParamDesc {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_sName[0x10]; // 0x0 CBufferString
-    std::uint8_t m_flStart[0x4]; // 0x10 float32
-    std::uint8_t m_flEnd[0x4]; // 0x14 float32
-    std::uint8_t m_flLoop[0x4]; // 0x18 float32
-    std::uint8_t m_bLooping[0x4]; // 0x1C bool
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
 };
 
 struct CModelConfigElement_SetBodygroup {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_GroupName[0x8]; // 0x48 CGlobalSymbol
-    std::uint8_t m_nChoice[0x8]; // 0x50 int32
+    std::uint8_t _[0x8]; // 0x48 
+    std::uint8_t _[0x8]; // 0x50 
 };
 
 struct CAnimMovement {
-    static constexpr std::size_t size = 0x2C;
-    std::uint8_t endframe[0x4]; // 0x0 int32
-    std::uint8_t motionflags[0x4]; // 0x4 int32
-    std::uint8_t v0[0x4]; // 0x8 float32
-    std::uint8_t v1[0x4]; // 0xC float32
-    std::uint8_t angle[0x4]; // 0x10 float32
-    std::uint8_t vector[0xC]; // 0x14 Vector
-    std::uint8_t position[0xC]; // 0x20 Vector
+    static constexpr std::size_t size = 0x2c;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0xc]; // 0x14 
+    std::uint8_t _[0xc]; // 0x20 
 };
 
 struct CParticleRemapFloatInput {
@@ -4289,55 +4289,55 @@ struct CParticleRemapFloatInput {
 
 struct FollowAttachmentData {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_boneIndex[0x4]; // 0x0 int32
-    std::uint8_t m_attachmentHandle[0x4]; // 0x4 AttachmentHandle_t
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct FootStepTrigger {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_tags[0x18]; // 0x0 CUtlVector<int32>
-    std::uint8_t m_nFootIndex[0x4]; // 0x18 int32
-    std::uint8_t m_triggerPhase[0x4]; // 0x1C StepPhase
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
 };
 
 struct CNmSyncTrack__EventMarker_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_startTime[0x8]; // 0x0 NmPercent_t
-    std::uint8_t m_ID[0x8]; // 0x8 CGlobalSymbol
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CPathMetricEvaluator {
     static constexpr std::size_t size = 0x78;
     std::uint8_t pad_0[0x50]; // 0x0
-    std::uint8_t m_pathTimeSamples[0x18]; // 0x50 CUtlVector<float32>
-    std::uint8_t m_flDistance[0x4]; // 0x68 float32
-    std::uint8_t m_bExtrapolateMovement[0x4]; // 0x6C bool
-    std::uint8_t m_flMinExtrapolationSpeed[0x8]; // 0x70 float32
+    std::uint8_t _[0x18]; // 0x50 
+    std::uint8_t _[0x4]; // 0x68 
+    std::uint8_t _[0x4]; // 0x6c 
+    std::uint8_t _[0x8]; // 0x70 
 };
 
 struct CFootLockUpdateNode {
     static constexpr std::size_t size = 0x158;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_opFixedSettings[0x70]; // 0x70 FootLockPoseOpFixedSettings
-    std::uint8_t m_footSettings[0x18]; // 0xE0 CUtlVector<FootFixedSettings>
-    std::uint8_t m_hipShiftDamping[0x18]; // 0xF8 CAnimInputDamping
-    std::uint8_t m_rootHeightDamping[0x18]; // 0x110 CAnimInputDamping
-    std::uint8_t m_flStrideCurveScale[0x4]; // 0x128 float32
-    std::uint8_t m_flStrideCurveLimitScale[0x4]; // 0x12C float32
-    std::uint8_t m_flStepHeightIncreaseScale[0x4]; // 0x130 float32
-    std::uint8_t m_flStepHeightDecreaseScale[0x4]; // 0x134 float32
-    std::uint8_t m_flHipShiftScale[0x4]; // 0x138 float32
-    std::uint8_t m_flBlendTime[0x4]; // 0x13C float32
-    std::uint8_t m_flMaxRootHeightOffset[0x4]; // 0x140 float32
-    std::uint8_t m_flMinRootHeightOffset[0x4]; // 0x144 float32
-    std::uint8_t m_flTiltPlanePitchSpringStrength[0x4]; // 0x148 float32
-    std::uint8_t m_flTiltPlaneRollSpringStrength[0x4]; // 0x14C float32
-    std::uint8_t m_bApplyFootRotationLimits[0x1]; // 0x150 bool
-    std::uint8_t m_bApplyHipShift[0x1]; // 0x151 bool
-    std::uint8_t m_bModulateStepHeight[0x1]; // 0x152 bool
-    std::uint8_t m_bResetChild[0x1]; // 0x153 bool
-    std::uint8_t m_bEnableVerticalCurvedPaths[0x1]; // 0x154 bool
-    std::uint8_t m_bEnableRootHeightDamping[0x3]; // 0x155 bool
+    std::uint8_t _[0x70]; // 0x70 
+    std::uint8_t _[0x18]; // 0xe0 
+    std::uint8_t _[0x18]; // 0xf8 
+    std::uint8_t _[0x18]; // 0x110 
+    std::uint8_t _[0x4]; // 0x128 
+    std::uint8_t _[0x4]; // 0x12c 
+    std::uint8_t _[0x4]; // 0x130 
+    std::uint8_t _[0x4]; // 0x134 
+    std::uint8_t _[0x4]; // 0x138 
+    std::uint8_t _[0x4]; // 0x13c 
+    std::uint8_t _[0x4]; // 0x140 
+    std::uint8_t _[0x4]; // 0x144 
+    std::uint8_t _[0x4]; // 0x148 
+    std::uint8_t _[0x4]; // 0x14c 
+    std::uint8_t _[0x1]; // 0x150 
+    std::uint8_t _[0x1]; // 0x151 
+    std::uint8_t _[0x1]; // 0x152 
+    std::uint8_t _[0x1]; // 0x153 
+    std::uint8_t _[0x1]; // 0x154 
+    std::uint8_t _[0x3]; // 0x155 
 };
 
 struct CNmOrientationWarpEvent {
@@ -4352,32 +4352,32 @@ struct CNmIDValueNode__CDefinition {
 
 struct PulseGraphExecutionHistoryNodeDesc_t {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t strCellDesc[0x10]; // 0x0 CBufferString
-    std::uint8_t strBindingName[0x10]; // 0x10 PulseSymbol_t
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x10]; // 0x10 
 };
 
 struct JiggleBoneSettings_t {
-    static constexpr std::size_t size = 0x2C;
-    std::uint8_t m_nBoneIndex[0x4]; // 0x0 int32
-    std::uint8_t m_flSpringStrength[0x4]; // 0x4 float32
-    std::uint8_t m_flMaxTimeStep[0x4]; // 0x8 float32
-    std::uint8_t m_flDamping[0x4]; // 0xC float32
-    std::uint8_t m_vBoundsMaxLS[0xC]; // 0x10 Vector
-    std::uint8_t m_vBoundsMinLS[0xC]; // 0x1C Vector
-    std::uint8_t m_eSimSpace[0x4]; // 0x28 JiggleBoneSimSpace
+    static constexpr std::size_t size = 0x2c;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0xc]; // 0x10 
+    std::uint8_t _[0xc]; // 0x1c 
+    std::uint8_t _[0x4]; // 0x28 
 };
 
 struct CJumpHelperUpdateNode {
-    static constexpr std::size_t size = 0xD8;
-    std::uint8_t pad_0[0xB0]; // 0x0
-    std::uint8_t m_hTargetParam[0x4]; // 0xB0 CAnimParamHandle
-    std::uint8_t m_flOriginalJumpMovement[0xC]; // 0xB4 Vector
-    std::uint8_t m_flOriginalJumpDuration[0x4]; // 0xC0 float32
-    std::uint8_t m_flJumpStartCycle[0x4]; // 0xC4 float32
-    std::uint8_t m_flJumpEndCycle[0x4]; // 0xC8 float32
-    std::uint8_t m_eCorrectionMethod[0x4]; // 0xCC JumpCorrectionMethod
-    std::uint8_t m_bTranslationAxis[0x3]; // 0xD0 bool[3]
-    std::uint8_t m_bScaleSpeed[0x5]; // 0xD3 bool
+    static constexpr std::size_t size = 0xd8;
+    std::uint8_t pad_0[0xb0]; // 0x0
+    std::uint8_t _[0x4]; // 0xb0 
+    std::uint8_t _[0xc]; // 0xb4 
+    std::uint8_t _[0x4]; // 0xc0 
+    std::uint8_t _[0x4]; // 0xc4 
+    std::uint8_t _[0x4]; // 0xc8 
+    std::uint8_t _[0x4]; // 0xcc 
+    std::uint8_t _[0x3]; // 0xd0 
+    std::uint8_t _[0x5]; // 0xd3 
 };
 
 struct CNmControlParameterBoolNode__CDefinition {
@@ -4392,107 +4392,107 @@ struct CNmChainLookatTask {
 
 struct FootLockPoseOpFixedSettings {
     static constexpr std::size_t size = 0x68;
-    std::uint8_t m_footInfo[0x18]; // 0x0 CUtlVector<FootFixedData_t>
-    std::uint8_t m_hipDampingSettings[0x18]; // 0x18 CAnimInputDamping
-    std::uint8_t m_nHipBoneIndex[0x4]; // 0x30 int32
-    std::uint8_t m_ikSolverType[0x4]; // 0x34 IKSolverType
-    std::uint8_t m_bApplyTilt[0x1]; // 0x38 bool
-    std::uint8_t m_bApplyHipDrop[0x1]; // 0x39 bool
-    std::uint8_t m_bAlwaysUseFallbackHinge[0x1]; // 0x3A bool
-    std::uint8_t m_bApplyFootRotationLimits[0x1]; // 0x3B bool
-    std::uint8_t m_bApplyLegTwistLimits[0x4]; // 0x3C bool
-    std::uint8_t m_flMaxFootHeight[0x4]; // 0x40 float32
-    std::uint8_t m_flExtensionScale[0x4]; // 0x44 float32
-    std::uint8_t m_flMaxLegTwist[0x4]; // 0x48 float32
-    std::uint8_t m_bEnableLockBreaking[0x4]; // 0x4C bool
-    std::uint8_t m_flLockBreakTolerance[0x4]; // 0x50 float32
-    std::uint8_t m_flLockBlendTime[0x4]; // 0x54 float32
-    std::uint8_t m_bEnableStretching[0x4]; // 0x58 bool
-    std::uint8_t m_flMaxStretchAmount[0x4]; // 0x5C float32
-    std::uint8_t m_flStretchExtensionScale[0x8]; // 0x60 float32
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0x4]; // 0x30 
+    std::uint8_t _[0x4]; // 0x34 
+    std::uint8_t _[0x1]; // 0x38 
+    std::uint8_t _[0x1]; // 0x39 
+    std::uint8_t _[0x1]; // 0x3a 
+    std::uint8_t _[0x1]; // 0x3b 
+    std::uint8_t _[0x4]; // 0x3c 
+    std::uint8_t _[0x4]; // 0x40 
+    std::uint8_t _[0x4]; // 0x44 
+    std::uint8_t _[0x4]; // 0x48 
+    std::uint8_t _[0x4]; // 0x4c 
+    std::uint8_t _[0x4]; // 0x50 
+    std::uint8_t _[0x4]; // 0x54 
+    std::uint8_t _[0x4]; // 0x58 
+    std::uint8_t _[0x4]; // 0x5c 
+    std::uint8_t _[0x8]; // 0x60 
 };
 
 struct CBoneVelocityMetricEvaluator {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x50]; // 0x0
-    std::uint8_t m_nBoneIndex[0x8]; // 0x50 int32
+    std::uint8_t _[0x8]; // 0x50 
 };
 
 struct CWarpSectionAnimTag {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x50]; // 0x0
-    std::uint8_t m_bWarpPosition[0x1]; // 0x50 bool
-    std::uint8_t m_bWarpOrientation[0x7]; // 0x51 bool
+    std::uint8_t _[0x1]; // 0x50 
+    std::uint8_t _[0x7]; // 0x51 
 };
 
 struct SelectorInstanceData_t {
-    static constexpr std::size_t size = 0x2C;
-    std::uint8_t m_weights[0x8]; // 0x0 CRelativeArray<float32>
-    std::uint8_t m_currentIndexStartTime[0xC]; // 0x8 CAnimNetVar<float32>
-    std::uint8_t m_currentIndex[0x4]; // 0x14 int32
-    std::uint8_t m_previousIndex[0x14]; // 0x18 int32
+    static constexpr std::size_t size = 0x2c;
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0xc]; // 0x8 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x14]; // 0x18 
 };
 
 struct CModelConfigElement_RandomColor {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_Gradient[0x18]; // 0x48 CColorGradient
+    std::uint8_t _[0x18]; // 0x48 
 };
 
 struct CFootMotion {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_strides[0x18]; // 0x0 CUtlVector<CFootStride>
-    std::uint8_t m_name[0x8]; // 0x18 CUtlString
-    std::uint8_t m_bAdditive[0x8]; // 0x20 bool
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
 };
 
 struct CJiggleBoneUpdateNode {
     static constexpr std::size_t size = 0x90;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_opFixedData[0x20]; // 0x70 JiggleBoneSettingsList_t
+    std::uint8_t _[0x20]; // 0x70 
 };
 
 struct CNmConstVectorNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_value[0x10]; // 0x10 Vector
+    std::uint8_t _[0x10]; // 0x10 
 };
 
 struct MoodAnimation_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_sName[0x8]; // 0x0 CModelAnimNameWithDeltas
-    std::uint8_t m_flWeight[0x8]; // 0x8 float32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CLODComponentUpdater {
     static constexpr std::size_t size = 0x38;
     std::uint8_t pad_0[0x30]; // 0x0
-    std::uint8_t m_nServerLOD[0x8]; // 0x30 int32
+    std::uint8_t _[0x8]; // 0x30 
 };
 
 struct CNmIsTargetSetNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x8]; // 0x10 int16
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CPhysSurfacePropertiesVehicle {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_wheelDrag[0x4]; // 0x0 float32
-    std::uint8_t m_wheelFrictionScale[0x4]; // 0x4 float32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct CAnimDataChannelDesc {
     static constexpr std::size_t size = 0x90;
-    std::uint8_t m_szChannelClass[0x10]; // 0x0 CBufferString
-    std::uint8_t m_szVariableName[0x10]; // 0x10 CBufferString
-    std::uint8_t m_nFlags[0x4]; // 0x20 int32
-    std::uint8_t m_nType[0x4]; // 0x24 int32
-    std::uint8_t m_szGrouping[0x10]; // 0x28 CBufferString
-    std::uint8_t m_szDescription[0x10]; // 0x38 CBufferString
-    std::uint8_t m_szElementNameArray[0x18]; // 0x48 CUtlVector<CBufferString>
-    std::uint8_t m_nElementIndexArray[0x18]; // 0x60 CUtlVector<int32>
-    std::uint8_t m_nElementMaskArray[0x18]; // 0x78 CUtlVector<uint32>
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x10]; // 0x28 
+    std::uint8_t _[0x10]; // 0x38 
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x18]; // 0x60 
+    std::uint8_t _[0x18]; // 0x78 
 };
 
 struct CPairedSequenceComponentUpdater {
@@ -4503,48 +4503,48 @@ struct CPairedSequenceComponentUpdater {
 struct CNmParticleEvent {
     static constexpr std::size_t size = 0x70;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_relevance[0x4]; // 0x18 CNmEventRelevance_t
-    std::uint8_t m_type[0x4]; // 0x1C CNmParticleEvent::Type_t
-    std::uint8_t m_target[0x8]; // 0x20 CNmEventTargetEntity_t
-    std::uint8_t m_hParticleSystem[0x8]; // 0x28 CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-    std::uint8_t m_tags[0x8]; // 0x30 CUtlString
-    std::uint8_t m_bStopImmediately[0x1]; // 0x38 bool
-    std::uint8_t m_bDetachFromOwner[0x1]; // 0x39 bool
-    std::uint8_t m_bPlayEndCap[0x6]; // 0x3A bool
-    std::uint8_t m_attachmentPoint0[0x8]; // 0x40 CUtlString
-    std::uint8_t m_attachmentType0[0x8]; // 0x48 ParticleAttachment_t
-    std::uint8_t m_attachmentPoint1[0x8]; // 0x50 CUtlString
-    std::uint8_t m_attachmentType1[0x8]; // 0x58 ParticleAttachment_t
-    std::uint8_t m_config[0x8]; // 0x60 CUtlString
-    std::uint8_t m_effectForConfig[0x8]; // 0x68 CUtlString
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x8]; // 0x30 
+    std::uint8_t _[0x1]; // 0x38 
+    std::uint8_t _[0x1]; // 0x39 
+    std::uint8_t _[0x6]; // 0x3a 
+    std::uint8_t _[0x8]; // 0x40 
+    std::uint8_t _[0x8]; // 0x48 
+    std::uint8_t _[0x8]; // 0x50 
+    std::uint8_t _[0x8]; // 0x58 
+    std::uint8_t _[0x8]; // 0x60 
+    std::uint8_t _[0x8]; // 0x68 
 };
 
 struct MotionSelection {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x24]; // 0x0
-    std::uint8_t m_nConfigIndex[0xC]; // 0x24 NetVarConfigIndex
-    std::uint8_t m_flCycleZeroTime[0xC]; // 0x30 CAnimNetVar<float32>
-    std::uint8_t m_flPlaybackSpeed[0xC]; // 0x3C CAnimNetVar<float32>
-    std::uint8_t m_flStartTime[0xC]; // 0x48 CAnimNetVar<float32>
-    std::uint8_t m_nSample[0x4]; // 0x54 int32
+    std::uint8_t _[0xc]; // 0x24 
+    std::uint8_t _[0xc]; // 0x30 
+    std::uint8_t _[0xc]; // 0x3c 
+    std::uint8_t _[0xc]; // 0x48 
+    std::uint8_t _[0x4]; // 0x54 
 };
 
 struct CMorphRectData {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_nXLeftDst[0x2]; // 0x0 int16
-    std::uint8_t m_nYTopDst[0x2]; // 0x2 int16
-    std::uint8_t m_flUWidthSrc[0x4]; // 0x4 float32
-    std::uint8_t m_flVHeightSrc[0x8]; // 0x8 float32
-    std::uint8_t m_bundleDatas[0x18]; // 0x10 CUtlVector<CMorphBundleData>
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x18]; // 0x10 
 };
 
 struct CAnimFoot {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_vBallOffset[0xC]; // 0x8 Vector
-    std::uint8_t m_vHeelOffset[0xC]; // 0x14 Vector
-    std::uint8_t m_ankleBoneIndex[0x4]; // 0x20 int32
-    std::uint8_t m_toeBoneIndex[0x4]; // 0x24 int32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0xc]; // 0x8 
+    std::uint8_t _[0xc]; // 0x14 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
 };
 
 struct CParentConstraint {
@@ -4555,128 +4555,128 @@ struct CParentConstraint {
 struct CNmCachedVectorNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x4]; // 0x10 int16
-    std::uint8_t m_mode[0x4]; // 0x14 NmCachedValueMode_t
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct CNmStateNode__TimedEvent_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_ID[0x8]; // 0x0 CGlobalSymbol
-    std::uint8_t m_flTimeValueSeconds[0x4]; // 0x8 float32
-    std::uint8_t m_comparisionOperator[0x4]; // 0xC CNmStateNode::TimedEvent_t::Comparison_t
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
 };
 
 struct CFootPositionMetricEvaluator {
     static constexpr std::size_t size = 0x70;
     std::uint8_t pad_0[0x50]; // 0x0
-    std::uint8_t m_footIndices[0x18]; // 0x50 CUtlVector<int32>
-    std::uint8_t m_bIgnoreSlope[0x8]; // 0x68 bool
+    std::uint8_t _[0x18]; // 0x50 
+    std::uint8_t _[0x8]; // 0x68 
 };
 
 struct CParticleVariableRef {
     static constexpr std::size_t size = 0x50;
-    std::uint8_t m_variableName[0x38]; // 0x0 CKV3MemberNameWithStorage
-    std::uint8_t m_variableType[0x18]; // 0x38 CPulseValueFullType
+    std::uint8_t _[0x38]; // 0x0 
+    std::uint8_t _[0x18]; // 0x38 
 };
 
 struct CMoverInstanceData {
-    static constexpr std::size_t size = 0x2C;
-    std::uint8_t m_flDampedValue[0x4]; // 0x0 float32
-    std::uint8_t m_vMovement[0x18]; // 0x4 Vector
-    std::uint8_t m_Rotation[0x4]; // 0x1C CRotation
-    std::uint8_t m_TargetOrientation[0xC]; // 0x20 CRotation
+    static constexpr std::size_t size = 0x2c;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x18]; // 0x4 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0xc]; // 0x20 
 };
 
 struct HSequence {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_Value[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CDampedValueUpdateItem {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_damping[0x20]; // 0x0 CAnimInputDamping
-    std::uint8_t m_hParamIn[0x2]; // 0x20 CAnimParamHandle
-    std::uint8_t m_hParamOut[0x6]; // 0x22 CAnimParamHandle
+    std::uint8_t _[0x20]; // 0x0 
+    std::uint8_t _[0x2]; // 0x20 
+    std::uint8_t _[0x6]; // 0x22 
 };
 
 struct CAnimLocalHierarchy {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_sBone[0x10]; // 0x0 CBufferString
-    std::uint8_t m_sNewParent[0x10]; // 0x10 CBufferString
-    std::uint8_t m_nStartFrame[0x4]; // 0x20 int32
-    std::uint8_t m_nPeakFrame[0x4]; // 0x24 int32
-    std::uint8_t m_nTailFrame[0x4]; // 0x28 int32
-    std::uint8_t m_nEndFrame[0x4]; // 0x2C int32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x4]; // 0x28 
+    std::uint8_t _[0x4]; // 0x2c 
 };
 
 struct CBlendUpdateNode {
-    static constexpr std::size_t size = 0xE0;
+    static constexpr std::size_t size = 0xe0;
     std::uint8_t pad_0[0x60]; // 0x0
-    std::uint8_t m_children[0x18]; // 0x60 CUtlVector<CAnimUpdateNodeRef>
-    std::uint8_t m_sortedOrder[0x18]; // 0x78 CUtlVector<uint8>
-    std::uint8_t m_targetValues[0x1C]; // 0x90 CUtlVector<float32>
-    std::uint8_t m_blendValueSource[0x4]; // 0xAC AnimValueSource
-    std::uint8_t m_eLinearRootMotionBlendMode[0x4]; // 0xB0 LinearRootMotionBlendMode_t
-    std::uint8_t m_paramIndex[0x4]; // 0xB4 CAnimParamHandle
-    std::uint8_t m_damping[0x18]; // 0xB8 CAnimInputDamping
-    std::uint8_t m_blendKeyType[0x4]; // 0xD0 BlendKeyType
-    std::uint8_t m_bLockBlendOnReset[0x1]; // 0xD4 bool
-    std::uint8_t m_bSyncCycles[0x1]; // 0xD5 bool
-    std::uint8_t m_bLoop[0x1]; // 0xD6 bool
-    std::uint8_t m_bLockWhenWaning[0x1]; // 0xD7 bool
-    std::uint8_t m_bIsAngle[0x8]; // 0xD8 bool
+    std::uint8_t _[0x18]; // 0x60 
+    std::uint8_t _[0x18]; // 0x78 
+    std::uint8_t _[0x1c]; // 0x90 
+    std::uint8_t _[0x4]; // 0xac 
+    std::uint8_t _[0x4]; // 0xb0 
+    std::uint8_t _[0x4]; // 0xb4 
+    std::uint8_t _[0x18]; // 0xb8 
+    std::uint8_t _[0x4]; // 0xd0 
+    std::uint8_t _[0x1]; // 0xd4 
+    std::uint8_t _[0x1]; // 0xd5 
+    std::uint8_t _[0x1]; // 0xd6 
+    std::uint8_t _[0x1]; // 0xd7 
+    std::uint8_t _[0x8]; // 0xd8 
 };
 
 struct PulseGraphExecutionHistoryEntry_t {
     static constexpr std::size_t size = 0x38;
-    std::uint8_t nCursorID[0x4]; // 0x0 PulseCursorID_t
-    std::uint8_t nEditorID[0x4]; // 0x4 PulseDocNodeID_t
-    std::uint8_t seqPoint[0x10]; // 0x8 PulseSymbol_t
-    std::uint8_t flExecTime[0x4]; // 0x18 float32
-    std::uint8_t unFlags[0x4]; // 0x1C uint32
-    std::uint8_t tagName[0x10]; // 0x20 PulseSymbol_t
-    std::uint8_t childID[0x8]; // 0x30 PulseCursorID_t
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x10]; // 0x8 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x10]; // 0x20 
+    std::uint8_t _[0x8]; // 0x30 
 };
 
 struct CQuaternionAnimParameter {
-    static constexpr std::size_t size = 0xA0;
+    static constexpr std::size_t size = 0xa0;
     std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t m_defaultValue[0x10]; // 0x80 Quaternion
-    std::uint8_t m_bInterpolate[0x10]; // 0x90 bool
+    std::uint8_t _[0x10]; // 0x80 
+    std::uint8_t _[0x10]; // 0x90 
 };
 
 struct PermModelData_t {
-    static constexpr std::size_t size = 0x2F8;
-    std::uint8_t m_name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_modelInfo[0x58]; // 0x8 PermModelInfo_t
-    std::uint8_t m_ExtParts[0x18]; // 0x60 CUtlVector<PermModelExtPart_t>
-    std::uint8_t m_refMeshes[0x18]; // 0x78 CUtlVector<CStrongHandle<InfoForResourceTypeCRenderMesh>>
-    std::uint8_t m_refMeshGroupMasks[0x18]; // 0x90 CUtlVector<uint64>
-    std::uint8_t m_refPhysGroupMasks[0x18]; // 0xA8 CUtlVector<uint64>
-    std::uint8_t m_refLODGroupMasks[0x18]; // 0xC0 CUtlVector<uint8>
-    std::uint8_t m_lodGroupSwitchDistances[0x18]; // 0xD8 CUtlVector<float32>
-    std::uint8_t m_refPhysicsData[0x18]; // 0xF0 CUtlVector<CStrongHandle<InfoForResourceTypeCPhysAggregateData>>
-    std::uint8_t m_refPhysicsHitboxData[0x18]; // 0x108 CUtlVector<CStrongHandle<InfoForResourceTypeCPhysAggregateData>>
-    std::uint8_t m_refAnimGroups[0x18]; // 0x120 CUtlVector<CStrongHandle<InfoForResourceTypeCAnimationGroup>>
-    std::uint8_t m_refSequenceGroups[0x18]; // 0x138 CUtlVector<CStrongHandle<InfoForResourceTypeCSequenceGroupData>>
-    std::uint8_t m_meshGroups[0x18]; // 0x150 CUtlVector<CUtlString>
-    std::uint8_t m_materialGroups[0x18]; // 0x168 CUtlVector<MaterialGroup_t>
-    std::uint8_t m_nDefaultMeshGroupMask[0x8]; // 0x180 uint64
-    std::uint8_t m_modelSkeleton[0xA8]; // 0x188 ModelSkeletonData_t
-    std::uint8_t m_remappingTable[0x18]; // 0x230 CUtlVector<int16>
-    std::uint8_t m_remappingTableStarts[0x18]; // 0x248 CUtlVector<uint16>
-    std::uint8_t m_boneFlexDrivers[0x18]; // 0x260 CUtlVector<ModelBoneFlexDriver_t>
-    std::uint8_t m_pModelConfigList[0x8]; // 0x278 CModelConfigList*
-    std::uint8_t m_BodyGroupsHiddenInTools[0x18]; // 0x280 CUtlVector<CUtlString>
-    std::uint8_t m_refAnimIncludeModels[0x18]; // 0x298 CUtlVector<CStrongHandle<InfoForResourceTypeCModel>>
-    std::uint8_t m_AnimatedMaterialAttributes[0x18]; // 0x2B0 CUtlVector<PermModelDataAnimatedMaterialAttribute_t>
-    std::uint8_t m_animGraph2Refs[0x18]; // 0x2C8 CUtlVector<ModelAnimGraph2Ref_t>
-    std::uint8_t m_vecNmSkeletonRefs[0x18]; // 0x2E0 CUtlVector<CStrongHandle<InfoForResourceTypeCNmSkeleton>>
+    static constexpr std::size_t size = 0x2f8;
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x58]; // 0x8 
+    std::uint8_t _[0x18]; // 0x60 
+    std::uint8_t _[0x18]; // 0x78 
+    std::uint8_t _[0x18]; // 0x90 
+    std::uint8_t _[0x18]; // 0xa8 
+    std::uint8_t _[0x18]; // 0xc0 
+    std::uint8_t _[0x18]; // 0xd8 
+    std::uint8_t _[0x18]; // 0xf0 
+    std::uint8_t _[0x18]; // 0x108 
+    std::uint8_t _[0x18]; // 0x120 
+    std::uint8_t _[0x18]; // 0x138 
+    std::uint8_t _[0x18]; // 0x150 
+    std::uint8_t _[0x18]; // 0x168 
+    std::uint8_t _[0x8]; // 0x180 
+    std::uint8_t _[0xa8]; // 0x188 
+    std::uint8_t _[0x18]; // 0x230 
+    std::uint8_t _[0x18]; // 0x248 
+    std::uint8_t _[0x18]; // 0x260 
+    std::uint8_t _[0x8]; // 0x278 
+    std::uint8_t _[0x18]; // 0x280 
+    std::uint8_t _[0x18]; // 0x298 
+    std::uint8_t _[0x18]; // 0x2b0 
+    std::uint8_t _[0x18]; // 0x2c8 
+    std::uint8_t _[0x18]; // 0x2e0 
 };
 
 struct PulseCursorYieldToken_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_Value[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CNmSampleTask {
@@ -4686,11 +4686,11 @@ struct CNmSampleTask {
 
 struct CFollowPathInstanceData {
     static constexpr std::size_t size = 0x24;
-    std::uint8_t m_xLastPredictedTransformsDeltas[0x8]; // 0x0 CRelativeArray<CMotionTransform>
-    std::uint8_t m_dampedTurnValue[0x4]; // 0x8 float32
-    std::uint8_t m_flTurnAmount[0x4]; // 0xC float32
-    std::uint8_t m_flPredictionScale[0xC]; // 0x10 CAnimNetVar<float32>
-    std::uint8_t m_flLastPathTime[0x8]; // 0x1C float32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0xc]; // 0x10 
+    std::uint8_t _[0x8]; // 0x1c 
 };
 
 struct CStaticPoseCacheBuilder {
@@ -4700,240 +4700,240 @@ struct CStaticPoseCacheBuilder {
 
 struct ModelMeshBufferData_t {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_nBlockIndex[0x4]; // 0x0 int32
-    std::uint8_t m_nElementCount[0x4]; // 0x4 uint32
-    std::uint8_t m_nElementSizeInBytes[0x4]; // 0x8 uint32
-    std::uint8_t m_bMeshoptCompressed[0x1]; // 0xC bool
-    std::uint8_t m_bMeshoptIndexSequence[0x1]; // 0xD bool
-    std::uint8_t m_nMeshoptMeshletEncodeVersion[0x1]; // 0xE int8
-    std::uint8_t m_bCompressedZSTD[0x1]; // 0xF bool
-    std::uint8_t m_bCreateBufferSRV[0x1]; // 0x10 bool
-    std::uint8_t m_bCreateBufferUAV[0x1]; // 0x11 bool
-    std::uint8_t m_bCreateRawBuffer[0x1]; // 0x12 bool
-    std::uint8_t m_bCreatePooledBuffer[0x1]; // 0x13 bool
-    std::uint8_t m_nBufferUsage[0x4]; // 0x14 uint16
-    std::uint8_t m_inputLayoutFields[0x18]; // 0x18 CUtlVector<RenderInputLayoutField_t>
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x1]; // 0xc 
+    std::uint8_t _[0x1]; // 0xd 
+    std::uint8_t _[0x1]; // 0xe 
+    std::uint8_t _[0x1]; // 0xf 
+    std::uint8_t _[0x1]; // 0x10 
+    std::uint8_t _[0x1]; // 0x11 
+    std::uint8_t _[0x1]; // 0x12 
+    std::uint8_t _[0x1]; // 0x13 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x18]; // 0x18 
 };
 
 struct CSequenceGroupData {
     static constexpr std::size_t size = 0x138;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_sName[0x10]; // 0x10 CBufferString
-    std::uint8_t m_nFlags[0x8]; // 0x20 uint32
-    std::uint8_t m_localSequenceNameArray[0x18]; // 0x28 CUtlVector<CBufferString>
-    std::uint8_t m_localS1SeqDescArray[0x18]; // 0x40 CUtlVector<CSeqS1SeqDesc>
-    std::uint8_t m_localMultiSeqDescArray[0x18]; // 0x58 CUtlVector<CSeqS1SeqDesc>
-    std::uint8_t m_localSynthAnimDescArray[0x18]; // 0x70 CUtlVector<CSeqSynthAnimDesc>
-    std::uint8_t m_localCmdSeqDescArray[0x18]; // 0x88 CUtlVector<CSeqCmdSeqDesc>
-    std::uint8_t m_localBoneMaskArray[0x18]; // 0xA0 CUtlVector<CSeqBoneMaskList>
-    std::uint8_t m_localScaleSetArray[0x18]; // 0xB8 CUtlVector<CSeqScaleSet>
-    std::uint8_t m_localBoneNameArray[0x18]; // 0xD0 CUtlVector<CBufferString>
-    std::uint8_t m_localNodeName[0x10]; // 0xE8 CBufferString
-    std::uint8_t m_localPoseParamArray[0x18]; // 0xF8 CUtlVector<CSeqPoseParamDesc>
-    std::uint8_t m_keyValues[0x10]; // 0x110 KeyValues3
-    std::uint8_t m_localIKAutoplayLockArray[0x18]; // 0x120 CUtlVector<CSeqIKLock>
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x18]; // 0x28 
+    std::uint8_t _[0x18]; // 0x40 
+    std::uint8_t _[0x18]; // 0x58 
+    std::uint8_t _[0x18]; // 0x70 
+    std::uint8_t _[0x18]; // 0x88 
+    std::uint8_t _[0x18]; // 0xa0 
+    std::uint8_t _[0x18]; // 0xb8 
+    std::uint8_t _[0x18]; // 0xd0 
+    std::uint8_t _[0x10]; // 0xe8 
+    std::uint8_t _[0x18]; // 0xf8 
+    std::uint8_t _[0x10]; // 0x110 
+    std::uint8_t _[0x18]; // 0x120 
 };
 
 struct CStateMachineUpdateNode {
     static constexpr std::size_t size = 0x100;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_stateMachine[0x58]; // 0x70 CAnimStateMachineUpdater
-    std::uint8_t m_stateData[0x18]; // 0xC8 CUtlVector<CStateNodeStateData>
-    std::uint8_t m_transitionData[0x1C]; // 0xE0 CUtlVector<CStateNodeTransitionData>
-    std::uint8_t m_bBlockWaningTags[0x1]; // 0xFC bool
-    std::uint8_t m_bLockStateWhenWaning[0x1]; // 0xFD bool
-    std::uint8_t m_bResetWhenActivated[0x2]; // 0xFE bool
+    std::uint8_t _[0x58]; // 0x70 
+    std::uint8_t _[0x18]; // 0xc8 
+    std::uint8_t _[0x1c]; // 0xe0 
+    std::uint8_t _[0x1]; // 0xfc 
+    std::uint8_t _[0x1]; // 0xfd 
+    std::uint8_t _[0x2]; // 0xfe 
 };
 
 struct CNmIDBasedSelectorNode__CDefinition {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_optionNodeIndices[0x18]; // 0x10 CUtlLeanVectorFixedGrowable<int16,5>
-    std::uint8_t m_optionIDs[0x30]; // 0x28 CUtlLeanVectorFixedGrowable<CGlobalSymbol,5>
-    std::uint8_t m_nParameterNodeIdx[0x2]; // 0x58 int16
-    std::uint8_t m_nFallbackNodeIdx[0x2]; // 0x5A int16
-    std::uint8_t m_bIgnoreInvalidOptions[0x4]; // 0x5C bool
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x30]; // 0x28 
+    std::uint8_t _[0x2]; // 0x58 
+    std::uint8_t _[0x2]; // 0x5a 
+    std::uint8_t _[0x4]; // 0x5c 
 };
 
 struct CAimMatrixUpdateNode {
     static constexpr std::size_t size = 0x180;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_opFixedSettings[0xF8]; // 0x70 AimMatrixOpFixedSettings_t
-    std::uint8_t m_target[0x4]; // 0x168 AnimVectorSource
-    std::uint8_t m_paramIndex[0x4]; // 0x16C CAnimParamHandle
-    std::uint8_t m_hSequence[0x4]; // 0x170 HSequence
-    std::uint8_t m_bResetChild[0x1]; // 0x174 bool
-    std::uint8_t m_bLockWhenWaning[0xB]; // 0x175 bool
+    std::uint8_t _[0xf8]; // 0x70 
+    std::uint8_t _[0x4]; // 0x168 
+    std::uint8_t _[0x4]; // 0x16c 
+    std::uint8_t _[0x4]; // 0x170 
+    std::uint8_t _[0x1]; // 0x174 
+    std::uint8_t _[0xb]; // 0x175 
 };
 
 struct SkeletonAnimCapture_t__Frame_t {
-    static constexpr std::size_t size = 0xC0;
-    std::uint8_t m_flTime[0x4]; // 0x0 float32
-    std::uint8_t m_Stamp[0x1C]; // 0x4 SkeletonAnimCapture_t::FrameStamp_t
-    std::uint8_t m_Transform[0x20]; // 0x20 CTransform
-    std::uint8_t m_bTeleport[0x8]; // 0x40 bool
-    std::uint8_t m_CompositeBones[0x18]; // 0x48 CUtlVector<CTransform>
-    std::uint8_t m_SimStateBones[0x18]; // 0x60 CUtlVector<CTransform>
-    std::uint8_t m_FeModelAnims[0x18]; // 0x78 CUtlVector<CTransform>
-    std::uint8_t m_FeModelPos[0x18]; // 0x90 CUtlVector<VectorAligned>
-    std::uint8_t m_FlexControllerWeights[0x18]; // 0xA8 CUtlVector<float32>
+    static constexpr std::size_t size = 0xc0;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x1c]; // 0x4 
+    std::uint8_t _[0x20]; // 0x20 
+    std::uint8_t _[0x8]; // 0x40 
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x18]; // 0x60 
+    std::uint8_t _[0x18]; // 0x78 
+    std::uint8_t _[0x18]; // 0x90 
+    std::uint8_t _[0x18]; // 0xa8 
 };
 
 struct CModelConfigElement_Command {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_Command[0x8]; // 0x48 CUtlString
-    std::uint8_t m_Args[0x10]; // 0x50 KeyValues3
+    std::uint8_t _[0x8]; // 0x48 
+    std::uint8_t _[0x10]; // 0x50 
 };
 
 struct TargetSelectorInstanceData_t {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_currentIndex[0x1C]; // 0x0 CAnimNetVar<int32>
-    std::uint8_t m_vMSRootMotionAnlyzerTarget[0x14]; // 0x1C CAnimNetVar<Vector>
+    std::uint8_t _[0x1c]; // 0x0 
+    std::uint8_t _[0x14]; // 0x1c 
 };
 
 struct CAnimEventDefinition {
     static constexpr std::size_t size = 0x40;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_nFrame[0x4]; // 0x8 int32
-    std::uint8_t m_nEndFrame[0x4]; // 0xC int32
-    std::uint8_t m_flCycle[0x4]; // 0x10 float32
-    std::uint8_t m_flDuration[0x4]; // 0x14 float32
-    std::uint8_t m_EventData[0x10]; // 0x18 KeyValues3
-    std::uint8_t m_sLegacyOptions[0x10]; // 0x28 CBufferString
-    std::uint8_t m_sEventName[0x8]; // 0x38 CGlobalSymbol
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x10]; // 0x18 
+    std::uint8_t _[0x10]; // 0x28 
+    std::uint8_t _[0x8]; // 0x38 
 };
 
 struct CNmRootMotionData {
     static constexpr std::size_t size = 0x50;
-    std::uint8_t m_transforms[0x18]; // 0x0 CUtlVector<CTransform>
-    std::uint8_t m_nNumFrames[0x4]; // 0x18 int32
-    std::uint8_t m_flAverageLinearVelocity[0x4]; // 0x1C float32
-    std::uint8_t m_flAverageAngularVelocityRadians[0x10]; // 0x20 float32
-    std::uint8_t m_totalDelta[0x20]; // 0x30 CTransform
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x10]; // 0x20 
+    std::uint8_t _[0x20]; // 0x30 
 };
 
 struct CPulseGraphExecutionHistory {
     static constexpr std::size_t size = 0x78;
-    std::uint8_t m_nInstanceID[0x8]; // 0x0 PulseGraphInstanceID_t
-    std::uint8_t m_strFileName[0x8]; // 0x8 CUtlString
-    std::uint8_t m_vecHistory[0x18]; // 0x10 CUtlVector<PulseGraphExecutionHistoryEntry_t*>
-    std::uint8_t m_mapCellDesc[0x28]; // 0x28 CUtlOrderedMap<PulseDocNodeID_t,PulseGraphExecutionHistoryNodeDesc_t*>
-    std::uint8_t m_mapCursorDesc[0x28]; // 0x50 CUtlOrderedMap<PulseCursorID_t,PulseGraphExecutionHistoryCursorDesc_t*>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x28]; // 0x28 
+    std::uint8_t _[0x28]; // 0x50 
 };
 
 struct AnimScriptHandle {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_id[0x4]; // 0x0 uint32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CFlexOp {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_OpCode[0x4]; // 0x0 FlexOpCode_t
-    std::uint8_t m_Data[0x4]; // 0x4 int32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct CHitReactUpdateNode {
-    static constexpr std::size_t size = 0xD0;
+    static constexpr std::size_t size = 0xd0;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_opFixedSettings[0x4C]; // 0x70 HitReactFixedSettings_t
-    std::uint8_t m_triggerParam[0x2]; // 0xBC CAnimParamHandle
-    std::uint8_t m_hitBoneParam[0x2]; // 0xBE CAnimParamHandle
-    std::uint8_t m_hitOffsetParam[0x2]; // 0xC0 CAnimParamHandle
-    std::uint8_t m_hitDirectionParam[0x2]; // 0xC2 CAnimParamHandle
-    std::uint8_t m_hitStrengthParam[0x4]; // 0xC4 CAnimParamHandle
-    std::uint8_t m_flMinDelayBetweenHits[0x4]; // 0xC8 float32
-    std::uint8_t m_bResetChild[0x4]; // 0xCC bool
+    std::uint8_t _[0x4c]; // 0x70 
+    std::uint8_t _[0x2]; // 0xbc 
+    std::uint8_t _[0x2]; // 0xbe 
+    std::uint8_t _[0x2]; // 0xc0 
+    std::uint8_t _[0x2]; // 0xc2 
+    std::uint8_t _[0x4]; // 0xc4 
+    std::uint8_t _[0x4]; // 0xc8 
+    std::uint8_t _[0x4]; // 0xcc 
 };
 
 struct CLookAtUpdateNode {
     static constexpr std::size_t size = 0x160;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_opFixedSettings[0xD8]; // 0x70 LookAtOpFixedSettings_t
-    std::uint8_t m_target[0x4]; // 0x148 AnimVectorSource
-    std::uint8_t m_paramIndex[0x2]; // 0x14C CAnimParamHandle
-    std::uint8_t m_weightParamIndex[0x2]; // 0x14E CAnimParamHandle
-    std::uint8_t m_bResetChild[0x1]; // 0x150 bool
-    std::uint8_t m_bLockWhenWaning[0xF]; // 0x151 bool
+    std::uint8_t _[0xd8]; // 0x70 
+    std::uint8_t _[0x4]; // 0x148 
+    std::uint8_t _[0x2]; // 0x14c 
+    std::uint8_t _[0x2]; // 0x14e 
+    std::uint8_t _[0x1]; // 0x150 
+    std::uint8_t _[0xf]; // 0x151 
 };
 
 struct CAnimBone {
     static constexpr std::size_t size = 0x48;
-    std::uint8_t m_name[0x10]; // 0x0 CBufferString
-    std::uint8_t m_parent[0x4]; // 0x10 int32
-    std::uint8_t m_pos[0xC]; // 0x14 Vector
-    std::uint8_t m_quat[0x10]; // 0x20 QuaternionStorage
-    std::uint8_t m_scale[0x4]; // 0x30 float32
-    std::uint8_t m_qAlignment[0x10]; // 0x34 QuaternionStorage
-    std::uint8_t m_flags[0x4]; // 0x44 int32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0xc]; // 0x14 
+    std::uint8_t _[0x10]; // 0x20 
+    std::uint8_t _[0x4]; // 0x30 
+    std::uint8_t _[0x10]; // 0x34 
+    std::uint8_t _[0x4]; // 0x44 
 };
 
 struct CAnimParameterManagerUpdater {
     static constexpr std::size_t size = 0x100;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_parameters[0x18]; // 0x18 CUtlVector<CSmartPtr<CAnimParameterBase>>
-    std::uint8_t m_idToIndexMap[0x20]; // 0x30 CUtlHashtable<AnimParamID,int32>
-    std::uint8_t m_nameToIndexMap[0x20]; // 0x50 CUtlHashtable<CUtlString,int32>
-    std::uint8_t m_indexToHandle[0x18]; // 0x70 CUtlVector<CAnimParamHandle>
-    std::uint8_t m_autoResetParams[0x18]; // 0x88 CUtlVector<std::pair<CAnimParamHandle,CAnimVariant>>
-    std::uint8_t m_autoResetMap[0x60]; // 0xA0 CUtlHashtable<CAnimParamHandle,int16>
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0x20]; // 0x30 
+    std::uint8_t _[0x20]; // 0x50 
+    std::uint8_t _[0x18]; // 0x70 
+    std::uint8_t _[0x18]; // 0x88 
+    std::uint8_t _[0x60]; // 0xa0 
 };
 
 struct BoneDemoCaptureSettings_t {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_boneName[0x8]; // 0x0 CUtlString
-    std::uint8_t m_flErrorSplineRotationMax[0x4]; // 0x8 float32
-    std::uint8_t m_flErrorSplineTranslationMax[0x4]; // 0xC float32
-    std::uint8_t m_flErrorSplineScaleMax[0x4]; // 0x10 float32
-    std::uint8_t m_flErrorQuantizationRotationMax[0x4]; // 0x14 float32
-    std::uint8_t m_flErrorQuantizationTranslationMax[0x4]; // 0x18 float32
-    std::uint8_t m_flErrorQuantizationScaleMax[0x4]; // 0x1C float32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
 };
 
 struct PairedSequenceData {
     static constexpr std::size_t size = 0x100;
-    std::uint8_t m_vecPairedSequences[0x100]; // 0x0 PairedSequence_t[8]
+    std::uint8_t _[0x100]; // 0x0 
 };
 
 struct CBoneConstraintPoseSpaceMorph__Input_t {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_inputValue[0x10]; // 0x0 Vector
-    std::uint8_t m_outputWeightList[0x18]; // 0x10 CUtlVector<float32>
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x18]; // 0x10 
 };
 
 struct MoodAnimationLayer_t {
     static constexpr std::size_t size = 0x60;
-    std::uint8_t m_sName[0x8]; // 0x0 CUtlString
-    std::uint8_t m_bActiveListening[0x1]; // 0x8 bool
-    std::uint8_t m_bActiveTalking[0x7]; // 0x9 bool
-    std::uint8_t m_layerAnimations[0x18]; // 0x10 CUtlVector<MoodAnimation_t>
-    std::uint8_t m_flIntensity[0x8]; // 0x28 CRangeFloat
-    std::uint8_t m_flDurationScale[0x8]; // 0x30 CRangeFloat
-    std::uint8_t m_bScaleWithInts[0x4]; // 0x38 bool
-    std::uint8_t m_flNextStart[0x8]; // 0x3C CRangeFloat
-    std::uint8_t m_flStartOffset[0x8]; // 0x44 CRangeFloat
-    std::uint8_t m_flEndOffset[0x8]; // 0x4C CRangeFloat
-    std::uint8_t m_flFadeIn[0x4]; // 0x54 float32
-    std::uint8_t m_flFadeOut[0x8]; // 0x58 float32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x1]; // 0x8 
+    std::uint8_t _[0x7]; // 0x9 
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x8]; // 0x30 
+    std::uint8_t _[0x4]; // 0x38 
+    std::uint8_t _[0x8]; // 0x3c 
+    std::uint8_t _[0x8]; // 0x44 
+    std::uint8_t _[0x8]; // 0x4c 
+    std::uint8_t _[0x4]; // 0x54 
+    std::uint8_t _[0x8]; // 0x58 
 };
 
 struct CSpeedScaleUpdateNode {
     static constexpr std::size_t size = 0x78;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_paramIndex[0x8]; // 0x70 CAnimParamHandle
+    std::uint8_t _[0x8]; // 0x70 
 };
 
 struct CSequenceTagSpans {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_sSequenceName[0x8]; // 0x0 CGlobalSymbol
-    std::uint8_t m_tags[0x18]; // 0x8 CUtlVector<TagSpan_t>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x18]; // 0x8 
 };
 
 struct CModelConfigElement_SetBodygroupOnAttachedModels {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_GroupName[0x8]; // 0x48 CUtlString
-    std::uint8_t m_nChoice[0x8]; // 0x50 int32
+    std::uint8_t _[0x8]; // 0x48 
+    std::uint8_t _[0x8]; // 0x50 
 };
 
 struct CCurrentVelocityMetricEvaluator {
@@ -4949,119 +4949,119 @@ struct CNmBoolValueNode__CDefinition {
 struct CAnimReplayFrame {
     static constexpr std::size_t size = 0x90;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_inputDataBlocks[0x18]; // 0x10 CUtlVector<CUtlBinaryBlock>
-    std::uint8_t m_instanceData[0x18]; // 0x28 CUtlBinaryBlock
-    std::uint8_t m_startingLocalToWorldTransform[0x20]; // 0x40 CTransform
-    std::uint8_t m_localToWorldTransform[0x20]; // 0x60 CTransform
-    std::uint8_t m_timeStamp[0x10]; // 0x80 float32
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x18]; // 0x28 
+    std::uint8_t _[0x20]; // 0x40 
+    std::uint8_t _[0x20]; // 0x60 
+    std::uint8_t _[0x10]; // 0x80 
 };
 
 struct CNmTransitionEvent {
     static constexpr std::size_t size = 0x28;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_rule[0x8]; // 0x18 NmTransitionRule_t
-    std::uint8_t m_ID[0x8]; // 0x20 CGlobalSymbol
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
 };
 
 struct CNmFloatCurveEvent {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_ID[0x8]; // 0x18 CGlobalSymbol
-    std::uint8_t m_curve[0x40]; // 0x20 CPiecewiseCurve
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x40]; // 0x20 
 };
 
 struct CParticleTransformInput {
     static constexpr std::size_t size = 0x68;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nType[0x8]; // 0x10 ParticleTransformType_t
-    std::uint8_t m_NamedValue[0x40]; // 0x18 CParticleNamedValueRef
-    std::uint8_t m_bFollowNamedValue[0x1]; // 0x58 bool
-    std::uint8_t m_bSupportsDisabled[0x1]; // 0x59 bool
-    std::uint8_t m_bUseOrientation[0x2]; // 0x5A bool
-    std::uint8_t m_nControlPoint[0x4]; // 0x5C int32
-    std::uint8_t m_nControlPointRangeMax[0x4]; // 0x60 int32
-    std::uint8_t m_flEndCPGrowthTime[0x4]; // 0x64 float32
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x40]; // 0x18 
+    std::uint8_t _[0x1]; // 0x58 
+    std::uint8_t _[0x1]; // 0x59 
+    std::uint8_t _[0x2]; // 0x5a 
+    std::uint8_t _[0x4]; // 0x5c 
+    std::uint8_t _[0x4]; // 0x60 
+    std::uint8_t _[0x4]; // 0x64 
 };
 
 struct CPathAnimMotorUpdaterBase {
     static constexpr std::size_t size = 0x28;
     std::uint8_t pad_0[0x20]; // 0x0
-    std::uint8_t m_bLockToPath[0x8]; // 0x20 bool
+    std::uint8_t _[0x8]; // 0x20 
 };
 
 struct PGDInstruction_t {
     static constexpr std::size_t size = 0x38;
-    std::uint8_t m_nCode[0x4]; // 0x0 PulseInstructionCode_t
-    std::uint8_t m_nVar[0x4]; // 0x4 PulseRuntimeVarIndex_t
-    std::uint8_t m_nReg0[0x2]; // 0x8 PulseRuntimeRegisterIndex_t
-    std::uint8_t m_nReg1[0x2]; // 0xA PulseRuntimeRegisterIndex_t
-    std::uint8_t m_nReg2[0x4]; // 0xC PulseRuntimeRegisterIndex_t
-    std::uint8_t m_nInvokeBindingIndex[0x4]; // 0x10 PulseRuntimeInvokeIndex_t
-    std::uint8_t m_nChunk[0x4]; // 0x14 PulseRuntimeChunkIndex_t
-    std::uint8_t m_nDestInstruction[0x4]; // 0x18 int32
-    std::uint8_t m_nCallInfoIndex[0x4]; // 0x1C PulseRuntimeCallInfoIndex_t
-    std::uint8_t m_nConstIdx[0x2]; // 0x20 PulseRuntimeConstantIndex_t
-    std::uint8_t m_nDomainValueIdx[0x2]; // 0x22 PulseRuntimeDomainValueIndex_t
-    std::uint8_t m_nBlackboardReferenceIdx[0x2]; // 0x24 PulseRuntimeBlackboardReferenceIndex_t
-    std::uint8_t m_nTempVarIdx[0x12]; // 0x26 PulseRuntimeTempVarIndex_t
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x2]; // 0x8 
+    std::uint8_t _[0x2]; // 0xa 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x2]; // 0x20 
+    std::uint8_t _[0x2]; // 0x22 
+    std::uint8_t _[0x2]; // 0x24 
+    std::uint8_t _[0x12]; // 0x26 
 };
 
 struct CNmFootstepEventPercentageThroughNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSourceStateNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_phaseCondition[0x2]; // 0x12 NmFootPhaseCondition_t
-    std::uint8_t m_eventConditionRules[0x4]; // 0x14 CNmBitFlags
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct AimCameraOpFixedSettings_t {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_nChainIndex[0x4]; // 0x0 int32
-    std::uint8_t m_nCameraJointIndex[0x4]; // 0x4 int32
-    std::uint8_t m_nPelvisJointIndex[0x4]; // 0x8 int32
-    std::uint8_t m_nClavicleLeftJointIndex[0x4]; // 0xC int32
-    std::uint8_t m_nClavicleRightJointIndex[0x4]; // 0x10 int32
-    std::uint8_t m_nDepenetrationJointIndex[0x4]; // 0x14 int32
-    std::uint8_t m_propJoints[0x18]; // 0x18 CUtlVector<int32>
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x18]; // 0x18 
 };
 
 struct SkeletonAnimCapture_t__Camera_t {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_tmCamera[0x20]; // 0x0 CTransform
-    std::uint8_t m_flTime[0x10]; // 0x20 float32
+    std::uint8_t _[0x20]; // 0x0 
+    std::uint8_t _[0x10]; // 0x20 
 };
 
 struct CNmGraphEventConditionNode__CDefinition {
     static constexpr std::size_t size = 0x80;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSourceStateNodeIdx[0x4]; // 0x10 int16
-    std::uint8_t m_eventConditionRules[0x4]; // 0x14 CNmBitFlags
-    std::uint8_t m_conditions[0x68]; // 0x18 CUtlVectorFixedGrowable<CNmGraphEventConditionNode::Condition_t,5>
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x68]; // 0x18 
 };
 
 struct CFollowAttachmentUpdateNode {
     static constexpr std::size_t size = 0x110;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_opFixedData[0xA0]; // 0x70 FollowAttachmentSettings_t
+    std::uint8_t _[0xa0]; // 0x70 
 };
 
 struct CMovementComponentUpdater {
-    static constexpr std::size_t size = 0xB8;
+    static constexpr std::size_t size = 0xb8;
     std::uint8_t pad_0[0x30]; // 0x0
-    std::uint8_t m_motors[0x18]; // 0x30 CUtlVector<CSmartPtr<CAnimMotorUpdaterBase>>
-    std::uint8_t m_facingDamping[0x20]; // 0x48 CAnimInputDamping
-    std::uint8_t m_nDefaultMotorIndex[0x4]; // 0x68 int32
-    std::uint8_t m_flDefaultRunSpeed[0x4]; // 0x6C float32
-    std::uint8_t m_bMoveVarsDisabled[0x1]; // 0x70 bool
-    std::uint8_t m_bNetworkPath[0x1]; // 0x71 bool
-    std::uint8_t m_bNetworkFacing[0x1]; // 0x72 bool
-    std::uint8_t m_paramHandles[0x45]; // 0x73 CAnimParamHandle[34]
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x20]; // 0x48 
+    std::uint8_t _[0x4]; // 0x68 
+    std::uint8_t _[0x4]; // 0x6c 
+    std::uint8_t _[0x1]; // 0x70 
+    std::uint8_t _[0x1]; // 0x71 
+    std::uint8_t _[0x1]; // 0x72 
+    std::uint8_t _[0x45]; // 0x73 
 };
 
 struct CModelConfigElement_SetMaterialGroup {
     static constexpr std::size_t size = 0x50;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_MaterialGroupName[0x8]; // 0x48 CUtlString
+    std::uint8_t _[0x8]; // 0x48 
 };
 
 struct IParticleEffect {
@@ -5072,90 +5072,90 @@ struct IParticleEffect {
 struct CFutureFacingMetricEvaluator {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x50]; // 0x0
-    std::uint8_t m_flDistance[0x4]; // 0x50 float32
-    std::uint8_t m_flTime[0x4]; // 0x54 float32
+    std::uint8_t _[0x4]; // 0x50 
+    std::uint8_t _[0x4]; // 0x54 
 };
 
 struct CNmIDBasedClipSelectorNode__CDefinition {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_optionNodeIndices[0x18]; // 0x10 CUtlLeanVectorFixedGrowable<int16,5>
-    std::uint8_t m_optionIDs[0x30]; // 0x28 CUtlLeanVectorFixedGrowable<CGlobalSymbol,5>
-    std::uint8_t m_nParameterNodeIdx[0x2]; // 0x58 int16
-    std::uint8_t m_nFallbackNodeIdx[0x2]; // 0x5A int16
-    std::uint8_t m_bIgnoreInvalidOptions[0x4]; // 0x5C bool
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x30]; // 0x28 
+    std::uint8_t _[0x2]; // 0x58 
+    std::uint8_t _[0x2]; // 0x5a 
+    std::uint8_t _[0x4]; // 0x5c 
 };
 
 struct CLeanMatrixInstanceData {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_flValueY[0x4]; // 0x0 float32
-    std::uint8_t m_flValueX[0x8]; // 0x4 float32
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x8]; // 0x4 
 };
 
 struct NmCompressionSettings_t {
     static constexpr std::size_t size = 0x50;
-    std::uint8_t m_translationRangeX[0x8]; // 0x0 NmCompressionSettings_t::QuantizationRange_t
-    std::uint8_t m_translationRangeY[0x8]; // 0x8 NmCompressionSettings_t::QuantizationRange_t
-    std::uint8_t m_translationRangeZ[0x8]; // 0x10 NmCompressionSettings_t::QuantizationRange_t
-    std::uint8_t m_scaleRange[0x8]; // 0x18 NmCompressionSettings_t::QuantizationRange_t
-    std::uint8_t m_nTrackReadOffset[0x10]; // 0x20 int32
-    std::uint8_t m_constantRotation[0x10]; // 0x30 Quaternion
-    std::uint8_t m_bIsRotationStatic[0x1]; // 0x40 bool
-    std::uint8_t m_bIsTranslationStatic[0x1]; // 0x41 bool
-    std::uint8_t m_bIsScaleStatic[0xE]; // 0x42 bool
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x10]; // 0x20 
+    std::uint8_t _[0x10]; // 0x30 
+    std::uint8_t _[0x1]; // 0x40 
+    std::uint8_t _[0x1]; // 0x41 
+    std::uint8_t _[0xe]; // 0x42 
 };
 
 struct CPulse_Variable {
     static constexpr std::size_t size = 0x60;
-    std::uint8_t m_Name[0x10]; // 0x0 PulseSymbol_t
-    std::uint8_t m_Description[0x8]; // 0x10 CUtlString
-    std::uint8_t m_Type[0x18]; // 0x18 CPulseValueFullType
-    std::uint8_t m_DefaultValue[0x14]; // 0x30 KeyValues3
-    std::uint8_t m_nKeysSource[0x4]; // 0x44 PulseVariableKeysSource_t
-    std::uint8_t m_bIsPublicBlackboardVariable[0x1]; // 0x48 bool
-    std::uint8_t m_bIsObservable[0x3]; // 0x49 bool
-    std::uint8_t m_nEditorNodeID[0x4]; // 0x4C PulseDocNodeID_t
-    std::uint8_t m_Metadata[0x10]; // 0x50 KeyValues3
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0x14]; // 0x30 
+    std::uint8_t _[0x4]; // 0x44 
+    std::uint8_t _[0x1]; // 0x48 
+    std::uint8_t _[0x3]; // 0x49 
+    std::uint8_t _[0x4]; // 0x4c 
+    std::uint8_t _[0x10]; // 0x50 
 };
 
 struct PARTICLE_EHANDLE__ {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t unused[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CAddUpdateNode {
-    static constexpr std::size_t size = 0xA0;
+    static constexpr std::size_t size = 0xa0;
     std::uint8_t pad_0[0x94]; // 0x0
-    std::uint8_t m_footMotionTiming[0x4]; // 0x94 BinaryNodeChildOption
-    std::uint8_t m_bApplyToFootMotion[0x1]; // 0x98 bool
-    std::uint8_t m_bApplyChannelsSeparately[0x1]; // 0x99 bool
-    std::uint8_t m_bUseModelSpace[0x1]; // 0x9A bool
-    std::uint8_t m_bApplyScale[0x5]; // 0x9B bool
+    std::uint8_t _[0x4]; // 0x94 
+    std::uint8_t _[0x1]; // 0x98 
+    std::uint8_t _[0x1]; // 0x99 
+    std::uint8_t _[0x1]; // 0x9a 
+    std::uint8_t _[0x5]; // 0x9b 
 };
 
 struct CAnimEnum {
     static constexpr std::size_t size = 0x1;
-    std::uint8_t m_value[0x1]; // 0x0 uint8
+    std::uint8_t _[0x1]; // 0x0 
 };
 
 struct CDemoSettingsComponentUpdater {
-    static constexpr std::size_t size = 0xB0;
+    static constexpr std::size_t size = 0xb0;
     std::uint8_t pad_0[0x30]; // 0x0
-    std::uint8_t m_settings[0x80]; // 0x30 CAnimDemoCaptureSettings
+    std::uint8_t _[0x80]; // 0x30 
 };
 
 struct CAnimDecoder {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_szName[0x10]; // 0x0 CBufferString
-    std::uint8_t m_nVersion[0x4]; // 0x10 int32
-    std::uint8_t m_nType[0x4]; // 0x14 int32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct CNmCachedTargetNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x4]; // 0x10 int16
-    std::uint8_t m_mode[0x4]; // 0x14 NmCachedValueMode_t
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct CPerParticleFloatInput {
@@ -5166,240 +5166,240 @@ struct CPerParticleFloatInput {
 struct CNmConstBoolNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_bValue[0x8]; // 0x10 bool
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CNmBitFlags {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_flags[0x4]; // 0x0 uint32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CFootStride {
     static constexpr std::size_t size = 0x58;
-    std::uint8_t m_definition[0x40]; // 0x0 CFootCycleDefinition
-    std::uint8_t m_trajectories[0x18]; // 0x40 CFootTrajectories
+    std::uint8_t _[0x40]; // 0x0 
+    std::uint8_t _[0x18]; // 0x40 
 };
 
 struct CSceneObjectData__RTProxyDrawDescriptor_t {
     static constexpr std::size_t size = 0x168;
-    std::uint8_t m_materialGroupToken[0x4]; // 0x0 uint32
-    std::uint8_t m_nSrcDrawIndex[0x4]; // 0x4 int32
-    std::uint8_t m_drawDesc[0x120]; // 0x8 CMaterialDrawDescriptor
-    std::uint8_t m_mWorldFromLocal[0x30]; // 0x128 matrix3x4_t
-    std::uint8_t m_nVertexAlbedoFormat[0x1]; // 0x158 VertexAlbedoFormat_t
-    std::uint8_t m_nVertexAlbedoVB[0x1]; // 0x159 int8
-    std::uint8_t m_nVertexAlbedoOffset[0x2]; // 0x15A uint16
-    std::uint8_t m_nVertexAlbedoStride[0x2]; // 0x15C uint16
-    std::uint8_t m_nVertexEmissiveFormat[0x1]; // 0x15E VertexAlbedoFormat_t
-    std::uint8_t m_nVertexEmissiveVB[0x1]; // 0x15F int8
-    std::uint8_t m_nVertexEmissiveOffset[0x2]; // 0x160 uint16
-    std::uint8_t m_nVertexEmissiveStride[0x2]; // 0x162 uint16
-    std::uint8_t m_fEmissiveFactor[0x4]; // 0x164 float32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x120]; // 0x8 
+    std::uint8_t _[0x30]; // 0x128 
+    std::uint8_t _[0x1]; // 0x158 
+    std::uint8_t _[0x1]; // 0x159 
+    std::uint8_t _[0x2]; // 0x15a 
+    std::uint8_t _[0x2]; // 0x15c 
+    std::uint8_t _[0x1]; // 0x15e 
+    std::uint8_t _[0x1]; // 0x15f 
+    std::uint8_t _[0x2]; // 0x160 
+    std::uint8_t _[0x2]; // 0x162 
+    std::uint8_t _[0x4]; // 0x164 
 };
 
 struct CNmLegacyEvent {
     static constexpr std::size_t size = 0x50;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_animEventClassName[0x8]; // 0x18 CUtlString
-    std::uint8_t m_KV[0x30]; // 0x20 KeyValues3
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x30]; // 0x20 
 };
 
 struct CStateNodeStateData {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_pChild[0x18]; // 0x0 CAnimUpdateNodeRef
+    std::uint8_t _[0x18]; // 0x0 
 };
 
 struct CFootstepLandedAnimTag {
     static constexpr std::size_t size = 0x80;
     std::uint8_t pad_0[0x58]; // 0x0
-    std::uint8_t m_FootstepType[0x8]; // 0x58 FootstepLandedFootSoundType_t
-    std::uint8_t m_OverrideSoundName[0x8]; // 0x60 CUtlString
-    std::uint8_t m_DebugAnimSourceString[0x8]; // 0x68 CUtlString
-    std::uint8_t m_BoneName[0x8]; // 0x70 CUtlString
-    std::uint8_t m_footstepJumpPhase[0x8]; // 0x78 FootstepJumpPhase_t
+    std::uint8_t _[0x8]; // 0x58 
+    std::uint8_t _[0x8]; // 0x60 
+    std::uint8_t _[0x8]; // 0x68 
+    std::uint8_t _[0x8]; // 0x70 
+    std::uint8_t _[0x8]; // 0x78 
 };
 
 struct CEnumAnimParameter {
-    static constexpr std::size_t size = 0xD8;
+    static constexpr std::size_t size = 0xd8;
     std::uint8_t pad_0[0x88]; // 0x0
-    std::uint8_t m_defaultValue[0x8]; // 0x88 uint8
-    std::uint8_t m_enumOptions[0x18]; // 0x90 CUtlVector<CUtlString>
-    std::uint8_t m_vecEnumReferenced[0x30]; // 0xA8 CUtlVector<uint64>
+    std::uint8_t _[0x8]; // 0x88 
+    std::uint8_t _[0x18]; // 0x90 
+    std::uint8_t _[0x30]; // 0xa8 
 };
 
 struct CHandshakeAnimTagBase {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x50]; // 0x0
-    std::uint8_t m_bIsDisableTag[0x8]; // 0x50 bool
+    std::uint8_t _[0x8]; // 0x50 
 };
 
 struct AnimTagID {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_id[0x4]; // 0x0 uint32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CWayPointHelperInstanceData {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_vMovement[0xC]; // 0x0 Vector
-    std::uint8_t m_vRotation[0xC]; // 0xC QAngle
-    std::uint8_t m_vWaypointPosWS[0xC]; // 0x18 Vector
-    std::uint8_t m_bStopUpdatingWaypointPos[0x4]; // 0x24 bool
+    std::uint8_t _[0xc]; // 0x0 
+    std::uint8_t _[0xc]; // 0xc 
+    std::uint8_t _[0xc]; // 0x18 
+    std::uint8_t _[0x4]; // 0x24 
 };
 
 struct CAnimFrameSegment {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_nUniqueFrameIndex[0x4]; // 0x0 int32
-    std::uint8_t m_nLocalElementMasks[0x4]; // 0x4 uint32
-    std::uint8_t m_nLocalChannel[0x8]; // 0x8 int32
-    std::uint8_t m_container[0x10]; // 0x10 CUtlBinaryBlock
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x10]; // 0x10 
 };
 
 struct CSlopeComponentUpdater {
     static constexpr std::size_t size = 0x48;
     std::uint8_t pad_0[0x34]; // 0x0
-    std::uint8_t m_flTraceDistance[0x4]; // 0x34 float32
-    std::uint8_t m_hSlopeAngle[0x2]; // 0x38 CAnimParamHandle
-    std::uint8_t m_hSlopeAngleFront[0x2]; // 0x3A CAnimParamHandle
-    std::uint8_t m_hSlopeAngleSide[0x2]; // 0x3C CAnimParamHandle
-    std::uint8_t m_hSlopeHeading[0x2]; // 0x3E CAnimParamHandle
-    std::uint8_t m_hSlopeNormal[0x2]; // 0x40 CAnimParamHandle
-    std::uint8_t m_hSlopeNormal_WorldSpace[0x6]; // 0x42 CAnimParamHandle
+    std::uint8_t _[0x4]; // 0x34 
+    std::uint8_t _[0x2]; // 0x38 
+    std::uint8_t _[0x2]; // 0x3a 
+    std::uint8_t _[0x2]; // 0x3c 
+    std::uint8_t _[0x2]; // 0x3e 
+    std::uint8_t _[0x2]; // 0x40 
+    std::uint8_t _[0x6]; // 0x42 
 };
 
 struct CAnimInputDamping {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_speedFunction[0x4]; // 0x8 DampingSpeedFunction
-    std::uint8_t m_fSpeedScale[0x4]; // 0xC float32
-    std::uint8_t m_fFallingSpeedScale[0x8]; // 0x10 float32
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CHitBoxSet {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_nNameHash[0x8]; // 0x8 uint32
-    std::uint8_t m_HitBoxes[0x18]; // 0x10 CUtlVector<CHitBox>
-    std::uint8_t m_SourceFilename[0x8]; // 0x28 CUtlString
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x8]; // 0x28 
 };
 
 struct ChainToSolveData_t {
     static constexpr std::size_t size = 0x50;
-    std::uint8_t m_nChainIndex[0x4]; // 0x0 int32
-    std::uint8_t m_SolverSettings[0xC]; // 0x4 IKSolverSettings_t
-    std::uint8_t m_TargetSettings[0x28]; // 0x10 IKTargetSettings_t
-    std::uint8_t m_DebugSetting[0x4]; // 0x38 SolveIKChainAnimNodeDebugSetting
-    std::uint8_t m_flDebugNormalizedValue[0x4]; // 0x3C float32
-    std::uint8_t m_vDebugOffset[0x10]; // 0x40 VectorAligned
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0xc]; // 0x4 
+    std::uint8_t _[0x28]; // 0x10 
+    std::uint8_t _[0x4]; // 0x38 
+    std::uint8_t _[0x4]; // 0x3c 
+    std::uint8_t _[0x10]; // 0x40 
 };
 
 struct CConstraintSlave {
     static constexpr std::size_t size = 0x50;
-    std::uint8_t m_qBaseOrientation[0x10]; // 0x0 Quaternion
-    std::uint8_t m_vBasePosition[0xC]; // 0x10 Vector
-    std::uint8_t m_nBoneHash[0x4]; // 0x1C uint32
-    std::uint8_t m_flWeight[0x8]; // 0x20 float32
-    std::uint8_t m_sName[0x28]; // 0x28 CUtlString
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0xc]; // 0x10 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x28]; // 0x28 
 };
 
 struct PulseRuntimeOutputIndex_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_Value[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CFootCycleDefinition {
-    static constexpr std::size_t size = 0x3C;
-    std::uint8_t m_vStancePositionMS[0xC]; // 0x0 Vector
-    std::uint8_t m_vMidpointPositionMS[0xC]; // 0xC Vector
-    std::uint8_t m_flStanceDirectionMS[0x4]; // 0x18 float32
-    std::uint8_t m_vToStrideStartPos[0xC]; // 0x1C Vector
-    std::uint8_t m_stanceCycle[0x4]; // 0x28 CAnimCycle
-    std::uint8_t m_footLiftCycle[0x4]; // 0x2C CFootCycle
-    std::uint8_t m_footOffCycle[0x4]; // 0x30 CFootCycle
-    std::uint8_t m_footStrikeCycle[0x4]; // 0x34 CFootCycle
-    std::uint8_t m_footLandCycle[0x4]; // 0x38 CFootCycle
+    static constexpr std::size_t size = 0x3c;
+    std::uint8_t _[0xc]; // 0x0 
+    std::uint8_t _[0xc]; // 0xc 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0xc]; // 0x1c 
+    std::uint8_t _[0x4]; // 0x28 
+    std::uint8_t _[0x4]; // 0x2c 
+    std::uint8_t _[0x4]; // 0x30 
+    std::uint8_t _[0x4]; // 0x34 
+    std::uint8_t _[0x4]; // 0x38 
 };
 
 struct CVirtualAnimParameter {
     static constexpr std::size_t size = 0x80;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_expressionString[0x8]; // 0x70 CUtlString
-    std::uint8_t m_eParamType[0x8]; // 0x78 AnimParamType_t
+    std::uint8_t _[0x8]; // 0x70 
+    std::uint8_t _[0x8]; // 0x78 
 };
 
 struct CMotionMetricEvaluator {
     static constexpr std::size_t size = 0x50;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_means[0x18]; // 0x18 CUtlVector<float32>
-    std::uint8_t m_standardDeviations[0x18]; // 0x30 CUtlVector<float32>
-    std::uint8_t m_flWeight[0x4]; // 0x48 float32
-    std::uint8_t m_nDimensionStartIndex[0x4]; // 0x4C int32
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x4]; // 0x48 
+    std::uint8_t _[0x4]; // 0x4c 
 };
 
 struct CFutureVelocityMetricEvaluator {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x50]; // 0x0
-    std::uint8_t m_flDistance[0x4]; // 0x50 float32
-    std::uint8_t m_flStoppingDistance[0x4]; // 0x54 float32
-    std::uint8_t m_flTargetSpeed[0x4]; // 0x58 float32
-    std::uint8_t m_eMode[0x4]; // 0x5C VelocityMetricMode
+    std::uint8_t _[0x4]; // 0x50 
+    std::uint8_t _[0x4]; // 0x54 
+    std::uint8_t _[0x4]; // 0x58 
+    std::uint8_t _[0x4]; // 0x5c 
 };
 
 struct CNmSkeleton__SecondarySkeleton_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_attachToBoneID[0x8]; // 0x0 CGlobalSymbol
-    std::uint8_t m_skeleton[0x8]; // 0x8 CStrongHandle<InfoForResourceTypeCNmSkeleton>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CAnimUpdateNodeBase {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_nodePath[0x30]; // 0x18 CAnimNodePath
-    std::uint8_t m_networkMode[0x8]; // 0x48 AnimNodeNetworkMode
-    std::uint8_t m_name[0x8]; // 0x50 CUtlString
+    std::uint8_t _[0x30]; // 0x18 
+    std::uint8_t _[0x8]; // 0x48 
+    std::uint8_t _[0x8]; // 0x50 
 };
 
 struct CSetParameterActionUpdater {
     static constexpr std::size_t size = 0x30;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_hParam[0x2]; // 0x18 CAnimParamHandle
-    std::uint8_t m_value[0x16]; // 0x1A CAnimVariant
+    std::uint8_t _[0x2]; // 0x18 
+    std::uint8_t _[0x16]; // 0x1a 
 };
 
 struct CNmFixedWeightBoneMaskNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_flBoneWeight[0x8]; // 0x10 float32
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct SkeletonAnimCapture_t__FrameStamp_t {
-    static constexpr std::size_t size = 0x1C;
-    std::uint8_t m_flTime[0x4]; // 0x0 float32
-    std::uint8_t m_flEntitySimTime[0x4]; // 0x4 float32
-    std::uint8_t m_bTeleportTick[0x1]; // 0x8 bool
-    std::uint8_t m_bPredicted[0x3]; // 0x9 bool
-    std::uint8_t m_flCurTime[0x4]; // 0xC float32
-    std::uint8_t m_flRealTime[0x4]; // 0x10 float32
-    std::uint8_t m_nFrameCount[0x4]; // 0x14 int32
-    std::uint8_t m_nTickCount[0x4]; // 0x18 int32
+    static constexpr std::size_t size = 0x1c;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x1]; // 0x8 
+    std::uint8_t _[0x3]; // 0x9 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x4]; // 0x18 
 };
 
 struct CPulse_DomainValue {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_nType[0x8]; // 0x0 PulseDomainValueType_t
-    std::uint8_t m_Value[0x8]; // 0x8 CGlobalSymbolCaseSensitive
-    std::uint8_t m_RequiredRuntimeType[0x20]; // 0x10 CPulseValueFullType
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x20]; // 0x10 
 };
 
 struct CBonePositionMetricEvaluator {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x50]; // 0x0
-    std::uint8_t m_nBoneIndex[0x8]; // 0x50 int32
+    std::uint8_t _[0x8]; // 0x50 
 };
 
 struct CRenderBufferBinding {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_hBuffer[0x10]; // 0x0 uint64
-    std::uint8_t m_nBindOffsetBytes[0x10]; // 0x10 uint32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x10]; // 0x10 
 };
 
 struct CParticleCollectionRendererFloatInput {
@@ -5409,140 +5409,140 @@ struct CParticleCollectionRendererFloatInput {
 
 struct CNmParameterizedBlendNode__Parameterization_t {
     static constexpr std::size_t size = 0x50;
-    std::uint8_t m_blendRanges[0x48]; // 0x0 CUtlLeanVectorFixedGrowable<CNmParameterizedBlendNode::BlendRange_t,5>
-    std::uint8_t m_parameterRange[0x8]; // 0x48 Range_t
+    std::uint8_t _[0x48]; // 0x0 
+    std::uint8_t _[0x8]; // 0x48 
 };
 
 struct CNmEntityAttributeIntEvent {
     static constexpr std::size_t size = 0x40;
     std::uint8_t pad_0[0x38]; // 0x0
-    std::uint8_t m_nIntValue[0x8]; // 0x38 int32
+    std::uint8_t _[0x8]; // 0x38 
 };
 
 struct CNmNotNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x8]; // 0x10 int16
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CMeshletDescriptor {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_PackedAABB[0x8]; // 0x0 PackedAABB_t
-    std::uint8_t m_CullingData[0x4]; // 0x8 CDrawCullingData
-    std::uint8_t m_nVertexOffset[0x4]; // 0xC uint32
-    std::uint8_t m_nTriangleOffset[0x4]; // 0x10 uint32
-    std::uint8_t m_nVertexCount[0x1]; // 0x14 uint8
-    std::uint8_t m_nTriangleCount[0x1]; // 0x15 uint8
-    std::uint8_t m_nBoneIndex[0x2]; // 0x16 uint16
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x1]; // 0x14 
+    std::uint8_t _[0x1]; // 0x15 
+    std::uint8_t _[0x2]; // 0x16 
 };
 
 struct CMorphSetData {
     static constexpr std::size_t size = 0x98;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nWidth[0x4]; // 0x10 int32
-    std::uint8_t m_nHeight[0x4]; // 0x14 int32
-    std::uint8_t m_bundleTypes[0x18]; // 0x18 CUtlVector<MorphBundleType_t>
-    std::uint8_t m_morphDatas[0x18]; // 0x30 CUtlVector<CMorphData>
-    std::uint8_t m_pTextureAtlas[0x8]; // 0x48 CStrongHandle<InfoForResourceTypeCTextureBase>
-    std::uint8_t m_FlexDesc[0x18]; // 0x50 CUtlVector<CFlexDesc>
-    std::uint8_t m_FlexControllers[0x18]; // 0x68 CUtlVector<CFlexController>
-    std::uint8_t m_FlexRules[0x18]; // 0x80 CUtlVector<CFlexRule>
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x8]; // 0x48 
+    std::uint8_t _[0x18]; // 0x50 
+    std::uint8_t _[0x18]; // 0x68 
+    std::uint8_t _[0x18]; // 0x80 
 };
 
 struct CNmAndNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_conditionNodeIndices[0x10]; // 0x10 CUtlLeanVectorFixedGrowable<int16,4>
+    std::uint8_t _[0x10]; // 0x10 
 };
 
 struct CMorphConstraint {
     static constexpr std::size_t size = 0x80;
     std::uint8_t pad_0[0x60]; // 0x0
-    std::uint8_t m_sTargetMorph[0x8]; // 0x60 CUtlString
-    std::uint8_t m_nSlaveChannel[0x4]; // 0x68 int32
-    std::uint8_t m_flMin[0x4]; // 0x6C float32
-    std::uint8_t m_flMax[0x10]; // 0x70 float32
+    std::uint8_t _[0x8]; // 0x60 
+    std::uint8_t _[0x4]; // 0x68 
+    std::uint8_t _[0x4]; // 0x6c 
+    std::uint8_t _[0x10]; // 0x70 
 };
 
 struct CClothSettingsAnimTag {
     static constexpr std::size_t size = 0x70;
     std::uint8_t pad_0[0x58]; // 0x0
-    std::uint8_t m_flStiffness[0x4]; // 0x58 float32
-    std::uint8_t m_flEaseIn[0x4]; // 0x5C float32
-    std::uint8_t m_flEaseOut[0x8]; // 0x60 float32
-    std::uint8_t m_nVertexSet[0x8]; // 0x68 CUtlString
+    std::uint8_t _[0x4]; // 0x58 
+    std::uint8_t _[0x4]; // 0x5c 
+    std::uint8_t _[0x8]; // 0x60 
+    std::uint8_t _[0x8]; // 0x68 
 };
 
 struct CAnimDesc_Flag {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_bLooping[0x1]; // 0x0 bool
-    std::uint8_t m_bAllZeros[0x1]; // 0x1 bool
-    std::uint8_t m_bHidden[0x1]; // 0x2 bool
-    std::uint8_t m_bDelta[0x1]; // 0x3 bool
-    std::uint8_t m_bLegacyWorldspace[0x1]; // 0x4 bool
-    std::uint8_t m_bModelDoc[0x1]; // 0x5 bool
-    std::uint8_t m_bImplicitSeqIgnoreDelta[0x1]; // 0x6 bool
-    std::uint8_t m_bAnimGraphAdditive[0x1]; // 0x7 bool
+    std::uint8_t _[0x1]; // 0x0 
+    std::uint8_t _[0x1]; // 0x1 
+    std::uint8_t _[0x1]; // 0x2 
+    std::uint8_t _[0x1]; // 0x3 
+    std::uint8_t _[0x1]; // 0x4 
+    std::uint8_t _[0x1]; // 0x5 
+    std::uint8_t _[0x1]; // 0x6 
+    std::uint8_t _[0x1]; // 0x7 
 };
 
 struct CNmBlend2DNode__CDefinition {
-    static constexpr std::size_t size = 0xC8;
+    static constexpr std::size_t size = 0xc8;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_sourceNodeIndices[0x18]; // 0x10 CUtlLeanVectorFixedGrowable<int16,5>
-    std::uint8_t m_values[0x58]; // 0x28 CUtlLeanVectorFixedGrowable<Vector2D,10>
-    std::uint8_t m_indices[0x28]; // 0x80 CUtlLeanVectorFixedGrowable<uint8,30>
-    std::uint8_t m_hullIndices[0x18]; // 0xA8 CUtlLeanVectorFixedGrowable<uint8,10>
-    std::uint8_t m_nInputParameterNodeIdx0[0x2]; // 0xC0 int16
-    std::uint8_t m_nInputParameterNodeIdx1[0x2]; // 0xC2 int16
-    std::uint8_t m_bAllowLooping[0x4]; // 0xC4 bool
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x58]; // 0x28 
+    std::uint8_t _[0x28]; // 0x80 
+    std::uint8_t _[0x18]; // 0xa8 
+    std::uint8_t _[0x2]; // 0xc0 
+    std::uint8_t _[0x2]; // 0xc2 
+    std::uint8_t _[0x4]; // 0xc4 
 };
 
 struct CNmFloatChannelData__ChannelSettings_t {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_range[0x8]; // 0x0 NmCompressionSettings_t::QuantizationRange_t
-    std::uint8_t m_bIsStatic[0x4]; // 0x8 bool
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x4]; // 0x8 
 };
 
 struct CBlendCurve {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_flControlPoint1[0x4]; // 0x0 float32
-    std::uint8_t m_flControlPoint2[0x4]; // 0x4 float32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct CNmSkeleton__ContactConfig_t {
     static constexpr std::size_t size = 0x38;
-    std::uint8_t m_ID[0x8]; // 0x0 CGlobalSymbol
-    std::uint8_t m_nBoneIdx[0x4]; // 0x8 int32
-    std::uint8_t m_vBoneLocalProbeDir[0xC]; // 0xC Vector
-    std::uint8_t m_flProbeMaxDist[0x8]; // 0x18 float32
-    std::uint8_t m_audioInfo[0x18]; // 0x20 NmContactAudioInfo_t
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0xc]; // 0xc 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x18]; // 0x20 
 };
 
 struct CNmGraphNode__CDefinition {
     static constexpr std::size_t size = 0x10;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_nNodeIdx[0x8]; // 0x8 int16
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CAnimationGraphVisualizerSphere {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x40]; // 0x0
-    std::uint8_t m_vWsPosition[0x10]; // 0x40 VectorAligned
-    std::uint8_t m_flRadius[0x4]; // 0x50 float32
-    std::uint8_t m_Color[0xC]; // 0x54 Color
+    std::uint8_t _[0x10]; // 0x40 
+    std::uint8_t _[0x4]; // 0x50 
+    std::uint8_t _[0xc]; // 0x54 
 };
 
 struct CNmClip__ModelSpaceSamplingChainLink_t {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_nBoneIdx[0x4]; // 0x0 int32
-    std::uint8_t m_nParentBoneIdx[0x4]; // 0x4 int32
-    std::uint8_t m_nParentChainLinkIdx[0x4]; // 0x8 int32
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
 };
 
 struct CAnimUserDifference {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_name[0x10]; // 0x0 CBufferString
-    std::uint8_t m_nType[0x8]; // 0x10 int32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CNmDurationScaleNode__CDefinition {
@@ -5552,23 +5552,23 @@ struct CNmDurationScaleNode__CDefinition {
 
 struct CTransitionUpdateData {
     static constexpr std::size_t size = 0x3;
-    std::uint8_t m_srcStateIndex[0x1]; // 0x0 uint8
-    std::uint8_t m_destStateIndex[0x2]; // 0x1 uint8
+    std::uint8_t _[0x1]; // 0x0 
+    std::uint8_t _[0x2]; // 0x1 
 };
 
 struct PulseRuntimeBlackboardReferenceIndex_t {
     static constexpr std::size_t size = 0x2;
-    std::uint8_t m_Value[0x2]; // 0x0 int16
+    std::uint8_t _[0x2]; // 0x0 
 };
 
 struct CNmContactEvent {
     static constexpr std::size_t size = 0x50;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_configID[0x8]; // 0x18 CGlobalSymbol
-    std::uint8_t m_probeBoneID[0x8]; // 0x20 CGlobalSymbol
-    std::uint8_t m_vBoneLocalProbeDir[0xC]; // 0x28 Vector
-    std::uint8_t m_flProbeMaxDist[0x4]; // 0x34 float32
-    std::uint8_t m_audioInfo[0x18]; // 0x38 NmContactAudioInfo_t
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0xc]; // 0x28 
+    std::uint8_t _[0x4]; // 0x34 
+    std::uint8_t _[0x18]; // 0x38 
 };
 
 struct CMovementHandshakeAnimTag {
@@ -5578,126 +5578,126 @@ struct CMovementHandshakeAnimTag {
 
 struct CBoneConstraintPoseSpaceBone__Input_t {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_inputValue[0x10]; // 0x0 Vector
-    std::uint8_t m_outputTransformList[0x18]; // 0x10 CUtlVector<CTransform>
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x18]; // 0x10 
 };
 
 struct CSeqMultiFetch {
     static constexpr std::size_t size = 0x70;
-    std::uint8_t m_flags[0x8]; // 0x0 CSeqMultiFetchFlag
-    std::uint8_t m_localReferenceArray[0x18]; // 0x8 CUtlVector<int16>
-    std::uint8_t m_nGroupSize[0x8]; // 0x20 int32[2]
-    std::uint8_t m_nLocalPose[0x8]; // 0x28 int32[2]
-    std::uint8_t m_poseKeyArray0[0x18]; // 0x30 CUtlVector<float32>
-    std::uint8_t m_poseKeyArray1[0x18]; // 0x48 CUtlVector<float32>
-    std::uint8_t m_nLocalCyclePoseParameter[0x4]; // 0x60 int32
-    std::uint8_t m_bCalculatePoseParameters[0x1]; // 0x64 bool
-    std::uint8_t m_bFixedBlendWeight[0x3]; // 0x65 bool
-    std::uint8_t m_flFixedBlendWeightVals[0x8]; // 0x68 float32[2]
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x18]; // 0x8 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x4]; // 0x60 
+    std::uint8_t _[0x1]; // 0x64 
+    std::uint8_t _[0x3]; // 0x65 
+    std::uint8_t _[0x8]; // 0x68 
 };
 
 struct CPhysSurfacePropertiesSoundNames {
     static constexpr std::size_t size = 0x60;
-    std::uint8_t m_impactSoft[0x8]; // 0x0 CUtlString
-    std::uint8_t m_impactHard[0x8]; // 0x8 CUtlString
-    std::uint8_t m_scrapeSmooth[0x8]; // 0x10 CUtlString
-    std::uint8_t m_scrapeRough[0x8]; // 0x18 CUtlString
-    std::uint8_t m_bulletImpact[0x8]; // 0x20 CUtlString
-    std::uint8_t m_rolling[0x8]; // 0x28 CUtlString
-    std::uint8_t m_break[0x8]; // 0x30 CUtlString
-    std::uint8_t m_strain[0x8]; // 0x38 CUtlString
-    std::uint8_t m_meleeImpact[0x8]; // 0x40 CUtlString
-    std::uint8_t m_pushOff[0x8]; // 0x48 CUtlString
-    std::uint8_t m_skidStop[0x8]; // 0x50 CUtlString
-    std::uint8_t m_resonant[0x8]; // 0x58 CUtlString
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x8]; // 0x30 
+    std::uint8_t _[0x8]; // 0x38 
+    std::uint8_t _[0x8]; // 0x40 
+    std::uint8_t _[0x8]; // 0x48 
+    std::uint8_t _[0x8]; // 0x50 
+    std::uint8_t _[0x8]; // 0x58 
 };
 
 struct NmBoneMaskSetDefinition_t {
     static constexpr std::size_t size = 0x128;
-    std::uint8_t m_ID[0x8]; // 0x0 CGlobalSymbol
-    std::uint8_t m_primaryWeightList[0x110]; // 0x8 CNmBoneWeightList
-    std::uint8_t m_secondaryWeightLists[0x10]; // 0x118 CUtlLeanVector<CNmBoneWeightList>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x110]; // 0x8 
+    std::uint8_t _[0x10]; // 0x118 
 };
 
 struct CAudioAnimTag {
     static constexpr std::size_t size = 0x70;
     std::uint8_t pad_0[0x58]; // 0x0
-    std::uint8_t m_clipName[0x8]; // 0x58 CUtlString
-    std::uint8_t m_attachmentName[0x8]; // 0x60 CUtlString
-    std::uint8_t m_flVolume[0x4]; // 0x68 float32
-    std::uint8_t m_bStopWhenTagEnds[0x1]; // 0x6C bool
-    std::uint8_t m_bStopWhenGraphEnds[0x1]; // 0x6D bool
-    std::uint8_t m_bPlayOnServer[0x1]; // 0x6E bool
-    std::uint8_t m_bPlayOnClient[0x1]; // 0x6F bool
+    std::uint8_t _[0x8]; // 0x58 
+    std::uint8_t _[0x8]; // 0x60 
+    std::uint8_t _[0x4]; // 0x68 
+    std::uint8_t _[0x1]; // 0x6c 
+    std::uint8_t _[0x1]; // 0x6d 
+    std::uint8_t _[0x1]; // 0x6e 
+    std::uint8_t _[0x1]; // 0x6f 
 };
 
 struct CTurnHelperUpdateNode {
     static constexpr std::size_t size = 0x90;
     std::uint8_t pad_0[0x74]; // 0x0
-    std::uint8_t m_facingTarget[0x4]; // 0x74 AnimValueSource
-    std::uint8_t m_turnStartTimeOffset[0x4]; // 0x78 float32
-    std::uint8_t m_turnDuration[0x4]; // 0x7C float32
-    std::uint8_t m_bMatchChildDuration[0x4]; // 0x80 bool
-    std::uint8_t m_manualTurnOffset[0x4]; // 0x84 float32
-    std::uint8_t m_bUseManualTurnOffset[0x8]; // 0x88 bool
+    std::uint8_t _[0x4]; // 0x74 
+    std::uint8_t _[0x4]; // 0x78 
+    std::uint8_t _[0x4]; // 0x7c 
+    std::uint8_t _[0x4]; // 0x80 
+    std::uint8_t _[0x4]; // 0x84 
+    std::uint8_t _[0x8]; // 0x88 
 };
 
 struct CAnimationGroup {
     static constexpr std::size_t size = 0x148;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nFlags[0x8]; // 0x10 uint32
-    std::uint8_t m_name[0x48]; // 0x18 CBufferString
-    std::uint8_t m_localHAnimArray_Handle[0x18]; // 0x60 CUtlVector<CStrongHandle<InfoForResourceTypeCAnimData>>
-    std::uint8_t m_includedGroupArray_Handle[0x18]; // 0x78 CUtlVector<CStrongHandle<InfoForResourceTypeCAnimationGroup>>
-    std::uint8_t m_directHSeqGroup_Handle[0x8]; // 0x90 CStrongHandle<InfoForResourceTypeCSequenceGroupData>
-    std::uint8_t m_decodeKey[0x78]; // 0x98 CAnimKeyData
-    std::uint8_t m_szScripts[0x18]; // 0x110 CUtlVector<CBufferString>
-    std::uint8_t m_AdditionalExtRefs[0x20]; // 0x128 CUtlVector<CStrongHandleVoid>
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x48]; // 0x18 
+    std::uint8_t _[0x18]; // 0x60 
+    std::uint8_t _[0x18]; // 0x78 
+    std::uint8_t _[0x8]; // 0x90 
+    std::uint8_t _[0x78]; // 0x98 
+    std::uint8_t _[0x18]; // 0x110 
+    std::uint8_t _[0x20]; // 0x128 
 };
 
 struct CPulse_TempVarInfo {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_Name[0x10]; // 0x0 PulseSymbol_t
-    std::uint8_t m_Type[0x18]; // 0x10 CPulseValueFullType
-    std::uint8_t m_nEditorNodeID[0x4]; // 0x28 PulseDocNodeID_t
-    std::uint8_t m_bIsObservable[0x4]; // 0x2C bool
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x4]; // 0x28 
+    std::uint8_t _[0x4]; // 0x2c 
 };
 
 struct NmContactAudioInfo_t {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_audioActionID[0x8]; // 0x0 CGlobalSymbol
-    std::uint8_t m_audioTypeID[0x8]; // 0x8 CGlobalSymbol
-    std::uint8_t m_soundeventOverrideID[0x8]; // 0x10 CGlobalSymbol
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct NmSyncTrackTime_t {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_nEventIdx[0x4]; // 0x0 int32
-    std::uint8_t m_percentageThrough[0x4]; // 0x4 NmPercent_t
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct CNmClip {
     static constexpr std::size_t size = 0x200;
-    std::uint8_t m_skeleton[0x8]; // 0x0 CStrongHandle<InfoForResourceTypeCNmSkeleton>
-    std::uint8_t m_nNumFrames[0x4]; // 0x8 uint32
-    std::uint8_t m_flDuration[0x4]; // 0xC float32
-    std::uint8_t m_compressedPoseData[0x10]; // 0x10 CUtlBinaryBlock
-    std::uint8_t m_trackCompressionSettings[0x18]; // 0x20 CUtlVector<NmCompressionSettings_t>
-    std::uint8_t m_compressedPoseOffsets[0x40]; // 0x38 CUtlVector<uint32>
-    std::uint8_t m_secondaryAnimations[0x20]; // 0x78 CUtlVectorFixedGrowable<CNmClip*,1>
-    std::uint8_t m_floatChannelData[0x28]; // 0x98 CUtlVectorFixedGrowable<CNmFloatChannelData*,2>
-    std::uint8_t m_syncTrack[0xB0]; // 0xC0 CNmSyncTrack
-    std::uint8_t m_rootMotion[0x50]; // 0x170 CNmRootMotionData
-    std::uint8_t m_bIsAdditive[0x8]; // 0x1C0 bool
-    std::uint8_t m_modelSpaceSamplingChain[0x18]; // 0x1C8 CUtlVector<CNmClip::ModelSpaceSamplingChainLink_t>
-    std::uint8_t m_modelSpaceBoneSamplingIndices[0x20]; // 0x1E0 CUtlVector<int32>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0x18]; // 0x20 
+    std::uint8_t _[0x40]; // 0x38 
+    std::uint8_t _[0x20]; // 0x78 
+    std::uint8_t _[0x28]; // 0x98 
+    std::uint8_t _[0xb0]; // 0xc0 
+    std::uint8_t _[0x50]; // 0x170 
+    std::uint8_t _[0x8]; // 0x1c0 
+    std::uint8_t _[0x18]; // 0x1c8 
+    std::uint8_t _[0x20]; // 0x1e0 
 };
 
 struct CToggleComponentActionUpdater {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_componentID[0x4]; // 0x18 AnimComponentID
-    std::uint8_t m_bSetEnabled[0x4]; // 0x1C bool
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
 };
 
 struct CNmOverlayBlendTask {
@@ -5708,8 +5708,8 @@ struct CNmOverlayBlendTask {
 struct CNmSpeedScaleBaseNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x4]; // 0x18 int16
-    std::uint8_t m_flDefaultInputValue[0x4]; // 0x1C float32
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
 };
 
 struct CNmValueNode__CDefinition {
@@ -5720,9 +5720,9 @@ struct CNmValueNode__CDefinition {
 struct CAnimationGraphVisualizerPrimitiveBase {
     static constexpr std::size_t size = 0x40;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_Type[0x4]; // 0x8 CAnimationGraphVisualizerPrimitiveType
-    std::uint8_t m_OwningAnimNodePaths[0x2C]; // 0xC AnimNodeID[11]
-    std::uint8_t m_nOwningAnimNodePathCount[0x8]; // 0x38 int32
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x2c]; // 0xc 
+    std::uint8_t _[0x8]; // 0x38 
 };
 
 struct CBindPoseUpdateNode {
@@ -5732,52 +5732,52 @@ struct CBindPoseUpdateNode {
 
 struct NmSyncTrackTimeRange_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_startTime[0x8]; // 0x0 NmSyncTrackTime_t
-    std::uint8_t m_endTime[0x8]; // 0x8 NmSyncTrackTime_t
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CAnimationGraphVisualizerText {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x40]; // 0x0
-    std::uint8_t m_vWsPosition[0x10]; // 0x40 VectorAligned
-    std::uint8_t m_Color[0x8]; // 0x50 Color
-    std::uint8_t m_Text[0x8]; // 0x58 CUtlString
+    std::uint8_t _[0x10]; // 0x40 
+    std::uint8_t _[0x8]; // 0x50 
+    std::uint8_t _[0x8]; // 0x58 
 };
 
 struct CFootTrajectory {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_vOffset[0xC]; // 0x8 Vector
-    std::uint8_t m_flRotationOffset[0x4]; // 0x14 float32
-    std::uint8_t m_flProgression[0x8]; // 0x18 float32
+    std::uint8_t _[0xc]; // 0x8 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x8]; // 0x18 
 };
 
 struct CMotionMatchingUpdateNode {
     static constexpr std::size_t size = 0x148;
     std::uint8_t pad_0[0x58]; // 0x0
-    std::uint8_t m_dataSet[0x20]; // 0x58 CMotionDataSet
-    std::uint8_t m_metrics[0x18]; // 0x78 CUtlVector<CSmartPtr<CMotionMetricEvaluator>>
-    std::uint8_t m_weights[0x50]; // 0x90 CUtlVector<float32>
-    std::uint8_t m_bSearchEveryTick[0x4]; // 0xE0 bool
-    std::uint8_t m_flSearchInterval[0x4]; // 0xE4 float32
-    std::uint8_t m_bSearchWhenClipEnds[0x1]; // 0xE8 bool
-    std::uint8_t m_bSearchWhenGoalChanges[0x3]; // 0xE9 bool
-    std::uint8_t m_blendCurve[0x8]; // 0xEC CBlendCurve
-    std::uint8_t m_flSampleRate[0x4]; // 0xF4 float32
-    std::uint8_t m_flBlendTime[0x4]; // 0xF8 float32
-    std::uint8_t m_bLockClipWhenWaning[0x4]; // 0xFC bool
-    std::uint8_t m_flSelectionThreshold[0x4]; // 0x100 float32
-    std::uint8_t m_flReselectionTimeWindow[0x4]; // 0x104 float32
-    std::uint8_t m_bEnableRotationCorrection[0x1]; // 0x108 bool
-    std::uint8_t m_bGoalAssist[0x3]; // 0x109 bool
-    std::uint8_t m_flGoalAssistDistance[0x4]; // 0x10C float32
-    std::uint8_t m_flGoalAssistTolerance[0x8]; // 0x110 float32
-    std::uint8_t m_distanceScale_Damping[0x18]; // 0x118 CAnimInputDamping
-    std::uint8_t m_flDistanceScale_OuterRadius[0x4]; // 0x130 float32
-    std::uint8_t m_flDistanceScale_InnerRadius[0x4]; // 0x134 float32
-    std::uint8_t m_flDistanceScale_MaxScale[0x4]; // 0x138 float32
-    std::uint8_t m_flDistanceScale_MinScale[0x4]; // 0x13C float32
-    std::uint8_t m_bEnableDistanceScaling[0x8]; // 0x140 bool
+    std::uint8_t _[0x20]; // 0x58 
+    std::uint8_t _[0x18]; // 0x78 
+    std::uint8_t _[0x50]; // 0x90 
+    std::uint8_t _[0x4]; // 0xe0 
+    std::uint8_t _[0x4]; // 0xe4 
+    std::uint8_t _[0x1]; // 0xe8 
+    std::uint8_t _[0x3]; // 0xe9 
+    std::uint8_t _[0x8]; // 0xec 
+    std::uint8_t _[0x4]; // 0xf4 
+    std::uint8_t _[0x4]; // 0xf8 
+    std::uint8_t _[0x4]; // 0xfc 
+    std::uint8_t _[0x4]; // 0x100 
+    std::uint8_t _[0x4]; // 0x104 
+    std::uint8_t _[0x1]; // 0x108 
+    std::uint8_t _[0x3]; // 0x109 
+    std::uint8_t _[0x4]; // 0x10c 
+    std::uint8_t _[0x8]; // 0x110 
+    std::uint8_t _[0x18]; // 0x118 
+    std::uint8_t _[0x4]; // 0x130 
+    std::uint8_t _[0x4]; // 0x134 
+    std::uint8_t _[0x4]; // 0x138 
+    std::uint8_t _[0x4]; // 0x13c 
+    std::uint8_t _[0x8]; // 0x140 
 };
 
 struct CNmReferencePoseNode__CDefinition {
@@ -5787,171 +5787,171 @@ struct CNmReferencePoseNode__CDefinition {
 
 struct CSeqS1SeqDesc {
     static constexpr std::size_t size = 0x120;
-    std::uint8_t m_sName[0x10]; // 0x0 CBufferString
-    std::uint8_t m_flags[0x10]; // 0x10 CSeqSeqDescFlag
-    std::uint8_t m_fetch[0x70]; // 0x20 CSeqMultiFetch
-    std::uint8_t m_nLocalWeightlist[0x8]; // 0x90 int32
-    std::uint8_t m_autoLayerArray[0x18]; // 0x98 CUtlVector<CSeqAutoLayer>
-    std::uint8_t m_IKLockArray[0x18]; // 0xB0 CUtlVector<CSeqIKLock>
-    std::uint8_t m_transition[0x8]; // 0xC8 CSeqTransition
-    std::uint8_t m_SequenceKeys[0x10]; // 0xD0 KeyValues3
-    std::uint8_t m_LegacyKeyValueText[0x10]; // 0xE0 CBufferString
-    std::uint8_t m_activityArray[0x18]; // 0xF0 CUtlVector<CAnimActivity>
-    std::uint8_t m_footMotion[0x18]; // 0x108 CUtlVector<CFootMotion>
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0x70]; // 0x20 
+    std::uint8_t _[0x8]; // 0x90 
+    std::uint8_t _[0x18]; // 0x98 
+    std::uint8_t _[0x18]; // 0xb0 
+    std::uint8_t _[0x8]; // 0xc8 
+    std::uint8_t _[0x10]; // 0xd0 
+    std::uint8_t _[0x10]; // 0xe0 
+    std::uint8_t _[0x18]; // 0xf0 
+    std::uint8_t _[0x18]; // 0x108 
 };
 
 struct CFlexController {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_szName[0x8]; // 0x0 CUtlString
-    std::uint8_t m_szType[0x8]; // 0x8 CUtlString
-    std::uint8_t min[0x4]; // 0x10 float32
-    std::uint8_t max[0x4]; // 0x14 float32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct SkeletonDemoDb_t {
     static constexpr std::size_t size = 0x38;
-    std::uint8_t m_AnimCaptures[0x18]; // 0x0 CUtlVector<SkeletonAnimCapture_t*>
-    std::uint8_t m_CameraTrack[0x18]; // 0x18 CUtlVector<SkeletonAnimCapture_t::Camera_t>
-    std::uint8_t m_flRecordingTime[0x8]; // 0x30 float32
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0x8]; // 0x30 
 };
 
 struct CNmFloatRangeComparisonNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_range[0x8]; // 0x10 Range_t
-    std::uint8_t m_nInputValueNodeIdx[0x2]; // 0x18 int16
-    std::uint8_t m_bIsInclusiveCheck[0x6]; // 0x1A bool
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x2]; // 0x18 
+    std::uint8_t _[0x6]; // 0x1a 
 };
 
 struct CMotionNodeSequence {
     static constexpr std::size_t size = 0x48;
     std::uint8_t pad_0[0x28]; // 0x0
-    std::uint8_t m_tags[0x18]; // 0x28 CUtlVector<TagSpan_t>
-    std::uint8_t m_hSequence[0x4]; // 0x40 HSequence
-    std::uint8_t m_flPlaybackSpeed[0x4]; // 0x44 float32
+    std::uint8_t _[0x18]; // 0x28 
+    std::uint8_t _[0x4]; // 0x40 
+    std::uint8_t _[0x4]; // 0x44 
 };
 
 struct CNmTwoBoneIKNode__CDefinition {
     static constexpr std::size_t size = 0x30;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_effectorBoneID[0x8]; // 0x18 CGlobalSymbol
-    std::uint8_t m_nEffectorTargetNodeIdx[0x2]; // 0x20 int16
-    std::uint8_t m_nEnabledNodeIdx[0x2]; // 0x22 int16
-    std::uint8_t m_flBlendTimeSeconds[0x4]; // 0x24 float32
-    std::uint8_t m_blendMode[0x1]; // 0x28 NmIKBlendMode_t
-    std::uint8_t m_bIsTargetInWorldSpace[0x3]; // 0x29 bool
-    std::uint8_t m_flChainRotationWeight[0x4]; // 0x2C float32
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x2]; // 0x20 
+    std::uint8_t _[0x2]; // 0x22 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x1]; // 0x28 
+    std::uint8_t _[0x3]; // 0x29 
+    std::uint8_t _[0x4]; // 0x2c 
 };
 
 struct CNmGraphInstance {
-    static constexpr std::size_t size = 0x3B0;
-    std::uint8_t pad_0[0x3B0]; // 0x0
+    static constexpr std::size_t size = 0x3b0;
+    std::uint8_t pad_0[0x3b0]; // 0x0
 };
 
 struct CFlexDesc {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_szFacs[0x8]; // 0x0 CUtlString
+    std::uint8_t _[0x8]; // 0x0 
 };
 
 struct CRenderMesh {
     static constexpr std::size_t size = 0x238;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_sceneObjects[0xC0]; // 0x10 CUtlLeanVectorFixedGrowable<CSceneObjectData,1>
-    std::uint8_t m_constraints[0x10]; // 0xD0 CUtlLeanVector<CBaseConstraint*>
-    std::uint8_t m_skeleton[0x118]; // 0xE0 CRenderSkeleton
-    std::uint8_t m_bUseUV2ForCharting[0x1]; // 0x1F8 bool
-    std::uint8_t m_bEmbeddedMapMesh[0x27]; // 0x1F9 bool
-    std::uint8_t m_meshDeformParams[0x10]; // 0x220 DynamicMeshDeformParams_t
-    std::uint8_t m_pGroomData[0x8]; // 0x230 CRenderGroom*
+    std::uint8_t _[0xc0]; // 0x10 
+    std::uint8_t _[0x10]; // 0xd0 
+    std::uint8_t _[0x118]; // 0xe0 
+    std::uint8_t _[0x1]; // 0x1f8 
+    std::uint8_t _[0x27]; // 0x1f9 
+    std::uint8_t _[0x10]; // 0x220 
+    std::uint8_t _[0x8]; // 0x230 
 };
 
 struct CAnimSkeleton {
-    static constexpr std::size_t size = 0xD0;
+    static constexpr std::size_t size = 0xd0;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_localSpaceTransforms[0x18]; // 0x10 CUtlVector<CTransform>
-    std::uint8_t m_modelSpaceTransforms[0x18]; // 0x28 CUtlVector<CTransform>
-    std::uint8_t m_boneNames[0x18]; // 0x40 CUtlVector<CUtlString>
-    std::uint8_t m_children[0x18]; // 0x58 CUtlVector<CUtlVector<int32>>
-    std::uint8_t m_parents[0x18]; // 0x70 CUtlVector<int32>
-    std::uint8_t m_feet[0x18]; // 0x88 CUtlVector<CAnimFoot>
-    std::uint8_t m_morphNames[0x18]; // 0xA0 CUtlVector<CUtlString>
-    std::uint8_t m_lodBoneCounts[0x18]; // 0xB8 CUtlVector<int32>
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x18]; // 0x28 
+    std::uint8_t _[0x18]; // 0x40 
+    std::uint8_t _[0x18]; // 0x58 
+    std::uint8_t _[0x18]; // 0x70 
+    std::uint8_t _[0x18]; // 0x88 
+    std::uint8_t _[0x18]; // 0xa0 
+    std::uint8_t _[0x18]; // 0xb8 
 };
 
 struct PulseRuntimeConstantIndex_t {
     static constexpr std::size_t size = 0x2;
-    std::uint8_t m_Value[0x2]; // 0x0 int16
+    std::uint8_t _[0x2]; // 0x0 
 };
 
 struct CFootAdjustmentInstanceData {
     static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0xC]; // 0x0
-    std::uint8_t m_flStartTime[0xC]; // 0xC CAnimNetVar<float32>
-    std::uint8_t m_flDuration[0x24]; // 0x18 CAnimNetVar<float32>
-    std::uint8_t m_flStartHeadingWS[0xC]; // 0x3C float32
+    std::uint8_t pad_0[0xc]; // 0x0
+    std::uint8_t _[0xc]; // 0xc 
+    std::uint8_t _[0x24]; // 0x18 
+    std::uint8_t _[0xc]; // 0x3c 
 };
 
 struct CNmBodyGroupNode__CDefinition {
     static constexpr std::size_t size = 0x50;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_nEnabledNodeIdx[0x8]; // 0x18 int16
-    std::uint8_t m_event[0x30]; // 0x20 CNmBodyGroupEvent
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x30]; // 0x20 
 };
 
 struct CNmTimeControlledClipNode__CDefinition {
     static constexpr std::size_t size = 0x40;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nPlayInReverseValueNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_bSampleRootMotion[0x2]; // 0x12 bool
-    std::uint8_t m_nDataSlotIdx[0x2]; // 0x14 int16
-    std::uint8_t m_nTimeValueNodeIdx[0x2]; // 0x16 int16
-    std::uint8_t m_graphEvents[0x28]; // 0x18 CUtlVectorFixedGrowable<CGlobalSymbol,2>
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x2]; // 0x14 
+    std::uint8_t _[0x2]; // 0x16 
+    std::uint8_t _[0x28]; // 0x18 
 };
 
 struct VPhysics2ShapeDef_t {
     static constexpr std::size_t size = 0x68;
-    std::uint8_t m_spheres[0x10]; // 0x0 CUtlLeanVector<RnSphereDesc_t>
-    std::uint8_t m_capsules[0x10]; // 0x10 CUtlLeanVector<RnCapsuleDesc_t>
-    std::uint8_t m_hulls[0x10]; // 0x20 CUtlLeanVector<RnHullDesc_t>
-    std::uint8_t m_meshes[0x10]; // 0x30 CUtlLeanVector<RnMeshDesc_t>
-    std::uint8_t m_compounds[0x10]; // 0x40 CUtlLeanVector<RnCompoundDesc_t>
-    std::uint8_t m_CollisionAttributeIndices[0x18]; // 0x50 CUtlVector<uint16>
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0x10]; // 0x20 
+    std::uint8_t _[0x10]; // 0x30 
+    std::uint8_t _[0x10]; // 0x40 
+    std::uint8_t _[0x18]; // 0x50 
 };
 
 struct CNmFloatCurveNode__CDefinition {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x8]; // 0x10 int16
-    std::uint8_t m_curve[0x40]; // 0x18 CPiecewiseCurve
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x40]; // 0x18 
 };
 
 struct CAnimationGraphVisualizerAxis {
     static constexpr std::size_t size = 0x70;
     std::uint8_t pad_0[0x40]; // 0x0
-    std::uint8_t m_xWsTransform[0x20]; // 0x40 CTransform
-    std::uint8_t m_flAxisSize[0x10]; // 0x60 float32
+    std::uint8_t _[0x20]; // 0x40 
+    std::uint8_t _[0x10]; // 0x60 
 };
 
 struct CTwistConstraint {
     static constexpr std::size_t size = 0x90;
     std::uint8_t pad_0[0x60]; // 0x0
-    std::uint8_t m_bInverse[0x10]; // 0x60 bool
-    std::uint8_t m_qParentBindRotation[0x10]; // 0x70 Quaternion
-    std::uint8_t m_qChildBindRotation[0x10]; // 0x80 Quaternion
+    std::uint8_t _[0x10]; // 0x60 
+    std::uint8_t _[0x10]; // 0x70 
+    std::uint8_t _[0x10]; // 0x80 
 };
 
 struct PulseDocNodeID_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_Value[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct ModelBoneFlexDriverControl_t {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_nBoneComponent[0x8]; // 0x0 ModelBoneFlexComponent_t
-    std::uint8_t m_flexController[0x8]; // 0x8 CUtlString
-    std::uint8_t m_flexControllerToken[0x4]; // 0x10 uint32
-    std::uint8_t m_flMin[0x4]; // 0x14 float32
-    std::uint8_t m_flMax[0x8]; // 0x18 float32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x8]; // 0x18 
 };
 
 struct CParticleCollectionFloatInput {
@@ -5961,140 +5961,140 @@ struct CParticleCollectionFloatInput {
 
 struct CSeqCmdLayer {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_cmd[0x2]; // 0x0 int16
-    std::uint8_t m_nLocalReference[0x2]; // 0x2 int16
-    std::uint8_t m_nLocalBonemask[0x2]; // 0x4 int16
-    std::uint8_t m_nDstResult[0x2]; // 0x6 int16
-    std::uint8_t m_nSrcResult[0x2]; // 0x8 int16
-    std::uint8_t m_bSpline[0x2]; // 0xA bool
-    std::uint8_t m_flVar1[0x4]; // 0xC float32
-    std::uint8_t m_flVar2[0x4]; // 0x10 float32
-    std::uint8_t m_nLineNumber[0x4]; // 0x14 int16
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
+    std::uint8_t _[0x2]; // 0x4 
+    std::uint8_t _[0x2]; // 0x6 
+    std::uint8_t _[0x2]; // 0x8 
+    std::uint8_t _[0x2]; // 0xa 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct FootPinningPoseOpFixedData_t {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_footInfo[0x18]; // 0x0 CUtlVector<FootFixedData_t>
-    std::uint8_t m_flBlendTime[0x4]; // 0x18 float32
-    std::uint8_t m_flLockBreakDistance[0x4]; // 0x1C float32
-    std::uint8_t m_flMaxLegTwist[0x4]; // 0x20 float32
-    std::uint8_t m_nHipBoneIndex[0x4]; // 0x24 int32
-    std::uint8_t m_bApplyLegTwistLimits[0x1]; // 0x28 bool
-    std::uint8_t m_bApplyFootRotationLimits[0x7]; // 0x29 bool
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x1]; // 0x28 
+    std::uint8_t _[0x7]; // 0x29 
 };
 
 struct RenderSkeletonBone_t {
     static constexpr std::size_t size = 0x60;
-    std::uint8_t m_boneName[0x8]; // 0x0 CUtlString
-    std::uint8_t m_parentName[0x8]; // 0x8 CUtlString
-    std::uint8_t m_invBindPose[0x30]; // 0x10 matrix3x4_t
-    std::uint8_t m_bbox[0x18]; // 0x40 SkeletonBoneBounds_t
-    std::uint8_t m_flSphereRadius[0x8]; // 0x58 float32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x30]; // 0x10 
+    std::uint8_t _[0x18]; // 0x40 
+    std::uint8_t _[0x8]; // 0x58 
 };
 
 struct CDistanceRemainingMetricEvaluator {
     static constexpr std::size_t size = 0x68;
     std::uint8_t pad_0[0x50]; // 0x0
-    std::uint8_t m_flMaxDistance[0x4]; // 0x50 float32
-    std::uint8_t m_flMinDistance[0x4]; // 0x54 float32
-    std::uint8_t m_flStartGoalFilterDistance[0x4]; // 0x58 float32
-    std::uint8_t m_flMaxGoalOvershootScale[0x4]; // 0x5C float32
-    std::uint8_t m_bFilterFixedMinDistance[0x1]; // 0x60 bool
-    std::uint8_t m_bFilterGoalDistance[0x1]; // 0x61 bool
-    std::uint8_t m_bFilterGoalOvershoot[0x6]; // 0x62 bool
+    std::uint8_t _[0x4]; // 0x50 
+    std::uint8_t _[0x4]; // 0x54 
+    std::uint8_t _[0x4]; // 0x58 
+    std::uint8_t _[0x4]; // 0x5c 
+    std::uint8_t _[0x1]; // 0x60 
+    std::uint8_t _[0x1]; // 0x61 
+    std::uint8_t _[0x6]; // 0x62 
 };
 
 struct CDirectPlaybackUpdateNode {
     static constexpr std::size_t size = 0x90;
     std::uint8_t pad_0[0x74]; // 0x0
-    std::uint8_t m_bFinishEarly[0x1]; // 0x74 bool
-    std::uint8_t m_bResetOnFinish[0x3]; // 0x75 bool
-    std::uint8_t m_allTags[0x18]; // 0x78 CUtlVector<CDirectPlaybackTagData>
+    std::uint8_t _[0x1]; // 0x74 
+    std::uint8_t _[0x3]; // 0x75 
+    std::uint8_t _[0x18]; // 0x78 
 };
 
 struct CNmIDEvent {
     static constexpr std::size_t size = 0x28;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_ID[0x8]; // 0x18 CGlobalSymbol
-    std::uint8_t m_secondaryID[0x8]; // 0x20 CGlobalSymbol
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
 };
 
 struct CFlexRule {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_nFlex[0x8]; // 0x0 int32
-    std::uint8_t m_FlexOps[0x18]; // 0x8 CUtlVector<CFlexOp>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x18]; // 0x8 
 };
 
 struct ScriptInfo_t {
     static constexpr std::size_t size = 0x58;
-    std::uint8_t m_code[0x8]; // 0x0 CUtlString
-    std::uint8_t m_paramsModified[0x18]; // 0x8 CUtlVector<CAnimParamHandle>
-    std::uint8_t m_proxyReadParams[0x18]; // 0x20 CUtlVector<int32>
-    std::uint8_t m_proxyWriteParams[0x18]; // 0x38 CUtlVector<int32>
-    std::uint8_t m_eScriptType[0x8]; // 0x50 AnimScriptType
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x18]; // 0x8 
+    std::uint8_t _[0x18]; // 0x20 
+    std::uint8_t _[0x18]; // 0x38 
+    std::uint8_t _[0x8]; // 0x50 
 };
 
 struct CBoneConstraintRbf {
-    static constexpr std::size_t size = 0xC8;
+    static constexpr std::size_t size = 0xc8;
     std::uint8_t pad_0[0x20]; // 0x0
-    std::uint8_t m_inputBones[0x18]; // 0x20 CUtlVector<std::pair<CUtlString,uint32>>
-    std::uint8_t m_outputBones[0x90]; // 0x38 CUtlVector<std::pair<CUtlString,uint32>>
+    std::uint8_t _[0x18]; // 0x20 
+    std::uint8_t _[0x90]; // 0x38 
 };
 
 struct CNetworkedCycle {
     static constexpr std::size_t size = 0x34;
-    std::uint8_t m_flCycleUnclamped[0x4]; // 0x0 float32
-    std::uint8_t m_flPrevCycleUnclamped[0xC]; // 0x4 float32
-    std::uint8_t m_flCyclesPerSecond[0xC]; // 0x10 CAnimNetVar<float32>
-    std::uint8_t m_flCycleZeroTime[0xC]; // 0x1C CAnimNetVar<float32>
-    std::uint8_t m_resetCount[0xC]; // 0x28 CAnimNetVar<uint8>
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0xc]; // 0x4 
+    std::uint8_t _[0xc]; // 0x10 
+    std::uint8_t _[0xc]; // 0x1c 
+    std::uint8_t _[0xc]; // 0x28 
 };
 
 struct CNmSoundEvent {
     static constexpr std::size_t size = 0x48;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_relevance[0x8]; // 0x18 CNmEventRelevance_t
-    std::uint8_t m_name[0x8]; // 0x20 CUtlString
-    std::uint8_t m_position[0x8]; // 0x28 CNmSoundEvent::Position_t
-    std::uint8_t m_attachmentName[0x8]; // 0x30 CUtlString
-    std::uint8_t m_tags[0x8]; // 0x38 CUtlString
-    std::uint8_t m_bContinuePlayingSoundAtDurationEnd[0x4]; // 0x40 bool
-    std::uint8_t m_flDurationInterruptionThreshold[0x4]; // 0x44 float32
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x8]; // 0x30 
+    std::uint8_t _[0x8]; // 0x38 
+    std::uint8_t _[0x4]; // 0x40 
+    std::uint8_t _[0x4]; // 0x44 
 };
 
 struct CRenderGroom {
-    static constexpr std::size_t size = 0xB0;
-    std::uint8_t m_hairs[0x18]; // 0x0 CUtlVector<RenderHairStrandInfo_t>
-    std::uint8_t m_hairPositionOffsets[0x28]; // 0x18 CUtlVector<uint32>
-    std::uint8_t m_hSimParamsMat[0x8]; // 0x40 CStrongHandleCopyable<InfoForResourceTypeIMaterial2>
-    std::uint8_t m_strandSegmentCountHist[0x30]; // 0x48 CUtlVector<int32>
-    std::uint8_t m_nMaxSegmentsPerHairStrand[0x4]; // 0x78 int32
-    std::uint8_t m_nGuideHairCount[0x4]; // 0x7C int32
-    std::uint8_t m_nHairCount[0x4]; // 0x80 int32
-    std::uint8_t m_nTotalVertexCount[0x4]; // 0x84 int32
-    std::uint8_t m_nTotalSegmentCount[0x4]; // 0x88 int32
-    std::uint8_t m_nGroomGroupID[0x4]; // 0x8C int32
-    std::uint8_t m_nAttachBoneIdx[0x4]; // 0x90 int32
-    std::uint8_t m_nAttachMeshIdx[0x4]; // 0x94 int32
-    std::uint8_t m_nAttachMeshDrawCallIdx[0x14]; // 0x98 int32
-    std::uint8_t m_bEnableSimulation[0x4]; // 0xAC bool
+    static constexpr std::size_t size = 0xb0;
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x28]; // 0x18 
+    std::uint8_t _[0x8]; // 0x40 
+    std::uint8_t _[0x30]; // 0x48 
+    std::uint8_t _[0x4]; // 0x78 
+    std::uint8_t _[0x4]; // 0x7c 
+    std::uint8_t _[0x4]; // 0x80 
+    std::uint8_t _[0x4]; // 0x84 
+    std::uint8_t _[0x4]; // 0x88 
+    std::uint8_t _[0x4]; // 0x8c 
+    std::uint8_t _[0x4]; // 0x90 
+    std::uint8_t _[0x4]; // 0x94 
+    std::uint8_t _[0x14]; // 0x98 
+    std::uint8_t _[0x4]; // 0xac 
 };
 
 struct CNmParameterizedClipSelectorNode__CDefinition {
     static constexpr std::size_t size = 0x40;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_optionNodeIndices[0x18]; // 0x10 CUtlLeanVectorFixedGrowable<int16,8>
-    std::uint8_t m_optionWeights[0x10]; // 0x28 CUtlLeanVectorFixedGrowable<uint8,8>
-    std::uint8_t m_parameterNodeIdx[0x2]; // 0x38 int16
-    std::uint8_t m_bIgnoreInvalidOptions[0x1]; // 0x3A bool
-    std::uint8_t m_bHasWeightsSet[0x5]; // 0x3B bool
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x10]; // 0x28 
+    std::uint8_t _[0x2]; // 0x38 
+    std::uint8_t _[0x1]; // 0x3a 
+    std::uint8_t _[0x5]; // 0x3b 
 };
 
 struct CTiltTwistConstraint {
     static constexpr std::size_t size = 0x90;
     std::uint8_t pad_0[0x60]; // 0x0
-    std::uint8_t m_nTargetAxis[0x4]; // 0x60 int32
-    std::uint8_t m_nSlaveAxis[0x2C]; // 0x64 int32
+    std::uint8_t _[0x4]; // 0x60 
+    std::uint8_t _[0x2c]; // 0x64 
 };
 
 struct CNmSpeedScaleNode__CDefinition {
@@ -6104,67 +6104,67 @@ struct CNmSpeedScaleNode__CDefinition {
 
 struct CVPhysXSurfacePropertiesList {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_surfacePropertiesList[0x18]; // 0x0 CUtlVector<CPhysSurfaceProperties*>
+    std::uint8_t _[0x18]; // 0x0 
 };
 
 struct CNmFloatSpringNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_flStartValue[0x4]; // 0x10 float32
-    std::uint8_t m_flHertz[0x4]; // 0x14 float32
-    std::uint8_t m_flDampingRatio[0x4]; // 0x18 float32
-    std::uint8_t m_nInputValueNodeIdx[0x2]; // 0x1C int16
-    std::uint8_t m_bUseStartValue[0x2]; // 0x1E bool
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x2]; // 0x1c 
+    std::uint8_t _[0x2]; // 0x1e 
 };
 
 struct RenderHairStrandInfo_t {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_nGuideHairIndices_nSurfaceTriIndex[0x8]; // 0x0 uint32[2]
-    std::uint8_t m_vGuideBary_vBaseBary[0x8]; // 0x8 uint16[4]
-    std::uint8_t m_vRootOffset_flLengthScale[0x8]; // 0x10 uint16[4]
-    std::uint8_t m_nPackedBaseUv[0x4]; // 0x18 uint16[2]
-    std::uint8_t m_nPackedSurfaceNormalOs[0x4]; // 0x1C uint32
-    std::uint8_t m_nPackedSurfaceTangentOs[0x4]; // 0x20 uint32
-    std::uint8_t m_nDataOffset_Segments[0x4]; // 0x24 uint32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
 };
 
 struct CCycleControlClipUpdateNode {
     static constexpr std::size_t size = 0x90;
     std::uint8_t pad_0[0x60]; // 0x0
-    std::uint8_t m_tags[0x1C]; // 0x60 CUtlVector<TagSpan_t>
-    std::uint8_t m_hSequence[0x4]; // 0x7C HSequence
-    std::uint8_t m_duration[0x4]; // 0x80 float32
-    std::uint8_t m_valueSource[0x4]; // 0x84 AnimValueSource
-    std::uint8_t m_paramIndex[0x2]; // 0x88 CAnimParamHandle
-    std::uint8_t m_bLockWhenWaning[0x6]; // 0x8A bool
+    std::uint8_t _[0x1c]; // 0x60 
+    std::uint8_t _[0x4]; // 0x7c 
+    std::uint8_t _[0x4]; // 0x80 
+    std::uint8_t _[0x4]; // 0x84 
+    std::uint8_t _[0x2]; // 0x88 
+    std::uint8_t _[0x6]; // 0x8a 
 };
 
 struct CNmTargetPointNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_bIsWorldSpaceTarget[0x6]; // 0x12 bool
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x6]; // 0x12 
 };
 
 struct CNmTargetSelectorNode__CDefinition {
     static constexpr std::size_t size = 0x40;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_optionNodeIndices[0x18]; // 0x10 CUtlLeanVectorFixedGrowable<int16,8>
-    std::uint8_t m_flOrientationScoreWeight[0x4]; // 0x28 float32
-    std::uint8_t m_flPositionScoreWeight[0x4]; // 0x2C float32
-    std::uint8_t m_parameterNodeIdx[0x2]; // 0x30 int16
-    std::uint8_t m_bIgnoreInvalidOptions[0x1]; // 0x32 bool
-    std::uint8_t m_bIsWorldSpaceTarget[0x5]; // 0x33 bool
-    std::uint8_t m_alignmentBoneID[0x8]; // 0x38 CGlobalSymbol
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x4]; // 0x28 
+    std::uint8_t _[0x4]; // 0x2c 
+    std::uint8_t _[0x2]; // 0x30 
+    std::uint8_t _[0x1]; // 0x32 
+    std::uint8_t _[0x5]; // 0x33 
+    std::uint8_t _[0x8]; // 0x38 
 };
 
 struct CPulse_RegisterInfo {
     static constexpr std::size_t size = 0x60;
-    std::uint8_t m_nReg[0x8]; // 0x0 PulseRuntimeRegisterIndex_t
-    std::uint8_t m_Type[0x18]; // 0x8 CPulseValueFullType
-    std::uint8_t m_OriginName[0x38]; // 0x20 CKV3MemberNameWithStorage
-    std::uint8_t m_nWrittenByInstruction[0x4]; // 0x58 int32
-    std::uint8_t m_nLastReadByInstruction[0x4]; // 0x5C int32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x18]; // 0x8 
+    std::uint8_t _[0x38]; // 0x20 
+    std::uint8_t _[0x4]; // 0x58 
+    std::uint8_t _[0x4]; // 0x5c 
 };
 
 struct CNmFloatValueNode__CDefinition {
@@ -6185,83 +6185,83 @@ struct CNmGraphVariationUserData {
 struct CStaticPoseCache {
     static constexpr std::size_t size = 0x30;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_poses[0x18]; // 0x10 CUtlVector<CCachedPose>
-    std::uint8_t m_nBoneCount[0x4]; // 0x28 int32
-    std::uint8_t m_nMorphCount[0x4]; // 0x2C int32
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x4]; // 0x28 
+    std::uint8_t _[0x4]; // 0x2c 
 };
 
 struct LookAtOpFixedSettings_t {
-    static constexpr std::size_t size = 0xD0;
-    std::uint8_t m_attachment[0x80]; // 0x0 CAnimAttachment
-    std::uint8_t m_damping[0x18]; // 0x80 CAnimInputDamping
-    std::uint8_t m_bones[0x18]; // 0x98 CUtlVector<LookAtBone_t>
-    std::uint8_t m_flYawLimit[0x4]; // 0xB0 float32
-    std::uint8_t m_flPitchLimit[0x4]; // 0xB4 float32
-    std::uint8_t m_flHysteresisInnerAngle[0x4]; // 0xB8 float32
-    std::uint8_t m_flHysteresisOuterAngle[0x4]; // 0xBC float32
-    std::uint8_t m_bRotateYawForward[0x1]; // 0xC0 bool
-    std::uint8_t m_bMaintainUpDirection[0x1]; // 0xC1 bool
-    std::uint8_t m_bTargetIsPosition[0x1]; // 0xC2 bool
-    std::uint8_t m_bUseHysteresis[0xD]; // 0xC3 bool
+    static constexpr std::size_t size = 0xd0;
+    std::uint8_t _[0x80]; // 0x0 
+    std::uint8_t _[0x18]; // 0x80 
+    std::uint8_t _[0x18]; // 0x98 
+    std::uint8_t _[0x4]; // 0xb0 
+    std::uint8_t _[0x4]; // 0xb4 
+    std::uint8_t _[0x4]; // 0xb8 
+    std::uint8_t _[0x4]; // 0xbc 
+    std::uint8_t _[0x1]; // 0xc0 
+    std::uint8_t _[0x1]; // 0xc1 
+    std::uint8_t _[0x1]; // 0xc2 
+    std::uint8_t _[0xd]; // 0xc3 
 };
 
 struct CRootMotion {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_deltaTransform[0x10]; // 0x0 CMotionTransform
-    std::uint8_t m_vVelocityMS[0xC]; // 0x10 Vector
-    std::uint8_t m_vUpOverride[0xC]; // 0x1C Vector
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0xc]; // 0x10 
+    std::uint8_t _[0xc]; // 0x1c 
 };
 
 struct CAnimGraphSettingsManager {
     static constexpr std::size_t size = 0x30;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_settingsGroups[0x18]; // 0x18 CUtlVector<CSmartPtr<CAnimGraphSettingsGroup>>
+    std::uint8_t _[0x18]; // 0x18 
 };
 
 struct CAnimGraphModelBinding {
     static constexpr std::size_t size = 0x28;
     std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t m_modelName[0x8]; // 0x8 CUtlString
-    std::uint8_t m_pSharedData[0x18]; // 0x10 CSmartPtr<CAnimUpdateSharedData>
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x18]; // 0x10 
 };
 
 struct CBoneConstraintPoseSpaceBone {
     static constexpr std::size_t size = 0x88;
     std::uint8_t pad_0[0x60]; // 0x0
-    std::uint8_t m_inputList[0x28]; // 0x60 CUtlVector<CBoneConstraintPoseSpaceBone::Input_t>
+    std::uint8_t _[0x28]; // 0x60 
 };
 
 struct CNmTwoBoneIKTask {
-    static constexpr std::size_t size = 0xF0;
+    static constexpr std::size_t size = 0xf0;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_nEffectorBoneIdx[0x4]; // 0x70 int32
-    std::uint8_t m_nEffectorTargetBoneIdx[0xC]; // 0x74 int32
-    std::uint8_t m_targetTransform[0x70]; // 0x80 CTransform
+    std::uint8_t _[0x4]; // 0x70 
+    std::uint8_t _[0xc]; // 0x74 
+    std::uint8_t _[0x70]; // 0x80 
 };
 
 struct MotionBlendItem {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_pChild[0x8]; // 0x0 CSmartPtr<CMotionNode>
-    std::uint8_t m_flKeyValue[0x8]; // 0x8 float32
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CBoneConstraintPoseSpaceMorph {
-    static constexpr std::size_t size = 0xA0;
+    static constexpr std::size_t size = 0xa0;
     std::uint8_t pad_0[0x20]; // 0x0
-    std::uint8_t m_sBoneName[0x8]; // 0x20 CUtlString
-    std::uint8_t m_sAttachmentName[0x8]; // 0x28 CUtlString
-    std::uint8_t m_outputMorph[0x18]; // 0x30 CUtlVector<CUtlString>
-    std::uint8_t m_inputList[0x18]; // 0x48 CUtlVector<CBoneConstraintPoseSpaceMorph::Input_t>
-    std::uint8_t m_bClamp[0x40]; // 0x60 bool
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x40]; // 0x60 
 };
 
 struct CFloatAnimParameter {
     static constexpr std::size_t size = 0x90;
     std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t m_fDefaultValue[0x4]; // 0x80 float32
-    std::uint8_t m_fMinValue[0x4]; // 0x84 float32
-    std::uint8_t m_fMaxValue[0x4]; // 0x88 float32
-    std::uint8_t m_bInterpolate[0x4]; // 0x8C bool
+    std::uint8_t _[0x4]; // 0x80 
+    std::uint8_t _[0x4]; // 0x84 
+    std::uint8_t _[0x4]; // 0x88 
+    std::uint8_t _[0x4]; // 0x8c 
 };
 
 struct CNmContactAudioActionVData {
@@ -6271,139 +6271,139 @@ struct CNmContactAudioActionVData {
 
 struct CStateActionUpdater {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_pAction[0x8]; // 0x0 CSmartPtr<CAnimActionUpdater>
-    std::uint8_t m_eBehavior[0x8]; // 0x8 StateActionBehavior
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct CPlayerInputAnimMotorUpdater {
     static constexpr std::size_t size = 0x50;
     std::uint8_t pad_0[0x20]; // 0x0
-    std::uint8_t m_sampleTimes[0x1C]; // 0x20 CUtlVector<float32>
-    std::uint8_t m_flSpringConstant[0x4]; // 0x3C float32
-    std::uint8_t m_flAnticipationDistance[0x4]; // 0x40 float32
-    std::uint8_t m_hAnticipationPosParam[0x2]; // 0x44 CAnimParamHandle
-    std::uint8_t m_hAnticipationHeadingParam[0x2]; // 0x46 CAnimParamHandle
-    std::uint8_t m_bUseAcceleration[0x8]; // 0x48 bool
+    std::uint8_t _[0x1c]; // 0x20 
+    std::uint8_t _[0x4]; // 0x3c 
+    std::uint8_t _[0x4]; // 0x40 
+    std::uint8_t _[0x2]; // 0x44 
+    std::uint8_t _[0x2]; // 0x46 
+    std::uint8_t _[0x8]; // 0x48 
 };
 
 struct CRenderSkeleton {
     static constexpr std::size_t size = 0x50;
-    std::uint8_t m_bones[0x30]; // 0x0 CUtlVector<RenderSkeletonBone_t>
-    std::uint8_t m_boneParents[0x18]; // 0x30 CUtlVector<int32>
-    std::uint8_t m_nBoneWeightCount[0x8]; // 0x48 int32
+    std::uint8_t _[0x30]; // 0x0 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x8]; // 0x48 
 };
 
 struct CSeqIKLock {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_flPosWeight[0x4]; // 0x0 float32
-    std::uint8_t m_flAngleWeight[0x4]; // 0x4 float32
-    std::uint8_t m_nLocalBone[0x2]; // 0x8 int16
-    std::uint8_t m_bBonesOrientedAlongPositiveX[0x2]; // 0xA bool
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x2]; // 0x8 
+    std::uint8_t _[0x2]; // 0xa 
 };
 
 struct CAnimParamHandleMap {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_list[0x20]; // 0x0 CUtlHashtable<uint16,int16>
+    std::uint8_t _[0x20]; // 0x0 
 };
 
 struct CNmFloatClampNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x4]; // 0x10 int16
-    std::uint8_t m_clampRange[0xC]; // 0x14 Range_t
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0xc]; // 0x14 
 };
 
 struct PulseRuntimeCellIndex_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_Value[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CNmExternalPoseNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_bShouldSampleRootMotion[0x8]; // 0x10 bool
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CAnimDesc {
-    static constexpr std::size_t size = 0x1D0;
-    std::uint8_t m_name[0x10]; // 0x0 CBufferString
-    std::uint8_t m_flags[0x8]; // 0x10 CAnimDesc_Flag
-    std::uint8_t fps[0x8]; // 0x18 float32
-    std::uint8_t m_Data[0xD8]; // 0x20 CAnimEncodedFrames
-    std::uint8_t m_movementArray[0x18]; // 0xF8 CUtlVector<CAnimMovement>
-    std::uint8_t m_xInitialOffset[0x20]; // 0x110 CTransform
-    std::uint8_t m_eventArray[0x18]; // 0x130 CUtlVector<CAnimEventDefinition>
-    std::uint8_t m_activityArray[0x18]; // 0x148 CUtlVector<CAnimActivity>
-    std::uint8_t m_hierarchyArray[0x18]; // 0x160 CUtlVector<CAnimLocalHierarchy>
-    std::uint8_t framestalltime[0x4]; // 0x178 float32
-    std::uint8_t m_vecRootMin[0xC]; // 0x17C Vector
-    std::uint8_t m_vecRootMax[0x10]; // 0x188 Vector
-    std::uint8_t m_vecBoneWorldMin[0x18]; // 0x198 CUtlVector<Vector>
-    std::uint8_t m_vecBoneWorldMax[0x18]; // 0x1B0 CUtlVector<Vector>
-    std::uint8_t m_sequenceParams[0x8]; // 0x1C8 CAnimSequenceParams
+    static constexpr std::size_t size = 0x1d0;
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0xd8]; // 0x20 
+    std::uint8_t _[0x18]; // 0xf8 
+    std::uint8_t _[0x20]; // 0x110 
+    std::uint8_t _[0x18]; // 0x130 
+    std::uint8_t _[0x18]; // 0x148 
+    std::uint8_t _[0x18]; // 0x160 
+    std::uint8_t _[0x4]; // 0x178 
+    std::uint8_t _[0xc]; // 0x17c 
+    std::uint8_t _[0x10]; // 0x188 
+    std::uint8_t _[0x18]; // 0x198 
+    std::uint8_t _[0x18]; // 0x1b0 
+    std::uint8_t _[0x8]; // 0x1c8 
 };
 
 struct CNmRootMotionOverrideNode__CDefinition {
     static constexpr std::size_t size = 0x30;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_desiredMovingVelocityNodeIdx[0x2]; // 0x18 int16
-    std::uint8_t m_desiredFacingDirectionNodeIdx[0x2]; // 0x1A int16
-    std::uint8_t m_linearVelocityLimitNodeIdx[0x2]; // 0x1C int16
-    std::uint8_t m_angularVelocityLimitNodeIdx[0x2]; // 0x1E int16
-    std::uint8_t m_enabledNodeIdx[0x4]; // 0x20 int16
-    std::uint8_t m_maxLinearVelocity[0x4]; // 0x24 float32
-    std::uint8_t m_maxAngularVelocityRadians[0x4]; // 0x28 float32
-    std::uint8_t m_overrideFlags[0x4]; // 0x2C CNmBitFlags
+    std::uint8_t _[0x2]; // 0x18 
+    std::uint8_t _[0x2]; // 0x1a 
+    std::uint8_t _[0x2]; // 0x1c 
+    std::uint8_t _[0x2]; // 0x1e 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x4]; // 0x28 
+    std::uint8_t _[0x4]; // 0x2c 
 };
 
 struct CNmTargetWarpNode__CDefinition {
     static constexpr std::size_t size = 0x38;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nClipReferenceNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_nTargetValueNodeIdx[0x2]; // 0x12 int16
-    std::uint8_t m_samplingMode[0x1]; // 0x14 CNmRootMotionData::SamplingMode_t
-    std::uint8_t m_targetUpdateRule[0x1]; // 0x15 CNmTargetWarpNode::TargetUpdateRule_t
-    std::uint8_t m_bAlignWithTargetAtLastWarpEvent[0x2]; // 0x16 bool
-    std::uint8_t m_flSamplingPositionErrorThresholdSq[0x4]; // 0x18 float32
-    std::uint8_t m_flMaxTangentLength[0x4]; // 0x1C float32
-    std::uint8_t m_flLerpFallbackDistanceThreshold[0x4]; // 0x20 float32
-    std::uint8_t m_flTargetUpdateDistanceThreshold[0x4]; // 0x24 float32
-    std::uint8_t m_flTargetUpdateAngleThresholdRadians[0x8]; // 0x28 float32
-    std::uint8_t m_alignmentBoneID[0x8]; // 0x30 CGlobalSymbol
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x1]; // 0x14 
+    std::uint8_t _[0x1]; // 0x15 
+    std::uint8_t _[0x2]; // 0x16 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x8]; // 0x30 
 };
 
 struct CPhysSurfacePropertiesPhysics {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_friction[0x4]; // 0x0 float32
-    std::uint8_t m_elasticity[0x4]; // 0x4 float32
-    std::uint8_t m_density[0x4]; // 0x8 float32
-    std::uint8_t m_thickness[0x4]; // 0xC float32
-    std::uint8_t m_softContactFrequency[0x4]; // 0x10 float32
-    std::uint8_t m_softContactDampingRatio[0x4]; // 0x14 float32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct CAnimationGraphVisualizerPie {
     static constexpr std::size_t size = 0x80;
     std::uint8_t pad_0[0x40]; // 0x0
-    std::uint8_t m_vWsCenter[0x10]; // 0x40 VectorAligned
-    std::uint8_t m_vWsStart[0x10]; // 0x50 VectorAligned
-    std::uint8_t m_vWsEnd[0x10]; // 0x60 VectorAligned
-    std::uint8_t m_Color[0x10]; // 0x70 Color
+    std::uint8_t _[0x10]; // 0x40 
+    std::uint8_t _[0x10]; // 0x50 
+    std::uint8_t _[0x10]; // 0x60 
+    std::uint8_t _[0x10]; // 0x70 
 };
 
 struct NmFloatCurveCompressionSettings_t {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_range[0x8]; // 0x0 NmCompressionSettings_t::QuantizationRange_t
-    std::uint8_t m_bIsStatic[0x4]; // 0x8 bool
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x4]; // 0x8 
 };
 
 struct CBoneConstraintDotToMorph {
     static constexpr std::size_t size = 0x58;
     std::uint8_t pad_0[0x20]; // 0x0
-    std::uint8_t m_sBoneName[0x8]; // 0x20 CUtlString
-    std::uint8_t m_sTargetBoneName[0x8]; // 0x28 CUtlString
-    std::uint8_t m_sMorphChannelName[0x8]; // 0x30 CUtlString
-    std::uint8_t m_flRemap[0x20]; // 0x38 float32[4]
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
+    std::uint8_t _[0x8]; // 0x30 
+    std::uint8_t _[0x20]; // 0x38 
 };
 
 struct CPointConstraint {
@@ -6418,14 +6418,14 @@ struct CCurrentRotationVelocityMetricEvaluator {
 
 struct TraceSettings_t {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_flTraceHeight[0x4]; // 0x0 float32
-    std::uint8_t m_flTraceRadius[0x4]; // 0x4 float32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct ParamSpanSample_t {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_value[0x14]; // 0x0 CAnimVariant
-    std::uint8_t m_flCycle[0x4]; // 0x14 float32
+    std::uint8_t _[0x14]; // 0x0 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct CNmFollowBoneTask {
@@ -6434,79 +6434,79 @@ struct CNmFollowBoneTask {
 };
 
 struct VPhysXConstraintParams_t {
-    static constexpr std::size_t size = 0xF8;
-    std::uint8_t m_nType[0x1]; // 0x0 int8
-    std::uint8_t m_nTranslateMotion[0x1]; // 0x1 int8
-    std::uint8_t m_nRotateMotion[0x1]; // 0x2 int8
-    std::uint8_t m_nFlags[0x1]; // 0x3 int8
-    std::uint8_t m_anchor[0x18]; // 0x4 Vector[2]
-    std::uint8_t m_axes[0x20]; // 0x1C QuaternionStorage[2]
-    std::uint8_t m_maxForce[0x4]; // 0x3C float32
-    std::uint8_t m_maxTorque[0x4]; // 0x40 float32
-    std::uint8_t m_linearLimitValue[0x4]; // 0x44 float32
-    std::uint8_t m_linearLimitRestitution[0x4]; // 0x48 float32
-    std::uint8_t m_linearLimitSpring[0x4]; // 0x4C float32
-    std::uint8_t m_linearLimitDamping[0x4]; // 0x50 float32
-    std::uint8_t m_twistLowLimitValue[0x4]; // 0x54 float32
-    std::uint8_t m_twistLowLimitRestitution[0x4]; // 0x58 float32
-    std::uint8_t m_twistLowLimitSpring[0x4]; // 0x5C float32
-    std::uint8_t m_twistLowLimitDamping[0x4]; // 0x60 float32
-    std::uint8_t m_twistHighLimitValue[0x4]; // 0x64 float32
-    std::uint8_t m_twistHighLimitRestitution[0x4]; // 0x68 float32
-    std::uint8_t m_twistHighLimitSpring[0x4]; // 0x6C float32
-    std::uint8_t m_twistHighLimitDamping[0x4]; // 0x70 float32
-    std::uint8_t m_swing1LimitValue[0x4]; // 0x74 float32
-    std::uint8_t m_swing1LimitRestitution[0x4]; // 0x78 float32
-    std::uint8_t m_swing1LimitSpring[0x4]; // 0x7C float32
-    std::uint8_t m_swing1LimitDamping[0x4]; // 0x80 float32
-    std::uint8_t m_swing2LimitValue[0x4]; // 0x84 float32
-    std::uint8_t m_swing2LimitRestitution[0x4]; // 0x88 float32
-    std::uint8_t m_swing2LimitSpring[0x4]; // 0x8C float32
-    std::uint8_t m_swing2LimitDamping[0x4]; // 0x90 float32
-    std::uint8_t m_goalPosition[0xC]; // 0x94 Vector
-    std::uint8_t m_goalOrientation[0x10]; // 0xA0 QuaternionStorage
-    std::uint8_t m_goalAngularVelocity[0xC]; // 0xB0 Vector
-    std::uint8_t m_driveSpringX[0x4]; // 0xBC float32
-    std::uint8_t m_driveSpringY[0x4]; // 0xC0 float32
-    std::uint8_t m_driveSpringZ[0x4]; // 0xC4 float32
-    std::uint8_t m_driveDampingX[0x4]; // 0xC8 float32
-    std::uint8_t m_driveDampingY[0x4]; // 0xCC float32
-    std::uint8_t m_driveDampingZ[0x4]; // 0xD0 float32
-    std::uint8_t m_driveSpringTwist[0x4]; // 0xD4 float32
-    std::uint8_t m_driveSpringSwing[0x4]; // 0xD8 float32
-    std::uint8_t m_driveSpringSlerp[0x4]; // 0xDC float32
-    std::uint8_t m_driveDampingTwist[0x4]; // 0xE0 float32
-    std::uint8_t m_driveDampingSwing[0x4]; // 0xE4 float32
-    std::uint8_t m_driveDampingSlerp[0x4]; // 0xE8 float32
-    std::uint8_t m_solverIterationCount[0x4]; // 0xEC int32
-    std::uint8_t m_projectionLinearTolerance[0x4]; // 0xF0 float32
-    std::uint8_t m_projectionAngularTolerance[0x4]; // 0xF4 float32
+    static constexpr std::size_t size = 0xf8;
+    std::uint8_t _[0x1]; // 0x0 
+    std::uint8_t _[0x1]; // 0x1 
+    std::uint8_t _[0x1]; // 0x2 
+    std::uint8_t _[0x1]; // 0x3 
+    std::uint8_t _[0x18]; // 0x4 
+    std::uint8_t _[0x20]; // 0x1c 
+    std::uint8_t _[0x4]; // 0x3c 
+    std::uint8_t _[0x4]; // 0x40 
+    std::uint8_t _[0x4]; // 0x44 
+    std::uint8_t _[0x4]; // 0x48 
+    std::uint8_t _[0x4]; // 0x4c 
+    std::uint8_t _[0x4]; // 0x50 
+    std::uint8_t _[0x4]; // 0x54 
+    std::uint8_t _[0x4]; // 0x58 
+    std::uint8_t _[0x4]; // 0x5c 
+    std::uint8_t _[0x4]; // 0x60 
+    std::uint8_t _[0x4]; // 0x64 
+    std::uint8_t _[0x4]; // 0x68 
+    std::uint8_t _[0x4]; // 0x6c 
+    std::uint8_t _[0x4]; // 0x70 
+    std::uint8_t _[0x4]; // 0x74 
+    std::uint8_t _[0x4]; // 0x78 
+    std::uint8_t _[0x4]; // 0x7c 
+    std::uint8_t _[0x4]; // 0x80 
+    std::uint8_t _[0x4]; // 0x84 
+    std::uint8_t _[0x4]; // 0x88 
+    std::uint8_t _[0x4]; // 0x8c 
+    std::uint8_t _[0x4]; // 0x90 
+    std::uint8_t _[0xc]; // 0x94 
+    std::uint8_t _[0x10]; // 0xa0 
+    std::uint8_t _[0xc]; // 0xb0 
+    std::uint8_t _[0x4]; // 0xbc 
+    std::uint8_t _[0x4]; // 0xc0 
+    std::uint8_t _[0x4]; // 0xc4 
+    std::uint8_t _[0x4]; // 0xc8 
+    std::uint8_t _[0x4]; // 0xcc 
+    std::uint8_t _[0x4]; // 0xd0 
+    std::uint8_t _[0x4]; // 0xd4 
+    std::uint8_t _[0x4]; // 0xd8 
+    std::uint8_t _[0x4]; // 0xdc 
+    std::uint8_t _[0x4]; // 0xe0 
+    std::uint8_t _[0x4]; // 0xe4 
+    std::uint8_t _[0x4]; // 0xe8 
+    std::uint8_t _[0x4]; // 0xec 
+    std::uint8_t _[0x4]; // 0xf0 
+    std::uint8_t _[0x4]; // 0xf4 
 };
 
 struct CNmFloatComparisonNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_nComparandValueNodeIdx[0x2]; // 0x12 int16
-    std::uint8_t m_comparison[0x4]; // 0x14 CNmFloatComparisonNode::Comparison_t
-    std::uint8_t m_flEpsilon[0x4]; // 0x18 float32
-    std::uint8_t m_flComparisonValue[0x4]; // 0x1C float32
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
 };
 
 struct CStateUpdateData {
     static constexpr std::size_t size = 0x48;
-    std::uint8_t m_name[0x8]; // 0x0 CUtlString
-    std::uint8_t m_hScript[0x8]; // 0x8 AnimScriptHandle
-    std::uint8_t m_transitionIndices[0x18]; // 0x10 CUtlVector<int32>
-    std::uint8_t m_actions[0x18]; // 0x28 CUtlVector<CStateActionUpdater>
-    std::uint8_t m_stateID[0x8]; // 0x40 AnimStateID
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x18]; // 0x28 
+    std::uint8_t _[0x8]; // 0x40 
 };
 
 struct CTurnHelperInstanceData {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_turnAmount[0x4]; // 0x0 float32
-    std::uint8_t m_turnStartTime[0x4]; // 0x4 float32
-    std::uint8_t m_duration[0x4]; // 0x8 float32
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
 };
 
 struct CNmTargetValueNode__CDefinition {
@@ -6520,140 +6520,140 @@ struct COrientConstraint {
 };
 
 struct CCycleClipInstanceData {
-    static constexpr std::size_t size = 0x1C;
-    std::uint8_t m_flCycle[0xC]; // 0x0 CAnimNetVar<float32>
-    std::uint8_t m_flPrevCycle[0x10]; // 0xC CAnimNetVar<float32>
+    static constexpr std::size_t size = 0x1c;
+    std::uint8_t _[0xc]; // 0x0 
+    std::uint8_t _[0x10]; // 0xc 
 };
 
 struct PulseRuntimeTempVarBankIndex_t {
     static constexpr std::size_t size = 0x2;
-    std::uint8_t m_Value[0x2]; // 0x0 int16
+    std::uint8_t _[0x2]; // 0x0 
 };
 
 struct CMoverUpdateNode {
-    static constexpr std::size_t size = 0xB0;
+    static constexpr std::size_t size = 0xb0;
     std::uint8_t pad_0[0x78]; // 0x0
-    std::uint8_t m_damping[0x18]; // 0x78 CAnimInputDamping
-    std::uint8_t m_facingTarget[0x4]; // 0x90 AnimValueSource
-    std::uint8_t m_hMoveVecParam[0x2]; // 0x94 CAnimParamHandle
-    std::uint8_t m_hMoveHeadingParam[0x2]; // 0x96 CAnimParamHandle
-    std::uint8_t m_hTurnToFaceParam[0x4]; // 0x98 CAnimParamHandle
-    std::uint8_t m_flTurnToFaceOffset[0x4]; // 0x9C float32
-    std::uint8_t m_flTurnToFaceLimit[0x4]; // 0xA0 float32
-    std::uint8_t m_bAdditive[0x1]; // 0xA4 bool
-    std::uint8_t m_bApplyMovement[0x1]; // 0xA5 bool
-    std::uint8_t m_bOrientMovement[0x1]; // 0xA6 bool
-    std::uint8_t m_bApplyRotation[0x1]; // 0xA7 bool
-    std::uint8_t m_bLimitOnly[0x8]; // 0xA8 bool
+    std::uint8_t _[0x18]; // 0x78 
+    std::uint8_t _[0x4]; // 0x90 
+    std::uint8_t _[0x2]; // 0x94 
+    std::uint8_t _[0x2]; // 0x96 
+    std::uint8_t _[0x4]; // 0x98 
+    std::uint8_t _[0x4]; // 0x9c 
+    std::uint8_t _[0x4]; // 0xa0 
+    std::uint8_t _[0x1]; // 0xa4 
+    std::uint8_t _[0x1]; // 0xa5 
+    std::uint8_t _[0x1]; // 0xa6 
+    std::uint8_t _[0x1]; // 0xa7 
+    std::uint8_t _[0x8]; // 0xa8 
 };
 
 struct CNmLayerBlendNode__CDefinition {
     static constexpr std::size_t size = 0x48;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nBaseNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_bOnlySampleBaseRootMotion[0x6]; // 0x12 bool
-    std::uint8_t m_layerDefinition[0x30]; // 0x18 CUtlLeanVectorFixedGrowable<CNmLayerBlendNode::LayerDefinition_t,3>
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x6]; // 0x12 
+    std::uint8_t _[0x30]; // 0x18 
 };
 
 struct CNmFootIKNode__CDefinition {
     static constexpr std::size_t size = 0x38;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_leftEffectorBoneID[0x8]; // 0x18 CGlobalSymbol
-    std::uint8_t m_rightEffectorBoneID[0x8]; // 0x20 CGlobalSymbol
-    std::uint8_t m_nLeftTargetNodeIdx[0x2]; // 0x28 int16
-    std::uint8_t m_nRightTargetNodeIdx[0x2]; // 0x2A int16
-    std::uint8_t m_nEnabledNodeIdx[0x4]; // 0x2C int16
-    std::uint8_t m_flBlendTimeSeconds[0x4]; // 0x30 float32
-    std::uint8_t m_blendMode[0x1]; // 0x34 NmIKBlendMode_t
-    std::uint8_t m_bIsTargetInWorldSpace[0x3]; // 0x35 bool
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x2]; // 0x28 
+    std::uint8_t _[0x2]; // 0x2a 
+    std::uint8_t _[0x4]; // 0x2c 
+    std::uint8_t _[0x4]; // 0x30 
+    std::uint8_t _[0x1]; // 0x34 
+    std::uint8_t _[0x3]; // 0x35 
 };
 
 struct CAnimMotorUpdaterBase {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_name[0x8]; // 0x10 CUtlString
-    std::uint8_t m_bDefault[0x8]; // 0x18 bool
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x8]; // 0x18 
 };
 
 struct JiggleBoneSettingsList_t {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_boneSettings[0x18]; // 0x0 CUtlVector<JiggleBoneSettings_t>
+    std::uint8_t _[0x18]; // 0x0 
 };
 
 struct CSubtractUpdateNode {
-    static constexpr std::size_t size = 0xA0;
+    static constexpr std::size_t size = 0xa0;
     std::uint8_t pad_0[0x94]; // 0x0
-    std::uint8_t m_footMotionTiming[0x4]; // 0x94 BinaryNodeChildOption
-    std::uint8_t m_bApplyToFootMotion[0x1]; // 0x98 bool
-    std::uint8_t m_bApplyChannelsSeparately[0x1]; // 0x99 bool
-    std::uint8_t m_bUseModelSpace[0x6]; // 0x9A bool
+    std::uint8_t _[0x4]; // 0x94 
+    std::uint8_t _[0x1]; // 0x98 
+    std::uint8_t _[0x1]; // 0x99 
+    std::uint8_t _[0x6]; // 0x9a 
 };
 
 struct PulseGraphInstanceID_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_Value[0x4]; // 0x0 uint32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CNmFloatRemapNode__CDefinition {
     static constexpr std::size_t size = 0x28;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x4]; // 0x10 int16
-    std::uint8_t m_inputRange[0x8]; // 0x14 CNmFloatRemapNode::RemapRange_t
-    std::uint8_t m_outputRange[0xC]; // 0x1C CNmFloatRemapNode::RemapRange_t
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x8]; // 0x14 
+    std::uint8_t _[0xc]; // 0x1c 
 };
 
 struct CPoseHandle {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_nIndex[0x2]; // 0x0 uint16
-    std::uint8_t m_eType[0x2]; // 0x2 PoseType_t
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
 };
 
 struct CNmFootstepEventIDNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSourceStateNodeIdx[0x4]; // 0x10 int16
-    std::uint8_t m_eventConditionRules[0x4]; // 0x14 CNmBitFlags
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct CSolveIKChainUpdateNode {
-    static constexpr std::size_t size = 0xA8;
+    static constexpr std::size_t size = 0xa8;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_targetHandles[0x18]; // 0x70 CUtlVector<CSolveIKTargetHandle_t>
-    std::uint8_t m_opFixedData[0x20]; // 0x88 SolveIKChainPoseOpFixedSettings_t
+    std::uint8_t _[0x18]; // 0x70 
+    std::uint8_t _[0x20]; // 0x88 
 };
 
 struct CNmOrNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_conditionNodeIndices[0x10]; // 0x10 CUtlLeanVectorFixedGrowable<int16,4>
+    std::uint8_t _[0x10]; // 0x10 
 };
 
 struct CSeqCmdSeqDesc {
     static constexpr std::size_t size = 0x90;
-    std::uint8_t m_sName[0x10]; // 0x0 CBufferString
-    std::uint8_t m_flags[0xC]; // 0x10 CSeqSeqDescFlag
-    std::uint8_t m_transition[0x8]; // 0x1C CSeqTransition
-    std::uint8_t m_nFrameRangeSequence[0x2]; // 0x24 int16
-    std::uint8_t m_nFrameCount[0x2]; // 0x26 int16
-    std::uint8_t m_flFPS[0x4]; // 0x28 float32
-    std::uint8_t m_nSubCycles[0x2]; // 0x2C int16
-    std::uint8_t m_numLocalResults[0x2]; // 0x2E int16
-    std::uint8_t m_cmdLayerArray[0x18]; // 0x30 CUtlVector<CSeqCmdLayer>
-    std::uint8_t m_eventArray[0x18]; // 0x48 CUtlVector<CAnimEventDefinition>
-    std::uint8_t m_activityArray[0x18]; // 0x60 CUtlVector<CAnimActivity>
-    std::uint8_t m_poseSettingArray[0x18]; // 0x78 CUtlVector<CSeqPoseSetting>
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0xc]; // 0x10 
+    std::uint8_t _[0x8]; // 0x1c 
+    std::uint8_t _[0x2]; // 0x24 
+    std::uint8_t _[0x2]; // 0x26 
+    std::uint8_t _[0x4]; // 0x28 
+    std::uint8_t _[0x2]; // 0x2c 
+    std::uint8_t _[0x2]; // 0x2e 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x18]; // 0x60 
+    std::uint8_t _[0x18]; // 0x78 
 };
 
 struct CBoneMaskUpdateNode {
-    static constexpr std::size_t size = 0xB0;
+    static constexpr std::size_t size = 0xb0;
     std::uint8_t pad_0[0x94]; // 0x0
-    std::uint8_t m_nWeightListIndex[0x4]; // 0x94 int32
-    std::uint8_t m_flRootMotionBlend[0x4]; // 0x98 float32
-    std::uint8_t m_blendSpace[0x4]; // 0x9C BoneMaskBlendSpace
-    std::uint8_t m_footMotionTiming[0x4]; // 0xA0 BinaryNodeChildOption
-    std::uint8_t m_bUseBlendScale[0x4]; // 0xA4 bool
-    std::uint8_t m_blendValueSource[0x4]; // 0xA8 AnimValueSource
-    std::uint8_t m_hBlendParameter[0x4]; // 0xAC CAnimParamHandle
+    std::uint8_t _[0x4]; // 0x94 
+    std::uint8_t _[0x4]; // 0x98 
+    std::uint8_t _[0x4]; // 0x9c 
+    std::uint8_t _[0x4]; // 0xa0 
+    std::uint8_t _[0x4]; // 0xa4 
+    std::uint8_t _[0x4]; // 0xa8 
+    std::uint8_t _[0x4]; // 0xac 
 };
 
 struct CLeafUpdateNode {
@@ -6663,101 +6663,101 @@ struct CLeafUpdateNode {
 
 struct CPulse_Constant {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_Type[0x18]; // 0x0 CPulseValueFullType
-    std::uint8_t m_Value[0x18]; // 0x18 KeyValues3
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x18]; // 0x18 
 };
 
 struct CParticleFloatInput {
     static constexpr std::size_t size = 0x178;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nType[0x4]; // 0x10 ParticleFloatType_t
-    std::uint8_t m_nMapType[0x4]; // 0x14 ParticleFloatMapType_t
-    std::uint8_t m_flLiteralValue[0x8]; // 0x18 float32
-    std::uint8_t m_NamedValue[0x40]; // 0x20 CParticleNamedValueRef
-    std::uint8_t m_nControlPoint[0x4]; // 0x60 int32
-    std::uint8_t m_nScalarAttribute[0x4]; // 0x64 ParticleAttributeIndex_t
-    std::uint8_t m_nVectorAttribute[0x4]; // 0x68 ParticleAttributeIndex_t
-    std::uint8_t m_nVectorComponent[0x4]; // 0x6C int32
-    std::uint8_t m_bReverseOrder[0x4]; // 0x70 bool
-    std::uint8_t m_flRandomMin[0x4]; // 0x74 float32
-    std::uint8_t m_flRandomMax[0x4]; // 0x78 float32
-    std::uint8_t m_bHasRandomSignFlip[0x4]; // 0x7C bool
-    std::uint8_t m_nRandomSeed[0x4]; // 0x80 int32
-    std::uint8_t m_nRandomMode[0xC]; // 0x84 ParticleFloatRandomMode_t
-    std::uint8_t m_strSnapshotSubset[0x8]; // 0x90 CUtlString
-    std::uint8_t m_flLOD0[0x4]; // 0x98 float32
-    std::uint8_t m_flLOD1[0x4]; // 0x9C float32
-    std::uint8_t m_flLOD2[0x4]; // 0xA0 float32
-    std::uint8_t m_flLOD3[0x4]; // 0xA4 float32
-    std::uint8_t m_nNoiseInputVectorAttribute[0x4]; // 0xA8 ParticleAttributeIndex_t
-    std::uint8_t m_flNoiseOutputMin[0x4]; // 0xAC float32
-    std::uint8_t m_flNoiseOutputMax[0x4]; // 0xB0 float32
-    std::uint8_t m_flNoiseScale[0x4]; // 0xB4 float32
-    std::uint8_t m_vecNoiseOffsetRate[0xC]; // 0xB8 Vector
-    std::uint8_t m_flNoiseOffset[0x4]; // 0xC4 float32
-    std::uint8_t m_nNoiseOctaves[0x4]; // 0xC8 int32
-    std::uint8_t m_nNoiseTurbulence[0x4]; // 0xCC PFNoiseTurbulence_t
-    std::uint8_t m_nNoiseType[0x4]; // 0xD0 PFNoiseType_t
-    std::uint8_t m_nNoiseModifier[0x4]; // 0xD4 PFNoiseModifier_t
-    std::uint8_t m_flNoiseTurbulenceScale[0x4]; // 0xD8 float32
-    std::uint8_t m_flNoiseTurbulenceMix[0x4]; // 0xDC float32
-    std::uint8_t m_flNoiseImgPreviewScale[0x4]; // 0xE0 float32
-    std::uint8_t m_bNoiseImgPreviewLive[0xC]; // 0xE4 bool
-    std::uint8_t m_flNoCameraFallback[0x4]; // 0xF0 float32
-    std::uint8_t m_bUseBoundsCenter[0x4]; // 0xF4 bool
-    std::uint8_t m_nInputMode[0x4]; // 0xF8 ParticleFloatInputMode_t
-    std::uint8_t m_flMultFactor[0x4]; // 0xFC float32
-    std::uint8_t m_flInput0[0x4]; // 0x100 float32
-    std::uint8_t m_flInput1[0x4]; // 0x104 float32
-    std::uint8_t m_flOutput0[0x4]; // 0x108 float32
-    std::uint8_t m_flOutput1[0x4]; // 0x10C float32
-    std::uint8_t m_flNotchedRangeMin[0x4]; // 0x110 float32
-    std::uint8_t m_flNotchedRangeMax[0x4]; // 0x114 float32
-    std::uint8_t m_flNotchedOutputOutside[0x4]; // 0x118 float32
-    std::uint8_t m_flNotchedOutputInside[0x4]; // 0x11C float32
-    std::uint8_t m_nRoundType[0x4]; // 0x120 ParticleFloatRoundType_t
-    std::uint8_t m_nBiasType[0x4]; // 0x124 ParticleFloatBiasType_t
-    std::uint8_t m_flBiasParameter[0x8]; // 0x128 float32
-    std::uint8_t m_Curve[0x40]; // 0x130 CPiecewiseCurve
-    std::uint8_t m_flCompareValue[0x8]; // 0x170 float32
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x40]; // 0x20 
+    std::uint8_t _[0x4]; // 0x60 
+    std::uint8_t _[0x4]; // 0x64 
+    std::uint8_t _[0x4]; // 0x68 
+    std::uint8_t _[0x4]; // 0x6c 
+    std::uint8_t _[0x4]; // 0x70 
+    std::uint8_t _[0x4]; // 0x74 
+    std::uint8_t _[0x4]; // 0x78 
+    std::uint8_t _[0x4]; // 0x7c 
+    std::uint8_t _[0x4]; // 0x80 
+    std::uint8_t _[0xc]; // 0x84 
+    std::uint8_t _[0x8]; // 0x90 
+    std::uint8_t _[0x4]; // 0x98 
+    std::uint8_t _[0x4]; // 0x9c 
+    std::uint8_t _[0x4]; // 0xa0 
+    std::uint8_t _[0x4]; // 0xa4 
+    std::uint8_t _[0x4]; // 0xa8 
+    std::uint8_t _[0x4]; // 0xac 
+    std::uint8_t _[0x4]; // 0xb0 
+    std::uint8_t _[0x4]; // 0xb4 
+    std::uint8_t _[0xc]; // 0xb8 
+    std::uint8_t _[0x4]; // 0xc4 
+    std::uint8_t _[0x4]; // 0xc8 
+    std::uint8_t _[0x4]; // 0xcc 
+    std::uint8_t _[0x4]; // 0xd0 
+    std::uint8_t _[0x4]; // 0xd4 
+    std::uint8_t _[0x4]; // 0xd8 
+    std::uint8_t _[0x4]; // 0xdc 
+    std::uint8_t _[0x4]; // 0xe0 
+    std::uint8_t _[0xc]; // 0xe4 
+    std::uint8_t _[0x4]; // 0xf0 
+    std::uint8_t _[0x4]; // 0xf4 
+    std::uint8_t _[0x4]; // 0xf8 
+    std::uint8_t _[0x4]; // 0xfc 
+    std::uint8_t _[0x4]; // 0x100 
+    std::uint8_t _[0x4]; // 0x104 
+    std::uint8_t _[0x4]; // 0x108 
+    std::uint8_t _[0x4]; // 0x10c 
+    std::uint8_t _[0x4]; // 0x110 
+    std::uint8_t _[0x4]; // 0x114 
+    std::uint8_t _[0x4]; // 0x118 
+    std::uint8_t _[0x4]; // 0x11c 
+    std::uint8_t _[0x4]; // 0x120 
+    std::uint8_t _[0x4]; // 0x124 
+    std::uint8_t _[0x8]; // 0x128 
+    std::uint8_t _[0x40]; // 0x130 
+    std::uint8_t _[0x8]; // 0x170 
 };
 
 struct SolveIKChainPoseOpFixedSettings_t {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_ChainsToSolveData[0x18]; // 0x0 CUtlVector<ChainToSolveData_t>
+    std::uint8_t _[0x18]; // 0x0 
 };
 
 struct CNmEntityAttributeFloatEvent {
     static constexpr std::size_t size = 0x78;
     std::uint8_t pad_0[0x38]; // 0x0
-    std::uint8_t m_FloatValue[0x40]; // 0x38 CPiecewiseCurve
+    std::uint8_t _[0x40]; // 0x38 
 };
 
 struct CNmIDSelectorNode__CDefinition {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_conditionNodeIndices[0x18]; // 0x10 CUtlLeanVectorFixedGrowable<int16,5>
-    std::uint8_t m_values[0x30]; // 0x28 CUtlLeanVectorFixedGrowable<CGlobalSymbol,5>
-    std::uint8_t m_defaultValue[0x8]; // 0x58 CGlobalSymbol
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x30]; // 0x28 
+    std::uint8_t _[0x8]; // 0x58 
 };
 
 struct TwoBoneIKSettings_t {
     static constexpr std::size_t size = 0x160;
-    std::uint8_t m_endEffectorType[0x10]; // 0x0 IkEndEffectorType
-    std::uint8_t m_endEffectorAttachment[0x80]; // 0x10 CAnimAttachment
-    std::uint8_t m_targetType[0x10]; // 0x90 IkTargetType
-    std::uint8_t m_targetAttachment[0x80]; // 0xA0 CAnimAttachment
-    std::uint8_t m_targetBoneIndex[0x4]; // 0x120 int32
-    std::uint8_t m_hPositionParam[0x2]; // 0x124 CAnimParamHandle
-    std::uint8_t m_hRotationParam[0x2]; // 0x126 CAnimParamHandle
-    std::uint8_t m_bAlwaysUseFallbackHinge[0x8]; // 0x128 bool
-    std::uint8_t m_vLsFallbackHingeAxis[0x10]; // 0x130 VectorAligned
-    std::uint8_t m_nFixedBoneIndex[0x4]; // 0x140 int32
-    std::uint8_t m_nMiddleBoneIndex[0x4]; // 0x144 int32
-    std::uint8_t m_nEndBoneIndex[0x4]; // 0x148 int32
-    std::uint8_t m_bMatchTargetOrientation[0x1]; // 0x14C bool
-    std::uint8_t m_bConstrainTwist[0x3]; // 0x14D bool
-    std::uint8_t m_flMaxTwist[0x10]; // 0x150 float32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x80]; // 0x10 
+    std::uint8_t _[0x10]; // 0x90 
+    std::uint8_t _[0x80]; // 0xa0 
+    std::uint8_t _[0x4]; // 0x120 
+    std::uint8_t _[0x2]; // 0x124 
+    std::uint8_t _[0x2]; // 0x126 
+    std::uint8_t _[0x8]; // 0x128 
+    std::uint8_t _[0x10]; // 0x130 
+    std::uint8_t _[0x4]; // 0x140 
+    std::uint8_t _[0x4]; // 0x144 
+    std::uint8_t _[0x4]; // 0x148 
+    std::uint8_t _[0x1]; // 0x14c 
+    std::uint8_t _[0x3]; // 0x14d 
+    std::uint8_t _[0x10]; // 0x150 
 };
 
 struct CNmCachedPoseWriteTask {
@@ -6768,45 +6768,45 @@ struct CNmCachedPoseWriteTask {
 struct CAnimUpdateSharedData {
     static constexpr std::size_t size = 0x100;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nodes[0x18]; // 0x10 CUtlVector<CSmartPtr<CAnimUpdateNodeBase>>
-    std::uint8_t m_nodeIndexMap[0x20]; // 0x28 CUtlHashtable<CAnimNodePath,int32>
-    std::uint8_t m_components[0x18]; // 0x48 CUtlVector<CSmartPtr<CAnimComponentUpdater>>
-    std::uint8_t m_pParamListUpdater[0x8]; // 0x60 CSmartPtr<CAnimParameterManagerUpdater>
-    std::uint8_t m_pTagManagerUpdater[0x8]; // 0x68 CSmartPtr<CAnimTagManagerUpdater>
-    std::uint8_t m_scriptManager[0x8]; // 0x70 CSmartPtr<CAnimScriptManager>
-    std::uint8_t m_settings[0x30]; // 0x78 CAnimGraphSettingsManager
-    std::uint8_t m_pStaticPoseCache[0x8]; // 0xA8 CSmartPtr<CStaticPoseCacheBuilder>
-    std::uint8_t m_pSkeleton[0x8]; // 0xB0 CSmartPtr<CAnimSkeleton>
-    std::uint8_t m_rootNodePath[0x48]; // 0xB8 CAnimNodePath
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x20]; // 0x28 
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x8]; // 0x60 
+    std::uint8_t _[0x8]; // 0x68 
+    std::uint8_t _[0x8]; // 0x70 
+    std::uint8_t _[0x30]; // 0x78 
+    std::uint8_t _[0x8]; // 0xa8 
+    std::uint8_t _[0x8]; // 0xb0 
+    std::uint8_t _[0x48]; // 0xb8 
 };
 
 struct CAnimAttachment {
     static constexpr std::size_t size = 0x80;
-    std::uint8_t m_influenceRotations[0x30]; // 0x0 Quaternion[3]
-    std::uint8_t m_influenceOffsets[0x30]; // 0x30 VectorAligned[3]
-    std::uint8_t m_influenceIndices[0xC]; // 0x60 int32[3]
-    std::uint8_t m_influenceWeights[0xC]; // 0x6C float32[3]
-    std::uint8_t m_numInfluences[0x8]; // 0x78 uint8
+    std::uint8_t _[0x30]; // 0x0 
+    std::uint8_t _[0x30]; // 0x30 
+    std::uint8_t _[0xc]; // 0x60 
+    std::uint8_t _[0xc]; // 0x6c 
+    std::uint8_t _[0x8]; // 0x78 
 };
 
 struct CFootTrajectories {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_trajectories[0x18]; // 0x0 CUtlVector<CFootTrajectory>
+    std::uint8_t _[0x18]; // 0x0 
 };
 
 struct CNmIDComparisonNode__CDefinition {
     static constexpr std::size_t size = 0x40;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_comparison[0x6]; // 0x12 CNmIDComparisonNode::Comparison_t
-    std::uint8_t m_comparisionIDs[0x28]; // 0x18 CUtlLeanVectorFixedGrowable<CGlobalSymbol,4>
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x6]; // 0x12 
+    std::uint8_t _[0x28]; // 0x18 
 };
 
 struct PairedSequence_t {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_sRole[0x8]; // 0x0 CGlobalSymbol
-    std::uint8_t m_sSequenceName[0x8]; // 0x8 CGlobalSymbol
-    std::uint8_t m_hSequence[0x10]; // 0x10 CAnimNetVar<uint32>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
+    std::uint8_t _[0x10]; // 0x10 
 };
 
 struct CEditableMotionGraph {
@@ -6817,7 +6817,7 @@ struct CEditableMotionGraph {
 struct CNmConstFloatNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_flValue[0x8]; // 0x10 float32
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CStringAnimTag {
@@ -6828,34 +6828,34 @@ struct CStringAnimTag {
 struct CBoolAnimParameter {
     static constexpr std::size_t size = 0x88;
     std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t m_bDefaultValue[0x8]; // 0x80 bool
+    std::uint8_t _[0x8]; // 0x80 
 };
 
 struct CRagdollAnimTag {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x58]; // 0x0
-    std::uint8_t m_profileName[0x8]; // 0x58 CGlobalSymbol
+    std::uint8_t _[0x8]; // 0x58 
 };
 
 struct CMotionNode {
     static constexpr std::size_t size = 0x28;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_name[0x8]; // 0x18 CUtlString
-    std::uint8_t m_id[0x8]; // 0x20 AnimNodeID
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
 };
 
 struct CNmStateMachineNode__CDefinition {
     static constexpr std::size_t size = 0x138;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_stateDefinitions[0x120]; // 0x10 CUtlLeanVectorFixedGrowable<CNmStateMachineNode::StateDefinition_t,5>
-    std::uint8_t m_nDefaultStateIndex[0x8]; // 0x130 int16
+    std::uint8_t _[0x120]; // 0x10 
+    std::uint8_t _[0x8]; // 0x130 
 };
 
 struct CBodyGroupAnimTag {
     static constexpr std::size_t size = 0x78;
     std::uint8_t pad_0[0x58]; // 0x0
-    std::uint8_t m_nPriority[0x8]; // 0x58 int32
-    std::uint8_t m_bodyGroupSettings[0x18]; // 0x60 CUtlVector<CBodyGroupSetting>
+    std::uint8_t _[0x8]; // 0x58 
+    std::uint8_t _[0x18]; // 0x60 
 };
 
 struct CNmModelSpaceBlendTask {
@@ -6871,106 +6871,106 @@ struct CNmZeroPoseNode__CDefinition {
 struct CNmOrientationWarpNode__CDefinition {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nClipReferenceNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_nTargetValueNodeIdx[0x2]; // 0x12 int16
-    std::uint8_t m_bIsOffsetNode[0x1]; // 0x14 bool
-    std::uint8_t m_bIsOffsetRelativeToCharacter[0x1]; // 0x15 bool
-    std::uint8_t m_bWarpTranslation[0x1]; // 0x16 bool
-    std::uint8_t m_alignmentMode[0x1]; // 0x17 CNmOrientationWarpNode::AlignmentMode_t
-    std::uint8_t m_samplingMode[0x8]; // 0x18 CNmRootMotionData::SamplingMode_t
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x1]; // 0x14 
+    std::uint8_t _[0x1]; // 0x15 
+    std::uint8_t _[0x1]; // 0x16 
+    std::uint8_t _[0x1]; // 0x17 
+    std::uint8_t _[0x8]; // 0x18 
 };
 
 struct AnimParamID {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_id[0x4]; // 0x0 uint32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CNmBoneMaskNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_boneMaskID[0x8]; // 0x10 CGlobalSymbol
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct ModelAnimGraph2Ref_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_sIdentifier[0x8]; // 0x0 CUtlString
-    std::uint8_t m_hGraph[0x8]; // 0x8 CStrongHandle<InfoForResourceTypeCNmGraphDefinition>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x8]; // 0x8 
 };
 
 struct AnimationDecodeDebugDump_t {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_processingType[0x8]; // 0x0 AnimationProcessingType_t
-    std::uint8_t m_elems[0x18]; // 0x8 CUtlVector<AnimationDecodeDebugDumpElement_t>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x18]; // 0x8 
 };
 
 struct CNmVirtualParameterIDNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nChildNodeIdx[0x8]; // 0x10 int16
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CSeqScaleSet {
     static constexpr std::size_t size = 0x50;
-    std::uint8_t m_sName[0x10]; // 0x0 CBufferString
-    std::uint8_t m_bRootOffset[0x4]; // 0x10 bool
-    std::uint8_t m_vRootOffset[0xC]; // 0x14 Vector
-    std::uint8_t m_nLocalBoneArray[0x18]; // 0x20 CUtlVector<int16>
-    std::uint8_t m_flBoneScaleArray[0x18]; // 0x38 CUtlVector<float32>
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0xc]; // 0x14 
+    std::uint8_t _[0x18]; // 0x20 
+    std::uint8_t _[0x18]; // 0x38 
 };
 
 struct PulseRuntimeCallInfoIndex_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_Value[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CDirectionalBlendUpdateNode {
-    static constexpr std::size_t size = 0xB0;
-    std::uint8_t pad_0[0x5C]; // 0x0
-    std::uint8_t m_hSequences[0x24]; // 0x5C HSequence[8]
-    std::uint8_t m_damping[0x18]; // 0x80 CAnimInputDamping
-    std::uint8_t m_blendValueSource[0x4]; // 0x98 AnimValueSource
-    std::uint8_t m_paramIndex[0x4]; // 0x9C CAnimParamHandle
-    std::uint8_t m_playbackSpeed[0x4]; // 0xA0 float32
-    std::uint8_t m_duration[0x4]; // 0xA4 float32
-    std::uint8_t m_bLoop[0x1]; // 0xA8 bool
-    std::uint8_t m_bLockBlendOnReset[0x7]; // 0xA9 bool
+    static constexpr std::size_t size = 0xb0;
+    std::uint8_t pad_0[0x5c]; // 0x0
+    std::uint8_t _[0x24]; // 0x5c 
+    std::uint8_t _[0x18]; // 0x80 
+    std::uint8_t _[0x4]; // 0x98 
+    std::uint8_t _[0x4]; // 0x9c 
+    std::uint8_t _[0x4]; // 0xa0 
+    std::uint8_t _[0x4]; // 0xa4 
+    std::uint8_t _[0x1]; // 0xa8 
+    std::uint8_t _[0x7]; // 0xa9 
 };
 
 struct CNmGraphDefinition__ReferencedGraphSlot_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_nNodeIdx[0x2]; // 0x0 int16
-    std::uint8_t m_dataSlotIdx[0x2]; // 0x2 int16
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
 };
 
 struct ParamSpan_t {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_samples[0x18]; // 0x0 CUtlVector<ParamSpanSample_t>
-    std::uint8_t m_hParam[0x2]; // 0x18 CAnimParamHandle
-    std::uint8_t m_eParamType[0x2]; // 0x1A AnimParamType_t
-    std::uint8_t m_flStartCycle[0x4]; // 0x1C float32
-    std::uint8_t m_flEndCycle[0x8]; // 0x20 float32
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x2]; // 0x18 
+    std::uint8_t _[0x2]; // 0x1a 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x8]; // 0x20 
 };
 
 struct CFootStepTriggerUpdateNode {
     static constexpr std::size_t size = 0x90;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_triggers[0x1C]; // 0x70 CUtlVector<FootStepTrigger>
-    std::uint8_t m_flTolerance[0x4]; // 0x8C float32
+    std::uint8_t _[0x1c]; // 0x70 
+    std::uint8_t _[0x4]; // 0x8c 
 };
 
 struct IKTargetSettings_t {
     static constexpr std::size_t size = 0x28;
-    std::uint8_t m_TargetSource[0x8]; // 0x0 IKTargetSource
-    std::uint8_t m_Bone[0x10]; // 0x8 IKBoneNameAndIndex_t
-    std::uint8_t m_AnimgraphParameterNamePosition[0x4]; // 0x18 AnimParamID
-    std::uint8_t m_AnimgraphParameterNameOrientation[0x4]; // 0x1C AnimParamID
-    std::uint8_t m_TargetCoordSystem[0x8]; // 0x20 IKTargetCoordinateSystem
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x10]; // 0x8 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x8]; // 0x20 
 };
 
 struct CModelConfigElement_SetRenderColor {
     static constexpr std::size_t size = 0x50;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_Color[0x8]; // 0x48 Color
+    std::uint8_t _[0x8]; // 0x48 
 };
 
 struct CNmAdditiveBlendTask {
@@ -6981,32 +6981,32 @@ struct CNmAdditiveBlendTask {
 struct CNmAnimationPoseNode__CDefinition {
     static constexpr std::size_t size = 0x28;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nPoseTimeValueNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_nDataSlotIdx[0x2]; // 0x12 int16
-    std::uint8_t m_inputTimeRemapRange[0x8]; // 0x14 Range_t
-    std::uint8_t m_flUserSpecifiedTime[0x4]; // 0x1C float32
-    std::uint8_t m_bUseFramesAsInput[0x8]; // 0x20 bool
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x8]; // 0x14 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x8]; // 0x20 
 };
 
 struct CMotionSearchDB {
-    static constexpr std::size_t size = 0xB8;
-    std::uint8_t m_rootNode[0x80]; // 0x0 CMotionSearchNode
-    std::uint8_t m_residualQuantizer[0x20]; // 0x80 CProductQuantizer
-    std::uint8_t m_codeIndices[0x18]; // 0xA0 CUtlVector<MotionDBIndex>
+    static constexpr std::size_t size = 0xb8;
+    std::uint8_t _[0x80]; // 0x0 
+    std::uint8_t _[0x20]; // 0x80 
+    std::uint8_t _[0x18]; // 0xa0 
 };
 
 struct CMotionNodeBlend1D {
     static constexpr std::size_t size = 0x48;
     std::uint8_t pad_0[0x28]; // 0x0
-    std::uint8_t m_blendItems[0x18]; // 0x28 CUtlVector<MotionBlendItem>
-    std::uint8_t m_nParamIndex[0x8]; // 0x40 int32
+    std::uint8_t _[0x18]; // 0x28 
+    std::uint8_t _[0x8]; // 0x40 
 };
 
 struct CNmCurrentSyncEventNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSourceStateNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_infoType[0x6]; // 0x12 CNmCurrentSyncEventNode::InfoType_t
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x6]; // 0x12 
 };
 
 struct CNmControlParameterTargetNode__CDefinition {
@@ -7016,35 +7016,35 @@ struct CNmControlParameterTargetNode__CDefinition {
 
 struct SkeletonBoneBounds_t {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_vecCenter[0xC]; // 0x0 Vector
-    std::uint8_t m_vecSize[0xC]; // 0xC Vector
+    std::uint8_t _[0xc]; // 0x0 
+    std::uint8_t _[0xc]; // 0xc 
 };
 
 struct CTwoBoneIKUpdateNode {
-    static constexpr std::size_t size = 0x1E0;
+    static constexpr std::size_t size = 0x1e0;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_opFixedData[0x170]; // 0x70 TwoBoneIKSettings_t
+    std::uint8_t _[0x170]; // 0x70 
 };
 
 struct VPhysXBodyPart_t {
     static constexpr std::size_t size = 0x98;
-    std::uint8_t m_nFlags[0x4]; // 0x0 uint32
-    std::uint8_t m_flMass[0x4]; // 0x4 float32
-    std::uint8_t m_rnShape[0x68]; // 0x8 VPhysics2ShapeDef_t
-    std::uint8_t m_nCollisionAttributeIndex[0x2]; // 0x70 uint16
-    std::uint8_t m_nReserved[0x2]; // 0x72 uint16
-    std::uint8_t m_flInertiaScale[0x4]; // 0x74 float32
-    std::uint8_t m_flLinearDamping[0x4]; // 0x78 float32
-    std::uint8_t m_flAngularDamping[0x4]; // 0x7C float32
-    std::uint8_t m_flLinearDrag[0x4]; // 0x80 float32
-    std::uint8_t m_flAngularDrag[0x4]; // 0x84 float32
-    std::uint8_t m_bOverrideMassCenter[0x4]; // 0x88 bool
-    std::uint8_t m_vMassCenterOverride[0xC]; // 0x8C Vector
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x68]; // 0x8 
+    std::uint8_t _[0x2]; // 0x70 
+    std::uint8_t _[0x2]; // 0x72 
+    std::uint8_t _[0x4]; // 0x74 
+    std::uint8_t _[0x4]; // 0x78 
+    std::uint8_t _[0x4]; // 0x7c 
+    std::uint8_t _[0x4]; // 0x80 
+    std::uint8_t _[0x4]; // 0x84 
+    std::uint8_t _[0x4]; // 0x88 
+    std::uint8_t _[0xc]; // 0x8c 
 };
 
 struct PulseRuntimeChunkIndex_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_Value[0x4]; // 0x0 int32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct CTaskHandshakeAnimTag {
@@ -7053,51 +7053,51 @@ struct CTaskHandshakeAnimTag {
 };
 
 struct CFollowPathUpdateNode {
-    static constexpr std::size_t size = 0xB8;
+    static constexpr std::size_t size = 0xb8;
     std::uint8_t pad_0[0x74]; // 0x0
-    std::uint8_t m_flBlendOutTime[0x4]; // 0x74 float32
-    std::uint8_t m_bBlockNonPathMovement[0x1]; // 0x78 bool
-    std::uint8_t m_bStopFeetAtGoal[0x1]; // 0x79 bool
-    std::uint8_t m_bScaleSpeed[0x2]; // 0x7A bool
-    std::uint8_t m_flScale[0x4]; // 0x7C float32
-    std::uint8_t m_flMinAngle[0x4]; // 0x80 float32
-    std::uint8_t m_flMaxAngle[0x4]; // 0x84 float32
-    std::uint8_t m_flSpeedScaleBlending[0x8]; // 0x88 float32
-    std::uint8_t m_turnDamping[0x18]; // 0x90 CAnimInputDamping
-    std::uint8_t m_facingTarget[0x4]; // 0xA8 AnimValueSource
-    std::uint8_t m_hParam[0x4]; // 0xAC CAnimParamHandle
-    std::uint8_t m_flTurnToFaceOffset[0x4]; // 0xB0 float32
-    std::uint8_t m_bTurnToFace[0x4]; // 0xB4 bool
+    std::uint8_t _[0x4]; // 0x74 
+    std::uint8_t _[0x1]; // 0x78 
+    std::uint8_t _[0x1]; // 0x79 
+    std::uint8_t _[0x2]; // 0x7a 
+    std::uint8_t _[0x4]; // 0x7c 
+    std::uint8_t _[0x4]; // 0x80 
+    std::uint8_t _[0x4]; // 0x84 
+    std::uint8_t _[0x8]; // 0x88 
+    std::uint8_t _[0x18]; // 0x90 
+    std::uint8_t _[0x4]; // 0xa8 
+    std::uint8_t _[0x4]; // 0xac 
+    std::uint8_t _[0x4]; // 0xb0 
+    std::uint8_t _[0x4]; // 0xb4 
 };
 
 struct AimMatrixOpFixedSettings_t {
-    static constexpr std::size_t size = 0xF0;
-    std::uint8_t m_attachment[0x80]; // 0x0 CAnimAttachment
-    std::uint8_t m_damping[0x18]; // 0x80 CAnimInputDamping
-    std::uint8_t m_poseCacheHandles[0x28]; // 0x98 CPoseHandle[10]
-    std::uint8_t m_eBlendMode[0x4]; // 0xC0 AimMatrixBlendMode
-    std::uint8_t m_flMaxYawAngle[0x4]; // 0xC4 float32
-    std::uint8_t m_flMaxPitchAngle[0x4]; // 0xC8 float32
-    std::uint8_t m_nSequenceMaxFrame[0x4]; // 0xCC int32
-    std::uint8_t m_nBoneMaskIndex[0x4]; // 0xD0 int32
-    std::uint8_t m_bTargetIsPosition[0x1]; // 0xD4 bool
-    std::uint8_t m_bUseBiasAndClamp[0x3]; // 0xD5 bool
-    std::uint8_t m_flBiasAndClampYawOffset[0x4]; // 0xD8 float32
-    std::uint8_t m_flBiasAndClampPitchOffset[0x4]; // 0xDC float32
-    std::uint8_t m_biasAndClampBlendCurve[0x10]; // 0xE0 CBlendCurve
+    static constexpr std::size_t size = 0xf0;
+    std::uint8_t _[0x80]; // 0x0 
+    std::uint8_t _[0x18]; // 0x80 
+    std::uint8_t _[0x28]; // 0x98 
+    std::uint8_t _[0x4]; // 0xc0 
+    std::uint8_t _[0x4]; // 0xc4 
+    std::uint8_t _[0x4]; // 0xc8 
+    std::uint8_t _[0x4]; // 0xcc 
+    std::uint8_t _[0x4]; // 0xd0 
+    std::uint8_t _[0x1]; // 0xd4 
+    std::uint8_t _[0x3]; // 0xd5 
+    std::uint8_t _[0x4]; // 0xd8 
+    std::uint8_t _[0x4]; // 0xdc 
+    std::uint8_t _[0x10]; // 0xe0 
 };
 
 struct CAnimScriptComponentUpdater {
     static constexpr std::size_t size = 0x38;
     std::uint8_t pad_0[0x30]; // 0x0
-    std::uint8_t m_hScript[0x8]; // 0x30 AnimScriptHandle
+    std::uint8_t _[0x8]; // 0x30 
 };
 
 struct CRagdollUpdateNode {
     static constexpr std::size_t size = 0x78;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_nWeightListIndex[0x4]; // 0x70 int32
-    std::uint8_t m_poseControlMethod[0x4]; // 0x74 RagdollPoseControl
+    std::uint8_t _[0x4]; // 0x70 
+    std::uint8_t _[0x4]; // 0x74 
 };
 
 struct CBoneConstraintBase {
@@ -7113,263 +7113,263 @@ struct CPathAnimMotorUpdater {
 struct CMaterialAttributeAnimTag {
     static constexpr std::size_t size = 0x70;
     std::uint8_t pad_0[0x58]; // 0x0
-    std::uint8_t m_AttributeName[0x8]; // 0x58 CUtlString
-    std::uint8_t m_AttributeType[0x4]; // 0x60 MatterialAttributeTagType_t
-    std::uint8_t m_flValue[0x4]; // 0x64 float32
-    std::uint8_t m_Color[0x8]; // 0x68 Color
+    std::uint8_t _[0x8]; // 0x58 
+    std::uint8_t _[0x4]; // 0x60 
+    std::uint8_t _[0x4]; // 0x64 
+    std::uint8_t _[0x8]; // 0x68 
 };
 
 struct CNmFootEventConditionNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nSourceStateNodeIdx[0x2]; // 0x10 int16
-    std::uint8_t m_phaseCondition[0x2]; // 0x12 NmFootPhaseCondition_t
-    std::uint8_t m_eventConditionRules[0x4]; // 0x14 CNmBitFlags
+    std::uint8_t _[0x2]; // 0x10 
+    std::uint8_t _[0x2]; // 0x12 
+    std::uint8_t _[0x4]; // 0x14 
 };
 
 struct CNmFloatChannelSet_t {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_ID[0x8]; // 0x0 CGlobalSymbol
-    std::uint8_t m_channelIDs[0x10]; // 0x8 CUtlLeanVector<CGlobalSymbol>
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x10]; // 0x8 
 };
 
 struct CNmFootEvent {
     static constexpr std::size_t size = 0x20;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_phase[0x8]; // 0x18 NmFootPhase_t
+    std::uint8_t _[0x8]; // 0x18 
 };
 
 struct CPhysSurfacePropertiesAudio {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_reflectivity[0x4]; // 0x0 float32
-    std::uint8_t m_hardnessFactor[0x4]; // 0x4 float32
-    std::uint8_t m_roughnessFactor[0x4]; // 0x8 float32
-    std::uint8_t m_roughThreshold[0x4]; // 0xC float32
-    std::uint8_t m_hardThreshold[0x4]; // 0x10 float32
-    std::uint8_t m_hardVelocityThreshold[0x4]; // 0x14 float32
-    std::uint8_t m_flStaticImpactVolume[0x4]; // 0x18 float32
-    std::uint8_t m_flOcclusionFactor[0x4]; // 0x1C float32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x4]; // 0x1c 
 };
 
 struct CSeqAutoLayer {
-    static constexpr std::size_t size = 0x1C;
-    std::uint8_t m_nLocalReference[0x2]; // 0x0 int16
-    std::uint8_t m_nLocalPose[0x2]; // 0x2 int16
-    std::uint8_t m_flags[0x8]; // 0x4 CSeqAutoLayerFlag
-    std::uint8_t m_start[0x4]; // 0xC float32
-    std::uint8_t m_peak[0x4]; // 0x10 float32
-    std::uint8_t m_tail[0x4]; // 0x14 float32
-    std::uint8_t m_end[0x4]; // 0x18 float32
+    static constexpr std::size_t size = 0x1c;
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
+    std::uint8_t _[0x8]; // 0x4 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x4]; // 0x18 
 };
 
 struct ModelEmbeddedMesh_t {
     static constexpr std::size_t size = 0x70;
-    std::uint8_t m_Name[0x10]; // 0x0 CUtlString
-    std::uint8_t m_nMeshIndex[0x4]; // 0x10 int32
-    std::uint8_t m_nDataBlock[0x4]; // 0x14 int32
-    std::uint8_t m_nMorphBlock[0x8]; // 0x18 int32
-    std::uint8_t m_vertexBuffers[0x18]; // 0x20 CUtlVector<ModelMeshBufferData_t>
-    std::uint8_t m_indexBuffers[0x18]; // 0x38 CUtlVector<ModelMeshBufferData_t>
-    std::uint8_t m_toolsBuffers[0x18]; // 0x50 CUtlVector<ModelMeshBufferData_t>
-    std::uint8_t m_nVBIBBlock[0x4]; // 0x68 int32
-    std::uint8_t m_nToolsVBBlock[0x4]; // 0x6C int32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x4]; // 0x10 
+    std::uint8_t _[0x4]; // 0x14 
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x18]; // 0x20 
+    std::uint8_t _[0x18]; // 0x38 
+    std::uint8_t _[0x18]; // 0x50 
+    std::uint8_t _[0x4]; // 0x68 
+    std::uint8_t _[0x4]; // 0x6c 
 };
 
 struct PhysSoftbodyDesc_t {
     static constexpr std::size_t size = 0x90;
-    std::uint8_t m_ParticleBoneHash[0x18]; // 0x0 CUtlVector<uint32>
-    std::uint8_t m_Particles[0x18]; // 0x18 CUtlVector<RnSoftbodyParticle_t>
-    std::uint8_t m_Springs[0x18]; // 0x30 CUtlVector<RnSoftbodySpring_t>
-    std::uint8_t m_Capsules[0x18]; // 0x48 CUtlVector<RnSoftbodyCapsule_t>
-    std::uint8_t m_InitPose[0x18]; // 0x60 CUtlVector<CTransform>
-    std::uint8_t m_ParticleBoneName[0x18]; // 0x78 CUtlVector<CUtlString>
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x18]; // 0x18 
+    std::uint8_t _[0x18]; // 0x30 
+    std::uint8_t _[0x18]; // 0x48 
+    std::uint8_t _[0x18]; // 0x60 
+    std::uint8_t _[0x18]; // 0x78 
 };
 
 struct CPulseRuntimeMethodArg {
     static constexpr std::size_t size = 0x80;
-    std::uint8_t m_Name[0x38]; // 0x0 CKV3MemberNameWithStorage
-    std::uint8_t m_Description[0x8]; // 0x38 CUtlString
-    std::uint8_t m_Type[0x40]; // 0x40 CPulseValueFullType
+    std::uint8_t _[0x38]; // 0x0 
+    std::uint8_t _[0x8]; // 0x38 
+    std::uint8_t _[0x40]; // 0x40 
 };
 
 struct CAnimSequenceParams {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_flFadeInTime[0x4]; // 0x0 float32
-    std::uint8_t m_flFadeOutTime[0x4]; // 0x4 float32
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct CTargetWarpUpdateNode {
     static constexpr std::size_t size = 0x98;
     std::uint8_t pad_0[0x74]; // 0x0
-    std::uint8_t m_eAngleMode[0x4]; // 0x74 TargetWarpAngleMode_t
-    std::uint8_t m_hTargetPositionParameter[0x2]; // 0x78 CAnimParamHandle
-    std::uint8_t m_hTargetUpVectorParameter[0x2]; // 0x7A CAnimParamHandle
-    std::uint8_t m_hTargetFacePositionParameter[0x2]; // 0x7C CAnimParamHandle
-    std::uint8_t m_hMoveHeadingParameter[0x2]; // 0x7E CAnimParamHandle
-    std::uint8_t m_hDesiredMoveHeadingParameter[0x4]; // 0x80 CAnimParamHandle
-    std::uint8_t m_eCorrectionMethod[0x4]; // 0x84 TargetWarpCorrectionMethod
-    std::uint8_t m_eTargetWarpTimingMethod[0x4]; // 0x88 TargetWarpTimingMethod
-    std::uint8_t m_bTargetFacePositionIsWorldSpace[0x1]; // 0x8C bool
-    std::uint8_t m_bTargetPositionIsWorldSpace[0x1]; // 0x8D bool
-    std::uint8_t m_bOnlyWarpWhenTagIsFound[0x1]; // 0x8E bool
-    std::uint8_t m_bWarpOrientationDuringTranslation[0x1]; // 0x8F bool
-    std::uint8_t m_bWarpAroundCenter[0x4]; // 0x90 bool
-    std::uint8_t m_flMaxAngle[0x4]; // 0x94 float32
+    std::uint8_t _[0x4]; // 0x74 
+    std::uint8_t _[0x2]; // 0x78 
+    std::uint8_t _[0x2]; // 0x7a 
+    std::uint8_t _[0x2]; // 0x7c 
+    std::uint8_t _[0x2]; // 0x7e 
+    std::uint8_t _[0x4]; // 0x80 
+    std::uint8_t _[0x4]; // 0x84 
+    std::uint8_t _[0x4]; // 0x88 
+    std::uint8_t _[0x1]; // 0x8c 
+    std::uint8_t _[0x1]; // 0x8d 
+    std::uint8_t _[0x1]; // 0x8e 
+    std::uint8_t _[0x1]; // 0x8f 
+    std::uint8_t _[0x4]; // 0x90 
+    std::uint8_t _[0x4]; // 0x94 
 };
 
 struct CNmVirtualParameterBoolNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nChildNodeIdx[0x8]; // 0x10 int16
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CFollowTargetUpdateNode {
     static constexpr std::size_t size = 0x90;
     std::uint8_t pad_0[0x70]; // 0x0
-    std::uint8_t m_opFixedData[0x18]; // 0x70 FollowTargetOpFixedSettings_t
-    std::uint8_t m_hParameterPosition[0x2]; // 0x88 CAnimParamHandle
-    std::uint8_t m_hParameterOrientation[0x6]; // 0x8A CAnimParamHandle
+    std::uint8_t _[0x18]; // 0x70 
+    std::uint8_t _[0x2]; // 0x88 
+    std::uint8_t _[0x6]; // 0x8a 
 };
 
 struct PulseRuntimeStateOffset_t {
     static constexpr std::size_t size = 0x2;
-    std::uint8_t m_Value[0x2]; // 0x0 uint16
+    std::uint8_t _[0x2]; // 0x0 
 };
 
 struct CCPPScriptComponentUpdater {
     static constexpr std::size_t size = 0x60;
     std::uint8_t pad_0[0x30]; // 0x0
-    std::uint8_t m_scriptsToRun[0x30]; // 0x30 CUtlVector<CGlobalSymbol>
+    std::uint8_t _[0x30]; // 0x30 
 };
 
 struct NetVarConfigIndex {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_index[0xC]; // 0x0 CAnimNetVar<uint32>
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0xc]; // 0x0 
 };
 
 struct CAnimData {
     static constexpr std::size_t size = 0x70;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_name[0x10]; // 0x10 CBufferString
-    std::uint8_t m_animArray[0x18]; // 0x20 CUtlVector<CAnimDesc>
-    std::uint8_t m_decoderArray[0x18]; // 0x38 CUtlVector<CAnimDecoder>
-    std::uint8_t m_nMaxUniqueFrameIndex[0x8]; // 0x50 int32
-    std::uint8_t m_segmentArray[0x18]; // 0x58 CUtlVector<CAnimFrameSegment>
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0x18]; // 0x20 
+    std::uint8_t _[0x18]; // 0x38 
+    std::uint8_t _[0x8]; // 0x50 
+    std::uint8_t _[0x18]; // 0x58 
 };
 
 struct IKSolverSettings_t {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_SolverType[0x4]; // 0x0 IKSolverType
-    std::uint8_t m_nNumIterations[0x4]; // 0x4 int32
-    std::uint8_t m_EndEffectorRotationFixUpMode[0x4]; // 0x8 EIKEndEffectorRotationFixUpMode
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
 };
 
 struct CBinaryUpdateNode {
     static constexpr std::size_t size = 0x90;
     std::uint8_t pad_0[0x60]; // 0x0
-    std::uint8_t m_pChild1[0x10]; // 0x60 CAnimUpdateNodeRef
-    std::uint8_t m_pChild2[0x10]; // 0x70 CAnimUpdateNodeRef
-    std::uint8_t m_timingBehavior[0x4]; // 0x80 BinaryNodeTiming
-    std::uint8_t m_flTimingBlend[0x4]; // 0x84 float32
-    std::uint8_t m_bResetChild1[0x1]; // 0x88 bool
-    std::uint8_t m_bResetChild2[0x7]; // 0x89 bool
+    std::uint8_t _[0x10]; // 0x60 
+    std::uint8_t _[0x10]; // 0x70 
+    std::uint8_t _[0x4]; // 0x80 
+    std::uint8_t _[0x4]; // 0x84 
+    std::uint8_t _[0x1]; // 0x88 
+    std::uint8_t _[0x7]; // 0x89 
 };
 
 struct CBlendNodeInstanceData {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_dampedValue[0x4]; // 0x0 float32
-    std::uint8_t m_flCycle[0x4]; // 0x4 float32
-    std::uint8_t m_flCycleZeroTime[0x4]; // 0x8 float32
-    std::uint8_t m_flPlaybackRate[0x4]; // 0xC float32
-    std::uint8_t m_flBlendValue[0xC]; // 0x10 CAnimNetVar<float32>
-    std::uint8_t m_flDuration[0x4]; // 0x1C float32
-    std::uint8_t m_resetCount[0x10]; // 0x20 CAnimNetVar<uint8>
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0xc]; // 0x10 
+    std::uint8_t _[0x4]; // 0x1c 
+    std::uint8_t _[0x10]; // 0x20 
 };
 
 struct CNmParameterizedBlendNode__BlendRange_t {
-    static constexpr std::size_t size = 0xC;
-    std::uint8_t m_nInputIdx0[0x2]; // 0x0 int16
-    std::uint8_t m_nInputIdx1[0x2]; // 0x2 int16
-    std::uint8_t m_parameterValueRange[0x8]; // 0x4 Range_t
+    static constexpr std::size_t size = 0xc;
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x2]; // 0x2 
+    std::uint8_t _[0x8]; // 0x4 
 };
 
 struct CAnimKeyData {
     static constexpr std::size_t size = 0x78;
-    std::uint8_t m_name[0x10]; // 0x0 CBufferString
-    std::uint8_t m_boneArray[0x18]; // 0x10 CUtlVector<CAnimBone>
-    std::uint8_t m_userArray[0x18]; // 0x28 CUtlVector<CAnimUser>
-    std::uint8_t m_morphArray[0x18]; // 0x40 CUtlVector<CBufferString>
-    std::uint8_t m_nChannelElements[0x8]; // 0x58 int32
-    std::uint8_t m_dataChannelArray[0x18]; // 0x60 CUtlVector<CAnimDataChannelDesc>
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x18]; // 0x10 
+    std::uint8_t _[0x18]; // 0x28 
+    std::uint8_t _[0x18]; // 0x40 
+    std::uint8_t _[0x8]; // 0x58 
+    std::uint8_t _[0x18]; // 0x60 
 };
 
 struct AttachmentHandle_t {
     static constexpr std::size_t size = 0x1;
-    std::uint8_t m_Value[0x1]; // 0x0 uint8
+    std::uint8_t _[0x1]; // 0x0 
 };
 
 struct CAnimMorphDifference {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_name[0x10]; // 0x0 CBufferString
+    std::uint8_t _[0x10]; // 0x0 
 };
 
 struct FootFixedData_t {
     static constexpr std::size_t size = 0x50;
-    std::uint8_t m_vToeOffset[0x10]; // 0x0 VectorAligned
-    std::uint8_t m_vHeelOffset[0x10]; // 0x10 VectorAligned
-    std::uint8_t m_nTargetBoneIndex[0x4]; // 0x20 int32
-    std::uint8_t m_nAnkleBoneIndex[0x4]; // 0x24 int32
-    std::uint8_t m_nIKAnchorBoneIndex[0x4]; // 0x28 int32
-    std::uint8_t m_ikChainIndex[0x4]; // 0x2C int32
-    std::uint8_t m_flMaxIKLength[0x4]; // 0x30 float32
-    std::uint8_t m_nFootIndex[0x4]; // 0x34 int32
-    std::uint8_t m_nTagIndex[0x4]; // 0x38 int32
-    std::uint8_t m_flMaxRotationLeft[0x4]; // 0x3C float32
-    std::uint8_t m_flMaxRotationRight[0x10]; // 0x40 float32
+    std::uint8_t _[0x10]; // 0x0 
+    std::uint8_t _[0x10]; // 0x10 
+    std::uint8_t _[0x4]; // 0x20 
+    std::uint8_t _[0x4]; // 0x24 
+    std::uint8_t _[0x4]; // 0x28 
+    std::uint8_t _[0x4]; // 0x2c 
+    std::uint8_t _[0x4]; // 0x30 
+    std::uint8_t _[0x4]; // 0x34 
+    std::uint8_t _[0x4]; // 0x38 
+    std::uint8_t _[0x4]; // 0x3c 
+    std::uint8_t _[0x10]; // 0x40 
 };
 
 struct CMotionGraphGroup {
     static constexpr std::size_t size = 0x108;
-    std::uint8_t m_searchDB[0xB8]; // 0x0 CMotionSearchDB
-    std::uint8_t m_motionGraphs[0x18]; // 0xB8 CUtlVector<CSmartPtr<CMotionGraph>>
-    std::uint8_t m_motionGraphConfigs[0x18]; // 0xD0 CUtlVector<CMotionGraphConfig>
-    std::uint8_t m_sampleToConfig[0x18]; // 0xE8 CUtlVector<int32>
-    std::uint8_t m_hIsActiveScript[0x8]; // 0x100 AnimScriptHandle
+    std::uint8_t _[0xb8]; // 0x0 
+    std::uint8_t _[0x18]; // 0xb8 
+    std::uint8_t _[0x18]; // 0xd0 
+    std::uint8_t _[0x18]; // 0xe8 
+    std::uint8_t _[0x8]; // 0x100 
 };
 
 struct CPulse_InstructionDebug {
     static constexpr std::size_t size = 0x18;
-    std::uint8_t m_nFlowNodeID[0x4]; // 0x0 PulseDocNodeID_t
-    std::uint8_t m_nValueNodeID[0x4]; // 0x4 PulseDocNodeID_t
-    std::uint8_t m_SequencePointName[0x10]; // 0x8 PulseSymbol_t
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x10]; // 0x8 
 };
 
 struct CNmVectorNegateNode__CDefinition {
     static constexpr std::size_t size = 0x18;
     std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t m_nInputValueNodeIdx[0x8]; // 0x10 int16
+    std::uint8_t _[0x8]; // 0x10 
 };
 
 struct CNmSyncTrack__Event_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_ID[0x8]; // 0x0 CGlobalSymbol
-    std::uint8_t m_startTime[0x4]; // 0x8 NmPercent_t
-    std::uint8_t m_duration[0x4]; // 0xC NmPercent_t
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
 };
 
 struct CParticleCollectionRendererVecInput {
-    static constexpr std::size_t size = 0x6D8;
-    std::uint8_t pad_0[0x6D8]; // 0x0
+    static constexpr std::size_t size = 0x6d8;
+    std::uint8_t pad_0[0x6d8]; // 0x0
 };
 
 struct CNmTarget {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_transform[0x20]; // 0x0 CTransform
-    std::uint8_t m_boneID[0x8]; // 0x20 CGlobalSymbol
-    std::uint8_t m_bIsBoneTarget[0x1]; // 0x28 bool
-    std::uint8_t m_bIsUsingBoneSpaceOffsets[0x1]; // 0x29 bool
-    std::uint8_t m_bHasOffsets[0x1]; // 0x2A bool
-    std::uint8_t m_bIsSet[0x5]; // 0x2B bool
+    std::uint8_t _[0x20]; // 0x0 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x1]; // 0x28 
+    std::uint8_t _[0x1]; // 0x29 
+    std::uint8_t _[0x1]; // 0x2a 
+    std::uint8_t _[0x5]; // 0x2b 
 };
 
 struct CNmControlParameterIDNode__CDefinition {
@@ -7380,52 +7380,52 @@ struct CNmControlParameterIDNode__CDefinition {
 struct CNmBodyGroupEvent {
     static constexpr std::size_t size = 0x30;
     std::uint8_t pad_0[0x18]; // 0x0
-    std::uint8_t m_target[0x8]; // 0x18 CNmEventTargetEntity_t
-    std::uint8_t m_groupName[0x8]; // 0x20 CUtlString
-    std::uint8_t m_choiceName[0x8]; // 0x28 CUtlString
+    std::uint8_t _[0x8]; // 0x18 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x8]; // 0x28 
 };
 
 struct CWayPointHelperUpdateNode {
     static constexpr std::size_t size = 0x80;
     std::uint8_t pad_0[0x74]; // 0x0
-    std::uint8_t m_flStartCycle[0x4]; // 0x74 float32
-    std::uint8_t m_flEndCycle[0x4]; // 0x78 float32
-    std::uint8_t m_bOnlyGoals[0x1]; // 0x7C bool
-    std::uint8_t m_bPreventOvershoot[0x1]; // 0x7D bool
-    std::uint8_t m_bPreventUndershoot[0x2]; // 0x7E bool
+    std::uint8_t _[0x4]; // 0x74 
+    std::uint8_t _[0x4]; // 0x78 
+    std::uint8_t _[0x1]; // 0x7c 
+    std::uint8_t _[0x1]; // 0x7d 
+    std::uint8_t _[0x2]; // 0x7e 
 };
 
 struct CMoodVData {
     static constexpr std::size_t size = 0x100;
-    std::uint8_t m_sModelName[0xE0]; // 0x0 CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
-    std::uint8_t m_nMoodType[0x8]; // 0xE0 MoodType_t
-    std::uint8_t m_animationLayers[0x18]; // 0xE8 CUtlVector<MoodAnimationLayer_t>
+    std::uint8_t _[0xe0]; // 0x0 
+    std::uint8_t _[0x8]; // 0xe0 
+    std::uint8_t _[0x18]; // 0xe8 
 };
 
 struct CModelConfigElement_AttachedModel {
-    static constexpr std::size_t size = 0xF0;
+    static constexpr std::size_t size = 0xf0;
     std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t m_InstanceName[0x8]; // 0x48 CUtlString
-    std::uint8_t m_EntityClass[0x8]; // 0x50 CUtlString
-    std::uint8_t m_hModel[0x8]; // 0x58 CStrongHandle<InfoForResourceTypeCModel>
-    std::uint8_t m_vOffset[0xC]; // 0x60 Vector
-    std::uint8_t m_aAngOffset[0xC]; // 0x6C QAngle
-    std::uint8_t m_AttachmentName[0x8]; // 0x78 CUtlString
-    std::uint8_t m_LocalAttachmentOffsetName[0x8]; // 0x80 CUtlString
-    std::uint8_t m_AttachmentType[0x4]; // 0x88 ModelConfigAttachmentType_t
-    std::uint8_t m_bBoneMergeFlex[0x1]; // 0x8C bool
-    std::uint8_t m_bUserSpecifiedColor[0x1]; // 0x8D bool
-    std::uint8_t m_bUserSpecifiedMaterialGroup[0x2]; // 0x8E bool
-    std::uint8_t m_BodygroupOnOtherModels[0x8]; // 0x90 CUtlString
-    std::uint8_t m_MaterialGroupOnOtherModels[0x8]; // 0x98 CUtlString
-    std::uint8_t m_bCollideWithHierarchy[0x1]; // 0xA0 bool
-    std::uint8_t m_bCollideOutsideHierarchy[0x4F]; // 0xA1 bool
+    std::uint8_t _[0x8]; // 0x48 
+    std::uint8_t _[0x8]; // 0x50 
+    std::uint8_t _[0x8]; // 0x58 
+    std::uint8_t _[0xc]; // 0x60 
+    std::uint8_t _[0xc]; // 0x6c 
+    std::uint8_t _[0x8]; // 0x78 
+    std::uint8_t _[0x8]; // 0x80 
+    std::uint8_t _[0x4]; // 0x88 
+    std::uint8_t _[0x1]; // 0x8c 
+    std::uint8_t _[0x1]; // 0x8d 
+    std::uint8_t _[0x2]; // 0x8e 
+    std::uint8_t _[0x8]; // 0x90 
+    std::uint8_t _[0x8]; // 0x98 
+    std::uint8_t _[0x1]; // 0xa0 
+    std::uint8_t _[0x4f]; // 0xa1 
 };
 
 struct CAnimTagManagerUpdater {
     static constexpr std::size_t size = 0x78;
     std::uint8_t pad_0[0x38]; // 0x0
-    std::uint8_t m_tags[0x40]; // 0x38 CUtlVector<CSmartPtr<CAnimTagBase>>
+    std::uint8_t _[0x40]; // 0x38 
 };
 
 struct CParticleProperty {

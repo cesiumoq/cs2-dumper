@@ -1,7 +1,7 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:50 04/11/2026 (GMT)
+/*  Dumped At       : 22:59 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
 
@@ -14,7 +14,7 @@
 #include <cstddef>
 #include <cstdint>
 
-namespace cs2::rendersystemdx11 {
+namespace cs2::rendersystemdx11_dll {
 
 enum class RenderPrimitiveType_t : std::int32_t {
     RENDER_PRIM_POINTS = 0,
@@ -79,7 +79,7 @@ enum class RsFillMode_t : std::int32_t {
 };
 
 enum class RenderMultisampleType_t : std::int32_t {
-    RENDER_MULTISAMPLE_INVALID = 18446744073709551615,
+    RENDER_MULTISAMPLE_INVALID = -1,
     RENDER_MULTISAMPLE_NONE = 0,
     RENDER_MULTISAMPLE_2X = 1,
     RENDER_MULTISAMPLE_4X = 2,
@@ -106,74 +106,74 @@ enum class UpscalerType_t : std::int32_t {
 };
 
 enum class RenderSlotType_t : std::int32_t {
-    RENDER_SLOT_INVALID = 18446744073709551615,
+    RENDER_SLOT_INVALID = -1,
     RENDER_SLOT_PER_VERTEX = 0,
     RENDER_SLOT_PER_INSTANCE = 1,
 };
 
 struct RsDepthStencilStateDesc_t {
     static constexpr std::size_t size = 0x8;
-    std::uint8_t m_bDepthTestEnable[0x2]; // 0x0 bitfield:1
-    std::uint8_t m_stencilState[0x6]; // 0x2 RsStencilStateDesc_t
+    std::uint8_t _[0x2]; // 0x0 
+    std::uint8_t _[0x6]; // 0x2 
 };
 
 struct SheetSequenceIntegerId_t {
     static constexpr std::size_t size = 0x4;
-    std::uint8_t m_Value[0x4]; // 0x0 uint32
+    std::uint8_t _[0x4]; // 0x0 
 };
 
 struct RsBlendStateDesc_t {
     static constexpr std::size_t size = 0x20;
-    std::uint8_t m_srcBlendBits[0x4]; // 0x0 uint32
-    std::uint8_t m_destBlendBits[0x4]; // 0x4 uint32
-    std::uint8_t m_srcBlendAlphaBits[0x4]; // 0x8 uint32
-    std::uint8_t m_destBlendAlphaBits[0x4]; // 0xC uint32
-    std::uint8_t m_renderTargetWriteMaskBits[0x8]; // 0x10 uint32
-    std::uint8_t m_blendOpAlphaBits[0x4]; // 0x18 uint32
-    std::uint8_t m_blendEnableBits[0x1]; // 0x1C uint8
-    std::uint8_t m_srgbWriteEnableBits[0x3]; // 0x1D uint8
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
+    std::uint8_t _[0x8]; // 0x10 
+    std::uint8_t _[0x4]; // 0x18 
+    std::uint8_t _[0x1]; // 0x1c 
+    std::uint8_t _[0x3]; // 0x1d 
 };
 
 struct VsInputSignatureElement_t {
-    static constexpr std::size_t size = 0xC4;
-    std::uint8_t m_pName[0x40]; // 0x0 char[64]
-    std::uint8_t m_pSemantic[0x40]; // 0x40 char[64]
-    std::uint8_t m_pD3DSemanticName[0x40]; // 0x80 char[64]
-    std::uint8_t m_nD3DSemanticIndex[0x4]; // 0xC0 int32
+    static constexpr std::size_t size = 0xc4;
+    std::uint8_t _[0x40]; // 0x0 
+    std::uint8_t _[0x40]; // 0x40 
+    std::uint8_t _[0x40]; // 0x80 
+    std::uint8_t _[0x4]; // 0xc0 
 };
 
 struct RsRasterizerStateDesc_t {
     static constexpr std::size_t size = 0x10;
-    std::uint8_t m_nFillMode[0x1]; // 0x0 RsFillMode_t
-    std::uint8_t m_nCullMode[0x1]; // 0x1 RsCullMode_t
-    std::uint8_t m_bDepthClipEnable[0x1]; // 0x2 bool
-    std::uint8_t m_bMultisampleEnable[0x1]; // 0x3 bool
-    std::uint8_t m_nDepthBias[0x4]; // 0x4 int32
-    std::uint8_t m_flDepthBiasClamp[0x4]; // 0x8 float32
-    std::uint8_t m_flSlopeScaledDepthBias[0x4]; // 0xC float32
+    std::uint8_t _[0x1]; // 0x0 
+    std::uint8_t _[0x1]; // 0x1 
+    std::uint8_t _[0x1]; // 0x2 
+    std::uint8_t _[0x1]; // 0x3 
+    std::uint8_t _[0x4]; // 0x4 
+    std::uint8_t _[0x4]; // 0x8 
+    std::uint8_t _[0x4]; // 0xc 
 };
 
 struct RsStencilStateDesc_t {
     static constexpr std::size_t size = 0x6;
-    std::uint8_t m_frontStencilFunc[0x4]; // 0x0 bitfield:4
-    std::uint8_t m_nStencilReadMask[0x1]; // 0x4 uint8
-    std::uint8_t m_nStencilWriteMask[0x1]; // 0x5 uint8
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x1]; // 0x4 
+    std::uint8_t _[0x1]; // 0x5 
 };
 
 struct VsInputSignature_t {
     static constexpr std::size_t size = 0x30;
-    std::uint8_t m_elems[0x18]; // 0x0 CUtlVector<VsInputSignatureElement_t>
-    std::uint8_t m_depth_elems[0x18]; // 0x18 CUtlVector<VsInputSignatureElement_t>
+    std::uint8_t _[0x18]; // 0x0 
+    std::uint8_t _[0x18]; // 0x18 
 };
 
 struct RenderInputLayoutField_t {
-    static constexpr std::size_t size = 0x4C;
-    std::uint8_t m_pSemanticName[0x20]; // 0x0 char[32]
-    std::uint8_t m_nSemanticIndex[0x8]; // 0x20 int8
-    std::uint8_t m_nOffset[0x2]; // 0x28 int16
-    std::uint8_t m_nSlot[0x1]; // 0x2A int8
-    std::uint8_t m_nSlotType[0x1]; // 0x2B RenderSlotType_t
-    std::uint8_t m_szShaderSemantic[0x20]; // 0x2C char[32]
+    static constexpr std::size_t size = 0x4c;
+    std::uint8_t _[0x20]; // 0x0 
+    std::uint8_t _[0x8]; // 0x20 
+    std::uint8_t _[0x2]; // 0x28 
+    std::uint8_t _[0x1]; // 0x2a 
+    std::uint8_t _[0x1]; // 0x2b 
+    std::uint8_t _[0x20]; // 0x2c 
 };
 
 } // namespace
