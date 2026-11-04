@@ -1,6 +1,3 @@
-// convars.hpp — CS2 ConVar / ConCommand catalogue (auto-generated)
-// build: 14195
-// 4131 convars, 1186 commands. Read-only snapshot of the tier0 CCvar registry.
 #pragma once
 
 // === ConVars ===

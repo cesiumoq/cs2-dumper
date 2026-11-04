@@ -50,7 +50,7 @@ const FILE_LINKS = {
   offsets: ["offsets.hpp", "offsets.cs", "offsets.json", "OffsetsHex.json", "offsets.txt", "offsets_all.json"],
   patterns: ["patterns.json", "patterns.hpp", "recovered_patterns.json", "scanner_patterns.txt"],
   classes: ["client_dll.hpp", "client_dll.cs", "client_dll.json", "server_dll.hpp", "types.json"],
-  interfaces: ["interfaces.hpp", "interfaces.cs", "interfaces.json", "sdk/interfaces/vtables.json"],
+  interfaces: ["interfaces.hpp", "interfaces.cs", "interfaces.json", "sdk/interfaces/vtables.json", "sdk/interfaces_rva.hpp"],
   convars: ["sdk/convars/convars.json", "sdk/convars/convars.hpp"],
   events: ["sdk/gameevents/gameevents.json"],
   entities: ["sdk/entities/entities.json"],
@@ -423,6 +423,8 @@ function Api({ build }) {
     ["/api/patterns.json", "function signatures with RVA", "patterns"],
     ["/api/offsets.hpp", "C++ constants", "C++"],
     ["/api/client_dll.hpp", "client classes and fields", "SDK"],
+    ["/api/vtables.json", "resolved virtual tables and slots", "vtables"],
+    ["/api/sdk/interfaces_rva.hpp", "interface vtable and method RVAs", "interfaces"],
     ["/api/vpk/manifest.json", "VPK parse summary", "VPK"],
     ["/api/version", "plain build number", "text"],
   ];
@@ -727,7 +729,7 @@ function ModelsView() {
     <section className="panel models-page">
       <div className="panel-head">
         <h2>3D Models</h2>
-        <span className="muted">{MODELS.length} exported ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· glTF 2.0</span>
+        <span className="muted">{MODELS.length} exported ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· glTF 2.0</span>
       </div>
       <p className="muted">Weapon and agent meshes exported from the game VPK, with materials and textures.</p>
       <div className="models-layout">
@@ -751,7 +753,7 @@ function ModelsView() {
                 <button key={color} className={tint === color ? "active" : ""} style={{ background: color }} onClick={() => setTint(color)} title={color} />
               ))}
             </div>
-            <span className="muted">drag to orbit ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· scroll to zoom</span>
+            <span className="muted">drag to orbit ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· scroll to zoom</span>
           </div>
         </div>
       </div>

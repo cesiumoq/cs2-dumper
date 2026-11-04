@@ -1,19 +1,9 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 15:01 03/11/2026 (GMT)
+/*  Dumped At       : 22:12 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
-
-/*
-   module:        pulse_system.dll
-   classes:       33
-   enums:         4
-   generated_at:  2026-11-03T12:42:04.450834200+00:00
-   Use:
-*/
-//   auto* pawn = reinterpret_cast<C_CSPlayerPawn*>(addr);
-//   pawn->m_iHealth() = 100;
 
 #pragma once
 #include "../macros.hpp"

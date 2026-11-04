@@ -1,23 +1,9 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 14:43 03/11/2026 (GMT)
+/*  Dumped At       : 22:10 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
-
-// CS2 interfaces — typed vtable structs in `ifc::<module>::<Class>`.
-// Resolved singleton RVAs are exposed as constants in offsets.hpp
-// (with a `p` prefix when one runtime dereference is needed). Build
-// the typed pointer at the call site or in a project-local wrapper:
-//   auto* is = reinterpret_cast<ifc::inputsystem::CInputSystem*>(
-//       (std::uintptr_t)GetModuleHandleA("inputsystem.dll") + offsets::inputsystem::InputSystemVersion001
-//   );
-//   is->SetRelativeMouseMode(false);
-/*
-   NOTE: only the primary vtable (*(void**)instance) is walked. Classes
-*/
-// reached solely via a secondary vtable (multiple inheritance) are not
-// covered and may be missing slots.
 
 #pragma once
 #include <cstdint>
