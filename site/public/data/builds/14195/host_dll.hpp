@@ -1,36 +1,31 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:36 04/11/2026 (GMT)
+/*  Dumped At       : 22:50 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
 
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Generated from the live CS2 schema system.
+*/
+
 #pragma once
-#include "../macros.hpp"
+#include <cstddef>
+#include <cstdint>
 
-namespace host {
+namespace cs2::host {
 
-    class EmptyTestScript;
-    class CAnimScriptBase;
+struct EmptyTestScript {
+    static constexpr std::size_t size = 0x20;
+    std::uint8_t pad_0[0x10]; // 0x0
+    std::uint8_t m_hTest[0x10]; // 0x10 CAnimScriptParam<float32>
+};
 
-    // EmptyTestScript
-/*
-   fields: 1
-   size: 0x20
-*/
-    class EmptyTestScript {
-    public:
-        SCHEMA_FIELD(CAnimScriptParam<float32>       , m_hTest                                         , 0x10) // CAnimScriptParam<float32>
-    };
+struct CAnimScriptBase {
+    static constexpr std::size_t size = 0x10;
+    std::uint8_t pad_0[0x8]; // 0x0
+    std::uint8_t m_bIsValid[0x8]; // 0x8 bool
+};
 
-    // CAnimScriptBase
-/*
-   fields: 1
-   size: 0x10
-*/
-    class CAnimScriptBase {
-    public:
-        SCHEMA_FIELD(bool                            , m_bIsValid                                      , 0x8) // bool
-    };
-
-} // namespace host
+} // namespace

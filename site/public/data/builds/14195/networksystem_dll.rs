@@ -1,19 +1,14 @@
-// Generated using https://github.com/a2x/cs2-dumper
-// 2026-11-03 12:42:01.636437600 UTC
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Generated from the live CS2 schema system.
+*/
 
-#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
+#![allow(non_snake_case, non_camel_case_types, dead_code)]
 
-pub mod cs2_dumper {
-    pub mod schemas {
-        // Module: networksystem.dll
-        // Class count: 1
-        // Enum count: 0
-        pub mod networksystem_dll {
-            // Parent: None
-            // Field count: 1
-            pub mod ChangeAccessorFieldPathIndex_t {
-                pub const m_Value: usize = 0x0; // int32
-            }
-        }
+pub mod networksystem {
+
+    #[repr(C)]
+    pub struct ChangeAccessorFieldPathIndex_t {
+        pub m_Value: [u8; 0x4], // 0x0
     }
 }

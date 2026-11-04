@@ -1,2461 +1,1555 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:36 04/11/2026 (GMT)
+/*  Dumped At       : 22:50 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
 
-/*
-   Generated using https://github.com/a2x/cs2-dumper
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Generated from the live CS2 schema system.
 */
-// 2026-11-03 12:42:01.636437600 UTC
 
-namespace CS2Dumper.Schemas {
-/*
-   Module: soundsystem.dll
-   Class count: 158
-   Enum count: 35
-*/
-    public static class SoundsystemDll {
-/*
-   Alignment: 1
-   Member count: 2
-*/
-        public enum VMixUpMixRule_t : byte {
-            DIVIDE = 0x0,
-            BROADCAST = 0x1
-        }
-/*
-   Alignment: 4
-   Member count: 3
-*/
-        public enum SndSeqInstrumentType_t : uint {
-            eSndSeqInstNull = 0x0,
-            eSndSeqInstSndEvt = 0x1,
-            eSndSeqInstMidiSampler = 0x2
-        }
-/*
-   Alignment: 4
-   Member count: 2
-*/
-        public enum EMode_t : uint {
-            Peak = 0x0,
-            RMS = 0x1
-        }
-/*
-   Alignment: 4
-   Member count: 7
-*/
-        public enum SndBeatMidiStatusType_t : uint {
-            SndSeqMidiStatusNoteOff = 0x8,
-            SndSeqMidiStatusNoteOn = 0x9,
-            SndSeqMidiStatusKeyPressure = 0xA,
-            SndSeqMidiStatusCtrlChange = 0xB,
-            SndSeqMidiStatusProgramChange = 0xC,
-            SndSeqMidiStatusChannelPressure = 0xD,
-            SndSeqMidiStatusPitchBend = 0xE
-        }
-/*
-   Alignment: 4
-   Member count: 34
-*/
-        public enum VMixGraphCommandID_t : uint {
-            CMD_INVALID = unchecked((uint)-1),
-            CMD_CONTROL_CONVERT_DB_TO_GAIN = 0x1,
-            CMD_CONTROL_TRANSIENT_INPUT_STORE = 0x2,
-            CMD_CONTROL_TRANSIENT_INPUT_RESET = 0x3,
-            CMD_CONTROL_OUTPUT_STORE = 0x4,
-            CMD_CONTROL_EVALUATE_CURVE = 0x5,
-            CMD_CONTROL_COPY = 0x6,
-            CMD_CONTROL_COND_COPY_IF_NEGATIVE = 0x7,
-            CMD_CONTROL_REMAP_LINEAR = 0x8,
-            CMD_CONTROL_REMAP_SINE = 0x9,
-            CMD_CONTROL_REMAP_LOGLINEAR = 0xA,
-            CMD_CONTROL_MAX = 0xB,
-            CMD_CONTROL_RESET_TIMER = 0xC,
-            CMD_CONTROL_INCREMENT_TIMER = 0xD,
-            CMD_CONTROL_EVAL_ENVELOPE = 0xE,
-            CMD_CONTROL_SINE_BLEND = 0xF,
-            CMD_SUBMIX_PROCESS = 0x10,
-            CMD_SUBMIX_GENERATE = 0x11,
-            CMD_SUBMIX_GENERATE_SIDECHAIN = 0x12,
-            CMD_SUBMIX_EXTRACTCONTAINER = 0x13,
-            CMD_SUBMIX_DEBUG = 0x14,
-            CMD_SUBMIX_MIX2x1 = 0x15,
-            CMD_SUBMIX_OUTPUT = 0x16,
-            CMD_SUBMIX_OUTPUTx2 = 0x17,
-            CMD_SUBMIX_COPY = 0x18,
-            CMD_SUBMIX_ACCUMULATE = 0x19,
-            CMD_SUBMIX_METER = 0x1A,
-            CMD_SUBMIX_METER_SPECTRUM = 0x1B,
-            CMD_IMPULSERESPONSE_INPUT_STORE = 0x1C,
-            CMD_PROCESSOR_SET_IMPULSERESPONSE_VALUE = 0x1D,
-            CMD_REMAP_VSND_TO_IMPULSERESPONSE = 0x1E,
-            CMD_IMPULSERESPONSE_RESET = 0x1F,
-            CMD_BLEND_VSNDS_TO_IMPULSERESPONSE = 0x20,
-            CMD_IMPULSERESPONSE_DELAY = 0x21
-        }
-/*
-   Alignment: 1
-   Member count: 5
-*/
-        public enum EWaveform : byte {
-            Sine = 0x0,
-            Square = 0x1,
-            Saw = 0x2,
-            Triangle = 0x3,
-            Noise = 0x4
-        }
-/*
-   Alignment: 1
-   Member count: 6
-*/
-        public enum VMixFilterChannelSet_t : byte {
-            FILTER_ALL_CHANNELS = 0x0,
-            FILTER_LEFT_ONLY = 0x1,
-            FILTER_RIGHT_ONLY = 0x2,
-            FILTER_MID_ONLY = 0x3,
-            FILTER_SIDE_ONLY = 0x4,
-            FILTER_CHANNEL_SET_MAX = 0x5
-        }
-/*
-   Alignment: 4
-   Member count: 5
-*/
-        public enum VMixLFOShape_t : uint {
-            LFO_SHAPE_SINE = 0x0,
-            LFO_SHAPE_SQUARE = 0x1,
-            LFO_SHAPE_TRI = 0x2,
-            LFO_SHAPE_SAW = 0x3,
-            LFO_SHAPE_NOISE = 0x4
-        }
-/*
-   Alignment: 4
-   Member count: 13
-*/
-        public enum VMixOffsetType_t : uint {
-            VO_CHAR = 0x0,
-            VO_ARRAY = 0x1,
-            VO_BOOL = 0x2,
-            VO_FLOAT = 0x3,
-            VO_UINT32 = 0x4,
-            VO_INT32 = 0x5,
-            VO_VECTOR = 0x6,
-            VO_QUATERNION = 0x7,
-            VO_CUBIC_SPLINE = 0x8,
-            VO_VSND_INPUT = 0x9,
-            VO_FLOAT_UTLVECTOR = 0xA,
-            VO_SHAREDPTR_IR = 0xB,
-            VO_TYPE_COUNT = 0xC
-        }
-/*
-   Alignment: 1
-   Member count: 5
-*/
-        public enum VMixMixDownRule_t : byte {
-            SUM = 0x0,
-            LEFT = 0x1,
-            RIGHT = 0x2,
-            MID = 0x3,
-            SIDE = 0x4
-        }
-/*
-   Alignment: 1
-   Member count: 10
-*/
-        public enum VMixFilterType_t : byte {
-            FILTER_UNKNOWN = unchecked((byte)-1),
-            FILTER_LOWPASS = 0x0,
-            FILTER_HIGHPASS = 0x1,
-            FILTER_BANDPASS = 0x2,
-            FILTER_NOTCH = 0x3,
-            FILTER_PEAKING_EQ = 0x4,
-            FILTER_LOW_SHELF = 0x5,
-            FILTER_HIGH_SHELF = 0x6,
-            FILTER_ALLPASS = 0x7,
-            FILTER_PASSTHROUGH = 0x8
-        }
-/*
-   Alignment: 4
-   Member count: 2
-*/
-        public enum SndBeatTrackPlaybackType_t : uint {
-            eSndBeatTrackPlaybackTypeStep = 0x0,
-            eSndBeatTrackPlaybackTypeFwd = 0x1
-        }
-/*
-   Alignment: 2
-   Member count: 10
-*/
-        public enum VMixSendOperator_t : ushort {
-            NO_VOICES = unchecked((ushort)-1),
-            ALL_VOICES = 0x0,
-            ROOM_VOICES = 0x1,
-            FACING_VOICES = 0x2,
-            MIXGROUP_VOICES = 0x3,
-            NAMED_SEND = 0x4,
-            INVERSE_NAMED_SENDS = 0x5,
-            INVERSE_TOTAL_SEND = 0x6,
-            ALL_MAX_SEND = 0x7,
-            TRACK = 0x8
-        }
-/*
-   Alignment: 4
-   Member count: 6
-*/
-        public enum SndBeatEventType_t : uint {
-            eSndBeatEventTypeInvalid = 0x0,
-            eSndBeatEventTypeBeat = 0x1,
-            eSndBeatEventTypeBar = 0x2,
-            eSndBeatEventTypePhrase = 0x3,
-            eSndBeatEventTypeLength = 0x4,
-            eSndBeatEventTypeKeys = 0x5
-        }
-/*
-   Alignment: 4
-   Member count: 3
-*/
-        public enum SosActionStopType_t : uint {
-            SOS_STOPTYPE_NONE = 0x0,
-            SOS_STOPTYPE_TIME = 0x1,
-            SOS_STOPTYPE_OPVAR = 0x2
-        }
-/*
-   Alignment: 4
-   Member count: 5
-*/
-        public enum SndBeatKeyType_t : uint {
-            eSndBeatPatternTypeNone = 0x0,
-            eSndBeatPatternTypeKeys = 0x1,
-            eSndBeatPatternTypeKeyedFloats = 0x2,
-            eSndBeatPatternTypeKeyedSndEvts = 0x3,
-            eSndBeatPatternTypeKeyedMidi = 0x4
-        }
-/*
-   Alignment: 4
-   Member count: 6
-*/
-        public enum SosEditItemType_t : uint {
-            SOS_EDIT_ITEM_TYPE_SOUNDEVENTS = 0x0,
-            SOS_EDIT_ITEM_TYPE_SOUNDEVENT = 0x1,
-            SOS_EDIT_ITEM_TYPE_LIBRARYSTACKS = 0x2,
-            SOS_EDIT_ITEM_TYPE_STACK = 0x3,
-            SOS_EDIT_ITEM_TYPE_OPERATOR = 0x4,
-            SOS_EDIT_ITEM_TYPE_FIELD = 0x5
-        }
-/*
-   Alignment: 4
-   Member count: 3
-*/
-        public enum SndBeatSyncType_t : uint {
-            eSndBeatSyncTypeInvalid = 0x0,
-            eSndBeatSyncTypeReset = 0x1,
-            eSndBeatSyncTypeSeekImmediate = 0x2
-        }
-/*
-   Alignment: 4
-   Member count: 5
-*/
-        public enum PlayBackMode_t : uint {
-            Random = 0x0,
-            RandomNoRepeats = 0x1,
-            RandomAvoidLast = 0x2,
-            Sequential = 0x3,
-            RandomWeights = 0x4
-        }
-/*
-   Alignment: 4
-   Member count: 2
-*/
-        public enum EVsndTriggerMode : uint {
-            Trigger = 0x0,
-            Gate = 0x1
-        }
-/*
-   Alignment: 4
-   Member count: 3
-*/
-        public enum SosGroupFieldBehavior_t : uint {
-            kIgnore = 0x0,
-            kBranch = 0x1,
-            kMatch = 0x2
-        }
-/*
-   Alignment: 4
-   Member count: 30
-*/
-        public enum soundlevel_t : uint {
-            SNDLVL_NONE = 0x0,
-            SNDLVL_20dB = 0x14,
-            SNDLVL_25dB = 0x19,
-            SNDLVL_30dB = 0x1E,
-            SNDLVL_35dB = 0x23,
-            SNDLVL_40dB = 0x28,
-            SNDLVL_45dB = 0x2D,
-            SNDLVL_50dB = 0x32,
-            SNDLVL_55dB = 0x37,
-            SNDLVL_IDLE = 0x3C,
-            SNDLVL_60dB = 0x3C,
-            SNDLVL_65dB = 0x41,
-            SNDLVL_STATIC = 0x42,
-            SNDLVL_70dB = 0x46,
-            SNDLVL_NORM = 0x4B,
-            SNDLVL_75dB = 0x4B,
-            SNDLVL_80dB = 0x50,
-            SNDLVL_TALKING = 0x50,
-            SNDLVL_85dB = 0x55,
-            SNDLVL_90dB = 0x5A,
-            SNDLVL_95dB = 0x5F,
-            SNDLVL_100dB = 0x64,
-            SNDLVL_105dB = 0x69,
-            SNDLVL_110dB = 0x6E,
-            SNDLVL_120dB = 0x78,
-            SNDLVL_130dB = 0x82,
-            SNDLVL_GUNFIRE = 0x8C,
-            SNDLVL_140dB = 0x8C,
-            SNDLVL_150dB = 0x96,
-            SNDLVL_180dB = 0xB4
-        }
-/*
-   Alignment: 4
-   Member count: 2
-*/
-        public enum VMixPannerType_t : uint {
-            PANNER_TYPE_LINEAR = 0x0,
-            PANNER_TYPE_EQUAL_POWER = 0x1
-        }
-/*
-   Alignment: 4
-   Member count: 6
-*/
-        public enum VMixChannelOperation_t : uint {
-            VMIX_CHAN_STEREO = 0x0,
-            VMIX_CHAN_LEFT = 0x1,
-            VMIX_CHAN_RIGHT = 0x2,
-            VMIX_CHAN_SWAP = 0x3,
-            VMIX_CHAN_MONO = 0x4,
-            VMIX_CHAN_MID_SIDE = 0x5
-        }
-/*
-   Alignment: 1
-   Member count: 13
-*/
-        public enum EMidiNote : byte {
-            C = 0x0,
-            C_Sharp = 0x1,
-            D = 0x2,
-            D_Sharp = 0x3,
-            E = 0x4,
-            F = 0x5,
-            F_Sharp = 0x6,
-            G = 0x7,
-            G_Sharp = 0x8,
-            A = 0x9,
-            A_Sharp = 0xA,
-            B = 0xB,
-            Count = 0xC
-        }
-/*
-   Alignment: 1
-   Member count: 14
-*/
-        public enum VMixAutoControlType_t : byte {
-            VMIX_AUTO_SEND_LEVEL = 0x0,
-            VMIX_AUTO_STACK_VAR = 0x1,
-            VMIX_AUTO_PLAYTIME = 0x2,
-            VMIX_AUTO_DISTANCE = 0x3,
-            VMIX_AUTO_POSITION_X = 0x4,
-            VMIX_AUTO_POSITION_Y = 0x5,
-            VMIX_AUTO_POSITION_Z = 0x6,
-            VMIX_AUTO_POSITION_VECTOR = 0x7,
-            VMIX_AUTO_LISTENER_YAW_SIN = 0x8,
-            VMIX_AUTO_LISTENER_YAW_COS = 0x9,
-            VMIX_AUTO_LISTENER_PITCH_SIN = 0xA,
-            VMIX_AUTO_LISTENER_PITCH_COS = 0xB,
-            VMIX_AUTO_LISTENER_ROLL_SIN = 0xC,
-            VMIX_AUTO_LISTENER_ROLL_COS = 0xD
-        }
-/*
-   Alignment: 1
-   Member count: 4
-*/
-        public enum CVSoundFormat_t : byte {
-            PCM16 = 0x0,
-            PCM8 = 0x1,
-            MP3 = 0x2,
-            ADPCM = 0x3
-        }
-/*
-   Alignment: 1
-   Member count: 9
-*/
-        public enum VMixFilterSlope_t : byte {
-            FILTER_SLOPE_1POLE_6dB = 0x0,
-            FILTER_SLOPE_1POLE_12dB = 0x1,
-            FILTER_SLOPE_1POLE_18dB = 0x2,
-            FILTER_SLOPE_1POLE_24dB = 0x3,
-            FILTER_SLOPE_12dB = 0x4,
-            FILTER_SLOPE_24dB = 0x5,
-            FILTER_SLOPE_36dB = 0x6,
-            FILTER_SLOPE_48dB = 0x7,
-            FILTER_SLOPE_MAX = 0x7
-        }
-/*
-   Alignment: 4
-   Member count: 2
-*/
-        public enum SosActionLimitSortType_t : uint {
-            SOS_LIMIT_SORTTYPE_HIGHEST = 0x0,
-            SOS_LIMIT_SORTTYPE_LOWEST = 0x1
-        }
-/*
-   Alignment: 4
-   Member count: 3
-*/
-        public enum VMixSubgraphSwitchInterpolationType_t : uint {
-            SUBGRAPH_INTERPOLATION_TEMPORAL_CROSSFADE = 0x0,
-            SUBGRAPH_INTERPOLATION_TEMPORAL_FADE_OUT = 0x1,
-            SUBGRAPH_INTERPOLATION_KEEP_LAST_SUBGRAPH_RUNNING = 0x2
-        }
-/*
-   Alignment: 4
-   Member count: 2
-*/
-        public enum SosGroupType_t : uint {
-            SOS_GROUPTYPE_DYNAMIC = 0x0,
-            SOS_GROUPTYPE_STATIC = 0x1
-        }
-/*
-   Alignment: 4
-   Member count: 4
-*/
-        public enum VMixOffsetCategory_t : uint {
-            NULL_POINTER = 0x0,
-            HEAP_OFFSET = 0x1,
-            INPUT_INDEX = 0x2,
-            SUBMIX_INDEX = 0x3
-        }
-/*
-   Alignment: 4
-   Member count: 3
-*/
-        public enum SndBeatSyncStartType_t : uint {
-            eSndBeatSyncStartTypeInvalid = 0x0,
-            eSndBeatSyncStartTypeImmediate = 0x1,
-            eSndBeatSyncStartTypeQueue = 0x2
-        }
-/*
-   Alignment: 4
-   Member count: 2
-*/
-        public enum SosActionSetParamSortType_t : uint {
-            SOS_SETPARAM_SORTTYPE_HIGHEST = 0x0,
-            SOS_SETPARAM_SORTTYPE_LOWEST = 0x1
-        }
-/*
-   Alignment: 4
-   Member count: 2
-*/
-        public enum EVsndPlaybackMode : uint {
-            Trigger = 0x0,
-            Gate = 0x1
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixInputBase {
-            public const nint m_name = 0x0; // CUtlString
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerBlender {
-            public const nint m_firstSound = 0x78; // CSoundContainerReference
-            public const nint m_secondSound = 0x98; // CSoundContainerReference
-            public const nint m_flBlendFactor = 0xB8; // float32
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixPitchShiftProcessorDesc {
-            public const nint m_desc = 0x28; // VMixPitchShiftDesc_t
-            public const nint m_paramPitchScale = 0x38; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 4
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixFreeverbDesc_t {
-            public const nint m_flRoomSize = 0x0; // float32
-            public const nint m_flDamp = 0x4; // float32
-            public const nint m_flWidth = 0x8; // float32
-            public const nint m_flLateReflections = 0xC; // float32
-        }
-/*
-   Parent: None
-   Field count: 7
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVoiceContainerStaticAdditiveSynth__CHarmonic {
-            public const nint m_nWaveform = 0x0; // EWaveform
-            public const nint m_nFundamental = 0x1; // EMidiNote
-            public const nint m_nOctave = 0x4; // int32
-            public const nint m_flCents = 0x8; // float32
-            public const nint m_flPhase = 0xC; // float32
-            public const nint m_curve = 0x10; // CPiecewiseCurve
-            public const nint m_volumeScaling = 0x50; // CVoiceContainerStaticAdditiveSynth::CGainScalePerInstance
-        }
-/*
-   Parent: None
-   Field count: 9
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVsndTriggerSlot {
-            public const nint m_bEnableVsnd = 0x0; // bool
-            public const nint m_vsnd = 0x8; // CSoundContainerReference
-            public const nint m_bEnableEndcap = 0x28; // bool
-            public const nint m_endcapVsnd = 0x30; // CSoundContainerReference
-            public const nint m_bEnableLoopcap = 0x50; // bool
-            public const nint m_loopcapVsnd = 0x58; // CSoundContainerReference
-            public const nint m_volume = 0x78; // float32
-            public const nint m_fadeOut = 0x7C; // float32
-            public const nint m_mode = 0x80; // EVsndTriggerMode
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVoiceContainerStaticAdditiveSynth__CTone {
-            public const nint m_harmonics = 0x0; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CHarmonic>
-            public const nint m_curve = 0x18; // CPiecewiseCurve
-            public const nint m_bSyncInstances = 0x58; // bool
-        }
-/*
-   Parent: None
-   Field count: 6
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        public static class CSosGroupActionOcclusionSchema {
-            public const nint m_flCalculationInterval = 0x8; // float32
-            public const nint m_flRadius = 0xC; // float32
-            public const nint m_flOcclusionScale = 0x10; // float32
-            public const nint m_flOcclusionMin = 0x14; // float32
-            public const nint m_flOcclusionMax = 0x18; // float32
-            public const nint m_flTestDepth = 0x1C; // float32
-        }
-/*
-   Parent: None
-   Field count: 6
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerRandomSampler {
-            public const nint m_flAmplitude = 0x88; // float32
-            public const nint m_flAmplitudeJitter = 0x8C; // float32
-            public const nint m_flTimeJitter = 0x90; // float32
-            public const nint m_flMaxLength = 0x94; // float32
-            public const nint m_nNumDelayVariations = 0x98; // int32
-            public const nint m_grainResources = 0xA0; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
-        }
-/*
-   Parent: None
-   Field count: 25
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixSteamAudioDirectProcessorDesc {
-            public const nint m_paramPositionX = 0x28; // CVMixParameterFloat
-            public const nint m_paramPositionY = 0x2C; // CVMixParameterFloat
-            public const nint m_paramPositionZ = 0x30; // CVMixParameterFloat
-            public const nint m_paramRightX = 0x34; // CVMixParameterFloat
-            public const nint m_paramRightY = 0x38; // CVMixParameterFloat
-            public const nint m_paramRightZ = 0x3C; // CVMixParameterFloat
-            public const nint m_paramUpX = 0x40; // CVMixParameterFloat
-            public const nint m_paramUpY = 0x44; // CVMixParameterFloat
-            public const nint m_paramUpZ = 0x48; // CVMixParameterFloat
-            public const nint m_paramAheadX = 0x4C; // CVMixParameterFloat
-            public const nint m_paramAheadY = 0x50; // CVMixParameterFloat
-            public const nint m_paramAheadZ = 0x54; // CVMixParameterFloat
-            public const nint m_paramApplyDistanceAttenuation = 0x58; // CVMixParameterFloat
-            public const nint m_paramApplyAirAbsorption = 0x5C; // CVMixParameterFloat
-            public const nint m_paramApplyDirectivity = 0x60; // CVMixParameterFloat
-            public const nint m_paramApplyOcclusion = 0x64; // CVMixParameterFloat
-            public const nint m_paramApplyTransmission = 0x68; // CVMixParameterFloat
-            public const nint m_paramDipoleWeight = 0x6C; // CVMixParameterFloat
-            public const nint m_paramDipolePower = 0x70; // CVMixParameterFloat
-            public const nint m_paramOcclusion = 0x74; // CVMixParameterFloat
-            public const nint m_paramTransmissionLow = 0x78; // CVMixParameterFloat
-            public const nint m_paramTransmissionMid = 0x7C; // CVMixParameterFloat
-            public const nint m_paramTransmissionHigh = 0x80; // CVMixParameterFloat
-            public const nint m_paramBand = 0x84; // CVMixParameterFloat
-            public const nint m_paramTransmission = 0x88; // CVMixDataOffset
-        }
-/*
-   Parent: None
-   Field count: 9
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixSteamAudioHRTFProcessorDesc {
-            public const nint m_paramPositionX = 0x28; // CVMixParameterFloat
-            public const nint m_paramPositionY = 0x2C; // CVMixParameterFloat
-            public const nint m_paramPositionZ = 0x30; // CVMixParameterFloat
-            public const nint m_paramInterpolation = 0x34; // CVMixParameterFloat
-            public const nint m_paramDirectMixLevel = 0x38; // CVMixParameterFloat
-            public const nint m_paramPerspectiveCorrection = 0x3C; // CVMixParameterFloat
-            public const nint m_paramRelativePosition = 0x40; // CVMixParameterFloat
-            public const nint m_paramDelayLeft = 0x44; // CVMixParameterFloat
-            public const nint m_paramDelayRight = 0x48; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 0
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerDefault {
-        }
-/*
-   Parent: None
-   Field count: 9
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVSound {
-            public const nint m_Sentences = 0x0; // CUtlLeanVector<CAudioSentence>
-            public const nint m_nRate = 0x10; // int32
-            public const nint m_nFormat = 0x14; // CVSoundFormat_t
-            public const nint m_nChannels = 0x18; // uint32
-            public const nint m_nLoopStart = 0x1C; // int32
-            public const nint m_nSampleCount = 0x20; // uint32
-            public const nint m_flDuration = 0x24; // float32
-            public const nint m_nStreamingSize = 0x28; // uint32
-            public const nint m_nLoopEnd = 0x2C; // int32
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MVDataNodeType
-        public static class CDSPPresetMixgroupModifierTable {
-            public const nint m_table = 0x0; // CUtlVector<CDspPresetModifierList>
-        }
-/*
-   Parent: None
-   Field count: 7
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        public static class CSosGroupActionSoundeventClusterSchema {
-            public const nint m_nMinNearby = 0x8; // int32
-            public const nint m_flClusterEpsilon = 0xC; // float32
-            public const nint m_shouldPlayOpvar = 0x10; // CUtlString
-            public const nint m_shouldPlayClusterChild = 0x18; // CUtlString
-            public const nint m_clusterSizeOpvar = 0x20; // CUtlString
-            public const nint m_groupBoundingBoxMinsOpvar = 0x28; // CUtlString
-            public const nint m_groupBoundingBoxMaxsOpvar = 0x30; // CUtlString
-        }
-/*
-   Parent: None
-   Field count: 5
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        public static class CSosGroupActionSetSoundeventParameterSchema {
-            public const nint m_nMaxCount = 0x8; // int32
-            public const nint m_flMinValue = 0xC; // float32
-            public const nint m_flMaxValue = 0x10; // float32
-            public const nint m_opvarName = 0x18; // CUtlString
-            public const nint m_nSortType = 0x20; // SosActionSetParamSortType_t
-        }
-/*
-   Parent: None
-   Field count: 4
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CSoundContainerReference {
-            public const nint m_namespace = 0x0; // CUtlString
-            public const nint m_bUseReference = 0x8; // bool
-            public const nint m_sound = 0x10; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-            public const nint m_pSound = 0x18; // CVoiceContainerBase*
-        }
-/*
-   Parent: None
-   Field count: 0
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerNull {
-        }
-/*
-   Parent: None
-   Field count: 6
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixSubgraphSwitchDesc_t {
-            public const nint m_name = 0x0; // CUtlString
-            public const nint m_effectName = 0x8; // CUtlString
-            public const nint m_subgraphs = 0x10; // CUtlVector<CUtlString>
-            public const nint m_interpolationMode = 0x28; // VMixSubgraphSwitchInterpolationType_t
-            public const nint m_bOnlyTailsOnFadeOut = 0x2C; // bool
-            public const nint m_flInterpolationTime = 0x30; // float32
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MVDataNodeType
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerAnalysisBase {
-            public const nint m_curve = 0x8; // CPiecewiseCurve
-        }
-/*
-   Parent: None
-   Field count: 10
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        public static class CSosGroupActionSoundeventMinMaxValuesSchema {
-            public const nint m_strQueryPublicFieldName = 0x8; // CUtlString
-            public const nint m_strDelayPublicFieldName = 0x10; // CUtlString
-            public const nint m_bExcludeStoppedSounds = 0x18; // bool
-            public const nint m_bExcludeDelayedSounds = 0x19; // bool
-            public const nint m_bExcludeSoundsBelowThreshold = 0x1A; // bool
-            public const nint m_flExcludeSoundsMinThresholdValue = 0x1C; // float32
-            public const nint m_bExcludSoundsAboveThreshold = 0x20; // bool
-            public const nint m_flExcludeSoundsMaxThresholdValue = 0x24; // float32
-            public const nint m_strMinValueName = 0x28; // CUtlString
-            public const nint m_strMaxValueName = 0x30; // CUtlString
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixEnvelopeProcessorDesc {
-            public const nint m_desc = 0x28; // VMixEnvelopeDesc_t
-            public const nint m_outParamLevel = 0x34; // CVMixParameterFloat
-            public const nint m_outParamdBLevel = 0x38; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 8
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixCommand {
-            public const nint m_nCommand = 0x0; // VMixGraphCommandID_t
-            public const nint m_nParameterNameHash = 0x4; // uint32
-            public const nint m_nOutputSubmix = 0x8; // CVMixDataOffset
-            public const nint m_nInputSubmix0 = 0xC; // CVMixDataOffset
-            public const nint m_nInputSubmix1 = 0x10; // CVMixDataOffset
-            public const nint m_nProcessor = 0x14; // int32
-            public const nint m_nInputValue0 = 0x18; // CVMixDataOffset
-            public const nint m_nInputValue1 = 0x1C; // CVMixDataOffset
-        }
-/*
-   Parent: None
-   Field count: 1
-*/
-        public static class SamplerVoice_t {
-            public const nint nNoteNum = 0x0; // uint8
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixControlInput {
-            public const nint m_flDefaultValue = 0x10; // float32
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixBoxverbProcessorDesc {
-            public const nint m_desc = 0x28; // VMixBoxverbDesc_t
-        }
-/*
-   Parent: None
-   Field count: 4
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixDynamicsCompressorProcessorDesc {
-            public const nint m_desc = 0x28; // VMixDynamicsCompressorDesc_t
-            public const nint m_outParamLevel = 0x50; // CVMixParameterFloat
-            public const nint m_outParamdBLevel = 0x54; // CVMixParameterFloat
-            public const nint m_outParamReduction = 0x58; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixPannerDesc_t {
-            public const nint m_type = 0x0; // VMixPannerType_t
-            public const nint m_flStrength = 0x4; // float32
-        }
-/*
-   Parent: None
-   Field count: 4
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        public static class CSosGroupActionSoundeventPrioritySchema {
-            public const nint m_priorityValue = 0x8; // CUtlString
-            public const nint m_priorityVolumeScalar = 0x10; // CUtlString
-            public const nint m_priorityContributeButDontRead = 0x18; // CUtlString
-            public const nint m_bPriorityReadButDontContribute = 0x20; // CUtlString
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerRealtimeFMSineWave {
-            public const nint m_flCarrierFrequency = 0x78; // float32
-            public const nint m_flModulatorFrequency = 0x7C; // float32
-            public const nint m_flModulatorAmount = 0x80; // float32
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class SelectedEditItemInfo_t {
-            public const nint m_EditItems = 0x0; // CUtlVector<SosEditItemInfo_t>
-        }
-/*
-   Parent: None
-   Field count: 9
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixModDelayDesc_t {
-            public const nint m_feedbackFilter = 0x0; // VMixFilterDesc_t
-            public const nint m_bPhaseInvert = 0x10; // bool
-            public const nint m_flGlideTime = 0x14; // float32
-            public const nint m_flDelay = 0x18; // float32
-            public const nint m_flOutputGain = 0x1C; // float32
-            public const nint m_flFeedbackGain = 0x20; // float32
-            public const nint m_flModRate = 0x24; // float32
-            public const nint m_flModDepth = 0x28; // float32
-            public const nint m_bApplyAntialiasing = 0x2C; // bool
-        }
-/*
-   Parent: None
-   Field count: 0
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        public static class CSndSeqInstSndEvtSchema {
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixNameInputMeter {
-            public const nint m_nValueIndex = 0x10; // CVMixDataOffset
-        }
-/*
-   Parent: None
-   Field count: 0
-*/
-        public static class CSndSeqInstruments {
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixDynamics3BandProcessorDesc {
-            public const nint m_desc = 0x28; // VMixDynamics3BandDesc_t
-        }
-/*
-   Parent: None
-   Field count: 17
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixBoxverbDesc_t {
-            public const nint m_flSizeMax = 0x0; // float32
-            public const nint m_flSizeMin = 0x4; // float32
-            public const nint m_flComplexity = 0x8; // float32
-            public const nint m_flDiffusion = 0xC; // float32
-            public const nint m_flModDepth = 0x10; // float32
-            public const nint m_flModRate = 0x14; // float32
-            public const nint m_bParallel = 0x18; // bool
-            public const nint m_filterType = 0x1C; // VMixFilterDesc_t
-            public const nint m_flWidth = 0x2C; // float32
-            public const nint m_flHeight = 0x30; // float32
-            public const nint m_flDepth = 0x34; // float32
-            public const nint m_flFeedbackScale = 0x38; // float32
-            public const nint m_flFeedbackWidth = 0x3C; // float32
-            public const nint m_flFeedbackHeight = 0x40; // float32
-            public const nint m_flFeedbackDepth = 0x44; // float32
-            public const nint m_flOutputGain = 0x48; // float32
-            public const nint m_flTaps = 0x4C; // float32
-        }
-/*
-   Parent: None
-   Field count: 0
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CSosGroupActionSchema {
-        }
-/*
-   Parent: None
-   Field count: 16
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CSosSoundEventGroupSchema {
-            public const nint m_nGroupType = 0x8; // SosGroupType_t
-            public const nint m_bBlocksEvents = 0xC; // bool
-            public const nint m_nBlockMaxCount = 0x10; // int32
-            public const nint m_flMemberLifespanTime = 0x14; // float32
-            public const nint m_bInvertMatch = 0x18; // bool
-            public const nint m_Behavior_EventName = 0x1C; // SosGroupFieldBehavior_t
-            public const nint m_matchSoundEventName = 0x20; // CUtlString
-            public const nint m_bMatchEventSubString = 0x28; // bool
-            public const nint m_matchSoundEventSubString = 0x30; // CUtlString
-            public const nint m_Behavior_EntIndex = 0x38; // SosGroupFieldBehavior_t
-            public const nint m_flEntIndex = 0x3C; // float32
-            public const nint m_Behavior_Opvar = 0x40; // SosGroupFieldBehavior_t
-            public const nint m_flOpvar = 0x44; // float32
-            public const nint m_Behavior_String = 0x48; // SosGroupFieldBehavior_t
-            public const nint m_opvarString = 0x50; // CUtlString
-            public const nint m_vActions = 0x58; // CUtlVector<CSosGroupActionSchema*>
-        }
-/*
-   Parent: None
-   Field count: 11
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        public static class CSndSeqInstMidiSampler {
-            public const nint m_bIsSoundEvent = 0x20; // bool
-            public const nint m_bStopPrevious = 0x21; // bool
-            public const nint m_nMinNote = 0x22; // uint8
-            public const nint m_nMaxNote = 0x23; // uint8
-            public const nint m_flMinVelocityAtten = 0x24; // float32
-            public const nint m_flMaxVelocityAtten = 0x28; // float32
-            public const nint m_flAttack = 0x2C; // float32
-            public const nint m_flRelease = 0x30; // float32
-            public const nint m_bBeatEnvelopes = 0x34; // bool
-            public const nint m_nNextVoiceSlot = 0xD4; // uint8
-            public const nint m_hSoundEventHash = 0xD8; // uint32
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixPointerFixupEntry_t {
-            public const nint m_nIndex = 0x0; // uint32
-            public const nint m_offset = 0x4; // CVMixDataOffset
-        }
-/*
-   Parent: None
-   Field count: 5
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CSndSeqInstBaseSchema {
-            public const nint m_nType = 0x8; // SndSeqInstrumentType_t
-            public const nint m_bStopCurrentEvents = 0xE; // bool
-            public const nint m_flBPM = 0x10; // float32
-            public const nint m_flBPMFactor = 0x14; // float32
-            public const nint m_flBPMInvFactor = 0x18; // float32
-        }
-/*
-   Parent: None
-   Field count: 10
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixDynamics3BandDesc_t {
-            public const nint m_fldbGainOutput = 0x0; // float32
-            public const nint m_flRMSTimeMS = 0x4; // float32
-            public const nint m_fldbKneeWidth = 0x8; // float32
-            public const nint m_flDepth = 0xC; // float32
-            public const nint m_flWetMix = 0x10; // float32
-            public const nint m_flTimeScale = 0x14; // float32
-            public const nint m_flLowCutoffFreq = 0x18; // float32
-            public const nint m_flHighCutoffFreq = 0x1C; // float32
-            public const nint m_bPeakMode = 0x20; // bool
-            public const nint m_bandDesc = 0x24; // VMixDynamicsBand_t[3]
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixEQ8ProcessorDesc {
-            public const nint m_desc = 0x28; // VMixEQ8Desc_t
-            public const nint m_paramEQScale = 0xC8; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 6
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CDSPMixgroupModifier {
-            public const nint m_mixgroup = 0x0; // CUtlString
-            public const nint m_flModifier = 0x8; // float32
-            public const nint m_flModifierMin = 0xC; // float32
-            public const nint m_flSourceModifier = 0x10; // float32
-            public const nint m_flSourceModifierMin = 0x14; // float32
-            public const nint m_flListenerReverbModifierWhenSourceReverbIsActive = 0x18; // float32
-        }
-/*
-   Parent: None
-   Field count: 6
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CAudioMorphData {
-            public const nint m_times = 0x0; // CUtlVector<float32>
-            public const nint m_nameHashCodes = 0x18; // CUtlVector<uint32>
-            public const nint m_nameStrings = 0x30; // CUtlVector<CUtlString>
-            public const nint m_samples = 0x48; // CUtlVector<CUtlVector<float32>>
-            public const nint m_flEaseIn = 0x60; // float32
-            public const nint m_flEaseOut = 0x64; // float32
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class SndBeatEventKeyedFloats_t {
-            public const nint m_flFloat = 0x10; // float32
-        }
-/*
-   Parent: None
-   Field count: 5
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixDualCompressorDesc_t {
-            public const nint m_flRMSTimeMS = 0x0; // float32
-            public const nint m_fldbKneeWidth = 0x4; // float32
-            public const nint m_flWetMix = 0x8; // float32
-            public const nint m_bPeakMode = 0xC; // bool
-            public const nint m_bandDesc = 0x10; // VMixDynamicsBand_t
-        }
-/*
-   Parent: None
-   Field count: 5
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixRuntimeGraph {
-            public const nint m_submixes = 0xD0; // CUtlLeanVector<CVMixSubmix>
-            public const nint m_impulseResponseValues = 0xE0; // CUtlLeanVector<uint64>
-            public const nint m_inputDefaultValues = 0xF0; // KeyValues3
-            public const nint m_sources = 0x100; // KeyValues3
-            public const nint m_fixups = 0x110; // CUtlVector<VMixPointerFixupEntry_t>
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerStaticAdditiveSynth {
-            public const nint m_tones = 0x88; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>
-        }
-/*
-   Parent: None
-   Field count: 9
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerShapedNoise {
-            public const nint m_bUseCurveForFrequency = 0x78; // bool
-            public const nint m_flFrequency = 0x7C; // float32
-            public const nint m_frequencySweep = 0x80; // CPiecewiseCurve
-            public const nint m_bUseCurveForResonance = 0xC0; // bool
-            public const nint m_flResonance = 0xC4; // float32
-            public const nint m_resonanceSweep = 0xC8; // CPiecewiseCurve
-            public const nint m_bUseCurveForAmplitude = 0x108; // bool
-            public const nint m_flGainInDecibels = 0x10C; // float32
-            public const nint m_gainSweep = 0x110; // CPiecewiseCurve
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CDspPresetModifierList {
-            public const nint m_dspName = 0x0; // CUtlString
-            public const nint m_modifiers = 0x8; // CUtlVector<CDSPMixgroupModifier>
-        }
-/*
-   Parent: None
-   Field count: 4
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MVDataNodeType
-        // MVDataFileExtension
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerBase {
-            public const nint m_bRegisteredVMix = 0x10; // bool
-            public const nint m_nResourceName = 0x14; // CUtlStringToken
-            public const nint m_vSound = 0x30; // CVSound
-            public const nint m_pEnvelopeAnalyzer = 0x70; // CVoiceContainerAnalysisBase*
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixDiffusorProcessorDesc {
-            public const nint m_desc = 0x28; // VMixDiffusorDesc_t
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixUtilityProcessorDesc {
-            public const nint m_desc = 0x28; // VMixUtilityDesc_t
-        }
-/*
-   Parent: None
-   Field count: 5
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CRandomPannerControls {
-            public const nint m_panningControlInputName = 0x0; // CUtlString
-            public const nint m_volumeControlInputName = 0x8; // CUtlString
-            public const nint m_flMinVolume = 0x10; // float32
-            public const nint m_flMaxVolume = 0x14; // float32
-            public const nint m_strVectorStackParam = 0x18; // CUtlString
-        }
-/*
-   Parent: None
-   Field count: 8
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        public static class CVoiceContainerGranulator {
-            public const nint m_flGrainLength = 0x88; // float32
-            public const nint m_flGrainCrossfadeAmount = 0x8C; // float32
-            public const nint m_flStartJitter = 0x90; // float32
-            public const nint m_flPlaybackJitter = 0x94; // float32
-            public const nint m_bShouldWraparound = 0x98; // bool
-            public const nint m_sourceAudio = 0xA0; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-            public const nint m_bDoubleBufferSourceAudio = 0xA8; // bool
-            public const nint m_flMaxSourceLength = 0xAC; // float32
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixPresetDSPProcessorDesc {
-            public const nint m_desc = 0x28; // VMixPresetDSPDesc_t
-            public const nint m_paramEffectName = 0x38; // CVMixParameterEffectName
-        }
-/*
-   Parent: None
-   Field count: 7
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixDelayDesc_t {
-            public const nint m_feedbackFilter = 0x0; // VMixFilterDesc_t
-            public const nint m_bEnableFilter = 0x10; // bool
-            public const nint m_flDelay = 0x14; // float32
-            public const nint m_flDirectGain = 0x18; // float32
-            public const nint m_flDelayGain = 0x1C; // float32
-            public const nint m_flFeedbackGain = 0x20; // float32
-            public const nint m_flWidth = 0x24; // float32
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixEQ8Desc_t {
-            public const nint m_stages = 0x0; // VMixEQFilterDesc_t[8]
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixDynamicsProcessorDesc {
-            public const nint m_desc = 0x28; // VMixDynamicsDesc_t
-            public const nint m_outParamLevel = 0x58; // CVMixParameterFloat
-            public const nint m_outParamdBLevel = 0x5C; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixEQFilterDesc_t {
-            public const nint m_nChannelSet = 0x10; // VMixFilterChannelSet_t
-        }
-/*
-   Parent: None
-   Field count: 8
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerLoopXFade {
-            public const nint m_sound = 0x78; // CSoundContainerReference
-            public const nint m_flLoopEnd = 0x98; // float32
-            public const nint m_flLoopStart = 0x9C; // float32
-            public const nint m_flFadeOut = 0xA0; // float32
-            public const nint m_flFadeIn = 0xA4; // float32
-            public const nint m_bPlayHead = 0xA8; // bool
-            public const nint m_bPlayTail = 0xA9; // bool
-            public const nint m_bEqualPow = 0xAA; // bool
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixPresetDSPDesc_t {
-            public const nint m_effectName = 0x0; // CUtlString
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CAudioPhonemeTag {
-            public const nint m_flStartTime = 0x0; // float32
-            public const nint m_flEndTime = 0x4; // float32
-            public const nint m_nPhonemeCode = 0x8; // int32
-        }
-/*
-   Parent: None
-   Field count: 10
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVsndRadioButtonSlot {
-            public const nint m_bEnableVsnd = 0x0; // bool
-            public const nint m_vsnd = 0x8; // CSoundContainerReference
-            public const nint m_bEnableEndcap = 0x28; // bool
-            public const nint m_endcapVsnd = 0x30; // CSoundContainerReference
-            public const nint m_bEnableLoopcap = 0x50; // bool
-            public const nint m_loopcapVsnd = 0x58; // CSoundContainerReference
-            public const nint m_group = 0x78; // int32
-            public const nint m_volume = 0x7C; // float32
-            public const nint m_fadeOut = 0x80; // float32
-            public const nint m_mode = 0x84; // EVsndPlaybackMode
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        public static class CSosGroupActionSoundeventCountSchema {
-            public const nint m_bExcludeStoppedSounds = 0x8; // bool
-            public const nint m_strCountKeyName = 0x10; // CUtlString
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerEnvelopeAnalyzer {
-            public const nint m_mode = 0x48; // EMode_t
-            public const nint m_fAnalysisWindowMs = 0x4C; // float32
-            public const nint m_flThreshold = 0x50; // float32
-        }
-/*
-   Parent: None
-   Field count: 7
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixBaseProcessorDesc {
-            public const nint m_name = 0x8; // CUtlString
-            public const nint m_nDebugId = 0x10; // uint32
-            public const nint m_flxfade = 0x14; // float32
-            public const nint m_nChannels = 0x18; // int32
-            public const nint m_bDebugBypass = 0x1C; // bool
-            public const nint m_paramEnable = 0x20; // CVMixParameterFloat
-            public const nint m_paramMix = 0x24; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 0
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixImpulseResponseInput {
-        }
-/*
-   Parent: None
-   Field count: 5
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixSteamAudioHybridReverbProcessorDesc {
-            public const nint m_paramReverbTimeLow = 0x28; // CVMixParameterFloat
-            public const nint m_paramReverbTimeMid = 0x2C; // CVMixParameterFloat
-            public const nint m_paramReverbTimeHigh = 0x30; // CVMixParameterFloat
-            public const nint m_paramBand = 0x34; // CVMixParameterFloat
-            public const nint m_paramReverbTime = 0x38; // CVMixDataOffset
-        }
-/*
-   Parent: None
-   Field count: 4
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixPitchShiftDesc_t {
-            public const nint m_nGrainSampleCount = 0x0; // int32
-            public const nint m_flPitchShift = 0x4; // float32
-            public const nint m_nQuality = 0x8; // int32
-            public const nint m_nProcType = 0xC; // int32
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixControlOutput {
-            public const nint m_flDefaultValue = 0x10; // float32
-        }
-/*
-   Parent: None
-   Field count: 5
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixModDelayProcessorDesc {
-            public const nint m_desc = 0x28; // VMixModDelayDesc_t
-            public const nint m_paramCutoffFrequency = 0x58; // CVMixParameterFloat
-            public const nint m_paramDelay = 0x5C; // CVMixParameterFloat
-            public const nint m_paramModRate = 0x60; // CVMixParameterFloat
-            public const nint m_paramModDepth = 0x64; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixShaperProcessorDesc {
-            public const nint m_desc = 0x28; // VMixShaperDesc_t
-            public const nint m_paramDrive = 0x3C; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixParameterFloat {
-            public const nint m_offset = 0x0; // CVMixDataOffset
-        }
-/*
-   Parent: None
-   Field count: 15
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixBaseGraphDescription {
-            public const nint m_name = 0x0; // CUtlString
-            public const nint m_nGraphOutputChannels = 0x8; // int32
-            public const nint m_bIsMainGraph = 0xC; // bool
-            public const nint m_processorNodes = 0x10; // CUtlLeanVector<std::unique_ptr<CVMixBaseProcessorDesc>>
-            public const nint m_graphInputs = 0x20; // CUtlLeanVector<CVMixGraphInput>
-            public const nint m_controlTransientInputs = 0x30; // CUtlLeanVector<CVMixControlInput>
-            public const nint m_controlOutputs = 0x40; // CUtlLeanVector<CVMixControlOutput>
-            public const nint m_impulseResponseInputs = 0x50; // CUtlLeanVector<CVMixImpulseResponseInput>
-            public const nint m_mixCommands = 0x60; // CUtlLeanVector<CVMixCommand>
-            public const nint m_heap = 0x70; // CVMixHeap
-            public const nint m_audioMeters = 0x80; // CUtlLeanVector<CVMixAudioMeter>
-            public const nint m_controlMeters = 0x90; // CUtlLeanVector<CVMixControlMeter>
-            public const nint m_nameInputMeters = 0xA0; // CUtlLeanVector<CVMixNameInputMeter>
-            public const nint m_additionalOutputs = 0xB0; // CUtlLeanVector<CVMixAdditionalOutput>
-            public const nint m_automaticControlInputs = 0xC0; // CUtlLeanVector<CVMixAutomaticControlInput>
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixAutomaticControlInput {
-            public const nint m_name = 0x0; // CUtlString
-            public const nint m_nGraphInputIndex = 0xC; // int32
-            public const nint m_nControlType = 0x10; // VMixAutoControlType_t
-        }
-/*
-   Parent: None
-   Field count: 5
-   Metadata:
-*/
-        // MPropertyArrayElementNameKey
-        // MVDataOutlinerNameExpr
-        // MGetKV3ClassDefaults
-        public static class CSndBeatTrack {
-            public const nint m_name = 0x0; // CUtlString
-            public const nint m_playbackType = 0x20; // SndBeatTrackPlaybackType_t
-            public const nint m_nTranspose = 0x24; // int32
-            public const nint m_bSyncToVoice = 0x28; // bool
-            public const nint m_flBPM = 0x2C; // float32
-        }
-/*
-   Parent: None
-   Field count: 17
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerVsndRadioButton {
-            public const nint m_namespace = 0x78; // CUtlString
-            public const nint m_slot1 = 0x80; // CVsndRadioButtonSlot
-            public const nint m_slot2 = 0x108; // CVsndRadioButtonSlot
-            public const nint m_slot3 = 0x190; // CVsndRadioButtonSlot
-            public const nint m_slot4 = 0x218; // CVsndRadioButtonSlot
-            public const nint m_slot5 = 0x2A0; // CVsndRadioButtonSlot
-            public const nint m_slot6 = 0x328; // CVsndRadioButtonSlot
-            public const nint m_slot7 = 0x3B0; // CVsndRadioButtonSlot
-            public const nint m_slot8 = 0x438; // CVsndRadioButtonSlot
-            public const nint m_slot9 = 0x4C0; // CVsndRadioButtonSlot
-            public const nint m_slot10 = 0x548; // CVsndRadioButtonSlot
-            public const nint m_slot11 = 0x5D0; // CVsndRadioButtonSlot
-            public const nint m_slot12 = 0x658; // CVsndRadioButtonSlot
-            public const nint m_slot13 = 0x6E0; // CVsndRadioButtonSlot
-            public const nint m_slot14 = 0x768; // CVsndRadioButtonSlot
-            public const nint m_slot15 = 0x7F0; // CVsndRadioButtonSlot
-            public const nint m_slot16 = 0x878; // CVsndRadioButtonSlot
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CAudioEmphasisSample {
-            public const nint m_flTime = 0x0; // float32
-            public const nint m_flValue = 0x4; // float32
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixOscProcessorDesc {
-            public const nint m_desc = 0x28; // VMixOscDesc_t
-            public const nint m_paramFrequency = 0x34; // CVMixParameterFloat
-            public const nint m_paramPhase = 0x38; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerLoopTriggerWithRandomPanner {
-            public const nint m_randomPannerControls = 0xA8; // CRandomPannerControls
-        }
-/*
-   Parent: None
-   Field count: 0
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVoiceContainerGenerator {
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerSet {
-            public const nint m_soundsToPlay = 0x78; // CUtlVector<CVoiceContainerSetElement>
-        }
-/*
-   Parent: None
-   Field count: 8
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixConvolutionDesc_t {
-            public const nint m_fldbGain = 0x0; // float32
-            public const nint m_flPreDelayMS = 0x4; // float32
-            public const nint m_flWetMix = 0x8; // float32
-            public const nint m_fldbLow = 0xC; // float32
-            public const nint m_fldbMid = 0x10; // float32
-            public const nint m_fldbHigh = 0x14; // float32
-            public const nint m_flLowCutoffFreq = 0x18; // float32
-            public const nint m_flHighCutoffFreq = 0x1C; // float32
-        }
-/*
-   Parent: None
-   Field count: 17
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerVsndTrigger {
-            public const nint m_namespace = 0x78; // CUtlString
-            public const nint m_slot1 = 0x80; // CVsndTriggerSlot
-            public const nint m_slot2 = 0x108; // CVsndTriggerSlot
-            public const nint m_slot3 = 0x190; // CVsndTriggerSlot
-            public const nint m_slot4 = 0x218; // CVsndTriggerSlot
-            public const nint m_slot5 = 0x2A0; // CVsndTriggerSlot
-            public const nint m_slot6 = 0x328; // CVsndTriggerSlot
-            public const nint m_slot7 = 0x3B0; // CVsndTriggerSlot
-            public const nint m_slot8 = 0x438; // CVsndTriggerSlot
-            public const nint m_slot9 = 0x4C0; // CVsndTriggerSlot
-            public const nint m_slot10 = 0x548; // CVsndTriggerSlot
-            public const nint m_slot11 = 0x5D0; // CVsndTriggerSlot
-            public const nint m_slot12 = 0x658; // CVsndTriggerSlot
-            public const nint m_slot13 = 0x6E0; // CVsndTriggerSlot
-            public const nint m_slot14 = 0x768; // CVsndTriggerSlot
-            public const nint m_slot15 = 0x7F0; // CVsndTriggerSlot
-            public const nint m_slot16 = 0x878; // CVsndTriggerSlot
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVoiceContainerSetElement {
-            public const nint m_sound = 0x0; // CSoundContainerReference
-            public const nint m_flVolumeDB = 0x20; // float32
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MPropertyFriendlyName
-        // MGetKV3ClassDefaults
-        public static class CSndBeatPatternManager {
-            public const nint m_vecPatterns = 0x38; // CUtlVector<CSndBeatPattern>
-            public const nint m_vecActiveTracks = 0x70; // CUtlVector<CSndBeatTrack>
-        }
-/*
-   Parent: None
-   Field count: 0
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVoiceContainerAsyncGenerator {
-        }
-/*
-   Parent: None
-   Field count: 0
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CSoundInfoHeader {
-        }
-/*
-   Parent: None
-   Field count: 4
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixDescription {
-            public const nint m_submixList = 0xD0; // CUtlLeanVector<CSubmix>
-            public const nint m_sources = 0xE0; // CUtlLeanVector<std::unique_ptr<CVoiceContainerBase>>
-            public const nint m_impulseResponseValues = 0xF0; // CUtlLeanVector<uint64>
-            public const nint m_nNameHashCode = 0x100; // uint32
-        }
-/*
-   Parent: None
-   Field count: 5
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class SosEditItemInfo_t {
-            public const nint itemType = 0x0; // SosEditItemType_t
-            public const nint itemName = 0x8; // CUtlString
-            public const nint itemTypeName = 0x10; // CUtlString
-            public const nint itemKVString = 0x20; // CUtlString
-            public const nint itemPos = 0x28; // Vector2D
-        }
-/*
-   Parent: None
-   Field count: 7
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixSubmix {
-            public const nint m_name = 0x0; // CUtlString
-            public const nint m_SendNames = 0x8; // CUtlString[4]
-            public const nint m_nSoloNameHash = 0x2C; // uint32
-            public const nint m_nChannels = 0x30; // int32
-            public const nint m_nSendOperator = 0x34; // VMixSendOperator_t
-            public const nint m_nMixDownRule = 0x36; // VMixMixDownRule_t
-            public const nint m_nUpMixRule = 0x37; // VMixUpMixRule_t
-        }
-/*
-   Parent: None
-   Field count: 4
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixFlangerProcessorDesc {
-            public const nint m_desc = 0x28; // VMixFlangerDesc_t
-            public const nint m_paramDelay = 0x4C; // CVMixParameterFloat
-            public const nint m_paramModRate = 0x50; // CVMixParameterFloat
-            public const nint m_paramModDepth = 0x54; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixEffectChainProcessorDesc {
-            public const nint m_desc = 0x28; // VMixEffectChainDesc_t
-            public const nint m_paramEffectName = 0x30; // CVMixParameterEffectName
-        }
-/*
-   Parent: None
-   Field count: 5
-*/
-        public static class KeyGroup_t {
-            public const nint nCenterNote = 0x0; // uint8
-            public const nint nMinNote = 0x1; // uint8
-            public const nint nMaxNote = 0x2; // uint8
-            public const nint nNumVelocityZones = 0x3; // uint8
-            public const nint pVelocityZones = 0x8; // VelocityZone_t*
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixFreeverbProcessorDesc {
-            public const nint m_desc = 0x28; // VMixFreeverbDesc_t
-        }
-/*
-   Parent: None
-   Field count: 7
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixPlateverbDesc_t {
-            public const nint m_flPrefilter = 0x0; // float32
-            public const nint m_flInputDiffusion1 = 0x4; // float32
-            public const nint m_flInputDiffusion2 = 0x8; // float32
-            public const nint m_flDecay = 0xC; // float32
-            public const nint m_flDamp = 0x10; // float32
-            public const nint m_flFeedbackDiffusion1 = 0x14; // float32
-            public const nint m_flFeedbackDiffusion2 = 0x18; // float32
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixConvolutionProcessorDesc {
-            public const nint m_desc = 0x28; // VMixConvolutionDesc_t
-            public const nint m_paramImpulseResponse = 0x48; // CVMixDataOffset
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixParameterBool {
-            public const nint m_offset = 0x0; // CVMixDataOffset
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CSoundContainerReferenceArray {
-            public const nint m_bUseReference = 0x0; // bool
-            public const nint m_sounds = 0x8; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
-            public const nint m_pSounds = 0x20; // CUtlVector<CVoiceContainerBase*>
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixFilterProcessorDesc {
-            public const nint m_desc = 0x28; // VMixFilterDesc_t
-            public const nint m_paramCutoffFreq = 0x38; // CVMixParameterFloat
-            public const nint m_paramQ = 0x3C; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixAdditionalOutput {
-            public const nint m_name = 0x0; // CUtlString
-        }
-/*
-   Parent: None
-   Field count: 4
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        public static class CVoiceContainerTapePlayer {
-            public const nint m_bShouldWraparound = 0x88; // bool
-            public const nint m_sourceAudio = 0x90; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-            public const nint m_flTapeSpeedAttackTime = 0x98; // float32
-            public const nint m_flTapeSpeedReleaseTime = 0x9C; // float32
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixSubgraphSwitchProcessorDesc {
-            public const nint m_desc = 0x28; // VMixSubgraphSwitchDesc_t
-            public const nint m_paramEffectName = 0x60; // CVMixParameterEffectName
-            public const nint m_paramSelectionIndex = 0x64; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 4
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixDiffusorDesc_t {
-            public const nint m_flSize = 0x0; // float32
-            public const nint m_flComplexity = 0x4; // float32
-            public const nint m_flFeedback = 0x8; // float32
-            public const nint m_flOutputGain = 0xC; // float32
-        }
-/*
-   Parent: None
-   Field count: 7
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixSteamAudioPathingProcessorDesc {
-            public const nint m_paramPositionX = 0x28; // CVMixParameterFloat
-            public const nint m_paramPositionY = 0x2C; // CVMixParameterFloat
-            public const nint m_paramPositionZ = 0x30; // CVMixParameterFloat
-            public const nint m_paramPathingMixLevel = 0x34; // CVMixParameterFloat
-            public const nint m_paramBand = 0x38; // CVMixParameterFloat
-            public const nint m_paramArrayPathingEQ = 0x3C; // CVMixDataOffset
-            public const nint m_paramArrayPathingCoefficients = 0x40; // CVMixDataOffset
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixPannerProcessorDesc {
-            public const nint m_desc = 0x28; // VMixPannerDesc_t
-            public const nint m_paramPan = 0x30; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 11
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixDynamicsCompressorDesc_t {
-            public const nint m_fldbOutputGain = 0x0; // float32
-            public const nint m_fldbCompressionThreshold = 0x4; // float32
-            public const nint m_fldbKneeWidth = 0x8; // float32
-            public const nint m_flCompressionRatio = 0xC; // float32
-            public const nint m_flAttackTimeMS = 0x10; // float32
-            public const nint m_flReleaseTimeMS = 0x14; // float32
-            public const nint m_flRMSTimeMS = 0x18; // float32
-            public const nint m_flWetMix = 0x1C; // float32
-            public const nint m_flSCHighPassFreq = 0x20; // float32
-            public const nint m_bPeakMode = 0x24; // bool
-            public const nint m_bAutoMakeupGain = 0x25; // bool
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixHeap {
-            public const nint m_storage = 0x0; // CUtlLeanVector<uint32>
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerVMixSnd {
-            public const nint m_resourceName = 0x188; // CUtlString
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixStereoDelayProcessorDesc {
-            public const nint m_paramDelayLeft = 0x28; // CVMixParameterFloat
-            public const nint m_paramDelayRight = 0x2C; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 5
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixShaperDesc_t {
-            public const nint m_nShape = 0x0; // int32
-            public const nint m_fldbDrive = 0x4; // float32
-            public const nint m_fldbOutputGain = 0x8; // float32
-            public const nint m_flWetMix = 0xC; // float32
-            public const nint m_nOversampleFactor = 0x10; // int32
-        }
-/*
-   Parent: None
-   Field count: 1
-*/
-        public static class CVMixDataOffset {
-            public const nint m_nOffset = 0x0; // uint32
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixEnvelopeDesc_t {
-            public const nint m_flAttackTimeMS = 0x0; // float32
-            public const nint m_flHoldTimeMS = 0x4; // float32
-            public const nint m_flReleaseTimeMS = 0x8; // float32
-        }
-/*
-   Parent: None
-   Field count: 4
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CAudioSentence {
-            public const nint m_bShouldVoiceDuck = 0x0; // bool
-            public const nint m_RunTimePhonemes = 0x8; // CUtlVector<CAudioPhonemeTag>
-            public const nint m_EmphasisSamples = 0x20; // CUtlVector<CAudioEmphasisSample>
-            public const nint m_morphData = 0x38; // CAudioMorphData
-        }
-/*
-   Parent: None
-   Field count: 8
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerParameterBlender {
-            public const nint m_firstSound = 0x78; // CSoundContainerReference
-            public const nint m_secondSound = 0x98; // CSoundContainerReference
-            public const nint m_bEnableOcclusionBlend = 0xB8; // bool
-            public const nint m_curve1 = 0xC0; // CPiecewiseCurve
-            public const nint m_curve2 = 0x100; // CPiecewiseCurve
-            public const nint m_bEnableDistanceBlend = 0x140; // bool
-            public const nint m_curve3 = 0x148; // CPiecewiseCurve
-            public const nint m_curve4 = 0x188; // CPiecewiseCurve
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixAudioMeter {
-            public const nint m_name = 0x0; // CUtlString
-            public const nint m_displayName = 0x8; // CUtlString
-            public const nint m_nDebugId = 0x10; // uint32
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixVocoderProcessorDesc {
-            public const nint m_desc = 0x28; // VMixVocoderDesc_t
-            public const nint m_paramBandwidth = 0x50; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 5
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        public static class CSosGroupActionLimitSchema {
-            public const nint m_nMaxCount = 0x8; // int32
-            public const nint m_nStopType = 0xC; // SosActionStopType_t
-            public const nint m_nSortType = 0x10; // SosActionLimitSortType_t
-            public const nint m_bStopImmediate = 0x14; // bool
-            public const nint m_bCountStopped = 0x15; // bool
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerAmpedDecayingSineWave {
-            public const nint m_flGainAmount = 0x80; // float32
-        }
-/*
-   Parent: None
-   Field count: 8
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixAutoFilterDesc_t {
-            public const nint m_flEnvelopeAmount = 0x0; // float32
-            public const nint m_flAttackTimeMS = 0x4; // float32
-            public const nint m_flReleaseTimeMS = 0x8; // float32
-            public const nint m_filter = 0xC; // VMixFilterDesc_t
-            public const nint m_flLFOAmount = 0x1C; // float32
-            public const nint m_flLFORate = 0x20; // float32
-            public const nint m_flPhase = 0x24; // float32
-            public const nint m_nLFOShape = 0x28; // VMixLFOShape_t
-        }
-/*
-   Parent: None
-   Field count: 10
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixDynamicsBand_t {
-            public const nint m_fldbGainInput = 0x0; // float32
-            public const nint m_fldbGainOutput = 0x4; // float32
-            public const nint m_fldbThresholdBelow = 0x8; // float32
-            public const nint m_fldbThresholdAbove = 0xC; // float32
-            public const nint m_flRatioBelow = 0x10; // float32
-            public const nint m_flRatioAbove = 0x14; // float32
-            public const nint m_flAttackTimeMS = 0x18; // float32
-            public const nint m_flReleaseTimeMS = 0x1C; // float32
-            public const nint m_bEnable = 0x20; // bool
-            public const nint m_bSolo = 0x21; // bool
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixEffectChainDesc_t {
-            public const nint m_effectName = 0x0; // CUtlString
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixPlateReverbProcessorDesc {
-            public const nint m_desc = 0x28; // VMixPlateverbDesc_t
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerMultiBlender {
-            public const nint m_soundsToPlay = 0x78; // CSoundContainerReferenceArray
-            public const nint m_flBlendFactor = 0xB0; // float32
-            public const nint m_flCrossover = 0xB4; // float32
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixVsndInput {
-            public const nint m_defaultValue = 0x0; // CUtlString
-        }
-/*
-   Parent: None
-   Field count: 4
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVoiceContainerStaticAdditiveSynth__CGainScalePerInstance {
-            public const nint m_flMinVolume = 0x0; // float32
-            public const nint m_nInstancesAtMinVolume = 0x4; // int32
-            public const nint m_flMaxVolume = 0x8; // float32
-            public const nint m_nInstancesAtMaxVolume = 0xC; // int32
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixParameterEffectName {
-            public const nint m_offset = 0x0; // CVMixDataOffset
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class SndBeatTimeSignature_t {
-            public const nint nNumerator = 0x0; // uint8
-            public const nint nDenominator = 0x1; // uint8
-        }
-/*
-   Parent: None
-   Field count: 4
-*/
-        public static class VelocityZone_t {
-            public const nint nMaxVel = 0x0; // uint8
-            public const nint nNextSelection = 0x1; // uint8
-            public const nint nNumSamples = 0x2; // uint8
-            public const nint pSamples = 0x4; // uint32[4]
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerSelector {
-            public const nint m_mode = 0x78; // PlayBackMode_t
-            public const nint m_soundsToPlay = 0x80; // CSoundContainerReferenceArray
-            public const nint m_fProbabilityWeights = 0xB8; // CUtlVector<float32>
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class SndBeatEventKeyedSndEvts_t {
-            public const nint m_strSoundEventName = 0x10; // CUtlString
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixGraphInput {
-            public const nint m_nOffset = 0x10; // CVMixDataOffset
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        public static class CSosGroupActionTimeBlockLimitSchema {
-            public const nint m_nMaxCount = 0x8; // int32
-            public const nint m_flMaxDuration = 0xC; // float32
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class SndBeatEventKeyedMidiNotes_t {
-            public const nint m_nStatus = 0x10; // uint8
-            public const nint m_nNote = 0x11; // uint8
-            public const nint m_nVelocity = 0x12; // uint8
-        }
-/*
-   Parent: None
-   Field count: 8
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        public static class CSosGroupActionMemberCountEnvelopeSchema {
-            public const nint m_nBaseCount = 0x8; // int32
-            public const nint m_nTargetCount = 0xC; // int32
-            public const nint m_flBaseValue = 0x10; // float32
-            public const nint m_flTargetValue = 0x14; // float32
-            public const nint m_flAttack = 0x18; // float32
-            public const nint m_flDecay = 0x1C; // float32
-            public const nint m_resultVarName = 0x20; // CUtlString
-            public const nint m_bSaveToGroup = 0x28; // bool
-        }
-/*
-   Parent: None
-   Field count: 4
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixDualCompressorProcessorDesc {
-            public const nint m_desc = 0x28; // VMixDualCompressorDesc_t
-            public const nint m_outParamLevel = 0x5C; // CVMixParameterFloat
-            public const nint m_outParamdBLevel = 0x60; // CVMixParameterFloat
-            public const nint m_outParamReduction = 0x64; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerSwitch {
-            public const nint m_soundsToPlay = 0x78; // CUtlVector<CSoundContainerReference>
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixControlMeter {
-            public const nint m_nValueIndex = 0x10; // CVMixDataOffset
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerEnum {
-            public const nint m_soundsToPlay = 0x78; // CSoundContainerReferenceArray
-            public const nint m_iSelection = 0xB0; // int32
-            public const nint m_flCrossfadeTime = 0xB4; // float32
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        public static class CSosGroupActionTimeLimitSchema {
-            public const nint m_flMaxDuration = 0x8; // float32
-        }
-/*
-   Parent: None
-   Field count: 10
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixVocoderDesc_t {
-            public const nint m_nBandCount = 0x0; // int32
-            public const nint m_flBandwidth = 0x4; // float32
-            public const nint m_fldBModGain = 0x8; // float32
-            public const nint m_flFreqRangeStart = 0xC; // float32
-            public const nint m_flFreqRangeEnd = 0x10; // float32
-            public const nint m_fldBUnvoicedGain = 0x14; // float32
-            public const nint m_flAttackTimeMS = 0x18; // float32
-            public const nint m_flReleaseTimeMS = 0x1C; // float32
-            public const nint m_nDebugBand = 0x20; // int32
-            public const nint m_bPeakMode = 0x24; // bool
-        }
-/*
-   Parent: None
-   Field count: 6
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixUtilityDesc_t {
-            public const nint m_nOp = 0x0; // VMixChannelOperation_t
-            public const nint m_flInputPan = 0x4; // float32
-            public const nint m_flOutputBalance = 0x8; // float32
-            public const nint m_fldbOutputGain = 0xC; // float32
-            public const nint m_bBassMono = 0x10; // bool
-            public const nint m_flBassFreq = 0x14; // float32
-        }
-/*
-   Parent: None
-   Field count: 5
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerLoopTrigger {
-            public const nint m_flRetriggerTimeMin = 0x78; // float32
-            public const nint m_flRetriggerTimeMax = 0x7C; // float32
-            public const nint m_flFadeTime = 0x80; // float32
-            public const nint m_bCrossFade = 0x84; // bool
-            public const nint m_sound = 0x88; // CSoundContainerReference
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MVDataNodeType
-        public static class SndBeatEventKeys_t {
-            public const nint m_flKey = 0x8; // float32
-        }
-/*
-   Parent: None
-   Field count: 2
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        // MPropertyFriendlyName
-        // MPropertyDescription
-        public static class CVoiceContainerDecayingSineWave {
-            public const nint m_flFrequency = 0x78; // float32
-            public const nint m_flDecayTime = 0x7C; // float32
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixDelayProcessorDesc {
-            public const nint m_desc = 0x28; // VMixDelayDesc_t
-            public const nint m_paramCutoffFrequency = 0x50; // CVMixParameterFloat
-            public const nint m_paramDelay = 0x54; // CVMixParameterFloat
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixBoxverb2ProcessorDesc {
-            public const nint m_desc = 0x28; // VMixBoxverbDesc_t
-        }
-/*
-   Parent: None
-   Field count: 6
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixFilterDesc_t {
-            public const nint m_fldbGain = 0x0; // float32
-            public const nint m_flCutoffFreq = 0x4; // float32
-            public const nint m_flQ = 0x8; // float32
-            public const nint m_nFilterType = 0xC; // VMixFilterType_t
-            public const nint m_nFilterSlope = 0xD; // VMixFilterSlope_t
-            public const nint m_bEnabled = 0xE; // bool
-        }
-/*
-   Parent: None
-   Field count: 17
-   Metadata:
-*/
-        // MPropertyArrayElementNameKey
-        // MVDataOutlinerNameExpr
-        // MGetKV3ClassDefaults
-        public static class CSndBeatPattern {
-            public const nint m_name = 0x0; // CUtlString
-            public const nint m_flSyncPriority = 0xC; // float32
-            public const nint m_syncStartType = 0x10; // SndBeatSyncStartType_t
-            public const nint m_syncType = 0x14; // SndBeatSyncType_t
-            public const nint m_timeSignature = 0x18; // SndBeatTimeSignature_t
-            public const nint m_flLength = 0x20; // float32
-            public const nint m_bLooping = 0x24; // bool
-            public const nint m_playEventType = 0x28; // SndBeatEventType_t
-            public const nint m_flPlayBeatMult = 0x2C; // float32
-            public const nint m_playKeyType = 0x30; // SndBeatKeyType_t
-            public const nint m_vecPatternKeys = 0x38; // CUtlVector<SndBeatEventKeys_t>
-            public const nint m_vecPatternFloats = 0x50; // CUtlVector<SndBeatEventKeyedFloats_t>
-            public const nint m_vecPatternSndEvts = 0x68; // CUtlVector<SndBeatEventKeyedSndEvts_t>
-            public const nint m_vecPatternMidi = 0x80; // CUtlVector<SndBeatEventKeyedMidiNotes_t>
-            public const nint m_syncEventType = 0x98; // SndBeatEventType_t
-            public const nint m_flSyncBeatMult = 0x9C; // float32
-            public const nint m_vecSyncPatternKeys = 0xA0; // CUtlVector<SndBeatEventKeys_t>
-        }
-/*
-   Parent: None
-   Field count: 0
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CSubmix {
-        }
-/*
-   Parent: None
-   Field count: 3
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixOscDesc_t {
-            public const nint oscType = 0x0; // VMixLFOShape_t
-            public const nint m_freq = 0x4; // float32
-            public const nint m_flPhase = 0x8; // float32
-        }
-/*
-   Parent: None
-   Field count: 1
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class CVMixAutoFilterProcessorDesc {
-            public const nint m_desc = 0x28; // VMixAutoFilterDesc_t
-        }
-/*
-   Parent: None
-   Field count: 0
-*/
-        public static class ISndSeqInstruments {
-        }
-/*
-   Parent: None
-   Field count: 9
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixFlangerDesc_t {
-            public const nint m_bPhaseInvert = 0x0; // bool
-            public const nint m_flGlideTime = 0x4; // float32
-            public const nint m_flDelay = 0x8; // float32
-            public const nint m_flOutputGain = 0xC; // float32
-            public const nint m_flFeedbackGain = 0x10; // float32
-            public const nint m_flFeedforwardGain = 0x14; // float32
-            public const nint m_flModRate = 0x18; // float32
-            public const nint m_flModDepth = 0x1C; // float32
-            public const nint m_bApplyAntialiasing = 0x20; // bool
-        }
-/*
-   Parent: None
-   Field count: 12
-   Metadata:
-*/
-        // MGetKV3ClassDefaults
-        public static class VMixDynamicsDesc_t {
-            public const nint m_fldbGain = 0x0; // float32
-            public const nint m_fldbNoiseGateThreshold = 0x4; // float32
-            public const nint m_fldbCompressionThreshold = 0x8; // float32
-            public const nint m_fldbLimiterThreshold = 0xC; // float32
-            public const nint m_fldbKneeWidth = 0x10; // float32
-            public const nint m_flRatio = 0x14; // float32
-            public const nint m_flLimiterRatio = 0x18; // float32
-            public const nint m_flAttackTimeMS = 0x1C; // float32
-            public const nint m_flReleaseTimeMS = 0x20; // float32
-            public const nint m_flRMSTimeMS = 0x24; // float32
-            public const nint m_flWetMix = 0x28; // float32
-            public const nint m_bPeakMode = 0x2C; // bool
-        }
+using System;
+using System.Runtime.InteropServices;
+
+namespace Cs2.soundsystem {
+
+    public enum VMixUpMixRule_t : int {
+        DIVIDE = 0, 
+        BROADCAST = 1, 
+    }
+    public enum SndSeqInstrumentType_t : int {
+        eSndSeqInstNull = 0, 
+        eSndSeqInstSndEvt = 1, 
+        eSndSeqInstMidiSampler = 2, 
+    }
+    public enum EMode_t : int {
+        Peak = 0, 
+        RMS = 1, 
+    }
+    public enum SndBeatMidiStatusType_t : int {
+        SndSeqMidiStatusNoteOff = 8, 
+        SndSeqMidiStatusNoteOn = 9, 
+        SndSeqMidiStatusKeyPressure = 10, 
+        SndSeqMidiStatusCtrlChange = 11, 
+        SndSeqMidiStatusProgramChange = 12, 
+        SndSeqMidiStatusChannelPressure = 13, 
+        SndSeqMidiStatusPitchBend = 14, 
+    }
+    public enum VMixGraphCommandID_t : int {
+        CMD_INVALID = 18446744073709551615, 
+        CMD_CONTROL_CONVERT_DB_TO_GAIN = 1, 
+        CMD_CONTROL_TRANSIENT_INPUT_STORE = 2, 
+        CMD_CONTROL_TRANSIENT_INPUT_RESET = 3, 
+        CMD_CONTROL_OUTPUT_STORE = 4, 
+        CMD_CONTROL_EVALUATE_CURVE = 5, 
+        CMD_CONTROL_COPY = 6, 
+        CMD_CONTROL_COND_COPY_IF_NEGATIVE = 7, 
+        CMD_CONTROL_REMAP_LINEAR = 8, 
+        CMD_CONTROL_REMAP_SINE = 9, 
+        CMD_CONTROL_REMAP_LOGLINEAR = 10, 
+        CMD_CONTROL_MAX = 11, 
+        CMD_CONTROL_RESET_TIMER = 12, 
+        CMD_CONTROL_INCREMENT_TIMER = 13, 
+        CMD_CONTROL_EVAL_ENVELOPE = 14, 
+        CMD_CONTROL_SINE_BLEND = 15, 
+        CMD_SUBMIX_PROCESS = 16, 
+        CMD_SUBMIX_GENERATE = 17, 
+        CMD_SUBMIX_GENERATE_SIDECHAIN = 18, 
+        CMD_SUBMIX_EXTRACTCONTAINER = 19, 
+        CMD_SUBMIX_DEBUG = 20, 
+        CMD_SUBMIX_MIX2x1 = 21, 
+        CMD_SUBMIX_OUTPUT = 22, 
+        CMD_SUBMIX_OUTPUTx2 = 23, 
+        CMD_SUBMIX_COPY = 24, 
+        CMD_SUBMIX_ACCUMULATE = 25, 
+        CMD_SUBMIX_METER = 26, 
+        CMD_SUBMIX_METER_SPECTRUM = 27, 
+        CMD_IMPULSERESPONSE_INPUT_STORE = 28, 
+        CMD_PROCESSOR_SET_IMPULSERESPONSE_VALUE = 29, 
+        CMD_REMAP_VSND_TO_IMPULSERESPONSE = 30, 
+        CMD_IMPULSERESPONSE_RESET = 31, 
+        CMD_BLEND_VSNDS_TO_IMPULSERESPONSE = 32, 
+        CMD_IMPULSERESPONSE_DELAY = 33, 
+    }
+    public enum EWaveform : int {
+        Sine = 0, 
+        Square = 1, 
+        Saw = 2, 
+        Triangle = 3, 
+        Noise = 4, 
+    }
+    public enum VMixFilterChannelSet_t : int {
+        FILTER_ALL_CHANNELS = 0, 
+        FILTER_LEFT_ONLY = 1, 
+        FILTER_RIGHT_ONLY = 2, 
+        FILTER_MID_ONLY = 3, 
+        FILTER_SIDE_ONLY = 4, 
+        FILTER_CHANNEL_SET_MAX = 5, 
+    }
+    public enum VMixLFOShape_t : int {
+        LFO_SHAPE_SINE = 0, 
+        LFO_SHAPE_SQUARE = 1, 
+        LFO_SHAPE_TRI = 2, 
+        LFO_SHAPE_SAW = 3, 
+        LFO_SHAPE_NOISE = 4, 
+    }
+    public enum VMixOffsetType_t : int {
+        VO_CHAR = 0, 
+        VO_ARRAY = 1, 
+        VO_BOOL = 2, 
+        VO_FLOAT = 3, 
+        VO_UINT32 = 4, 
+        VO_INT32 = 5, 
+        VO_VECTOR = 6, 
+        VO_QUATERNION = 7, 
+        VO_CUBIC_SPLINE = 8, 
+        VO_VSND_INPUT = 9, 
+        VO_FLOAT_UTLVECTOR = 10, 
+        VO_SHAREDPTR_IR = 11, 
+        VO_TYPE_COUNT = 12, 
+    }
+    public enum VMixMixDownRule_t : int {
+        SUM = 0, 
+        LEFT = 1, 
+        RIGHT = 2, 
+        MID = 3, 
+        SIDE = 4, 
+    }
+    public enum VMixFilterType_t : int {
+        FILTER_UNKNOWN = 18446744073709551615, 
+        FILTER_LOWPASS = 0, 
+        FILTER_HIGHPASS = 1, 
+        FILTER_BANDPASS = 2, 
+        FILTER_NOTCH = 3, 
+        FILTER_PEAKING_EQ = 4, 
+        FILTER_LOW_SHELF = 5, 
+        FILTER_HIGH_SHELF = 6, 
+        FILTER_ALLPASS = 7, 
+        FILTER_PASSTHROUGH = 8, 
+    }
+    public enum SndBeatTrackPlaybackType_t : int {
+        eSndBeatTrackPlaybackTypeStep = 0, 
+        eSndBeatTrackPlaybackTypeFwd = 1, 
+    }
+    public enum VMixSendOperator_t : int {
+        NO_VOICES = 18446744073709551615, 
+        ALL_VOICES = 0, 
+        ROOM_VOICES = 1, 
+        FACING_VOICES = 2, 
+        MIXGROUP_VOICES = 3, 
+        NAMED_SEND = 4, 
+        INVERSE_NAMED_SENDS = 5, 
+        INVERSE_TOTAL_SEND = 6, 
+        ALL_MAX_SEND = 7, 
+        TRACK = 8, 
+    }
+    public enum SndBeatEventType_t : int {
+        eSndBeatEventTypeInvalid = 0, 
+        eSndBeatEventTypeBeat = 1, 
+        eSndBeatEventTypeBar = 2, 
+        eSndBeatEventTypePhrase = 3, 
+        eSndBeatEventTypeLength = 4, 
+        eSndBeatEventTypeKeys = 5, 
+    }
+    public enum SosActionStopType_t : int {
+        SOS_STOPTYPE_NONE = 0, 
+        SOS_STOPTYPE_TIME = 1, 
+        SOS_STOPTYPE_OPVAR = 2, 
+    }
+    public enum SndBeatKeyType_t : int {
+        eSndBeatPatternTypeNone = 0, 
+        eSndBeatPatternTypeKeys = 1, 
+        eSndBeatPatternTypeKeyedFloats = 2, 
+        eSndBeatPatternTypeKeyedSndEvts = 3, 
+        eSndBeatPatternTypeKeyedMidi = 4, 
+    }
+    public enum SosEditItemType_t : int {
+        SOS_EDIT_ITEM_TYPE_SOUNDEVENTS = 0, 
+        SOS_EDIT_ITEM_TYPE_SOUNDEVENT = 1, 
+        SOS_EDIT_ITEM_TYPE_LIBRARYSTACKS = 2, 
+        SOS_EDIT_ITEM_TYPE_STACK = 3, 
+        SOS_EDIT_ITEM_TYPE_OPERATOR = 4, 
+        SOS_EDIT_ITEM_TYPE_FIELD = 5, 
+    }
+    public enum SndBeatSyncType_t : int {
+        eSndBeatSyncTypeInvalid = 0, 
+        eSndBeatSyncTypeReset = 1, 
+        eSndBeatSyncTypeSeekImmediate = 2, 
+    }
+    public enum PlayBackMode_t : int {
+        Random = 0, 
+        RandomNoRepeats = 1, 
+        RandomAvoidLast = 2, 
+        Sequential = 3, 
+        RandomWeights = 4, 
+    }
+    public enum EVsndTriggerMode : int {
+        Trigger = 0, 
+        Gate = 1, 
+    }
+    public enum SosGroupFieldBehavior_t : int {
+        kIgnore = 0, 
+        kBranch = 1, 
+        kMatch = 2, 
+    }
+    public enum soundlevel_t : int {
+        SNDLVL_NONE = 0, 
+        SNDLVL_20dB = 20, 
+        SNDLVL_25dB = 25, 
+        SNDLVL_30dB = 30, 
+        SNDLVL_35dB = 35, 
+        SNDLVL_40dB = 40, 
+        SNDLVL_45dB = 45, 
+        SNDLVL_50dB = 50, 
+        SNDLVL_55dB = 55, 
+        SNDLVL_IDLE = 60, 
+        SNDLVL_60dB = 60, 
+        SNDLVL_65dB = 65, 
+        SNDLVL_STATIC = 66, 
+        SNDLVL_70dB = 70, 
+        SNDLVL_NORM = 75, 
+        SNDLVL_75dB = 75, 
+        SNDLVL_80dB = 80, 
+        SNDLVL_TALKING = 80, 
+        SNDLVL_85dB = 85, 
+        SNDLVL_90dB = 90, 
+        SNDLVL_95dB = 95, 
+        SNDLVL_100dB = 100, 
+        SNDLVL_105dB = 105, 
+        SNDLVL_110dB = 110, 
+        SNDLVL_120dB = 120, 
+        SNDLVL_130dB = 130, 
+        SNDLVL_GUNFIRE = 140, 
+        SNDLVL_140dB = 140, 
+        SNDLVL_150dB = 150, 
+        SNDLVL_180dB = 180, 
+    }
+    public enum VMixPannerType_t : int {
+        PANNER_TYPE_LINEAR = 0, 
+        PANNER_TYPE_EQUAL_POWER = 1, 
+    }
+    public enum VMixChannelOperation_t : int {
+        VMIX_CHAN_STEREO = 0, 
+        VMIX_CHAN_LEFT = 1, 
+        VMIX_CHAN_RIGHT = 2, 
+        VMIX_CHAN_SWAP = 3, 
+        VMIX_CHAN_MONO = 4, 
+        VMIX_CHAN_MID_SIDE = 5, 
+    }
+    public enum EMidiNote : int {
+        C = 0, 
+        C_Sharp = 1, 
+        D = 2, 
+        D_Sharp = 3, 
+        E = 4, 
+        F = 5, 
+        F_Sharp = 6, 
+        G = 7, 
+        G_Sharp = 8, 
+        A = 9, 
+        A_Sharp = 10, 
+        B = 11, 
+        Count = 12, 
+    }
+    public enum VMixAutoControlType_t : int {
+        VMIX_AUTO_SEND_LEVEL = 0, 
+        VMIX_AUTO_STACK_VAR = 1, 
+        VMIX_AUTO_PLAYTIME = 2, 
+        VMIX_AUTO_DISTANCE = 3, 
+        VMIX_AUTO_POSITION_X = 4, 
+        VMIX_AUTO_POSITION_Y = 5, 
+        VMIX_AUTO_POSITION_Z = 6, 
+        VMIX_AUTO_POSITION_VECTOR = 7, 
+        VMIX_AUTO_LISTENER_YAW_SIN = 8, 
+        VMIX_AUTO_LISTENER_YAW_COS = 9, 
+        VMIX_AUTO_LISTENER_PITCH_SIN = 10, 
+        VMIX_AUTO_LISTENER_PITCH_COS = 11, 
+        VMIX_AUTO_LISTENER_ROLL_SIN = 12, 
+        VMIX_AUTO_LISTENER_ROLL_COS = 13, 
+    }
+    public enum CVSoundFormat_t : int {
+        PCM16 = 0, 
+        PCM8 = 1, 
+        MP3 = 2, 
+        ADPCM = 3, 
+    }
+    public enum VMixFilterSlope_t : int {
+        FILTER_SLOPE_1POLE_6dB = 0, 
+        FILTER_SLOPE_1POLE_12dB = 1, 
+        FILTER_SLOPE_1POLE_18dB = 2, 
+        FILTER_SLOPE_1POLE_24dB = 3, 
+        FILTER_SLOPE_12dB = 4, 
+        FILTER_SLOPE_24dB = 5, 
+        FILTER_SLOPE_36dB = 6, 
+        FILTER_SLOPE_48dB = 7, 
+        FILTER_SLOPE_MAX = 7, 
+    }
+    public enum SosActionLimitSortType_t : int {
+        SOS_LIMIT_SORTTYPE_HIGHEST = 0, 
+        SOS_LIMIT_SORTTYPE_LOWEST = 1, 
+    }
+    public enum VMixSubgraphSwitchInterpolationType_t : int {
+        SUBGRAPH_INTERPOLATION_TEMPORAL_CROSSFADE = 0, 
+        SUBGRAPH_INTERPOLATION_TEMPORAL_FADE_OUT = 1, 
+        SUBGRAPH_INTERPOLATION_KEEP_LAST_SUBGRAPH_RUNNING = 2, 
+    }
+    public enum SosGroupType_t : int {
+        SOS_GROUPTYPE_DYNAMIC = 0, 
+        SOS_GROUPTYPE_STATIC = 1, 
+    }
+    public enum VMixOffsetCategory_t : int {
+        NULL_POINTER = 0, 
+        HEAP_OFFSET = 1, 
+        INPUT_INDEX = 2, 
+        SUBMIX_INDEX = 3, 
+    }
+    public enum SndBeatSyncStartType_t : int {
+        eSndBeatSyncStartTypeInvalid = 0, 
+        eSndBeatSyncStartTypeImmediate = 1, 
+        eSndBeatSyncStartTypeQueue = 2, 
+    }
+    public enum SosActionSetParamSortType_t : int {
+        SOS_SETPARAM_SORTTYPE_HIGHEST = 0, 
+        SOS_SETPARAM_SORTTYPE_LOWEST = 1, 
+    }
+    public enum EVsndPlaybackMode : int {
+        Trigger = 0, 
+        Gate = 1, 
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+    public unsafe struct CVMixInputBase {
+        [FieldOffset(0x0)] public fixed byte m_name[0x10];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xC0)]
+    public unsafe struct CVoiceContainerBlender {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+        [FieldOffset(0x78)] public fixed byte m_firstSound[0x20];
+        [FieldOffset(0x98)] public fixed byte m_secondSound[0x20];
+        [FieldOffset(0xB8)] public fixed byte m_flBlendFactor[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x40)]
+    public unsafe struct CVMixPitchShiftProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x10];
+        [FieldOffset(0x38)] public fixed byte m_paramPitchScale[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+    public unsafe struct VMixFreeverbDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_flRoomSize[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flDamp[0x4];
+        [FieldOffset(0x8)] public fixed byte m_flWidth[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flLateReflections[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x68)]
+    public unsafe struct CVoiceContainerStaticAdditiveSynth__CHarmonic {
+        [FieldOffset(0x0)] public fixed byte m_nWaveform[0x1];
+        [FieldOffset(0x1)] public fixed byte m_nFundamental[0x3];
+        [FieldOffset(0x4)] public fixed byte m_nOctave[0x4];
+        [FieldOffset(0x8)] public fixed byte m_flCents[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flPhase[0x4];
+        [FieldOffset(0x10)] public fixed byte m_curve[0x40];
+        [FieldOffset(0x50)] public fixed byte m_volumeScaling[0x18];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x88)]
+    public unsafe struct CVsndTriggerSlot {
+        [FieldOffset(0x0)] public fixed byte m_bEnableVsnd[0x8];
+        [FieldOffset(0x8)] public fixed byte m_vsnd[0x20];
+        [FieldOffset(0x28)] public fixed byte m_bEnableEndcap[0x8];
+        [FieldOffset(0x30)] public fixed byte m_endcapVsnd[0x20];
+        [FieldOffset(0x50)] public fixed byte m_bEnableLoopcap[0x8];
+        [FieldOffset(0x58)] public fixed byte m_loopcapVsnd[0x20];
+        [FieldOffset(0x78)] public fixed byte m_volume[0x4];
+        [FieldOffset(0x7C)] public fixed byte m_fadeOut[0x4];
+        [FieldOffset(0x80)] public fixed byte m_mode[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x60)]
+    public unsafe struct CVoiceContainerStaticAdditiveSynth__CTone {
+        [FieldOffset(0x0)] public fixed byte m_harmonics[0x18];
+        [FieldOffset(0x18)] public fixed byte m_curve[0x40];
+        [FieldOffset(0x58)] public fixed byte m_bSyncInstances[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x20)]
+    public unsafe struct CSosGroupActionOcclusionSchema {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_flCalculationInterval[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flRadius[0x4];
+        [FieldOffset(0x10)] public fixed byte m_flOcclusionScale[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flOcclusionMin[0x4];
+        [FieldOffset(0x18)] public fixed byte m_flOcclusionMax[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_flTestDepth[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x1B0)]
+    public unsafe struct CVoiceContainerRandomSampler {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x88];
+        [FieldOffset(0x88)] public fixed byte m_flAmplitude[0x4];
+        [FieldOffset(0x8C)] public fixed byte m_flAmplitudeJitter[0x4];
+        [FieldOffset(0x90)] public fixed byte m_flTimeJitter[0x4];
+        [FieldOffset(0x94)] public fixed byte m_flMaxLength[0x4];
+        [FieldOffset(0x98)] public fixed byte m_nNumDelayVariations[0x8];
+        [FieldOffset(0xA0)] public fixed byte m_grainResources[0x110];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x90)]
+    public unsafe struct CVMixSteamAudioDirectProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_paramPositionX[0x4];
+        [FieldOffset(0x2C)] public fixed byte m_paramPositionY[0x4];
+        [FieldOffset(0x30)] public fixed byte m_paramPositionZ[0x4];
+        [FieldOffset(0x34)] public fixed byte m_paramRightX[0x4];
+        [FieldOffset(0x38)] public fixed byte m_paramRightY[0x4];
+        [FieldOffset(0x3C)] public fixed byte m_paramRightZ[0x4];
+        [FieldOffset(0x40)] public fixed byte m_paramUpX[0x4];
+        [FieldOffset(0x44)] public fixed byte m_paramUpY[0x4];
+        [FieldOffset(0x48)] public fixed byte m_paramUpZ[0x4];
+        [FieldOffset(0x4C)] public fixed byte m_paramAheadX[0x4];
+        [FieldOffset(0x50)] public fixed byte m_paramAheadY[0x4];
+        [FieldOffset(0x54)] public fixed byte m_paramAheadZ[0x4];
+        [FieldOffset(0x58)] public fixed byte m_paramApplyDistanceAttenuation[0x4];
+        [FieldOffset(0x5C)] public fixed byte m_paramApplyAirAbsorption[0x4];
+        [FieldOffset(0x60)] public fixed byte m_paramApplyDirectivity[0x4];
+        [FieldOffset(0x64)] public fixed byte m_paramApplyOcclusion[0x4];
+        [FieldOffset(0x68)] public fixed byte m_paramApplyTransmission[0x4];
+        [FieldOffset(0x6C)] public fixed byte m_paramDipoleWeight[0x4];
+        [FieldOffset(0x70)] public fixed byte m_paramDipolePower[0x4];
+        [FieldOffset(0x74)] public fixed byte m_paramOcclusion[0x4];
+        [FieldOffset(0x78)] public fixed byte m_paramTransmissionLow[0x4];
+        [FieldOffset(0x7C)] public fixed byte m_paramTransmissionMid[0x4];
+        [FieldOffset(0x80)] public fixed byte m_paramTransmissionHigh[0x4];
+        [FieldOffset(0x84)] public fixed byte m_paramBand[0x4];
+        [FieldOffset(0x88)] public fixed byte m_paramTransmission[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x50)]
+    public unsafe struct CVMixSteamAudioHRTFProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_paramPositionX[0x4];
+        [FieldOffset(0x2C)] public fixed byte m_paramPositionY[0x4];
+        [FieldOffset(0x30)] public fixed byte m_paramPositionZ[0x4];
+        [FieldOffset(0x34)] public fixed byte m_paramInterpolation[0x4];
+        [FieldOffset(0x38)] public fixed byte m_paramDirectMixLevel[0x4];
+        [FieldOffset(0x3C)] public fixed byte m_paramPerspectiveCorrection[0x4];
+        [FieldOffset(0x40)] public fixed byte m_paramRelativePosition[0x4];
+        [FieldOffset(0x44)] public fixed byte m_paramDelayLeft[0x4];
+        [FieldOffset(0x48)] public fixed byte m_paramDelayRight[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x78)]
+    public unsafe struct CVoiceContainerDefault {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x40)]
+    public unsafe struct CVSound {
+        [FieldOffset(0x0)] public fixed byte m_Sentences[0x10];
+        [FieldOffset(0x10)] public fixed byte m_nRate[0x4];
+        [FieldOffset(0x14)] public fixed byte m_nFormat[0x4];
+        [FieldOffset(0x18)] public fixed byte m_nChannels[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_nLoopStart[0x4];
+        [FieldOffset(0x20)] public fixed byte m_nSampleCount[0x4];
+        [FieldOffset(0x24)] public fixed byte m_flDuration[0x4];
+        [FieldOffset(0x28)] public fixed byte m_nStreamingSize[0x4];
+        [FieldOffset(0x2C)] public fixed byte m_nLoopEnd[0x14];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct CDSPPresetMixgroupModifierTable {
+        [FieldOffset(0x0)] public fixed byte m_table[0x18];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x50)]
+    public unsafe struct CSosGroupActionSoundeventClusterSchema {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_nMinNearby[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flClusterEpsilon[0x4];
+        [FieldOffset(0x10)] public fixed byte m_shouldPlayOpvar[0x8];
+        [FieldOffset(0x18)] public fixed byte m_shouldPlayClusterChild[0x8];
+        [FieldOffset(0x20)] public fixed byte m_clusterSizeOpvar[0x8];
+        [FieldOffset(0x28)] public fixed byte m_groupBoundingBoxMinsOpvar[0x8];
+        [FieldOffset(0x30)] public fixed byte m_groupBoundingBoxMaxsOpvar[0x20];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x28)]
+    public unsafe struct CSosGroupActionSetSoundeventParameterSchema {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_nMaxCount[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flMinValue[0x4];
+        [FieldOffset(0x10)] public fixed byte m_flMaxValue[0x8];
+        [FieldOffset(0x18)] public fixed byte m_opvarName[0x8];
+        [FieldOffset(0x20)] public fixed byte m_nSortType[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x20)]
+    public unsafe struct CSoundContainerReference {
+        [FieldOffset(0x0)] public fixed byte m_namespace[0x8];
+        [FieldOffset(0x8)] public fixed byte m_bUseReference[0x8];
+        [FieldOffset(0x10)] public fixed byte m_sound[0x8];
+        [FieldOffset(0x18)] public fixed byte m_pSound[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x78)]
+    public unsafe struct CVoiceContainerNull {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x38)]
+    public unsafe struct VMixSubgraphSwitchDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_name[0x8];
+        [FieldOffset(0x8)] public fixed byte m_effectName[0x8];
+        [FieldOffset(0x10)] public fixed byte m_subgraphs[0x18];
+        [FieldOffset(0x28)] public fixed byte m_interpolationMode[0x4];
+        [FieldOffset(0x2C)] public fixed byte m_bOnlyTailsOnFadeOut[0x4];
+        [FieldOffset(0x30)] public fixed byte m_flInterpolationTime[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x48)]
+    public unsafe struct CVoiceContainerAnalysisBase {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_curve[0x40];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x40)]
+    public unsafe struct CSosGroupActionSoundeventMinMaxValuesSchema {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_strQueryPublicFieldName[0x8];
+        [FieldOffset(0x10)] public fixed byte m_strDelayPublicFieldName[0x8];
+        [FieldOffset(0x18)] public fixed byte m_bExcludeStoppedSounds[0x1];
+        [FieldOffset(0x19)] public fixed byte m_bExcludeDelayedSounds[0x1];
+        [FieldOffset(0x1A)] public fixed byte m_bExcludeSoundsBelowThreshold[0x2];
+        [FieldOffset(0x1C)] public fixed byte m_flExcludeSoundsMinThresholdValue[0x4];
+        [FieldOffset(0x20)] public fixed byte m_bExcludSoundsAboveThreshold[0x4];
+        [FieldOffset(0x24)] public fixed byte m_flExcludeSoundsMaxThresholdValue[0x4];
+        [FieldOffset(0x28)] public fixed byte m_strMinValueName[0x8];
+        [FieldOffset(0x30)] public fixed byte m_strMaxValueName[0x10];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x40)]
+    public unsafe struct CVMixEnvelopeProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0xC];
+        [FieldOffset(0x34)] public fixed byte m_outParamLevel[0x4];
+        [FieldOffset(0x38)] public fixed byte m_outParamdBLevel[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x20)]
+    public unsafe struct CVMixCommand {
+        [FieldOffset(0x0)] public fixed byte m_nCommand[0x4];
+        [FieldOffset(0x4)] public fixed byte m_nParameterNameHash[0x4];
+        [FieldOffset(0x8)] public fixed byte m_nOutputSubmix[0x4];
+        [FieldOffset(0xC)] public fixed byte m_nInputSubmix0[0x4];
+        [FieldOffset(0x10)] public fixed byte m_nInputSubmix1[0x4];
+        [FieldOffset(0x14)] public fixed byte m_nProcessor[0x4];
+        [FieldOffset(0x18)] public fixed byte m_nInputValue0[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_nInputValue1[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x8)]
+    public unsafe struct SamplerVoice_t {
+        [FieldOffset(0x0)] public fixed byte nNoteNum[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct CVMixControlInput {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x10];
+        [FieldOffset(0x10)] public fixed byte m_flDefaultValue[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x78)]
+    public unsafe struct CVMixBoxverbProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x50];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x60)]
+    public unsafe struct CVMixDynamicsCompressorProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x28];
+        [FieldOffset(0x50)] public fixed byte m_outParamLevel[0x4];
+        [FieldOffset(0x54)] public fixed byte m_outParamdBLevel[0x4];
+        [FieldOffset(0x58)] public fixed byte m_outParamReduction[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x8)]
+    public unsafe struct VMixPannerDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_type[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flStrength[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x38)]
+    public unsafe struct CSosGroupActionSoundeventPrioritySchema {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_priorityValue[0x8];
+        [FieldOffset(0x10)] public fixed byte m_priorityVolumeScalar[0x8];
+        [FieldOffset(0x18)] public fixed byte m_priorityContributeButDontRead[0x8];
+        [FieldOffset(0x20)] public fixed byte m_bPriorityReadButDontContribute[0x18];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x88)]
+    public unsafe struct CVoiceContainerRealtimeFMSineWave {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+        [FieldOffset(0x78)] public fixed byte m_flCarrierFrequency[0x4];
+        [FieldOffset(0x7C)] public fixed byte m_flModulatorFrequency[0x4];
+        [FieldOffset(0x80)] public fixed byte m_flModulatorAmount[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct SelectedEditItemInfo_t {
+        [FieldOffset(0x0)] public fixed byte m_EditItems[0x18];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x30)]
+    public unsafe struct VMixModDelayDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_feedbackFilter[0x10];
+        [FieldOffset(0x10)] public fixed byte m_bPhaseInvert[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flGlideTime[0x4];
+        [FieldOffset(0x18)] public fixed byte m_flDelay[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_flOutputGain[0x4];
+        [FieldOffset(0x20)] public fixed byte m_flFeedbackGain[0x4];
+        [FieldOffset(0x24)] public fixed byte m_flModRate[0x4];
+        [FieldOffset(0x28)] public fixed byte m_flModDepth[0x4];
+        [FieldOffset(0x2C)] public fixed byte m_bApplyAntialiasing[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x20)]
+    public unsafe struct CSndSeqInstSndEvtSchema {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x20];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct CVMixNameInputMeter {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x10];
+        [FieldOffset(0x10)] public fixed byte m_nValueIndex[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x28)]
+    public unsafe struct CSndSeqInstruments {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xB8)]
+    public unsafe struct CVMixDynamics3BandProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x90];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x50)]
+    public unsafe struct VMixBoxverbDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_flSizeMax[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flSizeMin[0x4];
+        [FieldOffset(0x8)] public fixed byte m_flComplexity[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flDiffusion[0x4];
+        [FieldOffset(0x10)] public fixed byte m_flModDepth[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flModRate[0x4];
+        [FieldOffset(0x18)] public fixed byte m_bParallel[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_filterType[0x10];
+        [FieldOffset(0x2C)] public fixed byte m_flWidth[0x4];
+        [FieldOffset(0x30)] public fixed byte m_flHeight[0x4];
+        [FieldOffset(0x34)] public fixed byte m_flDepth[0x4];
+        [FieldOffset(0x38)] public fixed byte m_flFeedbackScale[0x4];
+        [FieldOffset(0x3C)] public fixed byte m_flFeedbackWidth[0x4];
+        [FieldOffset(0x40)] public fixed byte m_flFeedbackHeight[0x4];
+        [FieldOffset(0x44)] public fixed byte m_flFeedbackDepth[0x4];
+        [FieldOffset(0x48)] public fixed byte m_flOutputGain[0x4];
+        [FieldOffset(0x4C)] public fixed byte m_flTaps[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x8)]
+    public unsafe struct CSosGroupActionSchema {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x70)]
+    public unsafe struct CSosSoundEventGroupSchema {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_nGroupType[0x4];
+        [FieldOffset(0xC)] public fixed byte m_bBlocksEvents[0x4];
+        [FieldOffset(0x10)] public fixed byte m_nBlockMaxCount[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flMemberLifespanTime[0x4];
+        [FieldOffset(0x18)] public fixed byte m_bInvertMatch[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_Behavior_EventName[0x4];
+        [FieldOffset(0x20)] public fixed byte m_matchSoundEventName[0x8];
+        [FieldOffset(0x28)] public fixed byte m_bMatchEventSubString[0x8];
+        [FieldOffset(0x30)] public fixed byte m_matchSoundEventSubString[0x8];
+        [FieldOffset(0x38)] public fixed byte m_Behavior_EntIndex[0x4];
+        [FieldOffset(0x3C)] public fixed byte m_flEntIndex[0x4];
+        [FieldOffset(0x40)] public fixed byte m_Behavior_Opvar[0x4];
+        [FieldOffset(0x44)] public fixed byte m_flOpvar[0x4];
+        [FieldOffset(0x48)] public fixed byte m_Behavior_String[0x8];
+        [FieldOffset(0x50)] public fixed byte m_opvarString[0x8];
+        [FieldOffset(0x58)] public fixed byte m_vActions[0x18];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xE0)]
+    public unsafe struct CSndSeqInstMidiSampler {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x20];
+        [FieldOffset(0x20)] public fixed byte m_bIsSoundEvent[0x1];
+        [FieldOffset(0x21)] public fixed byte m_bStopPrevious[0x1];
+        [FieldOffset(0x22)] public fixed byte m_nMinNote[0x1];
+        [FieldOffset(0x23)] public fixed byte m_nMaxNote[0x1];
+        [FieldOffset(0x24)] public fixed byte m_flMinVelocityAtten[0x4];
+        [FieldOffset(0x28)] public fixed byte m_flMaxVelocityAtten[0x4];
+        [FieldOffset(0x2C)] public fixed byte m_flAttack[0x4];
+        [FieldOffset(0x30)] public fixed byte m_flRelease[0x4];
+        [FieldOffset(0x34)] public fixed byte m_bBeatEnvelopes[0xA0];
+        [FieldOffset(0xD4)] public fixed byte m_nNextVoiceSlot[0x4];
+        [FieldOffset(0xD8)] public fixed byte m_hSoundEventHash[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x8)]
+    public unsafe struct VMixPointerFixupEntry_t {
+        [FieldOffset(0x0)] public fixed byte m_nIndex[0x4];
+        [FieldOffset(0x4)] public fixed byte m_offset[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x20)]
+    public unsafe struct CSndSeqInstBaseSchema {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_nType[0x6];
+        [FieldOffset(0xE)] public fixed byte m_bStopCurrentEvents[0x2];
+        [FieldOffset(0x10)] public fixed byte m_flBPM[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flBPMFactor[0x4];
+        [FieldOffset(0x18)] public fixed byte m_flBPMInvFactor[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x90)]
+    public unsafe struct VMixDynamics3BandDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_fldbGainOutput[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flRMSTimeMS[0x4];
+        [FieldOffset(0x8)] public fixed byte m_fldbKneeWidth[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flDepth[0x4];
+        [FieldOffset(0x10)] public fixed byte m_flWetMix[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flTimeScale[0x4];
+        [FieldOffset(0x18)] public fixed byte m_flLowCutoffFreq[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_flHighCutoffFreq[0x4];
+        [FieldOffset(0x20)] public fixed byte m_bPeakMode[0x4];
+        [FieldOffset(0x24)] public fixed byte m_bandDesc[0x6C];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xD0)]
+    public unsafe struct CVMixEQ8ProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0xA0];
+        [FieldOffset(0xC8)] public fixed byte m_paramEQScale[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x20)]
+    public unsafe struct CDSPMixgroupModifier {
+        [FieldOffset(0x0)] public fixed byte m_mixgroup[0x8];
+        [FieldOffset(0x8)] public fixed byte m_flModifier[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flModifierMin[0x4];
+        [FieldOffset(0x10)] public fixed byte m_flSourceModifier[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flSourceModifierMin[0x4];
+        [FieldOffset(0x18)] public fixed byte m_flListenerReverbModifierWhenSourceReverbIsActive[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x68)]
+    public unsafe struct CAudioMorphData {
+        [FieldOffset(0x0)] public fixed byte m_times[0x18];
+        [FieldOffset(0x18)] public fixed byte m_nameHashCodes[0x18];
+        [FieldOffset(0x30)] public fixed byte m_nameStrings[0x18];
+        [FieldOffset(0x48)] public fixed byte m_samples[0x18];
+        [FieldOffset(0x60)] public fixed byte m_flEaseIn[0x4];
+        [FieldOffset(0x64)] public fixed byte m_flEaseOut[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct SndBeatEventKeyedFloats_t {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x10];
+        [FieldOffset(0x10)] public fixed byte m_flFloat[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x34)]
+    public unsafe struct VMixDualCompressorDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_flRMSTimeMS[0x4];
+        [FieldOffset(0x4)] public fixed byte m_fldbKneeWidth[0x4];
+        [FieldOffset(0x8)] public fixed byte m_flWetMix[0x4];
+        [FieldOffset(0xC)] public fixed byte m_bPeakMode[0x4];
+        [FieldOffset(0x10)] public fixed byte m_bandDesc[0x24];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x128)]
+    public unsafe struct CVMixRuntimeGraph {
+        [FieldOffset(0x0)] public fixed byte pad_0[0xD0];
+        [FieldOffset(0xD0)] public fixed byte m_submixes[0x10];
+        [FieldOffset(0xE0)] public fixed byte m_impulseResponseValues[0x10];
+        [FieldOffset(0xF0)] public fixed byte m_inputDefaultValues[0x10];
+        [FieldOffset(0x100)] public fixed byte m_sources[0x10];
+        [FieldOffset(0x110)] public fixed byte m_fixups[0x18];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xB8)]
+    public unsafe struct CVoiceContainerStaticAdditiveSynth {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x88];
+        [FieldOffset(0x88)] public fixed byte m_tones[0x30];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x150)]
+    public unsafe struct CVoiceContainerShapedNoise {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+        [FieldOffset(0x78)] public fixed byte m_bUseCurveForFrequency[0x4];
+        [FieldOffset(0x7C)] public fixed byte m_flFrequency[0x4];
+        [FieldOffset(0x80)] public fixed byte m_frequencySweep[0x40];
+        [FieldOffset(0xC0)] public fixed byte m_bUseCurveForResonance[0x4];
+        [FieldOffset(0xC4)] public fixed byte m_flResonance[0x4];
+        [FieldOffset(0xC8)] public fixed byte m_resonanceSweep[0x40];
+        [FieldOffset(0x108)] public fixed byte m_bUseCurveForAmplitude[0x4];
+        [FieldOffset(0x10C)] public fixed byte m_flGainInDecibels[0x4];
+        [FieldOffset(0x110)] public fixed byte m_gainSweep[0x40];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x20)]
+    public unsafe struct CDspPresetModifierList {
+        [FieldOffset(0x0)] public fixed byte m_dspName[0x8];
+        [FieldOffset(0x8)] public fixed byte m_modifiers[0x18];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x78)]
+    public unsafe struct CVoiceContainerBase {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x10];
+        [FieldOffset(0x10)] public fixed byte m_bRegisteredVMix[0x4];
+        [FieldOffset(0x14)] public fixed byte m_nResourceName[0x1C];
+        [FieldOffset(0x30)] public fixed byte m_vSound[0x40];
+        [FieldOffset(0x70)] public fixed byte m_pEnvelopeAnalyzer[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x38)]
+    public unsafe struct CVMixDiffusorProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x10];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x40)]
+    public unsafe struct CVMixUtilityProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x18];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x20)]
+    public unsafe struct CRandomPannerControls {
+        [FieldOffset(0x0)] public fixed byte m_panningControlInputName[0x8];
+        [FieldOffset(0x8)] public fixed byte m_volumeControlInputName[0x8];
+        [FieldOffset(0x10)] public fixed byte m_flMinVolume[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flMaxVolume[0x4];
+        [FieldOffset(0x18)] public fixed byte m_strVectorStackParam[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x178)]
+    public unsafe struct CVoiceContainerGranulator {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x88];
+        [FieldOffset(0x88)] public fixed byte m_flGrainLength[0x4];
+        [FieldOffset(0x8C)] public fixed byte m_flGrainCrossfadeAmount[0x4];
+        [FieldOffset(0x90)] public fixed byte m_flStartJitter[0x4];
+        [FieldOffset(0x94)] public fixed byte m_flPlaybackJitter[0x4];
+        [FieldOffset(0x98)] public fixed byte m_bShouldWraparound[0x8];
+        [FieldOffset(0xA0)] public fixed byte m_sourceAudio[0x8];
+        [FieldOffset(0xA8)] public fixed byte m_bDoubleBufferSourceAudio[0x4];
+        [FieldOffset(0xAC)] public fixed byte m_flMaxSourceLength[0xCC];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x40)]
+    public unsafe struct CVMixPresetDSPProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x10];
+        [FieldOffset(0x38)] public fixed byte m_paramEffectName[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x28)]
+    public unsafe struct VMixDelayDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_feedbackFilter[0x10];
+        [FieldOffset(0x10)] public fixed byte m_bEnableFilter[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flDelay[0x4];
+        [FieldOffset(0x18)] public fixed byte m_flDirectGain[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_flDelayGain[0x4];
+        [FieldOffset(0x20)] public fixed byte m_flFeedbackGain[0x4];
+        [FieldOffset(0x24)] public fixed byte m_flWidth[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xA0)]
+    public unsafe struct VMixEQ8Desc_t {
+        [FieldOffset(0x0)] public fixed byte m_stages[0xA0];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x60)]
+    public unsafe struct CVMixDynamicsProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x30];
+        [FieldOffset(0x58)] public fixed byte m_outParamLevel[0x4];
+        [FieldOffset(0x5C)] public fixed byte m_outParamdBLevel[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x14)]
+    public unsafe struct VMixEQFilterDesc_t {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x10];
+        [FieldOffset(0x10)] public fixed byte m_nChannelSet[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xB0)]
+    public unsafe struct CVoiceContainerLoopXFade {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+        [FieldOffset(0x78)] public fixed byte m_sound[0x20];
+        [FieldOffset(0x98)] public fixed byte m_flLoopEnd[0x4];
+        [FieldOffset(0x9C)] public fixed byte m_flLoopStart[0x4];
+        [FieldOffset(0xA0)] public fixed byte m_flFadeOut[0x4];
+        [FieldOffset(0xA4)] public fixed byte m_flFadeIn[0x4];
+        [FieldOffset(0xA8)] public fixed byte m_bPlayHead[0x1];
+        [FieldOffset(0xA9)] public fixed byte m_bPlayTail[0x1];
+        [FieldOffset(0xAA)] public fixed byte m_bEqualPow[0x6];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+    public unsafe struct VMixPresetDSPDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_effectName[0x10];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xC)]
+    public unsafe struct CAudioPhonemeTag {
+        [FieldOffset(0x0)] public fixed byte m_flStartTime[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flEndTime[0x4];
+        [FieldOffset(0x8)] public fixed byte m_nPhonemeCode[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x88)]
+    public unsafe struct CVsndRadioButtonSlot {
+        [FieldOffset(0x0)] public fixed byte m_bEnableVsnd[0x8];
+        [FieldOffset(0x8)] public fixed byte m_vsnd[0x20];
+        [FieldOffset(0x28)] public fixed byte m_bEnableEndcap[0x8];
+        [FieldOffset(0x30)] public fixed byte m_endcapVsnd[0x20];
+        [FieldOffset(0x50)] public fixed byte m_bEnableLoopcap[0x8];
+        [FieldOffset(0x58)] public fixed byte m_loopcapVsnd[0x20];
+        [FieldOffset(0x78)] public fixed byte m_group[0x4];
+        [FieldOffset(0x7C)] public fixed byte m_volume[0x4];
+        [FieldOffset(0x80)] public fixed byte m_fadeOut[0x4];
+        [FieldOffset(0x84)] public fixed byte m_mode[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct CSosGroupActionSoundeventCountSchema {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_bExcludeStoppedSounds[0x8];
+        [FieldOffset(0x10)] public fixed byte m_strCountKeyName[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x58)]
+    public unsafe struct CVoiceContainerEnvelopeAnalyzer {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x48];
+        [FieldOffset(0x48)] public fixed byte m_mode[0x4];
+        [FieldOffset(0x4C)] public fixed byte m_fAnalysisWindowMs[0x4];
+        [FieldOffset(0x50)] public fixed byte m_flThreshold[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x28)]
+    public unsafe struct CVMixBaseProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_name[0x8];
+        [FieldOffset(0x10)] public fixed byte m_nDebugId[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flxfade[0x4];
+        [FieldOffset(0x18)] public fixed byte m_nChannels[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_bDebugBypass[0x4];
+        [FieldOffset(0x20)] public fixed byte m_paramEnable[0x4];
+        [FieldOffset(0x24)] public fixed byte m_paramMix[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+    public unsafe struct CVMixImpulseResponseInput {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x10];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x40)]
+    public unsafe struct CVMixSteamAudioHybridReverbProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_paramReverbTimeLow[0x4];
+        [FieldOffset(0x2C)] public fixed byte m_paramReverbTimeMid[0x4];
+        [FieldOffset(0x30)] public fixed byte m_paramReverbTimeHigh[0x4];
+        [FieldOffset(0x34)] public fixed byte m_paramBand[0x4];
+        [FieldOffset(0x38)] public fixed byte m_paramReverbTime[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+    public unsafe struct VMixPitchShiftDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_nGrainSampleCount[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flPitchShift[0x4];
+        [FieldOffset(0x8)] public fixed byte m_nQuality[0x4];
+        [FieldOffset(0xC)] public fixed byte m_nProcType[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct CVMixControlOutput {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x10];
+        [FieldOffset(0x10)] public fixed byte m_flDefaultValue[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x68)]
+    public unsafe struct CVMixModDelayProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x30];
+        [FieldOffset(0x58)] public fixed byte m_paramCutoffFrequency[0x4];
+        [FieldOffset(0x5C)] public fixed byte m_paramDelay[0x4];
+        [FieldOffset(0x60)] public fixed byte m_paramModRate[0x4];
+        [FieldOffset(0x64)] public fixed byte m_paramModDepth[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x40)]
+    public unsafe struct CVMixShaperProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x14];
+        [FieldOffset(0x3C)] public fixed byte m_paramDrive[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x4)]
+    public unsafe struct CVMixParameterFloat {
+        [FieldOffset(0x0)] public fixed byte m_offset[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xD0)]
+    public unsafe struct CVMixBaseGraphDescription {
+        [FieldOffset(0x0)] public fixed byte m_name[0x8];
+        [FieldOffset(0x8)] public fixed byte m_nGraphOutputChannels[0x4];
+        [FieldOffset(0xC)] public fixed byte m_bIsMainGraph[0x4];
+        [FieldOffset(0x10)] public fixed byte m_processorNodes[0x10];
+        [FieldOffset(0x20)] public fixed byte m_graphInputs[0x10];
+        [FieldOffset(0x30)] public fixed byte m_controlTransientInputs[0x10];
+        [FieldOffset(0x40)] public fixed byte m_controlOutputs[0x10];
+        [FieldOffset(0x50)] public fixed byte m_impulseResponseInputs[0x10];
+        [FieldOffset(0x60)] public fixed byte m_mixCommands[0x10];
+        [FieldOffset(0x70)] public fixed byte m_heap[0x10];
+        [FieldOffset(0x80)] public fixed byte m_audioMeters[0x10];
+        [FieldOffset(0x90)] public fixed byte m_controlMeters[0x10];
+        [FieldOffset(0xA0)] public fixed byte m_nameInputMeters[0x10];
+        [FieldOffset(0xB0)] public fixed byte m_additionalOutputs[0x10];
+        [FieldOffset(0xC0)] public fixed byte m_automaticControlInputs[0x10];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct CVMixAutomaticControlInput {
+        [FieldOffset(0x0)] public fixed byte m_name[0xC];
+        [FieldOffset(0xC)] public fixed byte m_nGraphInputIndex[0x4];
+        [FieldOffset(0x10)] public fixed byte m_nControlType[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x98)]
+    public unsafe struct CSndBeatTrack {
+        [FieldOffset(0x0)] public fixed byte m_name[0x20];
+        [FieldOffset(0x20)] public fixed byte m_playbackType[0x4];
+        [FieldOffset(0x24)] public fixed byte m_nTranspose[0x4];
+        [FieldOffset(0x28)] public fixed byte m_bSyncToVoice[0x4];
+        [FieldOffset(0x2C)] public fixed byte m_flBPM[0x6C];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x900)]
+    public unsafe struct CVoiceContainerVsndRadioButton {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+        [FieldOffset(0x78)] public fixed byte m_namespace[0x8];
+        [FieldOffset(0x80)] public fixed byte m_slot1[0x88];
+        [FieldOffset(0x108)] public fixed byte m_slot2[0x88];
+        [FieldOffset(0x190)] public fixed byte m_slot3[0x88];
+        [FieldOffset(0x218)] public fixed byte m_slot4[0x88];
+        [FieldOffset(0x2A0)] public fixed byte m_slot5[0x88];
+        [FieldOffset(0x328)] public fixed byte m_slot6[0x88];
+        [FieldOffset(0x3B0)] public fixed byte m_slot7[0x88];
+        [FieldOffset(0x438)] public fixed byte m_slot8[0x88];
+        [FieldOffset(0x4C0)] public fixed byte m_slot9[0x88];
+        [FieldOffset(0x548)] public fixed byte m_slot10[0x88];
+        [FieldOffset(0x5D0)] public fixed byte m_slot11[0x88];
+        [FieldOffset(0x658)] public fixed byte m_slot12[0x88];
+        [FieldOffset(0x6E0)] public fixed byte m_slot13[0x88];
+        [FieldOffset(0x768)] public fixed byte m_slot14[0x88];
+        [FieldOffset(0x7F0)] public fixed byte m_slot15[0x88];
+        [FieldOffset(0x878)] public fixed byte m_slot16[0x88];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x8)]
+    public unsafe struct CAudioEmphasisSample {
+        [FieldOffset(0x0)] public fixed byte m_flTime[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flValue[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x40)]
+    public unsafe struct CVMixOscProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0xC];
+        [FieldOffset(0x34)] public fixed byte m_paramFrequency[0x4];
+        [FieldOffset(0x38)] public fixed byte m_paramPhase[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xC8)]
+    public unsafe struct CVoiceContainerLoopTriggerWithRandomPanner {
+        [FieldOffset(0x0)] public fixed byte pad_0[0xA8];
+        [FieldOffset(0xA8)] public fixed byte m_randomPannerControls[0x20];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x78)]
+    public unsafe struct CVoiceContainerGenerator {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xA8)]
+    public unsafe struct CVoiceContainerSet {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+        [FieldOffset(0x78)] public fixed byte m_soundsToPlay[0x30];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x20)]
+    public unsafe struct VMixConvolutionDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_fldbGain[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flPreDelayMS[0x4];
+        [FieldOffset(0x8)] public fixed byte m_flWetMix[0x4];
+        [FieldOffset(0xC)] public fixed byte m_fldbLow[0x4];
+        [FieldOffset(0x10)] public fixed byte m_fldbMid[0x4];
+        [FieldOffset(0x14)] public fixed byte m_fldbHigh[0x4];
+        [FieldOffset(0x18)] public fixed byte m_flLowCutoffFreq[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_flHighCutoffFreq[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x900)]
+    public unsafe struct CVoiceContainerVsndTrigger {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+        [FieldOffset(0x78)] public fixed byte m_namespace[0x8];
+        [FieldOffset(0x80)] public fixed byte m_slot1[0x88];
+        [FieldOffset(0x108)] public fixed byte m_slot2[0x88];
+        [FieldOffset(0x190)] public fixed byte m_slot3[0x88];
+        [FieldOffset(0x218)] public fixed byte m_slot4[0x88];
+        [FieldOffset(0x2A0)] public fixed byte m_slot5[0x88];
+        [FieldOffset(0x328)] public fixed byte m_slot6[0x88];
+        [FieldOffset(0x3B0)] public fixed byte m_slot7[0x88];
+        [FieldOffset(0x438)] public fixed byte m_slot8[0x88];
+        [FieldOffset(0x4C0)] public fixed byte m_slot9[0x88];
+        [FieldOffset(0x548)] public fixed byte m_slot10[0x88];
+        [FieldOffset(0x5D0)] public fixed byte m_slot11[0x88];
+        [FieldOffset(0x658)] public fixed byte m_slot12[0x88];
+        [FieldOffset(0x6E0)] public fixed byte m_slot13[0x88];
+        [FieldOffset(0x768)] public fixed byte m_slot14[0x88];
+        [FieldOffset(0x7F0)] public fixed byte m_slot15[0x88];
+        [FieldOffset(0x878)] public fixed byte m_slot16[0x88];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x28)]
+    public unsafe struct CVoiceContainerSetElement {
+        [FieldOffset(0x0)] public fixed byte m_sound[0x20];
+        [FieldOffset(0x20)] public fixed byte m_flVolumeDB[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x90)]
+    public unsafe struct CSndBeatPatternManager {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x38];
+        [FieldOffset(0x38)] public fixed byte m_vecPatterns[0x38];
+        [FieldOffset(0x70)] public fixed byte m_vecActiveTracks[0x20];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x88)]
+    public unsafe struct CVoiceContainerAsyncGenerator {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x88];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x1)]
+    public unsafe struct CSoundInfoHeader {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x110)]
+    public unsafe struct CVMixDescription {
+        [FieldOffset(0x0)] public fixed byte pad_0[0xD0];
+        [FieldOffset(0xD0)] public fixed byte m_submixList[0x10];
+        [FieldOffset(0xE0)] public fixed byte m_sources[0x10];
+        [FieldOffset(0xF0)] public fixed byte m_impulseResponseValues[0x10];
+        [FieldOffset(0x100)] public fixed byte m_nNameHashCode[0x10];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x30)]
+    public unsafe struct SosEditItemInfo_t {
+        [FieldOffset(0x0)] public fixed byte itemType[0x8];
+        [FieldOffset(0x8)] public fixed byte itemName[0x8];
+        [FieldOffset(0x10)] public fixed byte itemTypeName[0x10];
+        [FieldOffset(0x20)] public fixed byte itemKVString[0x8];
+        [FieldOffset(0x28)] public fixed byte itemPos[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x38)]
+    public unsafe struct CVMixSubmix {
+        [FieldOffset(0x0)] public fixed byte m_name[0x8];
+        [FieldOffset(0x8)] public fixed byte m_SendNames[0x24];
+        [FieldOffset(0x2C)] public fixed byte m_nSoloNameHash[0x4];
+        [FieldOffset(0x30)] public fixed byte m_nChannels[0x4];
+        [FieldOffset(0x34)] public fixed byte m_nSendOperator[0x2];
+        [FieldOffset(0x36)] public fixed byte m_nMixDownRule[0x1];
+        [FieldOffset(0x37)] public fixed byte m_nUpMixRule[0x1];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x58)]
+    public unsafe struct CVMixFlangerProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x24];
+        [FieldOffset(0x4C)] public fixed byte m_paramDelay[0x4];
+        [FieldOffset(0x50)] public fixed byte m_paramModRate[0x4];
+        [FieldOffset(0x54)] public fixed byte m_paramModDepth[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x38)]
+    public unsafe struct CVMixEffectChainProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x8];
+        [FieldOffset(0x30)] public fixed byte m_paramEffectName[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+    public unsafe struct KeyGroup_t {
+        [FieldOffset(0x0)] public fixed byte nCenterNote[0x1];
+        [FieldOffset(0x1)] public fixed byte nMinNote[0x1];
+        [FieldOffset(0x2)] public fixed byte nMaxNote[0x1];
+        [FieldOffset(0x3)] public fixed byte nNumVelocityZones[0x5];
+        [FieldOffset(0x8)] public fixed byte pVelocityZones[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x38)]
+    public unsafe struct CVMixFreeverbProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x10];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x1C)]
+    public unsafe struct VMixPlateverbDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_flPrefilter[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flInputDiffusion1[0x4];
+        [FieldOffset(0x8)] public fixed byte m_flInputDiffusion2[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flDecay[0x4];
+        [FieldOffset(0x10)] public fixed byte m_flDamp[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flFeedbackDiffusion1[0x4];
+        [FieldOffset(0x18)] public fixed byte m_flFeedbackDiffusion2[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x50)]
+    public unsafe struct CVMixConvolutionProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x20];
+        [FieldOffset(0x48)] public fixed byte m_paramImpulseResponse[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x4)]
+    public unsafe struct CVMixParameterBool {
+        [FieldOffset(0x0)] public fixed byte m_offset[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x38)]
+    public unsafe struct CSoundContainerReferenceArray {
+        [FieldOffset(0x0)] public fixed byte m_bUseReference[0x8];
+        [FieldOffset(0x8)] public fixed byte m_sounds[0x18];
+        [FieldOffset(0x20)] public fixed byte m_pSounds[0x18];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x40)]
+    public unsafe struct CVMixFilterProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x10];
+        [FieldOffset(0x38)] public fixed byte m_paramCutoffFreq[0x4];
+        [FieldOffset(0x3C)] public fixed byte m_paramQ[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+    public unsafe struct CVMixAdditionalOutput {
+        [FieldOffset(0x0)] public fixed byte m_name[0x10];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xD8)]
+    public unsafe struct CVoiceContainerTapePlayer {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x88];
+        [FieldOffset(0x88)] public fixed byte m_bShouldWraparound[0x8];
+        [FieldOffset(0x90)] public fixed byte m_sourceAudio[0x8];
+        [FieldOffset(0x98)] public fixed byte m_flTapeSpeedAttackTime[0x4];
+        [FieldOffset(0x9C)] public fixed byte m_flTapeSpeedReleaseTime[0x3C];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x68)]
+    public unsafe struct CVMixSubgraphSwitchProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x38];
+        [FieldOffset(0x60)] public fixed byte m_paramEffectName[0x4];
+        [FieldOffset(0x64)] public fixed byte m_paramSelectionIndex[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+    public unsafe struct VMixDiffusorDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_flSize[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flComplexity[0x4];
+        [FieldOffset(0x8)] public fixed byte m_flFeedback[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flOutputGain[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x48)]
+    public unsafe struct CVMixSteamAudioPathingProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_paramPositionX[0x4];
+        [FieldOffset(0x2C)] public fixed byte m_paramPositionY[0x4];
+        [FieldOffset(0x30)] public fixed byte m_paramPositionZ[0x4];
+        [FieldOffset(0x34)] public fixed byte m_paramPathingMixLevel[0x4];
+        [FieldOffset(0x38)] public fixed byte m_paramBand[0x4];
+        [FieldOffset(0x3C)] public fixed byte m_paramArrayPathingEQ[0x4];
+        [FieldOffset(0x40)] public fixed byte m_paramArrayPathingCoefficients[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x38)]
+    public unsafe struct CVMixPannerProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x8];
+        [FieldOffset(0x30)] public fixed byte m_paramPan[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x28)]
+    public unsafe struct VMixDynamicsCompressorDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_fldbOutputGain[0x4];
+        [FieldOffset(0x4)] public fixed byte m_fldbCompressionThreshold[0x4];
+        [FieldOffset(0x8)] public fixed byte m_fldbKneeWidth[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flCompressionRatio[0x4];
+        [FieldOffset(0x10)] public fixed byte m_flAttackTimeMS[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flReleaseTimeMS[0x4];
+        [FieldOffset(0x18)] public fixed byte m_flRMSTimeMS[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_flWetMix[0x4];
+        [FieldOffset(0x20)] public fixed byte m_flSCHighPassFreq[0x4];
+        [FieldOffset(0x24)] public fixed byte m_bPeakMode[0x1];
+        [FieldOffset(0x25)] public fixed byte m_bAutoMakeupGain[0x3];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+    public unsafe struct CVMixHeap {
+        [FieldOffset(0x0)] public fixed byte m_storage[0x10];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x190)]
+    public unsafe struct CVoiceContainerVMixSnd {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x188];
+        [FieldOffset(0x188)] public fixed byte m_resourceName[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x30)]
+    public unsafe struct CVMixStereoDelayProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_paramDelayLeft[0x4];
+        [FieldOffset(0x2C)] public fixed byte m_paramDelayRight[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x14)]
+    public unsafe struct VMixShaperDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_nShape[0x4];
+        [FieldOffset(0x4)] public fixed byte m_fldbDrive[0x4];
+        [FieldOffset(0x8)] public fixed byte m_fldbOutputGain[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flWetMix[0x4];
+        [FieldOffset(0x10)] public fixed byte m_nOversampleFactor[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x4)]
+    public unsafe struct CVMixDataOffset {
+        [FieldOffset(0x0)] public fixed byte m_nOffset[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xC)]
+    public unsafe struct VMixEnvelopeDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_flAttackTimeMS[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flHoldTimeMS[0x4];
+        [FieldOffset(0x8)] public fixed byte m_flReleaseTimeMS[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xA0)]
+    public unsafe struct CAudioSentence {
+        [FieldOffset(0x0)] public fixed byte m_bShouldVoiceDuck[0x8];
+        [FieldOffset(0x8)] public fixed byte m_RunTimePhonemes[0x18];
+        [FieldOffset(0x20)] public fixed byte m_EmphasisSamples[0x18];
+        [FieldOffset(0x38)] public fixed byte m_morphData[0x68];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x1C8)]
+    public unsafe struct CVoiceContainerParameterBlender {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+        [FieldOffset(0x78)] public fixed byte m_firstSound[0x20];
+        [FieldOffset(0x98)] public fixed byte m_secondSound[0x20];
+        [FieldOffset(0xB8)] public fixed byte m_bEnableOcclusionBlend[0x8];
+        [FieldOffset(0xC0)] public fixed byte m_curve1[0x40];
+        [FieldOffset(0x100)] public fixed byte m_curve2[0x40];
+        [FieldOffset(0x140)] public fixed byte m_bEnableDistanceBlend[0x8];
+        [FieldOffset(0x148)] public fixed byte m_curve3[0x40];
+        [FieldOffset(0x188)] public fixed byte m_curve4[0x40];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct CVMixAudioMeter {
+        [FieldOffset(0x0)] public fixed byte m_name[0x8];
+        [FieldOffset(0x8)] public fixed byte m_displayName[0x8];
+        [FieldOffset(0x10)] public fixed byte m_nDebugId[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x58)]
+    public unsafe struct CVMixVocoderProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x28];
+        [FieldOffset(0x50)] public fixed byte m_paramBandwidth[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct CSosGroupActionLimitSchema {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_nMaxCount[0x4];
+        [FieldOffset(0xC)] public fixed byte m_nStopType[0x4];
+        [FieldOffset(0x10)] public fixed byte m_nSortType[0x4];
+        [FieldOffset(0x14)] public fixed byte m_bStopImmediate[0x1];
+        [FieldOffset(0x15)] public fixed byte m_bCountStopped[0x3];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x88)]
+    public unsafe struct CVoiceContainerAmpedDecayingSineWave {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x80];
+        [FieldOffset(0x80)] public fixed byte m_flGainAmount[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x2C)]
+    public unsafe struct VMixAutoFilterDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_flEnvelopeAmount[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flAttackTimeMS[0x4];
+        [FieldOffset(0x8)] public fixed byte m_flReleaseTimeMS[0x4];
+        [FieldOffset(0xC)] public fixed byte m_filter[0x10];
+        [FieldOffset(0x1C)] public fixed byte m_flLFOAmount[0x4];
+        [FieldOffset(0x20)] public fixed byte m_flLFORate[0x4];
+        [FieldOffset(0x24)] public fixed byte m_flPhase[0x4];
+        [FieldOffset(0x28)] public fixed byte m_nLFOShape[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x24)]
+    public unsafe struct VMixDynamicsBand_t {
+        [FieldOffset(0x0)] public fixed byte m_fldbGainInput[0x4];
+        [FieldOffset(0x4)] public fixed byte m_fldbGainOutput[0x4];
+        [FieldOffset(0x8)] public fixed byte m_fldbThresholdBelow[0x4];
+        [FieldOffset(0xC)] public fixed byte m_fldbThresholdAbove[0x4];
+        [FieldOffset(0x10)] public fixed byte m_flRatioBelow[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flRatioAbove[0x4];
+        [FieldOffset(0x18)] public fixed byte m_flAttackTimeMS[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_flReleaseTimeMS[0x4];
+        [FieldOffset(0x20)] public fixed byte m_bEnable[0x1];
+        [FieldOffset(0x21)] public fixed byte m_bSolo[0x3];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x8)]
+    public unsafe struct VMixEffectChainDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_effectName[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x48)]
+    public unsafe struct CVMixPlateReverbProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x20];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xB8)]
+    public unsafe struct CVoiceContainerMultiBlender {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+        [FieldOffset(0x78)] public fixed byte m_soundsToPlay[0x38];
+        [FieldOffset(0xB0)] public fixed byte m_flBlendFactor[0x4];
+        [FieldOffset(0xB4)] public fixed byte m_flCrossover[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct CVMixVsndInput {
+        [FieldOffset(0x0)] public fixed byte m_defaultValue[0x18];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+    public unsafe struct CVoiceContainerStaticAdditiveSynth__CGainScalePerInstance {
+        [FieldOffset(0x0)] public fixed byte m_flMinVolume[0x4];
+        [FieldOffset(0x4)] public fixed byte m_nInstancesAtMinVolume[0x4];
+        [FieldOffset(0x8)] public fixed byte m_flMaxVolume[0x4];
+        [FieldOffset(0xC)] public fixed byte m_nInstancesAtMaxVolume[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x4)]
+    public unsafe struct CVMixParameterEffectName {
+        [FieldOffset(0x0)] public fixed byte m_offset[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x2)]
+    public unsafe struct SndBeatTimeSignature_t {
+        [FieldOffset(0x0)] public fixed byte nNumerator[0x1];
+        [FieldOffset(0x1)] public fixed byte nDenominator[0x1];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x14)]
+    public unsafe struct VelocityZone_t {
+        [FieldOffset(0x0)] public fixed byte nMaxVel[0x1];
+        [FieldOffset(0x1)] public fixed byte nNextSelection[0x1];
+        [FieldOffset(0x2)] public fixed byte nNumSamples[0x2];
+        [FieldOffset(0x4)] public fixed byte pSamples[0x10];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xF0)]
+    public unsafe struct CVoiceContainerSelector {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+        [FieldOffset(0x78)] public fixed byte m_mode[0x8];
+        [FieldOffset(0x80)] public fixed byte m_soundsToPlay[0x38];
+        [FieldOffset(0xB8)] public fixed byte m_fProbabilityWeights[0x38];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct SndBeatEventKeyedSndEvts_t {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x10];
+        [FieldOffset(0x10)] public fixed byte m_strSoundEventName[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct CVMixGraphInput {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x10];
+        [FieldOffset(0x10)] public fixed byte m_nOffset[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+    public unsafe struct CSosGroupActionTimeBlockLimitSchema {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_nMaxCount[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flMaxDuration[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct SndBeatEventKeyedMidiNotes_t {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x10];
+        [FieldOffset(0x10)] public fixed byte m_nStatus[0x1];
+        [FieldOffset(0x11)] public fixed byte m_nNote[0x1];
+        [FieldOffset(0x12)] public fixed byte m_nVelocity[0x6];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x30)]
+    public unsafe struct CSosGroupActionMemberCountEnvelopeSchema {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_nBaseCount[0x4];
+        [FieldOffset(0xC)] public fixed byte m_nTargetCount[0x4];
+        [FieldOffset(0x10)] public fixed byte m_flBaseValue[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flTargetValue[0x4];
+        [FieldOffset(0x18)] public fixed byte m_flAttack[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_flDecay[0x4];
+        [FieldOffset(0x20)] public fixed byte m_resultVarName[0x8];
+        [FieldOffset(0x28)] public fixed byte m_bSaveToGroup[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x68)]
+    public unsafe struct CVMixDualCompressorProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x34];
+        [FieldOffset(0x5C)] public fixed byte m_outParamLevel[0x4];
+        [FieldOffset(0x60)] public fixed byte m_outParamdBLevel[0x4];
+        [FieldOffset(0x64)] public fixed byte m_outParamReduction[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x90)]
+    public unsafe struct CVoiceContainerSwitch {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+        [FieldOffset(0x78)] public fixed byte m_soundsToPlay[0x18];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct CVMixControlMeter {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x10];
+        [FieldOffset(0x10)] public fixed byte m_nValueIndex[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xB8)]
+    public unsafe struct CVoiceContainerEnum {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+        [FieldOffset(0x78)] public fixed byte m_soundsToPlay[0x38];
+        [FieldOffset(0xB0)] public fixed byte m_iSelection[0x4];
+        [FieldOffset(0xB4)] public fixed byte m_flCrossfadeTime[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+    public unsafe struct CSosGroupActionTimeLimitSchema {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_flMaxDuration[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x28)]
+    public unsafe struct VMixVocoderDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_nBandCount[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flBandwidth[0x4];
+        [FieldOffset(0x8)] public fixed byte m_fldBModGain[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flFreqRangeStart[0x4];
+        [FieldOffset(0x10)] public fixed byte m_flFreqRangeEnd[0x4];
+        [FieldOffset(0x14)] public fixed byte m_fldBUnvoicedGain[0x4];
+        [FieldOffset(0x18)] public fixed byte m_flAttackTimeMS[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_flReleaseTimeMS[0x4];
+        [FieldOffset(0x20)] public fixed byte m_nDebugBand[0x4];
+        [FieldOffset(0x24)] public fixed byte m_bPeakMode[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x18)]
+    public unsafe struct VMixUtilityDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_nOp[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flInputPan[0x4];
+        [FieldOffset(0x8)] public fixed byte m_flOutputBalance[0x4];
+        [FieldOffset(0xC)] public fixed byte m_fldbOutputGain[0x4];
+        [FieldOffset(0x10)] public fixed byte m_bBassMono[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flBassFreq[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xA8)]
+    public unsafe struct CVoiceContainerLoopTrigger {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+        [FieldOffset(0x78)] public fixed byte m_flRetriggerTimeMin[0x4];
+        [FieldOffset(0x7C)] public fixed byte m_flRetriggerTimeMax[0x4];
+        [FieldOffset(0x80)] public fixed byte m_flFadeTime[0x4];
+        [FieldOffset(0x84)] public fixed byte m_bCrossFade[0x4];
+        [FieldOffset(0x88)] public fixed byte m_sound[0x20];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+    public unsafe struct SndBeatEventKeys_t {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+        [FieldOffset(0x8)] public fixed byte m_flKey[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x80)]
+    public unsafe struct CVoiceContainerDecayingSineWave {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x78];
+        [FieldOffset(0x78)] public fixed byte m_flFrequency[0x4];
+        [FieldOffset(0x7C)] public fixed byte m_flDecayTime[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x58)]
+    public unsafe struct CVMixDelayProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x28];
+        [FieldOffset(0x50)] public fixed byte m_paramCutoffFrequency[0x4];
+        [FieldOffset(0x54)] public fixed byte m_paramDelay[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x78)]
+    public unsafe struct CVMixBoxverb2ProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x50];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+    public unsafe struct VMixFilterDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_fldbGain[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flCutoffFreq[0x4];
+        [FieldOffset(0x8)] public fixed byte m_flQ[0x4];
+        [FieldOffset(0xC)] public fixed byte m_nFilterType[0x1];
+        [FieldOffset(0xD)] public fixed byte m_nFilterSlope[0x1];
+        [FieldOffset(0xE)] public fixed byte m_bEnabled[0x2];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xB8)]
+    public unsafe struct CSndBeatPattern {
+        [FieldOffset(0x0)] public fixed byte m_name[0xC];
+        [FieldOffset(0xC)] public fixed byte m_flSyncPriority[0x4];
+        [FieldOffset(0x10)] public fixed byte m_syncStartType[0x4];
+        [FieldOffset(0x14)] public fixed byte m_syncType[0x4];
+        [FieldOffset(0x18)] public fixed byte m_timeSignature[0x8];
+        [FieldOffset(0x20)] public fixed byte m_flLength[0x4];
+        [FieldOffset(0x24)] public fixed byte m_bLooping[0x4];
+        [FieldOffset(0x28)] public fixed byte m_playEventType[0x4];
+        [FieldOffset(0x2C)] public fixed byte m_flPlayBeatMult[0x4];
+        [FieldOffset(0x30)] public fixed byte m_playKeyType[0x8];
+        [FieldOffset(0x38)] public fixed byte m_vecPatternKeys[0x18];
+        [FieldOffset(0x50)] public fixed byte m_vecPatternFloats[0x18];
+        [FieldOffset(0x68)] public fixed byte m_vecPatternSndEvts[0x18];
+        [FieldOffset(0x80)] public fixed byte m_vecPatternMidi[0x18];
+        [FieldOffset(0x98)] public fixed byte m_syncEventType[0x4];
+        [FieldOffset(0x9C)] public fixed byte m_flSyncBeatMult[0x4];
+        [FieldOffset(0xA0)] public fixed byte m_vecSyncPatternKeys[0x18];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x50)]
+    public unsafe struct CSubmix {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x50];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0xC)]
+    public unsafe struct VMixOscDesc_t {
+        [FieldOffset(0x0)] public fixed byte oscType[0x4];
+        [FieldOffset(0x4)] public fixed byte m_freq[0x4];
+        [FieldOffset(0x8)] public fixed byte m_flPhase[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x58)]
+    public unsafe struct CVMixAutoFilterProcessorDesc {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x28];
+        [FieldOffset(0x28)] public fixed byte m_desc[0x30];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x8)]
+    public unsafe struct ISndSeqInstruments {
+        [FieldOffset(0x0)] public fixed byte pad_0[0x8];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x24)]
+    public unsafe struct VMixFlangerDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_bPhaseInvert[0x4];
+        [FieldOffset(0x4)] public fixed byte m_flGlideTime[0x4];
+        [FieldOffset(0x8)] public fixed byte m_flDelay[0x4];
+        [FieldOffset(0xC)] public fixed byte m_flOutputGain[0x4];
+        [FieldOffset(0x10)] public fixed byte m_flFeedbackGain[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flFeedforwardGain[0x4];
+        [FieldOffset(0x18)] public fixed byte m_flModRate[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_flModDepth[0x4];
+        [FieldOffset(0x20)] public fixed byte m_bApplyAntialiasing[0x4];
+    }
+    [StructLayout(LayoutKind.Explicit, Size = 0x30)]
+    public unsafe struct VMixDynamicsDesc_t {
+        [FieldOffset(0x0)] public fixed byte m_fldbGain[0x4];
+        [FieldOffset(0x4)] public fixed byte m_fldbNoiseGateThreshold[0x4];
+        [FieldOffset(0x8)] public fixed byte m_fldbCompressionThreshold[0x4];
+        [FieldOffset(0xC)] public fixed byte m_fldbLimiterThreshold[0x4];
+        [FieldOffset(0x10)] public fixed byte m_fldbKneeWidth[0x4];
+        [FieldOffset(0x14)] public fixed byte m_flRatio[0x4];
+        [FieldOffset(0x18)] public fixed byte m_flLimiterRatio[0x4];
+        [FieldOffset(0x1C)] public fixed byte m_flAttackTimeMS[0x4];
+        [FieldOffset(0x20)] public fixed byte m_flReleaseTimeMS[0x4];
+        [FieldOffset(0x24)] public fixed byte m_flRMSTimeMS[0x4];
+        [FieldOffset(0x28)] public fixed byte m_flWetMix[0x4];
+        [FieldOffset(0x2C)] public fixed byte m_bPeakMode[0x4];
     }
 }

@@ -1,310 +1,656 @@
 {
-  "materialsystem2.dll": {
-    "classes": {
-      "MaterialParamBuffer_t": {
-        "fields": {
-          "m_value": 8
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "MaterialParamFloat_t": {
-        "fields": {
-          "m_flValue": 8
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "MaterialParamInt_t": {
-        "fields": {
-          "m_nValue": 8
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "MaterialParamString_t": {
-        "fields": {
-          "m_value": 8
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "MaterialParamTexture_t": {
-        "fields": {
-          "m_pValue": 8
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "MaterialParamVector_t": {
-        "fields": {
-          "m_value": 8
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "MaterialParam_t": {
-        "fields": {
-          "m_name": 0
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "MaterialResourceData_t": {
-        "fields": {
-          "m_dynamicParams": 112,
-          "m_dynamicTextureParams": 136,
-          "m_floatAttributes": 184,
-          "m_floatParams": 40,
-          "m_intAttributes": 160,
-          "m_intParams": 16,
-          "m_materialName": 0,
-          "m_renderAttributesUsed": 280,
-          "m_shaderName": 8,
-          "m_stringAttributes": 256,
-          "m_textureAttributes": 232,
-          "m_textureParams": 88,
-          "m_vectorAttributes": 208,
-          "m_vectorParams": 64
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "PostProcessingBloomParameters_t": {
-        "fields": {
-          "m_blendMode": 0,
-          "m_flBloomStartValue": 28,
-          "m_flBloomStrength": 4,
-          "m_flBloomThreshold": 16,
-          "m_flBloomThresholdWidth": 20,
-          "m_flBlurBloomStrength": 12,
-          "m_flBlurWeight": 56,
-          "m_flComputeBloomEffectsScale": 44,
-          "m_flComputeBloomLensDirtBlackLevel": 52,
-          "m_flComputeBloomLensDirtStrength": 48,
-          "m_flComputeBloomRadius": 40,
-          "m_flComputeBloomStrength": 32,
-          "m_flComputeBloomThreshold": 36,
-          "m_flScreenBloomStrength": 8,
-          "m_flSkyboxBloomStrength": 24,
-          "m_vBlurTint": 76
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "PostProcessingFogScatteringParameters_t": {
-        "fields": {
-          "m_fCubemapScale": 8,
-          "m_fGradientScale": 16,
-          "m_fRadius": 0,
-          "m_fScale": 4,
-          "m_fVolumetricScale": 12,
-          "m_fWaterDensity": 24,
-          "m_fWaterDepthBlurRadius": 28,
-          "m_fWaterScale": 20
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "PostProcessingLocalContrastParameters_t": {
-        "fields": {
-          "m_flLocalContrastEdgeStrength": 4,
-          "m_flLocalContrastStrength": 0,
-          "m_flLocalContrastVignetteBlur": 16,
-          "m_flLocalContrastVignetteEnd": 12,
-          "m_flLocalContrastVignetteStart": 8
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "PostProcessingLocalExposureParameters_t": {
-        "fields": {
-          "m_fBoostLocalContrast": 12,
-          "m_fHighlightOffsetEV": 4,
-          "m_fShadowOffsetEV": 0,
-          "m_fSigma": 8
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "PostProcessingResource_t": {
-        "fields": {
-          "m_bHasBloomParams": 64,
-          "m_bHasColorCorrection": 288,
-          "m_bHasFogScatteringParams": 289,
-          "m_bHasLocalContrastParams": 244,
-          "m_bHasLocalExposureParams": 324,
-          "m_bHasTonemapParams": 0,
-          "m_bHasVignetteParams": 204,
-          "m_bloomParams": 68,
-          "m_colorCorrectionVolumeData": 272,
-          "m_fogScatteringParams": 292,
-          "m_localConstrastParams": 248,
-          "m_localExposureParams": 328,
-          "m_nColorCorrectionVolumeDim": 268,
-          "m_toneMapParams": 4,
-          "m_vignetteParams": 208
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "PostProcessingTonemapParameters_t": {
-        "fields": {
-          "m_flExposureBias": 0,
-          "m_flExposureBiasHighlights": 40,
-          "m_flExposureBiasShadows": 36,
-          "m_flLinearAngle": 12,
-          "m_flLinearStrength": 8,
-          "m_flLuminanceSource": 32,
-          "m_flMaxHighlightLum": 56,
-          "m_flMaxShadowLum": 48,
-          "m_flMinHighlightLum": 52,
-          "m_flMinShadowLum": 44,
-          "m_flShoulderStrength": 4,
-          "m_flToeDenom": 24,
-          "m_flToeNum": 20,
-          "m_flToeStrength": 16,
-          "m_flWhitePoint": 28
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "PostProcessingVignetteParameters_t": {
-        "fields": {
-          "m_flFeather": 20,
-          "m_flRadius": 12,
-          "m_flRoundness": 16,
-          "m_flVignetteStrength": 0,
-          "m_vCenter": 4,
-          "m_vColorTint": 24
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      }
-    },
-    "enums": {
-      "BloomBlendMode_t": {
-        "alignment": 4,
-        "members": {
-          "BLOOM_BLEND_ADD": 0,
-          "BLOOM_BLEND_BLUR": 2,
-          "BLOOM_BLEND_SCREEN": 1
-        },
-        "type": "uint32"
-      },
-      "HorizJustification_e": {
-        "alignment": 4,
-        "members": {
-          "HORIZ_JUSTIFICATION_CENTER": 1,
-          "HORIZ_JUSTIFICATION_LEFT": 0,
-          "HORIZ_JUSTIFICATION_NONE": 3,
-          "HORIZ_JUSTIFICATION_RIGHT": 2
-        },
-        "type": "uint32"
-      },
-      "LayoutPositionType_e": {
-        "alignment": 4,
-        "members": {
-          "LAYOUTPOSITIONTYPE_FRACTIONAL": 1,
-          "LAYOUTPOSITIONTYPE_NONE": 2,
-          "LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE": 0
-        },
-        "type": "uint32"
-      },
-      "VertJustification_e": {
-        "alignment": 4,
-        "members": {
-          "VERT_JUSTIFICATION_BOTTOM": 2,
-          "VERT_JUSTIFICATION_CENTER": 1,
-          "VERT_JUSTIFICATION_NONE": 3,
-          "VERT_JUSTIFICATION_TOP": 0
-        },
-        "type": "uint32"
-      },
-      "ViewFadeMode_t": {
-        "alignment": 4,
-        "members": {
-          "VIEW_FADE_CONSTANT_COLOR": 0,
-          "VIEW_FADE_MOD2X": 2,
-          "VIEW_FADE_MODULATE": 1
-        },
-        "type": "uint32"
-      }
-    }
-  }
+ "materialsystem2.dll": {
+  "classes": [
+   {
+    "name": "MaterialParam_t",
+    "module": "MaterialParam_t.dll",
+    "size": 8,
+    "fields": [
+     {
+      "name": "m_name",
+      "type": "CUtlString",
+      "offset": 0
+     }
+    ]
+   },
+   {
+    "name": "MaterialParamVector_t",
+    "module": "MaterialParamVector_t.dll",
+    "size": 24,
+    "fields": [
+     {
+      "name": "m_value",
+      "type": "Vector4D",
+      "offset": 8
+     }
+    ]
+   },
+   {
+    "name": "MaterialParamString_t",
+    "module": "MaterialParamString_t.dll",
+    "size": 16,
+    "fields": [
+     {
+      "name": "m_value",
+      "type": "CUtlString",
+      "offset": 8
+     }
+    ]
+   },
+   {
+    "name": "PostProcessingResource_t",
+    "module": "PostProcessingResource_t.dll",
+    "size": 344,
+    "fields": [
+     {
+      "name": "m_bHasTonemapParams",
+      "type": "bool",
+      "offset": 0
+     },
+     {
+      "name": "m_toneMapParams",
+      "type": "PostProcessingTonemapParameters_t",
+      "offset": 4
+     },
+     {
+      "name": "m_bHasBloomParams",
+      "type": "bool",
+      "offset": 64
+     },
+     {
+      "name": "m_bloomParams",
+      "type": "PostProcessingBloomParameters_t",
+      "offset": 68
+     },
+     {
+      "name": "m_bHasVignetteParams",
+      "type": "bool",
+      "offset": 204
+     },
+     {
+      "name": "m_vignetteParams",
+      "type": "PostProcessingVignetteParameters_t",
+      "offset": 208
+     },
+     {
+      "name": "m_bHasLocalContrastParams",
+      "type": "bool",
+      "offset": 244
+     },
+     {
+      "name": "m_localConstrastParams",
+      "type": "PostProcessingLocalContrastParameters_t",
+      "offset": 248
+     },
+     {
+      "name": "m_nColorCorrectionVolumeDim",
+      "type": "int32",
+      "offset": 268
+     },
+     {
+      "name": "m_colorCorrectionVolumeData",
+      "type": "CUtlBinaryBlock",
+      "offset": 272
+     },
+     {
+      "name": "m_bHasColorCorrection",
+      "type": "bool",
+      "offset": 288
+     },
+     {
+      "name": "m_bHasFogScatteringParams",
+      "type": "bool",
+      "offset": 289
+     },
+     {
+      "name": "m_fogScatteringParams",
+      "type": "PostProcessingFogScatteringParameters_t",
+      "offset": 292
+     },
+     {
+      "name": "m_bHasLocalExposureParams",
+      "type": "bool",
+      "offset": 324
+     },
+     {
+      "name": "m_localExposureParams",
+      "type": "PostProcessingLocalExposureParameters_t",
+      "offset": 328
+     }
+    ]
+   },
+   {
+    "name": "MaterialParamInt_t",
+    "module": "MaterialParamInt_t.dll",
+    "size": 16,
+    "fields": [
+     {
+      "name": "m_nValue",
+      "type": "int32",
+      "offset": 8
+     }
+    ]
+   },
+   {
+    "name": "PostProcessingVignetteParameters_t",
+    "module": "PostProcessingVignetteParameters_t.dll",
+    "size": 36,
+    "fields": [
+     {
+      "name": "m_flVignetteStrength",
+      "type": "float32",
+      "offset": 0
+     },
+     {
+      "name": "m_vCenter",
+      "type": "Vector2D",
+      "offset": 4
+     },
+     {
+      "name": "m_flRadius",
+      "type": "float32",
+      "offset": 12
+     },
+     {
+      "name": "m_flRoundness",
+      "type": "float32",
+      "offset": 16
+     },
+     {
+      "name": "m_flFeather",
+      "type": "float32",
+      "offset": 20
+     },
+     {
+      "name": "m_vColorTint",
+      "type": "Vector",
+      "offset": 24
+     }
+    ]
+   },
+   {
+    "name": "PostProcessingLocalContrastParameters_t",
+    "module": "PostProcessingLocalContrastParameters_t.dll",
+    "size": 20,
+    "fields": [
+     {
+      "name": "m_flLocalContrastStrength",
+      "type": "float32",
+      "offset": 0
+     },
+     {
+      "name": "m_flLocalContrastEdgeStrength",
+      "type": "float32",
+      "offset": 4
+     },
+     {
+      "name": "m_flLocalContrastVignetteStart",
+      "type": "float32",
+      "offset": 8
+     },
+     {
+      "name": "m_flLocalContrastVignetteEnd",
+      "type": "float32",
+      "offset": 12
+     },
+     {
+      "name": "m_flLocalContrastVignetteBlur",
+      "type": "float32",
+      "offset": 16
+     }
+    ]
+   },
+   {
+    "name": "PostProcessingTonemapParameters_t",
+    "module": "PostProcessingTonemapParameters_t.dll",
+    "size": 60,
+    "fields": [
+     {
+      "name": "m_flExposureBias",
+      "type": "float32",
+      "offset": 0
+     },
+     {
+      "name": "m_flShoulderStrength",
+      "type": "float32",
+      "offset": 4
+     },
+     {
+      "name": "m_flLinearStrength",
+      "type": "float32",
+      "offset": 8
+     },
+     {
+      "name": "m_flLinearAngle",
+      "type": "float32",
+      "offset": 12
+     },
+     {
+      "name": "m_flToeStrength",
+      "type": "float32",
+      "offset": 16
+     },
+     {
+      "name": "m_flToeNum",
+      "type": "float32",
+      "offset": 20
+     },
+     {
+      "name": "m_flToeDenom",
+      "type": "float32",
+      "offset": 24
+     },
+     {
+      "name": "m_flWhitePoint",
+      "type": "float32",
+      "offset": 28
+     },
+     {
+      "name": "m_flLuminanceSource",
+      "type": "float32",
+      "offset": 32
+     },
+     {
+      "name": "m_flExposureBiasShadows",
+      "type": "float32",
+      "offset": 36
+     },
+     {
+      "name": "m_flExposureBiasHighlights",
+      "type": "float32",
+      "offset": 40
+     },
+     {
+      "name": "m_flMinShadowLum",
+      "type": "float32",
+      "offset": 44
+     },
+     {
+      "name": "m_flMaxShadowLum",
+      "type": "float32",
+      "offset": 48
+     },
+     {
+      "name": "m_flMinHighlightLum",
+      "type": "float32",
+      "offset": 52
+     },
+     {
+      "name": "m_flMaxHighlightLum",
+      "type": "float32",
+      "offset": 56
+     }
+    ]
+   },
+   {
+    "name": "PostProcessingFogScatteringParameters_t",
+    "module": "PostProcessingFogScatteringParameters_t.dll",
+    "size": 32,
+    "fields": [
+     {
+      "name": "m_fRadius",
+      "type": "float32",
+      "offset": 0
+     },
+     {
+      "name": "m_fScale",
+      "type": "float32",
+      "offset": 4
+     },
+     {
+      "name": "m_fCubemapScale",
+      "type": "float32",
+      "offset": 8
+     },
+     {
+      "name": "m_fVolumetricScale",
+      "type": "float32",
+      "offset": 12
+     },
+     {
+      "name": "m_fGradientScale",
+      "type": "float32",
+      "offset": 16
+     },
+     {
+      "name": "m_fWaterScale",
+      "type": "float32",
+      "offset": 20
+     },
+     {
+      "name": "m_fWaterDensity",
+      "type": "float32",
+      "offset": 24
+     },
+     {
+      "name": "m_fWaterDepthBlurRadius",
+      "type": "float32",
+      "offset": 28
+     }
+    ]
+   },
+   {
+    "name": "MaterialParamBuffer_t",
+    "module": "MaterialParamBuffer_t.dll",
+    "size": 24,
+    "fields": [
+     {
+      "name": "m_value",
+      "type": "CUtlBinaryBlock",
+      "offset": 8
+     }
+    ]
+   },
+   {
+    "name": "MaterialResourceData_t",
+    "module": "MaterialResourceData_t.dll",
+    "size": 304,
+    "fields": [
+     {
+      "name": "m_materialName",
+      "type": "CUtlString",
+      "offset": 0
+     },
+     {
+      "name": "m_shaderName",
+      "type": "CUtlString",
+      "offset": 8
+     },
+     {
+      "name": "m_intParams",
+      "type": "CUtlVector<MaterialParamInt_t>",
+      "offset": 16
+     },
+     {
+      "name": "m_floatParams",
+      "type": "CUtlVector<MaterialParamFloat_t>",
+      "offset": 40
+     },
+     {
+      "name": "m_vectorParams",
+      "type": "CUtlVector<MaterialParamVector_t>",
+      "offset": 64
+     },
+     {
+      "name": "m_textureParams",
+      "type": "CUtlVector<MaterialParamTexture_t>",
+      "offset": 88
+     },
+     {
+      "name": "m_dynamicParams",
+      "type": "CUtlVector<MaterialParamBuffer_t>",
+      "offset": 112
+     },
+     {
+      "name": "m_dynamicTextureParams",
+      "type": "CUtlVector<MaterialParamBuffer_t>",
+      "offset": 136
+     },
+     {
+      "name": "m_intAttributes",
+      "type": "CUtlVector<MaterialParamInt_t>",
+      "offset": 160
+     },
+     {
+      "name": "m_floatAttributes",
+      "type": "CUtlVector<MaterialParamFloat_t>",
+      "offset": 184
+     },
+     {
+      "name": "m_vectorAttributes",
+      "type": "CUtlVector<MaterialParamVector_t>",
+      "offset": 208
+     },
+     {
+      "name": "m_textureAttributes",
+      "type": "CUtlVector<MaterialParamTexture_t>",
+      "offset": 232
+     },
+     {
+      "name": "m_stringAttributes",
+      "type": "CUtlVector<MaterialParamString_t>",
+      "offset": 256
+     },
+     {
+      "name": "m_renderAttributesUsed",
+      "type": "CUtlVector<CUtlString>",
+      "offset": 280
+     }
+    ]
+   },
+   {
+    "name": "PostProcessingBloomParameters_t",
+    "module": "PostProcessingBloomParameters_t.dll",
+    "size": 136,
+    "fields": [
+     {
+      "name": "m_blendMode",
+      "type": "BloomBlendMode_t",
+      "offset": 0
+     },
+     {
+      "name": "m_flBloomStrength",
+      "type": "float32",
+      "offset": 4
+     },
+     {
+      "name": "m_flScreenBloomStrength",
+      "type": "float32",
+      "offset": 8
+     },
+     {
+      "name": "m_flBlurBloomStrength",
+      "type": "float32",
+      "offset": 12
+     },
+     {
+      "name": "m_flBloomThreshold",
+      "type": "float32",
+      "offset": 16
+     },
+     {
+      "name": "m_flBloomThresholdWidth",
+      "type": "float32",
+      "offset": 20
+     },
+     {
+      "name": "m_flSkyboxBloomStrength",
+      "type": "float32",
+      "offset": 24
+     },
+     {
+      "name": "m_flBloomStartValue",
+      "type": "float32",
+      "offset": 28
+     },
+     {
+      "name": "m_flComputeBloomStrength",
+      "type": "float32",
+      "offset": 32
+     },
+     {
+      "name": "m_flComputeBloomThreshold",
+      "type": "float32",
+      "offset": 36
+     },
+     {
+      "name": "m_flComputeBloomRadius",
+      "type": "float32",
+      "offset": 40
+     },
+     {
+      "name": "m_flComputeBloomEffectsScale",
+      "type": "float32",
+      "offset": 44
+     },
+     {
+      "name": "m_flComputeBloomLensDirtStrength",
+      "type": "float32",
+      "offset": 48
+     },
+     {
+      "name": "m_flComputeBloomLensDirtBlackLevel",
+      "type": "float32",
+      "offset": 52
+     },
+     {
+      "name": "m_flBlurWeight",
+      "type": "float32[5]",
+      "offset": 56
+     },
+     {
+      "name": "m_vBlurTint",
+      "type": "Vector[5]",
+      "offset": 76
+     }
+    ]
+   },
+   {
+    "name": "MaterialParamFloat_t",
+    "module": "MaterialParamFloat_t.dll",
+    "size": 16,
+    "fields": [
+     {
+      "name": "m_flValue",
+      "type": "float32",
+      "offset": 8
+     }
+    ]
+   },
+   {
+    "name": "PostProcessingLocalExposureParameters_t",
+    "module": "PostProcessingLocalExposureParameters_t.dll",
+    "size": 16,
+    "fields": [
+     {
+      "name": "m_fShadowOffsetEV",
+      "type": "float32",
+      "offset": 0
+     },
+     {
+      "name": "m_fHighlightOffsetEV",
+      "type": "float32",
+      "offset": 4
+     },
+     {
+      "name": "m_fSigma",
+      "type": "float32",
+      "offset": 8
+     },
+     {
+      "name": "m_fBoostLocalContrast",
+      "type": "float32",
+      "offset": 12
+     }
+    ]
+   },
+   {
+    "name": "MaterialParamTexture_t",
+    "module": "MaterialParamTexture_t.dll",
+    "size": 16,
+    "fields": [
+     {
+      "name": "m_pValue",
+      "type": "CStrongHandle<InfoForResourceTypeCTextureBase>",
+      "offset": 8
+     }
+    ]
+   }
+  ],
+  "enums": [
+   {
+    "name": "VertJustification_e",
+    "members": [
+     {
+      "name": "VERT_JUSTIFICATION_TOP",
+      "value": 0
+     },
+     {
+      "name": "VERT_JUSTIFICATION_CENTER",
+      "value": 1
+     },
+     {
+      "name": "VERT_JUSTIFICATION_BOTTOM",
+      "value": 2
+     },
+     {
+      "name": "VERT_JUSTIFICATION_NONE",
+      "value": 3
+     }
+    ]
+   },
+   {
+    "name": "LayoutPositionType_e",
+    "members": [
+     {
+      "name": "LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE",
+      "value": 0
+     },
+     {
+      "name": "LAYOUTPOSITIONTYPE_FRACTIONAL",
+      "value": 1
+     },
+     {
+      "name": "LAYOUTPOSITIONTYPE_NONE",
+      "value": 2
+     }
+    ]
+   },
+   {
+    "name": "ViewFadeMode_t",
+    "members": [
+     {
+      "name": "VIEW_FADE_CONSTANT_COLOR",
+      "value": 0
+     },
+     {
+      "name": "VIEW_FADE_MODULATE",
+      "value": 1
+     },
+     {
+      "name": "VIEW_FADE_MOD2X",
+      "value": 2
+     }
+    ]
+   },
+   {
+    "name": "BloomBlendMode_t",
+    "members": [
+     {
+      "name": "BLOOM_BLEND_ADD",
+      "value": 0
+     },
+     {
+      "name": "BLOOM_BLEND_SCREEN",
+      "value": 1
+     },
+     {
+      "name": "BLOOM_BLEND_BLUR",
+      "value": 2
+     }
+    ]
+   },
+   {
+    "name": "HorizJustification_e",
+    "members": [
+     {
+      "name": "HORIZ_JUSTIFICATION_LEFT",
+      "value": 0
+     },
+     {
+      "name": "HORIZ_JUSTIFICATION_CENTER",
+      "value": 1
+     },
+     {
+      "name": "HORIZ_JUSTIFICATION_RIGHT",
+      "value": 2
+     },
+     {
+      "name": "HORIZ_JUSTIFICATION_NONE",
+      "value": 3
+     }
+    ]
+   }
+  ]
+ }
 }

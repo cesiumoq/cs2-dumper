@@ -1,527 +1,299 @@
-// Generated using https://github.com/a2x/cs2-dumper
-// 2026-11-03 12:42:01.636437600 UTC
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Generated from the live CS2 schema system.
+*/
 
-#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
+#![allow(non_snake_case, non_camel_case_types, dead_code)]
 
-pub mod cs2_dumper {
-    pub mod schemas {
-        // Module: resourcesystem.dll
-        // Class count: 61
-        // Enum count: 5
-        pub mod resourcesystem_dll {
-            // Alignment: 4
-            // Member count: 4
-            #[repr(u32)]
-            pub enum NoiseStreamModifier_t {
-                NOISE_STREAM_MODIFIER_NONE = 0x0,
-                NOISE_STREAM_MODIFIER_LINES = 0x1,
-                NOISE_STREAM_MODIFIER_CLUMPS = 0x2,
-                NOISE_STREAM_MODIFIER_RINGS = 0x3
-            }
-            // Alignment: 4
-            // Member count: 6
-            #[repr(u32)]
-            pub enum NoiseStreamTurbulence_t {
-                NOISE_STREAM_TURB_NONE = 0x0,
-                NOISE_STREAM_TURB_HIGHLIGHT = 0x1,
-                NOISE_STREAM_TURB_FEEDBACK = 0x2,
-                NOISE_STREAM_TURB_LOOPY = 0x3,
-                NOISE_STREAM_TURB_CONTRAST = 0x4,
-                NOISE_STREAM_TURB_ALTERNATE = 0x5
-            }
-            // Alignment: 4
-            // Member count: 5
-            #[repr(u32)]
-            pub enum NoiseStreamType_t {
-                NOISE_STREAM_TYPE_PERLIN = 0x0,
-                NOISE_STREAM_TYPE_SIMPLEX = 0x1,
-                NOISE_STREAM_TYPE_WORLEY = 0x2,
-                NOISE_STREAM_TYPE_CURL = 0x3,
-                NOISE_STREAM_TYPE_NONE = 0x4
-            }
-            // Alignment: 1
-            // Member count: 9
-            #[repr(u8)]
-            pub enum FuseVariableType_t {
-                INVALID = 0x0,
-                BOOL = 0x1,
-                INT8 = 0x2,
-                INT16 = 0x3,
-                INT32 = 0x4,
-                UINT8 = 0x5,
-                UINT16 = 0x6,
-                UINT32 = 0x7,
-                FLOAT32 = 0x8
-            }
-            // Alignment: 1
-            // Member count: 2
-            #[repr(u8)]
-            pub enum FuseVariableAccess_t {
-                WRITABLE = 0x0,
-                READ_ONLY = 0x1
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCResponseRulesList {
-            }
-            // Parent: None
-            // Field count: 2
-            pub mod AABBWS_t {
-                pub const m_vMinBounds: usize = 0x0; // VectorWS
-                pub const m_vMaxBounds: usize = 0xC; // VectorWS
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCDotaItemDefinitionResource {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCMorphSetData {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCVSoundStackScriptList {
-            }
-            // Parent: None
-            // Field count: 2
-            pub mod PackedAABB_t {
-                pub const m_nPackedMin: usize = 0x0; // uint32
-                pub const m_nPackedMax: usize = 0x4; // uint32
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCVPhysXSurfacePropertiesList {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeManifestTestResource_t {
-            }
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod ConstantInfo_t {
-                pub const m_name: usize = 0x0; // CUtlString
-                pub const m_nameToken: usize = 0x8; // CUtlStringToken
-                pub const m_flValue: usize = 0xC; // float32
-            }
-            // Parent: None
-            // Field count: 1
-            pub mod FuseFunctionIndex_t {
-                pub const m_Value: usize = 0x0; // uint16
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCGcExportableExternalData {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeIAnimGraphModelBinding {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCJavaScriptResource {
-            }
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CFuseSymbolTable {
-                pub const m_constants: usize = 0x0; // CUtlVector<ConstantInfo_t>
-                pub const m_variables: usize = 0x18; // CUtlVector<VariableInfo_t>
-                pub const m_functions: usize = 0x30; // CUtlVector<FunctionInfo_t>
-                pub const m_constantMap: usize = 0x48; // CUtlHashtable<CUtlStringToken,int32>
-                pub const m_variableMap: usize = 0x68; // CUtlHashtable<CUtlStringToken,int32>
-                pub const m_functionMap: usize = 0x88; // CUtlHashtable<CUtlStringToken,int32>
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCRenderMesh {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCVoxelVisibility {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeISmartProp {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCPhysAggregateData {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCNmClip {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeWorld_t {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeProceduralTestResource_t {
-            }
-            // Parent: None
-            // Field count: 2
-            pub mod AABB_t {
-                pub const m_vMinBounds: usize = 0x0; // Vector
-                pub const m_vMaxBounds: usize = 0xC; // Vector
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCPostProcessingResource {
-            }
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod VariableInfo_t {
-                pub const m_name: usize = 0x0; // CUtlString
-                pub const m_nameToken: usize = 0x8; // CUtlStringToken
-                pub const m_nIndex: usize = 0xC; // FuseVariableIndex_t
-                pub const m_nNumComponents: usize = 0xE; // uint8
-                pub const m_eVarType: usize = 0xF; // FuseVariableType_t
-                pub const m_eAccess: usize = 0x10; // FuseVariableAccess_t
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeIParticleSnapshot {
-            }
-            // Parent: None
-            // Field count: 4
-            pub mod FourQuaternions {
-                pub const x: usize = 0x0; // fltx4
-                pub const y: usize = 0x10; // fltx4
-                pub const z: usize = 0x20; // fltx4
-                pub const w: usize = 0x30; // fltx4
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCPanoramaLayout {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCTypeScriptResource {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCChoreoSceneResource {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCNmSkeleton {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCTestResourceData {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCAnimationGroup {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCVSoundEventScriptList {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCVoiceContainerBase {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCPanoramaStyle {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCWorldNode {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCSurfaceGraph {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCCSGOEconItem {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCNmGraphDefinition {
-            }
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CFuseProgram {
-                pub const m_programBuffer: usize = 0x0; // CUtlVector<uint8>
-                pub const m_variablesRead: usize = 0x18; // CUtlVector<FuseVariableIndex_t>
-                pub const m_variablesWritten: usize = 0x30; // CUtlVector<FuseVariableIndex_t>
-                pub const m_nMaxTempVarsUsed: usize = 0x48; // int32
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCCompositeMaterialKit {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCAnimData {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeIMaterial2 {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCVDSPResource {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeIVectorGraphic {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCPanoramaDynamicImages {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeIPulseGraphDef {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCVDataItemDefs {
-            }
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod FunctionInfo_t {
-                pub const m_name: usize = 0x8; // CUtlString
-                pub const m_nameToken: usize = 0x10; // CUtlStringToken
-                pub const m_nParamCount: usize = 0x14; // int32
-                pub const m_nIndex: usize = 0x18; // FuseFunctionIndex_t
-                pub const m_bIsPure: usize = 0x1A; // bool
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCVDataResource {
-            }
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod NoiseOscillatorDef_t {
-                pub const m_flPhase: usize = 0x0; // float32
-                pub const m_flFrequency: usize = 0x4; // float32
-                pub const m_flAmplitude: usize = 0x8; // float32
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCModel {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCDOTANovelsList {
-            }
-            // Parent: None
-            // Field count: 12
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod NoiseStreamDef_t {
-                pub const m_nType: usize = 0x0; // NoiseStreamType_t
-                pub const m_nModifier: usize = 0x4; // NoiseStreamModifier_t
-                pub const m_nTurbulence: usize = 0x8; // NoiseStreamTurbulence_t
-                pub const m_flOutputMin: usize = 0xC; // float32
-                pub const m_flOutputMax: usize = 0x10; // float32
-                pub const m_flScale: usize = 0x14; // float32
-                pub const m_vOffsetRate: usize = 0x18; // Vector
-                pub const m_flOffset: usize = 0x24; // float32
-                pub const m_nOctaves: usize = 0x28; // int32
-                pub const m_flTurbulenceScale: usize = 0x2C; // float32
-                pub const m_flTurbulenceMix: usize = 0x30; // float32
-                pub const m_Oscillators: usize = 0x38; // CUtlVector<NoiseOscillatorDef_t>
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCTextureBase {
-            }
-            // Parent: None
-            // Field count: 1
-            pub mod FuseVariableIndex_t {
-                pub const m_Value: usize = 0x0; // uint16
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeIParticleSystemDefinition {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCSequenceGroupData {
-            }
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod ManifestTestResource_t {
-                pub const m_name: usize = 0x0; // CUtlString
-                pub const m_child: usize = 0x8; // CStrongHandle<InfoForResourceTypeManifestTestResource_t>
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCEntityLump {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCDOTAPatchNotesList {
-            }
-        }
+pub mod resourcesystem {
+
+    pub type NoiseStreamModifier_t = i32;
+    pub type NoiseStreamTurbulence_t = i32;
+    pub type NoiseStreamType_t = i32;
+    pub type FuseVariableType_t = i32;
+    pub type FuseVariableAccess_t = i32;
+    #[repr(C)]
+    pub struct InfoForResourceTypeCResponseRulesList {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct AABBWS_t {
+        pub m_vMinBounds: [u8; 0xC], // 0x0
+        pub m_vMaxBounds: [u8; 0xC], // 0xC
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCDotaItemDefinitionResource {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCMorphSetData {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCVSoundStackScriptList {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct PackedAABB_t {
+        pub m_nPackedMin: [u8; 0x4], // 0x0
+        pub m_nPackedMax: [u8; 0x4], // 0x4
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCVPhysXSurfacePropertiesList {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeManifestTestResource_t {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct ConstantInfo_t {
+        pub m_name: [u8; 0x8], // 0x0
+        pub m_nameToken: [u8; 0x4], // 0x8
+        pub m_flValue: [u8; 0x4], // 0xC
+    }
+    #[repr(C)]
+    pub struct FuseFunctionIndex_t {
+        pub m_Value: [u8; 0x2], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCGcExportableExternalData {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeIAnimGraphModelBinding {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCJavaScriptResource {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct CFuseSymbolTable {
+        pub m_constants: [u8; 0x18], // 0x0
+        pub m_variables: [u8; 0x18], // 0x18
+        pub m_functions: [u8; 0x18], // 0x30
+        pub m_constantMap: [u8; 0x20], // 0x48
+        pub m_variableMap: [u8; 0x20], // 0x68
+        pub m_functionMap: [u8; 0x28], // 0x88
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCRenderMesh {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCVoxelVisibility {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeISmartProp {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCPhysAggregateData {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCNmClip {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeWorld_t {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeProceduralTestResource_t {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct AABB_t {
+        pub m_vMinBounds: [u8; 0xC], // 0x0
+        pub m_vMaxBounds: [u8; 0xC], // 0xC
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCPostProcessingResource {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct VariableInfo_t {
+        pub m_name: [u8; 0x8], // 0x0
+        pub m_nameToken: [u8; 0x4], // 0x8
+        pub m_nIndex: [u8; 0x2], // 0xC
+        pub m_nNumComponents: [u8; 0x1], // 0xE
+        pub m_eVarType: [u8; 0x1], // 0xF
+        pub m_eAccess: [u8; 0x8], // 0x10
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeIParticleSnapshot {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct FourQuaternions {
+        pub x: [u8; 0x10], // 0x0
+        pub y: [u8; 0x10], // 0x10
+        pub z: [u8; 0x10], // 0x20
+        pub w: [u8; 0x10], // 0x30
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCPanoramaLayout {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCTypeScriptResource {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCChoreoSceneResource {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCNmSkeleton {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCTestResourceData {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCAnimationGroup {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCVSoundEventScriptList {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCVoiceContainerBase {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCPanoramaStyle {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCWorldNode {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCSurfaceGraph {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCCSGOEconItem {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCNmGraphDefinition {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct CFuseProgram {
+        pub m_programBuffer: [u8; 0x18], // 0x0
+        pub m_variablesRead: [u8; 0x18], // 0x18
+        pub m_variablesWritten: [u8; 0x18], // 0x30
+        pub m_nMaxTempVarsUsed: [u8; 0x8], // 0x48
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCCompositeMaterialKit {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCAnimData {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeIMaterial2 {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCVDSPResource {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeIVectorGraphic {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCPanoramaDynamicImages {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeIPulseGraphDef {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCVDataItemDefs {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct FunctionInfo_t {
+        pub pad_0: [u8; 0x8], // 0x0
+        pub m_name: [u8; 0x8], // 0x8
+        pub m_nameToken: [u8; 0x4], // 0x10
+        pub m_nParamCount: [u8; 0x4], // 0x14
+        pub m_nIndex: [u8; 0x2], // 0x18
+        pub m_bIsPure: [u8; 0x6], // 0x1A
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCVDataResource {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct NoiseOscillatorDef_t {
+        pub m_flPhase: [u8; 0x4], // 0x0
+        pub m_flFrequency: [u8; 0x4], // 0x4
+        pub m_flAmplitude: [u8; 0x4], // 0x8
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCModel {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCDOTANovelsList {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct NoiseStreamDef_t {
+        pub m_nType: [u8; 0x4], // 0x0
+        pub m_nModifier: [u8; 0x4], // 0x4
+        pub m_nTurbulence: [u8; 0x4], // 0x8
+        pub m_flOutputMin: [u8; 0x4], // 0xC
+        pub m_flOutputMax: [u8; 0x4], // 0x10
+        pub m_flScale: [u8; 0x4], // 0x14
+        pub m_vOffsetRate: [u8; 0xC], // 0x18
+        pub m_flOffset: [u8; 0x4], // 0x24
+        pub m_nOctaves: [u8; 0x4], // 0x28
+        pub m_flTurbulenceScale: [u8; 0x4], // 0x2C
+        pub m_flTurbulenceMix: [u8; 0x8], // 0x30
+        pub m_Oscillators: [u8; 0x18], // 0x38
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCTextureBase {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct FuseVariableIndex_t {
+        pub m_Value: [u8; 0x2], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeIParticleSystemDefinition {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCSequenceGroupData {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct ManifestTestResource_t {
+        pub m_name: [u8; 0x8], // 0x0
+        pub m_child: [u8; 0x8], // 0x8
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCEntityLump {
+        pub pad_0: [u8; 0x1], // 0x0
+    }
+    #[repr(C)]
+    pub struct InfoForResourceTypeCDOTAPatchNotesList {
+        pub pad_0: [u8; 0x1], // 0x0
     }
 }

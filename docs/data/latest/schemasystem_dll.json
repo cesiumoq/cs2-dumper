@@ -1,202 +1,559 @@
 {
-  "schemasystem.dll": {
-    "classes": {
-      "CExampleSchemaVData_Monomorphic": {
-        "fields": {
-          "m_nExample1": 0,
-          "m_nExample2": 4
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CExampleSchemaVData_PolymorphicBase": {
-        "fields": {
-          "m_nBase": 8
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CExampleSchemaVData_PolymorphicDerivedA": {
-        "fields": {
-          "m_nDerivedA": 16
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CExampleSchemaVData_PolymorphicDerivedB": {
-        "fields": {
-          "m_nDerivedB": 16
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CSchemaSystemInternalRegistration": {
-        "fields": {
-          "m_CTransform": 256,
-          "m_CUtlBinaryBlock": 296,
-          "m_CUtlString": 312,
-          "m_CUtlSymbol": 320,
-          "m_Color": 224,
-          "m_DegreeEuler": 100,
-          "m_KV3": 360,
-          "m_QAngle": 64,
-          "m_Quaternion": 48,
-          "m_QuaternionStorage": 112,
-          "m_RadianEuler": 88,
-          "m_ResourceTypes": 352,
-          "m_RotationVector": 76,
-          "m_Vector": 8,
-          "m_Vector2D": 0,
-          "m_Vector4D": 228,
-          "m_VectorAligned": 32,
-          "m_VectorWS": 20,
-          "m_matrix3x4_t": 128,
-          "m_matrix3x4a_t": 176,
-          "m_pKeyValues": 288,
-          "m_stringToken": 324,
-          "m_stringTokenWithStorage": 328
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "InfoForResourceTypeCResourceManifestInternal": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MResourceTypeForInfoType",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "ResourceId_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      }
-    },
-    "enums": {
-      "ThreeState_t": {
-        "alignment": 4,
-        "members": {
-          "TRS_FALSE": 0,
-          "TRS_NONE": 2,
-          "TRS_TRUE": 1
-        },
-        "type": "uint32"
-      },
-      "fieldtype_t": {
-        "alignment": 1,
-        "members": {
-          "DEPRECATED_FIELD_AI_SCHEDULE_BITS": 69,
-          "FIELD_AMMO_INDEX": 67,
-          "FIELD_ATTACHMENT_HANDLE": 66,
-          "FIELD_BOOLEAN": 6,
-          "FIELD_CHARACTER": 8,
-          "FIELD_CLASSPTR": 12,
-          "FIELD_CMOTIONTRANSFORM": 64,
-          "FIELD_CMOTIONTRANSFORM_WORLDSPACE": 65,
-          "FIELD_COLOR32": 9,
-          "FIELD_CONDITION_ID": 68,
-          "FIELD_CSTRING": 30,
-          "FIELD_CTRANSFORM": 59,
-          "FIELD_CTRANSFORM_WORLDSPACE": 60,
-          "FIELD_CUSTOM": 11,
-          "FIELD_DIRECTION_VECTOR_WORLDSPACE": 45,
-          "FIELD_EHANDLE": 13,
-          "FIELD_EMBEDDED": 10,
-          "FIELD_ENGINE_TICK": 77,
-          "FIELD_ENGINE_TIME": 76,
-          "FIELD_FLOAT32": 1,
-          "FIELD_FLOAT64": 34,
-          "FIELD_FUNCTION": 19,
-          "FIELD_GLOBALSYMBOL": 79,
-          "FIELD_HMATERIAL": 41,
-          "FIELD_HMODEL": 42,
-          "FIELD_HNMGRAPHDEFINITION": 80,
-          "FIELD_HPARTICLESYSTEMDEFINITION": 56,
-          "FIELD_HPOSTPROCESSING": 61,
-          "FIELD_HRENDERTEXTURE": 55,
-          "FIELD_HSCRIPT": 31,
-          "FIELD_HSCRIPT_LIGHTBINDING": 48,
-          "FIELD_HSCRIPT_NEW_INSTANCE": 36,
-          "FIELD_HVDATA": 73,
-          "FIELD_INPUT": 18,
-          "FIELD_INT16": 7,
-          "FIELD_INT32": 5,
-          "FIELD_INT64": 26,
-          "FIELD_INTERVAL": 23,
-          "FIELD_MATRIX3X4": 62,
-          "FIELD_MATRIX3X4_WORLDSPACE": 22,
-          "FIELD_MODIFIER_HANDLE": 70,
-          "FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_POSITION_VECTOR": 54,
-          "FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTOR": 40,
-          "FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTORWS": 82,
-          "FIELD_NETWORK_QUANTIZED_FLOAT": 44,
-          "FIELD_NETWORK_QUANTIZED_VECTOR": 43,
-          "FIELD_NETWORK_QUANTIZED_VECTORWS": 81,
-          "FIELD_POSITION_VECTOR": 14,
-          "FIELD_POSITIVEINTEGER_OR_NULL": 35,
-          "FIELD_QANGLE": 39,
-          "FIELD_QANGLE_WORLDSPACE": 46,
-          "FIELD_QUATERNION": 4,
-          "FIELD_QUATERNION_WORLDSPACE": 47,
-          "FIELD_RESOURCE": 28,
-          "FIELD_ROTATION_VECTOR": 71,
-          "FIELD_ROTATION_VECTOR_WORLDSPACE": 72,
-          "FIELD_SCALE32": 74,
-          "FIELD_SHIM": 63,
-          "FIELD_SOUNDNAME": 17,
-          "FIELD_STRING": 2,
-          "FIELD_STRING_AND_TOKEN": 75,
-          "FIELD_TICK": 16,
-          "FIELD_TIME": 15,
-          "FIELD_TYPECOUNT": 83,
-          "FIELD_TYPEUNKNOWN": 29,
-          "FIELD_UINT16": 58,
-          "FIELD_UINT32": 37,
-          "FIELD_UINT64": 33,
-          "FIELD_UINT8": 57,
-          "FIELD_UNUSED": 24,
-          "FIELD_UTLSTRING": 53,
-          "FIELD_UTLSTRINGTOKEN": 38,
-          "FIELD_V8_ARRAY": 51,
-          "FIELD_V8_CALLBACK_INFO": 52,
-          "FIELD_V8_OBJECT": 50,
-          "FIELD_V8_VALUE": 49,
-          "FIELD_VARIANT": 32,
-          "FIELD_VECTOR": 3,
-          "FIELD_VECTOR2D": 25,
-          "FIELD_VECTOR4D": 27,
-          "FIELD_VMATRIX": 20,
-          "FIELD_VMATRIX_WORLDSPACE": 21,
-          "FIELD_VOID": 0,
-          "FIELD_WORLD_GROUP_ID": 78
-        },
-        "type": "uint8"
-      }
-    }
-  }
+ "schemasystem.dll": {
+  "classes": [
+   {
+    "name": "InfoForResourceTypeCResourceManifestInternal",
+    "module": "InfoForResourceTypeCResourceManifestInternal.dll",
+    "size": 1,
+    "fields": []
+   },
+   {
+    "name": "CSchemaSystemInternalRegistration",
+    "module": "CSchemaSystemInternalRegistration.dll",
+    "size": 384,
+    "fields": [
+     {
+      "name": "m_Vector2D",
+      "type": "Vector2D",
+      "offset": 0
+     },
+     {
+      "name": "m_Vector",
+      "type": "Vector",
+      "offset": 8
+     },
+     {
+      "name": "m_VectorWS",
+      "type": "VectorWS",
+      "offset": 20
+     },
+     {
+      "name": "m_VectorAligned",
+      "type": "VectorAligned",
+      "offset": 32
+     },
+     {
+      "name": "m_Quaternion",
+      "type": "Quaternion",
+      "offset": 48
+     },
+     {
+      "name": "m_QAngle",
+      "type": "QAngle",
+      "offset": 64
+     },
+     {
+      "name": "m_RotationVector",
+      "type": "RotationVector",
+      "offset": 76
+     },
+     {
+      "name": "m_RadianEuler",
+      "type": "RadianEuler",
+      "offset": 88
+     },
+     {
+      "name": "m_DegreeEuler",
+      "type": "DegreeEuler",
+      "offset": 100
+     },
+     {
+      "name": "m_QuaternionStorage",
+      "type": "QuaternionStorage",
+      "offset": 112
+     },
+     {
+      "name": "m_matrix3x4_t",
+      "type": "matrix3x4_t",
+      "offset": 128
+     },
+     {
+      "name": "m_matrix3x4a_t",
+      "type": "matrix3x4a_t",
+      "offset": 176
+     },
+     {
+      "name": "m_Color",
+      "type": "Color",
+      "offset": 224
+     },
+     {
+      "name": "m_Vector4D",
+      "type": "Vector4D",
+      "offset": 228
+     },
+     {
+      "name": "m_CTransform",
+      "type": "CTransform",
+      "offset": 256
+     },
+     {
+      "name": "m_pKeyValues",
+      "type": "KeyValues*",
+      "offset": 288
+     },
+     {
+      "name": "m_CUtlBinaryBlock",
+      "type": "CUtlBinaryBlock",
+      "offset": 296
+     },
+     {
+      "name": "m_CUtlString",
+      "type": "CUtlString",
+      "offset": 312
+     },
+     {
+      "name": "m_CUtlSymbol",
+      "type": "CUtlSymbol",
+      "offset": 320
+     },
+     {
+      "name": "m_stringToken",
+      "type": "CUtlStringToken",
+      "offset": 324
+     },
+     {
+      "name": "m_stringTokenWithStorage",
+      "type": "CUtlStringTokenWithStorage",
+      "offset": 328
+     },
+     {
+      "name": "m_ResourceTypes",
+      "type": "CResourceArray<CResourcePointer<CResourceString>>",
+      "offset": 352
+     },
+     {
+      "name": "m_KV3",
+      "type": "KeyValues3",
+      "offset": 360
+     }
+    ]
+   },
+   {
+    "name": "CExampleSchemaVData_PolymorphicDerivedA",
+    "module": "CExampleSchemaVData_PolymorphicDerivedA.dll",
+    "size": 24,
+    "fields": [
+     {
+      "name": "m_nDerivedA",
+      "type": "int32",
+      "offset": 16
+     }
+    ]
+   },
+   {
+    "name": "CExampleSchemaVData_PolymorphicBase",
+    "module": "CExampleSchemaVData_PolymorphicBase.dll",
+    "size": 16,
+    "fields": [
+     {
+      "name": "m_nBase",
+      "type": "int32",
+      "offset": 8
+     }
+    ]
+   },
+   {
+    "name": "CExampleSchemaVData_PolymorphicDerivedB",
+    "module": "CExampleSchemaVData_PolymorphicDerivedB.dll",
+    "size": 24,
+    "fields": [
+     {
+      "name": "m_nDerivedB",
+      "type": "int32",
+      "offset": 16
+     }
+    ]
+   },
+   {
+    "name": "ResourceId_t",
+    "module": "ResourceId_t.dll",
+    "size": 8,
+    "fields": [
+     {
+      "name": "m_Value",
+      "type": "uint64",
+      "offset": 0
+     }
+    ]
+   },
+   {
+    "name": "CExampleSchemaVData_Monomorphic",
+    "module": "CExampleSchemaVData_Monomorphic.dll",
+    "size": 8,
+    "fields": [
+     {
+      "name": "m_nExample1",
+      "type": "int32",
+      "offset": 0
+     },
+     {
+      "name": "m_nExample2",
+      "type": "int32",
+      "offset": 4
+     }
+    ]
+   }
+  ],
+  "enums": [
+   {
+    "name": "fieldtype_t",
+    "members": [
+     {
+      "name": "FIELD_VOID",
+      "value": 0
+     },
+     {
+      "name": "FIELD_FLOAT32",
+      "value": 1
+     },
+     {
+      "name": "FIELD_STRING",
+      "value": 2
+     },
+     {
+      "name": "FIELD_VECTOR",
+      "value": 3
+     },
+     {
+      "name": "FIELD_QUATERNION",
+      "value": 4
+     },
+     {
+      "name": "FIELD_INT32",
+      "value": 5
+     },
+     {
+      "name": "FIELD_BOOLEAN",
+      "value": 6
+     },
+     {
+      "name": "FIELD_INT16",
+      "value": 7
+     },
+     {
+      "name": "FIELD_CHARACTER",
+      "value": 8
+     },
+     {
+      "name": "FIELD_COLOR32",
+      "value": 9
+     },
+     {
+      "name": "FIELD_EMBEDDED",
+      "value": 10
+     },
+     {
+      "name": "FIELD_CUSTOM",
+      "value": 11
+     },
+     {
+      "name": "FIELD_CLASSPTR",
+      "value": 12
+     },
+     {
+      "name": "FIELD_EHANDLE",
+      "value": 13
+     },
+     {
+      "name": "FIELD_POSITION_VECTOR",
+      "value": 14
+     },
+     {
+      "name": "FIELD_TIME",
+      "value": 15
+     },
+     {
+      "name": "FIELD_TICK",
+      "value": 16
+     },
+     {
+      "name": "FIELD_SOUNDNAME",
+      "value": 17
+     },
+     {
+      "name": "FIELD_INPUT",
+      "value": 18
+     },
+     {
+      "name": "FIELD_FUNCTION",
+      "value": 19
+     },
+     {
+      "name": "FIELD_VMATRIX",
+      "value": 20
+     },
+     {
+      "name": "FIELD_VMATRIX_WORLDSPACE",
+      "value": 21
+     },
+     {
+      "name": "FIELD_MATRIX3X4_WORLDSPACE",
+      "value": 22
+     },
+     {
+      "name": "FIELD_INTERVAL",
+      "value": 23
+     },
+     {
+      "name": "FIELD_UNUSED",
+      "value": 24
+     },
+     {
+      "name": "FIELD_VECTOR2D",
+      "value": 25
+     },
+     {
+      "name": "FIELD_INT64",
+      "value": 26
+     },
+     {
+      "name": "FIELD_VECTOR4D",
+      "value": 27
+     },
+     {
+      "name": "FIELD_RESOURCE",
+      "value": 28
+     },
+     {
+      "name": "FIELD_TYPEUNKNOWN",
+      "value": 29
+     },
+     {
+      "name": "FIELD_CSTRING",
+      "value": 30
+     },
+     {
+      "name": "FIELD_HSCRIPT",
+      "value": 31
+     },
+     {
+      "name": "FIELD_VARIANT",
+      "value": 32
+     },
+     {
+      "name": "FIELD_UINT64",
+      "value": 33
+     },
+     {
+      "name": "FIELD_FLOAT64",
+      "value": 34
+     },
+     {
+      "name": "FIELD_POSITIVEINTEGER_OR_NULL",
+      "value": 35
+     },
+     {
+      "name": "FIELD_HSCRIPT_NEW_INSTANCE",
+      "value": 36
+     },
+     {
+      "name": "FIELD_UINT32",
+      "value": 37
+     },
+     {
+      "name": "FIELD_UTLSTRINGTOKEN",
+      "value": 38
+     },
+     {
+      "name": "FIELD_QANGLE",
+      "value": 39
+     },
+     {
+      "name": "FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTOR",
+      "value": 40
+     },
+     {
+      "name": "FIELD_HMATERIAL",
+      "value": 41
+     },
+     {
+      "name": "FIELD_HMODEL",
+      "value": 42
+     },
+     {
+      "name": "FIELD_NETWORK_QUANTIZED_VECTOR",
+      "value": 43
+     },
+     {
+      "name": "FIELD_NETWORK_QUANTIZED_FLOAT",
+      "value": 44
+     },
+     {
+      "name": "FIELD_DIRECTION_VECTOR_WORLDSPACE",
+      "value": 45
+     },
+     {
+      "name": "FIELD_QANGLE_WORLDSPACE",
+      "value": 46
+     },
+     {
+      "name": "FIELD_QUATERNION_WORLDSPACE",
+      "value": 47
+     },
+     {
+      "name": "FIELD_HSCRIPT_LIGHTBINDING",
+      "value": 48
+     },
+     {
+      "name": "FIELD_V8_VALUE",
+      "value": 49
+     },
+     {
+      "name": "FIELD_V8_OBJECT",
+      "value": 50
+     },
+     {
+      "name": "FIELD_V8_ARRAY",
+      "value": 51
+     },
+     {
+      "name": "FIELD_V8_CALLBACK_INFO",
+      "value": 52
+     },
+     {
+      "name": "FIELD_UTLSTRING",
+      "value": 53
+     },
+     {
+      "name": "FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_POSITION_VECTOR",
+      "value": 54
+     },
+     {
+      "name": "FIELD_HRENDERTEXTURE",
+      "value": 55
+     },
+     {
+      "name": "FIELD_HPARTICLESYSTEMDEFINITION",
+      "value": 56
+     },
+     {
+      "name": "FIELD_UINT8",
+      "value": 57
+     },
+     {
+      "name": "FIELD_UINT16",
+      "value": 58
+     },
+     {
+      "name": "FIELD_CTRANSFORM",
+      "value": 59
+     },
+     {
+      "name": "FIELD_CTRANSFORM_WORLDSPACE",
+      "value": 60
+     },
+     {
+      "name": "FIELD_HPOSTPROCESSING",
+      "value": 61
+     },
+     {
+      "name": "FIELD_MATRIX3X4",
+      "value": 62
+     },
+     {
+      "name": "FIELD_SHIM",
+      "value": 63
+     },
+     {
+      "name": "FIELD_CMOTIONTRANSFORM",
+      "value": 64
+     },
+     {
+      "name": "FIELD_CMOTIONTRANSFORM_WORLDSPACE",
+      "value": 65
+     },
+     {
+      "name": "FIELD_ATTACHMENT_HANDLE",
+      "value": 66
+     },
+     {
+      "name": "FIELD_AMMO_INDEX",
+      "value": 67
+     },
+     {
+      "name": "FIELD_CONDITION_ID",
+      "value": 68
+     },
+     {
+      "name": "DEPRECATED_FIELD_AI_SCHEDULE_BITS",
+      "value": 69
+     },
+     {
+      "name": "FIELD_MODIFIER_HANDLE",
+      "value": 70
+     },
+     {
+      "name": "FIELD_ROTATION_VECTOR",
+      "value": 71
+     },
+     {
+      "name": "FIELD_ROTATION_VECTOR_WORLDSPACE",
+      "value": 72
+     },
+     {
+      "name": "FIELD_HVDATA",
+      "value": 73
+     },
+     {
+      "name": "FIELD_SCALE32",
+      "value": 74
+     },
+     {
+      "name": "FIELD_STRING_AND_TOKEN",
+      "value": 75
+     },
+     {
+      "name": "FIELD_ENGINE_TIME",
+      "value": 76
+     },
+     {
+      "name": "FIELD_ENGINE_TICK",
+      "value": 77
+     },
+     {
+      "name": "FIELD_WORLD_GROUP_ID",
+      "value": 78
+     },
+     {
+      "name": "FIELD_GLOBALSYMBOL",
+      "value": 79
+     },
+     {
+      "name": "FIELD_HNMGRAPHDEFINITION",
+      "value": 80
+     },
+     {
+      "name": "FIELD_NETWORK_QUANTIZED_VECTORWS",
+      "value": 81
+     },
+     {
+      "name": "FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTORWS",
+      "value": 82
+     },
+     {
+      "name": "FIELD_TYPECOUNT",
+      "value": 83
+     }
+    ]
+   },
+   {
+    "name": "ThreeState_t",
+    "members": [
+     {
+      "name": "TRS_FALSE",
+      "value": 0
+     },
+     {
+      "name": "TRS_TRUE",
+      "value": 1
+     },
+     {
+      "name": "TRS_NONE",
+      "value": 2
+     }
+    ]
+   }
+  ]
+ }
 }

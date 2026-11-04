@@ -1,25 +1,24 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:36 04/11/2026 (GMT)
+/*  Dumped At       : 22:50 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
 
-#pragma once
-#include "../macros.hpp"
-
-namespace networksystem {
-
-    class ChangeAccessorFieldPathIndex_t;
-
-    // ChangeAccessorFieldPathIndex_t
-/*
-   fields: 1
-   size: 0x4
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Generated from the live CS2 schema system.
 */
-    class ChangeAccessorFieldPathIndex_t {
-    public:
-        SCHEMA_FIELD(std::int32_t                    , m_Value                                         , 0x0) // int32
-    };
 
-} // namespace networksystem
+#pragma once
+#include <cstddef>
+#include <cstdint>
+
+namespace cs2::networksystem {
+
+struct ChangeAccessorFieldPathIndex_t {
+    static constexpr std::size_t size = 0x4;
+    std::uint8_t m_Value[0x4]; // 0x0 int32
+};
+
+} // namespace

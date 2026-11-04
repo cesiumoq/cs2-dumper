@@ -1,24 +1,20 @@
-// Generated using https://github.com/a2x/cs2-dumper
-// 2026-11-03 12:42:01.636437600 UTC
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Generated from the live CS2 schema system.
+*/
 
-#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
+#![allow(non_snake_case, non_camel_case_types, dead_code)]
 
-pub mod cs2_dumper {
-    pub mod schemas {
-        // Module: host.dll
-        // Class count: 2
-        // Enum count: 0
-        pub mod host_dll {
-            // Parent: None
-            // Field count: 1
-            pub mod EmptyTestScript {
-                pub const m_hTest: usize = 0x10; // CAnimScriptParam<float32>
-            }
-            // Parent: None
-            // Field count: 1
-            pub mod CAnimScriptBase {
-                pub const m_bIsValid: usize = 0x8; // bool
-            }
-        }
+pub mod host {
+
+    #[repr(C)]
+    pub struct EmptyTestScript {
+        pub pad_0: [u8; 0x10], // 0x0
+        pub m_hTest: [u8; 0x10], // 0x10
+    }
+    #[repr(C)]
+    pub struct CAnimScriptBase {
+        pub pad_0: [u8; 0x8], // 0x0
+        pub m_bIsValid: [u8; 0x8], // 0x8
     }
 }

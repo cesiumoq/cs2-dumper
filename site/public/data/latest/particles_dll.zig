@@ -1,7173 +1,4456 @@
-// Generated using https://github.com/a2x/cs2-dumper
-// 2026-11-03 12:42:01.636437600 UTC
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Generated from the live CS2 schema system.
+*/
 
-pub const cs2_dumper = struct {
-    pub const schemas = struct {
-        // Module: particles.dll
-        // Class count: 499
-        // Enum count: 77
-        pub const particles_dll = struct {
-            // Alignment: 4
-            // Member count: 2
-            pub const PulseBestOutflowRules_t = enum(u32) {
-                SORT_BY_NUMBER_OF_VALID_CRITERIA = 0x0,
-                SORT_BY_OUTFLOW_INDEX = 0x1
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const PulseCursorCancelPriority_t = enum(u32) {
-                None = 0x0,
-                CancelOnSucceeded = 0x1,
-                SoftCancel = 0x2,
-                HardCancel = 0x3
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const PulseMethodCallMode_t = enum(u32) {
-                SYNC_WAIT_FOR_COMPLETION = 0x0,
-                ASYNC_FIRE_AND_FORGET = 0x1
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const PulseCursorWakePriority_t = enum(u32) {
-                WakeElegantly = 0x0,
-                WakeImmediate = 0x1
-            };
-            // Alignment: 4
-            // Member count: 7
-            pub const Detail2Combo_t = enum(u32) {
-                DETAIL_2_COMBO_UNINITIALIZED = 0xFFFFFFFF,
-                DETAIL_2_COMBO_OFF = 0x0,
-                DETAIL_2_COMBO_ADD = 0x1,
-                DETAIL_2_COMBO_ADD_SELF_ILLUM = 0x2,
-                DETAIL_2_COMBO_MOD2X = 0x3,
-                DETAIL_2_COMBO_MUL = 0x4,
-                DETAIL_2_COMBO_CROSSFADE = 0x5
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const MissingParentInheritBehavior_t = enum(u32) {
-                MISSING_PARENT_DO_NOTHING = 0xFFFFFFFF,
-                MISSING_PARENT_KILL = 0x0,
-                MISSING_PARENT_FIND_NEW = 0x1,
-                MISSING_PARENT_SAME_INDEX = 0x2
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleTraceMissBehavior_t = enum(u32) {
-                PARTICLE_TRACE_MISS_BEHAVIOR_NONE = 0x0,
-                PARTICLE_TRACE_MISS_BEHAVIOR_KILL = 0x1,
-                PARTICLE_TRACE_MISS_BEHAVIOR_TRACE_END = 0x2
-            };
-            // Alignment: 4
-            // Member count: 7
-            pub const PFuncVisualizationType_t = enum(u32) {
-                PFUNC_VISUALIZATION_SPHERE_WIREFRAME = 0x0,
-                PFUNC_VISUALIZATION_SPHERE_SOLID = 0x1,
-                PFUNC_VISUALIZATION_BOX = 0x2,
-                PFUNC_VISUALIZATION_RING = 0x3,
-                PFUNC_VISUALIZATION_PLANE = 0x4,
-                PFUNC_VISUALIZATION_LINE = 0x5,
-                PFUNC_VISUALIZATION_CYLINDER = 0x6
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const ParticleVRHandChoiceList_t = enum(u32) {
-                PARTICLE_VRHAND_LEFT = 0x0,
-                PARTICLE_VRHAND_RIGHT = 0x1,
-                PARTICLE_VRHAND_CP = 0x2,
-                PARTICLE_VRHAND_CP_OBJECT = 0x3
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const ParticleEntityPos_t = enum(u32) {
-                PARTICLE_ABS_ORIGIN = 0x0,
-                PARTICLE_WORLDSPACE_CENTER = 0x1,
-                PARTICLE_EYES = 0x2,
-                PARTICLE_FLASHLIGHT = 0x3
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleFanType_t = enum(u32) {
-                PARTICLE_FAN_TYPE_FAN = 0x0,
-                PARTICLE_FAN_TYPE_ROTOR_WASH = 0x1,
-                PARTICLE_FAN_TYPE_RADIAL = 0x2
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const PetGroundType_t = enum(u32) {
-                PET_GROUND_NONE = 0x0,
-                PET_GROUND_GRID = 0x1,
-                PET_GROUND_PLANE = 0x2
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const InheritableBoolType_t = enum(u32) {
-                INHERITABLE_BOOL_INHERIT = 0x0,
-                INHERITABLE_BOOL_FALSE = 0x1,
-                INHERITABLE_BOOL_TRUE = 0x2
-            };
-            // Alignment: 4
-            // Member count: 6
-            pub const ParticlePostProcessPriorityGroup_t = enum(u32) {
-                PARTICLE_POST_PROCESS_PRIORITY_LEVEL_VOLUME = 0x0,
-                PARTICLE_POST_PROCESS_PRIORITY_LEVEL_OVERRIDE = 0x1,
-                PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_EFFECT = 0x2,
-                PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_LOW = 0x3,
-                PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_HIGH = 0x4,
-                PARTICLE_POST_PROCESS_PRIORITY_GLOBAL_UI = 0x5
-            };
-            // Alignment: 4
-            // Member count: 7
-            pub const ParticleCollisionGroup_t = enum(u32) {
-                PARTICLE_COLLISION_GROUP_DEFAULT = 0x4,
-                PARTICLE_COLLISION_GROUP_DEBRIS = 0x5,
-                PARTICLE_COLLISION_GROUP_INTERACTIVE = 0x7,
-                PARTICLE_COLLISION_GROUP_PLAYER = 0x8,
-                PARTICLE_COLLISION_GROUP_VEHICLE = 0xA,
-                PARTICLE_COLLISION_GROUP_NPC = 0xC,
-                PARTICLE_COLLISION_GROUP_PROPS = 0x18
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const DetailCombo_t = enum(u32) {
-                DETAIL_COMBO_OFF = 0x0,
-                DETAIL_COMBO_ADD = 0x1,
-                DETAIL_COMBO_ADD_SELF_ILLUM = 0x2,
-                DETAIL_COMBO_MOD2X = 0x3
-            };
-            // Alignment: 4
-            // Member count: 12
-            pub const ScalarExpressionType_t = enum(u32) {
-                SCALAR_EXPRESSION_UNINITIALIZED = 0xFFFFFFFF,
-                SCALAR_EXPRESSION_ADD = 0x0,
-                SCALAR_EXPRESSION_SUBTRACT = 0x1,
-                SCALAR_EXPRESSION_MUL = 0x2,
-                SCALAR_EXPRESSION_DIVIDE = 0x3,
-                SCALAR_EXPRESSION_INPUT_1 = 0x4,
-                SCALAR_EXPRESSION_MIN = 0x5,
-                SCALAR_EXPRESSION_MAX = 0x6,
-                SCALAR_EXPRESSION_MOD = 0x7,
-                SCALAR_EXPRESSION_EQUAL = 0x8,
-                SCALAR_EXPRESSION_GT = 0x9,
-                SCALAR_EXPRESSION_LT = 0xA
-            };
-            // Alignment: 4
-            // Member count: 14
-            pub const SpriteCardPerParticleScale_t = enum(u32) {
-                SPRITECARD_TEXTURE_PP_SCALE_NONE = 0x0,
-                SPRITECARD_TEXTURE_PP_SCALE_PARTICLE_AGE = 0x1,
-                SPRITECARD_TEXTURE_PP_SCALE_ANIMATION_FRAME = 0x2,
-                SPRITECARD_TEXTURE_PP_SCALE_SHADER_EXTRA_DATA1 = 0x3,
-                SPRITECARD_TEXTURE_PP_SCALE_SHADER_EXTRA_DATA2 = 0x4,
-                SPRITECARD_TEXTURE_PP_SCALE_PARTICLE_ALPHA = 0x5,
-                SPRITECARD_TEXTURE_PP_SCALE_SHADER_RADIUS = 0x6,
-                SPRITECARD_TEXTURE_PP_SCALE_ROLL = 0x7,
-                SPRITECARD_TEXTURE_PP_SCALE_YAW = 0x8,
-                SPRITECARD_TEXTURE_PP_SCALE_PITCH = 0x9,
-                SPRITECARD_TEXTURE_PP_SCALE_RANDOM = 0xA,
-                SPRITECARD_TEXTURE_PP_SCALE_NEG_RANDOM = 0xB,
-                SPRITECARD_TEXTURE_PP_SCALE_RANDOM_TIME = 0xC,
-                SPRITECARD_TEXTURE_PP_SCALE_NEG_RANDOM_TIME = 0xD
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const BlurFilterType_t = enum(u32) {
-                BLURFILTER_GAUSSIAN = 0x0,
-                BLURFILTER_BOX = 0x1
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const StandardLightingAttenuationStyle_t = enum(u32) {
-                LIGHT_STYLE_OLD = 0x0,
-                LIGHT_STYLE_NEW = 0x1
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleParentSetMode_t = enum(u32) {
-                PARTICLE_SET_PARENT_NO = 0x0,
-                PARTICLE_SET_PARENT_IMMEDIATE = 0x1,
-                PARTICLE_SET_PARENT_ROOT = 0x2
-            };
-            // Alignment: 4
-            // Member count: 6
-            pub const ParticleLightingQuality_t = enum(u32) {
-                PARTICLE_LIGHTING_PER_PARTICLE = 0x0,
-                PARTICLE_LIGHTING_PER_VERTEX = 0x1,
-                PARTICLE_LIGHTING_PER_PIXEL = 0xFFFFFFFF,
-                PARTICLE_LIGHTING_OVERRIDE_POSITION = 0x2,
-                PARTICLE_LIGHTING_OVERRIDE_COLOR = 0x3,
-                PARTICLE_LIGHTING_ADD_EXTRA_LIGHT = 0x4
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const ParticleVolumetricSmokeCreationType_t = enum(u32) {
-                PARTICLE_VOLUMETRIC_SMOKE_TYPE_CONTINUOUS = 0x0,
-                PARTICLE_VOLUMETRIC_SMOKE_TYPE_IMPULSE = 0x1
-            };
-            // Alignment: 4
-            // Member count: 8
-            pub const SetStatisticExpressionType_t = enum(u32) {
-                SET_EXPRESSION_UNINITIALIZED = 0xFFFFFFFF,
-                SET_EXPRESSION_SUM = 0x0,
-                SET_EXPRESSION_MEAN = 0x1,
-                SET_EXPRESSION_MEDIAN = 0x2,
-                SET_EXPRESSION_MODE = 0x3,
-                SET_EXPRESSION_STANDARD_DEVIATION = 0x4,
-                SET_EXPRESSION_MIN = 0x5,
-                SET_EXPRESSION_MAX = 0x6
-            };
-            // Alignment: 4
-            // Member count: 13
-            pub const EventTypeSelection_t = enum(u32) {
-                PARTICLE_EVENT_TYPE_MASK_NONE = 0x0,
-                PARTICLE_EVENT_TYPE_MASK_SPAWNED = 0x1,
-                PARTICLE_EVENT_TYPE_MASK_KILLED = 0x2,
-                PARTICLE_EVENT_TYPE_MASK_COLLISION = 0x4,
-                PARTICLE_EVENT_TYPE_MASK_FIRST_COLLISION = 0x8,
-                PARTICLE_EVENT_TYPE_MASK_COLLISION_STOPPED = 0x10,
-                PARTICLE_EVENT_TYPE_MASK_KILLED_ON_COLLISION = 0x20,
-                PARTICLE_EVENT_TYPE_MASK_KILLED_ON_CULL = 0x400,
-                PARTICLE_EVENT_TYPE_MASK_CULLED_ON_SPAWN = 0x800,
-                PARTICLE_EVENT_TYPE_MASK_USER_1 = 0x40,
-                PARTICLE_EVENT_TYPE_MASK_USER_2 = 0x80,
-                PARTICLE_EVENT_TYPE_MASK_USER_3 = 0x100,
-                PARTICLE_EVENT_TYPE_MASK_USER_4 = 0x200
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const ParticleMassMode_t = enum(u32) {
-                PARTICLE_MASSMODE_RADIUS_CUBED = 0x0,
-                PARTICLE_MASSMODE_RADIUS_SQUARED = 0x2
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const ParticleHitboxBiasType_t = enum(u32) {
-                PARTICLE_HITBOX_BIAS_ENTITY = 0x0,
-                PARTICLE_HITBOX_BIAS_HITBOX = 0x1
-            };
-            // Alignment: 4
-            // Member count: 6
-            pub const ParticleControlPointAxis_t = enum(u32) {
-                PARTICLE_CP_AXIS_X = 0x0,
-                PARTICLE_CP_AXIS_Y = 0x1,
-                PARTICLE_CP_AXIS_Z = 0x2,
-                PARTICLE_CP_AXIS_NEGATIVE_X = 0x3,
-                PARTICLE_CP_AXIS_NEGATIVE_Y = 0x4,
-                PARTICLE_CP_AXIS_NEGATIVE_Z = 0x5
-            };
-            // Alignment: 4
-            // Member count: 12
-            pub const ParticlePinDistance_t = enum(u32) {
-                PARTICLE_PIN_DISTANCE_NONE = 0xFFFFFFFF,
-                PARTICLE_PIN_DISTANCE_NEIGHBOR = 0x0,
-                PARTICLE_PIN_DISTANCE_FARTHEST = 0x1,
-                PARTICLE_PIN_DISTANCE_FIRST = 0x2,
-                PARTICLE_PIN_DISTANCE_LAST = 0x3,
-                PARTICLE_PIN_DISTANCE_CENTER = 0x5,
-                PARTICLE_PIN_DISTANCE_CP = 0x6,
-                PARTICLE_PIN_DISTANCE_CP_PAIR_EITHER = 0x7,
-                PARTICLE_PIN_DISTANCE_CP_PAIR_BOTH = 0x8,
-                PARTICLE_PIN_SPEED = 0x9,
-                PARTICLE_PIN_COLLECTION_AGE = 0xA,
-                PARTICLE_PIN_FLOAT_VALUE = 0xB
-            };
-            // Alignment: 4
-            // Member count: 7
-            pub const VectorFloatExpressionType_t = enum(u32) {
-                VECTOR_FLOAT_EXPRESSION_UNINITIALIZED = 0xFFFFFFFF,
-                VECTOR_FLOAT_EXPRESSION_DOTPRODUCT = 0x0,
-                VECTOR_FLOAT_EXPRESSION_DISTANCE = 0x1,
-                VECTOR_FLOAT_EXPRESSION_DISTANCESQR = 0x2,
-                VECTOR_FLOAT_EXPRESSION_INPUT1_LENGTH = 0x3,
-                VECTOR_FLOAT_EXPRESSION_INPUT1_LENGTHSQR = 0x4,
-                VECTOR_FLOAT_EXPRESSION_INPUT1_NOISE = 0x5
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleFogType_t = enum(u32) {
-                PARTICLE_FOG_GAME_DEFAULT = 0x0,
-                PARTICLE_FOG_ENABLED = 0x1,
-                PARTICLE_FOG_DISABLED = 0x2
-            };
-            // Alignment: 4
-            // Member count: 10
-            pub const VectorExpressionType_t = enum(u32) {
-                VECTOR_EXPRESSION_UNINITIALIZED = 0xFFFFFFFF,
-                VECTOR_EXPRESSION_ADD = 0x0,
-                VECTOR_EXPRESSION_SUBTRACT = 0x1,
-                VECTOR_EXPRESSION_MUL = 0x2,
-                VECTOR_EXPRESSION_DIVIDE = 0x3,
-                VECTOR_EXPRESSION_INPUT_1 = 0x4,
-                VECTOR_EXPRESSION_MIN = 0x5,
-                VECTOR_EXPRESSION_MAX = 0x6,
-                VECTOR_EXPRESSION_CROSSPRODUCT = 0x7,
-                VECTOR_EXPRESSION_LERP = 0x8
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const ParticleMultiSegmentInputSelection_t = enum(u32) {
-                PARTICLE_MULTISEGMENT_SELECTION_FLOAT = 0x0,
-                PARTICLE_MULTISEGMENT_SELECTION_STRING = 0x1
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleRotationLockType_t = enum(u32) {
-                PARTICLE_ROTATION_LOCK_NONE = 0x0,
-                PARTICLE_ROTATION_LOCK_ROTATIONS = 0x1,
-                PARTICLE_ROTATION_LOCK_NORMAL = 0x2
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const HitboxLerpType_t = enum(u32) {
-                HITBOX_LERP_LIFETIME = 0x0,
-                HITBOX_LERP_CONSTANT = 0x1
-            };
-            // Alignment: 4
-            // Member count: 11
-            pub const ParticleAttrBoxFlags_t = enum(u32) {
-                PARTICLE_ATTR_BOX_FLAGS_NONE = 0x0,
-                PARTICLE_ATTR_BOX_FLAGS_WATER = 0x1,
-                PARTICLE_ATTR_BOX_FLAGS_ON_FIRE = 0x2,
-                PARTICLE_ATTR_BOX_FLAGS_ELECTRIFIED = 0x4,
-                PARTICLE_ATTR_BOX_FLAGS_ASLEEP = 0x8,
-                PARTICLE_ATTR_BOX_FLAGS_FROZEN = 0x10,
-                PARTICLE_ATTR_BOX_FLAGS_TIMED_DECAY = 0x20,
-                PARTICLE_ATTR_BOX_FLAGS_DISABLE_NONSTATIC_COLLISION = 0x40,
-                PARTICLE_ATTR_BOX_FLAGS_WAKE_DECAY = 0x80,
-                PARTICLE_ATTR_BOX_FLAGS_MOTION_DISABLED = 0x100,
-                PARTICLE_ATTR_BOX_FLAGS_ZERO_GRAVITY = 0x200
-            };
-            // Alignment: 4
-            // Member count: 5
-            pub const ParticleTopology_t = enum(u32) {
-                PARTICLE_TOPOLOGY_POINTS = 0x0,
-                PARTICLE_TOPOLOGY_LINES = 0x1,
-                PARTICLE_TOPOLOGY_TRIS = 0x2,
-                PARTICLE_TOPOLOGY_QUADS = 0x3,
-                PARTICLE_TOPOLOGY_CUBES = 0x4
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleLightBehaviorChoiceList_t = enum(u32) {
-                PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION = 0x0,
-                PARTICLE_LIGHT_BEHAVIOR_ROPE = 0x1,
-                PARTICLE_LIGHT_BEHAVIOR_TRAILS = 0x2
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const ModelHitboxType_t = enum(u32) {
-                MODEL_HITBOX_TYPE_STANDARD = 0x0,
-                MODEL_HITBOX_TYPE_RAW_BONES = 0x1,
-                MODEL_HITBOX_TYPE_RENDERBOUNDS = 0x2,
-                MODEL_HITBOX_TYPE_SNAPSHOT = 0x3
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleMultiSegmentCountSelection_t = enum(u32) {
-                PARTICLE_MULTISEGMENT_SEG_COUNT_7 = 0x7,
-                PARTICLE_MULTISEGMENT_SEG_COUNT_14 = 0xE,
-                PARTICLE_MULTISEGMENT_SEG_COUNT_16 = 0x10
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const ParticleOrientationType_t = enum(u32) {
-                PARTICLE_ORIENTATION_NONE = 0x0,
-                PARTICLE_ORIENTATION_VELOCITY = 0x1,
-                PARTICLE_ORIENTATION_NORMAL = 0x2,
-                PARTICLE_ORIENTATION_ROTATION = 0x4
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const ParticleTraceSet_t = enum(u32) {
-                PARTICLE_TRACE_SET_ALL = 0x0,
-                PARTICLE_TRACE_SET_STATIC = 0x1,
-                PARTICLE_TRACE_SET_STATIC_AND_KEYFRAMED = 0x2,
-                PARTICLE_TRACE_SET_DYNAMIC = 0x3
-            };
-            // Alignment: 4
-            // Member count: 7
-            pub const ParticleTextureLayerBlendType_t = enum(u32) {
-                SPRITECARD_TEXTURE_BLEND_MULTIPLY = 0x0,
-                SPRITECARD_TEXTURE_BLEND_MOD2X = 0x1,
-                SPRITECARD_TEXTURE_BLEND_REPLACE = 0x2,
-                SPRITECARD_TEXTURE_BLEND_ADD = 0x3,
-                SPRITECARD_TEXTURE_BLEND_SUBTRACT = 0x4,
-                SPRITECARD_TEXTURE_BLEND_AVERAGE = 0x5,
-                SPRITECARD_TEXTURE_BLEND_LUMINANCE = 0x6
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleSelection_t = enum(u32) {
-                PARTICLE_SELECTION_FIRST = 0x0,
-                PARTICLE_SELECTION_LAST = 0x1,
-                PARTICLE_SELECTION_NUMBER = 0x2
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleToolsState_t = enum(u32) {
-                PARTICLE_TOOLS_STATE_ALWAYS_ON = 0xFFFFFFFF,
-                PARTICLE_TOOLS_STATE_TOOLS_ONLY = 0x0,
-                PARTICLE_TOOLS_STATE_GAME_ONLY = 0x1
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const SnapshotIndexType_t = enum(u32) {
-                SNAPSHOT_INDEX_INCREMENT = 0x0,
-                SNAPSHOT_INDEX_DIRECT = 0x1
-            };
-            // Alignment: 4
-            // Member count: 7
-            pub const ParticleOutputBlendMode_t = enum(u32) {
-                PARTICLE_OUTPUT_BLEND_MODE_ALPHA = 0x0,
-                PARTICLE_OUTPUT_BLEND_MODE_ADD = 0x1,
-                PARTICLE_OUTPUT_BLEND_MODE_BLEND_ADD = 0x2,
-                PARTICLE_OUTPUT_BLEND_MODE_HALF_BLEND_ADD = 0x3,
-                PARTICLE_OUTPUT_BLEND_MODE_NEG_HALF_BLEND_ADD = 0x4,
-                PARTICLE_OUTPUT_BLEND_MODE_MOD2X = 0x5,
-                PARTICLE_OUTPUT_BLEND_MODE_LIGHTEN = 0x6
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const ParticleLightnintBranchBehavior_t = enum(u32) {
-                PARTICLE_LIGHTNING_BRANCH_CURRENT_DIR = 0x0,
-                PARTICLE_LIGHTNING_BRANCH_ENDPOINT_DIR = 0x1
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const MaterialProxyType_t = enum(u32) {
-                MATERIAL_PROXY_STATUS_EFFECT = 0x0,
-                MATERIAL_PROXY_TINT = 0x1
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleDepthFeatheringMode_t = enum(u32) {
-                PARTICLE_DEPTH_FEATHERING_OFF = 0x0,
-                PARTICLE_DEPTH_FEATHERING_ON_OPTIONAL = 0x1,
-                PARTICLE_DEPTH_FEATHERING_ON_REQUIRED = 0x2
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const ParticleLightUnitChoiceList_t = enum(u32) {
-                PARTICLE_LIGHT_UNIT_CANDELAS = 0x0,
-                PARTICLE_LIGHT_UNIT_LUMENS = 0x1
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const ParticleMultiSegmentSpecialCharacter_t = enum(u32) {
-                PARTICLE_MULTISEGMENT_SPECIAL_NONE = 0xFFFFFFFF,
-                PARTICLE_MULTISEGMENT_SPECIAL_DECIMAL = 0x0,
-                PARTICLE_MULTISEGMENT_SPECIAL_COLON = 0x1,
-                PARTICLE_MULTISEGMENT_SPECIAL_DEGREES = 0x2
-            };
-            // Alignment: 4
-            // Member count: 5
-            pub const ParticleOmni2LighOrientationChoiceList_t = enum(u32) {
-                PARTICLE_OMNI2_LIGHT_ORIENTATION_ROTATIONS = 0x0,
-                PARTICLE_OMNI2_LIGHT_ORIENTATION_NORMAL = 0x1,
-                PARTICLE_OMNI2_LIGHT_ORIENTATION_NORMAL_ROLL = 0x2,
-                PARTICLE_OMNI2_LIGHT_ORIENTATION_TARGET = 0x3,
-                PARTICLE_OMNI2_LIGHT_ORIENTATION_TARGET_ROLL = 0x4
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleFalloffFunction_t = enum(u32) {
-                PARTICLE_FALLOFF_CONSTANT = 0x0,
-                PARTICLE_FALLOFF_LINEAR = 0x1,
-                PARTICLE_FALLOFF_EXPONENTIAL = 0x2
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleSequenceCropOverride_t = enum(u32) {
-                PARTICLE_SEQUENCE_CROP_OVERRIDE_DEFAULT = 0xFFFFFFFF,
-                PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_OFF = 0x0,
-                PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_ON = 0x1
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const ParticleDetailLevel_t = enum(u32) {
-                PARTICLEDETAIL_LOW = 0x0,
-                PARTICLEDETAIL_MEDIUM = 0x1,
-                PARTICLEDETAIL_HIGH = 0x2,
-                PARTICLEDETAIL_ULTRA = 0x3
-            };
-            // Alignment: 4
-            // Member count: 5
-            pub const BBoxVolumeType_t = enum(u32) {
-                BBOX_VOLUME = 0x0,
-                BBOX_DIMENSIONS = 0x1,
-                BBOX_MINS_MAXS = 0x2,
-                BBOX_RADIUS = 0x3,
-                BBOX_SURFACE_AREA = 0x4
-            };
-            // Alignment: 4
-            // Member count: 12
-            pub const SpriteCardTextureType_t = enum(u32) {
-                SPRITECARD_TEXTURE_DIFFUSE = 0x0,
-                SPRITECARD_TEXTURE_ZOOM = 0x1,
-                SPRITECARD_TEXTURE_1D_COLOR_LOOKUP = 0x2,
-                SPRITECARD_TEXTURE_UVDISTORTION = 0x3,
-                SPRITECARD_TEXTURE_UVDISTORTION_ZOOM = 0x4,
-                SPRITECARD_TEXTURE_NORMALMAP = 0x5,
-                SPRITECARD_TEXTURE_ANIMMOTIONVEC = 0x6,
-                SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_A = 0x7,
-                SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_B = 0x8,
-                SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_C = 0x9,
-                SPRITECARD_TEXTURE_DEPTH = 0xA,
-                SPRITECARD_TEXTURE_ILLUMINATION_GRADIENT = 0xB
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const ParticleAlphaReferenceType_t = enum(u32) {
-                PARTICLE_ALPHA_REFERENCE_ALPHA_ALPHA = 0x0,
-                PARTICLE_ALPHA_REFERENCE_OPAQUE_ALPHA = 0x1,
-                PARTICLE_ALPHA_REFERENCE_ALPHA_OPAQUE = 0x2,
-                PARTICLE_ALPHA_REFERENCE_OPAQUE_OPAQUE = 0x3
-            };
-            // Alignment: 4
-            // Member count: 15
-            pub const SpriteCardTextureChannel_t = enum(u32) {
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB = 0x0,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA = 0x1,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_A = 0x2,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_A = 0x3,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_ALPHAMASK = 0x4,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_RGBMASK = 0x5,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA_RGBALPHA = 0x6,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_A_RGBALPHA = 0x7,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_A_RGBALPHA = 0x8,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_R = 0x9,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_G = 0xA,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_B = 0xB,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RALPHA = 0xC,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_GALPHA = 0xD,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_BALPHA = 0xE
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const ParticleVolumetricSmokeType_t = enum(u32) {
-                PARTICLE_VOLUMETRIC_SMOKE_TYPE_EMISSION = 0x0,
-                PARTICLE_VOLUMETRIC_SMOKE_TYPE_SINK = 0x1,
-                PARTICLE_VOLUMETRIC_SMOKE_TYPE_REPEL = 0x2,
-                PARTICLE_VOLUMETRIC_SMOKE_TYPE_TRACE = 0x3
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const RenderModelSubModelFieldType_t = enum(u32) {
-                SUBMODEL_AS_BODYGROUP_SUBMODEL = 0x0,
-                SUBMODEL_AS_MESHGROUP_INDEX = 0x1,
-                SUBMODEL_AS_MESHGROUP_MASK = 0x2,
-                SUBMODEL_IGNORED_USE_MODEL_DEFAULT_MESHGROUP_MASK = 0x3
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const ParticleHitboxDataSelection_t = enum(u32) {
-                PARTICLE_HITBOX_AVERAGE_SPEED = 0x0,
-                PARTICLE_HITBOX_COUNT = 0x1
-            };
-            // Alignment: 4
-            // Member count: 6
-            pub const ParticleOrientationChoiceList_t = enum(u32) {
-                PARTICLE_ORIENTATION_SCREEN_ALIGNED = 0x0,
-                PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED = 0x1,
-                PARTICLE_ORIENTATION_WORLD_Z_ALIGNED = 0x2,
-                PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL = 0x3,
-                PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL = 0x4,
-                PARTICLE_ORIENTATION_FULL_3AXIS_ROTATION = 0x5
-            };
-            // Alignment: 4
-            // Member count: 5
-            pub const ParticleCollisionMode_t = enum(u32) {
-                COLLISION_MODE_PER_PARTICLE_TRACE = 0x3,
-                COLLISION_MODE_USE_NEAREST_TRACE = 0x2,
-                COLLISION_MODE_PER_FRAME_PLANESET = 0x1,
-                COLLISION_MODE_INITIAL_TRACE_DOWN = 0x0,
-                COLLISION_MODE_DISABLED = 0xFFFFFFFF
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const ParticleSortingChoiceList_t = enum(u32) {
-                PARTICLE_SORTING_NEAREST = 0x0,
-                PARTICLE_SORTING_CREATION_TIME = 0x1
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleEndcapMode_t = enum(u32) {
-                PARTICLE_ENDCAP_ALWAYS_ON = 0xFFFFFFFF,
-                PARTICLE_ENDCAP_ENDCAP_OFF = 0x0,
-                PARTICLE_ENDCAP_ENDCAP_ON = 0x1
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ClosestPointTestType_t = enum(u32) {
-                PARTICLE_CLOSEST_TYPE_BOX = 0x0,
-                PARTICLE_CLOSEST_TYPE_CAPSULE = 0x1,
-                PARTICLE_CLOSEST_TYPE_HYBRID = 0x2
-            };
-            // Alignment: 4
-            // Member count: 6
-            pub const ParticleImpulseType_t = enum(u32) {
-                IMPULSE_TYPE_NONE = 0x0,
-                IMPULSE_TYPE_GENERIC = 0x1,
-                IMPULSE_TYPE_ROPE = 0x2,
-                IMPULSE_TYPE_EXPLOSION = 0x4,
-                IMPULSE_TYPE_EXPLOSION_UNDERWATER = 0x8,
-                IMPULSE_TYPE_PARTICLE_SYSTEM = 0x10
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleLiquidContents_t = enum(u32) {
-                PARTICLE_LIQUID_NONE = 0x0,
-                PARTICLE_LIQUID_OIL = 0x1,
-                PARTICLE_LIQUID_WATER = 0x2
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const SpriteCardShaderType_t = enum(u32) {
-                SPRITECARD_SHADER_BASE = 0x0,
-                SPRITECARD_SHADER_CUSTOM = 0x1
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleOmni2LightTypeChoiceList_t = enum(u32) {
-                PARTICLE_OMNI2_LIGHT_TYPE_POINT = 0x0,
-                PARTICLE_OMNI2_LIGHT_TYPE_SPHERE = 0x1,
-                PARTICLE_OMNI2_LIGHT_TYPE_BARN = 0x2
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const ParticleLightFogLightingMode_t = enum(u32) {
-                PARTICLE_LIGHT_FOG_LIGHTING_MODE_NONE = 0x0,
-                PARTICLE_LIGHT_FOG_LIGHTING_MODE_DYNAMIC = 0x2,
-                PARTICLE_LIGHT_FOG_LIGHTING_MODE_DYNAMIC_NOSHADOWS = 0x4
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const ParticleLightTypeChoiceList_t = enum(u32) {
-                PARTICLE_LIGHT_TYPE_POINT = 0x0,
-                PARTICLE_LIGHT_TYPE_SPOT = 0x1,
-                PARTICLE_LIGHT_TYPE_FX = 0x2,
-                PARTICLE_LIGHT_TYPE_CAPSULE = 0x3
-            };
-            // Alignment: 4
-            // Member count: 4
-            pub const ParticleOrientationSetMode_t = enum(u32) {
-                PARTICLE_ORIENTATION_SET_NONE = 0xFFFFFFFF,
-                PARTICLE_ORIENTATION_SET_FROM_VELOCITY = 0x0,
-                PARTICLE_ORIENTATION_SET_FROM_NORMAL = 0x1,
-                PARTICLE_ORIENTATION_SET_FROM_ROTATIONS = 0x2
-            };
-            // Alignment: 8
-            // Member count: 10
-            pub const ParticleCollisionMask_t = enum(u64) {
-                PARTICLE_MASK_ALL = 0xFFFFFFFFFFFFFFFF,
-                PARTICLE_MASK_SOLID = 0xC3001,
-                PARTICLE_MASK_WATER = 0x18000,
-                PARTICLE_MASK_SOLID_WATER = 0xDB001,
-                PARTICLE_MASK_SHOT = 0x1C1003,
-                PARTICLE_MASK_SHOT_BRUSHONLY = 0x101001,
-                PARTICLE_MASK_SHOT_HULL = 0x1C3001,
-                PARTICLE_MASK_OPAQUE = 0x80,
-                PARTICLE_MASK_DEFAULTPLAYERSOLID = 0xC3011,
-                PARTICLE_MASK_NPCSOLID = 0xC3021
-            };
-            // Alignment: 4
-            // Member count: 2
-            pub const TextureRepetitionMode_t = enum(u32) {
-                TEXTURE_REPETITION_PARTICLE = 0x0,
-                TEXTURE_REPETITION_PATH = 0x1
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            // MPulseEditorHeaderIcon
-            pub const CPulseCell_WaitForCursorsWithTag = struct {
-                pub const m_bTagSelfWhenComplete: usize = 0x128; // bool
-                pub const m_nDesiredKillPriority: usize = 0x12C; // PulseCursorCancelPriority_t
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_RaceCursors = struct {
-                pub const m_Outflows: usize = 0xD8; // CUtlVector<CPulse_OutflowConnection>
-                pub const m_OnFinished: usize = 0xF0; // CPulse_ResumePoint
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Base = struct {
-                pub const m_nEditorNodeID: usize = 0x8; // PulseDocNodeID_t
-            };
-            // Parent: None
-            // Field count: 0
-            pub const CPulse_ResumePoint = struct {
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            // MPulseEditorHeaderIcon
-            // MPulseEditorCanvasItemSpecKV3
-            pub const CPulseCell_PickBestOutflowSelector = struct {
-                pub const m_nCheckType: usize = 0x48; // PulseBestOutflowRules_t
-                pub const m_OutflowList: usize = 0x50; // PulseSelectorOutflowList_t
-            };
-            // Parent: None
-            // Field count: 0
-            pub const CParticleBindingRealPulse = struct {
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPulseEditorHeaderIcon
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            pub const CPulseCell_WaitForObservable = struct {
-                pub const m_Condition: usize = 0xD8; // CPulseObservableExpression<bool>
-                pub const m_OnTrue: usize = 0x168; // CPulse_ResumePoint
-            };
-            // Parent: None
-            // Field count: 4
-            pub const CPulse_OutflowConnection = struct {
-                pub const m_SourceOutflowName: usize = 0x0; // PulseSymbol_t
-                pub const m_nDestChunk: usize = 0x10; // PulseRuntimeChunkIndex_t
-                pub const m_nInstruction: usize = 0x14; // int32
-                pub const m_OutflowRegisterMap: usize = 0x18; // PulseRegisterMap_t
-            };
-            // Parent: None
-            // Field count: 15
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseGraphDef = struct {
-                pub const m_DomainIdentifier: usize = 0x8; // PulseSymbol_t
-                pub const m_DomainSubType: usize = 0x18; // CPulseValueFullType
-                pub const m_ParentMapName: usize = 0x30; // PulseSymbol_t
-                pub const m_ParentXmlName: usize = 0x40; // PulseSymbol_t
-                pub const m_Chunks: usize = 0x50; // CUtlVector<CPulse_Chunk*>
-                pub const m_Cells: usize = 0x68; // CUtlVector<CPulseCell_Base*>
-                pub const m_Vars: usize = 0x80; // CUtlVector<CPulse_Variable>
-                pub const m_TempVarBanks: usize = 0x98; // CUtlVector<CPulse_TempVarBankDefinition*>
-                pub const m_PublicOutputs: usize = 0xB0; // CUtlVector<CPulse_PublicOutput>
-                pub const m_InvokeBindings: usize = 0xC8; // CUtlVector<CPulse_InvokeBinding*>
-                pub const m_CallInfos: usize = 0xE0; // CUtlVector<CPulse_CallInfo*>
-                pub const m_Constants: usize = 0xF8; // CUtlVector<CPulse_Constant>
-                pub const m_DomainValues: usize = 0x110; // CUtlVector<CPulse_DomainValue>
-                pub const m_BlackboardReferences: usize = 0x128; // CUtlVector<CPulse_BlackboardReference>
-                pub const m_OutputConnections: usize = 0x140; // CUtlVector<CPulse_OutputConnection*>
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_FireCursors = struct {
-                pub const m_Outflows: usize = 0xD8; // CUtlVector<CPulse_OutflowConnection>
-                pub const m_bWaitForChildOutflows: usize = 0xF0; // bool
-                pub const m_OnFinished: usize = 0xF8; // CPulse_ResumePoint
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Timeline__TimelineEvent_t = struct {
-                pub const m_flTimeFromPrevious: usize = 0x0; // float32
-                pub const m_EventOutflow: usize = 0x8; // CPulse_OutflowConnection
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_IntervalTimer__CursorState_t = struct {
-                pub const m_StartTime: usize = 0x0; // GameTime_t
-                pub const m_EndTime: usize = 0x4; // GameTime_t
-                pub const m_flWaitInterval: usize = 0x8; // float32
-                pub const m_flWaitIntervalHigh: usize = 0xC; // float32
-                pub const m_bCompleteOnNextWake: usize = 0x10; // bool
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_BaseRequirement = struct {
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPulseEditorHeaderIcon
-            pub const CPulseCell_BaseState = struct {
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const OutflowWithRequirements_t = struct {
-                pub const m_Connection: usize = 0x0; // CPulse_OutflowConnection
-                pub const m_DestinationFlowNodeID: usize = 0x48; // PulseDocNodeID_t
-                pub const m_RequirementNodeIDs: usize = 0x50; // CUtlVector<PulseDocNodeID_t>
-                pub const m_nCursorStateBlockIndex: usize = 0x68; // CUtlVector<int32>
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_IsRequirementValid = struct {
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            pub const CPulseCell_Value_Gradient = struct {
-                pub const m_Gradient: usize = 0x48; // CColorGradient
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const PulseNodeDynamicOutflows_t__DynamicOutflow_t = struct {
-                pub const m_OutflowID: usize = 0x0; // CGlobalSymbol
-                pub const m_Connection: usize = 0x8; // CPulse_OutflowConnection
-            };
-            // Parent: None
-            // Field count: 0
-            pub const CBasePulseGraphInstance = struct {
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Inflow_GraphHook = struct {
-                pub const m_HookName: usize = 0x80; // PulseSymbol_t
-            };
-            // Parent: None
-            // Field count: 0
-            pub const SignatureOutflow_Resume = struct {
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Inflow_BaseEntrypoint = struct {
-                pub const m_EntryChunk: usize = 0x48; // PulseRuntimeChunkIndex_t
-                pub const m_RegisterMap: usize = 0x50; // PulseRegisterMap_t
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPulseEditorCanvasItemSpecKV3
-            pub const CPulseCell_WaitForCursorsWithTagBase = struct {
-                pub const m_nCursorsAllowedToWait: usize = 0xD8; // int32
-                pub const m_WaitComplete: usize = 0xE0; // CPulse_ResumePoint
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulse_InvokeBinding = struct {
-                pub const m_RegisterMap: usize = 0x0; // PulseRegisterMap_t
-                pub const m_FuncName: usize = 0x30; // PulseSymbol_t
-                pub const m_nCellIndex: usize = 0x40; // PulseRuntimeCellIndex_t
-                pub const m_nSrcChunk: usize = 0x44; // PulseRuntimeChunkIndex_t
-                pub const m_nSrcInstruction: usize = 0x48; // int32
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            // MPulseEditorHeaderIcon
-            // MPulseEditorCanvasItemSpecKV3
-            pub const CPulseCell_IntervalTimer = struct {
-                pub const m_Completed: usize = 0xD8; // CPulse_ResumePoint
-                pub const m_OnInterval: usize = 0x120; // SignatureOutflow_Continue
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_BaseLerp = struct {
-                pub const m_WakeResume: usize = 0xD8; // CPulse_ResumePoint
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            pub const CPulseCell_Value_Curve = struct {
-                pub const m_Curve: usize = 0x48; // CPiecewiseCurve
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Inflow_EventHandler = struct {
-                pub const m_EventName: usize = 0x80; // PulseSymbol_t
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_BaseFlow = struct {
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Outflow_CycleShuffled__InstanceState_t = struct {
-                pub const m_Shuffle: usize = 0x0; // CUtlVectorFixedGrowable<uint8,8>
-                pub const m_nNextShuffle: usize = 0x20; // int32
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_BaseLerp__CursorState_t = struct {
-                pub const m_StartTime: usize = 0x0; // GameTime_t
-                pub const m_EndTime: usize = 0x4; // GameTime_t
-            };
-            // Parent: None
-            // Field count: 0
-            pub const SignatureOutflow_Continue = struct {
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Timeline = struct {
-                pub const m_TimelineEvents: usize = 0xD8; // CUtlVector<CPulseCell_Timeline::TimelineEvent_t>
-                pub const m_bWaitForChildOutflows: usize = 0xF0; // bool
-                pub const m_OnFinished: usize = 0xF8; // CPulse_ResumePoint
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Inflow_EntOutputHandler = struct {
-                pub const m_SourceEntity: usize = 0x80; // PulseSymbol_t
-                pub const m_SourceOutput: usize = 0x90; // PulseSymbol_t
-                pub const m_ExpectedParamType: usize = 0xA0; // CPulseValueFullType
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Outflow_CycleOrdered__InstanceState_t = struct {
-                pub const m_nNextIndex: usize = 0x0; // int32
-            };
-            // Parent: None
-            // Field count: 0
-            pub const CParticleCollectionBindingInstance = struct {
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_LimitCount__InstanceState_t = struct {
-                pub const m_nCurrentCount: usize = 0x0; // int32
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Step_DebugLog = struct {
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MCustomFGDMetadata
-            pub const CPulseCell_BaseYieldingInflow = struct {
-                pub const m_BaseFlow_OnAfterCancel: usize = 0x48; // CPulse_ResumePoint
-                pub const m_BaseFlow_WhileActive: usize = 0x90; // CPulse_ResumePoint
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const PulseNodeDynamicOutflows_t = struct {
-                pub const m_Outflows: usize = 0x0; // CUtlVector<PulseNodeDynamicOutflows_t::DynamicOutflow_t>
-            };
-            // Parent: None
-            // Field count: 1
-            pub const CPulseCell_IsRequirementValid__Criteria_t = struct {
-                pub const m_bIsValid: usize = 0x0; // bool
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Inflow_ObservableVariableListener = struct {
-                pub const m_nBlackboardReference: usize = 0x80; // PulseRuntimeBlackboardReferenceIndex_t
-                pub const m_bSelfReference: usize = 0x82; // bool
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Outflow_CycleOrdered = struct {
-                pub const m_Outputs: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const PulseSelectorOutflowList_t = struct {
-                pub const m_Outflows: usize = 0x0; // CUtlVector<OutflowWithRequirements_t>
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            // MPulseEditorHeaderIcon
-            // MPulseEditorCanvasItemSpecKV3
-            pub const CPulseCell_Inflow_Wait = struct {
-                pub const m_WakeResume: usize = 0xD8; // CPulse_ResumePoint
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Outflow_CycleShuffled = struct {
-                pub const m_Outputs: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Inflow_Method = struct {
-                pub const m_MethodName: usize = 0x80; // PulseSymbol_t
-                pub const m_Description: usize = 0x90; // CUtlString
-                pub const m_bIsPublic: usize = 0x98; // bool
-                pub const m_Args: usize = 0xA0; // CUtlLeanVector<CPulseRuntimeMethodArg>
-                pub const m_ReturnValues: usize = 0xB0; // CUtlLeanVector<CPulseRuntimeMethodArg>
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_BaseValue = struct {
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            // MPulseEditorCanvasItemSpecKV3
-            pub const CPulseCell_BooleanSwitchState = struct {
-                pub const m_Condition: usize = 0xD8; // CPulseObservableExpression<bool>
-                pub const m_WhenTrue: usize = 0x168; // CPulse_OutflowConnection
-                pub const m_WhenFalse: usize = 0x1B0; // CPulse_OutflowConnection
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Inflow_Yield = struct {
-                pub const m_UnyieldResume: usize = 0xD8; // CPulse_ResumePoint
-            };
-            // Parent: None
-            // Field count: 1
-            pub const CPulseCell_Unknown = struct {
-                pub const m_UnknownKeys: usize = 0x48; // KeyValues3
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Outflow_CycleRandom = struct {
-                pub const m_Outputs: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Step_PublicOutput = struct {
-                pub const m_OutputIndex: usize = 0x48; // PulseRuntimeOutputIndex_t
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulse_BlackboardReference = struct {
-                pub const m_hBlackboardResource: usize = 0x0; // CStrongHandle<InfoForResourceTypeIPulseGraphDef>
-                pub const m_BlackboardResource: usize = 0x8; // PulseSymbol_t
-                pub const m_nNodeID: usize = 0x18; // PulseDocNodeID_t
-                pub const m_NodeName: usize = 0x20; // CGlobalSymbol
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_ReturnValues = struct {
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            // MPulseEditorHeaderIcon
-            pub const CPulseCell_Value_RandomInt = struct {
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulse_CallInfo = struct {
-                pub const m_PortName: usize = 0x0; // PulseSymbol_t
-                pub const m_nEditorNodeID: usize = 0x10; // PulseDocNodeID_t
-                pub const m_RegisterMap: usize = 0x18; // PulseRegisterMap_t
-                pub const m_CallMethodID: usize = 0x48; // PulseDocNodeID_t
-                pub const m_nSrcChunk: usize = 0x4C; // PulseRuntimeChunkIndex_t
-                pub const m_nSrcInstruction: usize = 0x50; // int32
-                pub const m_nBreakDestChunk: usize = 0x54; // PulseRuntimeChunkIndex_t
-                pub const m_nBreakDestInstruction: usize = 0x58; // int32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_InlineNodeSkipSelector = struct {
-                pub const m_nFlowNodeID: usize = 0x48; // PulseDocNodeID_t
-                pub const m_bAnd: usize = 0x4C; // bool
-                pub const m_PassOutflow: usize = 0x50; // PulseSelectorOutflowList_t
-                pub const m_FailOutflow: usize = 0x68; // CPulse_OutflowConnection
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            pub const CPulseCell_LimitCount = struct {
-                pub const m_nLimitCount: usize = 0x48; // int32
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPulseCell_Step_CallExternalMethod = struct {
-                pub const m_MethodName: usize = 0xD8; // PulseSymbol_t
-                pub const m_nBlackboardIndex: usize = 0xE8; // PulseRuntimeBlackboardReferenceIndex_t
-                pub const m_ExpectedArgs: usize = 0xF0; // CUtlLeanVector<CPulseRuntimeMethodArg>
-                pub const m_nAsyncCallMode: usize = 0x100; // PulseMethodCallMode_t
-                pub const m_OnFinished: usize = 0x108; // CPulse_ResumePoint
-            };
-            // Parent: None
-            // Field count: 1
-            pub const CPulseCell_LimitCount__Criteria_t = struct {
-                pub const m_bLimitCountPasses: usize = 0x0; // bool
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            // MPulseEditorHeaderIcon
-            pub const CPulseCell_CursorQueue = struct {
-                pub const m_nCursorsAllowedToRunParallel: usize = 0x128; // int32
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            // MPulseEditorHeaderIcon
-            pub const CPulseCell_Value_RandomFloat = struct {
-            };
-            // Parent: None
-            // Field count: 0
-            pub const CPulseExecCursor = struct {
-            };
-            // Parent: None
-            // Field count: 0
-            pub const IParticleCollection = struct {
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapGravityToVector = struct {
-                pub const m_vInput1: usize = 0x1E0; // CPerParticleVecInput
-                pub const m_nOutputField: usize = 0x8B8; // ParticleAttributeIndex_t
-                pub const m_nSetMethod: usize = 0x8BC; // ParticleSetMethod_t
-                pub const m_bNormalizedOutput: usize = 0x8C0; // bool
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_Decay = struct {
-                pub const m_bRopeDecay: usize = 0x1E0; // bool
-                pub const m_bForcePreserveParticleOrder: usize = 0x1E1; // bool
-            };
-            // Parent: None
-            // Field count: 16
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderDeferredLight = struct {
-                pub const m_flRadiusScale: usize = 0x230; // float32
-                pub const m_flAlphaScale: usize = 0x234; // float32
-                pub const m_nAlpha2Field: usize = 0x238; // ParticleAttributeIndex_t
-                pub const m_vecColorScale: usize = 0x240; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0x918; // ParticleColorBlendType_t
-                pub const m_bUseTexture: usize = 0x91C; // bool
-                pub const m_bUseAlphaTestWindow: usize = 0x91D; // bool
-                pub const m_hTexture: usize = 0x920; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_nAlphaTestPointField: usize = 0x928; // ParticleAttributeIndex_t
-                pub const m_nAlphaTestRangeField: usize = 0x92C; // ParticleAttributeIndex_t
-                pub const m_nAlphaTestSharpnessField: usize = 0x930; // ParticleAttributeIndex_t
-                pub const m_flLightDistance: usize = 0x934; // float32
-                pub const m_flStartFalloff: usize = 0x938; // float32
-                pub const m_flDistanceFalloff: usize = 0x93C; // float32
-                pub const m_flSpotFoV: usize = 0x940; // float32
-                pub const m_nHSVShiftControlPoint: usize = 0x944; // int32
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapSpeedtoCP = struct {
-                pub const m_nInControlPointNumber: usize = 0x1E8; // int32
-                pub const m_nOutControlPointNumber: usize = 0x1EC; // int32
-                pub const m_nField: usize = 0x1F0; // int32
-                pub const m_flInputMin: usize = 0x1F4; // float32
-                pub const m_flInputMax: usize = 0x1F8; // float32
-                pub const m_flOutputMin: usize = 0x1FC; // float32
-                pub const m_flOutputMax: usize = 0x200; // float32
-                pub const m_bUseDeltaV: usize = 0x204; // bool
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapTransformToVelocity = struct {
-                pub const m_TransformInput: usize = 0x1E0; // CParticleTransformInput
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CollisionGroupContext_t = struct {
-                pub const m_nCollisionGroupNumber: usize = 0x0; // int32
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CParticleFunctionPreEmission = struct {
-                pub const m_bRunOnce: usize = 0x1E0; // bool
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_FadeOutSimple = struct {
-                pub const m_flFadeOutTime: usize = 0x1E0; // float32
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SpringToVectorConstraint = struct {
-                pub const m_flRestLength: usize = 0x1E0; // CPerParticleFloatInput
-                pub const m_flMinDistance: usize = 0x358; // CPerParticleFloatInput
-                pub const m_flMaxDistance: usize = 0x4D0; // CPerParticleFloatInput
-                pub const m_flRestingLength: usize = 0x648; // CPerParticleFloatInput
-                pub const m_vecAnchorVector: usize = 0x7C0; // CPerParticleVecInput
-            };
-            // Parent: None
-            // Field count: 33
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderRopes = struct {
-                pub const m_bEnableFadingAndClamping: usize = 0x2ED8; // bool
-                pub const m_flMinSize: usize = 0x2EDC; // float32
-                pub const m_flMaxSize: usize = 0x2EE0; // float32
-                pub const m_flStartFadeSize: usize = 0x2EE4; // float32
-                pub const m_flEndFadeSize: usize = 0x2EE8; // float32
-                pub const m_flStartFadeDot: usize = 0x2EEC; // float32
-                pub const m_flEndFadeDot: usize = 0x2EF0; // float32
-                pub const m_flSubPixelAAScale: usize = 0x2EF8; // CParticleCollectionRendererFloatInput
-                pub const m_flRadiusTaper: usize = 0x3070; // float32
-                pub const m_nMinTesselation: usize = 0x3074; // int32
-                pub const m_nMaxTesselation: usize = 0x3078; // int32
-                pub const m_flTessScale: usize = 0x307C; // float32
-                pub const m_flTextureVWorldSize: usize = 0x3080; // CParticleCollectionRendererFloatInput
-                pub const m_flTextureVScrollRate: usize = 0x31F8; // CParticleCollectionRendererFloatInput
-                pub const m_flTextureVOffset: usize = 0x3370; // CParticleCollectionRendererFloatInput
-                pub const m_nTextureVParamsCP: usize = 0x34E8; // int32
-                pub const m_bClampV: usize = 0x34EC; // bool
-                pub const m_nScaleCP1: usize = 0x34F0; // int32
-                pub const m_nScaleCP2: usize = 0x34F4; // int32
-                pub const m_flScaleVSizeByControlPointDistance: usize = 0x34F8; // float32
-                pub const m_flScaleVScrollByControlPointDistance: usize = 0x34FC; // float32
-                pub const m_flScaleVOffsetByControlPointDistance: usize = 0x3500; // float32
-                pub const m_bUseScalarForTextureCoordinate: usize = 0x3505; // bool
-                pub const m_nScalarFieldForTextureCoordinate: usize = 0x3508; // ParticleAttributeIndex_t
-                pub const m_flScalarAttributeTextureCoordScale: usize = 0x350C; // float32
-                pub const m_bReverseOrder: usize = 0x3510; // bool
-                pub const m_bClosedLoop: usize = 0x3511; // bool
-                pub const m_nSplitField: usize = 0x3514; // ParticleAttributeIndex_t
-                pub const m_bSortBySegmentID: usize = 0x3518; // bool
-                pub const m_nOrientationType: usize = 0x351C; // ParticleOrientationChoiceList_t
-                pub const m_nVectorFieldForOrientation: usize = 0x3520; // ParticleAttributeIndex_t
-                pub const m_bDrawAsOpaque: usize = 0x3524; // bool
-                pub const m_bGenerateNormals: usize = 0x3525; // bool
-            };
-            // Parent: None
-            // Field count: 19
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_StatusEffectCitadel = struct {
-                pub const m_flSFXColorWarpAmount: usize = 0x1E8; // float32
-                pub const m_flSFXNormalAmount: usize = 0x1EC; // float32
-                pub const m_flSFXMetalnessAmount: usize = 0x1F0; // float32
-                pub const m_flSFXRoughnessAmount: usize = 0x1F4; // float32
-                pub const m_flSFXSelfIllumAmount: usize = 0x1F8; // float32
-                pub const m_flSFXSScale: usize = 0x1FC; // float32
-                pub const m_flSFXSScrollX: usize = 0x200; // float32
-                pub const m_flSFXSScrollY: usize = 0x204; // float32
-                pub const m_flSFXSScrollZ: usize = 0x208; // float32
-                pub const m_flSFXSOffsetX: usize = 0x20C; // float32
-                pub const m_flSFXSOffsetY: usize = 0x210; // float32
-                pub const m_flSFXSOffsetZ: usize = 0x214; // float32
-                pub const m_nDetailCombo: usize = 0x218; // DetailCombo_t
-                pub const m_flSFXSDetailAmount: usize = 0x21C; // float32
-                pub const m_flSFXSDetailScale: usize = 0x220; // float32
-                pub const m_flSFXSDetailScrollX: usize = 0x224; // float32
-                pub const m_flSFXSDetailScrollY: usize = 0x228; // float32
-                pub const m_flSFXSDetailScrollZ: usize = 0x22C; // float32
-                pub const m_flSFXSUseModelUVs: usize = 0x230; // float32
-            };
-            // Parent: None
-            // Field count: 12
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderSound = struct {
-                pub const m_flDurationScale: usize = 0x230; // float32
-                pub const m_flSndLvlScale: usize = 0x234; // float32
-                pub const m_flPitchScale: usize = 0x238; // float32
-                pub const m_flVolumeScale: usize = 0x23C; // float32
-                pub const m_nSndLvlField: usize = 0x240; // ParticleAttributeIndex_t
-                pub const m_nDurationField: usize = 0x244; // ParticleAttributeIndex_t
-                pub const m_nPitchField: usize = 0x248; // ParticleAttributeIndex_t
-                pub const m_nVolumeField: usize = 0x24C; // ParticleAttributeIndex_t
-                pub const m_nChannel: usize = 0x250; // int32
-                pub const m_nCPReference: usize = 0x254; // int32
-                pub const m_pszSoundName: usize = 0x258; // char[256]
-                pub const m_bSuppressStopSoundEvent: usize = 0x358; // bool
-            };
-            // Parent: None
-            // Field count: 19
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CParticleVisibilityInputs = struct {
-                pub const m_flCameraBias: usize = 0x0; // float32
-                pub const m_nCPin: usize = 0x4; // int32
-                pub const m_flProxyRadius: usize = 0x8; // float32
-                pub const m_flInputMin: usize = 0xC; // float32
-                pub const m_flInputMax: usize = 0x10; // float32
-                pub const m_flInputPixelVisFade: usize = 0x14; // float32
-                pub const m_flNoPixelVisibilityFallback: usize = 0x18; // float32
-                pub const m_flDistanceInputMin: usize = 0x1C; // float32
-                pub const m_flDistanceInputMax: usize = 0x20; // float32
-                pub const m_flDotInputMin: usize = 0x24; // float32
-                pub const m_flDotInputMax: usize = 0x28; // float32
-                pub const m_bDotCPAngles: usize = 0x2C; // bool
-                pub const m_bDotCameraAngles: usize = 0x2D; // bool
-                pub const m_flAlphaScaleMin: usize = 0x30; // float32
-                pub const m_flAlphaScaleMax: usize = 0x34; // float32
-                pub const m_flRadiusScaleMin: usize = 0x38; // float32
-                pub const m_flRadiusScaleMax: usize = 0x3C; // float32
-                pub const m_flRadiusScaleFOVBase: usize = 0x40; // float32
-                pub const m_bRightEye: usize = 0x44; // bool
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointsToParticle = struct {
-                pub const m_nChildGroupID: usize = 0x1E0; // int32
-                pub const m_nFirstControlPoint: usize = 0x1E4; // int32
-                pub const m_nNumControlPoints: usize = 0x1E8; // int32
-                pub const m_nFirstSourcePoint: usize = 0x1EC; // int32
-                pub const m_bReverse: usize = 0x1F0; // bool
-                pub const m_bSetOrientation: usize = 0x1F1; // bool
-                pub const m_nOrientationMode: usize = 0x1F4; // ParticleOrientationSetMode_t
-                pub const m_nSetParent: usize = 0x1F8; // ParticleParentSetMode_t
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapCPVelocityToVector = struct {
-                pub const m_nControlPoint: usize = 0x1E0; // int32
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_flScale: usize = 0x1E8; // float32
-                pub const m_bNormalize: usize = 0x1EC; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_PointVectorAtNextParticle = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flInterpolation: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_bPrevious: usize = 0x360; // bool
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const ParticlePreviewBodyGroup_t = struct {
-                pub const m_bodyGroupName: usize = 0x0; // CUtlString
-                pub const m_nValue: usize = 0x8; // int32
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_OscillateScalarSimple = struct {
-                pub const m_Rate: usize = 0x1E0; // float32
-                pub const m_Frequency: usize = 0x1E4; // float32
-                pub const m_nField: usize = 0x1E8; // ParticleAttributeIndex_t
-                pub const m_flOscMult: usize = 0x1EC; // float32
-                pub const m_flOscAdd: usize = 0x1F0; // float32
-            };
-            // Parent: None
-            // Field count: 18
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_StatusEffect = struct {
-                pub const m_nDetail2Combo: usize = 0x1E8; // Detail2Combo_t
-                pub const m_flDetail2Rotation: usize = 0x1EC; // float32
-                pub const m_flDetail2Scale: usize = 0x1F0; // float32
-                pub const m_flDetail2BlendFactor: usize = 0x1F4; // float32
-                pub const m_flColorWarpIntensity: usize = 0x1F8; // float32
-                pub const m_flDiffuseWarpBlendToFull: usize = 0x1FC; // float32
-                pub const m_flEnvMapIntensity: usize = 0x200; // float32
-                pub const m_flAmbientScale: usize = 0x204; // float32
-                pub const m_specularColor: usize = 0x208; // Color
-                pub const m_flSpecularScale: usize = 0x20C; // float32
-                pub const m_flSpecularExponent: usize = 0x210; // float32
-                pub const m_flSpecularExponentBlendToFull: usize = 0x214; // float32
-                pub const m_flSpecularBlendToFull: usize = 0x218; // float32
-                pub const m_rimLightColor: usize = 0x21C; // Color
-                pub const m_flRimLightScale: usize = 0x220; // float32
-                pub const m_flReflectionsTintByBaseBlendToNone: usize = 0x224; // float32
-                pub const m_flMetalnessBlendToFull: usize = 0x228; // float32
-                pub const m_flSelfIllumBlendToFull: usize = 0x22C; // float32
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RtEnvCull = struct {
-                pub const m_vecTestDir: usize = 0x1E8; // Vector
-                pub const m_vecTestNormal: usize = 0x1F4; // Vector
-                pub const m_bUseVelocity: usize = 0x200; // bool
-                pub const m_bCullOnMiss: usize = 0x201; // bool
-                pub const m_bLifeAdjust: usize = 0x202; // bool
-                pub const m_RtEnvName: usize = 0x203; // char[128]
-                pub const m_nRTEnvCP: usize = 0x284; // int32
-                pub const m_nComponent: usize = 0x288; // int32
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ConstrainDistance = struct {
-                pub const m_fMinDistance: usize = 0x1E0; // CParticleCollectionFloatInput
-                pub const m_fMaxDistance: usize = 0x358; // CParticleCollectionFloatInput
-                pub const m_nControlPointNumber: usize = 0x4D0; // CParticleTransformInput
-                pub const m_CenterOffset: usize = 0x538; // CParticleCollectionVecInput
-                pub const m_bGlobalCenter: usize = 0xC10; // bool
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomVector = struct {
-                pub const m_vecMin: usize = 0x1E8; // Vector
-                pub const m_vecMax: usize = 0x1F4; // Vector
-                pub const m_nFieldOutput: usize = 0x200; // ParticleAttributeIndex_t
-                pub const m_randomnessParameters: usize = 0x204; // CRandomNumberGeneratorParameters
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_InitialVelocityNoise = struct {
-                pub const m_vecAbsVal: usize = 0x1E8; // Vector
-                pub const m_vecAbsValInv: usize = 0x1F4; // Vector
-                pub const m_vecOffsetLoc: usize = 0x200; // CPerParticleVecInput
-                pub const m_flOffset: usize = 0x8D8; // CPerParticleFloatInput
-                pub const m_vecOutputMin: usize = 0xA50; // CPerParticleVecInput
-                pub const m_vecOutputMax: usize = 0x1128; // CPerParticleVecInput
-                pub const m_flNoiseScale: usize = 0x1800; // CPerParticleFloatInput
-                pub const m_flNoiseScaleLoc: usize = 0x1978; // CPerParticleFloatInput
-                pub const m_TransformInput: usize = 0x1AF0; // CParticleTransformInput
-                pub const m_bIgnoreDt: usize = 0x1B58; // bool
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const ParticleChildrenInfo_t = struct {
-                pub const m_ChildRef: usize = 0x0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-                pub const m_flDelay: usize = 0x8; // float32
-                pub const m_bEndCap: usize = 0xC; // bool
-                pub const m_bDisableChild: usize = 0xD; // bool
-                pub const m_nDetailLevel: usize = 0x10; // ParticleDetailLevel_t
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapScalarOnceTimed = struct {
-                pub const m_bProportional: usize = 0x1E0; // bool
-                pub const m_nFieldInput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x1E8; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1EC; // float32
-                pub const m_flInputMax: usize = 0x1F0; // float32
-                pub const m_flOutputMin: usize = 0x1F4; // float32
-                pub const m_flOutputMax: usize = 0x1F8; // float32
-                pub const m_flRemapTime: usize = 0x1FC; // float32
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomNamedModelSequence = struct {
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_PlaneCull = struct {
-                pub const m_nPlaneControlPoint: usize = 0x1E0; // int32
-                pub const m_vecPlaneDirection: usize = 0x1E8; // CParticleCollectionVecInput
-                pub const m_bLocalSpace: usize = 0x8C0; // bool
-                pub const m_flPlaneOffset: usize = 0x8C4; // float32
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_VelocityRandom = struct {
-                pub const m_nControlPointNumber: usize = 0x1E8; // int32
-                pub const m_fSpeedMin: usize = 0x1F0; // CPerParticleFloatInput
-                pub const m_fSpeedMax: usize = 0x368; // CPerParticleFloatInput
-                pub const m_LocalCoordinateSystemSpeedMin: usize = 0x4E0; // CPerParticleVecInput
-                pub const m_LocalCoordinateSystemSpeedMax: usize = 0xBB8; // CPerParticleVecInput
-                pub const m_bIgnoreDT: usize = 0x1290; // bool
-                pub const m_randomnessParameters: usize = 0x1294; // CRandomNumberGeneratorParameters
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ModelDampenMovement = struct {
-                pub const m_nControlPointNumber: usize = 0x1E0; // int32
-                pub const m_bBoundBox: usize = 0x1E4; // bool
-                pub const m_bOutside: usize = 0x1E5; // bool
-                pub const m_bUseBones: usize = 0x1E6; // bool
-                pub const m_HitboxSetName: usize = 0x1E7; // char[128]
-                pub const m_vecPosOffset: usize = 0x268; // CPerParticleVecInput
-                pub const m_fDrag: usize = 0x940; // float32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_TwistAroundAxis = struct {
-                pub const m_fForceAmount: usize = 0x1F0; // float32
-                pub const m_TwistAxis: usize = 0x1F4; // Vector
-                pub const m_bLocalSpace: usize = 0x200; // bool
-                pub const m_nControlPointNumber: usize = 0x204; // int32
-            };
-            // Parent: None
-            // Field count: 11
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_TeleportBeam = struct {
-                pub const m_nCPPosition: usize = 0x1E0; // int32
-                pub const m_nCPVelocity: usize = 0x1E4; // int32
-                pub const m_nCPMisc: usize = 0x1E8; // int32
-                pub const m_nCPColor: usize = 0x1EC; // int32
-                pub const m_nCPInvalidColor: usize = 0x1F0; // int32
-                pub const m_nCPExtraArcData: usize = 0x1F4; // int32
-                pub const m_vGravity: usize = 0x1F8; // Vector
-                pub const m_flArcMaxDuration: usize = 0x204; // float32
-                pub const m_flSegmentBreak: usize = 0x208; // float32
-                pub const m_flArcSpeed: usize = 0x20C; // float32
-                pub const m_flAlpha: usize = 0x210; // float32
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapExternalWindToCP = struct {
-                pub const m_nCP: usize = 0x1E8; // int32
-                pub const m_nCPOutput: usize = 0x1EC; // int32
-                pub const m_vecScale: usize = 0x1F0; // CParticleCollectionVecInput
-                pub const m_bSetMagnitude: usize = 0x8C8; // bool
-                pub const m_nOutVectorField: usize = 0x8CC; // int32
-            };
-            // Parent: None
-            // Field count: 65
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CBaseRendererSource2 = struct {
-                pub const m_flRadiusScale: usize = 0x230; // CParticleCollectionRendererFloatInput
-                pub const m_flAlphaScale: usize = 0x3A8; // CParticleCollectionRendererFloatInput
-                pub const m_flRollScale: usize = 0x520; // CParticleCollectionRendererFloatInput
-                pub const m_nAlpha2Field: usize = 0x698; // ParticleAttributeIndex_t
-                pub const m_vecColorScale: usize = 0x6A0; // CParticleCollectionRendererVecInput
-                pub const m_nColorBlendType: usize = 0xD78; // ParticleColorBlendType_t
-                pub const m_nShaderType: usize = 0xD7C; // SpriteCardShaderType_t
-                pub const m_strShaderOverride: usize = 0xD80; // CUtlString
-                pub const m_flCenterXOffset: usize = 0xD88; // CParticleCollectionRendererFloatInput
-                pub const m_flCenterYOffset: usize = 0xF00; // CParticleCollectionRendererFloatInput
-                pub const m_flBumpStrength: usize = 0x1078; // float32
-                pub const m_nCropTextureOverride: usize = 0x107C; // ParticleSequenceCropOverride_t
-                pub const m_vecTexturesInput: usize = 0x1080; // CUtlLeanVector<TextureGroup_t>
-                pub const m_flAnimationRate: usize = 0x1090; // float32
-                pub const m_nAnimationType: usize = 0x1094; // AnimationType_t
-                pub const m_bAnimateInFPS: usize = 0x1098; // bool
-                pub const m_flMotionVectorScaleU: usize = 0x10A0; // CParticleCollectionRendererFloatInput
-                pub const m_flMotionVectorScaleV: usize = 0x1218; // CParticleCollectionRendererFloatInput
-                pub const m_flSelfIllumAmount: usize = 0x1390; // CParticleCollectionRendererFloatInput
-                pub const m_flDiffuseAmount: usize = 0x1508; // CParticleCollectionRendererFloatInput
-                pub const m_flDiffuseClamp: usize = 0x1680; // CParticleCollectionRendererFloatInput
-                pub const m_nLightingControlPoint: usize = 0x17F8; // int32
-                pub const m_nOutputBlendMode: usize = 0x17FC; // ParticleOutputBlendMode_t
-                pub const m_bGammaCorrectVertexColors: usize = 0x1800; // bool
-                pub const m_bSaturateColorPreAlphaBlend: usize = 0x1801; // bool
-                pub const m_flAddSelfAmount: usize = 0x1808; // CParticleCollectionRendererFloatInput
-                pub const m_flDesaturation: usize = 0x1980; // CParticleCollectionRendererFloatInput
-                pub const m_flOverbrightFactor: usize = 0x1AF8; // CParticleCollectionRendererFloatInput
-                pub const m_nHSVShiftControlPoint: usize = 0x1C70; // int32
-                pub const m_nFogType: usize = 0x1C74; // ParticleFogType_t
-                pub const m_flFogAmount: usize = 0x1C78; // CParticleCollectionRendererFloatInput
-                pub const m_bTintByFOW: usize = 0x1DF0; // bool
-                pub const m_bTintByGlobalLight: usize = 0x1DF1; // bool
-                pub const m_nPerParticleAlphaReference: usize = 0x1DF4; // SpriteCardPerParticleScale_t
-                pub const m_nPerParticleAlphaRefWindow: usize = 0x1DF8; // SpriteCardPerParticleScale_t
-                pub const m_nAlphaReferenceType: usize = 0x1DFC; // ParticleAlphaReferenceType_t
-                pub const m_flAlphaReferenceSoftness: usize = 0x1E00; // CParticleCollectionRendererFloatInput
-                pub const m_flSourceAlphaValueToMapToZero: usize = 0x1F78; // CParticleCollectionRendererFloatInput
-                pub const m_flSourceAlphaValueToMapToOne: usize = 0x20F0; // CParticleCollectionRendererFloatInput
-                pub const m_bRefract: usize = 0x2268; // bool
-                pub const m_bRefractSolid: usize = 0x2269; // bool
-                pub const m_bRefract2Passes: usize = 0x226A; // bool
-                pub const m_flRefractAmount: usize = 0x2270; // CParticleCollectionRendererFloatInput
-                pub const m_nRefractBlurRadius: usize = 0x23E8; // int32
-                pub const m_nRefractBlurType: usize = 0x23EC; // BlurFilterType_t
-                pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x23F0; // bool
-                pub const m_bOnlyRenderInEffectsWaterPass: usize = 0x23F1; // bool
-                pub const m_bUseMixedResolutionRendering: usize = 0x23F2; // bool
-                pub const m_bOnlyRenderInEffecsGameOverlay: usize = 0x23F3; // bool
-                pub const m_stencilTestID: usize = 0x23F4; // char[128]
-                pub const m_bStencilTestExclude: usize = 0x2474; // bool
-                pub const m_stencilWriteID: usize = 0x2475; // char[128]
-                pub const m_bWriteStencilOnDepthPass: usize = 0x24F5; // bool
-                pub const m_bWriteStencilOnDepthFail: usize = 0x24F6; // bool
-                pub const m_bReverseZBuffering: usize = 0x24F7; // bool
-                pub const m_bDisableZBuffering: usize = 0x24F8; // bool
-                pub const m_nFeatheringMode: usize = 0x24FC; // ParticleDepthFeatheringMode_t
-                pub const m_flFeatheringMinDist: usize = 0x2500; // CParticleCollectionRendererFloatInput
-                pub const m_flFeatheringMaxDist: usize = 0x2678; // CParticleCollectionRendererFloatInput
-                pub const m_flFeatheringFilter: usize = 0x27F0; // CParticleCollectionRendererFloatInput
-                pub const m_flFeatheringDepthMapFilter: usize = 0x2968; // CParticleCollectionRendererFloatInput
-                pub const m_flDepthBias: usize = 0x2AE0; // CParticleCollectionRendererFloatInput
-                pub const m_nSortMethod: usize = 0x2C58; // ParticleSortingChoiceList_t
-                pub const m_bBlendFramesSeq0: usize = 0x2C5C; // bool
-                pub const m_bMaxLuminanceBlendingSequence0: usize = 0x2C5D; // bool
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CSpinUpdateBase = struct {
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_OrientTo2dDirection = struct {
-                pub const m_vecInput: usize = 0x1E0; // CPerParticleVecInput
-                pub const m_flRotOffset: usize = 0x8B8; // float32
-                pub const m_flSpinStrength: usize = 0x8BC; // float32
-                pub const m_nFieldOutput: usize = 0x8C0; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapDotProductToCP = struct {
-                pub const m_nInputCP1: usize = 0x1E8; // int32
-                pub const m_nInputCP2: usize = 0x1EC; // int32
-                pub const m_nOutputCP: usize = 0x1F0; // int32
-                pub const m_nOutVectorField: usize = 0x1F4; // int32
-                pub const m_flInputMin: usize = 0x1F8; // CParticleCollectionFloatInput
-                pub const m_flInputMax: usize = 0x370; // CParticleCollectionFloatInput
-                pub const m_flOutputMin: usize = 0x4E8; // CParticleCollectionFloatInput
-                pub const m_flOutputMax: usize = 0x660; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapParticleCountToNamedModelElementScalar = struct {
-                pub const m_hModel: usize = 0x218; // CStrongHandle<InfoForResourceTypeCModel>
-                pub const m_outputMinName: usize = 0x220; // CUtlString
-                pub const m_outputMaxName: usize = 0x228; // CUtlString
-                pub const m_bModelFromRenderer: usize = 0x230; // bool
-            };
-            // Parent: None
-            // Field count: 20
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderTrails = struct {
-                pub const m_bEnableFadingAndClamping: usize = 0x3358; // bool
-                pub const m_flStartFadeDot: usize = 0x335C; // float32
-                pub const m_flEndFadeDot: usize = 0x3360; // float32
-                pub const m_nPrevPntSource: usize = 0x3364; // ParticleAttributeIndex_t
-                pub const m_flMaxLength: usize = 0x3368; // float32
-                pub const m_flMinLength: usize = 0x336C; // float32
-                pub const m_bIgnoreDT: usize = 0x3370; // bool
-                pub const m_flConstrainRadiusToLengthRatio: usize = 0x3374; // float32
-                pub const m_flLengthScale: usize = 0x3378; // float32
-                pub const m_flLengthFadeInTime: usize = 0x337C; // float32
-                pub const m_flRadiusHeadTaper: usize = 0x3380; // CPerParticleFloatInput
-                pub const m_vecHeadColorScale: usize = 0x34F8; // CParticleCollectionVecInput
-                pub const m_flHeadAlphaScale: usize = 0x3BD0; // CPerParticleFloatInput
-                pub const m_flRadiusTaper: usize = 0x3D48; // CPerParticleFloatInput
-                pub const m_vecTailColorScale: usize = 0x3EC0; // CParticleCollectionVecInput
-                pub const m_flTailAlphaScale: usize = 0x4598; // CPerParticleFloatInput
-                pub const m_nHorizCropField: usize = 0x4710; // ParticleAttributeIndex_t
-                pub const m_nVertCropField: usize = 0x4714; // ParticleAttributeIndex_t
-                pub const m_flForwardShift: usize = 0x4718; // float32
-                pub const m_bFlipUVBasedOnPitchYaw: usize = 0x471C; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointPositionToTimeOfDayValue = struct {
-                pub const m_nControlPointNumber: usize = 0x1E8; // int32
-                pub const m_pszTimeOfDayParameter: usize = 0x1EC; // char[128]
-                pub const m_vecDefaultValue: usize = 0x26C; // Vector
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_DecayMaintainCount = struct {
-                pub const m_nParticlesToMaintain: usize = 0x1E0; // int32
-                pub const m_flDecayDelay: usize = 0x1E4; // float32
-                pub const m_nSnapshotControlPoint: usize = 0x1E8; // int32
-                pub const m_strSnapshotSubset: usize = 0x1F0; // CUtlString
-                pub const m_bLifespanDecay: usize = 0x1F8; // bool
-                pub const m_flScale: usize = 0x200; // CParticleCollectionFloatInput
-                pub const m_bKillNewest: usize = 0x378; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomModelSequence = struct {
-                pub const m_ActivityName: usize = 0x1E8; // char[256]
-                pub const m_SequenceName: usize = 0x2E8; // char[256]
-                pub const m_hModel: usize = 0x3E8; // CStrongHandle<InfoForResourceTypeCModel>
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ExternalGameImpulseForce = struct {
-                pub const m_flForceScale: usize = 0x1F0; // CPerParticleFloatInput
-                pub const m_bRopes: usize = 0x368; // bool
-                pub const m_bRopesZOnly: usize = 0x369; // bool
-                pub const m_bExplosions: usize = 0x36A; // bool
-                pub const m_bParticles: usize = 0x36B; // bool
-            };
-            // Parent: None
-            // Field count: 11
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapAverageHitboxSpeedtoCP = struct {
-                pub const m_nInControlPointNumber: usize = 0x1E8; // int32
-                pub const m_nOutControlPointNumber: usize = 0x1EC; // int32
-                pub const m_nField: usize = 0x1F0; // int32
-                pub const m_nHitboxDataType: usize = 0x1F4; // ParticleHitboxDataSelection_t
-                pub const m_flInputMin: usize = 0x1F8; // CParticleCollectionFloatInput
-                pub const m_flInputMax: usize = 0x370; // CParticleCollectionFloatInput
-                pub const m_flOutputMin: usize = 0x4E8; // CParticleCollectionFloatInput
-                pub const m_flOutputMax: usize = 0x660; // CParticleCollectionFloatInput
-                pub const m_nHeightControlPointNumber: usize = 0x7D8; // int32
-                pub const m_vecComparisonVelocity: usize = 0x7E0; // CParticleCollectionVecInput
-                pub const m_HitboxSetName: usize = 0xEB8; // char[128]
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomAlpha = struct {
-                pub const m_nFieldOutput: usize = 0x1E8; // ParticleAttributeIndex_t
-                pub const m_nAlphaMin: usize = 0x1EC; // int32
-                pub const m_nAlphaMax: usize = 0x1F0; // int32
-                pub const m_flAlphaRandExponent: usize = 0x1FC; // float32
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_NormalizeVector = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flScale: usize = 0x1E4; // float32
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_FadeInSimple = struct {
-                pub const m_flFadeInTime: usize = 0x1E0; // float32
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RepeatedTriggerChildGroup = struct {
-                pub const m_nChildGroupID: usize = 0x1E8; // int32
-                pub const m_flClusterRefireTime: usize = 0x1F0; // CParticleCollectionFloatInput
-                pub const m_flClusterSize: usize = 0x368; // CParticleCollectionFloatInput
-                pub const m_flClusterCooldown: usize = 0x4E0; // CParticleCollectionFloatInput
-                pub const m_bLimitChildCount: usize = 0x658; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapVelocityToVector = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flScale: usize = 0x1E4; // float32
-                pub const m_bNormalize: usize = 0x1E8; // bool
-            };
-            // Parent: None
-            // Field count: 9
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_SetHitboxToClosest = struct {
-                pub const m_nControlPointNumber: usize = 0x1E8; // int32
-                pub const m_nDesiredHitbox: usize = 0x1EC; // int32
-                pub const m_vecHitBoxScale: usize = 0x1F0; // CParticleCollectionVecInput
-                pub const m_HitboxSetName: usize = 0x8C8; // char[128]
-                pub const m_bUseBones: usize = 0x948; // bool
-                pub const m_bUseClosestPointOnHitbox: usize = 0x949; // bool
-                pub const m_nTestType: usize = 0x94C; // ClosestPointTestType_t
-                pub const m_flHybridRatio: usize = 0x950; // CParticleCollectionFloatInput
-                pub const m_bUpdatePosition: usize = 0xAC8; // bool
-            };
-            // Parent: None
-            // Field count: 11
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RingWave = struct {
-                pub const m_TransformInput: usize = 0x1E8; // CParticleTransformInput
-                pub const m_flParticlesPerOrbit: usize = 0x250; // CParticleCollectionFloatInput
-                pub const m_flInitialRadius: usize = 0x3C8; // CPerParticleFloatInput
-                pub const m_flThickness: usize = 0x540; // CPerParticleFloatInput
-                pub const m_flInitialSpeedMin: usize = 0x6B8; // CPerParticleFloatInput
-                pub const m_flInitialSpeedMax: usize = 0x830; // CPerParticleFloatInput
-                pub const m_flRoll: usize = 0x9A8; // CPerParticleFloatInput
-                pub const m_flPitch: usize = 0xB20; // CPerParticleFloatInput
-                pub const m_flYaw: usize = 0xC98; // CPerParticleFloatInput
-                pub const m_bEvenDistribution: usize = 0xE10; // bool
-                pub const m_bXYVelocityOnly: usize = 0xE11; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomTrailLength = struct {
-                pub const m_flMinLength: usize = 0x1E8; // float32
-                pub const m_flMaxLength: usize = 0x1EC; // float32
-                pub const m_flLengthRandExponent: usize = 0x1F0; // float32
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapScalar = struct {
-                pub const m_nFieldInput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1E8; // float32
-                pub const m_flInputMax: usize = 0x1EC; // float32
-                pub const m_flOutputMin: usize = 0x1F0; // float32
-                pub const m_flOutputMax: usize = 0x1F4; // float32
-                pub const m_bOldCode: usize = 0x1F8; // bool
-            };
-            // Parent: None
-            // Field count: 13
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_DistanceBetweenTransforms = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_TransformStart: usize = 0x1E8; // CParticleTransformInput
-                pub const m_TransformEnd: usize = 0x250; // CParticleTransformInput
-                pub const m_flInputMin: usize = 0x2B8; // CPerParticleFloatInput
-                pub const m_flInputMax: usize = 0x430; // CPerParticleFloatInput
-                pub const m_flOutputMin: usize = 0x5A8; // CPerParticleFloatInput
-                pub const m_flOutputMax: usize = 0x720; // CPerParticleFloatInput
-                pub const m_flMaxTraceLength: usize = 0x898; // float32
-                pub const m_flLOSScale: usize = 0x89C; // float32
-                pub const m_CollisionGroupName: usize = 0x8A0; // char[128]
-                pub const m_nTraceSet: usize = 0x920; // ParticleTraceSet_t
-                pub const m_bLOS: usize = 0x924; // bool
-                pub const m_nSetMethod: usize = 0x928; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_DecayOffscreen = struct {
-                pub const m_flOffscreenTime: usize = 0x1E0; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MParticleMaxVersion
-            // MParticleReplacementOp
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateSequentialPath = struct {
-                pub const m_fMaxDistance: usize = 0x1E8; // float32
-                pub const m_flNumToAssign: usize = 0x1EC; // float32
-                pub const m_bLoop: usize = 0x1F0; // bool
-                pub const m_bCPPairs: usize = 0x1F1; // bool
-                pub const m_bSaveOffset: usize = 0x1F2; // bool
-                pub const m_PathParams: usize = 0x200; // CPathParameters
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_EndCapTimedDecay = struct {
-                pub const m_flDecayTime: usize = 0x1E0; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapDistanceToLineSegmentBase = struct {
-                pub const m_nCP0: usize = 0x1E0; // int32
-                pub const m_nCP1: usize = 0x1E4; // int32
-                pub const m_flMinInputValue: usize = 0x1E8; // float32
-                pub const m_flMaxInputValue: usize = 0x1EC; // float32
-                pub const m_bInfiniteLine: usize = 0x1F0; // bool
-            };
-            // Parent: None
-            // Field count: 12
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ContinuousEmitter = struct {
-                pub const m_flEmissionDuration: usize = 0x1E8; // CParticleCollectionFloatInput
-                pub const m_flStartTime: usize = 0x360; // CParticleCollectionFloatInput
-                pub const m_flEmitRate: usize = 0x4D8; // CParticleCollectionFloatInput
-                pub const m_flEmissionScale: usize = 0x650; // float32
-                pub const m_flScalePerParentParticle: usize = 0x654; // float32
-                pub const m_bInitFromKilledParentParticles: usize = 0x658; // bool
-                pub const m_nEventType: usize = 0x65C; // EventTypeSelection_t
-                pub const m_nSnapshotControlPoint: usize = 0x660; // int32
-                pub const m_strSnapshotSubset: usize = 0x668; // CUtlString
-                pub const m_nLimitPerUpdate: usize = 0x670; // int32
-                pub const m_bForceEmitOnFirstUpdate: usize = 0x674; // bool
-                pub const m_bForceEmitOnLastUpdate: usize = 0x675; // bool
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_OscillateVectorSimple = struct {
-                pub const m_Rate: usize = 0x1E0; // Vector
-                pub const m_Frequency: usize = 0x1EC; // Vector
-                pub const m_nField: usize = 0x1F8; // ParticleAttributeIndex_t
-                pub const m_flOscMult: usize = 0x1FC; // float32
-                pub const m_flOscAdd: usize = 0x200; // float32
-                pub const m_bOffset: usize = 0x204; // bool
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_SequenceLifeTime = struct {
-                pub const m_flFramerate: usize = 0x1E8; // float32
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_MoveBetweenPoints = struct {
-                pub const m_flSpeedMin: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_flSpeedMax: usize = 0x360; // CPerParticleFloatInput
-                pub const m_flEndSpread: usize = 0x4D8; // CPerParticleFloatInput
-                pub const m_flStartOffset: usize = 0x650; // CPerParticleFloatInput
-                pub const m_flEndOffset: usize = 0x7C8; // CPerParticleFloatInput
-                pub const m_nEndControlPointNumber: usize = 0x940; // int32
-                pub const m_bTrailBias: usize = 0x944; // bool
-            };
-            // Parent: None
-            // Field count: 20
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_StatusEffectTf = struct {
-                pub const m_flSFXColorWarpAmount: usize = 0x1E8; // float32
-                pub const m_flSFXNormalAmount: usize = 0x1EC; // float32
-                pub const m_flSFXMetalnessAmount: usize = 0x1F0; // float32
-                pub const m_flSFXRoughnessAmount: usize = 0x1F4; // float32
-                pub const m_flSFXSelfIllumAmount: usize = 0x1F8; // float32
-                pub const m_flSFXSScale: usize = 0x1FC; // float32
-                pub const m_flSFXSScrollX: usize = 0x200; // float32
-                pub const m_flSFXSScrollY: usize = 0x204; // float32
-                pub const m_flSFXSScrollZ: usize = 0x208; // float32
-                pub const m_flSFXSOffsetX: usize = 0x20C; // float32
-                pub const m_flSFXSOffsetY: usize = 0x210; // float32
-                pub const m_flSFXSOffsetZ: usize = 0x214; // float32
-                pub const m_nDetailCombo: usize = 0x218; // DetailCombo_t
-                pub const m_flSFXSDetailAmount: usize = 0x21C; // float32
-                pub const m_flSFXSDetailScale: usize = 0x220; // float32
-                pub const m_flSFXSDetailScrollX: usize = 0x224; // float32
-                pub const m_flSFXSDetailScrollY: usize = 0x228; // float32
-                pub const m_flSFXSDetailScrollZ: usize = 0x22C; // float32
-                pub const m_flSFXSUseModelUVs: usize = 0x230; // float32
-                pub const m_flSFXEnvMapAmount: usize = 0x234; // float32
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetUserEvent = struct {
-                pub const m_flInput: usize = 0x1E0; // CPerParticleFloatInput
-                pub const m_flRisingEdge: usize = 0x358; // CPerParticleFloatInput
-                pub const m_nRisingEventType: usize = 0x4D0; // EventTypeSelection_t
-                pub const m_flFallingEdge: usize = 0x4D8; // CPerParticleFloatInput
-                pub const m_nFallingEventType: usize = 0x650; // EventTypeSelection_t
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_QuantizeFloat = struct {
-                pub const m_InputValue: usize = 0x1E0; // CPerParticleFloatInput
-                pub const m_nOutputField: usize = 0x358; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_BasicMovement = struct {
-                pub const m_Gravity: usize = 0x1E0; // CParticleCollectionVecInput
-                pub const m_fDrag: usize = 0x8B8; // CParticleCollectionFloatInput
-                pub const m_massControls: usize = 0xA30; // CParticleMassCalculationParameters
-                pub const m_nMaxConstraintPasses: usize = 0xEA0; // int32
-                pub const m_bUseNewCode: usize = 0xEA4; // bool
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomNamedModelElement = struct {
-                pub const m_hModel: usize = 0x1E8; // CStrongHandle<InfoForResourceTypeCModel>
-                pub const m_names: usize = 0x1F0; // CUtlVector<CUtlString>
-                pub const m_bShuffle: usize = 0x208; // bool
-                pub const m_bLinear: usize = 0x209; // bool
-                pub const m_bModelFromRenderer: usize = 0x20A; // bool
-                pub const m_nFieldOutput: usize = 0x20C; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_InitFromParentKilled = struct {
-                pub const m_nAttributeToCopy: usize = 0x1E8; // ParticleAttributeIndex_t
-                pub const m_nEventType: usize = 0x1EC; // EventTypeSelection_t
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_Callback = struct {
-            };
-            // Parent: None
-            // Field count: 17
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CParticleFunction = struct {
-                pub const m_flOpStrength: usize = 0x8; // CParticleCollectionFloatInput
-                pub const m_nOpEndCapState: usize = 0x180; // ParticleEndcapMode_t
-                pub const m_nToolsState: usize = 0x184; // ParticleToolsState_t
-                pub const m_flOpStartFadeInTime: usize = 0x188; // float32
-                pub const m_flOpEndFadeInTime: usize = 0x18C; // float32
-                pub const m_flOpStartFadeOutTime: usize = 0x190; // float32
-                pub const m_flOpEndFadeOutTime: usize = 0x194; // float32
-                pub const m_flOpFadeOscillatePeriod: usize = 0x198; // float32
-                pub const m_bNormalizeToStopTime: usize = 0x19C; // bool
-                pub const m_flOpTimeOffsetMin: usize = 0x1A0; // float32
-                pub const m_flOpTimeOffsetMax: usize = 0x1A4; // float32
-                pub const m_nOpTimeOffsetSeed: usize = 0x1A8; // int32
-                pub const m_nOpTimeScaleSeed: usize = 0x1AC; // int32
-                pub const m_flOpTimeScaleMin: usize = 0x1B0; // float32
-                pub const m_flOpTimeScaleMax: usize = 0x1B4; // float32
-                pub const m_bDisableOperator: usize = 0x1BA; // bool
-                pub const m_Notes: usize = 0x1C0; // CUtlString
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_GlobalLight = struct {
-                pub const m_flScale: usize = 0x1E0; // float32
-                pub const m_bClampLowerRange: usize = 0x1E4; // bool
-                pub const m_bClampUpperRange: usize = 0x1E5; // bool
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_OffsetVectorToVector = struct {
-                pub const m_nFieldInput: usize = 0x1E8; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x1EC; // ParticleAttributeIndex_t
-                pub const m_vecOutputMin: usize = 0x1F0; // Vector
-                pub const m_vecOutputMax: usize = 0x1FC; // Vector
-                pub const m_randomnessParameters: usize = 0x208; // CRandomNumberGeneratorParameters
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetPerChildControlPointFromAttribute = struct {
-                pub const m_nChildGroupID: usize = 0x1E0; // int32
-                pub const m_nFirstControlPoint: usize = 0x1E4; // int32
-                pub const m_nNumControlPoints: usize = 0x1E8; // int32
-                pub const m_nParticleIncrement: usize = 0x1EC; // int32
-                pub const m_nFirstSourcePoint: usize = 0x1F0; // int32
-                pub const m_bNumBasedOnParticleCount: usize = 0x1F4; // bool
-                pub const m_nAttributeToRead: usize = 0x1F8; // ParticleAttributeIndex_t
-                pub const m_nCPField: usize = 0x1FC; // int32
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetParentControlPointsToChildCP = struct {
-                pub const m_nChildGroupID: usize = 0x1E8; // int32
-                pub const m_nChildControlPoint: usize = 0x1EC; // int32
-                pub const m_nNumControlPoints: usize = 0x1F0; // int32
-                pub const m_nFirstSourcePoint: usize = 0x1F4; // int32
-                pub const m_bSetOrientation: usize = 0x1F8; // bool
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_BoxConstraint = struct {
-                pub const m_vecMin: usize = 0x1E0; // CParticleCollectionVecInput
-                pub const m_vecMax: usize = 0x8B8; // CParticleCollectionVecInput
-                pub const m_nCP: usize = 0xF90; // int32
-                pub const m_bLocalSpace: usize = 0xF94; // bool
-                pub const m_bAccountForRadius: usize = 0xF95; // bool
-            };
-            // Parent: None
-            // Field count: 14
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreatePhyllotaxis = struct {
-                pub const m_nControlPointNumber: usize = 0x1E8; // int32
-                pub const m_nScaleCP: usize = 0x1EC; // int32
-                pub const m_nComponent: usize = 0x1F0; // int32
-                pub const m_fRadCentCore: usize = 0x1F4; // float32
-                pub const m_fRadPerPoint: usize = 0x1F8; // float32
-                pub const m_fRadPerPointTo: usize = 0x1FC; // float32
-                pub const m_fpointAngle: usize = 0x200; // float32
-                pub const m_fsizeOverall: usize = 0x204; // float32
-                pub const m_fRadBias: usize = 0x208; // float32
-                pub const m_fMinRad: usize = 0x20C; // float32
-                pub const m_fDistBias: usize = 0x210; // float32
-                pub const m_bUseLocalCoords: usize = 0x214; // bool
-                pub const m_bUseWithContEmit: usize = 0x215; // bool
-                pub const m_bUseOrigRadius: usize = 0x216; // bool
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_AttractToControlPoint = struct {
-                pub const m_vecComponentScale: usize = 0x1F0; // Vector
-                pub const m_fForceAmount: usize = 0x200; // CPerParticleFloatInput
-                pub const m_fMinimumDistance: usize = 0x378; // CPerParticleFloatInput
-                pub const m_fFalloffPower: usize = 0x4F0; // float32
-                pub const m_TransformInput: usize = 0x4F8; // CParticleTransformInput
-                pub const m_fForceAmountMin: usize = 0x560; // CPerParticleFloatInput
-                pub const m_bApplyMinForce: usize = 0x6D8; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomLifeTime = struct {
-                pub const m_fLifetimeMin: usize = 0x1E8; // float32
-                pub const m_fLifetimeMax: usize = 0x1EC; // float32
-                pub const m_fLifetimeRandExponent: usize = 0x1F0; // float32
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapParticleCountToNamedModelSequenceScalar = struct {
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_VelocityRadialRandom = struct {
-                pub const m_bPerParticleCenter: usize = 0x1E8; // bool
-                pub const m_nControlPointNumber: usize = 0x1EC; // int32
-                pub const m_vecPosition: usize = 0x1F0; // CPerParticleVecInput
-                pub const m_vecFwd: usize = 0x8C8; // CPerParticleVecInput
-                pub const m_fSpeedMin: usize = 0xFA0; // CPerParticleFloatInput
-                pub const m_fSpeedMax: usize = 0x1118; // CPerParticleFloatInput
-                pub const m_vecLocalCoordinateSystemSpeedScale: usize = 0x1290; // Vector
-                pub const m_bIgnoreDelta: usize = 0x129D; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomRadius = struct {
-                pub const m_flRadiusMin: usize = 0x1E8; // float32
-                pub const m_flRadiusMax: usize = 0x1EC; // float32
-                pub const m_flRadiusRandExponent: usize = 0x1F0; // float32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_Orient2DRelToCP = struct {
-                pub const m_flRotOffset: usize = 0x1E0; // float32
-                pub const m_flSpinStrength: usize = 0x1E4; // float32
-                pub const m_nCP: usize = 0x1E8; // int32
-                pub const m_nFieldOutput: usize = 0x1EC; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 16
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const TextureControls_t = struct {
-                pub const m_flFinalTextureScaleU: usize = 0x0; // CParticleCollectionRendererFloatInput
-                pub const m_flFinalTextureScaleV: usize = 0x178; // CParticleCollectionRendererFloatInput
-                pub const m_flFinalTextureOffsetU: usize = 0x2F0; // CParticleCollectionRendererFloatInput
-                pub const m_flFinalTextureOffsetV: usize = 0x468; // CParticleCollectionRendererFloatInput
-                pub const m_flFinalTextureUVRotation: usize = 0x5E0; // CParticleCollectionRendererFloatInput
-                pub const m_flZoomScale: usize = 0x758; // CParticleCollectionRendererFloatInput
-                pub const m_flDistortion: usize = 0x8D0; // CParticleCollectionRendererFloatInput
-                pub const m_bRandomizeOffsets: usize = 0xA48; // bool
-                pub const m_bClampUVs: usize = 0xA49; // bool
-                pub const m_nPerParticleBlend: usize = 0xA4C; // SpriteCardPerParticleScale_t
-                pub const m_nPerParticleScale: usize = 0xA50; // SpriteCardPerParticleScale_t
-                pub const m_nPerParticleOffsetU: usize = 0xA54; // SpriteCardPerParticleScale_t
-                pub const m_nPerParticleOffsetV: usize = 0xA58; // SpriteCardPerParticleScale_t
-                pub const m_nPerParticleRotation: usize = 0xA5C; // SpriteCardPerParticleScale_t
-                pub const m_nPerParticleZoom: usize = 0xA60; // SpriteCardPerParticleScale_t
-                pub const m_nPerParticleDistortion: usize = 0xA64; // SpriteCardPerParticleScale_t
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const ControlPointReference_t = struct {
-                pub const m_controlPointNameString: usize = 0x0; // int32
-                pub const m_vOffsetFromControlPoint: usize = 0x4; // Vector
-                pub const m_bOffsetInLocalSpace: usize = 0x10; // bool
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointToVectorExpression = struct {
-                pub const m_nExpression: usize = 0x1E8; // VectorExpressionType_t
-                pub const m_nOutputCP: usize = 0x1EC; // int32
-                pub const m_vInput1: usize = 0x1F0; // CParticleCollectionVecInput
-                pub const m_vInput2: usize = 0x8C8; // CParticleCollectionVecInput
-                pub const m_flLerp: usize = 0xFA0; // CPerParticleFloatInput
-                pub const m_bNormalizedOutput: usize = 0x1118; // bool
-            };
-            // Parent: None
-            // Field count: 20
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_LightningSnapshotGenerator = struct {
-                pub const m_nCPSnapshot: usize = 0x1E8; // int32
-                pub const m_nCPStartPnt: usize = 0x1EC; // int32
-                pub const m_nCPEndPnt: usize = 0x1F0; // int32
-                pub const m_flSegments: usize = 0x1F8; // CParticleCollectionFloatInput
-                pub const m_flOffset: usize = 0x370; // CParticleCollectionFloatInput
-                pub const m_flOffsetDecay: usize = 0x4E8; // CParticleCollectionFloatInput
-                pub const m_flRecalcRate: usize = 0x660; // CParticleCollectionFloatInput
-                pub const m_flUVScale: usize = 0x7D8; // CParticleCollectionFloatInput
-                pub const m_flUVOffset: usize = 0x950; // CParticleCollectionFloatInput
-                pub const m_flSplitRate: usize = 0xAC8; // CParticleCollectionFloatInput
-                pub const m_flRecursionSplitScale: usize = 0xC40; // CParticleCollectionFloatInput
-                pub const m_bScaleBranchDistance: usize = 0xDB8; // bool
-                pub const m_flBranchDistanceScale: usize = 0xDC0; // CParticleCollectionFloatInput
-                pub const m_bScaleBranchOffset: usize = 0xF38; // bool
-                pub const m_flBranchOffsetScale: usize = 0xF40; // CParticleCollectionFloatInput
-                pub const m_flBranchTwist: usize = 0x10B8; // CParticleCollectionFloatInput
-                pub const m_nBranchBehavior: usize = 0x1230; // ParticleLightnintBranchBehavior_t
-                pub const m_flRadiusStart: usize = 0x1238; // CParticleCollectionFloatInput
-                pub const m_flRadiusEnd: usize = 0x13B0; // CParticleCollectionFloatInput
-                pub const m_flDedicatedPool: usize = 0x1528; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapNamedModelMeshGroupOnceTimed = struct {
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapQAnglesToRotation = struct {
-                pub const m_TransformInput: usize = 0x1E8; // CParticleTransformInput
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_PositionWarp = struct {
-                pub const m_vecWarpMin: usize = 0x1E8; // CParticleCollectionVecInput
-                pub const m_vecWarpMax: usize = 0x8C0; // CParticleCollectionVecInput
-                pub const m_nScaleControlPointNumber: usize = 0xF98; // int32
-                pub const m_nControlPointNumber: usize = 0xF9C; // int32
-                pub const m_nRadiusComponent: usize = 0xFA0; // int32
-                pub const m_flWarpTime: usize = 0xFA4; // float32
-                pub const m_flWarpStartTime: usize = 0xFA8; // float32
-                pub const m_flPrevPosScale: usize = 0xFAC; // float32
-                pub const m_bInvertWarp: usize = 0xFB0; // bool
-                pub const m_bUseCount: usize = 0xFB1; // bool
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointFieldToScalarExpression = struct {
-                pub const m_nExpression: usize = 0x1E8; // ScalarExpressionType_t
-                pub const m_flInput1: usize = 0x1F0; // CParticleCollectionFloatInput
-                pub const m_flInput2: usize = 0x368; // CParticleCollectionFloatInput
-                pub const m_flOutputRemap: usize = 0x4E0; // CParticleRemapFloatInput
-                pub const m_nOutputCP: usize = 0x658; // int32
-                pub const m_nOutVectorField: usize = 0x65C; // int32
-                pub const m_flInterpolation: usize = 0x660; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_CreateParticleSystemRenderer = struct {
-                pub const m_hEffect: usize = 0x230; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-                pub const m_nEventType: usize = 0x238; // EventTypeSelection_t
-                pub const m_vecCPs: usize = 0x240; // CUtlLeanVector<CPAssignment_t>
-                pub const m_szParticleConfig: usize = 0x250; // CUtlString
-                pub const m_AggregationPos: usize = 0x258; // CPerParticleVecInput
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CParticleFunctionForce = struct {
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomVectorComponent = struct {
-                pub const m_flMin: usize = 0x1E8; // float32
-                pub const m_flMax: usize = 0x1EC; // float32
-                pub const m_nFieldOutput: usize = 0x1F0; // ParticleAttributeIndex_t
-                pub const m_nComponent: usize = 0x1F4; // int32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MParticleMaxVersion
-            // MParticleReplacementOp
-            // MGetKV3ClassDefaults
-            pub const C_OP_InheritFromParentParticles = struct {
-                pub const m_flScale: usize = 0x1E0; // float32
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_nIncrement: usize = 0x1E8; // int32
-                pub const m_bRandomDistribution: usize = 0x1EC; // bool
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_SetVectorAttributeToVectorExpression = struct {
-                pub const m_nExpression: usize = 0x1E8; // VectorExpressionType_t
-                pub const m_vInput1: usize = 0x1F0; // CPerParticleVecInput
-                pub const m_vInput2: usize = 0x8C8; // CPerParticleVecInput
-                pub const m_flLerp: usize = 0xFA0; // CPerParticleFloatInput
-                pub const m_nOutputField: usize = 0x1118; // ParticleAttributeIndex_t
-                pub const m_nSetMethod: usize = 0x111C; // ParticleSetMethod_t
-                pub const m_bNormalizedOutput: usize = 0x1120; // bool
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapTransformVisibilityToVector = struct {
-                pub const m_nSetMethod: usize = 0x1E0; // ParticleSetMethod_t
-                pub const m_TransformInput: usize = 0x1E8; // CParticleTransformInput
-                pub const m_nFieldOutput: usize = 0x250; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x254; // float32
-                pub const m_flInputMax: usize = 0x258; // float32
-                pub const m_vecOutputMin: usize = 0x25C; // Vector
-                pub const m_vecOutputMax: usize = 0x268; // Vector
-                pub const m_flRadius: usize = 0x274; // float32
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_DirectionBetweenVecsToVec = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_vecPoint1: usize = 0x1E8; // CPerParticleVecInput
-                pub const m_vecPoint2: usize = 0x8C0; // CPerParticleVecInput
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_MovementLoopInsideSphere = struct {
-                pub const m_nCP: usize = 0x1E0; // int32
-                pub const m_flDistance: usize = 0x1E8; // CParticleCollectionFloatInput
-                pub const m_vecScale: usize = 0x360; // CParticleCollectionVecInput
-                pub const m_nDistSqrAttr: usize = 0xA38; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 9
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderSimpleModelCollection = struct {
-                pub const m_bCenterOffset: usize = 0x230; // bool
-                pub const m_hModel: usize = 0x238; // CStrongHandle<InfoForResourceTypeCModel>
-                pub const m_modelInput: usize = 0x240; // CParticleModelInput
-                pub const m_fSizeCullScale: usize = 0x2A0; // CParticleCollectionFloatInput
-                pub const m_bDisableShadows: usize = 0x418; // bool
-                pub const m_bDisableMotionBlur: usize = 0x419; // bool
-                pub const m_bAcceptsDecals: usize = 0x41A; // bool
-                pub const m_fDrawFilter: usize = 0x420; // CPerParticleFloatInput
-                pub const m_nAngularVelocityField: usize = 0x598; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_QuantizeCPComponent = struct {
-                pub const m_flInputValue: usize = 0x1E8; // CParticleCollectionFloatInput
-                pub const m_nCPOutput: usize = 0x360; // int32
-                pub const m_nOutVectorField: usize = 0x364; // int32
-                pub const m_flQuantizeValue: usize = 0x368; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_PlayEndCapWhenFinished = struct {
-                pub const m_bFireOnEmissionEnd: usize = 0x1E8; // bool
-                pub const m_bIncludeChildren: usize = 0x1E9; // bool
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_InitFloatCollection = struct {
-                pub const m_InputValue: usize = 0x1E8; // CParticleCollectionFloatInput
-                pub const m_nOutputField: usize = 0x360; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 9
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPathParameters = struct {
-                pub const m_nStartControlPointNumber: usize = 0x0; // int32
-                pub const m_nMidControlPointNumber: usize = 0x4; // int32
-                pub const m_nEndControlPointNumber: usize = 0x8; // int32
-                pub const m_nBulgeControl: usize = 0xC; // int32
-                pub const m_flBulge: usize = 0x10; // float32
-                pub const m_flMidPoint: usize = 0x14; // float32
-                pub const m_vStartPointOffset: usize = 0x18; // Vector
-                pub const m_vMidPointOffset: usize = 0x24; // Vector
-                pub const m_vEndOffset: usize = 0x30; // Vector
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapScalarEndCap = struct {
-                pub const m_nFieldInput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1E8; // float32
-                pub const m_flInputMax: usize = 0x1EC; // float32
-                pub const m_flOutputMin: usize = 0x1F0; // float32
-                pub const m_flOutputMax: usize = 0x1F4; // float32
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateFromPlaneCache = struct {
-                pub const m_vecOffsetMin: usize = 0x1E8; // Vector
-                pub const m_vecOffsetMax: usize = 0x1F4; // Vector
-                pub const m_bUseNormal: usize = 0x201; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_LazyCullCompareFloat = struct {
-                pub const m_flComparsion1: usize = 0x1E0; // CPerParticleFloatInput
-                pub const m_flComparsion2: usize = 0x358; // CPerParticleFloatInput
-                pub const m_flCullTime: usize = 0x4D0; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ControlPointToRadialScreenSpace = struct {
-                pub const m_nCPIn: usize = 0x1E8; // int32
-                pub const m_vecCP1Pos: usize = 0x1EC; // Vector
-                pub const m_nCPOut: usize = 0x1F8; // int32
-                pub const m_nCPOutField: usize = 0x1FC; // int32
-                pub const m_nCPSSPosOut: usize = 0x200; // int32
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SpinUpdate = struct {
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_NormalOffset = struct {
-                pub const m_OffsetMin: usize = 0x1E8; // Vector
-                pub const m_OffsetMax: usize = 0x1F4; // Vector
-                pub const m_nControlPointNumber: usize = 0x200; // int32
-                pub const m_bLocalCoords: usize = 0x204; // bool
-                pub const m_bNormalize: usize = 0x205; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapDistanceToLineSegmentToVector = struct {
-                pub const m_nFieldOutput: usize = 0x1F8; // ParticleAttributeIndex_t
-                pub const m_vMinOutputValue: usize = 0x1FC; // Vector
-                pub const m_vMaxOutputValue: usize = 0x208; // Vector
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderAsModels = struct {
-                pub const m_ModelList: usize = 0x230; // CUtlVector<ModelReference_t>
-                pub const m_flModelScale: usize = 0x24C; // float32
-                pub const m_bFitToModelSize: usize = 0x250; // bool
-                pub const m_bNonUniformScaling: usize = 0x251; // bool
-                pub const m_nXAxisScalingAttribute: usize = 0x254; // ParticleAttributeIndex_t
-                pub const m_nYAxisScalingAttribute: usize = 0x258; // ParticleAttributeIndex_t
-                pub const m_nZAxisScalingAttribute: usize = 0x25C; // ParticleAttributeIndex_t
-                pub const m_nSizeCullBloat: usize = 0x260; // int32
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreationNoise = struct {
-                pub const m_nFieldOutput: usize = 0x1E8; // ParticleAttributeIndex_t
-                pub const m_bAbsVal: usize = 0x1EC; // bool
-                pub const m_bAbsValInv: usize = 0x1ED; // bool
-                pub const m_flOffset: usize = 0x1F0; // float32
-                pub const m_flOutputMin: usize = 0x1F4; // float32
-                pub const m_flOutputMax: usize = 0x1F8; // float32
-                pub const m_flNoiseScale: usize = 0x1FC; // float32
-                pub const m_flNoiseScaleLoc: usize = 0x200; // float32
-                pub const m_vecOffsetLoc: usize = 0x204; // Vector
-                pub const m_flWorldTimeScale: usize = 0x210; // float32
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_Spin = struct {
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_GameLiquidSpill = struct {
-                pub const m_flLiquidContentsField: usize = 0x230; // CParticleCollectionFloatInput
-                pub const m_flExpirationTime: usize = 0x3A8; // CParticleCollectionFloatInput
-                pub const m_flRadius: usize = 0x520; // CParticleCollectionFloatInput
-                pub const m_bCheckExposedToSky: usize = 0x698; // bool
-                pub const m_nAmountAttribute: usize = 0x69C; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_InstantaneousEmitter = struct {
-                pub const m_nParticlesToEmit: usize = 0x1E8; // CParticleCollectionFloatInput
-                pub const m_flStartTime: usize = 0x360; // CParticleCollectionFloatInput
-                pub const m_flInitFromKilledParentParticles: usize = 0x4D8; // float32
-                pub const m_nEventType: usize = 0x4DC; // EventTypeSelection_t
-                pub const m_flParentParticleScale: usize = 0x4E0; // CParticleCollectionFloatInput
-                pub const m_nMaxEmittedPerFrame: usize = 0x658; // int32
-                pub const m_nSnapshotControlPoint: usize = 0x65C; // int32
-                pub const m_strSnapshotSubset: usize = 0x660; // CUtlString
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ConstrainLineLength = struct {
-                pub const m_flMinDistance: usize = 0x1E0; // float32
-                pub const m_flMaxDistance: usize = 0x1E4; // float32
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_LifespanFromVelocity = struct {
-                pub const m_vecComponentScale: usize = 0x1E8; // Vector
-                pub const m_flTraceOffset: usize = 0x1F4; // float32
-                pub const m_flMaxTraceLength: usize = 0x1F8; // float32
-                pub const m_flTraceTolerance: usize = 0x1FC; // float32
-                pub const m_nMaxPlanes: usize = 0x200; // int32
-                pub const m_CollisionGroupName: usize = 0x208; // char[128]
-                pub const m_nTraceSet: usize = 0x288; // ParticleTraceSet_t
-                pub const m_bIncludeWater: usize = 0x298; // bool
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CBaseTrailRenderer = struct {
-                pub const m_nOrientationType: usize = 0x2ED8; // ParticleOrientationChoiceList_t
-                pub const m_nOrientationControlPoint: usize = 0x2EDC; // int32
-                pub const m_flMinSize: usize = 0x2EE0; // float32
-                pub const m_flMaxSize: usize = 0x2EE4; // float32
-                pub const m_flStartFadeSize: usize = 0x2EE8; // CParticleCollectionRendererFloatInput
-                pub const m_flEndFadeSize: usize = 0x3060; // CParticleCollectionRendererFloatInput
-                pub const m_flSubPixelAAScale: usize = 0x31D8; // CParticleCollectionRendererFloatInput
-                pub const m_bClampV: usize = 0x3350; // bool
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_VelocityFromCP = struct {
-                pub const m_velocityInput: usize = 0x1E8; // CParticleCollectionVecInput
-                pub const m_transformInput: usize = 0x8C0; // CParticleTransformInput
-                pub const m_flVelocityScale: usize = 0x928; // float32
-                pub const m_bDirectionOnly: usize = 0x92C; // bool
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointOrientation = struct {
-                pub const m_bUseWorldLocation: usize = 0x1E8; // bool
-                pub const m_bRandomize: usize = 0x1EA; // bool
-                pub const m_bSetOnce: usize = 0x1EB; // bool
-                pub const m_nCP: usize = 0x1EC; // int32
-                pub const m_nHeadLocation: usize = 0x1F0; // int32
-                pub const m_vecRotation: usize = 0x1F4; // QAngle
-                pub const m_vecRotationB: usize = 0x200; // QAngle
-                pub const m_flInterpolation: usize = 0x210; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 12
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_MovementSkinnedPositionFromCPSnapshot = struct {
-                pub const m_nSnapshotControlPointNumber: usize = 0x1E0; // int32
-                pub const m_nControlPointNumber: usize = 0x1E4; // int32
-                pub const m_bRandom: usize = 0x1E8; // bool
-                pub const m_nRandomSeed: usize = 0x1EC; // int32
-                pub const m_bSetNormal: usize = 0x1F0; // bool
-                pub const m_bSetRadius: usize = 0x1F1; // bool
-                pub const m_nIndexType: usize = 0x1F4; // SnapshotIndexType_t
-                pub const m_flReadIndex: usize = 0x1F8; // CPerParticleFloatInput
-                pub const m_flIncrement: usize = 0x370; // CParticleCollectionFloatInput
-                pub const m_nFullLoopIncrement: usize = 0x4E8; // CParticleCollectionFloatInput
-                pub const m_nSnapShotStartPoint: usize = 0x660; // CParticleCollectionFloatInput
-                pub const m_flInterpolation: usize = 0x7D8; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 15
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_MultiSegmentDisplaySnapshotGenerator = struct {
-                pub const m_nCPSnapshot: usize = 0x1E8; // int32
-                pub const m_nSegCount: usize = 0x1EC; // ParticleMultiSegmentCountSelection_t
-                pub const m_nInputType: usize = 0x1F0; // ParticleMultiSegmentInputSelection_t
-                pub const m_strDefaultString: usize = 0x1F8; // CUtlString
-                pub const m_flValue: usize = 0x200; // CParticleCollectionFloatInput
-                pub const m_flScollOffset: usize = 0x378; // CParticleCollectionFloatInput
-                pub const m_SpecialCharList: usize = 0x4F0; // CUtlVector<ParticleMultiSegmentSpecialCharacter_t>
-                pub const m_vecColorUnlit: usize = 0x508; // CParticleCollectionVecInput
-                pub const m_vecColorLit: usize = 0xBE0; // CParticleCollectionVecInput
-                pub const m_flRadius: usize = 0x12B8; // CParticleCollectionFloatInput
-                pub const m_flSpacing: usize = 0x1430; // CParticleCollectionFloatInput
-                pub const m_flMinCount: usize = 0x15A8; // CParticleCollectionFloatInput
-                pub const m_flMaxCount: usize = 0x1720; // CParticleCollectionFloatInput
-                pub const m_bPrependEmpty: usize = 0x1898; // bool
-                pub const m_flDigitsAfterDecimal: usize = 0x18A0; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 15
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_OscillateVector = struct {
-                pub const m_RateMin: usize = 0x1E0; // Vector
-                pub const m_RateMax: usize = 0x1EC; // Vector
-                pub const m_FrequencyMin: usize = 0x1F8; // Vector
-                pub const m_FrequencyMax: usize = 0x204; // Vector
-                pub const m_nField: usize = 0x210; // ParticleAttributeIndex_t
-                pub const m_bProportional: usize = 0x214; // bool
-                pub const m_bProportionalOp: usize = 0x215; // bool
-                pub const m_bOffset: usize = 0x216; // bool
-                pub const m_flStartTime_min: usize = 0x218; // float32
-                pub const m_flStartTime_max: usize = 0x21C; // float32
-                pub const m_flEndTime_min: usize = 0x220; // float32
-                pub const m_flEndTime_max: usize = 0x224; // float32
-                pub const m_flOscMult: usize = 0x228; // CPerParticleFloatInput
-                pub const m_flOscAdd: usize = 0x3A0; // CPerParticleFloatInput
-                pub const m_flRateScale: usize = 0x518; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 15
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_PositionLock = struct {
-                pub const m_TransformInput: usize = 0x1E0; // CParticleTransformInput
-                pub const m_flStartTime_min: usize = 0x248; // float32
-                pub const m_flStartTime_max: usize = 0x24C; // float32
-                pub const m_flStartTime_exp: usize = 0x250; // float32
-                pub const m_flEndTime_min: usize = 0x254; // float32
-                pub const m_flEndTime_max: usize = 0x258; // float32
-                pub const m_flEndTime_exp: usize = 0x25C; // float32
-                pub const m_flRange: usize = 0x260; // float32
-                pub const m_flRangeBias: usize = 0x268; // CParticleCollectionFloatInput
-                pub const m_flJumpThreshold: usize = 0x3E0; // float32
-                pub const m_flPrevPosScale: usize = 0x3E4; // float32
-                pub const m_bLockRot: usize = 0x3E8; // bool
-                pub const m_vecScale: usize = 0x3F0; // CParticleCollectionVecInput
-                pub const m_nFieldOutput: usize = 0xAC8; // ParticleAttributeIndex_t
-                pub const m_nFieldOutputPrev: usize = 0xACC; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderVRHapticEvent = struct {
-                pub const m_nHand: usize = 0x230; // ParticleVRHandChoiceList_t
-                pub const m_nOutputHandCP: usize = 0x234; // int32
-                pub const m_nOutputField: usize = 0x238; // int32
-                pub const m_flAmplitude: usize = 0x240; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 12
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointToImpactPoint = struct {
-                pub const m_nCPOut: usize = 0x1E8; // int32
-                pub const m_nCPIn: usize = 0x1EC; // int32
-                pub const m_flUpdateRate: usize = 0x1F0; // float32
-                pub const m_flTraceLength: usize = 0x1F8; // CParticleCollectionFloatInput
-                pub const m_flStartOffset: usize = 0x370; // float32
-                pub const m_flOffset: usize = 0x374; // float32
-                pub const m_vecTraceDir: usize = 0x378; // Vector
-                pub const m_CollisionGroupName: usize = 0x384; // char[128]
-                pub const m_nTraceSet: usize = 0x404; // ParticleTraceSet_t
-                pub const m_bSetToEndpoint: usize = 0x408; // bool
-                pub const m_bTraceToClosestSurface: usize = 0x409; // bool
-                pub const m_bIncludeWater: usize = 0x40A; // bool
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_InterpolateRadius = struct {
-                pub const m_flStartTime: usize = 0x1E0; // float32
-                pub const m_flEndTime: usize = 0x1E4; // float32
-                pub const m_flStartScale: usize = 0x1E8; // float32
-                pub const m_flEndScale: usize = 0x1EC; // float32
-                pub const m_bEaseInAndOut: usize = 0x1F0; // bool
-                pub const m_flBias: usize = 0x1F4; // float32
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ReinitializeScalarEndCap = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flOutputMin: usize = 0x1E4; // float32
-                pub const m_flOutputMax: usize = 0x1E8; // float32
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_TurbulenceForce = struct {
-                pub const m_flNoiseCoordScale0: usize = 0x1F0; // float32
-                pub const m_flNoiseCoordScale1: usize = 0x1F4; // float32
-                pub const m_flNoiseCoordScale2: usize = 0x1F8; // float32
-                pub const m_flNoiseCoordScale3: usize = 0x1FC; // float32
-                pub const m_vecNoiseAmount0: usize = 0x200; // Vector
-                pub const m_vecNoiseAmount1: usize = 0x20C; // Vector
-                pub const m_vecNoiseAmount2: usize = 0x218; // Vector
-                pub const m_vecNoiseAmount3: usize = 0x224; // Vector
-            };
-            // Parent: None
-            // Field count: 9
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapNamedModelElementOnceTimed = struct {
-                pub const m_hModel: usize = 0x1E0; // CStrongHandle<InfoForResourceTypeCModel>
-                pub const m_inNames: usize = 0x1E8; // CUtlVector<CUtlString>
-                pub const m_outNames: usize = 0x200; // CUtlVector<CUtlString>
-                pub const m_fallbackNames: usize = 0x218; // CUtlVector<CUtlString>
-                pub const m_bModelFromRenderer: usize = 0x230; // bool
-                pub const m_bProportional: usize = 0x231; // bool
-                pub const m_nFieldInput: usize = 0x234; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x238; // ParticleAttributeIndex_t
-                pub const m_flRemapTime: usize = 0x23C; // float32
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointToPlayer = struct {
-                pub const m_nCP1: usize = 0x1E8; // int32
-                pub const m_vecCP1Pos: usize = 0x1EC; // Vector
-                pub const m_bOrientToEyes: usize = 0x1F8; // bool
-                pub const m_nPosition: usize = 0x1FC; // ParticleEntityPos_t
-                pub const m_nRadiusCP: usize = 0x200; // int32
-                pub const m_nRadiusCPField: usize = 0x204; // int32
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_EndCapTimedFreeze = struct {
-                pub const m_flFreezeTime: usize = 0x1E0; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderGpuImplicit = struct {
-                pub const m_bUsePerParticleRadius: usize = 0x230; // bool
-                pub const m_nVertexCountKb: usize = 0x234; // uint32
-                pub const m_nIndexCountKb: usize = 0x238; // uint32
-                pub const m_fGridSize: usize = 0x240; // CParticleCollectionRendererFloatInput
-                pub const m_fRadiusScale: usize = 0x3B8; // CParticleCollectionRendererFloatInput
-                pub const m_fIsosurfaceThreshold: usize = 0x530; // CParticleCollectionRendererFloatInput
-                pub const m_nScaleCP: usize = 0x6A8; // int32
-                pub const m_hMaterial: usize = 0x6B0; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetRandomControlPointPosition = struct {
-                pub const m_bUseWorldLocation: usize = 0x1E8; // bool
-                pub const m_bOrient: usize = 0x1E9; // bool
-                pub const m_nCP1: usize = 0x1EC; // int32
-                pub const m_nHeadLocation: usize = 0x1F0; // int32
-                pub const m_flReRandomRate: usize = 0x1F8; // CParticleCollectionFloatInput
-                pub const m_vecCPMinPos: usize = 0x370; // Vector
-                pub const m_vecCPMaxPos: usize = 0x37C; // Vector
-                pub const m_flInterpolation: usize = 0x388; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 15
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderVolumetricEmitter = struct {
-                pub const m_strChannelType: usize = 0x230; // CUtlString
-                pub const m_nType: usize = 0x238; // ParticleVolumetricSmokeType_t
-                pub const m_nCreationType: usize = 0x23C; // ParticleVolumetricSmokeCreationType_t
-                pub const m_nEventType: usize = 0x240; // EventTypeSelection_t
-                pub const m_vecPos: usize = 0x248; // CPerParticleVecInput
-                pub const m_vecVelocity: usize = 0x920; // CPerParticleVecInput
-                pub const m_vPrevPosition: usize = 0xFF8; // CPerParticleVecInput
-                pub const m_flSpeed: usize = 0x16D0; // CPerParticleFloatInput
-                pub const m_flRadius: usize = 0x1848; // CPerParticleFloatInput
-                pub const m_flDensity: usize = 0x19C0; // CPerParticleFloatInput
-                pub const m_flTemperature: usize = 0x1B38; // CPerParticleFloatInput
-                pub const m_flMagnitude: usize = 0x1CB0; // CPerParticleFloatInput
-                pub const m_flKillRadius: usize = 0x1E28; // CPerParticleFloatInput
-                pub const m_flKillDensityScale: usize = 0x1FA0; // CPerParticleFloatInput
-                pub const m_flFalloff: usize = 0x2118; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapTransformVisibilityToScalar = struct {
-                pub const m_nSetMethod: usize = 0x1E0; // ParticleSetMethod_t
-                pub const m_TransformInput: usize = 0x1E8; // CParticleTransformInput
-                pub const m_nFieldOutput: usize = 0x250; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x254; // float32
-                pub const m_flInputMax: usize = 0x258; // float32
-                pub const m_flOutputMin: usize = 0x25C; // float32
-                pub const m_flOutputMax: usize = 0x260; // float32
-                pub const m_flRadius: usize = 0x264; // float32
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapControlPointDirectionToVector = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flScale: usize = 0x1E4; // float32
-                pub const m_nControlPointNumber: usize = 0x1E8; // int32
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ScreenSpacePositionOfTarget = struct {
-                pub const m_vecTargetPosition: usize = 0x1E0; // CPerParticleVecInput
-                pub const m_bOututBehindness: usize = 0x8B8; // bool
-                pub const m_nBehindFieldOutput: usize = 0x8BC; // ParticleAttributeIndex_t
-                pub const m_flBehindOutputRemap: usize = 0x8C0; // CParticleRemapFloatInput
-                pub const m_nBehindSetMethod: usize = 0xA38; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CParticleFunctionOperator = struct {
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_DragRelativeToPlane = struct {
-                pub const m_flDragAtPlane: usize = 0x1E0; // CParticleCollectionFloatInput
-                pub const m_flFalloff: usize = 0x358; // CParticleCollectionFloatInput
-                pub const m_bDirectional: usize = 0x4D0; // bool
-                pub const m_vecPlaneNormal: usize = 0x4D8; // CParticleCollectionVecInput
-                pub const m_nControlPointNumber: usize = 0xBB0; // int32
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetCPtoVector = struct {
-                pub const m_nCPInput: usize = 0x1E0; // int32
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomYaw = struct {
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SnapshotRigidSkinToBones = struct {
-                pub const m_bTransformNormals: usize = 0x1E0; // bool
-                pub const m_bTransformRadii: usize = 0x1E1; // bool
-                pub const m_nControlPointNumber: usize = 0x1E4; // int32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetSingleControlPointPosition = struct {
-                pub const m_bSetOnce: usize = 0x1E8; // bool
-                pub const m_nCP1: usize = 0x1EC; // int32
-                pub const m_vecCP1Pos: usize = 0x1F0; // CParticleCollectionVecInput
-                pub const m_transformInput: usize = 0x8C8; // CParticleTransformInput
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_DistanceToNeighborCull = struct {
-                pub const m_flDistance: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_bIncludeRadii: usize = 0x360; // bool
-                pub const m_flLifespanOverlap: usize = 0x368; // CPerParticleFloatInput
-                pub const m_nFieldModify: usize = 0x4E0; // ParticleAttributeIndex_t
-                pub const m_flModify: usize = 0x4E8; // CPerParticleFloatInput
-                pub const m_nSetMethod: usize = 0x660; // ParticleSetMethod_t
-                pub const m_bUseNeighbor: usize = 0x664; // bool
-            };
-            // Parent: None
-            // Field count: 11
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapCPtoScalar = struct {
-                pub const m_nCPInput: usize = 0x1E0; // int32
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_nField: usize = 0x1E8; // int32
-                pub const m_flInputMin: usize = 0x1EC; // float32
-                pub const m_flInputMax: usize = 0x1F0; // float32
-                pub const m_flOutputMin: usize = 0x1F4; // float32
-                pub const m_flOutputMax: usize = 0x1F8; // float32
-                pub const m_flStartTime: usize = 0x1FC; // float32
-                pub const m_flEndTime: usize = 0x200; // float32
-                pub const m_flInterpRate: usize = 0x204; // float32
-                pub const m_nSetMethod: usize = 0x208; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CParticleFunctionRenderer = struct {
-                pub const VisibilityInputs: usize = 0x1E0; // CParticleVisibilityInputs
-                pub const m_bCannotBeRefracted: usize = 0x228; // bool
-            };
-            // Parent: None
-            // Field count: 66
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CParticleSystemDefinition = struct {
-                pub const m_nBehaviorVersion: usize = 0x8; // int32
-                pub const m_PreEmissionOperators: usize = 0x10; // CUtlVector<CParticleFunctionPreEmission*>
-                pub const m_Emitters: usize = 0x28; // CUtlVector<CParticleFunctionEmitter*>
-                pub const m_Initializers: usize = 0x40; // CUtlVector<CParticleFunctionInitializer*>
-                pub const m_Operators: usize = 0x58; // CUtlVector<CParticleFunctionOperator*>
-                pub const m_ForceGenerators: usize = 0x70; // CUtlVector<CParticleFunctionForce*>
-                pub const m_Constraints: usize = 0x88; // CUtlVector<CParticleFunctionConstraint*>
-                pub const m_Renderers: usize = 0xA0; // CUtlVector<CParticleFunctionRenderer*>
-                pub const m_Children: usize = 0xB8; // CUtlVector<ParticleChildrenInfo_t>
-                pub const m_nFirstMultipleOverride_BackwardCompat: usize = 0x178; // int32
-                pub const m_nInitialParticles: usize = 0x258; // int32
-                pub const m_nMaxParticles: usize = 0x25C; // int32
-                pub const m_nGroupID: usize = 0x260; // int32
-                pub const m_BoundingBoxMin: usize = 0x264; // Vector
-                pub const m_BoundingBoxMax: usize = 0x270; // Vector
-                pub const m_flDepthSortBias: usize = 0x27C; // float32
-                pub const m_nSortOverridePositionCP: usize = 0x280; // int32
-                pub const m_bInfiniteBounds: usize = 0x284; // bool
-                pub const m_bEnableNamedValues: usize = 0x285; // bool
-                pub const m_NamedValueDomain: usize = 0x288; // CUtlString
-                pub const m_NamedValueLocals: usize = 0x290; // CUtlVector<ParticleNamedValueSource_t*>
-                pub const m_ConstantColor: usize = 0x2A8; // Color
-                pub const m_ConstantNormal: usize = 0x2AC; // Vector
-                pub const m_flConstantRadius: usize = 0x2B8; // float32
-                pub const m_flConstantRotation: usize = 0x2BC; // float32
-                pub const m_flConstantRotationSpeed: usize = 0x2C0; // float32
-                pub const m_flConstantLifespan: usize = 0x2C4; // float32
-                pub const m_nConstantSequenceNumber: usize = 0x2C8; // int32
-                pub const m_nConstantSequenceNumber1: usize = 0x2CC; // int32
-                pub const m_nSnapshotControlPoint: usize = 0x2D0; // int32
-                pub const m_hSnapshot: usize = 0x2D8; // CStrongHandle<InfoForResourceTypeIParticleSnapshot>
-                pub const m_pszCullReplacementName: usize = 0x2E0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-                pub const m_flCullRadius: usize = 0x2E8; // float32
-                pub const m_flCullFillCost: usize = 0x2EC; // float32
-                pub const m_nCullControlPoint: usize = 0x2F0; // int32
-                pub const m_hFallback: usize = 0x2F8; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-                pub const m_nFallbackMaxCount: usize = 0x300; // int32
-                pub const m_hLowViolenceDef: usize = 0x308; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-                pub const m_hReferenceReplacement: usize = 0x310; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-                pub const m_flPreSimulationTime: usize = 0x318; // float32
-                pub const m_flStopSimulationAfterTime: usize = 0x31C; // float32
-                pub const m_flMaximumTimeStep: usize = 0x320; // float32
-                pub const m_flMaximumSimTime: usize = 0x324; // float32
-                pub const m_flMinimumSimTime: usize = 0x328; // float32
-                pub const m_flMinimumTimeStep: usize = 0x32C; // float32
-                pub const m_nMinimumFrames: usize = 0x330; // int32
-                pub const m_bIsGPUParticleSystem: usize = 0x334; // bool
-                pub const m_nMinCPULevel: usize = 0x338; // int32
-                pub const m_nMinGPULevel: usize = 0x33C; // int32
-                pub const m_flNoDrawTimeToGoToSleep: usize = 0x340; // float32
-                pub const m_flMaxDrawDistance: usize = 0x344; // float32
-                pub const m_flStartFadeDistance: usize = 0x348; // float32
-                pub const m_flMaxCreationDistance: usize = 0x34C; // float32
-                pub const m_nAggregationMinAvailableParticles: usize = 0x350; // int32
-                pub const m_flAggregateRadius: usize = 0x354; // float32
-                pub const m_bShouldBatch: usize = 0x358; // bool
-                pub const m_bShouldHitboxesFallbackToRenderBounds: usize = 0x359; // bool
-                pub const m_bShouldHitboxesFallbackToSnapshot: usize = 0x35A; // bool
-                pub const m_bShouldHitboxesFallbackToCollisionHulls: usize = 0x35B; // bool
-                pub const m_nViewModelEffect: usize = 0x35C; // InheritableBoolType_t
-                pub const m_bScreenSpaceEffect: usize = 0x360; // bool
-                pub const m_pszTargetLayerID: usize = 0x368; // CUtlSymbolLarge
-                pub const m_nSkipRenderControlPoint: usize = 0x370; // int32
-                pub const m_nAllowRenderControlPoint: usize = 0x374; // int32
-                pub const m_bShouldSort: usize = 0x378; // bool
-                pub const m_controlPointConfigurations: usize = 0x3C0; // CUtlVector<ParticleControlPointConfiguration_t>
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapNamedModelMeshGroupEndCap = struct {
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_PercentageBetweenTransformsVector = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1E4; // float32
-                pub const m_flInputMax: usize = 0x1E8; // float32
-                pub const m_vecOutputMin: usize = 0x1EC; // Vector
-                pub const m_vecOutputMax: usize = 0x1F8; // Vector
-                pub const m_TransformStart: usize = 0x208; // CParticleTransformInput
-                pub const m_TransformEnd: usize = 0x270; // CParticleTransformInput
-                pub const m_nSetMethod: usize = 0x2D8; // ParticleSetMethod_t
-                pub const m_bActiveRange: usize = 0x2DC; // bool
-                pub const m_bRadialCheck: usize = 0x2DD; // bool
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderScreenVelocityRotate = struct {
-                pub const m_flRotateRateDegrees: usize = 0x230; // float32
-                pub const m_flForwardDegrees: usize = 0x234; // float32
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_UpdateLightSource = struct {
-                pub const m_vColorTint: usize = 0x1E0; // Color
-                pub const m_flBrightnessScale: usize = 0x1E4; // float32
-                pub const m_flRadiusScale: usize = 0x1E8; // float32
-                pub const m_flMinimumLightingRadius: usize = 0x1EC; // float32
-                pub const m_flMaximumLightingRadius: usize = 0x1F0; // float32
-                pub const m_flPositionDampingConstant: usize = 0x1F4; // float32
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateWithinBox = struct {
-                pub const m_vecMin: usize = 0x1E8; // CPerParticleVecInput
-                pub const m_vecMax: usize = 0x8C0; // CPerParticleVecInput
-                pub const m_nControlPointNumber: usize = 0xF98; // int32
-                pub const m_bLocalSpace: usize = 0xF9C; // bool
-                pub const m_randomnessParameters: usize = 0xFA0; // CRandomNumberGeneratorParameters
-                pub const m_bUseNewCode: usize = 0xFA8; // bool
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ChooseRandomChildrenInGroup = struct {
-                pub const m_nChildGroupID: usize = 0x1E8; // int32
-                pub const m_flNumberOfChildren: usize = 0x1F0; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 33
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ControlpointLight = struct {
-                pub const m_flScale: usize = 0x1E0; // float32
-                pub const m_nControlPoint1: usize = 0x670; // int32
-                pub const m_nControlPoint2: usize = 0x674; // int32
-                pub const m_nControlPoint3: usize = 0x678; // int32
-                pub const m_nControlPoint4: usize = 0x67C; // int32
-                pub const m_vecCPOffset1: usize = 0x680; // Vector
-                pub const m_vecCPOffset2: usize = 0x68C; // Vector
-                pub const m_vecCPOffset3: usize = 0x698; // Vector
-                pub const m_vecCPOffset4: usize = 0x6A4; // Vector
-                pub const m_LightFiftyDist1: usize = 0x6B0; // float32
-                pub const m_LightZeroDist1: usize = 0x6B4; // float32
-                pub const m_LightFiftyDist2: usize = 0x6B8; // float32
-                pub const m_LightZeroDist2: usize = 0x6BC; // float32
-                pub const m_LightFiftyDist3: usize = 0x6C0; // float32
-                pub const m_LightZeroDist3: usize = 0x6C4; // float32
-                pub const m_LightFiftyDist4: usize = 0x6C8; // float32
-                pub const m_LightZeroDist4: usize = 0x6CC; // float32
-                pub const m_LightColor1: usize = 0x6D0; // Color
-                pub const m_LightColor2: usize = 0x6D4; // Color
-                pub const m_LightColor3: usize = 0x6D8; // Color
-                pub const m_LightColor4: usize = 0x6DC; // Color
-                pub const m_bLightType1: usize = 0x6E0; // bool
-                pub const m_bLightType2: usize = 0x6E1; // bool
-                pub const m_bLightType3: usize = 0x6E2; // bool
-                pub const m_bLightType4: usize = 0x6E3; // bool
-                pub const m_bLightDynamic1: usize = 0x6E4; // bool
-                pub const m_bLightDynamic2: usize = 0x6E5; // bool
-                pub const m_bLightDynamic3: usize = 0x6E6; // bool
-                pub const m_bLightDynamic4: usize = 0x6E7; // bool
-                pub const m_bUseNormal: usize = 0x6E8; // bool
-                pub const m_bUseHLambert: usize = 0x6E9; // bool
-                pub const m_bClampLowerRange: usize = 0x6EE; // bool
-                pub const m_bClampUpperRange: usize = 0x6EF; // bool
-            };
-            // Parent: None
-            // Field count: 9
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_VectorFieldSnapshot = struct {
-                pub const m_nControlPointNumber: usize = 0x1E0; // int32
-                pub const m_nAttributeToWrite: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_nLocalSpaceCP: usize = 0x1E8; // int32
-                pub const m_flInterpolation: usize = 0x1F0; // CPerParticleFloatInput
-                pub const m_vecScale: usize = 0x368; // CPerParticleVecInput
-                pub const m_flBoundaryDampening: usize = 0xA40; // float32
-                pub const m_bSetVelocity: usize = 0xA44; // bool
-                pub const m_bLockToSurface: usize = 0xA45; // bool
-                pub const m_flGridSpacing: usize = 0xA48; // float32
-            };
-            // Parent: None
-            // Field count: 11
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_CylindricalDistanceToTransform = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_flInputMax: usize = 0x360; // CPerParticleFloatInput
-                pub const m_flOutputMin: usize = 0x4D8; // CPerParticleFloatInput
-                pub const m_flOutputMax: usize = 0x650; // CPerParticleFloatInput
-                pub const m_TransformStart: usize = 0x7C8; // CParticleTransformInput
-                pub const m_TransformEnd: usize = 0x830; // CParticleTransformInput
-                pub const m_nSetMethod: usize = 0x898; // ParticleSetMethod_t
-                pub const m_bActiveRange: usize = 0x89C; // bool
-                pub const m_bAdditive: usize = 0x89D; // bool
-                pub const m_bCapsule: usize = 0x89E; // bool
-            };
-            // Parent: None
-            // Field count: 15
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_PositionPlaceOnGround = struct {
-                pub const m_flOffset: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_flMaxTraceLength: usize = 0x360; // CPerParticleFloatInput
-                pub const m_vecTraceDir: usize = 0x4D8; // CPerParticleVecInput
-                pub const m_CollisionGroupName: usize = 0xBB0; // char[128]
-                pub const m_nTraceSet: usize = 0xC30; // ParticleTraceSet_t
-                pub const m_nTraceMissBehavior: usize = 0xC40; // ParticleTraceMissBehavior_t
-                pub const m_bIncludeWater: usize = 0xC44; // bool
-                pub const m_nAttribute: usize = 0xC48; // ParticleAttributeIndex_t
-                pub const m_bSetPXYZOnly: usize = 0xC4C; // bool
-                pub const m_bSetNormal: usize = 0xC4D; // bool
-                pub const m_nGroundNormalAttribute: usize = 0xC50; // ParticleAttributeIndex_t
-                pub const m_bOffsetonColOnly: usize = 0xC54; // bool
-                pub const m_flOffsetByRadiusFactor: usize = 0xC58; // float32
-                pub const m_nPreserveOffsetCP: usize = 0xC5C; // int32
-                pub const m_nIgnoreCP: usize = 0xC60; // int32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomScalar = struct {
-                pub const m_flMin: usize = 0x1E8; // float32
-                pub const m_flMax: usize = 0x1EC; // float32
-                pub const m_flExponent: usize = 0x1F0; // float32
-                pub const m_nFieldOutput: usize = 0x1F4; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderPostProcessing = struct {
-                pub const m_flPostProcessStrength: usize = 0x230; // CPerParticleFloatInput
-                pub const m_hPostTexture: usize = 0x3A8; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
-                pub const m_nPriority: usize = 0x3B0; // ParticlePostProcessPriorityGroup_t
-            };
-            // Parent: None
-            // Field count: 28
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_WorldTraceConstraint = struct {
-                pub const m_nCP: usize = 0x1E0; // int32
-                pub const m_vecCpOffset: usize = 0x1E4; // Vector
-                pub const m_nCollisionMode: usize = 0x1F0; // ParticleCollisionMode_t
-                pub const m_nCollisionModeMin: usize = 0x1F4; // ParticleCollisionMode_t
-                pub const m_nTraceSet: usize = 0x1F8; // ParticleTraceSet_t
-                pub const m_CollisionGroupName: usize = 0x1FC; // char[128]
-                pub const m_bWorldOnly: usize = 0x27C; // bool
-                pub const m_bBrushOnly: usize = 0x27D; // bool
-                pub const m_bIncludeWater: usize = 0x27E; // bool
-                pub const m_nIgnoreCP: usize = 0x280; // int32
-                pub const m_flCpMovementTolerance: usize = 0x284; // float32
-                pub const m_flRetestRate: usize = 0x288; // float32
-                pub const m_flTraceTolerance: usize = 0x28C; // float32
-                pub const m_flCollisionConfirmationSpeed: usize = 0x290; // float32
-                pub const m_nMaxTracesPerFrame: usize = 0x294; // float32
-                pub const m_flRadiusScale: usize = 0x298; // CPerParticleFloatInput
-                pub const m_flBounceAmount: usize = 0x410; // CPerParticleFloatInput
-                pub const m_flSlideAmount: usize = 0x588; // CPerParticleFloatInput
-                pub const m_flRandomDirScale: usize = 0x700; // CPerParticleFloatInput
-                pub const m_bDecayBounce: usize = 0x878; // bool
-                pub const m_bKillonContact: usize = 0x879; // bool
-                pub const m_flMinSpeed: usize = 0x87C; // float32
-                pub const m_bKillonContactBounce: usize = 0x880; // bool
-                pub const m_bSetNormal: usize = 0x881; // bool
-                pub const m_nStickOnCollisionField: usize = 0x884; // ParticleAttributeIndex_t
-                pub const m_flStopSpeed: usize = 0x888; // CPerParticleFloatInput
-                pub const m_nEntityStickDataField: usize = 0xA00; // ParticleAttributeIndex_t
-                pub const m_nEntityStickNormalField: usize = 0xA04; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderBlobs = struct {
-                pub const m_cubeWidth: usize = 0x230; // CParticleCollectionRendererFloatInput
-                pub const m_cutoffRadius: usize = 0x3A8; // CParticleCollectionRendererFloatInput
-                pub const m_renderRadius: usize = 0x520; // CParticleCollectionRendererFloatInput
-                pub const m_nVertexCountKb: usize = 0x698; // uint32
-                pub const m_nIndexCountKb: usize = 0x69C; // uint32
-                pub const m_nScaleCP: usize = 0x6A0; // int32
-                pub const m_MaterialVars: usize = 0x6A8; // CUtlVector<MaterialVariable_t>
-                pub const m_hMaterial: usize = 0x6D8; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            };
-            // Parent: None
-            // Field count: 13
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_OscillateScalar = struct {
-                pub const m_RateMin: usize = 0x1E0; // float32
-                pub const m_RateMax: usize = 0x1E4; // float32
-                pub const m_FrequencyMin: usize = 0x1E8; // float32
-                pub const m_FrequencyMax: usize = 0x1EC; // float32
-                pub const m_nField: usize = 0x1F0; // ParticleAttributeIndex_t
-                pub const m_bProportional: usize = 0x1F4; // bool
-                pub const m_bProportionalOp: usize = 0x1F5; // bool
-                pub const m_flStartTime_min: usize = 0x1F8; // float32
-                pub const m_flStartTime_max: usize = 0x1FC; // float32
-                pub const m_flEndTime_min: usize = 0x200; // float32
-                pub const m_flEndTime_max: usize = 0x204; // float32
-                pub const m_flOscMult: usize = 0x208; // float32
-                pub const m_flOscAdd: usize = 0x20C; // float32
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_FadeOut = struct {
-                pub const m_flFadeOutTimeMin: usize = 0x1E0; // float32
-                pub const m_flFadeOutTimeMax: usize = 0x1E4; // float32
-                pub const m_flFadeOutTimeExp: usize = 0x1E8; // float32
-                pub const m_flFadeBias: usize = 0x1EC; // float32
-                pub const m_bProportional: usize = 0x220; // bool
-                pub const m_bEaseInAndOut: usize = 0x221; // bool
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_WaterImpulseRenderer = struct {
-                pub const m_vecPos: usize = 0x230; // CPerParticleVecInput
-                pub const m_flRadius: usize = 0x908; // CPerParticleFloatInput
-                pub const m_flMagnitude: usize = 0xA80; // CPerParticleFloatInput
-                pub const m_flShape: usize = 0xBF8; // CPerParticleFloatInput
-                pub const m_flWindSpeed: usize = 0xD70; // CPerParticleFloatInput
-                pub const m_flWobble: usize = 0xEE8; // CPerParticleFloatInput
-                pub const m_bIsRadialWind: usize = 0x1060; // bool
-                pub const m_nEventType: usize = 0x1064; // EventTypeSelection_t
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomSequence = struct {
-                pub const m_nSequenceMin: usize = 0x1E8; // int32
-                pub const m_nSequenceMax: usize = 0x1EC; // int32
-                pub const m_bShuffle: usize = 0x1F0; // bool
-                pub const m_bLinear: usize = 0x1F1; // bool
-                pub const m_WeightedList: usize = 0x1F8; // CUtlVector<SequenceWeightedList_t>
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RampScalarSplineSimple = struct {
-                pub const m_Rate: usize = 0x1E0; // float32
-                pub const m_flStartTime: usize = 0x1E4; // float32
-                pub const m_flEndTime: usize = 0x1E8; // float32
-                pub const m_nField: usize = 0x210; // ParticleAttributeIndex_t
-                pub const m_bEaseOut: usize = 0x214; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_DistanceCull = struct {
-                pub const m_nControlPoint: usize = 0x1E8; // int32
-                pub const m_flDistance: usize = 0x1F0; // CParticleCollectionFloatInput
-                pub const m_bCullInside: usize = 0x368; // bool
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_CollideWithParentParticles = struct {
-                pub const m_flParentRadiusScale: usize = 0x1E0; // CPerParticleFloatInput
-                pub const m_flRadiusScale: usize = 0x358; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_InitFromVectorFieldSnapshot = struct {
-                pub const m_nControlPointNumber: usize = 0x1E8; // int32
-                pub const m_nLocalSpaceCP: usize = 0x1EC; // int32
-                pub const m_nWeightUpdateCP: usize = 0x1F0; // int32
-                pub const m_bUseVerticalVelocity: usize = 0x1F4; // bool
-                pub const m_vecScale: usize = 0x1F8; // CPerParticleVecInput
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetVectorAttributeToVectorExpression = struct {
-                pub const m_nExpression: usize = 0x1E0; // VectorExpressionType_t
-                pub const m_vInput1: usize = 0x1E8; // CPerParticleVecInput
-                pub const m_vInput2: usize = 0x8C0; // CPerParticleVecInput
-                pub const m_flLerp: usize = 0xF98; // CPerParticleFloatInput
-                pub const m_nOutputField: usize = 0x1110; // ParticleAttributeIndex_t
-                pub const m_nSetMethod: usize = 0x1114; // ParticleSetMethod_t
-                pub const m_bNormalizedOutput: usize = 0x1118; // bool
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_AddVectorToVector = struct {
-                pub const m_vecScale: usize = 0x1E8; // Vector
-                pub const m_nFieldOutput: usize = 0x1F4; // ParticleAttributeIndex_t
-                pub const m_nFieldInput: usize = 0x1F8; // ParticleAttributeIndex_t
-                pub const m_vOffsetMin: usize = 0x1FC; // Vector
-                pub const m_vOffsetMax: usize = 0x208; // Vector
-                pub const m_randomnessParameters: usize = 0x214; // CRandomNumberGeneratorParameters
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapInitialVisibilityScalar = struct {
-                pub const m_nFieldOutput: usize = 0x1EC; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1F0; // float32
-                pub const m_flInputMax: usize = 0x1F4; // float32
-                pub const m_flOutputMin: usize = 0x1F8; // float32
-                pub const m_flOutputMax: usize = 0x1FC; // float32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapTransformOrientationToYaw = struct {
-                pub const m_TransformInput: usize = 0x1E0; // CParticleTransformInput
-                pub const m_nFieldOutput: usize = 0x248; // ParticleAttributeIndex_t
-                pub const m_flRotOffset: usize = 0x24C; // float32
-                pub const m_flSpinStrength: usize = 0x250; // float32
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderStatusEffect = struct {
-                pub const m_pTextureColorWarp: usize = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureDetail2: usize = 0x238; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureDiffuseWarp: usize = 0x240; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureFresnelColorWarp: usize = 0x248; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureFresnelWarp: usize = 0x250; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureSpecularWarp: usize = 0x258; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureEnvMap: usize = 0x260; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RandomForce = struct {
-                pub const m_MinForce: usize = 0x1F0; // Vector
-                pub const m_MaxForce: usize = 0x1FC; // Vector
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapParticleCountOnScalarEndCap = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_nInputMin: usize = 0x1E4; // int32
-                pub const m_nInputMax: usize = 0x1E8; // int32
-                pub const m_flOutputMin: usize = 0x1EC; // float32
-                pub const m_flOutputMax: usize = 0x1F0; // float32
-                pub const m_bBackwards: usize = 0x1F4; // bool
-                pub const m_nSetMethod: usize = 0x1F8; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 18
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const ParticlePreviewState_t = struct {
-                pub const m_previewModel: usize = 0x0; // CUtlString
-                pub const m_nModSpecificData: usize = 0x8; // uint32
-                pub const m_groundType: usize = 0xC; // PetGroundType_t
-                pub const m_sequenceName: usize = 0x10; // CUtlString
-                pub const m_nFireParticleOnSequenceFrame: usize = 0x18; // int32
-                pub const m_hitboxSetName: usize = 0x20; // CUtlString
-                pub const m_materialGroupName: usize = 0x28; // CUtlString
-                pub const m_vecBodyGroups: usize = 0x30; // CUtlVector<ParticlePreviewBodyGroup_t>
-                pub const m_flPlaybackSpeed: usize = 0x48; // float32
-                pub const m_flParticleSimulationRate: usize = 0x4C; // float32
-                pub const m_bShouldDrawHitboxes: usize = 0x50; // bool
-                pub const m_bShouldDrawAttachments: usize = 0x51; // bool
-                pub const m_bShouldDrawAttachmentNames: usize = 0x52; // bool
-                pub const m_bShouldDrawControlPointAxes: usize = 0x53; // bool
-                pub const m_bAnimationNonLooping: usize = 0x54; // bool
-                pub const m_bSequenceNameIsAnimClipPath: usize = 0x55; // bool
-                pub const m_vecPreviewGravity: usize = 0x58; // Vector
-                pub const m_vecPreviewWind: usize = 0x64; // Vector
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_LocalAccelerationForce = struct {
-                pub const m_nCP: usize = 0x1F0; // int32
-                pub const m_nScaleCP: usize = 0x1F4; // int32
-                pub const m_vecAccel: usize = 0x1F8; // CParticleCollectionVecInput
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ModelCull = struct {
-                pub const m_nControlPointNumber: usize = 0x1E0; // int32
-                pub const m_bBoundBox: usize = 0x1E4; // bool
-                pub const m_bCullOutside: usize = 0x1E5; // bool
-                pub const m_bUseBones: usize = 0x1E6; // bool
-                pub const m_HitboxSetName: usize = 0x1E7; // char[128]
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetFloat = struct {
-                pub const m_InputValue: usize = 0x1E0; // CPerParticleFloatInput
-                pub const m_nOutputField: usize = 0x358; // ParticleAttributeIndex_t
-                pub const m_nSetMethod: usize = 0x35C; // ParticleSetMethod_t
-                pub const m_Lerp: usize = 0x360; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 13
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapTransformToVector = struct {
-                pub const m_nFieldOutput: usize = 0x1E8; // ParticleAttributeIndex_t
-                pub const m_vInputMin: usize = 0x1EC; // Vector
-                pub const m_vInputMax: usize = 0x1F8; // Vector
-                pub const m_vOutputMin: usize = 0x204; // Vector
-                pub const m_vOutputMax: usize = 0x210; // Vector
-                pub const m_TransformInput: usize = 0x220; // CParticleTransformInput
-                pub const m_LocalSpaceTransform: usize = 0x288; // CParticleTransformInput
-                pub const m_flStartTime: usize = 0x2F0; // float32
-                pub const m_flEndTime: usize = 0x2F4; // float32
-                pub const m_nSetMethod: usize = 0x2F8; // ParticleSetMethod_t
-                pub const m_bOffset: usize = 0x2FC; // bool
-                pub const m_bAccelerate: usize = 0x2FD; // bool
-                pub const m_flRemapBias: usize = 0x300; // float32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ScreenSpaceDistanceToEdge = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flMaxDistFromEdge: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_flOutputRemap: usize = 0x360; // CParticleRemapFloatInput
-                pub const m_nSetMethod: usize = 0x4D8; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderStatusEffectTf = struct {
-                pub const m_pTextureColorWarp: usize = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureNormal: usize = 0x238; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureMetalness: usize = 0x240; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureRoughness: usize = 0x248; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureSelfIllum: usize = 0x250; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureDetail: usize = 0x258; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureEnvMap: usize = 0x260; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapDistanceToLineSegmentToScalar = struct {
-                pub const m_nFieldOutput: usize = 0x1F8; // ParticleAttributeIndex_t
-                pub const m_flMinOutputValue: usize = 0x1FC; // float32
-                pub const m_flMaxOutputValue: usize = 0x200; // float32
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapVectortoCP = struct {
-                pub const m_nOutControlPointNumber: usize = 0x1E0; // int32
-                pub const m_nFieldInput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_nParticleNumber: usize = 0x1E8; // int32
-            };
-            // Parent: None
-            // Field count: 13
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetFromCPSnapshot = struct {
-                pub const m_nControlPointNumber: usize = 0x1E0; // int32
-                pub const m_strSnapshotSubset: usize = 0x1E8; // CUtlString
-                pub const m_nAttributeToRead: usize = 0x1F0; // ParticleAttributeIndex_t
-                pub const m_nAttributeToWrite: usize = 0x1F4; // ParticleAttributeIndex_t
-                pub const m_nLocalSpaceCP: usize = 0x1F8; // int32
-                pub const m_bRandom: usize = 0x1FC; // bool
-                pub const m_bReverse: usize = 0x1FD; // bool
-                pub const m_nRandomSeed: usize = 0x200; // int32
-                pub const m_nSnapShotStartPoint: usize = 0x208; // CParticleCollectionFloatInput
-                pub const m_nSnapShotIncrement: usize = 0x380; // CParticleCollectionFloatInput
-                pub const m_flInterpolation: usize = 0x4F8; // CPerParticleFloatInput
-                pub const m_bSubSample: usize = 0x670; // bool
-                pub const m_bPrev: usize = 0x671; // bool
-            };
-            // Parent: None
-            // Field count: 15
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_DistanceBetweenCPsToCP = struct {
-                pub const m_nStartCP: usize = 0x1E8; // int32
-                pub const m_nEndCP: usize = 0x1EC; // int32
-                pub const m_nOutputCP: usize = 0x1F0; // int32
-                pub const m_nOutputCPField: usize = 0x1F4; // int32
-                pub const m_bSetOnce: usize = 0x1F8; // bool
-                pub const m_flInputMin: usize = 0x1FC; // float32
-                pub const m_flInputMax: usize = 0x200; // float32
-                pub const m_flOutputMin: usize = 0x204; // float32
-                pub const m_flOutputMax: usize = 0x208; // float32
-                pub const m_flMaxTraceLength: usize = 0x20C; // float32
-                pub const m_flLOSScale: usize = 0x210; // float32
-                pub const m_bLOS: usize = 0x214; // bool
-                pub const m_CollisionGroupName: usize = 0x215; // char[128]
-                pub const m_nTraceSet: usize = 0x298; // ParticleTraceSet_t
-                pub const m_nSetParent: usize = 0x29C; // ParticleParentSetMode_t
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointToHand = struct {
-                pub const m_nCP1: usize = 0x1E8; // int32
-                pub const m_nHand: usize = 0x1EC; // int32
-                pub const m_vecCP1Pos: usize = 0x1F0; // Vector
-                pub const m_bOrientToHand: usize = 0x1FC; // bool
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ConstrainDistanceToPath = struct {
-                pub const m_fMinDistance: usize = 0x1E0; // float32
-                pub const m_flMaxDistance0: usize = 0x1E4; // float32
-                pub const m_flMaxDistanceMid: usize = 0x1E8; // float32
-                pub const m_flMaxDistance1: usize = 0x1EC; // float32
-                pub const m_PathParameters: usize = 0x1F0; // CPathParameters
-                pub const m_flTravelTime: usize = 0x230; // float32
-                pub const m_nFieldScale: usize = 0x234; // ParticleAttributeIndex_t
-                pub const m_nManualTField: usize = 0x238; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_DistanceCull = struct {
-                pub const m_nControlPoint: usize = 0x1E0; // int32
-                pub const m_vecPointOffset: usize = 0x1E4; // Vector
-                pub const m_flDistance: usize = 0x1F0; // CParticleCollectionFloatInput
-                pub const m_bCullInside: usize = 0x368; // bool
-                pub const m_nAttribute: usize = 0x36C; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateAlongPath = struct {
-                pub const m_fMaxDistance: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_fT: usize = 0x360; // CPerParticleFloatInput
-                pub const m_PathParams: usize = 0x4E0; // CPathParameters
-                pub const m_bUseRandomCPs: usize = 0x520; // bool
-                pub const m_vEndOffset: usize = 0x524; // Vector
-                pub const m_bSaveOffset: usize = 0x530; // bool
-            };
-            // Parent: None
-            // Field count: 16
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_GameDecalRenderer = struct {
-                pub const m_sDecalGroupName: usize = 0x230; // CGlobalSymbol
-                pub const m_nEventType: usize = 0x238; // EventTypeSelection_t
-                pub const m_nInteractionMask: usize = 0x240; // ParticleCollisionMask_t
-                pub const m_nCollisionGroup: usize = 0x248; // ParticleCollisionGroup_t
-                pub const m_vecStartPos: usize = 0x250; // CPerParticleVecInput
-                pub const m_vecEndPos: usize = 0x928; // CPerParticleVecInput
-                pub const m_flTraceBloat: usize = 0x1000; // CPerParticleFloatInput
-                pub const m_flDecalSize: usize = 0x1178; // CPerParticleFloatInput
-                pub const m_nDecalGroupIndex: usize = 0x12F0; // CPerParticleFloatInput
-                pub const m_flDecalRotation: usize = 0x1468; // CPerParticleFloatInput
-                pub const m_vModulationColor: usize = 0x15E0; // CPerParticleVecInput
-                pub const m_bUseGameDefaultDecalSize: usize = 0x1CB8; // bool
-                pub const m_bRandomDecalRotation: usize = 0x1CB9; // bool
-                pub const m_bRandomlySelectDecalInGroup: usize = 0x1CBA; // bool
-                pub const m_bNoDecalsOnOwner: usize = 0x1CBB; // bool
-                pub const m_bVisualizeTraces: usize = 0x1CBC; // bool
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointsToModelParticles = struct {
-                pub const m_HitboxSetName: usize = 0x1E0; // char[128]
-                pub const m_AttachmentName: usize = 0x260; // char[128]
-                pub const m_nFirstControlPoint: usize = 0x2E0; // int32
-                pub const m_nNumControlPoints: usize = 0x2E4; // int32
-                pub const m_nFirstSourcePoint: usize = 0x2E8; // int32
-                pub const m_bSkin: usize = 0x2EC; // bool
-                pub const m_bAttachment: usize = 0x2ED; // bool
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ColorInterpolateRandom = struct {
-                pub const m_ColorFadeMin: usize = 0x1E0; // Color
-                pub const m_ColorFadeMax: usize = 0x1FC; // Color
-                pub const m_flFadeStartTime: usize = 0x20C; // float32
-                pub const m_flFadeEndTime: usize = 0x210; // float32
-                pub const m_nFieldOutput: usize = 0x214; // ParticleAttributeIndex_t
-                pub const m_bEaseInOut: usize = 0x218; // bool
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapNamedModelSequenceToScalar = struct {
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderLights = struct {
-                pub const m_flAnimationRate: usize = 0x238; // float32
-                pub const m_nAnimationType: usize = 0x23C; // AnimationType_t
-                pub const m_bAnimateInFPS: usize = 0x240; // bool
-                pub const m_flMinSize: usize = 0x244; // float32
-                pub const m_flMaxSize: usize = 0x248; // float32
-                pub const m_flStartFadeSize: usize = 0x24C; // float32
-                pub const m_flEndFadeSize: usize = 0x250; // float32
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_DecayClampCount = struct {
-                pub const m_nCount: usize = 0x1E0; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CRandomNumberGeneratorParameters = struct {
-                pub const m_bDistributeEvenly: usize = 0x0; // bool
-                pub const m_nSeed: usize = 0x4; // int32
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_ColorLitPerParticle = struct {
-                pub const m_ColorMin: usize = 0x200; // Color
-                pub const m_ColorMax: usize = 0x204; // Color
-                pub const m_TintMin: usize = 0x208; // Color
-                pub const m_TintMax: usize = 0x20C; // Color
-                pub const m_flTintPerc: usize = 0x210; // float32
-                pub const m_nTintBlendMode: usize = 0x214; // ParticleColorBlendMode_t
-                pub const m_flLightAmplification: usize = 0x218; // float32
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderPoints = struct {
-                pub const m_hMaterial: usize = 0x230; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_SetAttributeToScalarExpression = struct {
-                pub const m_nExpression: usize = 0x1E8; // ScalarExpressionType_t
-                pub const m_flInput1: usize = 0x1F0; // CPerParticleFloatInput
-                pub const m_flInput2: usize = 0x368; // CPerParticleFloatInput
-                pub const m_flOutputRemap: usize = 0x4E0; // CParticleRemapFloatInput
-                pub const m_nOutputField: usize = 0x658; // ParticleAttributeIndex_t
-                pub const m_nSetMethod: usize = 0x65C; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateOnGrid = struct {
-                pub const m_nXCount: usize = 0x1E8; // CParticleCollectionFloatInput
-                pub const m_nYCount: usize = 0x360; // CParticleCollectionFloatInput
-                pub const m_nZCount: usize = 0x4D8; // CParticleCollectionFloatInput
-                pub const m_nXSpacing: usize = 0x650; // CParticleCollectionFloatInput
-                pub const m_nYSpacing: usize = 0x7C8; // CParticleCollectionFloatInput
-                pub const m_nZSpacing: usize = 0x940; // CParticleCollectionFloatInput
-                pub const m_nControlPointNumber: usize = 0xAB8; // int32
-                pub const m_bLocalSpace: usize = 0xABC; // bool
-                pub const m_bCenter: usize = 0xABD; // bool
-                pub const m_bHollow: usize = 0xABE; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RampCPLinearRandom = struct {
-                pub const m_nOutControlPointNumber: usize = 0x1E8; // int32
-                pub const m_vecRateMin: usize = 0x1EC; // Vector
-                pub const m_vecRateMax: usize = 0x1F8; // Vector
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_VelocityMatchingForce = struct {
-                pub const m_flDirScale: usize = 0x1E0; // float32
-                pub const m_flSpdScale: usize = 0x1E4; // float32
-                pub const m_flNeighborDistance: usize = 0x1E8; // float32
-                pub const m_flFacingStrength: usize = 0x1EC; // float32
-                pub const m_bUseAABB: usize = 0x1F0; // bool
-                pub const m_nCPBroadcast: usize = 0x1F4; // int32
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomAlphaWindowThreshold = struct {
-                pub const m_flMin: usize = 0x1E8; // float32
-                pub const m_flMax: usize = 0x1EC; // float32
-                pub const m_flExponent: usize = 0x1F0; // float32
-            };
-            // Parent: None
-            // Field count: 14
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateOnModelAtHeight = struct {
-                pub const m_bUseBones: usize = 0x1E8; // bool
-                pub const m_bForceZ: usize = 0x1E9; // bool
-                pub const m_nControlPointNumber: usize = 0x1EC; // int32
-                pub const m_nHeightCP: usize = 0x1F0; // int32
-                pub const m_bUseWaterHeight: usize = 0x1F4; // bool
-                pub const m_flDesiredHeight: usize = 0x1F8; // CParticleCollectionFloatInput
-                pub const m_vecHitBoxScale: usize = 0x370; // CParticleCollectionVecInput
-                pub const m_vecDirectionBias: usize = 0xA48; // CParticleCollectionVecInput
-                pub const m_nBiasType: usize = 0x1120; // ParticleHitboxBiasType_t
-                pub const m_bLocalCoords: usize = 0x1124; // bool
-                pub const m_bPreferMovingBoxes: usize = 0x1125; // bool
-                pub const m_HitboxSetName: usize = 0x1126; // char[128]
-                pub const m_flHitboxVelocityScale: usize = 0x11A8; // CParticleCollectionFloatInput
-                pub const m_flMaxBoneVelocity: usize = 0x1320; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ModelSurfaceSnapshotGenerator = struct {
-                pub const m_nCPSnapshot: usize = 0x1E8; // int32
-                pub const m_modelInput: usize = 0x1F0; // CParticleModelInput
-                pub const m_flRecalcRate: usize = 0x250; // CParticleCollectionFloatInput
-                pub const m_flUSpacing: usize = 0x3C8; // CParticleCollectionFloatInput
-                pub const m_flVSpacing: usize = 0x540; // CParticleCollectionFloatInput
-                pub const m_flSurfaceOffset: usize = 0x6B8; // CParticleCollectionFloatInput
-                pub const m_bSetNormal: usize = 0x830; // bool
-                pub const m_bSetUp: usize = 0x831; // bool
-                pub const m_bSetGravity: usize = 0x832; // bool
-                pub const m_bSetUV: usize = 0x833; // bool
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RestartAfterDuration = struct {
-                pub const m_flDurationMin: usize = 0x1E0; // float32
-                pub const m_flDurationMax: usize = 0x1E4; // float32
-                pub const m_nCP: usize = 0x1E8; // int32
-                pub const m_nCPField: usize = 0x1EC; // int32
-                pub const m_nChildGroupID: usize = 0x1F0; // int32
-                pub const m_bOnlyChildren: usize = 0x1F4; // bool
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderClothForce = struct {
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapVisibilityScalar = struct {
-                pub const m_nFieldInput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1E8; // float32
-                pub const m_flInputMax: usize = 0x1EC; // float32
-                pub const m_flOutputMin: usize = 0x1F0; // float32
-                pub const m_flOutputMax: usize = 0x1F4; // float32
-                pub const m_flRadiusScale: usize = 0x1F8; // float32
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MParticleMinVersion
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateSequentialPathV2 = struct {
-                pub const m_fMaxDistance: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_flNumToAssign: usize = 0x360; // CParticleCollectionFloatInput
-                pub const m_bLoop: usize = 0x4D8; // bool
-                pub const m_bCPPairs: usize = 0x4D9; // bool
-                pub const m_bSaveOffset: usize = 0x4DA; // bool
-                pub const m_PathParams: usize = 0x4E0; // CPathParameters
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const VecInputMaterialVariable_t = struct {
-                pub const m_strVariable: usize = 0x0; // CUtlString
-                pub const m_vecInput: usize = 0x8; // CParticleCollectionVecInput
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapInitialDirectionToTransformToVector = struct {
-                pub const m_TransformInput: usize = 0x1E8; // CParticleTransformInput
-                pub const m_nFieldOutput: usize = 0x250; // ParticleAttributeIndex_t
-                pub const m_flScale: usize = 0x254; // float32
-                pub const m_flOffsetRot: usize = 0x258; // float32
-                pub const m_vecOffsetAxis: usize = 0x25C; // Vector
-                pub const m_bNormalize: usize = 0x268; // bool
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MParticleMinVersion
-            // MGetKV3ClassDefaults
-            pub const C_OP_LockToSavedSequentialPathV2 = struct {
-                pub const m_flFadeStart: usize = 0x1E0; // float32
-                pub const m_flFadeEnd: usize = 0x1E4; // float32
-                pub const m_bCPPairs: usize = 0x1E8; // bool
-                pub const m_PathParams: usize = 0x1F0; // CPathParameters
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_NormalLock = struct {
-                pub const m_nControlPointNumber: usize = 0x1E0; // int32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapTransformOrientationToRotations = struct {
-                pub const m_TransformInput: usize = 0x1E8; // CParticleTransformInput
-                pub const m_vecRotation: usize = 0x250; // Vector
-                pub const m_bUseQuat: usize = 0x25C; // bool
-                pub const m_bWriteNormal: usize = 0x25D; // bool
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_Cull = struct {
-                pub const m_flCullPerc: usize = 0x1E0; // float32
-                pub const m_flCullStart: usize = 0x1E4; // float32
-                pub const m_flCullEnd: usize = 0x1E8; // float32
-                pub const m_flCullExp: usize = 0x1EC; // float32
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomYawFlip = struct {
-                pub const m_flPercent: usize = 0x1E8; // float32
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const SequenceWeightedList_t = struct {
-                pub const m_nSequence: usize = 0x0; // int32
-                pub const m_flRelativeWeight: usize = 0x4; // float32
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ReadFromNeighboringParticle = struct {
-                pub const m_nFieldInput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_nIncrement: usize = 0x1E8; // int32
-                pub const m_DistanceCheck: usize = 0x1F0; // CPerParticleFloatInput
-                pub const m_flInterpolation: usize = 0x368; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderText = struct {
-                pub const m_OutlineColor: usize = 0x230; // Color
-                pub const m_DefaultText: usize = 0x238; // CUtlString
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_LerpToInitialPosition = struct {
-                pub const m_nControlPointNumber: usize = 0x1E0; // int32
-                pub const m_flInterpolation: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_nCacheField: usize = 0x360; // ParticleAttributeIndex_t
-                pub const m_flScale: usize = 0x368; // CParticleCollectionFloatInput
-                pub const m_vecScale: usize = 0x4E0; // CParticleCollectionVecInput
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomRotation = struct {
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_LerpEndCapVector = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_vecOutput: usize = 0x1E4; // Vector
-                pub const m_flLerpTime: usize = 0x1F0; // float32
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_VelocityDecay = struct {
-                pub const m_flMinVelocity: usize = 0x1E0; // float32
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetCPOrientationToPointAtCP = struct {
-                pub const m_nInputCP: usize = 0x1E8; // int32
-                pub const m_nOutputCP: usize = 0x1EC; // int32
-                pub const m_flInterpolation: usize = 0x1F0; // CParticleCollectionFloatInput
-                pub const m_b2DOrientation: usize = 0x368; // bool
-                pub const m_bAvoidSingularity: usize = 0x369; // bool
-                pub const m_bPointAway: usize = 0x36A; // bool
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_LockToPointList = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_pointList: usize = 0x1E8; // CUtlVector<PointDefinition_t>
-                pub const m_bPlaceAlongPath: usize = 0x200; // bool
-                pub const m_bClosedLoop: usize = 0x201; // bool
-                pub const m_nNumPointsAlongPath: usize = 0x204; // int32
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateWithinCone = struct {
-                pub const m_TransformInput: usize = 0x1E8; // CParticleTransformInput
-                pub const m_flInnerAngle: usize = 0x250; // CPerParticleFloatInput
-                pub const m_flOuterAngle: usize = 0x3C8; // CPerParticleFloatInput
-                pub const m_flSpeed: usize = 0x540; // CPerParticleFloatInput
-                pub const m_flOffset: usize = 0x6B8; // CPerParticleFloatInput
-                pub const m_bCollapseOffset: usize = 0x830; // bool
-                pub const m_randomnessParameters: usize = 0x834; // CRandomNumberGeneratorParameters
-            };
-            // Parent: None
-            // Field count: 18
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_MovementPlaceOnGround = struct {
-                pub const m_flOffset: usize = 0x1E0; // CPerParticleFloatInput
-                pub const m_flMaxTraceLength: usize = 0x358; // float32
-                pub const m_flTolerance: usize = 0x35C; // float32
-                pub const m_vecTraceDir: usize = 0x360; // CPerParticleVecInput
-                pub const m_flTraceOffset: usize = 0xA38; // float32
-                pub const m_flLerpRate: usize = 0xA3C; // float32
-                pub const m_CollisionGroupName: usize = 0xA40; // char[128]
-                pub const m_nTraceSet: usize = 0xAC0; // ParticleTraceSet_t
-                pub const m_nRefCP1: usize = 0xAC4; // int32
-                pub const m_nRefCP2: usize = 0xAC8; // int32
-                pub const m_nLerpCP: usize = 0xACC; // int32
-                pub const m_nTraceMissBehavior: usize = 0xAD8; // ParticleTraceMissBehavior_t
-                pub const m_bIncludeShotHull: usize = 0xADC; // bool
-                pub const m_bIncludeWater: usize = 0xADD; // bool
-                pub const m_bSetNormal: usize = 0xAE0; // bool
-                pub const m_bScaleOffset: usize = 0xAE1; // bool
-                pub const m_nPreserveOffsetCP: usize = 0xAE4; // int32
-                pub const m_nIgnoreCP: usize = 0xAE8; // int32
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetCPOrientationToDirection = struct {
-                pub const m_nInputControlPoint: usize = 0x1E0; // int32
-                pub const m_nOutputControlPoint: usize = 0x1E4; // int32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapCrossProductOfTwoVectorsToVector = struct {
-                pub const m_InputVec1: usize = 0x1E0; // CPerParticleVecInput
-                pub const m_InputVec2: usize = 0x8B8; // CPerParticleVecInput
-                pub const m_nFieldOutput: usize = 0xF90; // ParticleAttributeIndex_t
-                pub const m_bNormalize: usize = 0xF94; // bool
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapTransformOrientationToRotations = struct {
-                pub const m_TransformInput: usize = 0x1E0; // CParticleTransformInput
-                pub const m_vecRotation: usize = 0x248; // Vector
-                pub const m_bUseQuat: usize = 0x254; // bool
-                pub const m_bWriteNormal: usize = 0x255; // bool
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomRotationSpeed = struct {
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MParticleMinVersion
-            // MGetKV3ClassDefaults
-            pub const C_OP_InheritFromParentParticlesV2 = struct {
-                pub const m_flScale: usize = 0x1E0; // CPerParticleFloatInput
-                pub const m_nFieldOutput: usize = 0x358; // ParticleAttributeIndex_t
-                pub const m_nIncrement: usize = 0x360; // CPerParticleFloatInput
-                pub const m_bSubSample: usize = 0x4D8; // bool
-                pub const m_bRandomDistribution: usize = 0x4D9; // bool
-                pub const m_bReverse: usize = 0x4DA; // bool
-                pub const m_nMissingParentBehavior: usize = 0x4DC; // MissingParentInheritBehavior_t
-                pub const m_flInterpolation: usize = 0x4E0; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomSecondSequence = struct {
-                pub const m_nSequenceMin: usize = 0x1E8; // int32
-                pub const m_nSequenceMax: usize = 0x1EC; // int32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetFloatCollection = struct {
-                pub const m_InputValue: usize = 0x1E0; // CParticleCollectionFloatInput
-                pub const m_nOutputField: usize = 0x358; // ParticleAttributeIndex_t
-                pub const m_nSetMethod: usize = 0x35C; // ParticleSetMethod_t
-                pub const m_Lerp: usize = 0x360; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const PointDefinition_t = struct {
-                pub const m_nControlPoint: usize = 0x0; // int32
-                pub const m_bLocalCoords: usize = 0x4; // bool
-                pub const m_vOffset: usize = 0x8; // Vector
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointPositionToRandomActiveCP = struct {
-                pub const m_nCP1: usize = 0x1E8; // int32
-                pub const m_nHeadLocationMin: usize = 0x1EC; // int32
-                pub const m_nHeadLocationMax: usize = 0x1F0; // int32
-                pub const m_flResetRate: usize = 0x1F8; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_Diffusion = struct {
-                pub const m_flRadiusScale: usize = 0x1E0; // float32
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_nVoxelGridResolution: usize = 0x1E8; // int32
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_AgeNoise = struct {
-                pub const m_bAbsVal: usize = 0x1E8; // bool
-                pub const m_bAbsValInv: usize = 0x1E9; // bool
-                pub const m_flOffset: usize = 0x1EC; // float32
-                pub const m_flAgeMin: usize = 0x1F0; // float32
-                pub const m_flAgeMax: usize = 0x1F4; // float32
-                pub const m_flNoiseScale: usize = 0x1F8; // float32
-                pub const m_flNoiseScaleLoc: usize = 0x1FC; // float32
-                pub const m_vecOffsetLoc: usize = 0x200; // Vector
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapVectorComponentToScalar = struct {
-                pub const m_nFieldInput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_nComponent: usize = 0x1E8; // int32
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CGeneralRandomRotation = struct {
-                pub const m_nFieldOutput: usize = 0x1E8; // ParticleAttributeIndex_t
-                pub const m_flDegrees: usize = 0x1EC; // float32
-                pub const m_flDegreesMin: usize = 0x1F0; // float32
-                pub const m_flDegreesMax: usize = 0x1F4; // float32
-                pub const m_flRotationRandExponent: usize = 0x1F8; // float32
-                pub const m_bRandomlyFlipDirection: usize = 0x1FC; // bool
-            };
-            // Parent: None
-            // Field count: 9
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_DistanceBetweenVecs = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_vecPoint1: usize = 0x1E8; // CPerParticleVecInput
-                pub const m_vecPoint2: usize = 0x8C0; // CPerParticleVecInput
-                pub const m_flInputMin: usize = 0xF98; // CPerParticleFloatInput
-                pub const m_flInputMax: usize = 0x1110; // CPerParticleFloatInput
-                pub const m_flOutputMin: usize = 0x1288; // CPerParticleFloatInput
-                pub const m_flOutputMax: usize = 0x1400; // CPerParticleFloatInput
-                pub const m_nSetMethod: usize = 0x1578; // ParticleSetMethod_t
-                pub const m_bDeltaTime: usize = 0x157C; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_DampenToCP = struct {
-                pub const m_nControlPointNumber: usize = 0x1E0; // int32
-                pub const m_flRange: usize = 0x1E4; // float32
-                pub const m_flScale: usize = 0x1E8; // float32
-            };
-            // Parent: None
-            // Field count: 11
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_CalculateVectorAttribute = struct {
-                pub const m_vStartValue: usize = 0x1E0; // Vector
-                pub const m_nFieldInput1: usize = 0x1EC; // ParticleAttributeIndex_t
-                pub const m_flInputScale1: usize = 0x1F0; // float32
-                pub const m_nFieldInput2: usize = 0x1F4; // ParticleAttributeIndex_t
-                pub const m_flInputScale2: usize = 0x1F8; // float32
-                pub const m_nControlPointInput1: usize = 0x1FC; // ControlPointReference_t
-                pub const m_flControlPointScale1: usize = 0x210; // float32
-                pub const m_nControlPointInput2: usize = 0x214; // ControlPointReference_t
-                pub const m_flControlPointScale2: usize = 0x228; // float32
-                pub const m_nFieldOutput: usize = 0x22C; // ParticleAttributeIndex_t
-                pub const m_vFinalOutputScale: usize = 0x230; // Vector
-            };
-            // Parent: None
-            // Field count: 15
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_LockToBone = struct {
-                pub const m_modelInput: usize = 0x1E0; // CParticleModelInput
-                pub const m_transformInput: usize = 0x240; // CParticleTransformInput
-                pub const m_flLifeTimeFadeStart: usize = 0x2A8; // float32
-                pub const m_flLifeTimeFadeEnd: usize = 0x2AC; // float32
-                pub const m_flJumpThreshold: usize = 0x2B0; // float32
-                pub const m_flPrevPosScale: usize = 0x2B4; // float32
-                pub const m_HitboxSetName: usize = 0x2B8; // char[128]
-                pub const m_bRigid: usize = 0x338; // bool
-                pub const m_bUseBones: usize = 0x339; // bool
-                pub const m_nFieldOutput: usize = 0x33C; // ParticleAttributeIndex_t
-                pub const m_nFieldOutputPrev: usize = 0x340; // ParticleAttributeIndex_t
-                pub const m_nRotationSetType: usize = 0x344; // ParticleRotationLockType_t
-                pub const m_bRigidRotationLock: usize = 0x348; // bool
-                pub const m_vecRotation: usize = 0x350; // CPerParticleVecInput
-                pub const m_flRotLerp: usize = 0xA28; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapNamedModelBodyPartOnceTimed = struct {
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ScreenSpaceRotateTowardTarget = struct {
-                pub const m_vecTargetPosition: usize = 0x1E0; // CPerParticleVecInput
-                pub const m_flOutputRemap: usize = 0x8B8; // CParticleRemapFloatInput
-                pub const m_nSetMethod: usize = 0xA30; // ParticleSetMethod_t
-                pub const m_flScreenEdgeAlignmentDistance: usize = 0xA38; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_MovementMaintainOffset = struct {
-                pub const m_vecOffset: usize = 0x1E0; // Vector
-                pub const m_nCP: usize = 0x1EC; // int32
-                pub const m_bRadiusScale: usize = 0x1F0; // bool
-            };
-            // Parent: None
-            // Field count: 11
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateWithinCapsuleTransform = struct {
-                pub const m_fRadiusMin: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_fRadiusMax: usize = 0x360; // CPerParticleFloatInput
-                pub const m_fHeight: usize = 0x4D8; // CPerParticleFloatInput
-                pub const m_TransformInput: usize = 0x650; // CParticleTransformInput
-                pub const m_fSpeedMin: usize = 0x6B8; // CPerParticleFloatInput
-                pub const m_fSpeedMax: usize = 0x830; // CPerParticleFloatInput
-                pub const m_fSpeedRandExp: usize = 0x9A8; // float32
-                pub const m_LocalCoordinateSystemSpeedMin: usize = 0x9B0; // CPerParticleVecInput
-                pub const m_LocalCoordinateSystemSpeedMax: usize = 0x1088; // CPerParticleVecInput
-                pub const m_nFieldOutput: usize = 0x1760; // ParticleAttributeIndex_t
-                pub const m_nFieldVelocity: usize = 0x1764; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetVec = struct {
-                pub const m_InputValue: usize = 0x1E0; // CPerParticleVecInput
-                pub const m_nOutputField: usize = 0x8B8; // ParticleAttributeIndex_t
-                pub const m_nSetMethod: usize = 0x8BC; // ParticleSetMethod_t
-                pub const m_Lerp: usize = 0x8C0; // CPerParticleFloatInput
-                pub const m_bNormalizedOutput: usize = 0xA38; // bool
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateFromParentParticles = struct {
-                pub const m_flVelocityScale: usize = 0x1E8; // float32
-                pub const m_flIncrement: usize = 0x1EC; // float32
-                pub const m_bRandomDistribution: usize = 0x1F0; // bool
-                pub const m_nRandomSeed: usize = 0x1F4; // int32
-                pub const m_bSubFrame: usize = 0x1F8; // bool
-                pub const m_bSetRopeSegmentID: usize = 0x1F9; // bool
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CheckParticleForWater = struct {
-                pub const m_flRadius: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_nFieldOutput: usize = 0x360; // ParticleAttributeIndex_t
-                pub const m_flOutputRemap: usize = 0x368; // CParticleRemapFloatInput
-                pub const m_nSetMethod: usize = 0x4E0; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomNamedModelBodyPart = struct {
-            };
-            // Parent: None
-            // Field count: 30
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderOmni2Light = struct {
-                pub const m_nLightType: usize = 0x230; // ParticleOmni2LightTypeChoiceList_t
-                pub const m_nMaxAllowed: usize = 0x234; // uint16
-                pub const m_vColorBlend: usize = 0x238; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0x910; // ParticleColorBlendType_t
-                pub const m_strLightStyle: usize = 0x918; // CUtlString
-                pub const m_flLightStyleTime: usize = 0x920; // CPerParticleFloatInput
-                pub const m_nBrightnessUnit: usize = 0xA98; // ParticleLightUnitChoiceList_t
-                pub const m_flBrightnessLumens: usize = 0xAA0; // CPerParticleFloatInput
-                pub const m_flBrightnessCandelas: usize = 0xC18; // CPerParticleFloatInput
-                pub const m_bCastShadows: usize = 0xD90; // bool
-                pub const m_bDynamicBounce: usize = 0xD91; // bool
-                pub const m_flBounceScale: usize = 0xD98; // CParticleCollectionFloatInput
-                pub const m_bFog: usize = 0xF10; // bool
-                pub const m_flFogScale: usize = 0xF18; // CPerParticleFloatInput
-                pub const m_flLuminaireRadius: usize = 0x1090; // CPerParticleFloatInput
-                pub const m_nOrientationType: usize = 0x1208; // ParticleOmni2LighOrientationChoiceList_t
-                pub const m_vNormal: usize = 0x1210; // CPerParticleVecInput
-                pub const m_vTarget: usize = 0x18E8; // CPerParticleVecInput
-                pub const m_flFOVAngle: usize = 0x1FC0; // CPerParticleFloatInput
-                pub const m_flBarnShape: usize = 0x2138; // CPerParticleFloatInput
-                pub const m_flBarnNearSizeX: usize = 0x22B0; // CPerParticleFloatInput
-                pub const m_flBarnNearSizeY: usize = 0x2428; // CPerParticleFloatInput
-                pub const m_flBarnSoftX: usize = 0x25A0; // CPerParticleFloatInput
-                pub const m_flBarnSoftY: usize = 0x2718; // CPerParticleFloatInput
-                pub const m_flSkirt: usize = 0x2890; // CPerParticleFloatInput
-                pub const m_flRange: usize = 0x2A08; // CPerParticleFloatInput
-                pub const m_flInnerConeAngle: usize = 0x2B80; // CPerParticleFloatInput
-                pub const m_flOuterConeAngle: usize = 0x2CF8; // CPerParticleFloatInput
-                pub const m_hLightCookie: usize = 0x2E70; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_bSphericalCookie: usize = 0x2E78; // bool
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ConnectParentParticleToNearest = struct {
-                pub const m_nFirstControlPoint: usize = 0x1E0; // int32
-                pub const m_nSecondControlPoint: usize = 0x1E4; // int32
-                pub const m_bUseRadius: usize = 0x1E8; // bool
-                pub const m_flRadiusScale: usize = 0x1F0; // CParticleCollectionFloatInput
-                pub const m_flParentRadiusScale: usize = 0x368; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CPAssignment_t = struct {
-                pub const m_nCPNumber: usize = 0x0; // int32
-                pub const m_Pos: usize = 0x8; // CPerParticleVecInput
-                pub const m_nOrientationMode: usize = 0x6E0; // ParticleOrientationSetMode_t
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapParticleCountToNamedModelBodyPartScalar = struct {
-            };
-            // Parent: None
-            // Field count: 19
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_InitSkinnedPositionFromCPSnapshot = struct {
-                pub const m_nSnapshotControlPointNumber: usize = 0x1E8; // int32
-                pub const m_nControlPointNumber: usize = 0x1EC; // int32
-                pub const m_bRandom: usize = 0x1F0; // bool
-                pub const m_nRandomSeed: usize = 0x1F4; // int32
-                pub const m_bRigid: usize = 0x1F8; // bool
-                pub const m_bSetNormal: usize = 0x1F9; // bool
-                pub const m_bIgnoreDt: usize = 0x1FA; // bool
-                pub const m_flMinNormalVelocity: usize = 0x1FC; // float32
-                pub const m_flMaxNormalVelocity: usize = 0x200; // float32
-                pub const m_nIndexType: usize = 0x204; // SnapshotIndexType_t
-                pub const m_flReadIndex: usize = 0x208; // CPerParticleFloatInput
-                pub const m_flIncrement: usize = 0x380; // float32
-                pub const m_nFullLoopIncrement: usize = 0x384; // int32
-                pub const m_nSnapShotStartPoint: usize = 0x388; // int32
-                pub const m_flBoneVelocity: usize = 0x38C; // float32
-                pub const m_flBoneVelocityMax: usize = 0x390; // float32
-                pub const m_bCopyColor: usize = 0x394; // bool
-                pub const m_bCopyAlpha: usize = 0x395; // bool
-                pub const m_bSetRadius: usize = 0x396; // bool
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_LagCompensation = struct {
-                pub const m_nDesiredVelocityCP: usize = 0x1E0; // int32
-                pub const m_nLatencyCP: usize = 0x1E4; // int32
-                pub const m_nLatencyCPField: usize = 0x1E8; // int32
-                pub const m_nDesiredVelocityCPField: usize = 0x1EC; // int32
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_CollideWithSelf = struct {
-                pub const m_flRadiusScale: usize = 0x1E0; // CPerParticleFloatInput
-                pub const m_flMinimumSpeed: usize = 0x358; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_Noise = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flOutputMin: usize = 0x1E4; // float32
-                pub const m_flOutputMax: usize = 0x1E8; // float32
-                pub const m_fl4NoiseScale: usize = 0x1EC; // float32
-                pub const m_bAdditive: usize = 0x1F0; // bool
-                pub const m_flNoiseAnimationTimeScale: usize = 0x1F4; // float32
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_FadeAndKillForTracers = struct {
-                pub const m_flStartFadeInTime: usize = 0x1E0; // float32
-                pub const m_flEndFadeInTime: usize = 0x1E4; // float32
-                pub const m_flStartFadeOutTime: usize = 0x1E8; // float32
-                pub const m_flEndFadeOutTime: usize = 0x1EC; // float32
-                pub const m_flStartAlpha: usize = 0x1F0; // float32
-                pub const m_flEndAlpha: usize = 0x1F4; // float32
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ColorAdjustHSL = struct {
-                pub const m_flHueAdjust: usize = 0x1E0; // CPerParticleFloatInput
-                pub const m_flSaturationAdjust: usize = 0x358; // CPerParticleFloatInput
-                pub const m_flLightnessAdjust: usize = 0x4D0; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CParticleMassCalculationParameters = struct {
-                pub const m_nMassMode: usize = 0x0; // ParticleMassMode_t
-                pub const m_flRadius: usize = 0x8; // CPerParticleFloatInput
-                pub const m_flNominalRadius: usize = 0x180; // CPerParticleFloatInput
-                pub const m_flScale: usize = 0x2F8; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SequenceFromModel = struct {
-                pub const m_nControlPointNumber: usize = 0x1E0; // int32
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_nFieldOutputAnim: usize = 0x1E8; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1EC; // float32
-                pub const m_flInputMax: usize = 0x1F0; // float32
-                pub const m_flOutputMin: usize = 0x1F4; // float32
-                pub const m_flOutputMax: usize = 0x1F8; // float32
-                pub const m_nSetMethod: usize = 0x1FC; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_AlphaDecay = struct {
-                pub const m_flMinAlpha: usize = 0x1E0; // float32
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapDensityGradientToVectorAttribute = struct {
-                pub const m_flRadiusScale: usize = 0x1E0; // float32
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_InitVec = struct {
-                pub const m_InputValue: usize = 0x1E8; // CPerParticleVecInput
-                pub const m_nOutputField: usize = 0x8C0; // ParticleAttributeIndex_t
-                pub const m_nSetMethod: usize = 0x8C4; // ParticleSetMethod_t
-                pub const m_bNormalizedOutput: usize = 0x8C8; // bool
-                pub const m_bWritePreviousPosition: usize = 0x8C9; // bool
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_SetHitboxToModel = struct {
-                pub const m_nControlPointNumber: usize = 0x1E8; // int32
-                pub const m_nForceInModel: usize = 0x1EC; // int32
-                pub const m_bEvenDistribution: usize = 0x1F0; // bool
-                pub const m_nDesiredHitbox: usize = 0x1F4; // int32
-                pub const m_vecHitBoxScale: usize = 0x1F8; // CParticleCollectionVecInput
-                pub const m_vecDirectionBias: usize = 0x8D0; // Vector
-                pub const m_bMaintainHitbox: usize = 0x8DC; // bool
-                pub const m_bUseBones: usize = 0x8DD; // bool
-                pub const m_HitboxSetName: usize = 0x8DE; // char[128]
-                pub const m_flShellSize: usize = 0x960; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_MovementMoveAlongSkinnedCPSnapshot = struct {
-                pub const m_nControlPointNumber: usize = 0x1E0; // int32
-                pub const m_nSnapshotControlPointNumber: usize = 0x1E4; // int32
-                pub const m_bSetNormal: usize = 0x1E8; // bool
-                pub const m_bSetRadius: usize = 0x1E9; // bool
-                pub const m_flInterpolation: usize = 0x1F0; // CPerParticleFloatInput
-                pub const m_flTValue: usize = 0x368; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_LerpScalar = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flOutput: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_flStartTime: usize = 0x360; // float32
-                pub const m_flEndTime: usize = 0x364; // float32
-            };
-            // Parent: None
-            // Field count: 13
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_InitialRepulsionVelocity = struct {
-                pub const m_CollisionGroupName: usize = 0x1E8; // char[128]
-                pub const m_nTraceSet: usize = 0x268; // ParticleTraceSet_t
-                pub const m_vecOutputMin: usize = 0x26C; // Vector
-                pub const m_vecOutputMax: usize = 0x278; // Vector
-                pub const m_nControlPointNumber: usize = 0x284; // int32
-                pub const m_bPerParticle: usize = 0x288; // bool
-                pub const m_bTranslate: usize = 0x289; // bool
-                pub const m_bProportional: usize = 0x28A; // bool
-                pub const m_flTraceLength: usize = 0x28C; // float32
-                pub const m_bPerParticleTR: usize = 0x290; // bool
-                pub const m_bInherit: usize = 0x291; // bool
-                pub const m_nChildCP: usize = 0x294; // int32
-                pub const m_nChildGroupID: usize = 0x298; // int32
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ClampScalar = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flOutputMin: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_flOutputMax: usize = 0x360; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointToHMD = struct {
-                pub const m_nCP1: usize = 0x1E8; // int32
-                pub const m_vecCP1Pos: usize = 0x1EC; // Vector
-                pub const m_bOrientToHMD: usize = 0x1F8; // bool
-            };
-            // Parent: None
-            // Field count: 9
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_DifferencePreviousParticle = struct {
-                pub const m_nFieldInput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1E8; // float32
-                pub const m_flInputMax: usize = 0x1EC; // float32
-                pub const m_flOutputMin: usize = 0x1F0; // float32
-                pub const m_flOutputMax: usize = 0x1F4; // float32
-                pub const m_nSetMethod: usize = 0x1F8; // ParticleSetMethod_t
-                pub const m_bActiveRange: usize = 0x1FC; // bool
-                pub const m_bSetPreviousParticle: usize = 0x1FD; // bool
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointFieldFromVectorExpression = struct {
-                pub const m_nExpression: usize = 0x1E8; // VectorFloatExpressionType_t
-                pub const m_vecInput1: usize = 0x1F0; // CParticleCollectionVecInput
-                pub const m_vecInput2: usize = 0x8C8; // CParticleCollectionVecInput
-                pub const m_flLerp: usize = 0xFA0; // CPerParticleFloatInput
-                pub const m_flOutputRemap: usize = 0x1118; // CParticleRemapFloatInput
-                pub const m_nOutputCP: usize = 0x1290; // int32
-                pub const m_nOutVectorField: usize = 0x1294; // int32
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_PercentageBetweenTransforms = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1E4; // float32
-                pub const m_flInputMax: usize = 0x1E8; // float32
-                pub const m_flOutputMin: usize = 0x1EC; // float32
-                pub const m_flOutputMax: usize = 0x1F0; // float32
-                pub const m_TransformStart: usize = 0x1F8; // CParticleTransformInput
-                pub const m_TransformEnd: usize = 0x260; // CParticleTransformInput
-                pub const m_nSetMethod: usize = 0x2C8; // ParticleSetMethod_t
-                pub const m_bActiveRange: usize = 0x2CC; // bool
-                pub const m_bRadialCheck: usize = 0x2CD; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_PlaneCull = struct {
-                pub const m_nControlPoint: usize = 0x1E8; // int32
-                pub const m_flDistance: usize = 0x1F0; // CParticleCollectionFloatInput
-                pub const m_bCullInside: usize = 0x368; // bool
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapNamedModelSequenceEndCap = struct {
-            };
-            // Parent: None
-            // Field count: 11
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_InitFromCPSnapshot = struct {
-                pub const m_nControlPointNumber: usize = 0x1E8; // int32
-                pub const m_strSnapshotSubset: usize = 0x1F0; // CUtlString
-                pub const m_nAttributeToRead: usize = 0x1F8; // ParticleAttributeIndex_t
-                pub const m_nAttributeToWrite: usize = 0x1FC; // ParticleAttributeIndex_t
-                pub const m_nLocalSpaceCP: usize = 0x200; // int32
-                pub const m_bRandom: usize = 0x204; // bool
-                pub const m_bReverse: usize = 0x205; // bool
-                pub const m_nSnapShotIncrement: usize = 0x208; // CParticleCollectionFloatInput
-                pub const m_nManualSnapshotIndex: usize = 0x380; // CPerParticleFloatInput
-                pub const m_nRandomSeed: usize = 0x4F8; // int32
-                pub const m_bLocalSpaceAngles: usize = 0x4FC; // bool
-            };
-            // Parent: None
-            // Field count: 24
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderCables = struct {
-                pub const m_flRadiusScale: usize = 0x230; // CParticleCollectionFloatInput
-                pub const m_flAlphaScale: usize = 0x3A8; // CParticleCollectionFloatInput
-                pub const m_vecColorScale: usize = 0x520; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0xBF8; // ParticleColorBlendType_t
-                pub const m_hMaterial: usize = 0xC00; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                pub const m_nTextureRepetitionMode: usize = 0xC08; // TextureRepetitionMode_t
-                pub const m_flTextureRepeatsPerSegment: usize = 0xC10; // CParticleCollectionFloatInput
-                pub const m_flTextureRepeatsCircumference: usize = 0xD88; // CParticleCollectionFloatInput
-                pub const m_flColorMapOffsetV: usize = 0xF00; // CParticleCollectionFloatInput
-                pub const m_flColorMapOffsetU: usize = 0x1078; // CParticleCollectionFloatInput
-                pub const m_flNormalMapOffsetV: usize = 0x11F0; // CParticleCollectionFloatInput
-                pub const m_flNormalMapOffsetU: usize = 0x1368; // CParticleCollectionFloatInput
-                pub const m_bDrawCableCaps: usize = 0x14E0; // bool
-                pub const m_flCapRoundness: usize = 0x14E4; // float32
-                pub const m_flCapOffsetAmount: usize = 0x14E8; // float32
-                pub const m_flTessScale: usize = 0x14EC; // float32
-                pub const m_nMinTesselation: usize = 0x14F0; // int32
-                pub const m_nMaxTesselation: usize = 0x14F4; // int32
-                pub const m_nRoundness: usize = 0x14F8; // int32
-                pub const m_nForceRoundnessFixed: usize = 0x14FC; // bool
-                pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x14FD; // bool
-                pub const m_LightingTransform: usize = 0x1500; // CParticleTransformInput
-                pub const m_MaterialFloatVars: usize = 0x1568; // CUtlLeanVector<FloatInputMaterialVariable_t>
-                pub const m_MaterialVecVars: usize = 0x1588; // CUtlLeanVector<VecInputMaterialVariable_t>
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_InheritVelocity = struct {
-                pub const m_nControlPointNumber: usize = 0x1E8; // int32
-                pub const m_flVelocityScale: usize = 0x1EC; // float32
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointToWaterSurface = struct {
-                pub const m_nSourceCP: usize = 0x1E8; // int32
-                pub const m_nDestCP: usize = 0x1EC; // int32
-                pub const m_nFlowCP: usize = 0x1F0; // int32
-                pub const m_nActiveCP: usize = 0x1F4; // int32
-                pub const m_nActiveCPField: usize = 0x1F8; // int32
-                pub const m_flRetestRate: usize = 0x200; // CParticleCollectionFloatInput
-                pub const m_bAdaptiveThreshold: usize = 0x378; // bool
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_PositionOffset = struct {
-                pub const m_OffsetMin: usize = 0x1E8; // CPerParticleVecInput
-                pub const m_OffsetMax: usize = 0x8C0; // CPerParticleVecInput
-                pub const m_TransformInput: usize = 0xF98; // CParticleTransformInput
-                pub const m_bLocalCoords: usize = 0x1000; // bool
-                pub const m_bProportional: usize = 0x1001; // bool
-                pub const m_randomnessParameters: usize = 0x1004; // CRandomNumberGeneratorParameters
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_NormalAlignToCP = struct {
-                pub const m_transformInput: usize = 0x1E8; // CParticleTransformInput
-                pub const m_nControlPointAxis: usize = 0x250; // ParticleControlPointAxis_t
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ShapeMatchingConstraint = struct {
-                pub const m_flShapeRestorationTime: usize = 0x1E0; // float32
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetChildControlPoints = struct {
-                pub const m_nChildGroupID: usize = 0x1E0; // int32
-                pub const m_nFirstControlPoint: usize = 0x1E4; // int32
-                pub const m_nNumControlPoints: usize = 0x1E8; // int32
-                pub const m_nFirstSourcePoint: usize = 0x1F0; // CParticleCollectionFloatInput
-                pub const m_bReverse: usize = 0x368; // bool
-                pub const m_bSetOrientation: usize = 0x369; // bool
-                pub const m_nOrientation: usize = 0x36C; // ParticleOrientationType_t
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ChladniWave = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_flInputMax: usize = 0x360; // CPerParticleFloatInput
-                pub const m_flOutputMin: usize = 0x4D8; // CPerParticleFloatInput
-                pub const m_flOutputMax: usize = 0x650; // CPerParticleFloatInput
-                pub const m_vecWaveLength: usize = 0x7C8; // CPerParticleVecInput
-                pub const m_vecHarmonics: usize = 0xEA0; // CPerParticleVecInput
-                pub const m_nSetMethod: usize = 0x1578; // ParticleSetMethod_t
-                pub const m_nLocalSpaceControlPoint: usize = 0x157C; // int32
-                pub const m_b3D: usize = 0x1580; // bool
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapDirectionToCPToVector = struct {
-                pub const m_nCP: usize = 0x1E0; // int32
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_flScale: usize = 0x1E8; // float32
-                pub const m_flOffsetRot: usize = 0x1EC; // float32
-                pub const m_vecOffsetAxis: usize = 0x1F0; // Vector
-                pub const m_bNormalize: usize = 0x1FC; // bool
-                pub const m_nFieldStrength: usize = 0x200; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 9
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_DriveCPFromGlobalSoundFloat = struct {
-                pub const m_nOutputControlPoint: usize = 0x1E8; // int32
-                pub const m_nOutputField: usize = 0x1EC; // int32
-                pub const m_flInputMin: usize = 0x1F0; // float32
-                pub const m_flInputMax: usize = 0x1F4; // float32
-                pub const m_flOutputMin: usize = 0x1F8; // float32
-                pub const m_flOutputMax: usize = 0x1FC; // float32
-                pub const m_StackName: usize = 0x200; // CUtlString
-                pub const m_OperatorName: usize = 0x208; // CUtlString
-                pub const m_FieldName: usize = 0x210; // CUtlString
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_ScreenSpacePositionOfTarget = struct {
-                pub const m_vecTargetPosition: usize = 0x1E8; // CPerParticleVecInput
-                pub const m_bOututBehindness: usize = 0x8C0; // bool
-                pub const m_nBehindFieldOutput: usize = 0x8C4; // ParticleAttributeIndex_t
-                pub const m_flBehindOutputRemap: usize = 0x8C8; // CParticleRemapFloatInput
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RtEnvCull = struct {
-                pub const m_vecTestDir: usize = 0x1E0; // Vector
-                pub const m_vecTestNormal: usize = 0x1EC; // Vector
-                pub const m_bCullOnMiss: usize = 0x1F8; // bool
-                pub const m_bStickInsteadOfCull: usize = 0x1F9; // bool
-                pub const m_RtEnvName: usize = 0x1FA; // char[128]
-                pub const m_nRTEnvCP: usize = 0x27C; // int32
-                pub const m_nComponent: usize = 0x280; // int32
-            };
-            // Parent: None
-            // Field count: 14
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_PinParticleToCP = struct {
-                pub const m_nControlPointNumber: usize = 0x1E0; // int32
-                pub const m_vecOffset: usize = 0x1E8; // CParticleCollectionVecInput
-                pub const m_bOffsetLocal: usize = 0x8C0; // bool
-                pub const m_nParticleSelection: usize = 0x8C4; // ParticleSelection_t
-                pub const m_nParticleNumber: usize = 0x8C8; // CParticleCollectionFloatInput
-                pub const m_nPinBreakType: usize = 0xA40; // ParticlePinDistance_t
-                pub const m_flBreakDistance: usize = 0xA48; // CParticleCollectionFloatInput
-                pub const m_flBreakSpeed: usize = 0xBC0; // CParticleCollectionFloatInput
-                pub const m_flAge: usize = 0xD38; // CParticleCollectionFloatInput
-                pub const m_nBreakControlPointNumber: usize = 0xEB0; // int32
-                pub const m_nBreakControlPointNumber2: usize = 0xEB4; // int32
-                pub const m_flBreakValue: usize = 0xEB8; // CParticleCollectionFloatInput
-                pub const m_flInterpolation: usize = 0x1030; // CPerParticleFloatInput
-                pub const m_bRetainInitialVelocity: usize = 0x11A8; // bool
-            };
-            // Parent: None
-            // Field count: 13
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapCPtoVector = struct {
-                pub const m_nCPInput: usize = 0x1E0; // int32
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_nLocalSpaceCP: usize = 0x1E8; // int32
-                pub const m_vInputMin: usize = 0x1EC; // Vector
-                pub const m_vInputMax: usize = 0x1F8; // Vector
-                pub const m_vOutputMin: usize = 0x204; // Vector
-                pub const m_vOutputMax: usize = 0x210; // Vector
-                pub const m_flStartTime: usize = 0x21C; // float32
-                pub const m_flEndTime: usize = 0x220; // float32
-                pub const m_flInterpRate: usize = 0x224; // float32
-                pub const m_nSetMethod: usize = 0x228; // ParticleSetMethod_t
-                pub const m_bOffset: usize = 0x22C; // bool
-                pub const m_bAccelerate: usize = 0x22D; // bool
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateParticleImpulse = struct {
-                pub const m_InputRadius: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_InputMagnitude: usize = 0x360; // CPerParticleFloatInput
-                pub const m_nFalloffFunction: usize = 0x4D8; // ParticleFalloffFunction_t
-                pub const m_InputFalloffExp: usize = 0x4E0; // CPerParticleFloatInput
-                pub const m_nImpulseType: usize = 0x658; // ParticleImpulseType_t
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_DensityForce = struct {
-                pub const m_flRadiusScale: usize = 0x1F0; // float32
-                pub const m_flForceScale: usize = 0x1F4; // float32
-                pub const m_flTargetDensity: usize = 0x1F8; // float32
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateInEpitrochoid = struct {
-                pub const m_nComponent1: usize = 0x1E8; // int32
-                pub const m_nComponent2: usize = 0x1EC; // int32
-                pub const m_TransformInput: usize = 0x1F0; // CParticleTransformInput
-                pub const m_flParticleDensity: usize = 0x258; // CPerParticleFloatInput
-                pub const m_flOffset: usize = 0x3D0; // CPerParticleFloatInput
-                pub const m_flRadius1: usize = 0x548; // CPerParticleFloatInput
-                pub const m_flRadius2: usize = 0x6C0; // CPerParticleFloatInput
-                pub const m_bUseCount: usize = 0x838; // bool
-                pub const m_bUseLocalCoords: usize = 0x839; // bool
-                pub const m_bOffsetExistingPos: usize = 0x83A; // bool
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ConstrainDistanceToUserSpecifiedPath = struct {
-                pub const m_fMinDistance: usize = 0x1E0; // float32
-                pub const m_flMaxDistance: usize = 0x1E4; // float32
-                pub const m_flTimeScale: usize = 0x1E8; // float32
-                pub const m_bLoopedPath: usize = 0x1EC; // bool
-                pub const m_pointList: usize = 0x1F0; // CUtlVector<PointDefinitionWithTimeValues_t>
-            };
-            // Parent: None
-            // Field count: 12
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointPositions = struct {
-                pub const m_bUseWorldLocation: usize = 0x1E8; // bool
-                pub const m_bOrient: usize = 0x1E9; // bool
-                pub const m_bSetOnce: usize = 0x1EA; // bool
-                pub const m_nCP1: usize = 0x1EC; // int32
-                pub const m_nCP2: usize = 0x1F0; // int32
-                pub const m_nCP3: usize = 0x1F4; // int32
-                pub const m_nCP4: usize = 0x1F8; // int32
-                pub const m_vecCP1Pos: usize = 0x1FC; // Vector
-                pub const m_vecCP2Pos: usize = 0x208; // Vector
-                pub const m_vecCP3Pos: usize = 0x214; // Vector
-                pub const m_vecCP4Pos: usize = 0x220; // Vector
-                pub const m_nHeadLocation: usize = 0x22C; // int32
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetFloatAttributeToVectorExpression = struct {
-                pub const m_nExpression: usize = 0x1E0; // VectorFloatExpressionType_t
-                pub const m_vInput1: usize = 0x1E8; // CPerParticleVecInput
-                pub const m_vInput2: usize = 0x8C0; // CPerParticleVecInput
-                pub const m_flOutputRemap: usize = 0xF98; // CParticleRemapFloatInput
-                pub const m_nOutputField: usize = 0x1110; // ParticleAttributeIndex_t
-                pub const m_nSetMethod: usize = 0x1114; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_MovementRotateParticleAroundAxis = struct {
-                pub const m_vecRotAxis: usize = 0x1E0; // CParticleCollectionVecInput
-                pub const m_flRotRate: usize = 0x8B8; // CParticleCollectionFloatInput
-                pub const m_TransformInput: usize = 0xA30; // CParticleTransformInput
-                pub const m_bLocalSpace: usize = 0xA98; // bool
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_IntraParticleForce = struct {
-                pub const m_flAttractionMinDistance: usize = 0x1F0; // float32
-                pub const m_flAttractionMaxDistance: usize = 0x1F4; // float32
-                pub const m_flAttractionMaxStrength: usize = 0x1F8; // float32
-                pub const m_flRepulsionMinDistance: usize = 0x1FC; // float32
-                pub const m_flRepulsionMaxDistance: usize = 0x200; // float32
-                pub const m_flRepulsionMaxStrength: usize = 0x204; // float32
-                pub const m_bUseAABB: usize = 0x208; // bool
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_InitFloat = struct {
-                pub const m_InputValue: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_nOutputField: usize = 0x360; // ParticleAttributeIndex_t
-                pub const m_nSetMethod: usize = 0x364; // ParticleSetMethod_t
-                pub const m_InputStrength: usize = 0x368; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 16
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateOnModel = struct {
-                pub const m_modelInput: usize = 0x1E8; // CParticleModelInput
-                pub const m_transformInput: usize = 0x248; // CParticleTransformInput
-                pub const m_nForceInModel: usize = 0x2B0; // int32
-                pub const m_bScaleToVolume: usize = 0x2B4; // bool
-                pub const m_bEvenDistribution: usize = 0x2B5; // bool
-                pub const m_nDesiredHitbox: usize = 0x2B8; // CParticleCollectionFloatInput
-                pub const m_nHitboxValueFromControlPointIndex: usize = 0x430; // int32
-                pub const m_vecHitBoxScale: usize = 0x438; // CParticleCollectionVecInput
-                pub const m_flBoneVelocity: usize = 0xB10; // float32
-                pub const m_flMaxBoneVelocity: usize = 0xB14; // float32
-                pub const m_vecDirectionBias: usize = 0xB18; // CParticleCollectionVecInput
-                pub const m_HitboxSetName: usize = 0x11F0; // char[128]
-                pub const m_bLocalCoords: usize = 0x1270; // bool
-                pub const m_bUseBones: usize = 0x1271; // bool
-                pub const m_bUseMesh: usize = 0x1272; // bool
-                pub const m_flShellSize: usize = 0x1278; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_InheritFromPeerSystem = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_nFieldInput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_nIncrement: usize = 0x1E8; // int32
-                pub const m_nGroupID: usize = 0x1EC; // int32
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_PerParticleForce = struct {
-                pub const m_flForceScale: usize = 0x1F0; // CPerParticleFloatInput
-                pub const m_vForce: usize = 0x368; // CPerParticleVecInput
-                pub const m_nCP: usize = 0xA40; // int32
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomNamedModelMeshGroup = struct {
-            };
-            // Parent: None
-            // Field count: 18
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderProjected = struct {
-                pub const m_bProjectCharacter: usize = 0x230; // bool
-                pub const m_bProjectWorld: usize = 0x231; // bool
-                pub const m_bProjectWater: usize = 0x232; // bool
-                pub const m_bFlipHorizontal: usize = 0x233; // bool
-                pub const m_bEnableProjectedDepthControls: usize = 0x234; // bool
-                pub const m_flMinProjectionDepth: usize = 0x238; // float32
-                pub const m_flMaxProjectionDepth: usize = 0x23C; // float32
-                pub const m_vecProjectedMaterials: usize = 0x240; // CUtlVector<RenderProjectedMaterial_t>
-                pub const m_flMaterialSelection: usize = 0x258; // CPerParticleFloatInput
-                pub const m_flAnimationTimeScale: usize = 0x3D0; // float32
-                pub const m_bOrientToNormal: usize = 0x3D4; // bool
-                pub const m_MaterialVars: usize = 0x3D8; // CUtlVector<MaterialVariable_t>
-                pub const m_flRadiusScale: usize = 0x3F0; // CParticleCollectionFloatInput
-                pub const m_flAlphaScale: usize = 0x568; // CParticleCollectionFloatInput
-                pub const m_flRollScale: usize = 0x6E0; // CParticleCollectionFloatInput
-                pub const m_nAlpha2Field: usize = 0x858; // ParticleAttributeIndex_t
-                pub const m_vecColorScale: usize = 0x860; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0xF38; // ParticleColorBlendType_t
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_MaxVelocity = struct {
-                pub const m_flMaxVelocity: usize = 0x1E0; // CPerParticleFloatInput
-                pub const m_flMinVelocity: usize = 0x358; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_VelocityFromNormal = struct {
-                pub const m_fSpeedMin: usize = 0x1E8; // float32
-                pub const m_fSpeedMax: usize = 0x1EC; // float32
-                pub const m_bIgnoreDt: usize = 0x1F0; // bool
-            };
-            // Parent: None
-            // Field count: 9
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_MaintainEmitter = struct {
-                pub const m_nParticlesToMaintain: usize = 0x1E8; // CParticleCollectionFloatInput
-                pub const m_flStartTime: usize = 0x360; // float32
-                pub const m_flEmissionDuration: usize = 0x368; // CParticleCollectionFloatInput
-                pub const m_flEmissionRate: usize = 0x4E0; // float32
-                pub const m_nSnapshotControlPoint: usize = 0x4E4; // int32
-                pub const m_strSnapshotSubset: usize = 0x4E8; // CUtlString
-                pub const m_bEmitInstantaneously: usize = 0x4F0; // bool
-                pub const m_bFinalEmitOnStop: usize = 0x4F1; // bool
-                pub const m_flScale: usize = 0x4F8; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_PositionOffsetToCP = struct {
-                pub const m_nControlPointNumberStart: usize = 0x1E8; // int32
-                pub const m_nControlPointNumberEnd: usize = 0x1EC; // int32
-                pub const m_bLocalCoords: usize = 0x1F0; // bool
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapInitialTransformDirectionToRotation = struct {
-                pub const m_TransformInput: usize = 0x1E8; // CParticleTransformInput
-                pub const m_nFieldOutput: usize = 0x250; // ParticleAttributeIndex_t
-                pub const m_flOffsetRot: usize = 0x254; // float32
-                pub const m_nComponent: usize = 0x258; // int32
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_FadeAndKill = struct {
-                pub const m_flStartFadeInTime: usize = 0x1E0; // float32
-                pub const m_flEndFadeInTime: usize = 0x1E4; // float32
-                pub const m_flStartFadeOutTime: usize = 0x1E8; // float32
-                pub const m_flEndFadeOutTime: usize = 0x1EC; // float32
-                pub const m_flStartAlpha: usize = 0x1F0; // float32
-                pub const m_flEndAlpha: usize = 0x1F4; // float32
-                pub const m_bForcePreserveParticleOrder: usize = 0x1F8; // bool
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ColorInterpolate = struct {
-                pub const m_ColorFade: usize = 0x1E0; // Color
-                pub const m_flFadeStartTime: usize = 0x1F0; // float32
-                pub const m_flFadeEndTime: usize = 0x1F4; // float32
-                pub const m_nFieldOutput: usize = 0x1F8; // ParticleAttributeIndex_t
-                pub const m_bEaseInOut: usize = 0x1FC; // bool
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RampScalarSpline = struct {
-                pub const m_RateMin: usize = 0x1E0; // float32
-                pub const m_RateMax: usize = 0x1E4; // float32
-                pub const m_flStartTime_min: usize = 0x1E8; // float32
-                pub const m_flStartTime_max: usize = 0x1EC; // float32
-                pub const m_flEndTime_min: usize = 0x1F0; // float32
-                pub const m_flEndTime_max: usize = 0x1F4; // float32
-                pub const m_flBias: usize = 0x1F8; // float32
-                pub const m_nField: usize = 0x220; // ParticleAttributeIndex_t
-                pub const m_bProportionalOp: usize = 0x224; // bool
-                pub const m_bEaseOut: usize = 0x225; // bool
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapNamedModelSequenceOnceTimed = struct {
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointFromObjectScale = struct {
-                pub const m_nCPInput: usize = 0x1E8; // int32
-                pub const m_nCPOutput: usize = 0x1EC; // int32
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_MaintainSequentialPath = struct {
-                pub const m_fMaxDistance: usize = 0x1E0; // CParticleCollectionFloatInput
-                pub const m_flNumToAssign: usize = 0x358; // CParticleCollectionFloatInput
-                pub const m_flCohesionStrength: usize = 0x4D0; // CParticleCollectionFloatInput
-                pub const m_flTolerance: usize = 0x648; // float32
-                pub const m_bLoop: usize = 0x64C; // bool
-                pub const m_bUseParticleCount: usize = 0x64D; // bool
-                pub const m_PathParams: usize = 0x650; // CPathParameters
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapNamedModelBodyPartEndCap = struct {
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_StopAfterCPDuration = struct {
-                pub const m_flDuration: usize = 0x1E8; // CParticleCollectionFloatInput
-                pub const m_bDestroyImmediately: usize = 0x360; // bool
-                pub const m_bPlayEndCap: usize = 0x361; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CGeneralSpin = struct {
-                pub const m_nSpinRateDegrees: usize = 0x1E0; // int32
-                pub const m_nSpinRateMinDegrees: usize = 0x1E4; // int32
-                pub const m_fSpinRateStopTime: usize = 0x1EC; // float32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MParticleMaxVersion
-            // MParticleReplacementOp
-            // MGetKV3ClassDefaults
-            pub const C_OP_LockToSavedSequentialPath = struct {
-                pub const m_flFadeStart: usize = 0x1E4; // float32
-                pub const m_flFadeEnd: usize = 0x1E8; // float32
-                pub const m_bCPPairs: usize = 0x1EC; // bool
-                pub const m_PathParams: usize = 0x1F0; // CPathParameters
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapNamedModelElementToScalar = struct {
-                pub const m_hModel: usize = 0x1E8; // CStrongHandle<InfoForResourceTypeCModel>
-                pub const m_names: usize = 0x1F0; // CUtlVector<CUtlString>
-                pub const m_values: usize = 0x208; // CUtlVector<float32>
-                pub const m_nFieldInput: usize = 0x220; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x224; // ParticleAttributeIndex_t
-                pub const m_nSetMethod: usize = 0x228; // ParticleSetMethod_t
-                pub const m_bModelFromRenderer: usize = 0x22C; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ClampVector = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_vecOutputMin: usize = 0x1E8; // CPerParticleVecInput
-                pub const m_vecOutputMax: usize = 0x8C0; // CPerParticleVecInput
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderStatusEffectCitadel = struct {
-                pub const m_pTextureColorWarp: usize = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureNormal: usize = 0x238; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureMetalness: usize = 0x240; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureRoughness: usize = 0x248; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureSelfIllum: usize = 0x250; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureDetail: usize = 0x258; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const IParticleSystemDefinition = struct {
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_WindForce = struct {
-                pub const m_vForce: usize = 0x1F0; // Vector
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetVariable = struct {
-                pub const m_variableReference: usize = 0x1E8; // CParticleVariableRef
-                pub const m_transformInput: usize = 0x238; // CParticleTransformInput
-                pub const m_positionOffset: usize = 0x2A0; // Vector
-                pub const m_rotationOffset: usize = 0x2AC; // QAngle
-                pub const m_vecInput: usize = 0x2B8; // CParticleCollectionVecInput
-                pub const m_floatInput: usize = 0x990; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 34
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderStandardLight = struct {
-                pub const m_nLightType: usize = 0x230; // ParticleLightTypeChoiceList_t
-                pub const m_nMaxAllowed: usize = 0x234; // uint16
-                pub const m_vecColorScale: usize = 0x238; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0x910; // ParticleColorBlendType_t
-                pub const m_strLightStyle: usize = 0x918; // CUtlString
-                pub const m_flLightStyleTime: usize = 0x920; // CPerParticleFloatInput
-                pub const m_flIntensity: usize = 0xA98; // CPerParticleFloatInput
-                pub const m_bCastShadows: usize = 0xC10; // bool
-                pub const m_bDynamicBounce: usize = 0xC11; // bool
-                pub const m_flBounceScale: usize = 0xC18; // CParticleCollectionFloatInput
-                pub const m_flTheta: usize = 0xD90; // CParticleCollectionFloatInput
-                pub const m_flPhi: usize = 0xF08; // CParticleCollectionFloatInput
-                pub const m_flRadiusMultiplier: usize = 0x1080; // CParticleCollectionFloatInput
-                pub const m_nAttenuationStyle: usize = 0x11F8; // StandardLightingAttenuationStyle_t
-                pub const m_flFalloffLinearity: usize = 0x1200; // CParticleCollectionFloatInput
-                pub const m_flFiftyPercentFalloff: usize = 0x1378; // CParticleCollectionFloatInput
-                pub const m_flZeroPercentFalloff: usize = 0x14F0; // CParticleCollectionFloatInput
-                pub const m_bRenderDiffuse: usize = 0x1668; // bool
-                pub const m_bRenderSpecular: usize = 0x1669; // bool
-                pub const m_lightCookie: usize = 0x1670; // CUtlString
-                pub const m_nPriority: usize = 0x1678; // int32
-                pub const m_nFogLightingMode: usize = 0x167C; // ParticleLightFogLightingMode_t
-                pub const m_flFogContribution: usize = 0x1680; // CParticleCollectionRendererFloatInput
-                pub const m_nCapsuleLightBehavior: usize = 0x17F8; // ParticleLightBehaviorChoiceList_t
-                pub const m_flCapsuleLength: usize = 0x17FC; // float32
-                pub const m_bReverseOrder: usize = 0x1800; // bool
-                pub const m_bClosedLoop: usize = 0x1801; // bool
-                pub const m_nPrevPntSource: usize = 0x1804; // ParticleAttributeIndex_t
-                pub const m_flMaxLength: usize = 0x1808; // float32
-                pub const m_flMinLength: usize = 0x180C; // float32
-                pub const m_bIgnoreDT: usize = 0x1810; // bool
-                pub const m_flConstrainRadiusToLengthRatio: usize = 0x1814; // float32
-                pub const m_flLengthScale: usize = 0x1818; // float32
-                pub const m_flLengthFadeInTime: usize = 0x181C; // float32
-            };
-            // Parent: None
-            // Field count: 15
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_DistanceToTransform = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_flInputMax: usize = 0x360; // CPerParticleFloatInput
-                pub const m_flOutputMin: usize = 0x4D8; // CPerParticleFloatInput
-                pub const m_flOutputMax: usize = 0x650; // CPerParticleFloatInput
-                pub const m_TransformStart: usize = 0x7C8; // CParticleTransformInput
-                pub const m_bLOS: usize = 0x830; // bool
-                pub const m_CollisionGroupName: usize = 0x831; // char[128]
-                pub const m_nTraceSet: usize = 0x8B4; // ParticleTraceSet_t
-                pub const m_flMaxTraceLength: usize = 0x8B8; // float32
-                pub const m_flLOSScale: usize = 0x8BC; // float32
-                pub const m_nSetMethod: usize = 0x8C0; // ParticleSetMethod_t
-                pub const m_bActiveRange: usize = 0x8C4; // bool
-                pub const m_bAdditive: usize = 0x8C5; // bool
-                pub const m_vecComponentScale: usize = 0x8C8; // CPerParticleVecInput
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapControlPointOrientationToRotation = struct {
-                pub const m_nCP: usize = 0x1E0; // int32
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_flOffsetRot: usize = 0x1E8; // float32
-                pub const m_nComponent: usize = 0x1EC; // int32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointToCenter = struct {
-                pub const m_nCP1: usize = 0x1E8; // int32
-                pub const m_vecCP1Pos: usize = 0x1EC; // Vector
-                pub const m_bUseAvgParticlePos: usize = 0x1F8; // bool
-                pub const m_nSetParent: usize = 0x1FC; // ParticleParentSetMode_t
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapAverageScalarValuetoCP = struct {
-                pub const m_nExpression: usize = 0x1E8; // SetStatisticExpressionType_t
-                pub const m_flDecimalPlaces: usize = 0x1F0; // CParticleCollectionFloatInput
-                pub const m_nOutControlPointNumber: usize = 0x368; // int32
-                pub const m_nOutVectorField: usize = 0x36C; // int32
-                pub const m_nField: usize = 0x370; // ParticleAttributeIndex_t
-                pub const m_flOutputRemap: usize = 0x378; // CParticleRemapFloatInput
-            };
-            // Parent: None
-            // Field count: 11
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapDotProductToScalar = struct {
-                pub const m_nInputCP1: usize = 0x1E0; // int32
-                pub const m_nInputCP2: usize = 0x1E4; // int32
-                pub const m_nFieldOutput: usize = 0x1E8; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1EC; // float32
-                pub const m_flInputMax: usize = 0x1F0; // float32
-                pub const m_flOutputMin: usize = 0x1F4; // float32
-                pub const m_flOutputMax: usize = 0x1F8; // float32
-                pub const m_bUseParticleVelocity: usize = 0x1FC; // bool
-                pub const m_nSetMethod: usize = 0x200; // ParticleSetMethod_t
-                pub const m_bActiveRange: usize = 0x204; // bool
-                pub const m_bUseParticleNormal: usize = 0x205; // bool
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapCPtoCP = struct {
-                pub const m_nInputControlPoint: usize = 0x1E8; // int32
-                pub const m_nOutputControlPoint: usize = 0x1EC; // int32
-                pub const m_nInputField: usize = 0x1F0; // int32
-                pub const m_nOutputField: usize = 0x1F4; // int32
-                pub const m_flInputMin: usize = 0x1F8; // float32
-                pub const m_flInputMax: usize = 0x1FC; // float32
-                pub const m_flOutputMin: usize = 0x200; // float32
-                pub const m_flOutputMax: usize = 0x204; // float32
-                pub const m_bDerivative: usize = 0x208; // bool
-                pub const m_flInterpRate: usize = 0x20C; // float32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointRotation = struct {
-                pub const m_vecRotAxis: usize = 0x1E8; // CParticleCollectionVecInput
-                pub const m_flRotRate: usize = 0x8C0; // CParticleCollectionFloatInput
-                pub const m_nCP: usize = 0xA38; // int32
-                pub const m_nLocalCP: usize = 0xA3C; // int32
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_CurlNoiseForce = struct {
-                pub const m_nNoiseType: usize = 0x1F0; // ParticleDirectionNoiseType_t
-                pub const m_vecNoiseFreq: usize = 0x1F8; // CPerParticleVecInput
-                pub const m_vecNoiseScale: usize = 0x8D0; // CPerParticleVecInput
-                pub const m_vecOffset: usize = 0xFA8; // CPerParticleVecInput
-                pub const m_vecOffsetRate: usize = 0x1680; // CPerParticleVecInput
-                pub const m_flWorleySeed: usize = 0x1D58; // CPerParticleFloatInput
-                pub const m_flWorleyJitter: usize = 0x1ED0; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_Orient2DRelToCP = struct {
-                pub const m_nCP: usize = 0x1E8; // int32
-                pub const m_nFieldOutput: usize = 0x1EC; // ParticleAttributeIndex_t
-                pub const m_flRotOffset: usize = 0x1F0; // float32
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetSimulationRate = struct {
-                pub const m_flSimulationScale: usize = 0x1E8; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_FadeIn = struct {
-                pub const m_flFadeInTimeMin: usize = 0x1E0; // float32
-                pub const m_flFadeInTimeMax: usize = 0x1E4; // float32
-                pub const m_flFadeInTimeExp: usize = 0x1E8; // float32
-                pub const m_bProportional: usize = 0x1EC; // bool
-            };
-            // Parent: None
-            // Field count: 9
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderScreenShake = struct {
-                pub const m_flDurationScale: usize = 0x230; // float32
-                pub const m_flRadiusScale: usize = 0x234; // float32
-                pub const m_flFrequencyScale: usize = 0x238; // float32
-                pub const m_flAmplitudeScale: usize = 0x23C; // float32
-                pub const m_nRadiusField: usize = 0x240; // ParticleAttributeIndex_t
-                pub const m_nDurationField: usize = 0x244; // ParticleAttributeIndex_t
-                pub const m_nFrequencyField: usize = 0x248; // ParticleAttributeIndex_t
-                pub const m_nAmplitudeField: usize = 0x24C; // ParticleAttributeIndex_t
-                pub const m_nFilterCP: usize = 0x250; // int32
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapBoundingVolumetoCP = struct {
-                pub const m_nOutControlPointNumber: usize = 0x1E8; // int32
-                pub const m_flInputMin: usize = 0x1EC; // float32
-                pub const m_flInputMax: usize = 0x1F0; // float32
-                pub const m_flOutputMin: usize = 0x1F4; // float32
-                pub const m_flOutputMax: usize = 0x1F8; // float32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_HSVShiftToCP = struct {
-                pub const m_nColorCP: usize = 0x1E8; // int32
-                pub const m_nColorGemEnableCP: usize = 0x1EC; // int32
-                pub const m_nOutputCP: usize = 0x1F0; // int32
-                pub const m_DefaultHSVColor: usize = 0x1F4; // Color
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapVectorToRotations = struct {
-                pub const m_vecInput: usize = 0x1E0; // CPerParticleVecInput
-                pub const m_vecRotation: usize = 0x8B8; // CPerParticleVecInput
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_GlobalScale = struct {
-                pub const m_flScale: usize = 0x1E8; // float32
-                pub const m_nScaleControlPointNumber: usize = 0x1EC; // int32
-                pub const m_nControlPointNumber: usize = 0x1F0; // int32
-                pub const m_bScaleRadius: usize = 0x1F4; // bool
-                pub const m_bScalePosition: usize = 0x1F5; // bool
-                pub const m_bScaleVelocity: usize = 0x1F6; // bool
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RadiusFromCPObject = struct {
-                pub const m_nControlPoint: usize = 0x1E8; // int32
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_InitialVelocityFromHitbox = struct {
-                pub const m_flVelocityMin: usize = 0x1E8; // float32
-                pub const m_flVelocityMax: usize = 0x1EC; // float32
-                pub const m_nControlPointNumber: usize = 0x1F0; // int32
-                pub const m_HitboxSetName: usize = 0x1F4; // char[128]
-                pub const m_bUseBones: usize = 0x274; // bool
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_LerpVector = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_vecOutput: usize = 0x1E4; // Vector
-                pub const m_flStartTime: usize = 0x1F0; // float32
-                pub const m_flEndTime: usize = 0x1F4; // float32
-                pub const m_nSetMethod: usize = 0x1F8; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointFieldToWater = struct {
-                pub const m_nSourceCP: usize = 0x1E8; // int32
-                pub const m_nDestCP: usize = 0x1EC; // int32
-                pub const m_nCPField: usize = 0x1F0; // int32
-            };
-            // Parent: None
-            // Field count: 9
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const TextureGroup_t = struct {
-                pub const m_bEnabled: usize = 0x0; // bool
-                pub const m_bReplaceTextureWithGradient: usize = 0x1; // bool
-                pub const m_hTexture: usize = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_Gradient: usize = 0x10; // CColorGradient
-                pub const m_nTextureType: usize = 0x28; // SpriteCardTextureType_t
-                pub const m_nTextureChannels: usize = 0x2C; // SpriteCardTextureChannel_t
-                pub const m_nTextureBlendMode: usize = 0x30; // ParticleTextureLayerBlendType_t
-                pub const m_flTextureBlend: usize = 0x38; // CParticleCollectionRendererFloatInput
-                pub const m_TextureControls: usize = 0x1B0; // TextureControls_t
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_TimeVaryingForce = struct {
-                pub const m_flStartLerpTime: usize = 0x1F0; // float32
-                pub const m_StartingForce: usize = 0x1F4; // Vector
-                pub const m_flEndLerpTime: usize = 0x200; // float32
-                pub const m_EndingForce: usize = 0x204; // Vector
-            };
-            // Parent: None
-            // Field count: 9
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetCPOrientationToGroundNormal = struct {
-                pub const m_flInterpRate: usize = 0x1E0; // float32
-                pub const m_flMaxTraceLength: usize = 0x1E4; // float32
-                pub const m_flTolerance: usize = 0x1E8; // float32
-                pub const m_flTraceOffset: usize = 0x1EC; // float32
-                pub const m_CollisionGroupName: usize = 0x1F0; // char[128]
-                pub const m_nTraceSet: usize = 0x270; // ParticleTraceSet_t
-                pub const m_nInputCP: usize = 0x274; // int32
-                pub const m_nOutputCP: usize = 0x278; // int32
-                pub const m_bIncludeWater: usize = 0x288; // bool
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SnapshotSkinToBones = struct {
-                pub const m_bTransformNormals: usize = 0x1E0; // bool
-                pub const m_bTransformRadii: usize = 0x1E1; // bool
-                pub const m_nControlPointNumber: usize = 0x1E4; // int32
-                pub const m_flLifeTimeFadeStart: usize = 0x1E8; // float32
-                pub const m_flLifeTimeFadeEnd: usize = 0x1EC; // float32
-                pub const m_flJumpThreshold: usize = 0x1F0; // float32
-                pub const m_flPrevPosScale: usize = 0x1F4; // float32
-            };
-            // Parent: None
-            // Field count: 13
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateWithinSphereTransform = struct {
-                pub const m_fRadiusMin: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_fRadiusMax: usize = 0x360; // CPerParticleFloatInput
-                pub const m_vecDistanceBias: usize = 0x4D8; // CPerParticleVecInput
-                pub const m_vecDistanceBiasAbs: usize = 0xBB0; // Vector
-                pub const m_TransformInput: usize = 0xBC0; // CParticleTransformInput
-                pub const m_fSpeedMin: usize = 0xC28; // CPerParticleFloatInput
-                pub const m_fSpeedMax: usize = 0xDA0; // CPerParticleFloatInput
-                pub const m_fSpeedRandExp: usize = 0xF18; // float32
-                pub const m_bLocalCoords: usize = 0xF1C; // bool
-                pub const m_LocalCoordinateSystemSpeedMin: usize = 0xF20; // CPerParticleVecInput
-                pub const m_LocalCoordinateSystemSpeedMax: usize = 0x15F8; // CPerParticleVecInput
-                pub const m_nFieldOutput: usize = 0x1CD0; // ParticleAttributeIndex_t
-                pub const m_nFieldVelocity: usize = 0x1CD4; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RadiusDecay = struct {
-                pub const m_flMinRadius: usize = 0x1E0; // float32
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapNamedModelBodyPartToScalar = struct {
-            };
-            // Parent: None
-            // Field count: 12
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapScalarToVector = struct {
-                pub const m_nFieldInput: usize = 0x1E8; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x1EC; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1F0; // float32
-                pub const m_flInputMax: usize = 0x1F4; // float32
-                pub const m_vecOutputMin: usize = 0x1F8; // Vector
-                pub const m_vecOutputMax: usize = 0x204; // Vector
-                pub const m_flStartTime: usize = 0x210; // float32
-                pub const m_flEndTime: usize = 0x214; // float32
-                pub const m_nSetMethod: usize = 0x218; // ParticleSetMethod_t
-                pub const m_nControlPointNumber: usize = 0x21C; // int32
-                pub const m_bLocalCoords: usize = 0x220; // bool
-                pub const m_flRemapBias: usize = 0x224; // float32
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_InitialSequenceFromModel = struct {
-                pub const m_nControlPointNumber: usize = 0x1E8; // int32
-                pub const m_nFieldOutput: usize = 0x1EC; // ParticleAttributeIndex_t
-                pub const m_nFieldOutputAnim: usize = 0x1F0; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1F4; // float32
-                pub const m_flInputMax: usize = 0x1F8; // float32
-                pub const m_flOutputMin: usize = 0x1FC; // float32
-                pub const m_flOutputMax: usize = 0x200; // float32
-                pub const m_nSetMethod: usize = 0x204; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 15
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_NoiseEmitter = struct {
-                pub const m_flEmissionDuration: usize = 0x1E8; // float32
-                pub const m_flStartTime: usize = 0x1EC; // float32
-                pub const m_flEmissionScale: usize = 0x1F0; // float32
-                pub const m_nScaleControlPoint: usize = 0x1F4; // int32
-                pub const m_nScaleControlPointField: usize = 0x1F8; // int32
-                pub const m_nWorldNoisePoint: usize = 0x1FC; // int32
-                pub const m_bAbsVal: usize = 0x200; // bool
-                pub const m_bAbsValInv: usize = 0x201; // bool
-                pub const m_flOffset: usize = 0x204; // float32
-                pub const m_flOutputMin: usize = 0x208; // float32
-                pub const m_flOutputMax: usize = 0x20C; // float32
-                pub const m_flNoiseScale: usize = 0x210; // float32
-                pub const m_flWorldNoiseScale: usize = 0x214; // float32
-                pub const m_vecOffsetLoc: usize = 0x218; // Vector
-                pub const m_flWorldTimeScale: usize = 0x224; // float32
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CParticleFunctionInitializer = struct {
-                pub const m_nAssociatedEmitterIndex: usize = 0x1E0; // int32
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SelectivelyEnableChildren = struct {
-                pub const m_nChildGroupID: usize = 0x1E8; // CParticleCollectionFloatInput
-                pub const m_nFirstChild: usize = 0x360; // CParticleCollectionFloatInput
-                pub const m_nNumChildrenToEnable: usize = 0x4D8; // CParticleCollectionFloatInput
-                pub const m_bPlayEndcapOnStop: usize = 0x650; // bool
-                pub const m_bDestroyImmediately: usize = 0x651; // bool
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const ModelReference_t = struct {
-                pub const m_model: usize = 0x0; // CStrongHandle<InfoForResourceTypeCModel>
-                pub const m_flRelativeProbabilityOfSpawn: usize = 0x8; // float32
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_PlanarConstraint = struct {
-                pub const m_PointOnPlane: usize = 0x1E0; // Vector
-                pub const m_PlaneNormal: usize = 0x1EC; // Vector
-                pub const m_nControlPointNumber: usize = 0x1F8; // int32
-                pub const m_bGlobalOrigin: usize = 0x1FC; // bool
-                pub const m_bGlobalNormal: usize = 0x1FD; // bool
-                pub const m_flRadiusScale: usize = 0x200; // CPerParticleFloatInput
-                pub const m_flMaximumDistanceToCP: usize = 0x378; // CParticleCollectionFloatInput
-                pub const m_bUseOldCode: usize = 0x4F0; // bool
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateFromCPs = struct {
-                pub const m_nIncrement: usize = 0x1E8; // int32
-                pub const m_nMinCP: usize = 0x1EC; // int32
-                pub const m_nMaxCP: usize = 0x1F0; // int32
-                pub const m_nDynamicCPCount: usize = 0x1F8; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_LockPoints = struct {
-                pub const m_nMinCol: usize = 0x1E0; // int32
-                pub const m_nMaxCol: usize = 0x1E4; // int32
-                pub const m_nMinRow: usize = 0x1E8; // int32
-                pub const m_nMaxRow: usize = 0x1EC; // int32
-                pub const m_nControlPoint: usize = 0x1F0; // int32
-                pub const m_flBlendValue: usize = 0x1F4; // float32
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_CreateSpiralSphere = struct {
-                pub const m_TransformInput: usize = 0x1E8; // CParticleTransformInput
-                pub const m_flDensity: usize = 0x250; // CPerParticleFloatInput
-                pub const m_flInitialRadius: usize = 0x3C8; // CPerParticleFloatInput
-                pub const m_flInitialSpeedMin: usize = 0x540; // CPerParticleFloatInput
-                pub const m_flInitialSpeedMax: usize = 0x6B8; // CPerParticleFloatInput
-                pub const m_bUseParticleCount: usize = 0x830; // bool
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_CPVelocityForce = struct {
-                pub const m_nControlPointNumber: usize = 0x1F0; // int32
-                pub const m_flScale: usize = 0x1F8; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapNamedModelElementEndCap = struct {
-                pub const m_hModel: usize = 0x1E0; // CStrongHandle<InfoForResourceTypeCModel>
-                pub const m_inNames: usize = 0x1E8; // CUtlVector<CUtlString>
-                pub const m_outNames: usize = 0x200; // CUtlVector<CUtlString>
-                pub const m_fallbackNames: usize = 0x218; // CUtlVector<CUtlString>
-                pub const m_bModelFromRenderer: usize = 0x230; // bool
-                pub const m_nFieldInput: usize = 0x234; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x238; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_ScaleVelocity = struct {
-                pub const m_vecScale: usize = 0x1E8; // CParticleCollectionVecInput
-            };
-            // Parent: None
-            // Field count: 9
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_MoveToHitbox = struct {
-                pub const m_modelInput: usize = 0x1E0; // CParticleModelInput
-                pub const m_transformInput: usize = 0x240; // CParticleTransformInput
-                pub const m_flLifeTimeLerpStart: usize = 0x2AC; // float32
-                pub const m_flLifeTimeLerpEnd: usize = 0x2B0; // float32
-                pub const m_flPrevPosScale: usize = 0x2B4; // float32
-                pub const m_HitboxSetName: usize = 0x2B8; // char[128]
-                pub const m_bUseBones: usize = 0x338; // bool
-                pub const m_nLerpType: usize = 0x33C; // HitboxLerpType_t
-                pub const m_flInterpolation: usize = 0x340; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_PinRopeSegmentParticleToParent = struct {
-                pub const m_nParticleSelection: usize = 0x1E0; // ParticleSelection_t
-                pub const m_nParticleNumber: usize = 0x1E8; // CParticleCollectionFloatInput
-                pub const m_flInterpolation: usize = 0x360; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_PointList = struct {
-                pub const m_nFieldOutput: usize = 0x1E8; // ParticleAttributeIndex_t
-                pub const m_pointList: usize = 0x1F0; // CUtlVector<PointDefinition_t>
-                pub const m_bPlaceAlongPath: usize = 0x208; // bool
-                pub const m_bClosedLoop: usize = 0x209; // bool
-                pub const m_nNumPointsAlongPath: usize = 0x20C; // int32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_LerpToOtherAttribute = struct {
-                pub const m_flInterpolation: usize = 0x1E0; // CPerParticleFloatInput
-                pub const m_nFieldInputFrom: usize = 0x358; // ParticleAttributeIndex_t
-                pub const m_nFieldInput: usize = 0x35C; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x360; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RandomColor = struct {
-                pub const m_ColorMin: usize = 0x204; // Color
-                pub const m_ColorMax: usize = 0x208; // Color
-                pub const m_TintMin: usize = 0x20C; // Color
-                pub const m_TintMax: usize = 0x210; // Color
-                pub const m_flTintPerc: usize = 0x214; // float32
-                pub const m_flUpdateThreshold: usize = 0x218; // float32
-                pub const m_nTintCP: usize = 0x21C; // int32
-                pub const m_nFieldOutput: usize = 0x220; // ParticleAttributeIndex_t
-                pub const m_nTintBlendMode: usize = 0x224; // ParticleColorBlendMode_t
-                pub const m_flLightAmplification: usize = 0x228; // float32
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetGravityToCP = struct {
-                pub const m_nCPInput: usize = 0x1E8; // int32
-                pub const m_nCPOutput: usize = 0x1EC; // int32
-                pub const m_flScale: usize = 0x1F0; // CParticleCollectionFloatInput
-                pub const m_bSetPosition: usize = 0x368; // bool
-                pub const m_bSetOrientation: usize = 0x369; // bool
-                pub const m_bSetZDown: usize = 0x36A; // bool
-            };
-            // Parent: None
-            // Field count: 12
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapParticleCountToScalar = struct {
-                pub const m_nFieldOutput: usize = 0x1E8; // ParticleAttributeIndex_t
-                pub const m_nInputMin: usize = 0x1EC; // int32
-                pub const m_nInputMax: usize = 0x1F0; // int32
-                pub const m_nScaleControlPoint: usize = 0x1F4; // int32
-                pub const m_nScaleControlPointField: usize = 0x1F8; // int32
-                pub const m_flOutputMin: usize = 0x1FC; // float32
-                pub const m_flOutputMax: usize = 0x200; // float32
-                pub const m_nSetMethod: usize = 0x204; // ParticleSetMethod_t
-                pub const m_bActiveRange: usize = 0x208; // bool
-                pub const m_bInvert: usize = 0x209; // bool
-                pub const m_bWrap: usize = 0x20A; // bool
-                pub const m_flRemapBias: usize = 0x20C; // float32
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_InheritFromParentParticles = struct {
-                pub const m_flScale: usize = 0x1E8; // float32
-                pub const m_nFieldOutput: usize = 0x1EC; // ParticleAttributeIndex_t
-                pub const m_nIncrement: usize = 0x1F0; // int32
-                pub const m_bRandomDistribution: usize = 0x1F4; // bool
-                pub const m_nRandomSeed: usize = 0x1F8; // int32
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RampScalarLinearSimple = struct {
-                pub const m_Rate: usize = 0x1E0; // float32
-                pub const m_flStartTime: usize = 0x1E4; // float32
-                pub const m_flEndTime: usize = 0x1E8; // float32
-                pub const m_nField: usize = 0x210; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 9
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_ChaoticAttractor = struct {
-                pub const m_flAParm: usize = 0x1E8; // float32
-                pub const m_flBParm: usize = 0x1EC; // float32
-                pub const m_flCParm: usize = 0x1F0; // float32
-                pub const m_flDParm: usize = 0x1F4; // float32
-                pub const m_flScale: usize = 0x1F8; // float32
-                pub const m_flSpeedMin: usize = 0x1FC; // float32
-                pub const m_flSpeedMax: usize = 0x200; // float32
-                pub const m_nBaseCP: usize = 0x204; // int32
-                pub const m_bUniformSpeed: usize = 0x208; // bool
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_MovementRigidAttachToCP = struct {
-                pub const m_nControlPointNumber: usize = 0x1E0; // int32
-                pub const m_nScaleControlPoint: usize = 0x1E4; // int32
-                pub const m_nScaleCPField: usize = 0x1E8; // int32
-                pub const m_nFieldInput: usize = 0x1EC; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x1F0; // ParticleAttributeIndex_t
-                pub const m_bOffsetLocal: usize = 0x1F4; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderFlattenGrass = struct {
-                pub const m_flFlattenStrength: usize = 0x230; // float32
-                pub const m_nStrengthFieldOverride: usize = 0x234; // ParticleAttributeIndex_t
-                pub const m_flRadiusScale: usize = 0x238; // float32
-            };
-            // Parent: None
-            // Field count: 20
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderLightBeam = struct {
-                pub const m_nMaxAllowed: usize = 0x230; // uint16
-                pub const m_vColorBlend: usize = 0x238; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0x910; // ParticleColorBlendType_t
-                pub const m_strLightStyle: usize = 0x918; // CUtlString
-                pub const m_flLightStyleTime: usize = 0x920; // CPerParticleFloatInput
-                pub const m_flBrightnessLumensPerMeter: usize = 0xA98; // CParticleCollectionFloatInput
-                pub const m_flNumberOfLightsToCreate: usize = 0xC10; // CParticleCollectionFloatInput
-                pub const m_bCastShadows: usize = 0xD88; // bool
-                pub const m_bDynamicBounce: usize = 0xD89; // bool
-                pub const m_flBounceScale: usize = 0xD90; // CParticleCollectionFloatInput
-                pub const m_flSkirt: usize = 0xF08; // CParticleCollectionFloatInput
-                pub const m_flRange: usize = 0x1080; // CParticleCollectionFloatInput
-                pub const m_flThickness: usize = 0x11F8; // CParticleCollectionFloatInput
-                pub const m_flInnerConeAngle: usize = 0x1370; // CParticleCollectionFloatInput
-                pub const m_flOuterConeAngle: usize = 0x14E8; // CParticleCollectionFloatInput
-                pub const m_vecConeRotationOffset: usize = 0x1660; // CParticleCollectionVecInput
-                pub const m_nFogLightingMode: usize = 0x1D38; // ParticleLightFogLightingMode_t
-                pub const m_flFogContribution: usize = 0x1D40; // CParticleCollectionRendererFloatInput
-                pub const m_flRenderFilter: usize = 0x1EB8; // CPerParticleFloatInput
-                pub const m_bDebugOrientation: usize = 0x2030; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_SkyVisCull = struct {
-                pub const m_vecTestDir: usize = 0x1E8; // CParticleCollectionVecInput
-                pub const m_nTraceSet: usize = 0x8C0; // ParticleTraceSet_t
-                pub const m_bCullOnSky: usize = 0x8C4; // bool
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_EnableChildrenFromParentParticleCount = struct {
-                pub const m_nChildGroupID: usize = 0x1E8; // int32
-                pub const m_nFirstChild: usize = 0x1EC; // int32
-                pub const m_nNumChildrenToEnable: usize = 0x1F0; // CParticleCollectionFloatInput
-                pub const m_bDisableChildren: usize = 0x368; // bool
-                pub const m_bPlayEndcapOnStop: usize = 0x369; // bool
-                pub const m_bDestroyImmediately: usize = 0x36A; // bool
-            };
-            // Parent: None
-            // Field count: 15
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_DistanceToCPInit = struct {
-                pub const m_nFieldOutput: usize = 0x1E8; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1F0; // CPerParticleFloatInput
-                pub const m_flInputMax: usize = 0x368; // CPerParticleFloatInput
-                pub const m_flOutputMin: usize = 0x4E0; // CPerParticleFloatInput
-                pub const m_flOutputMax: usize = 0x658; // CPerParticleFloatInput
-                pub const m_nStartCP: usize = 0x7D0; // int32
-                pub const m_bLOS: usize = 0x7D4; // bool
-                pub const m_CollisionGroupName: usize = 0x7D5; // char[128]
-                pub const m_nTraceSet: usize = 0x858; // ParticleTraceSet_t
-                pub const m_flMaxTraceLength: usize = 0x860; // CPerParticleFloatInput
-                pub const m_flLOSScale: usize = 0x9D8; // float32
-                pub const m_nSetMethod: usize = 0x9DC; // ParticleSetMethod_t
-                pub const m_bActiveRange: usize = 0x9E0; // bool
-                pub const m_vecDistanceScale: usize = 0x9E4; // Vector
-                pub const m_flRemapBias: usize = 0x9F0; // float32
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_EndCapDecay = struct {
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ForceBasedOnDistanceToPlane = struct {
-                pub const m_flMinDist: usize = 0x1F0; // float32
-                pub const m_vecForceAtMinDist: usize = 0x1F4; // Vector
-                pub const m_flMaxDist: usize = 0x200; // float32
-                pub const m_vecForceAtMaxDist: usize = 0x204; // Vector
-                pub const m_vecPlaneNormal: usize = 0x210; // Vector
-                pub const m_nControlPointNumber: usize = 0x21C; // int32
-                pub const m_flExponent: usize = 0x220; // float32
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapDensityToVector = struct {
-                pub const m_flRadiusScale: usize = 0x1E0; // float32
-                pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
-                pub const m_flDensityMin: usize = 0x1E8; // float32
-                pub const m_flDensityMax: usize = 0x1EC; // float32
-                pub const m_vecOutputMin: usize = 0x1F0; // Vector
-                pub const m_vecOutputMax: usize = 0x1FC; // Vector
-                pub const m_bUseParentDensity: usize = 0x208; // bool
-                pub const m_nVoxelGridResolution: usize = 0x20C; // int32
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const ParticleControlPointConfiguration_t = struct {
-                pub const m_name: usize = 0x0; // CUtlString
-                pub const m_drivers: usize = 0x8; // CUtlVector<ParticleControlPointDriver_t>
-                pub const m_previewState: usize = 0x20; // ParticlePreviewState_t
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_SetRigidAttachment = struct {
-                pub const m_nControlPointNumber: usize = 0x1E8; // int32
-                pub const m_nFieldInput: usize = 0x1EC; // ParticleAttributeIndex_t
-                pub const m_nFieldOutput: usize = 0x1F0; // ParticleAttributeIndex_t
-                pub const m_bLocalSpace: usize = 0x1F4; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const MaterialVariable_t = struct {
-                pub const m_strVariable: usize = 0x0; // CUtlString
-                pub const m_nVariableField: usize = 0x8; // ParticleAttributeIndex_t
-                pub const m_flScale: usize = 0xC; // float32
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CParticleFunctionConstraint = struct {
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapSpeed = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1E4; // float32
-                pub const m_flInputMax: usize = 0x1E8; // float32
-                pub const m_flOutputMin: usize = 0x1EC; // float32
-                pub const m_flOutputMax: usize = 0x1F0; // float32
-                pub const m_nSetMethod: usize = 0x1F4; // ParticleSetMethod_t
-                pub const m_bIgnoreDelta: usize = 0x1F8; // bool
-            };
-            // Parent: None
-            // Field count: 58
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderModels = struct {
-                pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x230; // bool
-                pub const m_bOnlyRenderInEffectsWaterPass: usize = 0x231; // bool
-                pub const m_bUseMixedResolutionRendering: usize = 0x232; // bool
-                pub const m_bOnlyRenderInEffecsGameOverlay: usize = 0x233; // bool
-                pub const m_ModelList: usize = 0x238; // CUtlVector<ModelReference_t>
-                pub const m_nBodyGroupField: usize = 0x250; // ParticleAttributeIndex_t
-                pub const m_nSubModelField: usize = 0x254; // ParticleAttributeIndex_t
-                pub const m_bIgnoreNormal: usize = 0x258; // bool
-                pub const m_bOrientZ: usize = 0x259; // bool
-                pub const m_bCenterOffset: usize = 0x25A; // bool
-                pub const m_vecLocalOffset: usize = 0x260; // CPerParticleVecInput
-                pub const m_vecLocalRotation: usize = 0x938; // CPerParticleVecInput
-                pub const m_bIgnoreRadius: usize = 0x1010; // bool
-                pub const m_nModelScaleCP: usize = 0x1014; // int32
-                pub const m_vecComponentScale: usize = 0x1018; // CPerParticleVecInput
-                pub const m_bLocalScale: usize = 0x16F0; // bool
-                pub const m_nSizeCullBloat: usize = 0x16F4; // int32
-                pub const m_bAnimated: usize = 0x16F8; // bool
-                pub const m_flAnimationRate: usize = 0x1700; // CPerParticleFloatInput
-                pub const m_bScaleAnimationRate: usize = 0x1878; // bool
-                pub const m_bForceLoopingAnimation: usize = 0x1879; // bool
-                pub const m_bResetAnimOnStop: usize = 0x187A; // bool
-                pub const m_bManualAnimFrame: usize = 0x187B; // bool
-                pub const m_nAnimationScaleField: usize = 0x187C; // ParticleAttributeIndex_t
-                pub const m_nAnimationField: usize = 0x1880; // ParticleAttributeIndex_t
-                pub const m_nManualFrameField: usize = 0x1884; // ParticleAttributeIndex_t
-                pub const m_ActivityName: usize = 0x1888; // char[256]
-                pub const m_SequenceName: usize = 0x1988; // char[256]
-                pub const m_bEnableClothSimulation: usize = 0x1A88; // bool
-                pub const m_bDisableClothGroundCollision: usize = 0x1A89; // bool
-                pub const m_ClothEffectName: usize = 0x1A8A; // char[64]
-                pub const m_hOverrideMaterial: usize = 0x1AD0; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                pub const m_bOverrideTranslucentMaterials: usize = 0x1AD8; // bool
-                pub const m_nSkin: usize = 0x1AE0; // CPerParticleFloatInput
-                pub const m_MaterialVars: usize = 0x1C58; // CUtlVector<MaterialVariable_t>
-                pub const m_flRenderFilter: usize = 0x1C70; // CPerParticleFloatInput
-                pub const m_flManualModelSelection: usize = 0x1DE8; // CPerParticleFloatInput
-                pub const m_modelInput: usize = 0x1F60; // CParticleModelInput
-                pub const m_nLOD: usize = 0x1FC0; // int32
-                pub const m_EconSlotName: usize = 0x1FC4; // char[256]
-                pub const m_bOriginalModel: usize = 0x20C4; // bool
-                pub const m_bSuppressTint: usize = 0x20C5; // bool
-                pub const m_nSubModelFieldType: usize = 0x20C8; // RenderModelSubModelFieldType_t
-                pub const m_bDisableShadows: usize = 0x20CC; // bool
-                pub const m_bDisableDepthPrepass: usize = 0x20CD; // bool
-                pub const m_bAcceptsDecals: usize = 0x20CE; // bool
-                pub const m_bForceDrawInterlevedWithSiblings: usize = 0x20CF; // bool
-                pub const m_bDoNotDrawInParticlePass: usize = 0x20D0; // bool
-                pub const m_bAllowApproximateTransforms: usize = 0x20D1; // bool
-                pub const m_szRenderAttribute: usize = 0x20D2; // char[260]
-                pub const m_flRadiusScale: usize = 0x21D8; // CParticleCollectionFloatInput
-                pub const m_flAlphaScale: usize = 0x2350; // CParticleCollectionFloatInput
-                pub const m_flRollScale: usize = 0x24C8; // CParticleCollectionFloatInput
-                pub const m_nAlpha2Field: usize = 0x2640; // ParticleAttributeIndex_t
-                pub const m_vecColorScale: usize = 0x2648; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0x2D20; // ParticleColorBlendType_t
-                pub const m_strLightStyle: usize = 0x2D28; // CUtlString
-                pub const m_flLightStyleTime: usize = 0x2D30; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderClientPhysicsImpulse = struct {
-                pub const m_flRadius: usize = 0x230; // CPerParticleFloatInput
-                pub const m_flMagnitude: usize = 0x3A8; // CPerParticleFloatInput
-                pub const m_nSimIdFilter: usize = 0x520; // int32
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const CParticleFunctionEmitter = struct {
-                pub const m_nEmitterIndex: usize = 0x1E0; // int32
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapNamedModelMeshGroupToScalar = struct {
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointOrientationToCPVelocity = struct {
-                pub const m_nCPInput: usize = 0x1E8; // int32
-                pub const m_nCPOutput: usize = 0x1EC; // int32
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RopeSpringConstraint = struct {
-                pub const m_flRestLength: usize = 0x1E0; // CParticleCollectionFloatInput
-                pub const m_flMinDistance: usize = 0x358; // CParticleCollectionFloatInput
-                pub const m_flMaxDistance: usize = 0x4D0; // CParticleCollectionFloatInput
-                pub const m_flAdjustmentScale: usize = 0x648; // float32
-                pub const m_flInitialRestingLength: usize = 0x650; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_PositionWarpScalar = struct {
-                pub const m_vecWarpMin: usize = 0x1E8; // Vector
-                pub const m_vecWarpMax: usize = 0x1F4; // Vector
-                pub const m_InputValue: usize = 0x200; // CPerParticleFloatInput
-                pub const m_flPrevPosScale: usize = 0x378; // float32
-                pub const m_nScaleControlPointNumber: usize = 0x37C; // int32
-                pub const m_nControlPointNumber: usize = 0x380; // int32
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ForceControlPointStub = struct {
-                pub const m_ControlPoint: usize = 0x1E8; // int32
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_VectorNoise = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_vecOutputMin: usize = 0x1E4; // Vector
-                pub const m_vecOutputMax: usize = 0x1F0; // Vector
-                pub const m_fl4NoiseScale: usize = 0x1FC; // float32
-                pub const m_bAdditive: usize = 0x200; // bool
-                pub const m_bOffset: usize = 0x201; // bool
-                pub const m_flNoiseAnimationTimeScale: usize = 0x204; // float32
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapParticleCountToScalar = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_nInputMin: usize = 0x1E8; // CParticleCollectionFloatInput
-                pub const m_nInputMax: usize = 0x360; // CParticleCollectionFloatInput
-                pub const m_flOutputMin: usize = 0x4D8; // CParticleCollectionFloatInput
-                pub const m_flOutputMax: usize = 0x650; // CParticleCollectionFloatInput
-                pub const m_bActiveRange: usize = 0x7C8; // bool
-                pub const m_nSetMethod: usize = 0x7CC; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_QuantizeFloat = struct {
-                pub const m_InputValue: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_nOutputField: usize = 0x360; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 11
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RemapModelVolumetoCP = struct {
-                pub const m_nBBoxType: usize = 0x1E8; // BBoxVolumeType_t
-                pub const m_nInControlPointNumber: usize = 0x1EC; // int32
-                pub const m_nOutControlPointNumber: usize = 0x1F0; // int32
-                pub const m_nOutControlPointMaxNumber: usize = 0x1F4; // int32
-                pub const m_nField: usize = 0x1F8; // int32
-                pub const m_flInputMin: usize = 0x1FC; // float32
-                pub const m_flInputMax: usize = 0x200; // float32
-                pub const m_flOutputMin: usize = 0x204; // float32
-                pub const m_flOutputMax: usize = 0x208; // float32
-                pub const m_bBBoxOnly: usize = 0x20C; // bool
-                pub const m_bCubeRoot: usize = 0x20D; // bool
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetToCP = struct {
-                pub const m_nControlPointNumber: usize = 0x1E0; // int32
-                pub const m_vecOffset: usize = 0x1E4; // Vector
-                pub const m_bOffsetLocal: usize = 0x1F0; // bool
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const ParticleControlPointDriver_t = struct {
-                pub const m_iControlPoint: usize = 0x0; // ParticleParamID_t
-                pub const m_iAttachType: usize = 0x10; // ParticleAttachment_t
-                pub const m_attachmentName: usize = 0x18; // CUtlString
-                pub const m_vecOffset: usize = 0x20; // Vector
-                pub const m_angOffset: usize = 0x2C; // QAngle
-                pub const m_entityName: usize = 0x38; // CUtlString
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ParentVortices = struct {
-                pub const m_flForceScale: usize = 0x1F0; // float32
-                pub const m_vecTwistAxis: usize = 0x1F4; // Vector
-                pub const m_bFlipBasedOnYaw: usize = 0x200; // bool
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetControlPointToCPVelocity = struct {
-                pub const m_nCPInput: usize = 0x1E8; // int32
-                pub const m_nCPOutputVel: usize = 0x1EC; // int32
-                pub const m_bNormalize: usize = 0x1F0; // bool
-                pub const m_nCPOutputMag: usize = 0x1F4; // int32
-                pub const m_nCPField: usize = 0x1F8; // int32
-                pub const m_vecComparisonVelocity: usize = 0x200; // CParticleCollectionVecInput
-            };
-            // Parent: None
-            // Field count: 15
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ClientPhysics = struct {
-                pub const m_strPhysicsType: usize = 0x230; // CUtlString
-                pub const m_bStartAsleep: usize = 0x238; // bool
-                pub const m_flPlayerWakeRadius: usize = 0x240; // CParticleCollectionFloatInput
-                pub const m_flVehicleWakeRadius: usize = 0x3B8; // CParticleCollectionFloatInput
-                pub const m_bUseHighQualitySimulation: usize = 0x530; // bool
-                pub const m_nMaxParticleCount: usize = 0x534; // int32
-                pub const m_bRespectExclusionVolumes: usize = 0x538; // bool
-                pub const m_bKillParticles: usize = 0x539; // bool
-                pub const m_bDeleteSim: usize = 0x53A; // bool
-                pub const m_nControlPoint: usize = 0x53C; // int32
-                pub const m_nForcedSimId: usize = 0x540; // int32
-                pub const m_nColorBlendType: usize = 0x544; // ParticleColorBlendType_t
-                pub const m_nForcedStatusEffects: usize = 0x548; // ParticleAttrBoxFlags_t
-                pub const m_nNoCollisionAttribute: usize = 0x54C; // ParticleAttributeIndex_t
-                pub const m_nZeroGravityAttribute: usize = 0x550; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SpinYaw = struct {
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const PointDefinitionWithTimeValues_t = struct {
-                pub const m_flTimeDuration: usize = 0x14; // float32
-            };
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const RenderProjectedMaterial_t = struct {
-                pub const m_hMaterial: usize = 0x0; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_SetFloatAttributeToVectorExpression = struct {
-                pub const m_nExpression: usize = 0x1E8; // VectorFloatExpressionType_t
-                pub const m_vInput1: usize = 0x1F0; // CPerParticleVecInput
-                pub const m_vInput2: usize = 0x8C8; // CPerParticleVecInput
-                pub const m_flOutputRemap: usize = 0xFA0; // CParticleRemapFloatInput
-                pub const m_nOutputField: usize = 0x1118; // ParticleAttributeIndex_t
-                pub const m_nSetMethod: usize = 0x111C; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 11
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_ExternalWindForce = struct {
-                pub const m_vecSamplePosition: usize = 0x1F0; // CPerParticleVecInput
-                pub const m_vecScale: usize = 0x8C8; // CPerParticleVecInput
-                pub const m_bSampleWind: usize = 0xFA0; // bool
-                pub const m_bSampleWater: usize = 0xFA1; // bool
-                pub const m_bDampenNearWaterPlane: usize = 0xFA2; // bool
-                pub const m_bSampleGravity: usize = 0xFA3; // bool
-                pub const m_vecGravityForce: usize = 0xFA8; // CPerParticleVecInput
-                pub const m_bUseBasicMovementGravity: usize = 0x1680; // bool
-                pub const m_flLocalGravityScale: usize = 0x1688; // CPerParticleFloatInput
-                pub const m_flLocalBuoyancyScale: usize = 0x1800; // CPerParticleFloatInput
-                pub const m_vecBuoyancyForce: usize = 0x1978; // CPerParticleVecInput
-            };
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_ModelCull = struct {
-                pub const m_nControlPointNumber: usize = 0x1E8; // int32
-                pub const m_bBoundBox: usize = 0x1EC; // bool
-                pub const m_bCullOutside: usize = 0x1ED; // bool
-                pub const m_bUseBones: usize = 0x1EE; // bool
-                pub const m_HitboxSetName: usize = 0x1EF; // char[128]
-            };
-            // Parent: None
-            // Field count: 29
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderSprites = struct {
-                pub const m_nSequenceOverride: usize = 0x2ED8; // CParticleCollectionRendererFloatInput
-                pub const m_bSequenceNumbersAreRawSequenceIndices: usize = 0x3050; // bool
-                pub const m_nOrientationType: usize = 0x3054; // ParticleOrientationChoiceList_t
-                pub const m_nOrientationControlPoint: usize = 0x3058; // int32
-                pub const m_bUseYawWithNormalAligned: usize = 0x305C; // bool
-                pub const m_flMinSize: usize = 0x3060; // CParticleCollectionRendererFloatInput
-                pub const m_flMaxSize: usize = 0x31D8; // CParticleCollectionRendererFloatInput
-                pub const m_flSubPixelAAScale: usize = 0x3350; // CParticleCollectionRendererFloatInput
-                pub const m_flStartFadeSize: usize = 0x34C8; // CParticleCollectionRendererFloatInput
-                pub const m_flEndFadeSize: usize = 0x3640; // CParticleCollectionRendererFloatInput
-                pub const m_flStartFadeDot: usize = 0x37B8; // float32
-                pub const m_flEndFadeDot: usize = 0x37BC; // float32
-                pub const m_bDistanceAlpha: usize = 0x37C0; // bool
-                pub const m_bSoftEdges: usize = 0x37C1; // bool
-                pub const m_flEdgeSoftnessStart: usize = 0x37C4; // float32
-                pub const m_flEdgeSoftnessEnd: usize = 0x37C8; // float32
-                pub const m_bOutline: usize = 0x37CC; // bool
-                pub const m_OutlineColor: usize = 0x37D0; // Color
-                pub const m_nOutlineAlpha: usize = 0x37D4; // int32
-                pub const m_flOutlineStart0: usize = 0x37D8; // float32
-                pub const m_flOutlineStart1: usize = 0x37DC; // float32
-                pub const m_flOutlineEnd0: usize = 0x37E0; // float32
-                pub const m_flOutlineEnd1: usize = 0x37E4; // float32
-                pub const m_nLightingMode: usize = 0x37E8; // ParticleLightingQuality_t
-                pub const m_vecLightingOverride: usize = 0x37F0; // CParticleCollectionRendererVecInput
-                pub const m_flLightingTessellation: usize = 0x3EC8; // CParticleCollectionRendererFloatInput
-                pub const m_flLightingDirectionality: usize = 0x4040; // CParticleCollectionRendererFloatInput
-                pub const m_bParticleShadows: usize = 0x41B8; // bool
-                pub const m_flShadowDensity: usize = 0x41BC; // float32
-            };
-            // Parent: None
-            // Field count: 12
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_PercentageBetweenTransformLerpCPs = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1E4; // float32
-                pub const m_flInputMax: usize = 0x1E8; // float32
-                pub const m_TransformStart: usize = 0x1F0; // CParticleTransformInput
-                pub const m_TransformEnd: usize = 0x258; // CParticleTransformInput
-                pub const m_nOutputStartCP: usize = 0x2C0; // int32
-                pub const m_nOutputStartField: usize = 0x2C4; // int32
-                pub const m_nOutputEndCP: usize = 0x2C8; // int32
-                pub const m_nOutputEndField: usize = 0x2CC; // int32
-                pub const m_nSetMethod: usize = 0x2D0; // ParticleSetMethod_t
-                pub const m_bActiveRange: usize = 0x2D4; // bool
-                pub const m_bRadialCheck: usize = 0x2D5; // bool
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetPerChildControlPoint = struct {
-                pub const m_nChildGroupID: usize = 0x1E0; // int32
-                pub const m_nFirstControlPoint: usize = 0x1E4; // int32
-                pub const m_nNumControlPoints: usize = 0x1E8; // int32
-                pub const m_nParticleIncrement: usize = 0x1F0; // CParticleCollectionFloatInput
-                pub const m_nFirstSourcePoint: usize = 0x368; // CParticleCollectionFloatInput
-                pub const m_bSetOrientation: usize = 0x4E0; // bool
-                pub const m_nOrientationField: usize = 0x4E4; // ParticleAttributeIndex_t
-                pub const m_bNumBasedOnParticleCount: usize = 0x4E8; // bool
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderTreeShake = struct {
-                pub const m_flPeakStrength: usize = 0x230; // float32
-                pub const m_nPeakStrengthFieldOverride: usize = 0x234; // ParticleAttributeIndex_t
-                pub const m_flRadius: usize = 0x238; // float32
-                pub const m_nRadiusFieldOverride: usize = 0x23C; // ParticleAttributeIndex_t
-                pub const m_flShakeDuration: usize = 0x240; // float32
-                pub const m_flTransitionTime: usize = 0x244; // float32
-                pub const m_flTwistAmount: usize = 0x248; // float32
-                pub const m_flRadialAmount: usize = 0x24C; // float32
-                pub const m_flControlPointOrientationAmount: usize = 0x250; // float32
-                pub const m_nControlPointForLinearDirection: usize = 0x254; // int32
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_WorldCollideConstraint = struct {
-            };
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_SetAttributeToScalarExpression = struct {
-                pub const m_nExpression: usize = 0x1E0; // ScalarExpressionType_t
-                pub const m_flInput1: usize = 0x1E8; // CPerParticleFloatInput
-                pub const m_flInput2: usize = 0x360; // CPerParticleFloatInput
-                pub const m_flOutputRemap: usize = 0x4D8; // CParticleRemapFloatInput
-                pub const m_nOutputField: usize = 0x650; // ParticleAttributeIndex_t
-                pub const m_nSetMethod: usize = 0x654; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_CycleScalar = struct {
-                pub const m_nDestField: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flStartValue: usize = 0x1E4; // float32
-                pub const m_flEndValue: usize = 0x1E8; // float32
-                pub const m_flCycleTime: usize = 0x1EC; // float32
-                pub const m_bDoNotRepeatCycle: usize = 0x1F0; // bool
-                pub const m_bSynchronizeParticles: usize = 0x1F1; // bool
-                pub const m_nCPScale: usize = 0x1F4; // int32
-                pub const m_nCPFieldMin: usize = 0x1F8; // int32
-                pub const m_nCPFieldMax: usize = 0x1FC; // int32
-                pub const m_nSetMethod: usize = 0x200; // ParticleSetMethod_t
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RenderMaterialProxy = struct {
-                pub const m_nMaterialControlPoint: usize = 0x230; // int32
-                pub const m_nProxyType: usize = 0x234; // MaterialProxyType_t
-                pub const m_MaterialVars: usize = 0x238; // CUtlVector<MaterialVariable_t>
-                pub const m_hOverrideMaterial: usize = 0x250; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                pub const m_flMaterialOverrideEnabled: usize = 0x258; // CParticleCollectionFloatInput
-                pub const m_vecColorScale: usize = 0x3D0; // CParticleCollectionVecInput
-                pub const m_flAlpha: usize = 0xAA8; // CPerParticleFloatInput
-                pub const m_nColorBlendType: usize = 0xC20; // ParticleColorBlendType_t
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const FloatInputMaterialVariable_t = struct {
-                pub const m_strVariable: usize = 0x0; // CUtlString
-                pub const m_flInput: usize = 0x8; // CParticleCollectionFloatInput
-            };
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RampScalarLinear = struct {
-                pub const m_RateMin: usize = 0x1E0; // float32
-                pub const m_RateMax: usize = 0x1E4; // float32
-                pub const m_flStartTime_min: usize = 0x1E8; // float32
-                pub const m_flStartTime_max: usize = 0x1EC; // float32
-                pub const m_flEndTime_min: usize = 0x1F0; // float32
-                pub const m_flEndTime_max: usize = 0x1F4; // float32
-                pub const m_nField: usize = 0x220; // ParticleAttributeIndex_t
-                pub const m_bProportionalOp: usize = 0x224; // bool
-            };
-            // Parent: None
-            // Field count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_RotateVector = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_vecRotAxisMin: usize = 0x1E4; // Vector
-                pub const m_vecRotAxisMax: usize = 0x1F0; // Vector
-                pub const m_flRotRateMin: usize = 0x1FC; // float32
-                pub const m_flRotRateMax: usize = 0x200; // float32
-                pub const m_bNormalize: usize = 0x204; // bool
-                pub const m_flScale: usize = 0x208; // CPerParticleFloatInput
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_InitVecCollection = struct {
-                pub const m_InputValue: usize = 0x1E8; // CParticleCollectionVecInput
-                pub const m_nOutputField: usize = 0x8C0; // ParticleAttributeIndex_t
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_RemapParticleCountToNamedModelMeshGroupScalar = struct {
-            };
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_INIT_SequenceFromCP = struct {
-                pub const m_bKillUnused: usize = 0x1E8; // bool
-                pub const m_bRadiusScale: usize = 0x1E9; // bool
-                pub const m_nCP: usize = 0x1EC; // int32
-                pub const m_vecOffset: usize = 0x1F0; // Vector
-            };
-            // Parent: None
-            // Field count: 11
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_CPOffsetToPercentageBetweenCPs = struct {
-                pub const m_flInputMin: usize = 0x1E0; // float32
-                pub const m_flInputMax: usize = 0x1E4; // float32
-                pub const m_flInputBias: usize = 0x1E8; // float32
-                pub const m_nStartCP: usize = 0x1EC; // int32
-                pub const m_nEndCP: usize = 0x1F0; // int32
-                pub const m_nOffsetCP: usize = 0x1F4; // int32
-                pub const m_nOuputCP: usize = 0x1F8; // int32
-                pub const m_nInputCP: usize = 0x1FC; // int32
-                pub const m_bRadialCheck: usize = 0x200; // bool
-                pub const m_bScaleOffset: usize = 0x201; // bool
-                pub const m_vecOffset: usize = 0x204; // Vector
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const C_OP_LerpEndCapScalar = struct {
-                pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_flOutput: usize = 0x1E4; // float32
-                pub const m_flLerpTime: usize = 0x1E8; // float32
-            };
-        };
+pub const particles = struct {
+
+    pub const CPulseCell_WaitForCursorsWithTag = extern struct {
+        pad_0: [0x128]u8, // 0x0
+        m_bTagSelfWhenComplete: [0x4]u8, // 0x128
+        m_nDesiredKillPriority: [0x4]u8, // 0x12C
+    };
+    pub const CPulseCell_RaceCursors = extern struct {
+        pad_0: [0xD8]u8, // 0x0
+        m_Outflows: [0x18]u8, // 0xD8
+        m_OnFinished: [0x48]u8, // 0xF0
+    };
+    pub const CPulseCell_Base = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        m_nEditorNodeID: [0x40]u8, // 0x8
+    };
+    pub const CPulse_ResumePoint = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_PickBestOutflowSelector = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        m_nCheckType: [0x8]u8, // 0x48
+        m_OutflowList: [0x18]u8, // 0x50
+    };
+    pub const CParticleBindingRealPulse = extern struct {
+        pad_0: [0xA8]u8, // 0x0
+    };
+    pub const CPulseCell_WaitForObservable = extern struct {
+        pad_0: [0xD8]u8, // 0x0
+        m_Condition: [0x90]u8, // 0xD8
+        m_OnTrue: [0x48]u8, // 0x168
+    };
+    pub const CPulse_OutflowConnection = extern struct {
+        m_SourceOutflowName: [0x10]u8, // 0x0
+        m_nDestChunk: [0x4]u8, // 0x10
+        m_nInstruction: [0x4]u8, // 0x14
+        m_OutflowRegisterMap: [0x30]u8, // 0x18
+    };
+    pub const CPulseGraphDef = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        m_DomainIdentifier: [0x10]u8, // 0x8
+        m_DomainSubType: [0x18]u8, // 0x18
+        m_ParentMapName: [0x10]u8, // 0x30
+        m_ParentXmlName: [0x10]u8, // 0x40
+        m_Chunks: [0x18]u8, // 0x50
+        m_Cells: [0x18]u8, // 0x68
+        m_Vars: [0x18]u8, // 0x80
+        m_TempVarBanks: [0x18]u8, // 0x98
+        m_PublicOutputs: [0x18]u8, // 0xB0
+        m_InvokeBindings: [0x18]u8, // 0xC8
+        m_CallInfos: [0x18]u8, // 0xE0
+        m_Constants: [0x18]u8, // 0xF8
+        m_DomainValues: [0x18]u8, // 0x110
+        m_BlackboardReferences: [0x18]u8, // 0x128
+        m_OutputConnections: [0x80]u8, // 0x140
+    };
+    pub const CPulseCell_FireCursors = extern struct {
+        pad_0: [0xD8]u8, // 0x0
+        m_Outflows: [0x18]u8, // 0xD8
+        m_bWaitForChildOutflows: [0x8]u8, // 0xF0
+        m_OnFinished: [0x48]u8, // 0xF8
+    };
+    pub const CPulseCell_Timeline__TimelineEvent_t = extern struct {
+        m_flTimeFromPrevious: [0x8]u8, // 0x0
+        m_EventOutflow: [0x48]u8, // 0x8
+    };
+    pub const CPulseCell_IntervalTimer__CursorState_t = extern struct {
+        m_StartTime: [0x4]u8, // 0x0
+        m_EndTime: [0x4]u8, // 0x4
+        m_flWaitInterval: [0x4]u8, // 0x8
+        m_flWaitIntervalHigh: [0x4]u8, // 0xC
+        m_bCompleteOnNextWake: [0x4]u8, // 0x10
+    };
+    pub const CPulseCell_BaseRequirement = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_BaseState = extern struct {
+        pad_0: [0xD8]u8, // 0x0
+    };
+    pub const OutflowWithRequirements_t = extern struct {
+        m_Connection: [0x48]u8, // 0x0
+        m_DestinationFlowNodeID: [0x8]u8, // 0x48
+        m_RequirementNodeIDs: [0x18]u8, // 0x50
+        m_nCursorStateBlockIndex: [0x18]u8, // 0x68
+    };
+    pub const CPulseCell_IsRequirementValid = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_Value_Gradient = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        m_Gradient: [0x18]u8, // 0x48
+    };
+    pub const PulseNodeDynamicOutflows_t__DynamicOutflow_t = extern struct {
+        m_OutflowID: [0x8]u8, // 0x0
+        m_Connection: [0x48]u8, // 0x8
+    };
+    pub const CBasePulseGraphInstance = extern struct {
+        pad_0: [0x88]u8, // 0x0
+    };
+    pub const CPulseCell_Inflow_GraphHook = extern struct {
+        pad_0: [0x80]u8, // 0x0
+        m_HookName: [0x10]u8, // 0x80
+    };
+    pub const SignatureOutflow_Resume = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_Inflow_BaseEntrypoint = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        m_EntryChunk: [0x8]u8, // 0x48
+        m_RegisterMap: [0x30]u8, // 0x50
+    };
+    pub const CPulseCell_WaitForCursorsWithTagBase = extern struct {
+        pad_0: [0xD8]u8, // 0x0
+        m_nCursorsAllowedToWait: [0x8]u8, // 0xD8
+        m_WaitComplete: [0x48]u8, // 0xE0
+    };
+    pub const CPulse_InvokeBinding = extern struct {
+        m_RegisterMap: [0x30]u8, // 0x0
+        m_FuncName: [0x10]u8, // 0x30
+        m_nCellIndex: [0x4]u8, // 0x40
+        m_nSrcChunk: [0x4]u8, // 0x44
+        m_nSrcInstruction: [0x68]u8, // 0x48
+    };
+    pub const CPulseCell_IntervalTimer = extern struct {
+        pad_0: [0xD8]u8, // 0x0
+        m_Completed: [0x48]u8, // 0xD8
+        m_OnInterval: [0x48]u8, // 0x120
+    };
+    pub const CPulseCell_BaseLerp = extern struct {
+        pad_0: [0xD8]u8, // 0x0
+        m_WakeResume: [0x48]u8, // 0xD8
+    };
+    pub const CPulseCell_Value_Curve = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        m_Curve: [0x40]u8, // 0x48
+    };
+    pub const CPulseCell_Inflow_EventHandler = extern struct {
+        pad_0: [0x80]u8, // 0x0
+        m_EventName: [0x10]u8, // 0x80
+    };
+    pub const CPulseCell_BaseFlow = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_Outflow_CycleShuffled__InstanceState_t = extern struct {
+        m_Shuffle: [0x20]u8, // 0x0
+        m_nNextShuffle: [0x8]u8, // 0x20
+    };
+    pub const CPulseCell_BaseLerp__CursorState_t = extern struct {
+        m_StartTime: [0x4]u8, // 0x0
+        m_EndTime: [0x4]u8, // 0x4
+    };
+    pub const SignatureOutflow_Continue = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_Timeline = extern struct {
+        pad_0: [0xD8]u8, // 0x0
+        m_TimelineEvents: [0x18]u8, // 0xD8
+        m_bWaitForChildOutflows: [0x8]u8, // 0xF0
+        m_OnFinished: [0x48]u8, // 0xF8
+    };
+    pub const CPulseCell_Inflow_EntOutputHandler = extern struct {
+        pad_0: [0x80]u8, // 0x0
+        m_SourceEntity: [0x10]u8, // 0x80
+        m_SourceOutput: [0x10]u8, // 0x90
+        m_ExpectedParamType: [0x18]u8, // 0xA0
+    };
+    pub const CPulseCell_Outflow_CycleOrdered__InstanceState_t = extern struct {
+        m_nNextIndex: [0x4]u8, // 0x0
+    };
+    pub const CParticleCollectionBindingInstance = extern struct {
+        pad_0: [0xA8]u8, // 0x0
+    };
+    pub const CPulseCell_LimitCount__InstanceState_t = extern struct {
+        m_nCurrentCount: [0x4]u8, // 0x0
+    };
+    pub const CPulseCell_Step_DebugLog = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_BaseYieldingInflow = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        m_BaseFlow_OnAfterCancel: [0x48]u8, // 0x48
+        m_BaseFlow_WhileActive: [0x48]u8, // 0x90
+    };
+    pub const PulseNodeDynamicOutflows_t = extern struct {
+        m_Outflows: [0x18]u8, // 0x0
+    };
+    pub const CPulseCell_IsRequirementValid__Criteria_t = extern struct {
+        m_bIsValid: [0x1]u8, // 0x0
+    };
+    pub const CPulseCell_Inflow_ObservableVariableListener = extern struct {
+        pad_0: [0x80]u8, // 0x0
+        m_nBlackboardReference: [0x2]u8, // 0x80
+        m_bSelfReference: [0x6]u8, // 0x82
+    };
+    pub const CPulseCell_Outflow_CycleOrdered = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        m_Outputs: [0x18]u8, // 0x48
+    };
+    pub const PulseSelectorOutflowList_t = extern struct {
+        m_Outflows: [0x18]u8, // 0x0
+    };
+    pub const CPulseCell_Inflow_Wait = extern struct {
+        pad_0: [0xD8]u8, // 0x0
+        m_WakeResume: [0x48]u8, // 0xD8
+    };
+    pub const CPulseCell_Outflow_CycleShuffled = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        m_Outputs: [0x18]u8, // 0x48
+    };
+    pub const CPulseCell_Inflow_Method = extern struct {
+        pad_0: [0x80]u8, // 0x0
+        m_MethodName: [0x10]u8, // 0x80
+        m_Description: [0x8]u8, // 0x90
+        m_bIsPublic: [0x8]u8, // 0x98
+        m_Args: [0x10]u8, // 0xA0
+        m_ReturnValues: [0x10]u8, // 0xB0
+    };
+    pub const CPulseCell_BaseValue = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_BooleanSwitchState = extern struct {
+        pad_0: [0xD8]u8, // 0x0
+        m_Condition: [0x90]u8, // 0xD8
+        m_WhenTrue: [0x48]u8, // 0x168
+        m_WhenFalse: [0x48]u8, // 0x1B0
+    };
+    pub const CPulseCell_Inflow_Yield = extern struct {
+        pad_0: [0xD8]u8, // 0x0
+        m_UnyieldResume: [0x48]u8, // 0xD8
+    };
+    pub const CPulseCell_Unknown = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        m_UnknownKeys: [0x10]u8, // 0x48
+    };
+    pub const CPulseCell_Outflow_CycleRandom = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        m_Outputs: [0x18]u8, // 0x48
+    };
+    pub const CPulseCell_Step_PublicOutput = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        m_OutputIndex: [0x8]u8, // 0x48
+    };
+    pub const CPulse_BlackboardReference = extern struct {
+        m_hBlackboardResource: [0x8]u8, // 0x0
+        m_BlackboardResource: [0x10]u8, // 0x8
+        m_nNodeID: [0x8]u8, // 0x18
+        m_NodeName: [0x8]u8, // 0x20
+    };
+    pub const CPulseCell_ReturnValues = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_Value_RandomInt = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulse_CallInfo = extern struct {
+        m_PortName: [0x10]u8, // 0x0
+        m_nEditorNodeID: [0x8]u8, // 0x10
+        m_RegisterMap: [0x30]u8, // 0x18
+        m_CallMethodID: [0x4]u8, // 0x48
+        m_nSrcChunk: [0x4]u8, // 0x4C
+        m_nSrcInstruction: [0x4]u8, // 0x50
+        m_nBreakDestChunk: [0x4]u8, // 0x54
+        m_nBreakDestInstruction: [0x8]u8, // 0x58
+    };
+    pub const CPulseCell_InlineNodeSkipSelector = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        m_nFlowNodeID: [0x4]u8, // 0x48
+        m_bAnd: [0x4]u8, // 0x4C
+        m_PassOutflow: [0x18]u8, // 0x50
+        m_FailOutflow: [0x48]u8, // 0x68
+    };
+    pub const CPulseCell_LimitCount = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        m_nLimitCount: [0x8]u8, // 0x48
+    };
+    pub const CPulseCell_Step_CallExternalMethod = extern struct {
+        pad_0: [0xD8]u8, // 0x0
+        m_MethodName: [0x10]u8, // 0xD8
+        m_nBlackboardIndex: [0x8]u8, // 0xE8
+        m_ExpectedArgs: [0x10]u8, // 0xF0
+        m_nAsyncCallMode: [0x8]u8, // 0x100
+        m_OnFinished: [0x48]u8, // 0x108
+    };
+    pub const CPulseCell_LimitCount__Criteria_t = extern struct {
+        m_bLimitCountPasses: [0x1]u8, // 0x0
+    };
+    pub const CPulseCell_CursorQueue = extern struct {
+        pad_0: [0x128]u8, // 0x0
+        m_nCursorsAllowedToRunParallel: [0x8]u8, // 0x128
+    };
+    pub const CPulseCell_Value_RandomFloat = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseExecCursor = extern struct {
+        pad_0: [0xD8]u8, // 0x0
+    };
+    pub const IParticleCollection = extern struct {
+        pad_0: [0x10]u8, // 0x0
+    };
+    pub const C_OP_RemapGravityToVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_vInput1: [0x6D8]u8, // 0x1E0
+        m_nOutputField: [0x4]u8, // 0x8B8
+        m_nSetMethod: [0x4]u8, // 0x8BC
+        m_bNormalizedOutput: [0x70]u8, // 0x8C0
+    };
+    pub const C_OP_Decay = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_bRopeDecay: [0x1]u8, // 0x1E0
+        m_bForcePreserveParticleOrder: [0x7]u8, // 0x1E1
+    };
+    pub const C_OP_RenderDeferredLight = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_flRadiusScale: [0x4]u8, // 0x230
+        m_flAlphaScale: [0x4]u8, // 0x234
+        m_nAlpha2Field: [0x8]u8, // 0x238
+        m_vecColorScale: [0x6D8]u8, // 0x240
+        m_nColorBlendType: [0x4]u8, // 0x918
+        m_bUseTexture: [0x1]u8, // 0x91C
+        m_bUseAlphaTestWindow: [0x3]u8, // 0x91D
+        m_hTexture: [0x8]u8, // 0x920
+        m_nAlphaTestPointField: [0x4]u8, // 0x928
+        m_nAlphaTestRangeField: [0x4]u8, // 0x92C
+        m_nAlphaTestSharpnessField: [0x4]u8, // 0x930
+        m_flLightDistance: [0x4]u8, // 0x934
+        m_flStartFalloff: [0x4]u8, // 0x938
+        m_flDistanceFalloff: [0x4]u8, // 0x93C
+        m_flSpotFoV: [0x4]u8, // 0x940
+        m_nHSVShiftControlPoint: [0x4]u8, // 0x944
+    };
+    pub const C_OP_RemapSpeedtoCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nInControlPointNumber: [0x4]u8, // 0x1E8
+        m_nOutControlPointNumber: [0x4]u8, // 0x1EC
+        m_nField: [0x4]u8, // 0x1F0
+        m_flInputMin: [0x4]u8, // 0x1F4
+        m_flInputMax: [0x4]u8, // 0x1F8
+        m_flOutputMin: [0x4]u8, // 0x1FC
+        m_flOutputMax: [0x4]u8, // 0x200
+        m_bUseDeltaV: [0x4]u8, // 0x204
+    };
+    pub const C_OP_RemapTransformToVelocity = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_TransformInput: [0x68]u8, // 0x1E0
+    };
+    pub const CollisionGroupContext_t = extern struct {
+        m_nCollisionGroupNumber: [0x4]u8, // 0x0
+    };
+    pub const CParticleFunctionPreEmission = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_bRunOnce: [0x8]u8, // 0x1E0
+    };
+    pub const C_OP_FadeOutSimple = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flFadeOutTime: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+    };
+    pub const C_OP_SpringToVectorConstraint = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flRestLength: [0x178]u8, // 0x1E0
+        m_flMinDistance: [0x178]u8, // 0x358
+        m_flMaxDistance: [0x178]u8, // 0x4D0
+        m_flRestingLength: [0x178]u8, // 0x648
+        m_vecAnchorVector: [0x6D8]u8, // 0x7C0
+    };
+    pub const C_OP_RenderRopes = extern struct {
+        pad_0: [0x2ED8]u8, // 0x0
+        m_bEnableFadingAndClamping: [0x4]u8, // 0x2ED8
+        m_flMinSize: [0x4]u8, // 0x2EDC
+        m_flMaxSize: [0x4]u8, // 0x2EE0
+        m_flStartFadeSize: [0x4]u8, // 0x2EE4
+        m_flEndFadeSize: [0x4]u8, // 0x2EE8
+        m_flStartFadeDot: [0x4]u8, // 0x2EEC
+        m_flEndFadeDot: [0x8]u8, // 0x2EF0
+        m_flSubPixelAAScale: [0x178]u8, // 0x2EF8
+        m_flRadiusTaper: [0x4]u8, // 0x3070
+        m_nMinTesselation: [0x4]u8, // 0x3074
+        m_nMaxTesselation: [0x4]u8, // 0x3078
+        m_flTessScale: [0x4]u8, // 0x307C
+        m_flTextureVWorldSize: [0x178]u8, // 0x3080
+        m_flTextureVScrollRate: [0x178]u8, // 0x31F8
+        m_flTextureVOffset: [0x178]u8, // 0x3370
+        m_nTextureVParamsCP: [0x4]u8, // 0x34E8
+        m_bClampV: [0x4]u8, // 0x34EC
+        m_nScaleCP1: [0x4]u8, // 0x34F0
+        m_nScaleCP2: [0x4]u8, // 0x34F4
+        m_flScaleVSizeByControlPointDistance: [0x4]u8, // 0x34F8
+        m_flScaleVScrollByControlPointDistance: [0x4]u8, // 0x34FC
+        m_flScaleVOffsetByControlPointDistance: [0x5]u8, // 0x3500
+        m_bUseScalarForTextureCoordinate: [0x3]u8, // 0x3505
+        m_nScalarFieldForTextureCoordinate: [0x4]u8, // 0x3508
+        m_flScalarAttributeTextureCoordScale: [0x4]u8, // 0x350C
+        m_bReverseOrder: [0x1]u8, // 0x3510
+        m_bClosedLoop: [0x3]u8, // 0x3511
+        m_nSplitField: [0x4]u8, // 0x3514
+        m_bSortBySegmentID: [0x4]u8, // 0x3518
+        m_nOrientationType: [0x4]u8, // 0x351C
+        m_nVectorFieldForOrientation: [0x4]u8, // 0x3520
+        m_bDrawAsOpaque: [0x1]u8, // 0x3524
+        m_bGenerateNormals: [0x3]u8, // 0x3525
+    };
+    pub const C_INIT_StatusEffectCitadel = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flSFXColorWarpAmount: [0x4]u8, // 0x1E8
+        m_flSFXNormalAmount: [0x4]u8, // 0x1EC
+        m_flSFXMetalnessAmount: [0x4]u8, // 0x1F0
+        m_flSFXRoughnessAmount: [0x4]u8, // 0x1F4
+        m_flSFXSelfIllumAmount: [0x4]u8, // 0x1F8
+        m_flSFXSScale: [0x4]u8, // 0x1FC
+        m_flSFXSScrollX: [0x4]u8, // 0x200
+        m_flSFXSScrollY: [0x4]u8, // 0x204
+        m_flSFXSScrollZ: [0x4]u8, // 0x208
+        m_flSFXSOffsetX: [0x4]u8, // 0x20C
+        m_flSFXSOffsetY: [0x4]u8, // 0x210
+        m_flSFXSOffsetZ: [0x4]u8, // 0x214
+        m_nDetailCombo: [0x4]u8, // 0x218
+        m_flSFXSDetailAmount: [0x4]u8, // 0x21C
+        m_flSFXSDetailScale: [0x4]u8, // 0x220
+        m_flSFXSDetailScrollX: [0x4]u8, // 0x224
+        m_flSFXSDetailScrollY: [0x4]u8, // 0x228
+        m_flSFXSDetailScrollZ: [0x4]u8, // 0x22C
+        m_flSFXSUseModelUVs: [0x8]u8, // 0x230
+    };
+    pub const C_OP_RenderSound = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_flDurationScale: [0x4]u8, // 0x230
+        m_flSndLvlScale: [0x4]u8, // 0x234
+        m_flPitchScale: [0x4]u8, // 0x238
+        m_flVolumeScale: [0x4]u8, // 0x23C
+        m_nSndLvlField: [0x4]u8, // 0x240
+        m_nDurationField: [0x4]u8, // 0x244
+        m_nPitchField: [0x4]u8, // 0x248
+        m_nVolumeField: [0x4]u8, // 0x24C
+        m_nChannel: [0x4]u8, // 0x250
+        m_nCPReference: [0x4]u8, // 0x254
+        m_pszSoundName: [0x100]u8, // 0x258
+        m_bSuppressStopSoundEvent: [0x8]u8, // 0x358
+    };
+    pub const CParticleVisibilityInputs = extern struct {
+        m_flCameraBias: [0x4]u8, // 0x0
+        m_nCPin: [0x4]u8, // 0x4
+        m_flProxyRadius: [0x4]u8, // 0x8
+        m_flInputMin: [0x4]u8, // 0xC
+        m_flInputMax: [0x4]u8, // 0x10
+        m_flInputPixelVisFade: [0x4]u8, // 0x14
+        m_flNoPixelVisibilityFallback: [0x4]u8, // 0x18
+        m_flDistanceInputMin: [0x4]u8, // 0x1C
+        m_flDistanceInputMax: [0x4]u8, // 0x20
+        m_flDotInputMin: [0x4]u8, // 0x24
+        m_flDotInputMax: [0x4]u8, // 0x28
+        m_bDotCPAngles: [0x1]u8, // 0x2C
+        m_bDotCameraAngles: [0x3]u8, // 0x2D
+        m_flAlphaScaleMin: [0x4]u8, // 0x30
+        m_flAlphaScaleMax: [0x4]u8, // 0x34
+        m_flRadiusScaleMin: [0x4]u8, // 0x38
+        m_flRadiusScaleMax: [0x4]u8, // 0x3C
+        m_flRadiusScaleFOVBase: [0x4]u8, // 0x40
+        m_bRightEye: [0x4]u8, // 0x44
+    };
+    pub const C_OP_SetControlPointsToParticle = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nChildGroupID: [0x4]u8, // 0x1E0
+        m_nFirstControlPoint: [0x4]u8, // 0x1E4
+        m_nNumControlPoints: [0x4]u8, // 0x1E8
+        m_nFirstSourcePoint: [0x4]u8, // 0x1EC
+        m_bReverse: [0x1]u8, // 0x1F0
+        m_bSetOrientation: [0x3]u8, // 0x1F1
+        m_nOrientationMode: [0x4]u8, // 0x1F4
+        m_nSetParent: [0x8]u8, // 0x1F8
+    };
+    pub const C_OP_RemapCPVelocityToVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nControlPoint: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_flScale: [0x4]u8, // 0x1E8
+        m_bNormalize: [0x4]u8, // 0x1EC
+    };
+    pub const C_OP_PointVectorAtNextParticle = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E0
+        m_flInterpolation: [0x178]u8, // 0x1E8
+        m_bPrevious: [0x8]u8, // 0x360
+    };
+    pub const ParticlePreviewBodyGroup_t = extern struct {
+        m_bodyGroupName: [0x8]u8, // 0x0
+        m_nValue: [0x8]u8, // 0x8
+    };
+    pub const C_OP_OscillateScalarSimple = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_Rate: [0x4]u8, // 0x1E0
+        m_Frequency: [0x4]u8, // 0x1E4
+        m_nField: [0x4]u8, // 0x1E8
+        m_flOscMult: [0x4]u8, // 0x1EC
+        m_flOscAdd: [0x30]u8, // 0x1F0
+    };
+    pub const C_INIT_StatusEffect = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nDetail2Combo: [0x4]u8, // 0x1E8
+        m_flDetail2Rotation: [0x4]u8, // 0x1EC
+        m_flDetail2Scale: [0x4]u8, // 0x1F0
+        m_flDetail2BlendFactor: [0x4]u8, // 0x1F4
+        m_flColorWarpIntensity: [0x4]u8, // 0x1F8
+        m_flDiffuseWarpBlendToFull: [0x4]u8, // 0x1FC
+        m_flEnvMapIntensity: [0x4]u8, // 0x200
+        m_flAmbientScale: [0x4]u8, // 0x204
+        m_specularColor: [0x4]u8, // 0x208
+        m_flSpecularScale: [0x4]u8, // 0x20C
+        m_flSpecularExponent: [0x4]u8, // 0x210
+        m_flSpecularExponentBlendToFull: [0x4]u8, // 0x214
+        m_flSpecularBlendToFull: [0x4]u8, // 0x218
+        m_rimLightColor: [0x4]u8, // 0x21C
+        m_flRimLightScale: [0x4]u8, // 0x220
+        m_flReflectionsTintByBaseBlendToNone: [0x4]u8, // 0x224
+        m_flMetalnessBlendToFull: [0x4]u8, // 0x228
+        m_flSelfIllumBlendToFull: [0x1C]u8, // 0x22C
+    };
+    pub const C_INIT_RtEnvCull = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_vecTestDir: [0xC]u8, // 0x1E8
+        m_vecTestNormal: [0xC]u8, // 0x1F4
+        m_bUseVelocity: [0x1]u8, // 0x200
+        m_bCullOnMiss: [0x1]u8, // 0x201
+        m_bLifeAdjust: [0x1]u8, // 0x202
+        m_RtEnvName: [0x81]u8, // 0x203
+        m_nRTEnvCP: [0x4]u8, // 0x284
+        m_nComponent: [0x8]u8, // 0x288
+    };
+    pub const C_OP_ConstrainDistance = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_fMinDistance: [0x178]u8, // 0x1E0
+        m_fMaxDistance: [0x178]u8, // 0x358
+        m_nControlPointNumber: [0x68]u8, // 0x4D0
+        m_CenterOffset: [0x6D8]u8, // 0x538
+        m_bGlobalCenter: [0x8]u8, // 0xC10
+    };
+    pub const C_INIT_RandomVector = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_vecMin: [0xC]u8, // 0x1E8
+        m_vecMax: [0xC]u8, // 0x1F4
+        m_nFieldOutput: [0x4]u8, // 0x200
+        m_randomnessParameters: [0xC]u8, // 0x204
+    };
+    pub const C_INIT_InitialVelocityNoise = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_vecAbsVal: [0xC]u8, // 0x1E8
+        m_vecAbsValInv: [0xC]u8, // 0x1F4
+        m_vecOffsetLoc: [0x6D8]u8, // 0x200
+        m_flOffset: [0x178]u8, // 0x8D8
+        m_vecOutputMin: [0x6D8]u8, // 0xA50
+        m_vecOutputMax: [0x6D8]u8, // 0x1128
+        m_flNoiseScale: [0x178]u8, // 0x1800
+        m_flNoiseScaleLoc: [0x178]u8, // 0x1978
+        m_TransformInput: [0x68]u8, // 0x1AF0
+        m_bIgnoreDt: [0x8]u8, // 0x1B58
+    };
+    pub const ParticleChildrenInfo_t = extern struct {
+        m_ChildRef: [0x8]u8, // 0x0
+        m_flDelay: [0x4]u8, // 0x8
+        m_bEndCap: [0x1]u8, // 0xC
+        m_bDisableChild: [0x3]u8, // 0xD
+        m_nDetailLevel: [0x10]u8, // 0x10
+    };
+    pub const C_OP_RemapScalarOnceTimed = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_bProportional: [0x4]u8, // 0x1E0
+        m_nFieldInput: [0x4]u8, // 0x1E4
+        m_nFieldOutput: [0x4]u8, // 0x1E8
+        m_flInputMin: [0x4]u8, // 0x1EC
+        m_flInputMax: [0x4]u8, // 0x1F0
+        m_flOutputMin: [0x4]u8, // 0x1F4
+        m_flOutputMax: [0x4]u8, // 0x1F8
+        m_flRemapTime: [0x4]u8, // 0x1FC
+    };
+    pub const C_INIT_RandomNamedModelSequence = extern struct {
+        pad_0: [0x210]u8, // 0x0
+    };
+    pub const C_OP_PlaneCull = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nPlaneControlPoint: [0x8]u8, // 0x1E0
+        m_vecPlaneDirection: [0x6D8]u8, // 0x1E8
+        m_bLocalSpace: [0x4]u8, // 0x8C0
+        m_flPlaneOffset: [0x4]u8, // 0x8C4
+    };
+    pub const C_INIT_VelocityRandom = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPointNumber: [0x8]u8, // 0x1E8
+        m_fSpeedMin: [0x178]u8, // 0x1F0
+        m_fSpeedMax: [0x178]u8, // 0x368
+        m_LocalCoordinateSystemSpeedMin: [0x6D8]u8, // 0x4E0
+        m_LocalCoordinateSystemSpeedMax: [0x6D8]u8, // 0xBB8
+        m_bIgnoreDT: [0x4]u8, // 0x1290
+        m_randomnessParameters: [0xC]u8, // 0x1294
+    };
+    pub const C_OP_ModelDampenMovement = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E0
+        m_bBoundBox: [0x1]u8, // 0x1E4
+        m_bOutside: [0x1]u8, // 0x1E5
+        m_bUseBones: [0x1]u8, // 0x1E6
+        m_HitboxSetName: [0x81]u8, // 0x1E7
+        m_vecPosOffset: [0x6D8]u8, // 0x268
+        m_fDrag: [0x8]u8, // 0x940
+    };
+    pub const C_OP_TwistAroundAxis = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_fForceAmount: [0x4]u8, // 0x1F0
+        m_TwistAxis: [0xC]u8, // 0x1F4
+        m_bLocalSpace: [0x4]u8, // 0x200
+        m_nControlPointNumber: [0x4]u8, // 0x204
+    };
+    pub const C_OP_TeleportBeam = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nCPPosition: [0x4]u8, // 0x1E0
+        m_nCPVelocity: [0x4]u8, // 0x1E4
+        m_nCPMisc: [0x4]u8, // 0x1E8
+        m_nCPColor: [0x4]u8, // 0x1EC
+        m_nCPInvalidColor: [0x4]u8, // 0x1F0
+        m_nCPExtraArcData: [0x4]u8, // 0x1F4
+        m_vGravity: [0xC]u8, // 0x1F8
+        m_flArcMaxDuration: [0x4]u8, // 0x204
+        m_flSegmentBreak: [0x4]u8, // 0x208
+        m_flArcSpeed: [0x4]u8, // 0x20C
+        m_flAlpha: [0x8]u8, // 0x210
+    };
+    pub const C_OP_RemapExternalWindToCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCP: [0x4]u8, // 0x1E8
+        m_nCPOutput: [0x4]u8, // 0x1EC
+        m_vecScale: [0x6D8]u8, // 0x1F0
+        m_bSetMagnitude: [0x4]u8, // 0x8C8
+        m_nOutVectorField: [0x4]u8, // 0x8CC
+    };
+    pub const CBaseRendererSource2 = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_flRadiusScale: [0x178]u8, // 0x230
+        m_flAlphaScale: [0x178]u8, // 0x3A8
+        m_flRollScale: [0x178]u8, // 0x520
+        m_nAlpha2Field: [0x8]u8, // 0x698
+        m_vecColorScale: [0x6D8]u8, // 0x6A0
+        m_nColorBlendType: [0x4]u8, // 0xD78
+        m_nShaderType: [0x4]u8, // 0xD7C
+        m_strShaderOverride: [0x8]u8, // 0xD80
+        m_flCenterXOffset: [0x178]u8, // 0xD88
+        m_flCenterYOffset: [0x178]u8, // 0xF00
+        m_flBumpStrength: [0x4]u8, // 0x1078
+        m_nCropTextureOverride: [0x4]u8, // 0x107C
+        m_vecTexturesInput: [0x10]u8, // 0x1080
+        m_flAnimationRate: [0x4]u8, // 0x1090
+        m_nAnimationType: [0x4]u8, // 0x1094
+        m_bAnimateInFPS: [0x8]u8, // 0x1098
+        m_flMotionVectorScaleU: [0x178]u8, // 0x10A0
+        m_flMotionVectorScaleV: [0x178]u8, // 0x1218
+        m_flSelfIllumAmount: [0x178]u8, // 0x1390
+        m_flDiffuseAmount: [0x178]u8, // 0x1508
+        m_flDiffuseClamp: [0x178]u8, // 0x1680
+        m_nLightingControlPoint: [0x4]u8, // 0x17F8
+        m_nOutputBlendMode: [0x4]u8, // 0x17FC
+        m_bGammaCorrectVertexColors: [0x1]u8, // 0x1800
+        m_bSaturateColorPreAlphaBlend: [0x7]u8, // 0x1801
+        m_flAddSelfAmount: [0x178]u8, // 0x1808
+        m_flDesaturation: [0x178]u8, // 0x1980
+        m_flOverbrightFactor: [0x178]u8, // 0x1AF8
+        m_nHSVShiftControlPoint: [0x4]u8, // 0x1C70
+        m_nFogType: [0x4]u8, // 0x1C74
+        m_flFogAmount: [0x178]u8, // 0x1C78
+        m_bTintByFOW: [0x1]u8, // 0x1DF0
+        m_bTintByGlobalLight: [0x3]u8, // 0x1DF1
+        m_nPerParticleAlphaReference: [0x4]u8, // 0x1DF4
+        m_nPerParticleAlphaRefWindow: [0x4]u8, // 0x1DF8
+        m_nAlphaReferenceType: [0x4]u8, // 0x1DFC
+        m_flAlphaReferenceSoftness: [0x178]u8, // 0x1E00
+        m_flSourceAlphaValueToMapToZero: [0x178]u8, // 0x1F78
+        m_flSourceAlphaValueToMapToOne: [0x178]u8, // 0x20F0
+        m_bRefract: [0x1]u8, // 0x2268
+        m_bRefractSolid: [0x1]u8, // 0x2269
+        m_bRefract2Passes: [0x6]u8, // 0x226A
+        m_flRefractAmount: [0x178]u8, // 0x2270
+        m_nRefractBlurRadius: [0x4]u8, // 0x23E8
+        m_nRefractBlurType: [0x4]u8, // 0x23EC
+        m_bOnlyRenderInEffectsBloomPass: [0x1]u8, // 0x23F0
+        m_bOnlyRenderInEffectsWaterPass: [0x1]u8, // 0x23F1
+        m_bUseMixedResolutionRendering: [0x1]u8, // 0x23F2
+        m_bOnlyRenderInEffecsGameOverlay: [0x1]u8, // 0x23F3
+        m_stencilTestID: [0x80]u8, // 0x23F4
+        m_bStencilTestExclude: [0x1]u8, // 0x2474
+        m_stencilWriteID: [0x80]u8, // 0x2475
+        m_bWriteStencilOnDepthPass: [0x1]u8, // 0x24F5
+        m_bWriteStencilOnDepthFail: [0x1]u8, // 0x24F6
+        m_bReverseZBuffering: [0x1]u8, // 0x24F7
+        m_bDisableZBuffering: [0x4]u8, // 0x24F8
+        m_nFeatheringMode: [0x4]u8, // 0x24FC
+        m_flFeatheringMinDist: [0x178]u8, // 0x2500
+        m_flFeatheringMaxDist: [0x178]u8, // 0x2678
+        m_flFeatheringFilter: [0x178]u8, // 0x27F0
+        m_flFeatheringDepthMapFilter: [0x178]u8, // 0x2968
+        m_flDepthBias: [0x178]u8, // 0x2AE0
+        m_nSortMethod: [0x4]u8, // 0x2C58
+        m_bBlendFramesSeq0: [0x1]u8, // 0x2C5C
+        m_bMaxLuminanceBlendingSequence0: [0x27B]u8, // 0x2C5D
+    };
+    pub const CSpinUpdateBase = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+    };
+    pub const C_OP_OrientTo2dDirection = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_vecInput: [0x6D8]u8, // 0x1E0
+        m_flRotOffset: [0x4]u8, // 0x8B8
+        m_flSpinStrength: [0x4]u8, // 0x8BC
+        m_nFieldOutput: [0x8]u8, // 0x8C0
+    };
+    pub const C_OP_RemapDotProductToCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nInputCP1: [0x4]u8, // 0x1E8
+        m_nInputCP2: [0x4]u8, // 0x1EC
+        m_nOutputCP: [0x4]u8, // 0x1F0
+        m_nOutVectorField: [0x4]u8, // 0x1F4
+        m_flInputMin: [0x178]u8, // 0x1F8
+        m_flInputMax: [0x178]u8, // 0x370
+        m_flOutputMin: [0x178]u8, // 0x4E8
+        m_flOutputMax: [0x178]u8, // 0x660
+    };
+    pub const C_INIT_RemapParticleCountToNamedModelElementScalar = extern struct {
+        pad_0: [0x218]u8, // 0x0
+        m_hModel: [0x8]u8, // 0x218
+        m_outputMinName: [0x8]u8, // 0x220
+        m_outputMaxName: [0x8]u8, // 0x228
+        m_bModelFromRenderer: [0x8]u8, // 0x230
+    };
+    pub const C_OP_RenderTrails = extern struct {
+        pad_0: [0x3358]u8, // 0x0
+        m_bEnableFadingAndClamping: [0x4]u8, // 0x3358
+        m_flStartFadeDot: [0x4]u8, // 0x335C
+        m_flEndFadeDot: [0x4]u8, // 0x3360
+        m_nPrevPntSource: [0x4]u8, // 0x3364
+        m_flMaxLength: [0x4]u8, // 0x3368
+        m_flMinLength: [0x4]u8, // 0x336C
+        m_bIgnoreDT: [0x4]u8, // 0x3370
+        m_flConstrainRadiusToLengthRatio: [0x4]u8, // 0x3374
+        m_flLengthScale: [0x4]u8, // 0x3378
+        m_flLengthFadeInTime: [0x4]u8, // 0x337C
+        m_flRadiusHeadTaper: [0x178]u8, // 0x3380
+        m_vecHeadColorScale: [0x6D8]u8, // 0x34F8
+        m_flHeadAlphaScale: [0x178]u8, // 0x3BD0
+        m_flRadiusTaper: [0x178]u8, // 0x3D48
+        m_vecTailColorScale: [0x6D8]u8, // 0x3EC0
+        m_flTailAlphaScale: [0x178]u8, // 0x4598
+        m_nHorizCropField: [0x4]u8, // 0x4710
+        m_nVertCropField: [0x4]u8, // 0x4714
+        m_flForwardShift: [0x4]u8, // 0x4718
+        m_bFlipUVBasedOnPitchYaw: [0x4]u8, // 0x471C
+    };
+    pub const C_OP_SetControlPointPositionToTimeOfDayValue = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E8
+        m_pszTimeOfDayParameter: [0x80]u8, // 0x1EC
+        m_vecDefaultValue: [0x14]u8, // 0x26C
+    };
+    pub const C_OP_DecayMaintainCount = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nParticlesToMaintain: [0x4]u8, // 0x1E0
+        m_flDecayDelay: [0x4]u8, // 0x1E4
+        m_nSnapshotControlPoint: [0x8]u8, // 0x1E8
+        m_strSnapshotSubset: [0x8]u8, // 0x1F0
+        m_bLifespanDecay: [0x8]u8, // 0x1F8
+        m_flScale: [0x178]u8, // 0x200
+        m_bKillNewest: [0x8]u8, // 0x378
+    };
+    pub const C_INIT_RandomModelSequence = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_ActivityName: [0x100]u8, // 0x1E8
+        m_SequenceName: [0x100]u8, // 0x2E8
+        m_hModel: [0x8]u8, // 0x3E8
+    };
+    pub const C_OP_ExternalGameImpulseForce = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_flForceScale: [0x178]u8, // 0x1F0
+        m_bRopes: [0x1]u8, // 0x368
+        m_bRopesZOnly: [0x1]u8, // 0x369
+        m_bExplosions: [0x1]u8, // 0x36A
+        m_bParticles: [0x5]u8, // 0x36B
+    };
+    pub const C_OP_RemapAverageHitboxSpeedtoCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nInControlPointNumber: [0x4]u8, // 0x1E8
+        m_nOutControlPointNumber: [0x4]u8, // 0x1EC
+        m_nField: [0x4]u8, // 0x1F0
+        m_nHitboxDataType: [0x4]u8, // 0x1F4
+        m_flInputMin: [0x178]u8, // 0x1F8
+        m_flInputMax: [0x178]u8, // 0x370
+        m_flOutputMin: [0x178]u8, // 0x4E8
+        m_flOutputMax: [0x178]u8, // 0x660
+        m_nHeightControlPointNumber: [0x8]u8, // 0x7D8
+        m_vecComparisonVelocity: [0x6D8]u8, // 0x7E0
+        m_HitboxSetName: [0x80]u8, // 0xEB8
+    };
+    pub const C_INIT_RandomAlpha = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E8
+        m_nAlphaMin: [0x4]u8, // 0x1EC
+        m_nAlphaMax: [0xC]u8, // 0x1F0
+        m_flAlphaRandExponent: [0x4]u8, // 0x1FC
+    };
+    pub const C_OP_NormalizeVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_flScale: [0x4]u8, // 0x1E4
+    };
+    pub const C_OP_FadeInSimple = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flFadeInTime: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+    };
+    pub const C_OP_RepeatedTriggerChildGroup = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nChildGroupID: [0x8]u8, // 0x1E8
+        m_flClusterRefireTime: [0x178]u8, // 0x1F0
+        m_flClusterSize: [0x178]u8, // 0x368
+        m_flClusterCooldown: [0x178]u8, // 0x4E0
+        m_bLimitChildCount: [0x8]u8, // 0x658
+    };
+    pub const C_OP_RemapVelocityToVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_flScale: [0x4]u8, // 0x1E4
+        m_bNormalize: [0x8]u8, // 0x1E8
+    };
+    pub const C_INIT_SetHitboxToClosest = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E8
+        m_nDesiredHitbox: [0x4]u8, // 0x1EC
+        m_vecHitBoxScale: [0x6D8]u8, // 0x1F0
+        m_HitboxSetName: [0x80]u8, // 0x8C8
+        m_bUseBones: [0x1]u8, // 0x948
+        m_bUseClosestPointOnHitbox: [0x3]u8, // 0x949
+        m_nTestType: [0x4]u8, // 0x94C
+        m_flHybridRatio: [0x178]u8, // 0x950
+        m_bUpdatePosition: [0x8]u8, // 0xAC8
+    };
+    pub const C_INIT_RingWave = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_TransformInput: [0x68]u8, // 0x1E8
+        m_flParticlesPerOrbit: [0x178]u8, // 0x250
+        m_flInitialRadius: [0x178]u8, // 0x3C8
+        m_flThickness: [0x178]u8, // 0x540
+        m_flInitialSpeedMin: [0x178]u8, // 0x6B8
+        m_flInitialSpeedMax: [0x178]u8, // 0x830
+        m_flRoll: [0x178]u8, // 0x9A8
+        m_flPitch: [0x178]u8, // 0xB20
+        m_flYaw: [0x178]u8, // 0xC98
+        m_bEvenDistribution: [0x1]u8, // 0xE10
+        m_bXYVelocityOnly: [0x7]u8, // 0xE11
+    };
+    pub const C_INIT_RandomTrailLength = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flMinLength: [0x4]u8, // 0x1E8
+        m_flMaxLength: [0x4]u8, // 0x1EC
+        m_flLengthRandExponent: [0x8]u8, // 0x1F0
+    };
+    pub const C_OP_RemapScalar = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldInput: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_flInputMin: [0x4]u8, // 0x1E8
+        m_flInputMax: [0x4]u8, // 0x1EC
+        m_flOutputMin: [0x4]u8, // 0x1F0
+        m_flOutputMax: [0x4]u8, // 0x1F4
+        m_bOldCode: [0x8]u8, // 0x1F8
+    };
+    pub const C_OP_DistanceBetweenTransforms = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E0
+        m_TransformStart: [0x68]u8, // 0x1E8
+        m_TransformEnd: [0x68]u8, // 0x250
+        m_flInputMin: [0x178]u8, // 0x2B8
+        m_flInputMax: [0x178]u8, // 0x430
+        m_flOutputMin: [0x178]u8, // 0x5A8
+        m_flOutputMax: [0x178]u8, // 0x720
+        m_flMaxTraceLength: [0x4]u8, // 0x898
+        m_flLOSScale: [0x4]u8, // 0x89C
+        m_CollisionGroupName: [0x80]u8, // 0x8A0
+        m_nTraceSet: [0x4]u8, // 0x920
+        m_bLOS: [0x4]u8, // 0x924
+        m_nSetMethod: [0x8]u8, // 0x928
+    };
+    pub const C_OP_DecayOffscreen = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flOffscreenTime: [0x178]u8, // 0x1E0
+    };
+    pub const C_INIT_CreateSequentialPath = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_fMaxDistance: [0x4]u8, // 0x1E8
+        m_flNumToAssign: [0x4]u8, // 0x1EC
+        m_bLoop: [0x1]u8, // 0x1F0
+        m_bCPPairs: [0x1]u8, // 0x1F1
+        m_bSaveOffset: [0xE]u8, // 0x1F2
+        m_PathParams: [0x40]u8, // 0x200
+    };
+    pub const C_OP_EndCapTimedDecay = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flDecayTime: [0x178]u8, // 0x1E0
+    };
+    pub const C_OP_RemapDistanceToLineSegmentBase = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nCP0: [0x4]u8, // 0x1E0
+        m_nCP1: [0x4]u8, // 0x1E4
+        m_flMinInputValue: [0x4]u8, // 0x1E8
+        m_flMaxInputValue: [0x4]u8, // 0x1EC
+        m_bInfiniteLine: [0x8]u8, // 0x1F0
+    };
+    pub const C_OP_ContinuousEmitter = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flEmissionDuration: [0x178]u8, // 0x1E8
+        m_flStartTime: [0x178]u8, // 0x360
+        m_flEmitRate: [0x178]u8, // 0x4D8
+        m_flEmissionScale: [0x4]u8, // 0x650
+        m_flScalePerParentParticle: [0x4]u8, // 0x654
+        m_bInitFromKilledParentParticles: [0x4]u8, // 0x658
+        m_nEventType: [0x4]u8, // 0x65C
+        m_nSnapshotControlPoint: [0x8]u8, // 0x660
+        m_strSnapshotSubset: [0x8]u8, // 0x668
+        m_nLimitPerUpdate: [0x4]u8, // 0x670
+        m_bForceEmitOnFirstUpdate: [0x1]u8, // 0x674
+        m_bForceEmitOnLastUpdate: [0xB]u8, // 0x675
+    };
+    pub const C_OP_OscillateVectorSimple = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_Rate: [0xC]u8, // 0x1E0
+        m_Frequency: [0xC]u8, // 0x1EC
+        m_nField: [0x4]u8, // 0x1F8
+        m_flOscMult: [0x4]u8, // 0x1FC
+        m_flOscAdd: [0x4]u8, // 0x200
+        m_bOffset: [0x4]u8, // 0x204
+    };
+    pub const C_INIT_SequenceLifeTime = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flFramerate: [0x8]u8, // 0x1E8
+    };
+    pub const C_INIT_MoveBetweenPoints = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flSpeedMin: [0x178]u8, // 0x1E8
+        m_flSpeedMax: [0x178]u8, // 0x360
+        m_flEndSpread: [0x178]u8, // 0x4D8
+        m_flStartOffset: [0x178]u8, // 0x650
+        m_flEndOffset: [0x178]u8, // 0x7C8
+        m_nEndControlPointNumber: [0x4]u8, // 0x940
+        m_bTrailBias: [0x4]u8, // 0x944
+    };
+    pub const C_INIT_StatusEffectTf = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flSFXColorWarpAmount: [0x4]u8, // 0x1E8
+        m_flSFXNormalAmount: [0x4]u8, // 0x1EC
+        m_flSFXMetalnessAmount: [0x4]u8, // 0x1F0
+        m_flSFXRoughnessAmount: [0x4]u8, // 0x1F4
+        m_flSFXSelfIllumAmount: [0x4]u8, // 0x1F8
+        m_flSFXSScale: [0x4]u8, // 0x1FC
+        m_flSFXSScrollX: [0x4]u8, // 0x200
+        m_flSFXSScrollY: [0x4]u8, // 0x204
+        m_flSFXSScrollZ: [0x4]u8, // 0x208
+        m_flSFXSOffsetX: [0x4]u8, // 0x20C
+        m_flSFXSOffsetY: [0x4]u8, // 0x210
+        m_flSFXSOffsetZ: [0x4]u8, // 0x214
+        m_nDetailCombo: [0x4]u8, // 0x218
+        m_flSFXSDetailAmount: [0x4]u8, // 0x21C
+        m_flSFXSDetailScale: [0x4]u8, // 0x220
+        m_flSFXSDetailScrollX: [0x4]u8, // 0x224
+        m_flSFXSDetailScrollY: [0x4]u8, // 0x228
+        m_flSFXSDetailScrollZ: [0x4]u8, // 0x22C
+        m_flSFXSUseModelUVs: [0x4]u8, // 0x230
+        m_flSFXEnvMapAmount: [0x4]u8, // 0x234
+    };
+    pub const C_OP_SetUserEvent = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flInput: [0x178]u8, // 0x1E0
+        m_flRisingEdge: [0x178]u8, // 0x358
+        m_nRisingEventType: [0x8]u8, // 0x4D0
+        m_flFallingEdge: [0x178]u8, // 0x4D8
+        m_nFallingEventType: [0x8]u8, // 0x650
+    };
+    pub const C_OP_QuantizeFloat = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_InputValue: [0x178]u8, // 0x1E0
+        m_nOutputField: [0x28]u8, // 0x358
+    };
+    pub const C_OP_BasicMovement = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_Gravity: [0x6D8]u8, // 0x1E0
+        m_fDrag: [0x178]u8, // 0x8B8
+        m_massControls: [0x470]u8, // 0xA30
+        m_nMaxConstraintPasses: [0x4]u8, // 0xEA0
+        m_bUseNewCode: [0x4]u8, // 0xEA4
+    };
+    pub const C_INIT_RandomNamedModelElement = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_hModel: [0x8]u8, // 0x1E8
+        m_names: [0x18]u8, // 0x1F0
+        m_bShuffle: [0x1]u8, // 0x208
+        m_bLinear: [0x1]u8, // 0x209
+        m_bModelFromRenderer: [0x2]u8, // 0x20A
+        m_nFieldOutput: [0x4]u8, // 0x20C
+    };
+    pub const C_INIT_InitFromParentKilled = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nAttributeToCopy: [0x4]u8, // 0x1E8
+        m_nEventType: [0x84]u8, // 0x1EC
+    };
+    pub const C_OP_Callback = extern struct {
+        pad_0: [0x230]u8, // 0x0
+    };
+    pub const CParticleFunction = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        m_flOpStrength: [0x178]u8, // 0x8
+        m_nOpEndCapState: [0x4]u8, // 0x180
+        m_nToolsState: [0x4]u8, // 0x184
+        m_flOpStartFadeInTime: [0x4]u8, // 0x188
+        m_flOpEndFadeInTime: [0x4]u8, // 0x18C
+        m_flOpStartFadeOutTime: [0x4]u8, // 0x190
+        m_flOpEndFadeOutTime: [0x4]u8, // 0x194
+        m_flOpFadeOscillatePeriod: [0x4]u8, // 0x198
+        m_bNormalizeToStopTime: [0x4]u8, // 0x19C
+        m_flOpTimeOffsetMin: [0x4]u8, // 0x1A0
+        m_flOpTimeOffsetMax: [0x4]u8, // 0x1A4
+        m_nOpTimeOffsetSeed: [0x4]u8, // 0x1A8
+        m_nOpTimeScaleSeed: [0x4]u8, // 0x1AC
+        m_flOpTimeScaleMin: [0x4]u8, // 0x1B0
+        m_flOpTimeScaleMax: [0x6]u8, // 0x1B4
+        m_bDisableOperator: [0x6]u8, // 0x1BA
+        m_Notes: [0x20]u8, // 0x1C0
+    };
+    pub const C_OP_GlobalLight = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flScale: [0x4]u8, // 0x1E0
+        m_bClampLowerRange: [0x1]u8, // 0x1E4
+        m_bClampUpperRange: [0x3]u8, // 0x1E5
+    };
+    pub const C_INIT_OffsetVectorToVector = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nFieldInput: [0x4]u8, // 0x1E8
+        m_nFieldOutput: [0x4]u8, // 0x1EC
+        m_vecOutputMin: [0xC]u8, // 0x1F0
+        m_vecOutputMax: [0xC]u8, // 0x1FC
+        m_randomnessParameters: [0x8]u8, // 0x208
+    };
+    pub const C_OP_SetPerChildControlPointFromAttribute = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nChildGroupID: [0x4]u8, // 0x1E0
+        m_nFirstControlPoint: [0x4]u8, // 0x1E4
+        m_nNumControlPoints: [0x4]u8, // 0x1E8
+        m_nParticleIncrement: [0x4]u8, // 0x1EC
+        m_nFirstSourcePoint: [0x4]u8, // 0x1F0
+        m_bNumBasedOnParticleCount: [0x4]u8, // 0x1F4
+        m_nAttributeToRead: [0x4]u8, // 0x1F8
+        m_nCPField: [0x4]u8, // 0x1FC
+    };
+    pub const C_OP_SetParentControlPointsToChildCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nChildGroupID: [0x4]u8, // 0x1E8
+        m_nChildControlPoint: [0x4]u8, // 0x1EC
+        m_nNumControlPoints: [0x4]u8, // 0x1F0
+        m_nFirstSourcePoint: [0x4]u8, // 0x1F4
+        m_bSetOrientation: [0x8]u8, // 0x1F8
+    };
+    pub const C_OP_BoxConstraint = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_vecMin: [0x6D8]u8, // 0x1E0
+        m_vecMax: [0x6D8]u8, // 0x8B8
+        m_nCP: [0x4]u8, // 0xF90
+        m_bLocalSpace: [0x1]u8, // 0xF94
+        m_bAccountForRadius: [0x3]u8, // 0xF95
+    };
+    pub const C_INIT_CreatePhyllotaxis = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E8
+        m_nScaleCP: [0x4]u8, // 0x1EC
+        m_nComponent: [0x4]u8, // 0x1F0
+        m_fRadCentCore: [0x4]u8, // 0x1F4
+        m_fRadPerPoint: [0x4]u8, // 0x1F8
+        m_fRadPerPointTo: [0x4]u8, // 0x1FC
+        m_fpointAngle: [0x4]u8, // 0x200
+        m_fsizeOverall: [0x4]u8, // 0x204
+        m_fRadBias: [0x4]u8, // 0x208
+        m_fMinRad: [0x4]u8, // 0x20C
+        m_fDistBias: [0x4]u8, // 0x210
+        m_bUseLocalCoords: [0x1]u8, // 0x214
+        m_bUseWithContEmit: [0x1]u8, // 0x215
+        m_bUseOrigRadius: [0x2]u8, // 0x216
+    };
+    pub const C_OP_AttractToControlPoint = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_vecComponentScale: [0x10]u8, // 0x1F0
+        m_fForceAmount: [0x178]u8, // 0x200
+        m_fMinimumDistance: [0x178]u8, // 0x378
+        m_fFalloffPower: [0x8]u8, // 0x4F0
+        m_TransformInput: [0x68]u8, // 0x4F8
+        m_fForceAmountMin: [0x178]u8, // 0x560
+        m_bApplyMinForce: [0x8]u8, // 0x6D8
+    };
+    pub const C_INIT_RandomLifeTime = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_fLifetimeMin: [0x4]u8, // 0x1E8
+        m_fLifetimeMax: [0x4]u8, // 0x1EC
+        m_fLifetimeRandExponent: [0x8]u8, // 0x1F0
+    };
+    pub const C_INIT_RemapParticleCountToNamedModelSequenceScalar = extern struct {
+        pad_0: [0x238]u8, // 0x0
+    };
+    pub const C_INIT_VelocityRadialRandom = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_bPerParticleCenter: [0x4]u8, // 0x1E8
+        m_nControlPointNumber: [0x4]u8, // 0x1EC
+        m_vecPosition: [0x6D8]u8, // 0x1F0
+        m_vecFwd: [0x6D8]u8, // 0x8C8
+        m_fSpeedMin: [0x178]u8, // 0xFA0
+        m_fSpeedMax: [0x178]u8, // 0x1118
+        m_vecLocalCoordinateSystemSpeedScale: [0xD]u8, // 0x1290
+        m_bIgnoreDelta: [0x3]u8, // 0x129D
+    };
+    pub const C_INIT_RandomRadius = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flRadiusMin: [0x4]u8, // 0x1E8
+        m_flRadiusMax: [0x4]u8, // 0x1EC
+        m_flRadiusRandExponent: [0x8]u8, // 0x1F0
+    };
+    pub const C_OP_Orient2DRelToCP = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flRotOffset: [0x4]u8, // 0x1E0
+        m_flSpinStrength: [0x4]u8, // 0x1E4
+        m_nCP: [0x4]u8, // 0x1E8
+        m_nFieldOutput: [0x4]u8, // 0x1EC
+    };
+    pub const TextureControls_t = extern struct {
+        m_flFinalTextureScaleU: [0x178]u8, // 0x0
+        m_flFinalTextureScaleV: [0x178]u8, // 0x178
+        m_flFinalTextureOffsetU: [0x178]u8, // 0x2F0
+        m_flFinalTextureOffsetV: [0x178]u8, // 0x468
+        m_flFinalTextureUVRotation: [0x178]u8, // 0x5E0
+        m_flZoomScale: [0x178]u8, // 0x758
+        m_flDistortion: [0x178]u8, // 0x8D0
+        m_bRandomizeOffsets: [0x1]u8, // 0xA48
+        m_bClampUVs: [0x3]u8, // 0xA49
+        m_nPerParticleBlend: [0x4]u8, // 0xA4C
+        m_nPerParticleScale: [0x4]u8, // 0xA50
+        m_nPerParticleOffsetU: [0x4]u8, // 0xA54
+        m_nPerParticleOffsetV: [0x4]u8, // 0xA58
+        m_nPerParticleRotation: [0x4]u8, // 0xA5C
+        m_nPerParticleZoom: [0x4]u8, // 0xA60
+        m_nPerParticleDistortion: [0x4]u8, // 0xA64
+    };
+    pub const ControlPointReference_t = extern struct {
+        m_controlPointNameString: [0x4]u8, // 0x0
+        m_vOffsetFromControlPoint: [0xC]u8, // 0x4
+        m_bOffsetInLocalSpace: [0x4]u8, // 0x10
+    };
+    pub const C_OP_SetControlPointToVectorExpression = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nExpression: [0x4]u8, // 0x1E8
+        m_nOutputCP: [0x4]u8, // 0x1EC
+        m_vInput1: [0x6D8]u8, // 0x1F0
+        m_vInput2: [0x6D8]u8, // 0x8C8
+        m_flLerp: [0x178]u8, // 0xFA0
+        m_bNormalizedOutput: [0x8]u8, // 0x1118
+    };
+    pub const C_OP_LightningSnapshotGenerator = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCPSnapshot: [0x4]u8, // 0x1E8
+        m_nCPStartPnt: [0x4]u8, // 0x1EC
+        m_nCPEndPnt: [0x8]u8, // 0x1F0
+        m_flSegments: [0x178]u8, // 0x1F8
+        m_flOffset: [0x178]u8, // 0x370
+        m_flOffsetDecay: [0x178]u8, // 0x4E8
+        m_flRecalcRate: [0x178]u8, // 0x660
+        m_flUVScale: [0x178]u8, // 0x7D8
+        m_flUVOffset: [0x178]u8, // 0x950
+        m_flSplitRate: [0x178]u8, // 0xAC8
+        m_flRecursionSplitScale: [0x178]u8, // 0xC40
+        m_bScaleBranchDistance: [0x8]u8, // 0xDB8
+        m_flBranchDistanceScale: [0x178]u8, // 0xDC0
+        m_bScaleBranchOffset: [0x8]u8, // 0xF38
+        m_flBranchOffsetScale: [0x178]u8, // 0xF40
+        m_flBranchTwist: [0x178]u8, // 0x10B8
+        m_nBranchBehavior: [0x8]u8, // 0x1230
+        m_flRadiusStart: [0x178]u8, // 0x1238
+        m_flRadiusEnd: [0x178]u8, // 0x13B0
+        m_flDedicatedPool: [0x178]u8, // 0x1528
+    };
+    pub const C_OP_RemapNamedModelMeshGroupOnceTimed = extern struct {
+        pad_0: [0x240]u8, // 0x0
+    };
+    pub const C_INIT_RemapQAnglesToRotation = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_TransformInput: [0x68]u8, // 0x1E8
+    };
+    pub const C_INIT_PositionWarp = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_vecWarpMin: [0x6D8]u8, // 0x1E8
+        m_vecWarpMax: [0x6D8]u8, // 0x8C0
+        m_nScaleControlPointNumber: [0x4]u8, // 0xF98
+        m_nControlPointNumber: [0x4]u8, // 0xF9C
+        m_nRadiusComponent: [0x4]u8, // 0xFA0
+        m_flWarpTime: [0x4]u8, // 0xFA4
+        m_flWarpStartTime: [0x4]u8, // 0xFA8
+        m_flPrevPosScale: [0x4]u8, // 0xFAC
+        m_bInvertWarp: [0x1]u8, // 0xFB0
+        m_bUseCount: [0x7]u8, // 0xFB1
+    };
+    pub const C_OP_SetControlPointFieldToScalarExpression = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nExpression: [0x8]u8, // 0x1E8
+        m_flInput1: [0x178]u8, // 0x1F0
+        m_flInput2: [0x178]u8, // 0x368
+        m_flOutputRemap: [0x178]u8, // 0x4E0
+        m_nOutputCP: [0x4]u8, // 0x658
+        m_nOutVectorField: [0x4]u8, // 0x65C
+        m_flInterpolation: [0x178]u8, // 0x660
+    };
+    pub const C_OP_CreateParticleSystemRenderer = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_hEffect: [0x8]u8, // 0x230
+        m_nEventType: [0x8]u8, // 0x238
+        m_vecCPs: [0x10]u8, // 0x240
+        m_szParticleConfig: [0x8]u8, // 0x250
+        m_AggregationPos: [0x6D8]u8, // 0x258
+    };
+    pub const CParticleFunctionForce = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+    };
+    pub const C_INIT_RandomVectorComponent = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flMin: [0x4]u8, // 0x1E8
+        m_flMax: [0x4]u8, // 0x1EC
+        m_nFieldOutput: [0x4]u8, // 0x1F0
+        m_nComponent: [0x4]u8, // 0x1F4
+    };
+    pub const C_OP_InheritFromParentParticles = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flScale: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_nIncrement: [0x4]u8, // 0x1E8
+        m_bRandomDistribution: [0x4]u8, // 0x1EC
+    };
+    pub const C_INIT_SetVectorAttributeToVectorExpression = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nExpression: [0x8]u8, // 0x1E8
+        m_vInput1: [0x6D8]u8, // 0x1F0
+        m_vInput2: [0x6D8]u8, // 0x8C8
+        m_flLerp: [0x178]u8, // 0xFA0
+        m_nOutputField: [0x4]u8, // 0x1118
+        m_nSetMethod: [0x4]u8, // 0x111C
+        m_bNormalizedOutput: [0x70]u8, // 0x1120
+    };
+    pub const C_OP_RemapTransformVisibilityToVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nSetMethod: [0x8]u8, // 0x1E0
+        m_TransformInput: [0x68]u8, // 0x1E8
+        m_nFieldOutput: [0x4]u8, // 0x250
+        m_flInputMin: [0x4]u8, // 0x254
+        m_flInputMax: [0x4]u8, // 0x258
+        m_vecOutputMin: [0xC]u8, // 0x25C
+        m_vecOutputMax: [0xC]u8, // 0x268
+        m_flRadius: [0x4]u8, // 0x274
+    };
+    pub const C_OP_DirectionBetweenVecsToVec = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E0
+        m_vecPoint1: [0x6D8]u8, // 0x1E8
+        m_vecPoint2: [0x6D8]u8, // 0x8C0
+    };
+    pub const C_OP_MovementLoopInsideSphere = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nCP: [0x8]u8, // 0x1E0
+        m_flDistance: [0x178]u8, // 0x1E8
+        m_vecScale: [0x6D8]u8, // 0x360
+        m_nDistSqrAttr: [0x8]u8, // 0xA38
+    };
+    pub const C_OP_RenderSimpleModelCollection = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_bCenterOffset: [0x8]u8, // 0x230
+        m_hModel: [0x8]u8, // 0x238
+        m_modelInput: [0x60]u8, // 0x240
+        m_fSizeCullScale: [0x178]u8, // 0x2A0
+        m_bDisableShadows: [0x1]u8, // 0x418
+        m_bDisableMotionBlur: [0x1]u8, // 0x419
+        m_bAcceptsDecals: [0x6]u8, // 0x41A
+        m_fDrawFilter: [0x178]u8, // 0x420
+        m_nAngularVelocityField: [0x18]u8, // 0x598
+    };
+    pub const C_OP_QuantizeCPComponent = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flInputValue: [0x178]u8, // 0x1E8
+        m_nCPOutput: [0x4]u8, // 0x360
+        m_nOutVectorField: [0x4]u8, // 0x364
+        m_flQuantizeValue: [0x178]u8, // 0x368
+    };
+    pub const C_OP_PlayEndCapWhenFinished = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_bFireOnEmissionEnd: [0x1]u8, // 0x1E8
+        m_bIncludeChildren: [0x7]u8, // 0x1E9
+    };
+    pub const C_INIT_InitFloatCollection = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_InputValue: [0x178]u8, // 0x1E8
+        m_nOutputField: [0x8]u8, // 0x360
+    };
+    pub const CPathParameters = extern struct {
+        m_nStartControlPointNumber: [0x4]u8, // 0x0
+        m_nMidControlPointNumber: [0x4]u8, // 0x4
+        m_nEndControlPointNumber: [0x4]u8, // 0x8
+        m_nBulgeControl: [0x4]u8, // 0xC
+        m_flBulge: [0x4]u8, // 0x10
+        m_flMidPoint: [0x4]u8, // 0x14
+        m_vStartPointOffset: [0xC]u8, // 0x18
+        m_vMidPointOffset: [0xC]u8, // 0x24
+        m_vEndOffset: [0x10]u8, // 0x30
+    };
+    pub const C_OP_RemapScalarEndCap = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldInput: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_flInputMin: [0x4]u8, // 0x1E8
+        m_flInputMax: [0x4]u8, // 0x1EC
+        m_flOutputMin: [0x4]u8, // 0x1F0
+        m_flOutputMax: [0x4]u8, // 0x1F4
+    };
+    pub const C_INIT_CreateFromPlaneCache = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_vecOffsetMin: [0xC]u8, // 0x1E8
+        m_vecOffsetMax: [0xD]u8, // 0x1F4
+        m_bUseNormal: [0x7]u8, // 0x201
+    };
+    pub const C_OP_LazyCullCompareFloat = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flComparsion1: [0x178]u8, // 0x1E0
+        m_flComparsion2: [0x178]u8, // 0x358
+        m_flCullTime: [0x178]u8, // 0x4D0
+    };
+    pub const C_OP_ControlPointToRadialScreenSpace = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCPIn: [0x4]u8, // 0x1E8
+        m_vecCP1Pos: [0xC]u8, // 0x1EC
+        m_nCPOut: [0x4]u8, // 0x1F8
+        m_nCPOutField: [0x4]u8, // 0x1FC
+        m_nCPSSPosOut: [0x8]u8, // 0x200
+    };
+    pub const C_OP_SpinUpdate = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+    };
+    pub const C_INIT_NormalOffset = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_OffsetMin: [0xC]u8, // 0x1E8
+        m_OffsetMax: [0xC]u8, // 0x1F4
+        m_nControlPointNumber: [0x4]u8, // 0x200
+        m_bLocalCoords: [0x1]u8, // 0x204
+        m_bNormalize: [0x3]u8, // 0x205
+    };
+    pub const C_OP_RemapDistanceToLineSegmentToVector = extern struct {
+        pad_0: [0x1F8]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1F8
+        m_vMinOutputValue: [0xC]u8, // 0x1FC
+        m_vMaxOutputValue: [0x10]u8, // 0x208
+    };
+    pub const C_OP_RenderAsModels = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_ModelList: [0x1C]u8, // 0x230
+        m_flModelScale: [0x4]u8, // 0x24C
+        m_bFitToModelSize: [0x1]u8, // 0x250
+        m_bNonUniformScaling: [0x3]u8, // 0x251
+        m_nXAxisScalingAttribute: [0x4]u8, // 0x254
+        m_nYAxisScalingAttribute: [0x4]u8, // 0x258
+        m_nZAxisScalingAttribute: [0x4]u8, // 0x25C
+        m_nSizeCullBloat: [0x8]u8, // 0x260
+    };
+    pub const C_INIT_CreationNoise = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E8
+        m_bAbsVal: [0x1]u8, // 0x1EC
+        m_bAbsValInv: [0x3]u8, // 0x1ED
+        m_flOffset: [0x4]u8, // 0x1F0
+        m_flOutputMin: [0x4]u8, // 0x1F4
+        m_flOutputMax: [0x4]u8, // 0x1F8
+        m_flNoiseScale: [0x4]u8, // 0x1FC
+        m_flNoiseScaleLoc: [0x4]u8, // 0x200
+        m_vecOffsetLoc: [0xC]u8, // 0x204
+        m_flWorldTimeScale: [0x8]u8, // 0x210
+    };
+    pub const C_OP_Spin = extern struct {
+        pad_0: [0x1F8]u8, // 0x0
+    };
+    pub const C_OP_GameLiquidSpill = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_flLiquidContentsField: [0x178]u8, // 0x230
+        m_flExpirationTime: [0x178]u8, // 0x3A8
+        m_flRadius: [0x178]u8, // 0x520
+        m_bCheckExposedToSky: [0x4]u8, // 0x698
+        m_nAmountAttribute: [0x4]u8, // 0x69C
+    };
+    pub const C_OP_InstantaneousEmitter = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nParticlesToEmit: [0x178]u8, // 0x1E8
+        m_flStartTime: [0x178]u8, // 0x360
+        m_flInitFromKilledParentParticles: [0x4]u8, // 0x4D8
+        m_nEventType: [0x4]u8, // 0x4DC
+        m_flParentParticleScale: [0x178]u8, // 0x4E0
+        m_nMaxEmittedPerFrame: [0x4]u8, // 0x658
+        m_nSnapshotControlPoint: [0x4]u8, // 0x65C
+        m_strSnapshotSubset: [0x8]u8, // 0x660
+    };
+    pub const C_OP_ConstrainLineLength = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flMinDistance: [0x4]u8, // 0x1E0
+        m_flMaxDistance: [0x4]u8, // 0x1E4
+    };
+    pub const C_INIT_LifespanFromVelocity = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_vecComponentScale: [0xC]u8, // 0x1E8
+        m_flTraceOffset: [0x4]u8, // 0x1F4
+        m_flMaxTraceLength: [0x4]u8, // 0x1F8
+        m_flTraceTolerance: [0x4]u8, // 0x1FC
+        m_nMaxPlanes: [0x8]u8, // 0x200
+        m_CollisionGroupName: [0x80]u8, // 0x208
+        m_nTraceSet: [0x10]u8, // 0x288
+        m_bIncludeWater: [0x8]u8, // 0x298
+    };
+    pub const CBaseTrailRenderer = extern struct {
+        pad_0: [0x2ED8]u8, // 0x0
+        m_nOrientationType: [0x4]u8, // 0x2ED8
+        m_nOrientationControlPoint: [0x4]u8, // 0x2EDC
+        m_flMinSize: [0x4]u8, // 0x2EE0
+        m_flMaxSize: [0x4]u8, // 0x2EE4
+        m_flStartFadeSize: [0x178]u8, // 0x2EE8
+        m_flEndFadeSize: [0x178]u8, // 0x3060
+        m_flSubPixelAAScale: [0x178]u8, // 0x31D8
+        m_bClampV: [0x8]u8, // 0x3350
+    };
+    pub const C_INIT_VelocityFromCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_velocityInput: [0x6D8]u8, // 0x1E8
+        m_transformInput: [0x68]u8, // 0x8C0
+        m_flVelocityScale: [0x4]u8, // 0x928
+        m_bDirectionOnly: [0x4]u8, // 0x92C
+    };
+    pub const C_OP_SetControlPointOrientation = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_bUseWorldLocation: [0x2]u8, // 0x1E8
+        m_bRandomize: [0x1]u8, // 0x1EA
+        m_bSetOnce: [0x1]u8, // 0x1EB
+        m_nCP: [0x4]u8, // 0x1EC
+        m_nHeadLocation: [0x4]u8, // 0x1F0
+        m_vecRotation: [0xC]u8, // 0x1F4
+        m_vecRotationB: [0x10]u8, // 0x200
+        m_flInterpolation: [0x178]u8, // 0x210
+    };
+    pub const C_OP_MovementSkinnedPositionFromCPSnapshot = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nSnapshotControlPointNumber: [0x4]u8, // 0x1E0
+        m_nControlPointNumber: [0x4]u8, // 0x1E4
+        m_bRandom: [0x4]u8, // 0x1E8
+        m_nRandomSeed: [0x4]u8, // 0x1EC
+        m_bSetNormal: [0x1]u8, // 0x1F0
+        m_bSetRadius: [0x3]u8, // 0x1F1
+        m_nIndexType: [0x4]u8, // 0x1F4
+        m_flReadIndex: [0x178]u8, // 0x1F8
+        m_flIncrement: [0x178]u8, // 0x370
+        m_nFullLoopIncrement: [0x178]u8, // 0x4E8
+        m_nSnapShotStartPoint: [0x178]u8, // 0x660
+        m_flInterpolation: [0x178]u8, // 0x7D8
+    };
+    pub const C_OP_MultiSegmentDisplaySnapshotGenerator = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCPSnapshot: [0x4]u8, // 0x1E8
+        m_nSegCount: [0x4]u8, // 0x1EC
+        m_nInputType: [0x8]u8, // 0x1F0
+        m_strDefaultString: [0x8]u8, // 0x1F8
+        m_flValue: [0x178]u8, // 0x200
+        m_flScollOffset: [0x178]u8, // 0x378
+        m_SpecialCharList: [0x18]u8, // 0x4F0
+        m_vecColorUnlit: [0x6D8]u8, // 0x508
+        m_vecColorLit: [0x6D8]u8, // 0xBE0
+        m_flRadius: [0x178]u8, // 0x12B8
+        m_flSpacing: [0x178]u8, // 0x1430
+        m_flMinCount: [0x178]u8, // 0x15A8
+        m_flMaxCount: [0x178]u8, // 0x1720
+        m_bPrependEmpty: [0x8]u8, // 0x1898
+        m_flDigitsAfterDecimal: [0x178]u8, // 0x18A0
+    };
+    pub const C_OP_OscillateVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_RateMin: [0xC]u8, // 0x1E0
+        m_RateMax: [0xC]u8, // 0x1EC
+        m_FrequencyMin: [0xC]u8, // 0x1F8
+        m_FrequencyMax: [0xC]u8, // 0x204
+        m_nField: [0x4]u8, // 0x210
+        m_bProportional: [0x1]u8, // 0x214
+        m_bProportionalOp: [0x1]u8, // 0x215
+        m_bOffset: [0x2]u8, // 0x216
+        m_flStartTime_min: [0x4]u8, // 0x218
+        m_flStartTime_max: [0x4]u8, // 0x21C
+        m_flEndTime_min: [0x4]u8, // 0x220
+        m_flEndTime_max: [0x4]u8, // 0x224
+        m_flOscMult: [0x178]u8, // 0x228
+        m_flOscAdd: [0x178]u8, // 0x3A0
+        m_flRateScale: [0x178]u8, // 0x518
+    };
+    pub const C_OP_PositionLock = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_TransformInput: [0x68]u8, // 0x1E0
+        m_flStartTime_min: [0x4]u8, // 0x248
+        m_flStartTime_max: [0x4]u8, // 0x24C
+        m_flStartTime_exp: [0x4]u8, // 0x250
+        m_flEndTime_min: [0x4]u8, // 0x254
+        m_flEndTime_max: [0x4]u8, // 0x258
+        m_flEndTime_exp: [0x4]u8, // 0x25C
+        m_flRange: [0x8]u8, // 0x260
+        m_flRangeBias: [0x178]u8, // 0x268
+        m_flJumpThreshold: [0x4]u8, // 0x3E0
+        m_flPrevPosScale: [0x4]u8, // 0x3E4
+        m_bLockRot: [0x8]u8, // 0x3E8
+        m_vecScale: [0x6D8]u8, // 0x3F0
+        m_nFieldOutput: [0x4]u8, // 0xAC8
+        m_nFieldOutputPrev: [0x4]u8, // 0xACC
+    };
+    pub const C_OP_RenderVRHapticEvent = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_nHand: [0x4]u8, // 0x230
+        m_nOutputHandCP: [0x4]u8, // 0x234
+        m_nOutputField: [0x8]u8, // 0x238
+        m_flAmplitude: [0x178]u8, // 0x240
+    };
+    pub const C_OP_SetControlPointToImpactPoint = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCPOut: [0x4]u8, // 0x1E8
+        m_nCPIn: [0x4]u8, // 0x1EC
+        m_flUpdateRate: [0x8]u8, // 0x1F0
+        m_flTraceLength: [0x178]u8, // 0x1F8
+        m_flStartOffset: [0x4]u8, // 0x370
+        m_flOffset: [0x4]u8, // 0x374
+        m_vecTraceDir: [0xC]u8, // 0x378
+        m_CollisionGroupName: [0x80]u8, // 0x384
+        m_nTraceSet: [0x4]u8, // 0x404
+        m_bSetToEndpoint: [0x1]u8, // 0x408
+        m_bTraceToClosestSurface: [0x1]u8, // 0x409
+        m_bIncludeWater: [0x6]u8, // 0x40A
+    };
+    pub const C_OP_InterpolateRadius = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flStartTime: [0x4]u8, // 0x1E0
+        m_flEndTime: [0x4]u8, // 0x1E4
+        m_flStartScale: [0x4]u8, // 0x1E8
+        m_flEndScale: [0x4]u8, // 0x1EC
+        m_bEaseInAndOut: [0x4]u8, // 0x1F0
+        m_flBias: [0x3C]u8, // 0x1F4
+    };
+    pub const C_OP_ReinitializeScalarEndCap = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_flOutputMin: [0x4]u8, // 0x1E4
+        m_flOutputMax: [0x8]u8, // 0x1E8
+    };
+    pub const C_OP_TurbulenceForce = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_flNoiseCoordScale0: [0x4]u8, // 0x1F0
+        m_flNoiseCoordScale1: [0x4]u8, // 0x1F4
+        m_flNoiseCoordScale2: [0x4]u8, // 0x1F8
+        m_flNoiseCoordScale3: [0x4]u8, // 0x1FC
+        m_vecNoiseAmount0: [0xC]u8, // 0x200
+        m_vecNoiseAmount1: [0xC]u8, // 0x20C
+        m_vecNoiseAmount2: [0xC]u8, // 0x218
+        m_vecNoiseAmount3: [0xC]u8, // 0x224
+    };
+    pub const C_OP_RemapNamedModelElementOnceTimed = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_hModel: [0x8]u8, // 0x1E0
+        m_inNames: [0x18]u8, // 0x1E8
+        m_outNames: [0x18]u8, // 0x200
+        m_fallbackNames: [0x18]u8, // 0x218
+        m_bModelFromRenderer: [0x1]u8, // 0x230
+        m_bProportional: [0x3]u8, // 0x231
+        m_nFieldInput: [0x4]u8, // 0x234
+        m_nFieldOutput: [0x4]u8, // 0x238
+        m_flRemapTime: [0x4]u8, // 0x23C
+    };
+    pub const C_OP_SetControlPointToPlayer = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCP1: [0x4]u8, // 0x1E8
+        m_vecCP1Pos: [0xC]u8, // 0x1EC
+        m_bOrientToEyes: [0x4]u8, // 0x1F8
+        m_nPosition: [0x4]u8, // 0x1FC
+        m_nRadiusCP: [0x4]u8, // 0x200
+        m_nRadiusCPField: [0x4]u8, // 0x204
+    };
+    pub const C_OP_EndCapTimedFreeze = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flFreezeTime: [0x178]u8, // 0x1E0
+    };
+    pub const C_OP_RenderGpuImplicit = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_bUsePerParticleRadius: [0x4]u8, // 0x230
+        m_nVertexCountKb: [0x4]u8, // 0x234
+        m_nIndexCountKb: [0x8]u8, // 0x238
+        m_fGridSize: [0x178]u8, // 0x240
+        m_fRadiusScale: [0x178]u8, // 0x3B8
+        m_fIsosurfaceThreshold: [0x178]u8, // 0x530
+        m_nScaleCP: [0x8]u8, // 0x6A8
+        m_hMaterial: [0x8]u8, // 0x6B0
+    };
+    pub const C_OP_SetRandomControlPointPosition = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_bUseWorldLocation: [0x1]u8, // 0x1E8
+        m_bOrient: [0x3]u8, // 0x1E9
+        m_nCP1: [0x4]u8, // 0x1EC
+        m_nHeadLocation: [0x8]u8, // 0x1F0
+        m_flReRandomRate: [0x178]u8, // 0x1F8
+        m_vecCPMinPos: [0xC]u8, // 0x370
+        m_vecCPMaxPos: [0xC]u8, // 0x37C
+        m_flInterpolation: [0x178]u8, // 0x388
+    };
+    pub const C_OP_RenderVolumetricEmitter = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_strChannelType: [0x8]u8, // 0x230
+        m_nType: [0x4]u8, // 0x238
+        m_nCreationType: [0x4]u8, // 0x23C
+        m_nEventType: [0x8]u8, // 0x240
+        m_vecPos: [0x6D8]u8, // 0x248
+        m_vecVelocity: [0x6D8]u8, // 0x920
+        m_vPrevPosition: [0x6D8]u8, // 0xFF8
+        m_flSpeed: [0x178]u8, // 0x16D0
+        m_flRadius: [0x178]u8, // 0x1848
+        m_flDensity: [0x178]u8, // 0x19C0
+        m_flTemperature: [0x178]u8, // 0x1B38
+        m_flMagnitude: [0x178]u8, // 0x1CB0
+        m_flKillRadius: [0x178]u8, // 0x1E28
+        m_flKillDensityScale: [0x178]u8, // 0x1FA0
+        m_flFalloff: [0x178]u8, // 0x2118
+    };
+    pub const C_OP_RemapTransformVisibilityToScalar = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nSetMethod: [0x8]u8, // 0x1E0
+        m_TransformInput: [0x68]u8, // 0x1E8
+        m_nFieldOutput: [0x4]u8, // 0x250
+        m_flInputMin: [0x4]u8, // 0x254
+        m_flInputMax: [0x4]u8, // 0x258
+        m_flOutputMin: [0x4]u8, // 0x25C
+        m_flOutputMax: [0x4]u8, // 0x260
+        m_flRadius: [0x4]u8, // 0x264
+    };
+    pub const C_OP_RemapControlPointDirectionToVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_flScale: [0x4]u8, // 0x1E4
+        m_nControlPointNumber: [0x8]u8, // 0x1E8
+    };
+    pub const C_OP_ScreenSpacePositionOfTarget = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_vecTargetPosition: [0x6D8]u8, // 0x1E0
+        m_bOututBehindness: [0x4]u8, // 0x8B8
+        m_nBehindFieldOutput: [0x4]u8, // 0x8BC
+        m_flBehindOutputRemap: [0x178]u8, // 0x8C0
+        m_nBehindSetMethod: [0x8]u8, // 0xA38
+    };
+    pub const CParticleFunctionOperator = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+    };
+    pub const C_OP_DragRelativeToPlane = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flDragAtPlane: [0x178]u8, // 0x1E0
+        m_flFalloff: [0x178]u8, // 0x358
+        m_bDirectional: [0x8]u8, // 0x4D0
+        m_vecPlaneNormal: [0x6D8]u8, // 0x4D8
+        m_nControlPointNumber: [0x8]u8, // 0xBB0
+    };
+    pub const C_OP_SetCPtoVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nCPInput: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+    };
+    pub const C_INIT_RandomYaw = extern struct {
+        pad_0: [0x208]u8, // 0x0
+    };
+    pub const C_OP_SnapshotRigidSkinToBones = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_bTransformNormals: [0x1]u8, // 0x1E0
+        m_bTransformRadii: [0x3]u8, // 0x1E1
+        m_nControlPointNumber: [0x4]u8, // 0x1E4
+    };
+    pub const C_OP_SetSingleControlPointPosition = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_bSetOnce: [0x4]u8, // 0x1E8
+        m_nCP1: [0x4]u8, // 0x1EC
+        m_vecCP1Pos: [0x6D8]u8, // 0x1F0
+        m_transformInput: [0x68]u8, // 0x8C8
+    };
+    pub const C_INIT_DistanceToNeighborCull = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flDistance: [0x178]u8, // 0x1E8
+        m_bIncludeRadii: [0x8]u8, // 0x360
+        m_flLifespanOverlap: [0x178]u8, // 0x368
+        m_nFieldModify: [0x8]u8, // 0x4E0
+        m_flModify: [0x178]u8, // 0x4E8
+        m_nSetMethod: [0x4]u8, // 0x660
+        m_bUseNeighbor: [0x4]u8, // 0x664
+    };
+    pub const C_OP_RemapCPtoScalar = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nCPInput: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_nField: [0x4]u8, // 0x1E8
+        m_flInputMin: [0x4]u8, // 0x1EC
+        m_flInputMax: [0x4]u8, // 0x1F0
+        m_flOutputMin: [0x4]u8, // 0x1F4
+        m_flOutputMax: [0x4]u8, // 0x1F8
+        m_flStartTime: [0x4]u8, // 0x1FC
+        m_flEndTime: [0x4]u8, // 0x200
+        m_flInterpRate: [0x4]u8, // 0x204
+        m_nSetMethod: [0x8]u8, // 0x208
+    };
+    pub const CParticleFunctionRenderer = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        VisibilityInputs: [0x48]u8, // 0x1E0
+        m_bCannotBeRefracted: [0x8]u8, // 0x228
+    };
+    pub const CParticleSystemDefinition = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        m_nBehaviorVersion: [0x8]u8, // 0x8
+        m_PreEmissionOperators: [0x18]u8, // 0x10
+        m_Emitters: [0x18]u8, // 0x28
+        m_Initializers: [0x18]u8, // 0x40
+        m_Operators: [0x18]u8, // 0x58
+        m_ForceGenerators: [0x18]u8, // 0x70
+        m_Constraints: [0x18]u8, // 0x88
+        m_Renderers: [0x18]u8, // 0xA0
+        m_Children: [0xC0]u8, // 0xB8
+        m_nFirstMultipleOverride_BackwardCompat: [0xE0]u8, // 0x178
+        m_nInitialParticles: [0x4]u8, // 0x258
+        m_nMaxParticles: [0x4]u8, // 0x25C
+        m_nGroupID: [0x4]u8, // 0x260
+        m_BoundingBoxMin: [0xC]u8, // 0x264
+        m_BoundingBoxMax: [0xC]u8, // 0x270
+        m_flDepthSortBias: [0x4]u8, // 0x27C
+        m_nSortOverridePositionCP: [0x4]u8, // 0x280
+        m_bInfiniteBounds: [0x1]u8, // 0x284
+        m_bEnableNamedValues: [0x3]u8, // 0x285
+        m_NamedValueDomain: [0x8]u8, // 0x288
+        m_NamedValueLocals: [0x18]u8, // 0x290
+        m_ConstantColor: [0x4]u8, // 0x2A8
+        m_ConstantNormal: [0xC]u8, // 0x2AC
+        m_flConstantRadius: [0x4]u8, // 0x2B8
+        m_flConstantRotation: [0x4]u8, // 0x2BC
+        m_flConstantRotationSpeed: [0x4]u8, // 0x2C0
+        m_flConstantLifespan: [0x4]u8, // 0x2C4
+        m_nConstantSequenceNumber: [0x4]u8, // 0x2C8
+        m_nConstantSequenceNumber1: [0x4]u8, // 0x2CC
+        m_nSnapshotControlPoint: [0x8]u8, // 0x2D0
+        m_hSnapshot: [0x8]u8, // 0x2D8
+        m_pszCullReplacementName: [0x8]u8, // 0x2E0
+        m_flCullRadius: [0x4]u8, // 0x2E8
+        m_flCullFillCost: [0x4]u8, // 0x2EC
+        m_nCullControlPoint: [0x8]u8, // 0x2F0
+        m_hFallback: [0x8]u8, // 0x2F8
+        m_nFallbackMaxCount: [0x8]u8, // 0x300
+        m_hLowViolenceDef: [0x8]u8, // 0x308
+        m_hReferenceReplacement: [0x8]u8, // 0x310
+        m_flPreSimulationTime: [0x4]u8, // 0x318
+        m_flStopSimulationAfterTime: [0x4]u8, // 0x31C
+        m_flMaximumTimeStep: [0x4]u8, // 0x320
+        m_flMaximumSimTime: [0x4]u8, // 0x324
+        m_flMinimumSimTime: [0x4]u8, // 0x328
+        m_flMinimumTimeStep: [0x4]u8, // 0x32C
+        m_nMinimumFrames: [0x4]u8, // 0x330
+        m_bIsGPUParticleSystem: [0x4]u8, // 0x334
+        m_nMinCPULevel: [0x4]u8, // 0x338
+        m_nMinGPULevel: [0x4]u8, // 0x33C
+        m_flNoDrawTimeToGoToSleep: [0x4]u8, // 0x340
+        m_flMaxDrawDistance: [0x4]u8, // 0x344
+        m_flStartFadeDistance: [0x4]u8, // 0x348
+        m_flMaxCreationDistance: [0x4]u8, // 0x34C
+        m_nAggregationMinAvailableParticles: [0x4]u8, // 0x350
+        m_flAggregateRadius: [0x4]u8, // 0x354
+        m_bShouldBatch: [0x1]u8, // 0x358
+        m_bShouldHitboxesFallbackToRenderBounds: [0x1]u8, // 0x359
+        m_bShouldHitboxesFallbackToSnapshot: [0x1]u8, // 0x35A
+        m_bShouldHitboxesFallbackToCollisionHulls: [0x1]u8, // 0x35B
+        m_nViewModelEffect: [0x4]u8, // 0x35C
+        m_bScreenSpaceEffect: [0x8]u8, // 0x360
+        m_pszTargetLayerID: [0x8]u8, // 0x368
+        m_nSkipRenderControlPoint: [0x4]u8, // 0x370
+        m_nAllowRenderControlPoint: [0x4]u8, // 0x374
+        m_bShouldSort: [0x48]u8, // 0x378
+        m_controlPointConfigurations: [0x1D0]u8, // 0x3C0
+    };
+    pub const C_OP_RemapNamedModelMeshGroupEndCap = extern struct {
+        pad_0: [0x240]u8, // 0x0
+    };
+    pub const C_OP_PercentageBetweenTransformsVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_flInputMin: [0x4]u8, // 0x1E4
+        m_flInputMax: [0x4]u8, // 0x1E8
+        m_vecOutputMin: [0xC]u8, // 0x1EC
+        m_vecOutputMax: [0x10]u8, // 0x1F8
+        m_TransformStart: [0x68]u8, // 0x208
+        m_TransformEnd: [0x68]u8, // 0x270
+        m_nSetMethod: [0x4]u8, // 0x2D8
+        m_bActiveRange: [0x1]u8, // 0x2DC
+        m_bRadialCheck: [0x3]u8, // 0x2DD
+    };
+    pub const C_OP_RenderScreenVelocityRotate = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_flRotateRateDegrees: [0x4]u8, // 0x230
+        m_flForwardDegrees: [0x4]u8, // 0x234
+    };
+    pub const C_OP_UpdateLightSource = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_vColorTint: [0x4]u8, // 0x1E0
+        m_flBrightnessScale: [0x4]u8, // 0x1E4
+        m_flRadiusScale: [0x4]u8, // 0x1E8
+        m_flMinimumLightingRadius: [0x4]u8, // 0x1EC
+        m_flMaximumLightingRadius: [0x4]u8, // 0x1F0
+        m_flPositionDampingConstant: [0x4]u8, // 0x1F4
+    };
+    pub const C_INIT_CreateWithinBox = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_vecMin: [0x6D8]u8, // 0x1E8
+        m_vecMax: [0x6D8]u8, // 0x8C0
+        m_nControlPointNumber: [0x4]u8, // 0xF98
+        m_bLocalSpace: [0x4]u8, // 0xF9C
+        m_randomnessParameters: [0x8]u8, // 0xFA0
+        m_bUseNewCode: [0x8]u8, // 0xFA8
+    };
+    pub const C_OP_ChooseRandomChildrenInGroup = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nChildGroupID: [0x8]u8, // 0x1E8
+        m_flNumberOfChildren: [0x178]u8, // 0x1F0
+    };
+    pub const C_OP_ControlpointLight = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flScale: [0x490]u8, // 0x1E0
+        m_nControlPoint1: [0x4]u8, // 0x670
+        m_nControlPoint2: [0x4]u8, // 0x674
+        m_nControlPoint3: [0x4]u8, // 0x678
+        m_nControlPoint4: [0x4]u8, // 0x67C
+        m_vecCPOffset1: [0xC]u8, // 0x680
+        m_vecCPOffset2: [0xC]u8, // 0x68C
+        m_vecCPOffset3: [0xC]u8, // 0x698
+        m_vecCPOffset4: [0xC]u8, // 0x6A4
+        m_LightFiftyDist1: [0x4]u8, // 0x6B0
+        m_LightZeroDist1: [0x4]u8, // 0x6B4
+        m_LightFiftyDist2: [0x4]u8, // 0x6B8
+        m_LightZeroDist2: [0x4]u8, // 0x6BC
+        m_LightFiftyDist3: [0x4]u8, // 0x6C0
+        m_LightZeroDist3: [0x4]u8, // 0x6C4
+        m_LightFiftyDist4: [0x4]u8, // 0x6C8
+        m_LightZeroDist4: [0x4]u8, // 0x6CC
+        m_LightColor1: [0x4]u8, // 0x6D0
+        m_LightColor2: [0x4]u8, // 0x6D4
+        m_LightColor3: [0x4]u8, // 0x6D8
+        m_LightColor4: [0x4]u8, // 0x6DC
+        m_bLightType1: [0x1]u8, // 0x6E0
+        m_bLightType2: [0x1]u8, // 0x6E1
+        m_bLightType3: [0x1]u8, // 0x6E2
+        m_bLightType4: [0x1]u8, // 0x6E3
+        m_bLightDynamic1: [0x1]u8, // 0x6E4
+        m_bLightDynamic2: [0x1]u8, // 0x6E5
+        m_bLightDynamic3: [0x1]u8, // 0x6E6
+        m_bLightDynamic4: [0x1]u8, // 0x6E7
+        m_bUseNormal: [0x1]u8, // 0x6E8
+        m_bUseHLambert: [0x5]u8, // 0x6E9
+        m_bClampLowerRange: [0x1]u8, // 0x6EE
+        m_bClampUpperRange: [0x1]u8, // 0x6EF
+    };
+    pub const C_OP_VectorFieldSnapshot = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E0
+        m_nAttributeToWrite: [0x4]u8, // 0x1E4
+        m_nLocalSpaceCP: [0x8]u8, // 0x1E8
+        m_flInterpolation: [0x178]u8, // 0x1F0
+        m_vecScale: [0x6D8]u8, // 0x368
+        m_flBoundaryDampening: [0x4]u8, // 0xA40
+        m_bSetVelocity: [0x1]u8, // 0xA44
+        m_bLockToSurface: [0x3]u8, // 0xA45
+        m_flGridSpacing: [0x8]u8, // 0xA48
+    };
+    pub const C_OP_CylindricalDistanceToTransform = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E0
+        m_flInputMin: [0x178]u8, // 0x1E8
+        m_flInputMax: [0x178]u8, // 0x360
+        m_flOutputMin: [0x178]u8, // 0x4D8
+        m_flOutputMax: [0x178]u8, // 0x650
+        m_TransformStart: [0x68]u8, // 0x7C8
+        m_TransformEnd: [0x68]u8, // 0x830
+        m_nSetMethod: [0x4]u8, // 0x898
+        m_bActiveRange: [0x1]u8, // 0x89C
+        m_bAdditive: [0x1]u8, // 0x89D
+        m_bCapsule: [0x2]u8, // 0x89E
+    };
+    pub const C_INIT_PositionPlaceOnGround = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flOffset: [0x178]u8, // 0x1E8
+        m_flMaxTraceLength: [0x178]u8, // 0x360
+        m_vecTraceDir: [0x6D8]u8, // 0x4D8
+        m_CollisionGroupName: [0x80]u8, // 0xBB0
+        m_nTraceSet: [0x10]u8, // 0xC30
+        m_nTraceMissBehavior: [0x4]u8, // 0xC40
+        m_bIncludeWater: [0x4]u8, // 0xC44
+        m_nAttribute: [0x4]u8, // 0xC48
+        m_bSetPXYZOnly: [0x1]u8, // 0xC4C
+        m_bSetNormal: [0x3]u8, // 0xC4D
+        m_nGroundNormalAttribute: [0x4]u8, // 0xC50
+        m_bOffsetonColOnly: [0x4]u8, // 0xC54
+        m_flOffsetByRadiusFactor: [0x4]u8, // 0xC58
+        m_nPreserveOffsetCP: [0x4]u8, // 0xC5C
+        m_nIgnoreCP: [0x8]u8, // 0xC60
+    };
+    pub const C_INIT_RandomScalar = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flMin: [0x4]u8, // 0x1E8
+        m_flMax: [0x4]u8, // 0x1EC
+        m_flExponent: [0x4]u8, // 0x1F0
+        m_nFieldOutput: [0x4]u8, // 0x1F4
+    };
+    pub const C_OP_RenderPostProcessing = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_flPostProcessStrength: [0x178]u8, // 0x230
+        m_hPostTexture: [0x8]u8, // 0x3A8
+        m_nPriority: [0x8]u8, // 0x3B0
+    };
+    pub const C_OP_WorldTraceConstraint = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nCP: [0x4]u8, // 0x1E0
+        m_vecCpOffset: [0xC]u8, // 0x1E4
+        m_nCollisionMode: [0x4]u8, // 0x1F0
+        m_nCollisionModeMin: [0x4]u8, // 0x1F4
+        m_nTraceSet: [0x4]u8, // 0x1F8
+        m_CollisionGroupName: [0x80]u8, // 0x1FC
+        m_bWorldOnly: [0x1]u8, // 0x27C
+        m_bBrushOnly: [0x1]u8, // 0x27D
+        m_bIncludeWater: [0x2]u8, // 0x27E
+        m_nIgnoreCP: [0x4]u8, // 0x280
+        m_flCpMovementTolerance: [0x4]u8, // 0x284
+        m_flRetestRate: [0x4]u8, // 0x288
+        m_flTraceTolerance: [0x4]u8, // 0x28C
+        m_flCollisionConfirmationSpeed: [0x4]u8, // 0x290
+        m_nMaxTracesPerFrame: [0x4]u8, // 0x294
+        m_flRadiusScale: [0x178]u8, // 0x298
+        m_flBounceAmount: [0x178]u8, // 0x410
+        m_flSlideAmount: [0x178]u8, // 0x588
+        m_flRandomDirScale: [0x178]u8, // 0x700
+        m_bDecayBounce: [0x1]u8, // 0x878
+        m_bKillonContact: [0x3]u8, // 0x879
+        m_flMinSpeed: [0x4]u8, // 0x87C
+        m_bKillonContactBounce: [0x1]u8, // 0x880
+        m_bSetNormal: [0x3]u8, // 0x881
+        m_nStickOnCollisionField: [0x4]u8, // 0x884
+        m_flStopSpeed: [0x178]u8, // 0x888
+        m_nEntityStickDataField: [0x4]u8, // 0xA00
+        m_nEntityStickNormalField: [0x4]u8, // 0xA04
+    };
+    pub const C_OP_RenderBlobs = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_cubeWidth: [0x178]u8, // 0x230
+        m_cutoffRadius: [0x178]u8, // 0x3A8
+        m_renderRadius: [0x178]u8, // 0x520
+        m_nVertexCountKb: [0x4]u8, // 0x698
+        m_nIndexCountKb: [0x4]u8, // 0x69C
+        m_nScaleCP: [0x8]u8, // 0x6A0
+        m_MaterialVars: [0x30]u8, // 0x6A8
+        m_hMaterial: [0x8]u8, // 0x6D8
+    };
+    pub const C_OP_OscillateScalar = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_RateMin: [0x4]u8, // 0x1E0
+        m_RateMax: [0x4]u8, // 0x1E4
+        m_FrequencyMin: [0x4]u8, // 0x1E8
+        m_FrequencyMax: [0x4]u8, // 0x1EC
+        m_nField: [0x4]u8, // 0x1F0
+        m_bProportional: [0x1]u8, // 0x1F4
+        m_bProportionalOp: [0x3]u8, // 0x1F5
+        m_flStartTime_min: [0x4]u8, // 0x1F8
+        m_flStartTime_max: [0x4]u8, // 0x1FC
+        m_flEndTime_min: [0x4]u8, // 0x200
+        m_flEndTime_max: [0x4]u8, // 0x204
+        m_flOscMult: [0x4]u8, // 0x208
+        m_flOscAdd: [0x4]u8, // 0x20C
+    };
+    pub const C_OP_FadeOut = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flFadeOutTimeMin: [0x4]u8, // 0x1E0
+        m_flFadeOutTimeMax: [0x4]u8, // 0x1E4
+        m_flFadeOutTimeExp: [0x4]u8, // 0x1E8
+        m_flFadeBias: [0x34]u8, // 0x1EC
+        m_bProportional: [0x1]u8, // 0x220
+        m_bEaseInAndOut: [0xF]u8, // 0x221
+    };
+    pub const C_OP_WaterImpulseRenderer = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_vecPos: [0x6D8]u8, // 0x230
+        m_flRadius: [0x178]u8, // 0x908
+        m_flMagnitude: [0x178]u8, // 0xA80
+        m_flShape: [0x178]u8, // 0xBF8
+        m_flWindSpeed: [0x178]u8, // 0xD70
+        m_flWobble: [0x178]u8, // 0xEE8
+        m_bIsRadialWind: [0x4]u8, // 0x1060
+        m_nEventType: [0x4]u8, // 0x1064
+    };
+    pub const C_INIT_RandomSequence = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nSequenceMin: [0x4]u8, // 0x1E8
+        m_nSequenceMax: [0x4]u8, // 0x1EC
+        m_bShuffle: [0x1]u8, // 0x1F0
+        m_bLinear: [0x7]u8, // 0x1F1
+        m_WeightedList: [0x38]u8, // 0x1F8
+    };
+    pub const C_OP_RampScalarSplineSimple = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_Rate: [0x4]u8, // 0x1E0
+        m_flStartTime: [0x4]u8, // 0x1E4
+        m_flEndTime: [0x28]u8, // 0x1E8
+        m_nField: [0x4]u8, // 0x210
+        m_bEaseOut: [0xC]u8, // 0x214
+    };
+    pub const C_INIT_DistanceCull = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPoint: [0x8]u8, // 0x1E8
+        m_flDistance: [0x178]u8, // 0x1F0
+        m_bCullInside: [0x8]u8, // 0x368
+    };
+    pub const C_OP_CollideWithParentParticles = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flParentRadiusScale: [0x178]u8, // 0x1E0
+        m_flRadiusScale: [0x178]u8, // 0x358
+    };
+    pub const C_INIT_InitFromVectorFieldSnapshot = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E8
+        m_nLocalSpaceCP: [0x4]u8, // 0x1EC
+        m_nWeightUpdateCP: [0x4]u8, // 0x1F0
+        m_bUseVerticalVelocity: [0x4]u8, // 0x1F4
+        m_vecScale: [0x6D8]u8, // 0x1F8
+    };
+    pub const C_OP_SetVectorAttributeToVectorExpression = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nExpression: [0x8]u8, // 0x1E0
+        m_vInput1: [0x6D8]u8, // 0x1E8
+        m_vInput2: [0x6D8]u8, // 0x8C0
+        m_flLerp: [0x178]u8, // 0xF98
+        m_nOutputField: [0x4]u8, // 0x1110
+        m_nSetMethod: [0x4]u8, // 0x1114
+        m_bNormalizedOutput: [0x68]u8, // 0x1118
+    };
+    pub const C_INIT_AddVectorToVector = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_vecScale: [0xC]u8, // 0x1E8
+        m_nFieldOutput: [0x4]u8, // 0x1F4
+        m_nFieldInput: [0x4]u8, // 0x1F8
+        m_vOffsetMin: [0xC]u8, // 0x1FC
+        m_vOffsetMax: [0xC]u8, // 0x208
+        m_randomnessParameters: [0xC]u8, // 0x214
+    };
+    pub const C_INIT_RemapInitialVisibilityScalar = extern struct {
+        pad_0: [0x1EC]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1EC
+        m_flInputMin: [0x4]u8, // 0x1F0
+        m_flInputMax: [0x4]u8, // 0x1F4
+        m_flOutputMin: [0x4]u8, // 0x1F8
+        m_flOutputMax: [0x4]u8, // 0x1FC
+    };
+    pub const C_OP_RemapTransformOrientationToYaw = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_TransformInput: [0x68]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x248
+        m_flRotOffset: [0x4]u8, // 0x24C
+        m_flSpinStrength: [0x8]u8, // 0x250
+    };
+    pub const C_OP_RenderStatusEffect = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_pTextureColorWarp: [0x8]u8, // 0x230
+        m_pTextureDetail2: [0x8]u8, // 0x238
+        m_pTextureDiffuseWarp: [0x8]u8, // 0x240
+        m_pTextureFresnelColorWarp: [0x8]u8, // 0x248
+        m_pTextureFresnelWarp: [0x8]u8, // 0x250
+        m_pTextureSpecularWarp: [0x8]u8, // 0x258
+        m_pTextureEnvMap: [0x8]u8, // 0x260
+    };
+    pub const C_OP_RandomForce = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_MinForce: [0xC]u8, // 0x1F0
+        m_MaxForce: [0xC]u8, // 0x1FC
+    };
+    pub const C_OP_RemapParticleCountOnScalarEndCap = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_nInputMin: [0x4]u8, // 0x1E4
+        m_nInputMax: [0x4]u8, // 0x1E8
+        m_flOutputMin: [0x4]u8, // 0x1EC
+        m_flOutputMax: [0x4]u8, // 0x1F0
+        m_bBackwards: [0x4]u8, // 0x1F4
+        m_nSetMethod: [0x8]u8, // 0x1F8
+    };
+    pub const ParticlePreviewState_t = extern struct {
+        m_previewModel: [0x8]u8, // 0x0
+        m_nModSpecificData: [0x4]u8, // 0x8
+        m_groundType: [0x4]u8, // 0xC
+        m_sequenceName: [0x8]u8, // 0x10
+        m_nFireParticleOnSequenceFrame: [0x8]u8, // 0x18
+        m_hitboxSetName: [0x8]u8, // 0x20
+        m_materialGroupName: [0x8]u8, // 0x28
+        m_vecBodyGroups: [0x18]u8, // 0x30
+        m_flPlaybackSpeed: [0x4]u8, // 0x48
+        m_flParticleSimulationRate: [0x4]u8, // 0x4C
+        m_bShouldDrawHitboxes: [0x1]u8, // 0x50
+        m_bShouldDrawAttachments: [0x1]u8, // 0x51
+        m_bShouldDrawAttachmentNames: [0x1]u8, // 0x52
+        m_bShouldDrawControlPointAxes: [0x1]u8, // 0x53
+        m_bAnimationNonLooping: [0x1]u8, // 0x54
+        m_bSequenceNameIsAnimClipPath: [0x3]u8, // 0x55
+        m_vecPreviewGravity: [0xC]u8, // 0x58
+        m_vecPreviewWind: [0xC]u8, // 0x64
+    };
+    pub const C_OP_LocalAccelerationForce = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_nCP: [0x4]u8, // 0x1F0
+        m_nScaleCP: [0x4]u8, // 0x1F4
+        m_vecAccel: [0x6D8]u8, // 0x1F8
+    };
+    pub const C_OP_ModelCull = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E0
+        m_bBoundBox: [0x1]u8, // 0x1E4
+        m_bCullOutside: [0x1]u8, // 0x1E5
+        m_bUseBones: [0x1]u8, // 0x1E6
+        m_HitboxSetName: [0x81]u8, // 0x1E7
+    };
+    pub const C_OP_SetFloat = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_InputValue: [0x178]u8, // 0x1E0
+        m_nOutputField: [0x4]u8, // 0x358
+        m_nSetMethod: [0x4]u8, // 0x35C
+        m_Lerp: [0x1B0]u8, // 0x360
+    };
+    pub const C_INIT_RemapTransformToVector = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E8
+        m_vInputMin: [0xC]u8, // 0x1EC
+        m_vInputMax: [0xC]u8, // 0x1F8
+        m_vOutputMin: [0xC]u8, // 0x204
+        m_vOutputMax: [0x10]u8, // 0x210
+        m_TransformInput: [0x68]u8, // 0x220
+        m_LocalSpaceTransform: [0x68]u8, // 0x288
+        m_flStartTime: [0x4]u8, // 0x2F0
+        m_flEndTime: [0x4]u8, // 0x2F4
+        m_nSetMethod: [0x4]u8, // 0x2F8
+        m_bOffset: [0x1]u8, // 0x2FC
+        m_bAccelerate: [0x3]u8, // 0x2FD
+        m_flRemapBias: [0x8]u8, // 0x300
+    };
+    pub const C_OP_ScreenSpaceDistanceToEdge = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E0
+        m_flMaxDistFromEdge: [0x178]u8, // 0x1E8
+        m_flOutputRemap: [0x178]u8, // 0x360
+        m_nSetMethod: [0x28]u8, // 0x4D8
+    };
+    pub const C_OP_RenderStatusEffectTf = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_pTextureColorWarp: [0x8]u8, // 0x230
+        m_pTextureNormal: [0x8]u8, // 0x238
+        m_pTextureMetalness: [0x8]u8, // 0x240
+        m_pTextureRoughness: [0x8]u8, // 0x248
+        m_pTextureSelfIllum: [0x8]u8, // 0x250
+        m_pTextureDetail: [0x8]u8, // 0x258
+        m_pTextureEnvMap: [0x8]u8, // 0x260
+    };
+    pub const C_OP_RemapDistanceToLineSegmentToScalar = extern struct {
+        pad_0: [0x1F8]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1F8
+        m_flMinOutputValue: [0x4]u8, // 0x1FC
+        m_flMaxOutputValue: [0x8]u8, // 0x200
+    };
+    pub const C_OP_RemapVectortoCP = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nOutControlPointNumber: [0x4]u8, // 0x1E0
+        m_nFieldInput: [0x4]u8, // 0x1E4
+        m_nParticleNumber: [0x8]u8, // 0x1E8
+    };
+    pub const C_OP_SetFromCPSnapshot = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nControlPointNumber: [0x8]u8, // 0x1E0
+        m_strSnapshotSubset: [0x8]u8, // 0x1E8
+        m_nAttributeToRead: [0x4]u8, // 0x1F0
+        m_nAttributeToWrite: [0x4]u8, // 0x1F4
+        m_nLocalSpaceCP: [0x4]u8, // 0x1F8
+        m_bRandom: [0x1]u8, // 0x1FC
+        m_bReverse: [0x3]u8, // 0x1FD
+        m_nRandomSeed: [0x8]u8, // 0x200
+        m_nSnapShotStartPoint: [0x178]u8, // 0x208
+        m_nSnapShotIncrement: [0x178]u8, // 0x380
+        m_flInterpolation: [0x178]u8, // 0x4F8
+        m_bSubSample: [0x1]u8, // 0x670
+        m_bPrev: [0x7]u8, // 0x671
+    };
+    pub const C_OP_DistanceBetweenCPsToCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nStartCP: [0x4]u8, // 0x1E8
+        m_nEndCP: [0x4]u8, // 0x1EC
+        m_nOutputCP: [0x4]u8, // 0x1F0
+        m_nOutputCPField: [0x4]u8, // 0x1F4
+        m_bSetOnce: [0x4]u8, // 0x1F8
+        m_flInputMin: [0x4]u8, // 0x1FC
+        m_flInputMax: [0x4]u8, // 0x200
+        m_flOutputMin: [0x4]u8, // 0x204
+        m_flOutputMax: [0x4]u8, // 0x208
+        m_flMaxTraceLength: [0x4]u8, // 0x20C
+        m_flLOSScale: [0x4]u8, // 0x210
+        m_bLOS: [0x1]u8, // 0x214
+        m_CollisionGroupName: [0x83]u8, // 0x215
+        m_nTraceSet: [0x4]u8, // 0x298
+        m_nSetParent: [0x4]u8, // 0x29C
+    };
+    pub const C_OP_SetControlPointToHand = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCP1: [0x4]u8, // 0x1E8
+        m_nHand: [0x4]u8, // 0x1EC
+        m_vecCP1Pos: [0xC]u8, // 0x1F0
+        m_bOrientToHand: [0x4]u8, // 0x1FC
+    };
+    pub const C_OP_ConstrainDistanceToPath = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_fMinDistance: [0x4]u8, // 0x1E0
+        m_flMaxDistance0: [0x4]u8, // 0x1E4
+        m_flMaxDistanceMid: [0x4]u8, // 0x1E8
+        m_flMaxDistance1: [0x4]u8, // 0x1EC
+        m_PathParameters: [0x40]u8, // 0x1F0
+        m_flTravelTime: [0x4]u8, // 0x230
+        m_nFieldScale: [0x4]u8, // 0x234
+        m_nManualTField: [0x8]u8, // 0x238
+    };
+    pub const C_OP_DistanceCull = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nControlPoint: [0x4]u8, // 0x1E0
+        m_vecPointOffset: [0xC]u8, // 0x1E4
+        m_flDistance: [0x178]u8, // 0x1F0
+        m_bCullInside: [0x4]u8, // 0x368
+        m_nAttribute: [0x4]u8, // 0x36C
+    };
+    pub const C_INIT_CreateAlongPath = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_fMaxDistance: [0x178]u8, // 0x1E8
+        m_fT: [0x180]u8, // 0x360
+        m_PathParams: [0x40]u8, // 0x4E0
+        m_bUseRandomCPs: [0x4]u8, // 0x520
+        m_vEndOffset: [0xC]u8, // 0x524
+        m_bSaveOffset: [0x10]u8, // 0x530
+    };
+    pub const C_OP_GameDecalRenderer = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_sDecalGroupName: [0x8]u8, // 0x230
+        m_nEventType: [0x8]u8, // 0x238
+        m_nInteractionMask: [0x8]u8, // 0x240
+        m_nCollisionGroup: [0x8]u8, // 0x248
+        m_vecStartPos: [0x6D8]u8, // 0x250
+        m_vecEndPos: [0x6D8]u8, // 0x928
+        m_flTraceBloat: [0x178]u8, // 0x1000
+        m_flDecalSize: [0x178]u8, // 0x1178
+        m_nDecalGroupIndex: [0x178]u8, // 0x12F0
+        m_flDecalRotation: [0x178]u8, // 0x1468
+        m_vModulationColor: [0x6D8]u8, // 0x15E0
+        m_bUseGameDefaultDecalSize: [0x1]u8, // 0x1CB8
+        m_bRandomDecalRotation: [0x1]u8, // 0x1CB9
+        m_bRandomlySelectDecalInGroup: [0x1]u8, // 0x1CBA
+        m_bNoDecalsOnOwner: [0x1]u8, // 0x1CBB
+        m_bVisualizeTraces: [0x4]u8, // 0x1CBC
+    };
+    pub const C_OP_SetControlPointsToModelParticles = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_HitboxSetName: [0x80]u8, // 0x1E0
+        m_AttachmentName: [0x80]u8, // 0x260
+        m_nFirstControlPoint: [0x4]u8, // 0x2E0
+        m_nNumControlPoints: [0x4]u8, // 0x2E4
+        m_nFirstSourcePoint: [0x4]u8, // 0x2E8
+        m_bSkin: [0x1]u8, // 0x2EC
+        m_bAttachment: [0x3]u8, // 0x2ED
+    };
+    pub const C_OP_ColorInterpolateRandom = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_ColorFadeMin: [0x1C]u8, // 0x1E0
+        m_ColorFadeMax: [0x10]u8, // 0x1FC
+        m_flFadeStartTime: [0x4]u8, // 0x20C
+        m_flFadeEndTime: [0x4]u8, // 0x210
+        m_nFieldOutput: [0x4]u8, // 0x214
+        m_bEaseInOut: [0x8]u8, // 0x218
+    };
+    pub const C_INIT_RemapNamedModelSequenceToScalar = extern struct {
+        pad_0: [0x230]u8, // 0x0
+    };
+    pub const C_OP_RenderLights = extern struct {
+        pad_0: [0x238]u8, // 0x0
+        m_flAnimationRate: [0x4]u8, // 0x238
+        m_nAnimationType: [0x4]u8, // 0x23C
+        m_bAnimateInFPS: [0x4]u8, // 0x240
+        m_flMinSize: [0x4]u8, // 0x244
+        m_flMaxSize: [0x4]u8, // 0x248
+        m_flStartFadeSize: [0x4]u8, // 0x24C
+        m_flEndFadeSize: [0x8]u8, // 0x250
+    };
+    pub const C_OP_DecayClampCount = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nCount: [0x178]u8, // 0x1E0
+    };
+    pub const CRandomNumberGeneratorParameters = extern struct {
+        m_bDistributeEvenly: [0x4]u8, // 0x0
+        m_nSeed: [0x4]u8, // 0x4
+    };
+    pub const C_INIT_ColorLitPerParticle = extern struct {
+        pad_0: [0x200]u8, // 0x0
+        m_ColorMin: [0x4]u8, // 0x200
+        m_ColorMax: [0x4]u8, // 0x204
+        m_TintMin: [0x4]u8, // 0x208
+        m_TintMax: [0x4]u8, // 0x20C
+        m_flTintPerc: [0x4]u8, // 0x210
+        m_nTintBlendMode: [0x4]u8, // 0x214
+        m_flLightAmplification: [0x8]u8, // 0x218
+    };
+    pub const C_OP_RenderPoints = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_hMaterial: [0x8]u8, // 0x230
+    };
+    pub const C_INIT_SetAttributeToScalarExpression = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nExpression: [0x8]u8, // 0x1E8
+        m_flInput1: [0x178]u8, // 0x1F0
+        m_flInput2: [0x178]u8, // 0x368
+        m_flOutputRemap: [0x178]u8, // 0x4E0
+        m_nOutputField: [0x4]u8, // 0x658
+        m_nSetMethod: [0x24]u8, // 0x65C
+    };
+    pub const C_INIT_CreateOnGrid = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nXCount: [0x178]u8, // 0x1E8
+        m_nYCount: [0x178]u8, // 0x360
+        m_nZCount: [0x178]u8, // 0x4D8
+        m_nXSpacing: [0x178]u8, // 0x650
+        m_nYSpacing: [0x178]u8, // 0x7C8
+        m_nZSpacing: [0x178]u8, // 0x940
+        m_nControlPointNumber: [0x4]u8, // 0xAB8
+        m_bLocalSpace: [0x1]u8, // 0xABC
+        m_bCenter: [0x1]u8, // 0xABD
+        m_bHollow: [0x2]u8, // 0xABE
+    };
+    pub const C_OP_RampCPLinearRandom = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nOutControlPointNumber: [0x4]u8, // 0x1E8
+        m_vecRateMin: [0xC]u8, // 0x1EC
+        m_vecRateMax: [0x10]u8, // 0x1F8
+    };
+    pub const C_OP_VelocityMatchingForce = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flDirScale: [0x4]u8, // 0x1E0
+        m_flSpdScale: [0x4]u8, // 0x1E4
+        m_flNeighborDistance: [0x4]u8, // 0x1E8
+        m_flFacingStrength: [0x4]u8, // 0x1EC
+        m_bUseAABB: [0x4]u8, // 0x1F0
+        m_nCPBroadcast: [0x4]u8, // 0x1F4
+    };
+    pub const C_INIT_RandomAlphaWindowThreshold = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flMin: [0x4]u8, // 0x1E8
+        m_flMax: [0x4]u8, // 0x1EC
+        m_flExponent: [0x8]u8, // 0x1F0
+    };
+    pub const C_INIT_CreateOnModelAtHeight = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_bUseBones: [0x1]u8, // 0x1E8
+        m_bForceZ: [0x3]u8, // 0x1E9
+        m_nControlPointNumber: [0x4]u8, // 0x1EC
+        m_nHeightCP: [0x4]u8, // 0x1F0
+        m_bUseWaterHeight: [0x4]u8, // 0x1F4
+        m_flDesiredHeight: [0x178]u8, // 0x1F8
+        m_vecHitBoxScale: [0x6D8]u8, // 0x370
+        m_vecDirectionBias: [0x6D8]u8, // 0xA48
+        m_nBiasType: [0x4]u8, // 0x1120
+        m_bLocalCoords: [0x1]u8, // 0x1124
+        m_bPreferMovingBoxes: [0x1]u8, // 0x1125
+        m_HitboxSetName: [0x82]u8, // 0x1126
+        m_flHitboxVelocityScale: [0x178]u8, // 0x11A8
+        m_flMaxBoneVelocity: [0x178]u8, // 0x1320
+    };
+    pub const C_OP_ModelSurfaceSnapshotGenerator = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCPSnapshot: [0x8]u8, // 0x1E8
+        m_modelInput: [0x60]u8, // 0x1F0
+        m_flRecalcRate: [0x178]u8, // 0x250
+        m_flUSpacing: [0x178]u8, // 0x3C8
+        m_flVSpacing: [0x178]u8, // 0x540
+        m_flSurfaceOffset: [0x178]u8, // 0x6B8
+        m_bSetNormal: [0x1]u8, // 0x830
+        m_bSetUp: [0x1]u8, // 0x831
+        m_bSetGravity: [0x1]u8, // 0x832
+        m_bSetUV: [0x5]u8, // 0x833
+    };
+    pub const C_OP_RestartAfterDuration = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flDurationMin: [0x4]u8, // 0x1E0
+        m_flDurationMax: [0x4]u8, // 0x1E4
+        m_nCP: [0x4]u8, // 0x1E8
+        m_nCPField: [0x4]u8, // 0x1EC
+        m_nChildGroupID: [0x4]u8, // 0x1F0
+        m_bOnlyChildren: [0x4]u8, // 0x1F4
+    };
+    pub const C_OP_RenderClothForce = extern struct {
+        pad_0: [0x230]u8, // 0x0
+    };
+    pub const C_OP_RemapVisibilityScalar = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldInput: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_flInputMin: [0x4]u8, // 0x1E8
+        m_flInputMax: [0x4]u8, // 0x1EC
+        m_flOutputMin: [0x4]u8, // 0x1F0
+        m_flOutputMax: [0x4]u8, // 0x1F4
+        m_flRadiusScale: [0x8]u8, // 0x1F8
+    };
+    pub const C_INIT_CreateSequentialPathV2 = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_fMaxDistance: [0x178]u8, // 0x1E8
+        m_flNumToAssign: [0x178]u8, // 0x360
+        m_bLoop: [0x1]u8, // 0x4D8
+        m_bCPPairs: [0x1]u8, // 0x4D9
+        m_bSaveOffset: [0x6]u8, // 0x4DA
+        m_PathParams: [0x50]u8, // 0x4E0
+    };
+    pub const VecInputMaterialVariable_t = extern struct {
+        m_strVariable: [0x8]u8, // 0x0
+        m_vecInput: [0x6D8]u8, // 0x8
+    };
+    pub const C_INIT_RemapInitialDirectionToTransformToVector = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_TransformInput: [0x68]u8, // 0x1E8
+        m_nFieldOutput: [0x4]u8, // 0x250
+        m_flScale: [0x4]u8, // 0x254
+        m_flOffsetRot: [0x4]u8, // 0x258
+        m_vecOffsetAxis: [0xC]u8, // 0x25C
+        m_bNormalize: [0x8]u8, // 0x268
+    };
+    pub const C_OP_LockToSavedSequentialPathV2 = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flFadeStart: [0x4]u8, // 0x1E0
+        m_flFadeEnd: [0x4]u8, // 0x1E4
+        m_bCPPairs: [0x8]u8, // 0x1E8
+        m_PathParams: [0x40]u8, // 0x1F0
+    };
+    pub const C_OP_NormalLock = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nControlPointNumber: [0x8]u8, // 0x1E0
+    };
+    pub const C_INIT_RemapTransformOrientationToRotations = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_TransformInput: [0x68]u8, // 0x1E8
+        m_vecRotation: [0xC]u8, // 0x250
+        m_bUseQuat: [0x1]u8, // 0x25C
+        m_bWriteNormal: [0x3]u8, // 0x25D
+    };
+    pub const C_OP_Cull = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flCullPerc: [0x4]u8, // 0x1E0
+        m_flCullStart: [0x4]u8, // 0x1E4
+        m_flCullEnd: [0x4]u8, // 0x1E8
+        m_flCullExp: [0x4]u8, // 0x1EC
+    };
+    pub const C_INIT_RandomYawFlip = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flPercent: [0x8]u8, // 0x1E8
+    };
+    pub const SequenceWeightedList_t = extern struct {
+        m_nSequence: [0x4]u8, // 0x0
+        m_flRelativeWeight: [0x4]u8, // 0x4
+    };
+    pub const C_OP_ReadFromNeighboringParticle = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldInput: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_nIncrement: [0x8]u8, // 0x1E8
+        m_DistanceCheck: [0x178]u8, // 0x1F0
+        m_flInterpolation: [0x178]u8, // 0x368
+    };
+    pub const C_OP_RenderText = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_OutlineColor: [0x8]u8, // 0x230
+        m_DefaultText: [0x8]u8, // 0x238
+    };
+    pub const C_OP_LerpToInitialPosition = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nControlPointNumber: [0x8]u8, // 0x1E0
+        m_flInterpolation: [0x178]u8, // 0x1E8
+        m_nCacheField: [0x8]u8, // 0x360
+        m_flScale: [0x178]u8, // 0x368
+        m_vecScale: [0x6D8]u8, // 0x4E0
+    };
+    pub const C_INIT_RandomRotation = extern struct {
+        pad_0: [0x208]u8, // 0x0
+    };
+    pub const C_OP_LerpEndCapVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_vecOutput: [0xC]u8, // 0x1E4
+        m_flLerpTime: [0x8]u8, // 0x1F0
+    };
+    pub const C_OP_VelocityDecay = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flMinVelocity: [0x8]u8, // 0x1E0
+    };
+    pub const C_OP_SetCPOrientationToPointAtCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nInputCP: [0x4]u8, // 0x1E8
+        m_nOutputCP: [0x4]u8, // 0x1EC
+        m_flInterpolation: [0x178]u8, // 0x1F0
+        m_b2DOrientation: [0x1]u8, // 0x368
+        m_bAvoidSingularity: [0x1]u8, // 0x369
+        m_bPointAway: [0x6]u8, // 0x36A
+    };
+    pub const C_OP_LockToPointList = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E0
+        m_pointList: [0x18]u8, // 0x1E8
+        m_bPlaceAlongPath: [0x1]u8, // 0x200
+        m_bClosedLoop: [0x3]u8, // 0x201
+        m_nNumPointsAlongPath: [0x4]u8, // 0x204
+    };
+    pub const C_INIT_CreateWithinCone = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_TransformInput: [0x68]u8, // 0x1E8
+        m_flInnerAngle: [0x178]u8, // 0x250
+        m_flOuterAngle: [0x178]u8, // 0x3C8
+        m_flSpeed: [0x178]u8, // 0x540
+        m_flOffset: [0x178]u8, // 0x6B8
+        m_bCollapseOffset: [0x4]u8, // 0x830
+        m_randomnessParameters: [0xC]u8, // 0x834
+    };
+    pub const C_OP_MovementPlaceOnGround = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flOffset: [0x178]u8, // 0x1E0
+        m_flMaxTraceLength: [0x4]u8, // 0x358
+        m_flTolerance: [0x4]u8, // 0x35C
+        m_vecTraceDir: [0x6D8]u8, // 0x360
+        m_flTraceOffset: [0x4]u8, // 0xA38
+        m_flLerpRate: [0x4]u8, // 0xA3C
+        m_CollisionGroupName: [0x80]u8, // 0xA40
+        m_nTraceSet: [0x4]u8, // 0xAC0
+        m_nRefCP1: [0x4]u8, // 0xAC4
+        m_nRefCP2: [0x4]u8, // 0xAC8
+        m_nLerpCP: [0xC]u8, // 0xACC
+        m_nTraceMissBehavior: [0x4]u8, // 0xAD8
+        m_bIncludeShotHull: [0x1]u8, // 0xADC
+        m_bIncludeWater: [0x3]u8, // 0xADD
+        m_bSetNormal: [0x1]u8, // 0xAE0
+        m_bScaleOffset: [0x3]u8, // 0xAE1
+        m_nPreserveOffsetCP: [0x4]u8, // 0xAE4
+        m_nIgnoreCP: [0x8]u8, // 0xAE8
+    };
+    pub const C_OP_SetCPOrientationToDirection = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nInputControlPoint: [0x4]u8, // 0x1E0
+        m_nOutputControlPoint: [0x4]u8, // 0x1E4
+    };
+    pub const C_OP_RemapCrossProductOfTwoVectorsToVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_InputVec1: [0x6D8]u8, // 0x1E0
+        m_InputVec2: [0x6D8]u8, // 0x8B8
+        m_nFieldOutput: [0x4]u8, // 0xF90
+        m_bNormalize: [0x4]u8, // 0xF94
+    };
+    pub const C_OP_RemapTransformOrientationToRotations = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_TransformInput: [0x68]u8, // 0x1E0
+        m_vecRotation: [0xC]u8, // 0x248
+        m_bUseQuat: [0x1]u8, // 0x254
+        m_bWriteNormal: [0x3]u8, // 0x255
+    };
+    pub const C_INIT_RandomRotationSpeed = extern struct {
+        pad_0: [0x208]u8, // 0x0
+    };
+    pub const C_OP_InheritFromParentParticlesV2 = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flScale: [0x178]u8, // 0x1E0
+        m_nFieldOutput: [0x8]u8, // 0x358
+        m_nIncrement: [0x178]u8, // 0x360
+        m_bSubSample: [0x1]u8, // 0x4D8
+        m_bRandomDistribution: [0x1]u8, // 0x4D9
+        m_bReverse: [0x2]u8, // 0x4DA
+        m_nMissingParentBehavior: [0x4]u8, // 0x4DC
+        m_flInterpolation: [0x178]u8, // 0x4E0
+    };
+    pub const C_INIT_RandomSecondSequence = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nSequenceMin: [0x4]u8, // 0x1E8
+        m_nSequenceMax: [0x4]u8, // 0x1EC
+    };
+    pub const C_OP_SetFloatCollection = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_InputValue: [0x178]u8, // 0x1E0
+        m_nOutputField: [0x4]u8, // 0x358
+        m_nSetMethod: [0x4]u8, // 0x35C
+        m_Lerp: [0x1A0]u8, // 0x360
+    };
+    pub const PointDefinition_t = extern struct {
+        m_nControlPoint: [0x4]u8, // 0x0
+        m_bLocalCoords: [0x4]u8, // 0x4
+        m_vOffset: [0xC]u8, // 0x8
+    };
+    pub const C_OP_SetControlPointPositionToRandomActiveCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCP1: [0x4]u8, // 0x1E8
+        m_nHeadLocationMin: [0x4]u8, // 0x1EC
+        m_nHeadLocationMax: [0x8]u8, // 0x1F0
+        m_flResetRate: [0x178]u8, // 0x1F8
+    };
+    pub const C_OP_Diffusion = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flRadiusScale: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_nVoxelGridResolution: [0x8]u8, // 0x1E8
+    };
+    pub const C_INIT_AgeNoise = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_bAbsVal: [0x1]u8, // 0x1E8
+        m_bAbsValInv: [0x3]u8, // 0x1E9
+        m_flOffset: [0x4]u8, // 0x1EC
+        m_flAgeMin: [0x4]u8, // 0x1F0
+        m_flAgeMax: [0x4]u8, // 0x1F4
+        m_flNoiseScale: [0x4]u8, // 0x1F8
+        m_flNoiseScaleLoc: [0x4]u8, // 0x1FC
+        m_vecOffsetLoc: [0x10]u8, // 0x200
+    };
+    pub const C_OP_RemapVectorComponentToScalar = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldInput: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_nComponent: [0x8]u8, // 0x1E8
+    };
+    pub const CGeneralRandomRotation = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E8
+        m_flDegrees: [0x4]u8, // 0x1EC
+        m_flDegreesMin: [0x4]u8, // 0x1F0
+        m_flDegreesMax: [0x4]u8, // 0x1F4
+        m_flRotationRandExponent: [0x4]u8, // 0x1F8
+        m_bRandomlyFlipDirection: [0xC]u8, // 0x1FC
+    };
+    pub const C_OP_DistanceBetweenVecs = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E0
+        m_vecPoint1: [0x6D8]u8, // 0x1E8
+        m_vecPoint2: [0x6D8]u8, // 0x8C0
+        m_flInputMin: [0x178]u8, // 0xF98
+        m_flInputMax: [0x178]u8, // 0x1110
+        m_flOutputMin: [0x178]u8, // 0x1288
+        m_flOutputMax: [0x178]u8, // 0x1400
+        m_nSetMethod: [0x4]u8, // 0x1578
+        m_bDeltaTime: [0x4]u8, // 0x157C
+    };
+    pub const C_OP_DampenToCP = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E0
+        m_flRange: [0x4]u8, // 0x1E4
+        m_flScale: [0x8]u8, // 0x1E8
+    };
+    pub const C_OP_CalculateVectorAttribute = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_vStartValue: [0xC]u8, // 0x1E0
+        m_nFieldInput1: [0x4]u8, // 0x1EC
+        m_flInputScale1: [0x4]u8, // 0x1F0
+        m_nFieldInput2: [0x4]u8, // 0x1F4
+        m_flInputScale2: [0x4]u8, // 0x1F8
+        m_nControlPointInput1: [0x14]u8, // 0x1FC
+        m_flControlPointScale1: [0x4]u8, // 0x210
+        m_nControlPointInput2: [0x14]u8, // 0x214
+        m_flControlPointScale2: [0x4]u8, // 0x228
+        m_nFieldOutput: [0x4]u8, // 0x22C
+        m_vFinalOutputScale: [0x10]u8, // 0x230
+    };
+    pub const C_OP_LockToBone = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_modelInput: [0x60]u8, // 0x1E0
+        m_transformInput: [0x68]u8, // 0x240
+        m_flLifeTimeFadeStart: [0x4]u8, // 0x2A8
+        m_flLifeTimeFadeEnd: [0x4]u8, // 0x2AC
+        m_flJumpThreshold: [0x4]u8, // 0x2B0
+        m_flPrevPosScale: [0x4]u8, // 0x2B4
+        m_HitboxSetName: [0x80]u8, // 0x2B8
+        m_bRigid: [0x1]u8, // 0x338
+        m_bUseBones: [0x3]u8, // 0x339
+        m_nFieldOutput: [0x4]u8, // 0x33C
+        m_nFieldOutputPrev: [0x4]u8, // 0x340
+        m_nRotationSetType: [0x4]u8, // 0x344
+        m_bRigidRotationLock: [0x8]u8, // 0x348
+        m_vecRotation: [0x6D8]u8, // 0x350
+        m_flRotLerp: [0x178]u8, // 0xA28
+    };
+    pub const C_OP_RemapNamedModelBodyPartOnceTimed = extern struct {
+        pad_0: [0x240]u8, // 0x0
+    };
+    pub const C_OP_ScreenSpaceRotateTowardTarget = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_vecTargetPosition: [0x6D8]u8, // 0x1E0
+        m_flOutputRemap: [0x178]u8, // 0x8B8
+        m_nSetMethod: [0x8]u8, // 0xA30
+        m_flScreenEdgeAlignmentDistance: [0x178]u8, // 0xA38
+    };
+    pub const C_OP_MovementMaintainOffset = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_vecOffset: [0xC]u8, // 0x1E0
+        m_nCP: [0x4]u8, // 0x1EC
+        m_bRadiusScale: [0x8]u8, // 0x1F0
+    };
+    pub const C_INIT_CreateWithinCapsuleTransform = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_fRadiusMin: [0x178]u8, // 0x1E8
+        m_fRadiusMax: [0x178]u8, // 0x360
+        m_fHeight: [0x178]u8, // 0x4D8
+        m_TransformInput: [0x68]u8, // 0x650
+        m_fSpeedMin: [0x178]u8, // 0x6B8
+        m_fSpeedMax: [0x178]u8, // 0x830
+        m_fSpeedRandExp: [0x8]u8, // 0x9A8
+        m_LocalCoordinateSystemSpeedMin: [0x6D8]u8, // 0x9B0
+        m_LocalCoordinateSystemSpeedMax: [0x6D8]u8, // 0x1088
+        m_nFieldOutput: [0x4]u8, // 0x1760
+        m_nFieldVelocity: [0x4]u8, // 0x1764
+    };
+    pub const C_OP_SetVec = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_InputValue: [0x6D8]u8, // 0x1E0
+        m_nOutputField: [0x4]u8, // 0x8B8
+        m_nSetMethod: [0x4]u8, // 0x8BC
+        m_Lerp: [0x178]u8, // 0x8C0
+        m_bNormalizedOutput: [0x8]u8, // 0xA38
+    };
+    pub const C_INIT_CreateFromParentParticles = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flVelocityScale: [0x4]u8, // 0x1E8
+        m_flIncrement: [0x4]u8, // 0x1EC
+        m_bRandomDistribution: [0x4]u8, // 0x1F0
+        m_nRandomSeed: [0x4]u8, // 0x1F4
+        m_bSubFrame: [0x1]u8, // 0x1F8
+        m_bSetRopeSegmentID: [0x7]u8, // 0x1F9
+    };
+    pub const C_INIT_CheckParticleForWater = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flRadius: [0x178]u8, // 0x1E8
+        m_nFieldOutput: [0x8]u8, // 0x360
+        m_flOutputRemap: [0x178]u8, // 0x368
+        m_nSetMethod: [0x8]u8, // 0x4E0
+    };
+    pub const C_INIT_RandomNamedModelBodyPart = extern struct {
+        pad_0: [0x210]u8, // 0x0
+    };
+    pub const C_OP_RenderOmni2Light = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_nLightType: [0x4]u8, // 0x230
+        m_nMaxAllowed: [0x4]u8, // 0x234
+        m_vColorBlend: [0x6D8]u8, // 0x238
+        m_nColorBlendType: [0x8]u8, // 0x910
+        m_strLightStyle: [0x8]u8, // 0x918
+        m_flLightStyleTime: [0x178]u8, // 0x920
+        m_nBrightnessUnit: [0x8]u8, // 0xA98
+        m_flBrightnessLumens: [0x178]u8, // 0xAA0
+        m_flBrightnessCandelas: [0x178]u8, // 0xC18
+        m_bCastShadows: [0x1]u8, // 0xD90
+        m_bDynamicBounce: [0x7]u8, // 0xD91
+        m_flBounceScale: [0x178]u8, // 0xD98
+        m_bFog: [0x8]u8, // 0xF10
+        m_flFogScale: [0x178]u8, // 0xF18
+        m_flLuminaireRadius: [0x178]u8, // 0x1090
+        m_nOrientationType: [0x8]u8, // 0x1208
+        m_vNormal: [0x6D8]u8, // 0x1210
+        m_vTarget: [0x6D8]u8, // 0x18E8
+        m_flFOVAngle: [0x178]u8, // 0x1FC0
+        m_flBarnShape: [0x178]u8, // 0x2138
+        m_flBarnNearSizeX: [0x178]u8, // 0x22B0
+        m_flBarnNearSizeY: [0x178]u8, // 0x2428
+        m_flBarnSoftX: [0x178]u8, // 0x25A0
+        m_flBarnSoftY: [0x178]u8, // 0x2718
+        m_flSkirt: [0x178]u8, // 0x2890
+        m_flRange: [0x178]u8, // 0x2A08
+        m_flInnerConeAngle: [0x178]u8, // 0x2B80
+        m_flOuterConeAngle: [0x178]u8, // 0x2CF8
+        m_hLightCookie: [0x8]u8, // 0x2E70
+        m_bSphericalCookie: [0x10]u8, // 0x2E78
+    };
+    pub const C_OP_ConnectParentParticleToNearest = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFirstControlPoint: [0x4]u8, // 0x1E0
+        m_nSecondControlPoint: [0x4]u8, // 0x1E4
+        m_bUseRadius: [0x8]u8, // 0x1E8
+        m_flRadiusScale: [0x178]u8, // 0x1F0
+        m_flParentRadiusScale: [0x178]u8, // 0x368
+    };
+    pub const CPAssignment_t = extern struct {
+        m_nCPNumber: [0x8]u8, // 0x0
+        m_Pos: [0x6D8]u8, // 0x8
+        m_nOrientationMode: [0x8]u8, // 0x6E0
+    };
+    pub const C_INIT_RemapParticleCountToNamedModelBodyPartScalar = extern struct {
+        pad_0: [0x238]u8, // 0x0
+    };
+    pub const C_INIT_InitSkinnedPositionFromCPSnapshot = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nSnapshotControlPointNumber: [0x4]u8, // 0x1E8
+        m_nControlPointNumber: [0x4]u8, // 0x1EC
+        m_bRandom: [0x4]u8, // 0x1F0
+        m_nRandomSeed: [0x4]u8, // 0x1F4
+        m_bRigid: [0x1]u8, // 0x1F8
+        m_bSetNormal: [0x1]u8, // 0x1F9
+        m_bIgnoreDt: [0x2]u8, // 0x1FA
+        m_flMinNormalVelocity: [0x4]u8, // 0x1FC
+        m_flMaxNormalVelocity: [0x4]u8, // 0x200
+        m_nIndexType: [0x4]u8, // 0x204
+        m_flReadIndex: [0x178]u8, // 0x208
+        m_flIncrement: [0x4]u8, // 0x380
+        m_nFullLoopIncrement: [0x4]u8, // 0x384
+        m_nSnapShotStartPoint: [0x4]u8, // 0x388
+        m_flBoneVelocity: [0x4]u8, // 0x38C
+        m_flBoneVelocityMax: [0x4]u8, // 0x390
+        m_bCopyColor: [0x1]u8, // 0x394
+        m_bCopyAlpha: [0x1]u8, // 0x395
+        m_bSetRadius: [0x2]u8, // 0x396
+    };
+    pub const C_OP_LagCompensation = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nDesiredVelocityCP: [0x4]u8, // 0x1E0
+        m_nLatencyCP: [0x4]u8, // 0x1E4
+        m_nLatencyCPField: [0x4]u8, // 0x1E8
+        m_nDesiredVelocityCPField: [0x4]u8, // 0x1EC
+    };
+    pub const C_OP_CollideWithSelf = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flRadiusScale: [0x178]u8, // 0x1E0
+        m_flMinimumSpeed: [0x178]u8, // 0x358
+    };
+    pub const C_OP_Noise = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_flOutputMin: [0x4]u8, // 0x1E4
+        m_flOutputMax: [0x4]u8, // 0x1E8
+        m_fl4NoiseScale: [0x4]u8, // 0x1EC
+        m_bAdditive: [0x4]u8, // 0x1F0
+        m_flNoiseAnimationTimeScale: [0x4]u8, // 0x1F4
+    };
+    pub const C_OP_FadeAndKillForTracers = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flStartFadeInTime: [0x4]u8, // 0x1E0
+        m_flEndFadeInTime: [0x4]u8, // 0x1E4
+        m_flStartFadeOutTime: [0x4]u8, // 0x1E8
+        m_flEndFadeOutTime: [0x4]u8, // 0x1EC
+        m_flStartAlpha: [0x4]u8, // 0x1F0
+        m_flEndAlpha: [0x4]u8, // 0x1F4
+    };
+    pub const C_OP_ColorAdjustHSL = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flHueAdjust: [0x178]u8, // 0x1E0
+        m_flSaturationAdjust: [0x178]u8, // 0x358
+        m_flLightnessAdjust: [0x178]u8, // 0x4D0
+    };
+    pub const CParticleMassCalculationParameters = extern struct {
+        m_nMassMode: [0x8]u8, // 0x0
+        m_flRadius: [0x178]u8, // 0x8
+        m_flNominalRadius: [0x178]u8, // 0x180
+        m_flScale: [0x178]u8, // 0x2F8
+    };
+    pub const C_OP_SequenceFromModel = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_nFieldOutputAnim: [0x4]u8, // 0x1E8
+        m_flInputMin: [0x4]u8, // 0x1EC
+        m_flInputMax: [0x4]u8, // 0x1F0
+        m_flOutputMin: [0x4]u8, // 0x1F4
+        m_flOutputMax: [0x4]u8, // 0x1F8
+        m_nSetMethod: [0x4]u8, // 0x1FC
+    };
+    pub const C_OP_AlphaDecay = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flMinAlpha: [0x8]u8, // 0x1E0
+    };
+    pub const C_OP_RemapDensityGradientToVectorAttribute = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flRadiusScale: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+    };
+    pub const C_INIT_InitVec = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_InputValue: [0x6D8]u8, // 0x1E8
+        m_nOutputField: [0x4]u8, // 0x8C0
+        m_nSetMethod: [0x4]u8, // 0x8C4
+        m_bNormalizedOutput: [0x1]u8, // 0x8C8
+        m_bWritePreviousPosition: [0x7]u8, // 0x8C9
+    };
+    pub const C_INIT_SetHitboxToModel = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E8
+        m_nForceInModel: [0x4]u8, // 0x1EC
+        m_bEvenDistribution: [0x4]u8, // 0x1F0
+        m_nDesiredHitbox: [0x4]u8, // 0x1F4
+        m_vecHitBoxScale: [0x6D8]u8, // 0x1F8
+        m_vecDirectionBias: [0xC]u8, // 0x8D0
+        m_bMaintainHitbox: [0x1]u8, // 0x8DC
+        m_bUseBones: [0x1]u8, // 0x8DD
+        m_HitboxSetName: [0x82]u8, // 0x8DE
+        m_flShellSize: [0x178]u8, // 0x960
+    };
+    pub const C_OP_MovementMoveAlongSkinnedCPSnapshot = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E0
+        m_nSnapshotControlPointNumber: [0x4]u8, // 0x1E4
+        m_bSetNormal: [0x1]u8, // 0x1E8
+        m_bSetRadius: [0x7]u8, // 0x1E9
+        m_flInterpolation: [0x178]u8, // 0x1F0
+        m_flTValue: [0x178]u8, // 0x368
+    };
+    pub const C_OP_LerpScalar = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E0
+        m_flOutput: [0x178]u8, // 0x1E8
+        m_flStartTime: [0x4]u8, // 0x360
+        m_flEndTime: [0x4]u8, // 0x364
+    };
+    pub const C_INIT_InitialRepulsionVelocity = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_CollisionGroupName: [0x80]u8, // 0x1E8
+        m_nTraceSet: [0x4]u8, // 0x268
+        m_vecOutputMin: [0xC]u8, // 0x26C
+        m_vecOutputMax: [0xC]u8, // 0x278
+        m_nControlPointNumber: [0x4]u8, // 0x284
+        m_bPerParticle: [0x1]u8, // 0x288
+        m_bTranslate: [0x1]u8, // 0x289
+        m_bProportional: [0x2]u8, // 0x28A
+        m_flTraceLength: [0x4]u8, // 0x28C
+        m_bPerParticleTR: [0x1]u8, // 0x290
+        m_bInherit: [0x3]u8, // 0x291
+        m_nChildCP: [0x4]u8, // 0x294
+        m_nChildGroupID: [0x8]u8, // 0x298
+    };
+    pub const C_OP_ClampScalar = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E0
+        m_flOutputMin: [0x178]u8, // 0x1E8
+        m_flOutputMax: [0x178]u8, // 0x360
+    };
+    pub const C_OP_SetControlPointToHMD = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCP1: [0x4]u8, // 0x1E8
+        m_vecCP1Pos: [0xC]u8, // 0x1EC
+        m_bOrientToHMD: [0x8]u8, // 0x1F8
+    };
+    pub const C_OP_DifferencePreviousParticle = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldInput: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_flInputMin: [0x4]u8, // 0x1E8
+        m_flInputMax: [0x4]u8, // 0x1EC
+        m_flOutputMin: [0x4]u8, // 0x1F0
+        m_flOutputMax: [0x4]u8, // 0x1F4
+        m_nSetMethod: [0x4]u8, // 0x1F8
+        m_bActiveRange: [0x1]u8, // 0x1FC
+        m_bSetPreviousParticle: [0x3]u8, // 0x1FD
+    };
+    pub const C_OP_SetControlPointFieldFromVectorExpression = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nExpression: [0x8]u8, // 0x1E8
+        m_vecInput1: [0x6D8]u8, // 0x1F0
+        m_vecInput2: [0x6D8]u8, // 0x8C8
+        m_flLerp: [0x178]u8, // 0xFA0
+        m_flOutputRemap: [0x178]u8, // 0x1118
+        m_nOutputCP: [0x4]u8, // 0x1290
+        m_nOutVectorField: [0x4]u8, // 0x1294
+    };
+    pub const C_OP_PercentageBetweenTransforms = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_flInputMin: [0x4]u8, // 0x1E4
+        m_flInputMax: [0x4]u8, // 0x1E8
+        m_flOutputMin: [0x4]u8, // 0x1EC
+        m_flOutputMax: [0x8]u8, // 0x1F0
+        m_TransformStart: [0x68]u8, // 0x1F8
+        m_TransformEnd: [0x68]u8, // 0x260
+        m_nSetMethod: [0x4]u8, // 0x2C8
+        m_bActiveRange: [0x1]u8, // 0x2CC
+        m_bRadialCheck: [0x3]u8, // 0x2CD
+    };
+    pub const C_INIT_PlaneCull = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPoint: [0x8]u8, // 0x1E8
+        m_flDistance: [0x178]u8, // 0x1F0
+        m_bCullInside: [0x8]u8, // 0x368
+    };
+    pub const C_OP_RemapNamedModelSequenceEndCap = extern struct {
+        pad_0: [0x240]u8, // 0x0
+    };
+    pub const C_INIT_InitFromCPSnapshot = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPointNumber: [0x8]u8, // 0x1E8
+        m_strSnapshotSubset: [0x8]u8, // 0x1F0
+        m_nAttributeToRead: [0x4]u8, // 0x1F8
+        m_nAttributeToWrite: [0x4]u8, // 0x1FC
+        m_nLocalSpaceCP: [0x4]u8, // 0x200
+        m_bRandom: [0x1]u8, // 0x204
+        m_bReverse: [0x3]u8, // 0x205
+        m_nSnapShotIncrement: [0x178]u8, // 0x208
+        m_nManualSnapshotIndex: [0x178]u8, // 0x380
+        m_nRandomSeed: [0x4]u8, // 0x4F8
+        m_bLocalSpaceAngles: [0x4]u8, // 0x4FC
+    };
+    pub const C_OP_RenderCables = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_flRadiusScale: [0x178]u8, // 0x230
+        m_flAlphaScale: [0x178]u8, // 0x3A8
+        m_vecColorScale: [0x6D8]u8, // 0x520
+        m_nColorBlendType: [0x8]u8, // 0xBF8
+        m_hMaterial: [0x8]u8, // 0xC00
+        m_nTextureRepetitionMode: [0x8]u8, // 0xC08
+        m_flTextureRepeatsPerSegment: [0x178]u8, // 0xC10
+        m_flTextureRepeatsCircumference: [0x178]u8, // 0xD88
+        m_flColorMapOffsetV: [0x178]u8, // 0xF00
+        m_flColorMapOffsetU: [0x178]u8, // 0x1078
+        m_flNormalMapOffsetV: [0x178]u8, // 0x11F0
+        m_flNormalMapOffsetU: [0x178]u8, // 0x1368
+        m_bDrawCableCaps: [0x4]u8, // 0x14E0
+        m_flCapRoundness: [0x4]u8, // 0x14E4
+        m_flCapOffsetAmount: [0x4]u8, // 0x14E8
+        m_flTessScale: [0x4]u8, // 0x14EC
+        m_nMinTesselation: [0x4]u8, // 0x14F0
+        m_nMaxTesselation: [0x4]u8, // 0x14F4
+        m_nRoundness: [0x4]u8, // 0x14F8
+        m_nForceRoundnessFixed: [0x1]u8, // 0x14FC
+        m_bOnlyRenderInEffectsBloomPass: [0x3]u8, // 0x14FD
+        m_LightingTransform: [0x68]u8, // 0x1500
+        m_MaterialFloatVars: [0x20]u8, // 0x1568
+        m_MaterialVecVars: [0x20]u8, // 0x1588
+    };
+    pub const C_INIT_InheritVelocity = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E8
+        m_flVelocityScale: [0x4]u8, // 0x1EC
+    };
+    pub const C_OP_SetControlPointToWaterSurface = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nSourceCP: [0x4]u8, // 0x1E8
+        m_nDestCP: [0x4]u8, // 0x1EC
+        m_nFlowCP: [0x4]u8, // 0x1F0
+        m_nActiveCP: [0x4]u8, // 0x1F4
+        m_nActiveCPField: [0x8]u8, // 0x1F8
+        m_flRetestRate: [0x178]u8, // 0x200
+        m_bAdaptiveThreshold: [0x8]u8, // 0x378
+    };
+    pub const C_INIT_PositionOffset = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_OffsetMin: [0x6D8]u8, // 0x1E8
+        m_OffsetMax: [0x6D8]u8, // 0x8C0
+        m_TransformInput: [0x68]u8, // 0xF98
+        m_bLocalCoords: [0x1]u8, // 0x1000
+        m_bProportional: [0x3]u8, // 0x1001
+        m_randomnessParameters: [0xC]u8, // 0x1004
+    };
+    pub const C_INIT_NormalAlignToCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_transformInput: [0x68]u8, // 0x1E8
+        m_nControlPointAxis: [0x8]u8, // 0x250
+    };
+    pub const C_OP_ShapeMatchingConstraint = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flShapeRestorationTime: [0x8]u8, // 0x1E0
+    };
+    pub const C_OP_SetChildControlPoints = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nChildGroupID: [0x4]u8, // 0x1E0
+        m_nFirstControlPoint: [0x4]u8, // 0x1E4
+        m_nNumControlPoints: [0x8]u8, // 0x1E8
+        m_nFirstSourcePoint: [0x178]u8, // 0x1F0
+        m_bReverse: [0x1]u8, // 0x368
+        m_bSetOrientation: [0x3]u8, // 0x369
+        m_nOrientation: [0x4]u8, // 0x36C
+    };
+    pub const C_OP_ChladniWave = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E0
+        m_flInputMin: [0x178]u8, // 0x1E8
+        m_flInputMax: [0x178]u8, // 0x360
+        m_flOutputMin: [0x178]u8, // 0x4D8
+        m_flOutputMax: [0x178]u8, // 0x650
+        m_vecWaveLength: [0x6D8]u8, // 0x7C8
+        m_vecHarmonics: [0x6D8]u8, // 0xEA0
+        m_nSetMethod: [0x4]u8, // 0x1578
+        m_nLocalSpaceControlPoint: [0x4]u8, // 0x157C
+        m_b3D: [0x8]u8, // 0x1580
+    };
+    pub const C_OP_RemapDirectionToCPToVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nCP: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_flScale: [0x4]u8, // 0x1E8
+        m_flOffsetRot: [0x4]u8, // 0x1EC
+        m_vecOffsetAxis: [0xC]u8, // 0x1F0
+        m_bNormalize: [0x4]u8, // 0x1FC
+        m_nFieldStrength: [0x8]u8, // 0x200
+    };
+    pub const C_OP_DriveCPFromGlobalSoundFloat = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nOutputControlPoint: [0x4]u8, // 0x1E8
+        m_nOutputField: [0x4]u8, // 0x1EC
+        m_flInputMin: [0x4]u8, // 0x1F0
+        m_flInputMax: [0x4]u8, // 0x1F4
+        m_flOutputMin: [0x4]u8, // 0x1F8
+        m_flOutputMax: [0x4]u8, // 0x1FC
+        m_StackName: [0x8]u8, // 0x200
+        m_OperatorName: [0x8]u8, // 0x208
+        m_FieldName: [0x10]u8, // 0x210
+    };
+    pub const C_INIT_ScreenSpacePositionOfTarget = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_vecTargetPosition: [0x6D8]u8, // 0x1E8
+        m_bOututBehindness: [0x4]u8, // 0x8C0
+        m_nBehindFieldOutput: [0x4]u8, // 0x8C4
+        m_flBehindOutputRemap: [0x178]u8, // 0x8C8
+    };
+    pub const C_OP_RtEnvCull = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_vecTestDir: [0xC]u8, // 0x1E0
+        m_vecTestNormal: [0xC]u8, // 0x1EC
+        m_bCullOnMiss: [0x1]u8, // 0x1F8
+        m_bStickInsteadOfCull: [0x1]u8, // 0x1F9
+        m_RtEnvName: [0x82]u8, // 0x1FA
+        m_nRTEnvCP: [0x4]u8, // 0x27C
+        m_nComponent: [0x8]u8, // 0x280
+    };
+    pub const C_OP_PinParticleToCP = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nControlPointNumber: [0x8]u8, // 0x1E0
+        m_vecOffset: [0x6D8]u8, // 0x1E8
+        m_bOffsetLocal: [0x4]u8, // 0x8C0
+        m_nParticleSelection: [0x4]u8, // 0x8C4
+        m_nParticleNumber: [0x178]u8, // 0x8C8
+        m_nPinBreakType: [0x8]u8, // 0xA40
+        m_flBreakDistance: [0x178]u8, // 0xA48
+        m_flBreakSpeed: [0x178]u8, // 0xBC0
+        m_flAge: [0x178]u8, // 0xD38
+        m_nBreakControlPointNumber: [0x4]u8, // 0xEB0
+        m_nBreakControlPointNumber2: [0x4]u8, // 0xEB4
+        m_flBreakValue: [0x178]u8, // 0xEB8
+        m_flInterpolation: [0x178]u8, // 0x1030
+        m_bRetainInitialVelocity: [0x8]u8, // 0x11A8
+    };
+    pub const C_OP_RemapCPtoVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nCPInput: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_nLocalSpaceCP: [0x4]u8, // 0x1E8
+        m_vInputMin: [0xC]u8, // 0x1EC
+        m_vInputMax: [0xC]u8, // 0x1F8
+        m_vOutputMin: [0xC]u8, // 0x204
+        m_vOutputMax: [0xC]u8, // 0x210
+        m_flStartTime: [0x4]u8, // 0x21C
+        m_flEndTime: [0x4]u8, // 0x220
+        m_flInterpRate: [0x4]u8, // 0x224
+        m_nSetMethod: [0x4]u8, // 0x228
+        m_bOffset: [0x1]u8, // 0x22C
+        m_bAccelerate: [0x3]u8, // 0x22D
+    };
+    pub const C_INIT_CreateParticleImpulse = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_InputRadius: [0x178]u8, // 0x1E8
+        m_InputMagnitude: [0x178]u8, // 0x360
+        m_nFalloffFunction: [0x8]u8, // 0x4D8
+        m_InputFalloffExp: [0x178]u8, // 0x4E0
+        m_nImpulseType: [0x8]u8, // 0x658
+    };
+    pub const C_OP_DensityForce = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_flRadiusScale: [0x4]u8, // 0x1F0
+        m_flForceScale: [0x4]u8, // 0x1F4
+        m_flTargetDensity: [0x8]u8, // 0x1F8
+    };
+    pub const C_INIT_CreateInEpitrochoid = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nComponent1: [0x4]u8, // 0x1E8
+        m_nComponent2: [0x4]u8, // 0x1EC
+        m_TransformInput: [0x68]u8, // 0x1F0
+        m_flParticleDensity: [0x178]u8, // 0x258
+        m_flOffset: [0x178]u8, // 0x3D0
+        m_flRadius1: [0x178]u8, // 0x548
+        m_flRadius2: [0x178]u8, // 0x6C0
+        m_bUseCount: [0x1]u8, // 0x838
+        m_bUseLocalCoords: [0x1]u8, // 0x839
+        m_bOffsetExistingPos: [0x6]u8, // 0x83A
+    };
+    pub const C_OP_ConstrainDistanceToUserSpecifiedPath = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_fMinDistance: [0x4]u8, // 0x1E0
+        m_flMaxDistance: [0x4]u8, // 0x1E4
+        m_flTimeScale: [0x4]u8, // 0x1E8
+        m_bLoopedPath: [0x4]u8, // 0x1EC
+        m_pointList: [0x18]u8, // 0x1F0
+    };
+    pub const C_OP_SetControlPointPositions = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_bUseWorldLocation: [0x1]u8, // 0x1E8
+        m_bOrient: [0x1]u8, // 0x1E9
+        m_bSetOnce: [0x2]u8, // 0x1EA
+        m_nCP1: [0x4]u8, // 0x1EC
+        m_nCP2: [0x4]u8, // 0x1F0
+        m_nCP3: [0x4]u8, // 0x1F4
+        m_nCP4: [0x4]u8, // 0x1F8
+        m_vecCP1Pos: [0xC]u8, // 0x1FC
+        m_vecCP2Pos: [0xC]u8, // 0x208
+        m_vecCP3Pos: [0xC]u8, // 0x214
+        m_vecCP4Pos: [0xC]u8, // 0x220
+        m_nHeadLocation: [0x4]u8, // 0x22C
+    };
+    pub const C_OP_SetFloatAttributeToVectorExpression = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nExpression: [0x8]u8, // 0x1E0
+        m_vInput1: [0x6D8]u8, // 0x1E8
+        m_vInput2: [0x6D8]u8, // 0x8C0
+        m_flOutputRemap: [0x178]u8, // 0xF98
+        m_nOutputField: [0x4]u8, // 0x1110
+        m_nSetMethod: [0x4]u8, // 0x1114
+    };
+    pub const C_OP_MovementRotateParticleAroundAxis = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_vecRotAxis: [0x6D8]u8, // 0x1E0
+        m_flRotRate: [0x178]u8, // 0x8B8
+        m_TransformInput: [0x68]u8, // 0xA30
+        m_bLocalSpace: [0x8]u8, // 0xA98
+    };
+    pub const C_OP_IntraParticleForce = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_flAttractionMinDistance: [0x4]u8, // 0x1F0
+        m_flAttractionMaxDistance: [0x4]u8, // 0x1F4
+        m_flAttractionMaxStrength: [0x4]u8, // 0x1F8
+        m_flRepulsionMinDistance: [0x4]u8, // 0x1FC
+        m_flRepulsionMaxDistance: [0x4]u8, // 0x200
+        m_flRepulsionMaxStrength: [0x4]u8, // 0x204
+        m_bUseAABB: [0x8]u8, // 0x208
+    };
+    pub const C_INIT_InitFloat = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_InputValue: [0x178]u8, // 0x1E8
+        m_nOutputField: [0x4]u8, // 0x360
+        m_nSetMethod: [0x4]u8, // 0x364
+        m_InputStrength: [0x180]u8, // 0x368
+    };
+    pub const C_INIT_CreateOnModel = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_modelInput: [0x60]u8, // 0x1E8
+        m_transformInput: [0x68]u8, // 0x248
+        m_nForceInModel: [0x4]u8, // 0x2B0
+        m_bScaleToVolume: [0x1]u8, // 0x2B4
+        m_bEvenDistribution: [0x3]u8, // 0x2B5
+        m_nDesiredHitbox: [0x178]u8, // 0x2B8
+        m_nHitboxValueFromControlPointIndex: [0x8]u8, // 0x430
+        m_vecHitBoxScale: [0x6D8]u8, // 0x438
+        m_flBoneVelocity: [0x4]u8, // 0xB10
+        m_flMaxBoneVelocity: [0x4]u8, // 0xB14
+        m_vecDirectionBias: [0x6D8]u8, // 0xB18
+        m_HitboxSetName: [0x80]u8, // 0x11F0
+        m_bLocalCoords: [0x1]u8, // 0x1270
+        m_bUseBones: [0x1]u8, // 0x1271
+        m_bUseMesh: [0x6]u8, // 0x1272
+        m_flShellSize: [0x178]u8, // 0x1278
+    };
+    pub const C_OP_InheritFromPeerSystem = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_nFieldInput: [0x4]u8, // 0x1E4
+        m_nIncrement: [0x4]u8, // 0x1E8
+        m_nGroupID: [0x4]u8, // 0x1EC
+    };
+    pub const C_OP_PerParticleForce = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_flForceScale: [0x178]u8, // 0x1F0
+        m_vForce: [0x6D8]u8, // 0x368
+        m_nCP: [0x8]u8, // 0xA40
+    };
+    pub const C_INIT_RandomNamedModelMeshGroup = extern struct {
+        pad_0: [0x210]u8, // 0x0
+    };
+    pub const C_OP_RenderProjected = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_bProjectCharacter: [0x1]u8, // 0x230
+        m_bProjectWorld: [0x1]u8, // 0x231
+        m_bProjectWater: [0x1]u8, // 0x232
+        m_bFlipHorizontal: [0x1]u8, // 0x233
+        m_bEnableProjectedDepthControls: [0x4]u8, // 0x234
+        m_flMinProjectionDepth: [0x4]u8, // 0x238
+        m_flMaxProjectionDepth: [0x4]u8, // 0x23C
+        m_vecProjectedMaterials: [0x18]u8, // 0x240
+        m_flMaterialSelection: [0x178]u8, // 0x258
+        m_flAnimationTimeScale: [0x4]u8, // 0x3D0
+        m_bOrientToNormal: [0x4]u8, // 0x3D4
+        m_MaterialVars: [0x18]u8, // 0x3D8
+        m_flRadiusScale: [0x178]u8, // 0x3F0
+        m_flAlphaScale: [0x178]u8, // 0x568
+        m_flRollScale: [0x178]u8, // 0x6E0
+        m_nAlpha2Field: [0x8]u8, // 0x858
+        m_vecColorScale: [0x6D8]u8, // 0x860
+        m_nColorBlendType: [0x20]u8, // 0xF38
+    };
+    pub const C_OP_MaxVelocity = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flMaxVelocity: [0x178]u8, // 0x1E0
+        m_flMinVelocity: [0x178]u8, // 0x358
+    };
+    pub const C_INIT_VelocityFromNormal = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_fSpeedMin: [0x4]u8, // 0x1E8
+        m_fSpeedMax: [0x4]u8, // 0x1EC
+        m_bIgnoreDt: [0x8]u8, // 0x1F0
+    };
+    pub const C_OP_MaintainEmitter = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nParticlesToMaintain: [0x178]u8, // 0x1E8
+        m_flStartTime: [0x8]u8, // 0x360
+        m_flEmissionDuration: [0x178]u8, // 0x368
+        m_flEmissionRate: [0x4]u8, // 0x4E0
+        m_nSnapshotControlPoint: [0x4]u8, // 0x4E4
+        m_strSnapshotSubset: [0x8]u8, // 0x4E8
+        m_bEmitInstantaneously: [0x1]u8, // 0x4F0
+        m_bFinalEmitOnStop: [0x7]u8, // 0x4F1
+        m_flScale: [0x178]u8, // 0x4F8
+    };
+    pub const C_INIT_PositionOffsetToCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPointNumberStart: [0x4]u8, // 0x1E8
+        m_nControlPointNumberEnd: [0x4]u8, // 0x1EC
+        m_bLocalCoords: [0x8]u8, // 0x1F0
+    };
+    pub const C_INIT_RemapInitialTransformDirectionToRotation = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_TransformInput: [0x68]u8, // 0x1E8
+        m_nFieldOutput: [0x4]u8, // 0x250
+        m_flOffsetRot: [0x4]u8, // 0x254
+        m_nComponent: [0x8]u8, // 0x258
+    };
+    pub const C_OP_FadeAndKill = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flStartFadeInTime: [0x4]u8, // 0x1E0
+        m_flEndFadeInTime: [0x4]u8, // 0x1E4
+        m_flStartFadeOutTime: [0x4]u8, // 0x1E8
+        m_flEndFadeOutTime: [0x4]u8, // 0x1EC
+        m_flStartAlpha: [0x4]u8, // 0x1F0
+        m_flEndAlpha: [0x4]u8, // 0x1F4
+        m_bForcePreserveParticleOrder: [0x8]u8, // 0x1F8
+    };
+    pub const C_OP_ColorInterpolate = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_ColorFade: [0x10]u8, // 0x1E0
+        m_flFadeStartTime: [0x4]u8, // 0x1F0
+        m_flFadeEndTime: [0x4]u8, // 0x1F4
+        m_nFieldOutput: [0x4]u8, // 0x1F8
+        m_bEaseInOut: [0x4]u8, // 0x1FC
+    };
+    pub const C_OP_RampScalarSpline = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_RateMin: [0x4]u8, // 0x1E0
+        m_RateMax: [0x4]u8, // 0x1E4
+        m_flStartTime_min: [0x4]u8, // 0x1E8
+        m_flStartTime_max: [0x4]u8, // 0x1EC
+        m_flEndTime_min: [0x4]u8, // 0x1F0
+        m_flEndTime_max: [0x4]u8, // 0x1F4
+        m_flBias: [0x28]u8, // 0x1F8
+        m_nField: [0x4]u8, // 0x220
+        m_bProportionalOp: [0x1]u8, // 0x224
+        m_bEaseOut: [0xB]u8, // 0x225
+    };
+    pub const C_OP_RemapNamedModelSequenceOnceTimed = extern struct {
+        pad_0: [0x240]u8, // 0x0
+    };
+    pub const C_OP_SetControlPointFromObjectScale = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCPInput: [0x4]u8, // 0x1E8
+        m_nCPOutput: [0x4]u8, // 0x1EC
+    };
+    pub const C_OP_MaintainSequentialPath = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_fMaxDistance: [0x178]u8, // 0x1E0
+        m_flNumToAssign: [0x178]u8, // 0x358
+        m_flCohesionStrength: [0x178]u8, // 0x4D0
+        m_flTolerance: [0x4]u8, // 0x648
+        m_bLoop: [0x1]u8, // 0x64C
+        m_bUseParticleCount: [0x3]u8, // 0x64D
+        m_PathParams: [0x40]u8, // 0x650
+    };
+    pub const C_OP_RemapNamedModelBodyPartEndCap = extern struct {
+        pad_0: [0x240]u8, // 0x0
+    };
+    pub const C_OP_StopAfterCPDuration = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flDuration: [0x178]u8, // 0x1E8
+        m_bDestroyImmediately: [0x1]u8, // 0x360
+        m_bPlayEndCap: [0x7]u8, // 0x361
+    };
+    pub const CGeneralSpin = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nSpinRateDegrees: [0x4]u8, // 0x1E0
+        m_nSpinRateMinDegrees: [0x8]u8, // 0x1E4
+        m_fSpinRateStopTime: [0xC]u8, // 0x1EC
+    };
+    pub const C_OP_LockToSavedSequentialPath = extern struct {
+        pad_0: [0x1E4]u8, // 0x0
+        m_flFadeStart: [0x4]u8, // 0x1E4
+        m_flFadeEnd: [0x4]u8, // 0x1E8
+        m_bCPPairs: [0x4]u8, // 0x1EC
+        m_PathParams: [0x40]u8, // 0x1F0
+    };
+    pub const C_INIT_RemapNamedModelElementToScalar = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_hModel: [0x8]u8, // 0x1E8
+        m_names: [0x18]u8, // 0x1F0
+        m_values: [0x18]u8, // 0x208
+        m_nFieldInput: [0x4]u8, // 0x220
+        m_nFieldOutput: [0x4]u8, // 0x224
+        m_nSetMethod: [0x4]u8, // 0x228
+        m_bModelFromRenderer: [0x4]u8, // 0x22C
+    };
+    pub const C_OP_ClampVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E0
+        m_vecOutputMin: [0x6D8]u8, // 0x1E8
+        m_vecOutputMax: [0x6D8]u8, // 0x8C0
+    };
+    pub const C_OP_RenderStatusEffectCitadel = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_pTextureColorWarp: [0x8]u8, // 0x230
+        m_pTextureNormal: [0x8]u8, // 0x238
+        m_pTextureMetalness: [0x8]u8, // 0x240
+        m_pTextureRoughness: [0x8]u8, // 0x248
+        m_pTextureSelfIllum: [0x8]u8, // 0x250
+        m_pTextureDetail: [0x8]u8, // 0x258
+    };
+    pub const IParticleSystemDefinition = extern struct {
+        pad_0: [0x8]u8, // 0x0
+    };
+    pub const C_OP_WindForce = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_vForce: [0x10]u8, // 0x1F0
+    };
+    pub const C_OP_SetVariable = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_variableReference: [0x50]u8, // 0x1E8
+        m_transformInput: [0x68]u8, // 0x238
+        m_positionOffset: [0xC]u8, // 0x2A0
+        m_rotationOffset: [0xC]u8, // 0x2AC
+        m_vecInput: [0x6D8]u8, // 0x2B8
+        m_floatInput: [0x178]u8, // 0x990
+    };
+    pub const C_OP_RenderStandardLight = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_nLightType: [0x4]u8, // 0x230
+        m_nMaxAllowed: [0x4]u8, // 0x234
+        m_vecColorScale: [0x6D8]u8, // 0x238
+        m_nColorBlendType: [0x8]u8, // 0x910
+        m_strLightStyle: [0x8]u8, // 0x918
+        m_flLightStyleTime: [0x178]u8, // 0x920
+        m_flIntensity: [0x178]u8, // 0xA98
+        m_bCastShadows: [0x1]u8, // 0xC10
+        m_bDynamicBounce: [0x7]u8, // 0xC11
+        m_flBounceScale: [0x178]u8, // 0xC18
+        m_flTheta: [0x178]u8, // 0xD90
+        m_flPhi: [0x178]u8, // 0xF08
+        m_flRadiusMultiplier: [0x178]u8, // 0x1080
+        m_nAttenuationStyle: [0x8]u8, // 0x11F8
+        m_flFalloffLinearity: [0x178]u8, // 0x1200
+        m_flFiftyPercentFalloff: [0x178]u8, // 0x1378
+        m_flZeroPercentFalloff: [0x178]u8, // 0x14F0
+        m_bRenderDiffuse: [0x1]u8, // 0x1668
+        m_bRenderSpecular: [0x7]u8, // 0x1669
+        m_lightCookie: [0x8]u8, // 0x1670
+        m_nPriority: [0x4]u8, // 0x1678
+        m_nFogLightingMode: [0x4]u8, // 0x167C
+        m_flFogContribution: [0x178]u8, // 0x1680
+        m_nCapsuleLightBehavior: [0x4]u8, // 0x17F8
+        m_flCapsuleLength: [0x4]u8, // 0x17FC
+        m_bReverseOrder: [0x1]u8, // 0x1800
+        m_bClosedLoop: [0x3]u8, // 0x1801
+        m_nPrevPntSource: [0x4]u8, // 0x1804
+        m_flMaxLength: [0x4]u8, // 0x1808
+        m_flMinLength: [0x4]u8, // 0x180C
+        m_bIgnoreDT: [0x4]u8, // 0x1810
+        m_flConstrainRadiusToLengthRatio: [0x4]u8, // 0x1814
+        m_flLengthScale: [0x4]u8, // 0x1818
+        m_flLengthFadeInTime: [0xC]u8, // 0x181C
+    };
+    pub const C_OP_DistanceToTransform = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E0
+        m_flInputMin: [0x178]u8, // 0x1E8
+        m_flInputMax: [0x178]u8, // 0x360
+        m_flOutputMin: [0x178]u8, // 0x4D8
+        m_flOutputMax: [0x178]u8, // 0x650
+        m_TransformStart: [0x68]u8, // 0x7C8
+        m_bLOS: [0x1]u8, // 0x830
+        m_CollisionGroupName: [0x83]u8, // 0x831
+        m_nTraceSet: [0x4]u8, // 0x8B4
+        m_flMaxTraceLength: [0x4]u8, // 0x8B8
+        m_flLOSScale: [0x4]u8, // 0x8BC
+        m_nSetMethod: [0x4]u8, // 0x8C0
+        m_bActiveRange: [0x1]u8, // 0x8C4
+        m_bAdditive: [0x3]u8, // 0x8C5
+        m_vecComponentScale: [0x6D8]u8, // 0x8C8
+    };
+    pub const C_OP_RemapControlPointOrientationToRotation = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nCP: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_flOffsetRot: [0x4]u8, // 0x1E8
+        m_nComponent: [0x4]u8, // 0x1EC
+    };
+    pub const C_OP_SetControlPointToCenter = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCP1: [0x4]u8, // 0x1E8
+        m_vecCP1Pos: [0xC]u8, // 0x1EC
+        m_bUseAvgParticlePos: [0x4]u8, // 0x1F8
+        m_nSetParent: [0x4]u8, // 0x1FC
+    };
+    pub const C_OP_RemapAverageScalarValuetoCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nExpression: [0x8]u8, // 0x1E8
+        m_flDecimalPlaces: [0x178]u8, // 0x1F0
+        m_nOutControlPointNumber: [0x4]u8, // 0x368
+        m_nOutVectorField: [0x4]u8, // 0x36C
+        m_nField: [0x8]u8, // 0x370
+        m_flOutputRemap: [0x178]u8, // 0x378
+    };
+    pub const C_OP_RemapDotProductToScalar = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nInputCP1: [0x4]u8, // 0x1E0
+        m_nInputCP2: [0x4]u8, // 0x1E4
+        m_nFieldOutput: [0x4]u8, // 0x1E8
+        m_flInputMin: [0x4]u8, // 0x1EC
+        m_flInputMax: [0x4]u8, // 0x1F0
+        m_flOutputMin: [0x4]u8, // 0x1F4
+        m_flOutputMax: [0x4]u8, // 0x1F8
+        m_bUseParticleVelocity: [0x4]u8, // 0x1FC
+        m_nSetMethod: [0x4]u8, // 0x200
+        m_bActiveRange: [0x1]u8, // 0x204
+        m_bUseParticleNormal: [0x3]u8, // 0x205
+    };
+    pub const C_OP_RemapCPtoCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nInputControlPoint: [0x4]u8, // 0x1E8
+        m_nOutputControlPoint: [0x4]u8, // 0x1EC
+        m_nInputField: [0x4]u8, // 0x1F0
+        m_nOutputField: [0x4]u8, // 0x1F4
+        m_flInputMin: [0x4]u8, // 0x1F8
+        m_flInputMax: [0x4]u8, // 0x1FC
+        m_flOutputMin: [0x4]u8, // 0x200
+        m_flOutputMax: [0x4]u8, // 0x204
+        m_bDerivative: [0x4]u8, // 0x208
+        m_flInterpRate: [0x4]u8, // 0x20C
+    };
+    pub const C_OP_SetControlPointRotation = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_vecRotAxis: [0x6D8]u8, // 0x1E8
+        m_flRotRate: [0x178]u8, // 0x8C0
+        m_nCP: [0x4]u8, // 0xA38
+        m_nLocalCP: [0x4]u8, // 0xA3C
+    };
+    pub const C_OP_CurlNoiseForce = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_nNoiseType: [0x8]u8, // 0x1F0
+        m_vecNoiseFreq: [0x6D8]u8, // 0x1F8
+        m_vecNoiseScale: [0x6D8]u8, // 0x8D0
+        m_vecOffset: [0x6D8]u8, // 0xFA8
+        m_vecOffsetRate: [0x6D8]u8, // 0x1680
+        m_flWorleySeed: [0x178]u8, // 0x1D58
+        m_flWorleyJitter: [0x178]u8, // 0x1ED0
+    };
+    pub const C_INIT_Orient2DRelToCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCP: [0x4]u8, // 0x1E8
+        m_nFieldOutput: [0x4]u8, // 0x1EC
+        m_flRotOffset: [0x8]u8, // 0x1F0
+    };
+    pub const C_OP_SetSimulationRate = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flSimulationScale: [0x178]u8, // 0x1E8
+    };
+    pub const C_OP_FadeIn = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flFadeInTimeMin: [0x4]u8, // 0x1E0
+        m_flFadeInTimeMax: [0x4]u8, // 0x1E4
+        m_flFadeInTimeExp: [0x4]u8, // 0x1E8
+        m_bProportional: [0x4]u8, // 0x1EC
+    };
+    pub const C_OP_RenderScreenShake = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_flDurationScale: [0x4]u8, // 0x230
+        m_flRadiusScale: [0x4]u8, // 0x234
+        m_flFrequencyScale: [0x4]u8, // 0x238
+        m_flAmplitudeScale: [0x4]u8, // 0x23C
+        m_nRadiusField: [0x4]u8, // 0x240
+        m_nDurationField: [0x4]u8, // 0x244
+        m_nFrequencyField: [0x4]u8, // 0x248
+        m_nAmplitudeField: [0x4]u8, // 0x24C
+        m_nFilterCP: [0x8]u8, // 0x250
+    };
+    pub const C_OP_RemapBoundingVolumetoCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nOutControlPointNumber: [0x4]u8, // 0x1E8
+        m_flInputMin: [0x4]u8, // 0x1EC
+        m_flInputMax: [0x4]u8, // 0x1F0
+        m_flOutputMin: [0x4]u8, // 0x1F4
+        m_flOutputMax: [0x8]u8, // 0x1F8
+    };
+    pub const C_OP_HSVShiftToCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nColorCP: [0x4]u8, // 0x1E8
+        m_nColorGemEnableCP: [0x4]u8, // 0x1EC
+        m_nOutputCP: [0x4]u8, // 0x1F0
+        m_DefaultHSVColor: [0x14]u8, // 0x1F4
+    };
+    pub const C_OP_RemapVectorToRotations = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_vecInput: [0x6D8]u8, // 0x1E0
+        m_vecRotation: [0x6D8]u8, // 0x8B8
+    };
+    pub const C_INIT_GlobalScale = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flScale: [0x4]u8, // 0x1E8
+        m_nScaleControlPointNumber: [0x4]u8, // 0x1EC
+        m_nControlPointNumber: [0x4]u8, // 0x1F0
+        m_bScaleRadius: [0x1]u8, // 0x1F4
+        m_bScalePosition: [0x1]u8, // 0x1F5
+        m_bScaleVelocity: [0x2]u8, // 0x1F6
+    };
+    pub const C_INIT_RadiusFromCPObject = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPoint: [0x8]u8, // 0x1E8
+    };
+    pub const C_INIT_InitialVelocityFromHitbox = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flVelocityMin: [0x4]u8, // 0x1E8
+        m_flVelocityMax: [0x4]u8, // 0x1EC
+        m_nControlPointNumber: [0x4]u8, // 0x1F0
+        m_HitboxSetName: [0x80]u8, // 0x1F4
+        m_bUseBones: [0x4]u8, // 0x274
+    };
+    pub const C_OP_LerpVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_vecOutput: [0xC]u8, // 0x1E4
+        m_flStartTime: [0x4]u8, // 0x1F0
+        m_flEndTime: [0x4]u8, // 0x1F4
+        m_nSetMethod: [0x8]u8, // 0x1F8
+    };
+    pub const C_OP_SetControlPointFieldToWater = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nSourceCP: [0x4]u8, // 0x1E8
+        m_nDestCP: [0x4]u8, // 0x1EC
+        m_nCPField: [0x8]u8, // 0x1F0
+    };
+    pub const TextureGroup_t = extern struct {
+        m_bEnabled: [0x1]u8, // 0x0
+        m_bReplaceTextureWithGradient: [0x7]u8, // 0x1
+        m_hTexture: [0x8]u8, // 0x8
+        m_Gradient: [0x18]u8, // 0x10
+        m_nTextureType: [0x4]u8, // 0x28
+        m_nTextureChannels: [0x4]u8, // 0x2C
+        m_nTextureBlendMode: [0x8]u8, // 0x30
+        m_flTextureBlend: [0x178]u8, // 0x38
+        m_TextureControls: [0xA68]u8, // 0x1B0
+    };
+    pub const C_OP_TimeVaryingForce = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_flStartLerpTime: [0x4]u8, // 0x1F0
+        m_StartingForce: [0xC]u8, // 0x1F4
+        m_flEndLerpTime: [0x4]u8, // 0x200
+        m_EndingForce: [0xC]u8, // 0x204
+    };
+    pub const C_OP_SetCPOrientationToGroundNormal = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flInterpRate: [0x4]u8, // 0x1E0
+        m_flMaxTraceLength: [0x4]u8, // 0x1E4
+        m_flTolerance: [0x4]u8, // 0x1E8
+        m_flTraceOffset: [0x4]u8, // 0x1EC
+        m_CollisionGroupName: [0x80]u8, // 0x1F0
+        m_nTraceSet: [0x4]u8, // 0x270
+        m_nInputCP: [0x4]u8, // 0x274
+        m_nOutputCP: [0x10]u8, // 0x278
+        m_bIncludeWater: [0x8]u8, // 0x288
+    };
+    pub const C_OP_SnapshotSkinToBones = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_bTransformNormals: [0x1]u8, // 0x1E0
+        m_bTransformRadii: [0x3]u8, // 0x1E1
+        m_nControlPointNumber: [0x4]u8, // 0x1E4
+        m_flLifeTimeFadeStart: [0x4]u8, // 0x1E8
+        m_flLifeTimeFadeEnd: [0x4]u8, // 0x1EC
+        m_flJumpThreshold: [0x4]u8, // 0x1F0
+        m_flPrevPosScale: [0x4]u8, // 0x1F4
+    };
+    pub const C_INIT_CreateWithinSphereTransform = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_fRadiusMin: [0x178]u8, // 0x1E8
+        m_fRadiusMax: [0x178]u8, // 0x360
+        m_vecDistanceBias: [0x6D8]u8, // 0x4D8
+        m_vecDistanceBiasAbs: [0x10]u8, // 0xBB0
+        m_TransformInput: [0x68]u8, // 0xBC0
+        m_fSpeedMin: [0x178]u8, // 0xC28
+        m_fSpeedMax: [0x178]u8, // 0xDA0
+        m_fSpeedRandExp: [0x4]u8, // 0xF18
+        m_bLocalCoords: [0x4]u8, // 0xF1C
+        m_LocalCoordinateSystemSpeedMin: [0x6D8]u8, // 0xF20
+        m_LocalCoordinateSystemSpeedMax: [0x6D8]u8, // 0x15F8
+        m_nFieldOutput: [0x4]u8, // 0x1CD0
+        m_nFieldVelocity: [0x4]u8, // 0x1CD4
+    };
+    pub const C_OP_RadiusDecay = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flMinRadius: [0x8]u8, // 0x1E0
+    };
+    pub const C_INIT_RemapNamedModelBodyPartToScalar = extern struct {
+        pad_0: [0x230]u8, // 0x0
+    };
+    pub const C_INIT_RemapScalarToVector = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nFieldInput: [0x4]u8, // 0x1E8
+        m_nFieldOutput: [0x4]u8, // 0x1EC
+        m_flInputMin: [0x4]u8, // 0x1F0
+        m_flInputMax: [0x4]u8, // 0x1F4
+        m_vecOutputMin: [0xC]u8, // 0x1F8
+        m_vecOutputMax: [0xC]u8, // 0x204
+        m_flStartTime: [0x4]u8, // 0x210
+        m_flEndTime: [0x4]u8, // 0x214
+        m_nSetMethod: [0x4]u8, // 0x218
+        m_nControlPointNumber: [0x4]u8, // 0x21C
+        m_bLocalCoords: [0x4]u8, // 0x220
+        m_flRemapBias: [0xC]u8, // 0x224
+    };
+    pub const C_INIT_InitialSequenceFromModel = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E8
+        m_nFieldOutput: [0x4]u8, // 0x1EC
+        m_nFieldOutputAnim: [0x4]u8, // 0x1F0
+        m_flInputMin: [0x4]u8, // 0x1F4
+        m_flInputMax: [0x4]u8, // 0x1F8
+        m_flOutputMin: [0x4]u8, // 0x1FC
+        m_flOutputMax: [0x4]u8, // 0x200
+        m_nSetMethod: [0x4]u8, // 0x204
+    };
+    pub const C_OP_NoiseEmitter = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flEmissionDuration: [0x4]u8, // 0x1E8
+        m_flStartTime: [0x4]u8, // 0x1EC
+        m_flEmissionScale: [0x4]u8, // 0x1F0
+        m_nScaleControlPoint: [0x4]u8, // 0x1F4
+        m_nScaleControlPointField: [0x4]u8, // 0x1F8
+        m_nWorldNoisePoint: [0x4]u8, // 0x1FC
+        m_bAbsVal: [0x1]u8, // 0x200
+        m_bAbsValInv: [0x3]u8, // 0x201
+        m_flOffset: [0x4]u8, // 0x204
+        m_flOutputMin: [0x4]u8, // 0x208
+        m_flOutputMax: [0x4]u8, // 0x20C
+        m_flNoiseScale: [0x4]u8, // 0x210
+        m_flWorldNoiseScale: [0x4]u8, // 0x214
+        m_vecOffsetLoc: [0xC]u8, // 0x218
+        m_flWorldTimeScale: [0x4]u8, // 0x224
+    };
+    pub const CParticleFunctionInitializer = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nAssociatedEmitterIndex: [0x8]u8, // 0x1E0
+    };
+    pub const C_OP_SelectivelyEnableChildren = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nChildGroupID: [0x178]u8, // 0x1E8
+        m_nFirstChild: [0x178]u8, // 0x360
+        m_nNumChildrenToEnable: [0x178]u8, // 0x4D8
+        m_bPlayEndcapOnStop: [0x1]u8, // 0x650
+        m_bDestroyImmediately: [0x7]u8, // 0x651
+    };
+    pub const ModelReference_t = extern struct {
+        m_model: [0x8]u8, // 0x0
+        m_flRelativeProbabilityOfSpawn: [0x8]u8, // 0x8
+    };
+    pub const C_OP_PlanarConstraint = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_PointOnPlane: [0xC]u8, // 0x1E0
+        m_PlaneNormal: [0xC]u8, // 0x1EC
+        m_nControlPointNumber: [0x4]u8, // 0x1F8
+        m_bGlobalOrigin: [0x1]u8, // 0x1FC
+        m_bGlobalNormal: [0x3]u8, // 0x1FD
+        m_flRadiusScale: [0x178]u8, // 0x200
+        m_flMaximumDistanceToCP: [0x178]u8, // 0x378
+        m_bUseOldCode: [0x8]u8, // 0x4F0
+    };
+    pub const C_INIT_CreateFromCPs = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nIncrement: [0x4]u8, // 0x1E8
+        m_nMinCP: [0x4]u8, // 0x1EC
+        m_nMaxCP: [0x8]u8, // 0x1F0
+        m_nDynamicCPCount: [0x178]u8, // 0x1F8
+    };
+    pub const C_OP_LockPoints = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nMinCol: [0x4]u8, // 0x1E0
+        m_nMaxCol: [0x4]u8, // 0x1E4
+        m_nMinRow: [0x4]u8, // 0x1E8
+        m_nMaxRow: [0x4]u8, // 0x1EC
+        m_nControlPoint: [0x4]u8, // 0x1F0
+        m_flBlendValue: [0x4]u8, // 0x1F4
+    };
+    pub const C_INIT_CreateSpiralSphere = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_TransformInput: [0x68]u8, // 0x1E8
+        m_flDensity: [0x178]u8, // 0x250
+        m_flInitialRadius: [0x178]u8, // 0x3C8
+        m_flInitialSpeedMin: [0x178]u8, // 0x540
+        m_flInitialSpeedMax: [0x178]u8, // 0x6B8
+        m_bUseParticleCount: [0x8]u8, // 0x830
+    };
+    pub const C_OP_CPVelocityForce = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_nControlPointNumber: [0x8]u8, // 0x1F0
+        m_flScale: [0x178]u8, // 0x1F8
+    };
+    pub const C_OP_RemapNamedModelElementEndCap = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_hModel: [0x8]u8, // 0x1E0
+        m_inNames: [0x18]u8, // 0x1E8
+        m_outNames: [0x18]u8, // 0x200
+        m_fallbackNames: [0x18]u8, // 0x218
+        m_bModelFromRenderer: [0x4]u8, // 0x230
+        m_nFieldInput: [0x4]u8, // 0x234
+        m_nFieldOutput: [0x8]u8, // 0x238
+    };
+    pub const C_INIT_ScaleVelocity = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_vecScale: [0x6D8]u8, // 0x1E8
+    };
+    pub const C_OP_MoveToHitbox = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_modelInput: [0x60]u8, // 0x1E0
+        m_transformInput: [0x6C]u8, // 0x240
+        m_flLifeTimeLerpStart: [0x4]u8, // 0x2AC
+        m_flLifeTimeLerpEnd: [0x4]u8, // 0x2B0
+        m_flPrevPosScale: [0x4]u8, // 0x2B4
+        m_HitboxSetName: [0x80]u8, // 0x2B8
+        m_bUseBones: [0x4]u8, // 0x338
+        m_nLerpType: [0x4]u8, // 0x33C
+        m_flInterpolation: [0x178]u8, // 0x340
+    };
+    pub const C_OP_PinRopeSegmentParticleToParent = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nParticleSelection: [0x8]u8, // 0x1E0
+        m_nParticleNumber: [0x178]u8, // 0x1E8
+        m_flInterpolation: [0x178]u8, // 0x360
+    };
+    pub const C_INIT_PointList = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E8
+        m_pointList: [0x18]u8, // 0x1F0
+        m_bPlaceAlongPath: [0x1]u8, // 0x208
+        m_bClosedLoop: [0x3]u8, // 0x209
+        m_nNumPointsAlongPath: [0x4]u8, // 0x20C
+    };
+    pub const C_OP_LerpToOtherAttribute = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flInterpolation: [0x178]u8, // 0x1E0
+        m_nFieldInputFrom: [0x4]u8, // 0x358
+        m_nFieldInput: [0x4]u8, // 0x35C
+        m_nFieldOutput: [0x30]u8, // 0x360
+    };
+    pub const C_INIT_RandomColor = extern struct {
+        pad_0: [0x204]u8, // 0x0
+        m_ColorMin: [0x4]u8, // 0x204
+        m_ColorMax: [0x4]u8, // 0x208
+        m_TintMin: [0x4]u8, // 0x20C
+        m_TintMax: [0x4]u8, // 0x210
+        m_flTintPerc: [0x4]u8, // 0x214
+        m_flUpdateThreshold: [0x4]u8, // 0x218
+        m_nTintCP: [0x4]u8, // 0x21C
+        m_nFieldOutput: [0x4]u8, // 0x220
+        m_nTintBlendMode: [0x4]u8, // 0x224
+        m_flLightAmplification: [0x8]u8, // 0x228
+    };
+    pub const C_OP_SetGravityToCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCPInput: [0x4]u8, // 0x1E8
+        m_nCPOutput: [0x4]u8, // 0x1EC
+        m_flScale: [0x178]u8, // 0x1F0
+        m_bSetPosition: [0x1]u8, // 0x368
+        m_bSetOrientation: [0x1]u8, // 0x369
+        m_bSetZDown: [0x6]u8, // 0x36A
+    };
+    pub const C_INIT_RemapParticleCountToScalar = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E8
+        m_nInputMin: [0x4]u8, // 0x1EC
+        m_nInputMax: [0x4]u8, // 0x1F0
+        m_nScaleControlPoint: [0x4]u8, // 0x1F4
+        m_nScaleControlPointField: [0x4]u8, // 0x1F8
+        m_flOutputMin: [0x4]u8, // 0x1FC
+        m_flOutputMax: [0x4]u8, // 0x200
+        m_nSetMethod: [0x4]u8, // 0x204
+        m_bActiveRange: [0x1]u8, // 0x208
+        m_bInvert: [0x1]u8, // 0x209
+        m_bWrap: [0x2]u8, // 0x20A
+        m_flRemapBias: [0xC]u8, // 0x20C
+    };
+    pub const C_INIT_InheritFromParentParticles = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flScale: [0x4]u8, // 0x1E8
+        m_nFieldOutput: [0x4]u8, // 0x1EC
+        m_nIncrement: [0x4]u8, // 0x1F0
+        m_bRandomDistribution: [0x4]u8, // 0x1F4
+        m_nRandomSeed: [0x8]u8, // 0x1F8
+    };
+    pub const C_OP_RampScalarLinearSimple = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_Rate: [0x4]u8, // 0x1E0
+        m_flStartTime: [0x4]u8, // 0x1E4
+        m_flEndTime: [0x28]u8, // 0x1E8
+        m_nField: [0x10]u8, // 0x210
+    };
+    pub const C_INIT_ChaoticAttractor = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_flAParm: [0x4]u8, // 0x1E8
+        m_flBParm: [0x4]u8, // 0x1EC
+        m_flCParm: [0x4]u8, // 0x1F0
+        m_flDParm: [0x4]u8, // 0x1F4
+        m_flScale: [0x4]u8, // 0x1F8
+        m_flSpeedMin: [0x4]u8, // 0x1FC
+        m_flSpeedMax: [0x4]u8, // 0x200
+        m_nBaseCP: [0x4]u8, // 0x204
+        m_bUniformSpeed: [0x8]u8, // 0x208
+    };
+    pub const C_OP_MovementRigidAttachToCP = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E0
+        m_nScaleControlPoint: [0x4]u8, // 0x1E4
+        m_nScaleCPField: [0x4]u8, // 0x1E8
+        m_nFieldInput: [0x4]u8, // 0x1EC
+        m_nFieldOutput: [0x4]u8, // 0x1F0
+        m_bOffsetLocal: [0x4]u8, // 0x1F4
+    };
+    pub const C_OP_RenderFlattenGrass = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_flFlattenStrength: [0x4]u8, // 0x230
+        m_nStrengthFieldOverride: [0x4]u8, // 0x234
+        m_flRadiusScale: [0x8]u8, // 0x238
+    };
+    pub const C_OP_RenderLightBeam = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_nMaxAllowed: [0x8]u8, // 0x230
+        m_vColorBlend: [0x6D8]u8, // 0x238
+        m_nColorBlendType: [0x8]u8, // 0x910
+        m_strLightStyle: [0x8]u8, // 0x918
+        m_flLightStyleTime: [0x178]u8, // 0x920
+        m_flBrightnessLumensPerMeter: [0x178]u8, // 0xA98
+        m_flNumberOfLightsToCreate: [0x178]u8, // 0xC10
+        m_bCastShadows: [0x1]u8, // 0xD88
+        m_bDynamicBounce: [0x7]u8, // 0xD89
+        m_flBounceScale: [0x178]u8, // 0xD90
+        m_flSkirt: [0x178]u8, // 0xF08
+        m_flRange: [0x178]u8, // 0x1080
+        m_flThickness: [0x178]u8, // 0x11F8
+        m_flInnerConeAngle: [0x178]u8, // 0x1370
+        m_flOuterConeAngle: [0x178]u8, // 0x14E8
+        m_vecConeRotationOffset: [0x6D8]u8, // 0x1660
+        m_nFogLightingMode: [0x8]u8, // 0x1D38
+        m_flFogContribution: [0x178]u8, // 0x1D40
+        m_flRenderFilter: [0x178]u8, // 0x1EB8
+        m_bDebugOrientation: [0x8]u8, // 0x2030
+    };
+    pub const C_INIT_SkyVisCull = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_vecTestDir: [0x6D8]u8, // 0x1E8
+        m_nTraceSet: [0x4]u8, // 0x8C0
+        m_bCullOnSky: [0x4]u8, // 0x8C4
+    };
+    pub const C_OP_EnableChildrenFromParentParticleCount = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nChildGroupID: [0x4]u8, // 0x1E8
+        m_nFirstChild: [0x4]u8, // 0x1EC
+        m_nNumChildrenToEnable: [0x178]u8, // 0x1F0
+        m_bDisableChildren: [0x1]u8, // 0x368
+        m_bPlayEndcapOnStop: [0x1]u8, // 0x369
+        m_bDestroyImmediately: [0x6]u8, // 0x36A
+    };
+    pub const C_INIT_DistanceToCPInit = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E8
+        m_flInputMin: [0x178]u8, // 0x1F0
+        m_flInputMax: [0x178]u8, // 0x368
+        m_flOutputMin: [0x178]u8, // 0x4E0
+        m_flOutputMax: [0x178]u8, // 0x658
+        m_nStartCP: [0x4]u8, // 0x7D0
+        m_bLOS: [0x1]u8, // 0x7D4
+        m_CollisionGroupName: [0x83]u8, // 0x7D5
+        m_nTraceSet: [0x8]u8, // 0x858
+        m_flMaxTraceLength: [0x178]u8, // 0x860
+        m_flLOSScale: [0x4]u8, // 0x9D8
+        m_nSetMethod: [0x4]u8, // 0x9DC
+        m_bActiveRange: [0x4]u8, // 0x9E0
+        m_vecDistanceScale: [0xC]u8, // 0x9E4
+        m_flRemapBias: [0x8]u8, // 0x9F0
+    };
+    pub const C_OP_EndCapDecay = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+    };
+    pub const C_OP_ForceBasedOnDistanceToPlane = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_flMinDist: [0x4]u8, // 0x1F0
+        m_vecForceAtMinDist: [0xC]u8, // 0x1F4
+        m_flMaxDist: [0x4]u8, // 0x200
+        m_vecForceAtMaxDist: [0xC]u8, // 0x204
+        m_vecPlaneNormal: [0xC]u8, // 0x210
+        m_nControlPointNumber: [0x4]u8, // 0x21C
+        m_flExponent: [0x8]u8, // 0x220
+    };
+    pub const C_OP_RemapDensityToVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flRadiusScale: [0x4]u8, // 0x1E0
+        m_nFieldOutput: [0x4]u8, // 0x1E4
+        m_flDensityMin: [0x4]u8, // 0x1E8
+        m_flDensityMax: [0x4]u8, // 0x1EC
+        m_vecOutputMin: [0xC]u8, // 0x1F0
+        m_vecOutputMax: [0xC]u8, // 0x1FC
+        m_bUseParentDensity: [0x4]u8, // 0x208
+        m_nVoxelGridResolution: [0x4]u8, // 0x20C
+    };
+    pub const ParticleControlPointConfiguration_t = extern struct {
+        m_name: [0x8]u8, // 0x0
+        m_drivers: [0x18]u8, // 0x8
+        m_previewState: [0x70]u8, // 0x20
+    };
+    pub const C_INIT_SetRigidAttachment = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E8
+        m_nFieldInput: [0x4]u8, // 0x1EC
+        m_nFieldOutput: [0x4]u8, // 0x1F0
+        m_bLocalSpace: [0x4]u8, // 0x1F4
+    };
+    pub const MaterialVariable_t = extern struct {
+        m_strVariable: [0x8]u8, // 0x0
+        m_nVariableField: [0x4]u8, // 0x8
+        m_flScale: [0x4]u8, // 0xC
+    };
+    pub const CParticleFunctionConstraint = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+    };
+    pub const C_OP_RemapSpeed = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_flInputMin: [0x4]u8, // 0x1E4
+        m_flInputMax: [0x4]u8, // 0x1E8
+        m_flOutputMin: [0x4]u8, // 0x1EC
+        m_flOutputMax: [0x4]u8, // 0x1F0
+        m_nSetMethod: [0x4]u8, // 0x1F4
+        m_bIgnoreDelta: [0x8]u8, // 0x1F8
+    };
+    pub const C_OP_RenderModels = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_bOnlyRenderInEffectsBloomPass: [0x1]u8, // 0x230
+        m_bOnlyRenderInEffectsWaterPass: [0x1]u8, // 0x231
+        m_bUseMixedResolutionRendering: [0x1]u8, // 0x232
+        m_bOnlyRenderInEffecsGameOverlay: [0x5]u8, // 0x233
+        m_ModelList: [0x18]u8, // 0x238
+        m_nBodyGroupField: [0x4]u8, // 0x250
+        m_nSubModelField: [0x4]u8, // 0x254
+        m_bIgnoreNormal: [0x1]u8, // 0x258
+        m_bOrientZ: [0x1]u8, // 0x259
+        m_bCenterOffset: [0x6]u8, // 0x25A
+        m_vecLocalOffset: [0x6D8]u8, // 0x260
+        m_vecLocalRotation: [0x6D8]u8, // 0x938
+        m_bIgnoreRadius: [0x4]u8, // 0x1010
+        m_nModelScaleCP: [0x4]u8, // 0x1014
+        m_vecComponentScale: [0x6D8]u8, // 0x1018
+        m_bLocalScale: [0x4]u8, // 0x16F0
+        m_nSizeCullBloat: [0x4]u8, // 0x16F4
+        m_bAnimated: [0x8]u8, // 0x16F8
+        m_flAnimationRate: [0x178]u8, // 0x1700
+        m_bScaleAnimationRate: [0x1]u8, // 0x1878
+        m_bForceLoopingAnimation: [0x1]u8, // 0x1879
+        m_bResetAnimOnStop: [0x1]u8, // 0x187A
+        m_bManualAnimFrame: [0x1]u8, // 0x187B
+        m_nAnimationScaleField: [0x4]u8, // 0x187C
+        m_nAnimationField: [0x4]u8, // 0x1880
+        m_nManualFrameField: [0x4]u8, // 0x1884
+        m_ActivityName: [0x100]u8, // 0x1888
+        m_SequenceName: [0x100]u8, // 0x1988
+        m_bEnableClothSimulation: [0x1]u8, // 0x1A88
+        m_bDisableClothGroundCollision: [0x1]u8, // 0x1A89
+        m_ClothEffectName: [0x46]u8, // 0x1A8A
+        m_hOverrideMaterial: [0x8]u8, // 0x1AD0
+        m_bOverrideTranslucentMaterials: [0x8]u8, // 0x1AD8
+        m_nSkin: [0x178]u8, // 0x1AE0
+        m_MaterialVars: [0x18]u8, // 0x1C58
+        m_flRenderFilter: [0x178]u8, // 0x1C70
+        m_flManualModelSelection: [0x178]u8, // 0x1DE8
+        m_modelInput: [0x60]u8, // 0x1F60
+        m_nLOD: [0x4]u8, // 0x1FC0
+        m_EconSlotName: [0x100]u8, // 0x1FC4
+        m_bOriginalModel: [0x1]u8, // 0x20C4
+        m_bSuppressTint: [0x3]u8, // 0x20C5
+        m_nSubModelFieldType: [0x4]u8, // 0x20C8
+        m_bDisableShadows: [0x1]u8, // 0x20CC
+        m_bDisableDepthPrepass: [0x1]u8, // 0x20CD
+        m_bAcceptsDecals: [0x1]u8, // 0x20CE
+        m_bForceDrawInterlevedWithSiblings: [0x1]u8, // 0x20CF
+        m_bDoNotDrawInParticlePass: [0x1]u8, // 0x20D0
+        m_bAllowApproximateTransforms: [0x1]u8, // 0x20D1
+        m_szRenderAttribute: [0x106]u8, // 0x20D2
+        m_flRadiusScale: [0x178]u8, // 0x21D8
+        m_flAlphaScale: [0x178]u8, // 0x2350
+        m_flRollScale: [0x178]u8, // 0x24C8
+        m_nAlpha2Field: [0x8]u8, // 0x2640
+        m_vecColorScale: [0x6D8]u8, // 0x2648
+        m_nColorBlendType: [0x8]u8, // 0x2D20
+        m_strLightStyle: [0x8]u8, // 0x2D28
+        m_flLightStyleTime: [0x1B8]u8, // 0x2D30
+    };
+    pub const C_OP_RenderClientPhysicsImpulse = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_flRadius: [0x178]u8, // 0x230
+        m_flMagnitude: [0x178]u8, // 0x3A8
+        m_nSimIdFilter: [0x8]u8, // 0x520
+    };
+    pub const CParticleFunctionEmitter = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nEmitterIndex: [0x8]u8, // 0x1E0
+    };
+    pub const C_INIT_RemapNamedModelMeshGroupToScalar = extern struct {
+        pad_0: [0x230]u8, // 0x0
+    };
+    pub const C_OP_SetControlPointOrientationToCPVelocity = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCPInput: [0x4]u8, // 0x1E8
+        m_nCPOutput: [0x4]u8, // 0x1EC
+    };
+    pub const C_OP_RopeSpringConstraint = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flRestLength: [0x178]u8, // 0x1E0
+        m_flMinDistance: [0x178]u8, // 0x358
+        m_flMaxDistance: [0x178]u8, // 0x4D0
+        m_flAdjustmentScale: [0x8]u8, // 0x648
+        m_flInitialRestingLength: [0x178]u8, // 0x650
+    };
+    pub const C_INIT_PositionWarpScalar = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_vecWarpMin: [0xC]u8, // 0x1E8
+        m_vecWarpMax: [0xC]u8, // 0x1F4
+        m_InputValue: [0x178]u8, // 0x200
+        m_flPrevPosScale: [0x4]u8, // 0x378
+        m_nScaleControlPointNumber: [0x4]u8, // 0x37C
+        m_nControlPointNumber: [0x8]u8, // 0x380
+    };
+    pub const C_OP_ForceControlPointStub = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_ControlPoint: [0x8]u8, // 0x1E8
+    };
+    pub const C_OP_VectorNoise = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_vecOutputMin: [0xC]u8, // 0x1E4
+        m_vecOutputMax: [0xC]u8, // 0x1F0
+        m_fl4NoiseScale: [0x4]u8, // 0x1FC
+        m_bAdditive: [0x1]u8, // 0x200
+        m_bOffset: [0x3]u8, // 0x201
+        m_flNoiseAnimationTimeScale: [0x4]u8, // 0x204
+    };
+    pub const C_OP_RemapParticleCountToScalar = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x8]u8, // 0x1E0
+        m_nInputMin: [0x178]u8, // 0x1E8
+        m_nInputMax: [0x178]u8, // 0x360
+        m_flOutputMin: [0x178]u8, // 0x4D8
+        m_flOutputMax: [0x178]u8, // 0x650
+        m_bActiveRange: [0x4]u8, // 0x7C8
+        m_nSetMethod: [0x4]u8, // 0x7CC
+    };
+    pub const C_INIT_QuantizeFloat = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_InputValue: [0x178]u8, // 0x1E8
+        m_nOutputField: [0x8]u8, // 0x360
+    };
+    pub const C_OP_RemapModelVolumetoCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nBBoxType: [0x4]u8, // 0x1E8
+        m_nInControlPointNumber: [0x4]u8, // 0x1EC
+        m_nOutControlPointNumber: [0x4]u8, // 0x1F0
+        m_nOutControlPointMaxNumber: [0x4]u8, // 0x1F4
+        m_nField: [0x4]u8, // 0x1F8
+        m_flInputMin: [0x4]u8, // 0x1FC
+        m_flInputMax: [0x4]u8, // 0x200
+        m_flOutputMin: [0x4]u8, // 0x204
+        m_flOutputMax: [0x4]u8, // 0x208
+        m_bBBoxOnly: [0x1]u8, // 0x20C
+        m_bCubeRoot: [0x3]u8, // 0x20D
+    };
+    pub const C_OP_SetToCP = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E0
+        m_vecOffset: [0xC]u8, // 0x1E4
+        m_bOffsetLocal: [0x8]u8, // 0x1F0
+    };
+    pub const ParticleControlPointDriver_t = extern struct {
+        m_iControlPoint: [0x10]u8, // 0x0
+        m_iAttachType: [0x8]u8, // 0x10
+        m_attachmentName: [0x8]u8, // 0x18
+        m_vecOffset: [0xC]u8, // 0x20
+        m_angOffset: [0xC]u8, // 0x2C
+        m_entityName: [0x8]u8, // 0x38
+    };
+    pub const C_OP_ParentVortices = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_flForceScale: [0x4]u8, // 0x1F0
+        m_vecTwistAxis: [0xC]u8, // 0x1F4
+        m_bFlipBasedOnYaw: [0x8]u8, // 0x200
+    };
+    pub const C_OP_SetControlPointToCPVelocity = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nCPInput: [0x4]u8, // 0x1E8
+        m_nCPOutputVel: [0x4]u8, // 0x1EC
+        m_bNormalize: [0x4]u8, // 0x1F0
+        m_nCPOutputMag: [0x4]u8, // 0x1F4
+        m_nCPField: [0x8]u8, // 0x1F8
+        m_vecComparisonVelocity: [0x6D8]u8, // 0x200
+    };
+    pub const C_OP_ClientPhysics = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_strPhysicsType: [0x8]u8, // 0x230
+        m_bStartAsleep: [0x8]u8, // 0x238
+        m_flPlayerWakeRadius: [0x178]u8, // 0x240
+        m_flVehicleWakeRadius: [0x178]u8, // 0x3B8
+        m_bUseHighQualitySimulation: [0x4]u8, // 0x530
+        m_nMaxParticleCount: [0x4]u8, // 0x534
+        m_bRespectExclusionVolumes: [0x1]u8, // 0x538
+        m_bKillParticles: [0x1]u8, // 0x539
+        m_bDeleteSim: [0x2]u8, // 0x53A
+        m_nControlPoint: [0x4]u8, // 0x53C
+        m_nForcedSimId: [0x4]u8, // 0x540
+        m_nColorBlendType: [0x4]u8, // 0x544
+        m_nForcedStatusEffects: [0x4]u8, // 0x548
+        m_nNoCollisionAttribute: [0x4]u8, // 0x54C
+        m_nZeroGravityAttribute: [0x8]u8, // 0x550
+    };
+    pub const C_OP_SpinYaw = extern struct {
+        pad_0: [0x1F8]u8, // 0x0
+    };
+    pub const PointDefinitionWithTimeValues_t = extern struct {
+        pad_0: [0x14]u8, // 0x0
+        m_flTimeDuration: [0x4]u8, // 0x14
+    };
+    pub const RenderProjectedMaterial_t = extern struct {
+        m_hMaterial: [0x8]u8, // 0x0
+    };
+    pub const C_INIT_SetFloatAttributeToVectorExpression = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nExpression: [0x8]u8, // 0x1E8
+        m_vInput1: [0x6D8]u8, // 0x1F0
+        m_vInput2: [0x6D8]u8, // 0x8C8
+        m_flOutputRemap: [0x178]u8, // 0xFA0
+        m_nOutputField: [0x4]u8, // 0x1118
+        m_nSetMethod: [0x4]u8, // 0x111C
+    };
+    pub const C_OP_ExternalWindForce = extern struct {
+        pad_0: [0x1F0]u8, // 0x0
+        m_vecSamplePosition: [0x6D8]u8, // 0x1F0
+        m_vecScale: [0x6D8]u8, // 0x8C8
+        m_bSampleWind: [0x1]u8, // 0xFA0
+        m_bSampleWater: [0x1]u8, // 0xFA1
+        m_bDampenNearWaterPlane: [0x1]u8, // 0xFA2
+        m_bSampleGravity: [0x5]u8, // 0xFA3
+        m_vecGravityForce: [0x6D8]u8, // 0xFA8
+        m_bUseBasicMovementGravity: [0x8]u8, // 0x1680
+        m_flLocalGravityScale: [0x178]u8, // 0x1688
+        m_flLocalBuoyancyScale: [0x178]u8, // 0x1800
+        m_vecBuoyancyForce: [0x6D8]u8, // 0x1978
+    };
+    pub const C_INIT_ModelCull = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_nControlPointNumber: [0x4]u8, // 0x1E8
+        m_bBoundBox: [0x1]u8, // 0x1EC
+        m_bCullOutside: [0x1]u8, // 0x1ED
+        m_bUseBones: [0x1]u8, // 0x1EE
+        m_HitboxSetName: [0x81]u8, // 0x1EF
+    };
+    pub const C_OP_RenderSprites = extern struct {
+        pad_0: [0x2ED8]u8, // 0x0
+        m_nSequenceOverride: [0x178]u8, // 0x2ED8
+        m_bSequenceNumbersAreRawSequenceIndices: [0x4]u8, // 0x3050
+        m_nOrientationType: [0x4]u8, // 0x3054
+        m_nOrientationControlPoint: [0x4]u8, // 0x3058
+        m_bUseYawWithNormalAligned: [0x4]u8, // 0x305C
+        m_flMinSize: [0x178]u8, // 0x3060
+        m_flMaxSize: [0x178]u8, // 0x31D8
+        m_flSubPixelAAScale: [0x178]u8, // 0x3350
+        m_flStartFadeSize: [0x178]u8, // 0x34C8
+        m_flEndFadeSize: [0x178]u8, // 0x3640
+        m_flStartFadeDot: [0x4]u8, // 0x37B8
+        m_flEndFadeDot: [0x4]u8, // 0x37BC
+        m_bDistanceAlpha: [0x1]u8, // 0x37C0
+        m_bSoftEdges: [0x3]u8, // 0x37C1
+        m_flEdgeSoftnessStart: [0x4]u8, // 0x37C4
+        m_flEdgeSoftnessEnd: [0x4]u8, // 0x37C8
+        m_bOutline: [0x4]u8, // 0x37CC
+        m_OutlineColor: [0x4]u8, // 0x37D0
+        m_nOutlineAlpha: [0x4]u8, // 0x37D4
+        m_flOutlineStart0: [0x4]u8, // 0x37D8
+        m_flOutlineStart1: [0x4]u8, // 0x37DC
+        m_flOutlineEnd0: [0x4]u8, // 0x37E0
+        m_flOutlineEnd1: [0x4]u8, // 0x37E4
+        m_nLightingMode: [0x8]u8, // 0x37E8
+        m_vecLightingOverride: [0x6D8]u8, // 0x37F0
+        m_flLightingTessellation: [0x178]u8, // 0x3EC8
+        m_flLightingDirectionality: [0x178]u8, // 0x4040
+        m_bParticleShadows: [0x4]u8, // 0x41B8
+        m_flShadowDensity: [0xC]u8, // 0x41BC
+    };
+    pub const C_OP_PercentageBetweenTransformLerpCPs = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_flInputMin: [0x4]u8, // 0x1E4
+        m_flInputMax: [0x8]u8, // 0x1E8
+        m_TransformStart: [0x68]u8, // 0x1F0
+        m_TransformEnd: [0x68]u8, // 0x258
+        m_nOutputStartCP: [0x4]u8, // 0x2C0
+        m_nOutputStartField: [0x4]u8, // 0x2C4
+        m_nOutputEndCP: [0x4]u8, // 0x2C8
+        m_nOutputEndField: [0x4]u8, // 0x2CC
+        m_nSetMethod: [0x4]u8, // 0x2D0
+        m_bActiveRange: [0x1]u8, // 0x2D4
+        m_bRadialCheck: [0x3]u8, // 0x2D5
+    };
+    pub const C_OP_SetPerChildControlPoint = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nChildGroupID: [0x4]u8, // 0x1E0
+        m_nFirstControlPoint: [0x4]u8, // 0x1E4
+        m_nNumControlPoints: [0x8]u8, // 0x1E8
+        m_nParticleIncrement: [0x178]u8, // 0x1F0
+        m_nFirstSourcePoint: [0x178]u8, // 0x368
+        m_bSetOrientation: [0x4]u8, // 0x4E0
+        m_nOrientationField: [0x4]u8, // 0x4E4
+        m_bNumBasedOnParticleCount: [0x8]u8, // 0x4E8
+    };
+    pub const C_OP_RenderTreeShake = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_flPeakStrength: [0x4]u8, // 0x230
+        m_nPeakStrengthFieldOverride: [0x4]u8, // 0x234
+        m_flRadius: [0x4]u8, // 0x238
+        m_nRadiusFieldOverride: [0x4]u8, // 0x23C
+        m_flShakeDuration: [0x4]u8, // 0x240
+        m_flTransitionTime: [0x4]u8, // 0x244
+        m_flTwistAmount: [0x4]u8, // 0x248
+        m_flRadialAmount: [0x4]u8, // 0x24C
+        m_flControlPointOrientationAmount: [0x4]u8, // 0x250
+        m_nControlPointForLinearDirection: [0x4]u8, // 0x254
+    };
+    pub const C_OP_WorldCollideConstraint = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+    };
+    pub const C_OP_SetAttributeToScalarExpression = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nExpression: [0x8]u8, // 0x1E0
+        m_flInput1: [0x178]u8, // 0x1E8
+        m_flInput2: [0x178]u8, // 0x360
+        m_flOutputRemap: [0x178]u8, // 0x4D8
+        m_nOutputField: [0x4]u8, // 0x650
+        m_nSetMethod: [0x2C]u8, // 0x654
+    };
+    pub const C_OP_CycleScalar = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nDestField: [0x4]u8, // 0x1E0
+        m_flStartValue: [0x4]u8, // 0x1E4
+        m_flEndValue: [0x4]u8, // 0x1E8
+        m_flCycleTime: [0x4]u8, // 0x1EC
+        m_bDoNotRepeatCycle: [0x1]u8, // 0x1F0
+        m_bSynchronizeParticles: [0x3]u8, // 0x1F1
+        m_nCPScale: [0x4]u8, // 0x1F4
+        m_nCPFieldMin: [0x4]u8, // 0x1F8
+        m_nCPFieldMax: [0x4]u8, // 0x1FC
+        m_nSetMethod: [0x8]u8, // 0x200
+    };
+    pub const C_OP_RenderMaterialProxy = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        m_nMaterialControlPoint: [0x4]u8, // 0x230
+        m_nProxyType: [0x4]u8, // 0x234
+        m_MaterialVars: [0x18]u8, // 0x238
+        m_hOverrideMaterial: [0x8]u8, // 0x250
+        m_flMaterialOverrideEnabled: [0x178]u8, // 0x258
+        m_vecColorScale: [0x6D8]u8, // 0x3D0
+        m_flAlpha: [0x178]u8, // 0xAA8
+        m_nColorBlendType: [0x20]u8, // 0xC20
+    };
+    pub const FloatInputMaterialVariable_t = extern struct {
+        m_strVariable: [0x8]u8, // 0x0
+        m_flInput: [0x178]u8, // 0x8
+    };
+    pub const C_OP_RampScalarLinear = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_RateMin: [0x4]u8, // 0x1E0
+        m_RateMax: [0x4]u8, // 0x1E4
+        m_flStartTime_min: [0x4]u8, // 0x1E8
+        m_flStartTime_max: [0x4]u8, // 0x1EC
+        m_flEndTime_min: [0x4]u8, // 0x1F0
+        m_flEndTime_max: [0x2C]u8, // 0x1F4
+        m_nField: [0x4]u8, // 0x220
+        m_bProportionalOp: [0xC]u8, // 0x224
+    };
+    pub const C_OP_RotateVector = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_vecRotAxisMin: [0xC]u8, // 0x1E4
+        m_vecRotAxisMax: [0xC]u8, // 0x1F0
+        m_flRotRateMin: [0x4]u8, // 0x1FC
+        m_flRotRateMax: [0x4]u8, // 0x200
+        m_bNormalize: [0x4]u8, // 0x204
+        m_flScale: [0x178]u8, // 0x208
+    };
+    pub const C_INIT_InitVecCollection = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_InputValue: [0x6D8]u8, // 0x1E8
+        m_nOutputField: [0x8]u8, // 0x8C0
+    };
+    pub const C_INIT_RemapParticleCountToNamedModelMeshGroupScalar = extern struct {
+        pad_0: [0x238]u8, // 0x0
+    };
+    pub const C_INIT_SequenceFromCP = extern struct {
+        pad_0: [0x1E8]u8, // 0x0
+        m_bKillUnused: [0x1]u8, // 0x1E8
+        m_bRadiusScale: [0x3]u8, // 0x1E9
+        m_nCP: [0x4]u8, // 0x1EC
+        m_vecOffset: [0x10]u8, // 0x1F0
+    };
+    pub const C_OP_CPOffsetToPercentageBetweenCPs = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_flInputMin: [0x4]u8, // 0x1E0
+        m_flInputMax: [0x4]u8, // 0x1E4
+        m_flInputBias: [0x4]u8, // 0x1E8
+        m_nStartCP: [0x4]u8, // 0x1EC
+        m_nEndCP: [0x4]u8, // 0x1F0
+        m_nOffsetCP: [0x4]u8, // 0x1F4
+        m_nOuputCP: [0x4]u8, // 0x1F8
+        m_nInputCP: [0x4]u8, // 0x1FC
+        m_bRadialCheck: [0x1]u8, // 0x200
+        m_bScaleOffset: [0x3]u8, // 0x201
+        m_vecOffset: [0xC]u8, // 0x204
+    };
+    pub const C_OP_LerpEndCapScalar = extern struct {
+        pad_0: [0x1E0]u8, // 0x0
+        m_nFieldOutput: [0x4]u8, // 0x1E0
+        m_flOutput: [0x4]u8, // 0x1E4
+        m_flLerpTime: [0x8]u8, // 0x1E8
     };
 };

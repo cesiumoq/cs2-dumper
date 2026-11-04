@@ -1,308 +1,207 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:36 04/11/2026 (GMT)
+/*  Dumped At       : 22:50 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
 
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Generated from the live CS2 schema system.
+*/
+
 #pragma once
-#include "../macros.hpp"
+#include <cstddef>
+#include <cstdint>
 
-namespace materialsystem2 {
+namespace cs2::materialsystem2 {
 
-    class MaterialParam_t;
-    class MaterialParamVector_t;
-    class MaterialParamString_t;
-    class PostProcessingResource_t;
-    class MaterialParamInt_t;
-    class PostProcessingVignetteParameters_t;
-    class PostProcessingLocalContrastParameters_t;
-    class PostProcessingTonemapParameters_t;
-    class PostProcessingFogScatteringParameters_t;
-    class MaterialParamBuffer_t;
-    class MaterialResourceData_t;
-    class PostProcessingBloomParameters_t;
-    class MaterialParamFloat_t;
-    class PostProcessingLocalExposureParameters_t;
-    class MaterialParamTexture_t;
+enum class VertJustification_e : std::int32_t {
+    VERT_JUSTIFICATION_TOP = 0,
+    VERT_JUSTIFICATION_CENTER = 1,
+    VERT_JUSTIFICATION_BOTTOM = 2,
+    VERT_JUSTIFICATION_NONE = 3,
+};
 
-    enum class VertJustification_e : std::uint32_t {
-        VERT_JUSTIFICATION_TOP = 0x0,
-        VERT_JUSTIFICATION_CENTER = 0x1,
-        VERT_JUSTIFICATION_BOTTOM = 0x2,
-        VERT_JUSTIFICATION_NONE = 0x3,
-    };
+enum class LayoutPositionType_e : std::int32_t {
+    LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE = 0,
+    LAYOUTPOSITIONTYPE_FRACTIONAL = 1,
+    LAYOUTPOSITIONTYPE_NONE = 2,
+};
 
-    enum class LayoutPositionType_e : std::uint32_t {
-        LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE = 0x0,
-        LAYOUTPOSITIONTYPE_FRACTIONAL = 0x1,
-        LAYOUTPOSITIONTYPE_NONE = 0x2,
-    };
+enum class ViewFadeMode_t : std::int32_t {
+    VIEW_FADE_CONSTANT_COLOR = 0,
+    VIEW_FADE_MODULATE = 1,
+    VIEW_FADE_MOD2X = 2,
+};
 
-    enum class ViewFadeMode_t : std::uint32_t {
-        VIEW_FADE_CONSTANT_COLOR = 0x0,
-        VIEW_FADE_MODULATE = 0x1,
-        VIEW_FADE_MOD2X = 0x2,
-    };
+enum class BloomBlendMode_t : std::int32_t {
+    BLOOM_BLEND_ADD = 0,
+    BLOOM_BLEND_SCREEN = 1,
+    BLOOM_BLEND_BLUR = 2,
+};
 
-    enum class BloomBlendMode_t : std::uint32_t {
-        BLOOM_BLEND_ADD = 0x0,
-        BLOOM_BLEND_SCREEN = 0x1,
-        BLOOM_BLEND_BLUR = 0x2,
-    };
+enum class HorizJustification_e : std::int32_t {
+    HORIZ_JUSTIFICATION_LEFT = 0,
+    HORIZ_JUSTIFICATION_CENTER = 1,
+    HORIZ_JUSTIFICATION_RIGHT = 2,
+    HORIZ_JUSTIFICATION_NONE = 3,
+};
 
-    enum class HorizJustification_e : std::uint32_t {
-        HORIZ_JUSTIFICATION_LEFT = 0x0,
-        HORIZ_JUSTIFICATION_CENTER = 0x1,
-        HORIZ_JUSTIFICATION_RIGHT = 0x2,
-        HORIZ_JUSTIFICATION_NONE = 0x3,
-    };
+struct MaterialParam_t {
+    static constexpr std::size_t size = 0x8;
+    std::uint8_t m_name[0x8]; // 0x0 CUtlString
+};
 
-    // MaterialParamInt_t
-/*
-   fields: 1
-   size: 0x10
-*/
-    //   @MGetKV3ClassDefaults
-    class MaterialParamInt_t {
-    public:
-        SCHEMA_FIELD(std::int32_t                    , m_nValue                                        , 0x8) // int32
-    };
+struct MaterialParamVector_t {
+    static constexpr std::size_t size = 0x18;
+    std::uint8_t pad_0[0x8]; // 0x0
+    std::uint8_t m_value[0x10]; // 0x8 Vector4D
+};
 
-    // PostProcessingVignetteParameters_t
-/*
-   fields: 6
-   size: 0x24
-*/
-    //   @MGetKV3ClassDefaults
-    class PostProcessingVignetteParameters_t {
-    public:
-        SCHEMA_FIELD(float                           , m_flVignetteStrength                            , 0x0) // float32
-        SCHEMA_FIELD(::Vector2D                      , m_vCenter                                       , 0x4) // Vector2D
-        SCHEMA_FIELD(float                           , m_flRadius                                      , 0xC) // float32
-        SCHEMA_FIELD(float                           , m_flRoundness                                   , 0x10) // float32
-        SCHEMA_FIELD(float                           , m_flFeather                                     , 0x14) // float32
-        SCHEMA_FIELD(::Vector                        , m_vColorTint                                    , 0x18) // Vector
-    };
+struct MaterialParamString_t {
+    static constexpr std::size_t size = 0x10;
+    std::uint8_t pad_0[0x8]; // 0x0
+    std::uint8_t m_value[0x8]; // 0x8 CUtlString
+};
 
-    // MaterialParamFloat_t
-/*
-   fields: 1
-   size: 0x10
-*/
-    //   @MGetKV3ClassDefaults
-    class MaterialParamFloat_t {
-    public:
-        SCHEMA_FIELD(float                           , m_flValue                                       , 0x8) // float32
-    };
+struct PostProcessingResource_t {
+    static constexpr std::size_t size = 0x158;
+    std::uint8_t m_bHasTonemapParams[0x4]; // 0x0 bool
+    std::uint8_t m_toneMapParams[0x3C]; // 0x4 PostProcessingTonemapParameters_t
+    std::uint8_t m_bHasBloomParams[0x4]; // 0x40 bool
+    std::uint8_t m_bloomParams[0x88]; // 0x44 PostProcessingBloomParameters_t
+    std::uint8_t m_bHasVignetteParams[0x4]; // 0xCC bool
+    std::uint8_t m_vignetteParams[0x24]; // 0xD0 PostProcessingVignetteParameters_t
+    std::uint8_t m_bHasLocalContrastParams[0x4]; // 0xF4 bool
+    std::uint8_t m_localConstrastParams[0x14]; // 0xF8 PostProcessingLocalContrastParameters_t
+    std::uint8_t m_nColorCorrectionVolumeDim[0x4]; // 0x10C int32
+    std::uint8_t m_colorCorrectionVolumeData[0x10]; // 0x110 CUtlBinaryBlock
+    std::uint8_t m_bHasColorCorrection[0x1]; // 0x120 bool
+    std::uint8_t m_bHasFogScatteringParams[0x3]; // 0x121 bool
+    std::uint8_t m_fogScatteringParams[0x20]; // 0x124 PostProcessingFogScatteringParameters_t
+    std::uint8_t m_bHasLocalExposureParams[0x4]; // 0x144 bool
+    std::uint8_t m_localExposureParams[0x10]; // 0x148 PostProcessingLocalExposureParameters_t
+};
 
-    // MaterialResourceData_t
-/*
-   fields: 14
-   size: 0x130
-*/
-    //   @MGetKV3ClassDefaults
-    class MaterialResourceData_t {
-    public:
-        SCHEMA_FIELD(::CUtlString                    , m_materialName                                  , 0x0) // CUtlString
-        SCHEMA_FIELD(::CUtlString                    , m_shaderName                                    , 0x8) // CUtlString
-        SCHEMA_FIELD(CUtlVector<MaterialParamInt_t>  , m_intParams                                     , 0x10) // CUtlVector<MaterialParamInt_t>
-        SCHEMA_FIELD(CUtlVector<MaterialParamFloat_t>, m_floatParams                                   , 0x28) // CUtlVector<MaterialParamFloat_t>
-        SCHEMA_FIELD(CUtlVector<MaterialParamVector_t>, m_vectorParams                                  , 0x40) // CUtlVector<MaterialParamVector_t>
-        SCHEMA_FIELD(CUtlVector<MaterialParamTexture_t>, m_textureParams                                 , 0x58) // CUtlVector<MaterialParamTexture_t>
-        SCHEMA_FIELD(CUtlVector<MaterialParamBuffer_t>, m_dynamicParams                                 , 0x70) // CUtlVector<MaterialParamBuffer_t>
-        SCHEMA_FIELD(CUtlVector<MaterialParamBuffer_t>, m_dynamicTextureParams                          , 0x88) // CUtlVector<MaterialParamBuffer_t>
-        SCHEMA_FIELD(CUtlVector<MaterialParamInt_t>  , m_intAttributes                                 , 0xA0) // CUtlVector<MaterialParamInt_t>
-        SCHEMA_FIELD(CUtlVector<MaterialParamFloat_t>, m_floatAttributes                               , 0xB8) // CUtlVector<MaterialParamFloat_t>
-        SCHEMA_FIELD(CUtlVector<MaterialParamVector_t>, m_vectorAttributes                              , 0xD0) // CUtlVector<MaterialParamVector_t>
-        SCHEMA_FIELD(CUtlVector<MaterialParamTexture_t>, m_textureAttributes                             , 0xE8) // CUtlVector<MaterialParamTexture_t>
-        SCHEMA_FIELD(CUtlVector<MaterialParamString_t>, m_stringAttributes                              , 0x100) // CUtlVector<MaterialParamString_t>
-        SCHEMA_FIELD(CUtlVector<CUtlString>          , m_renderAttributesUsed                          , 0x118) // CUtlVector<CUtlString>
-    };
+struct MaterialParamInt_t {
+    static constexpr std::size_t size = 0x10;
+    std::uint8_t pad_0[0x8]; // 0x0
+    std::uint8_t m_nValue[0x8]; // 0x8 int32
+};
 
-    // PostProcessingLocalContrastParameters_t
-/*
-   fields: 5
-   size: 0x14
-*/
-    //   @MGetKV3ClassDefaults
-    class PostProcessingLocalContrastParameters_t {
-    public:
-        SCHEMA_FIELD(float                           , m_flLocalContrastStrength                       , 0x0) // float32
-        SCHEMA_FIELD(float                           , m_flLocalContrastEdgeStrength                   , 0x4) // float32
-        SCHEMA_FIELD(float                           , m_flLocalContrastVignetteStart                  , 0x8) // float32
-        SCHEMA_FIELD(float                           , m_flLocalContrastVignetteEnd                    , 0xC) // float32
-        SCHEMA_FIELD(float                           , m_flLocalContrastVignetteBlur                   , 0x10) // float32
-    };
+struct PostProcessingVignetteParameters_t {
+    static constexpr std::size_t size = 0x24;
+    std::uint8_t m_flVignetteStrength[0x4]; // 0x0 float32
+    std::uint8_t m_vCenter[0x8]; // 0x4 Vector2D
+    std::uint8_t m_flRadius[0x4]; // 0xC float32
+    std::uint8_t m_flRoundness[0x4]; // 0x10 float32
+    std::uint8_t m_flFeather[0x4]; // 0x14 float32
+    std::uint8_t m_vColorTint[0xC]; // 0x18 Vector
+};
 
-    // MaterialParamVector_t
-/*
-   fields: 1
-   size: 0x18
-*/
-    //   @MGetKV3ClassDefaults
-    class MaterialParamVector_t {
-    public:
-        SCHEMA_FIELD(::Vector4D                      , m_value                                         , 0x8) // Vector4D
-    };
+struct PostProcessingLocalContrastParameters_t {
+    static constexpr std::size_t size = 0x14;
+    std::uint8_t m_flLocalContrastStrength[0x4]; // 0x0 float32
+    std::uint8_t m_flLocalContrastEdgeStrength[0x4]; // 0x4 float32
+    std::uint8_t m_flLocalContrastVignetteStart[0x4]; // 0x8 float32
+    std::uint8_t m_flLocalContrastVignetteEnd[0x4]; // 0xC float32
+    std::uint8_t m_flLocalContrastVignetteBlur[0x4]; // 0x10 float32
+};
 
-    // PostProcessingLocalExposureParameters_t
-/*
-   fields: 4
-   size: 0x10
-*/
-    //   @MGetKV3ClassDefaults
-    class PostProcessingLocalExposureParameters_t {
-    public:
-        SCHEMA_FIELD(float                           , m_fShadowOffsetEV                               , 0x0) // float32
-        SCHEMA_FIELD(float                           , m_fHighlightOffsetEV                            , 0x4) // float32
-        SCHEMA_FIELD(float                           , m_fSigma                                        , 0x8) // float32
-        SCHEMA_FIELD(float                           , m_fBoostLocalContrast                           , 0xC) // float32
-    };
+struct PostProcessingTonemapParameters_t {
+    static constexpr std::size_t size = 0x3C;
+    std::uint8_t m_flExposureBias[0x4]; // 0x0 float32
+    std::uint8_t m_flShoulderStrength[0x4]; // 0x4 float32
+    std::uint8_t m_flLinearStrength[0x4]; // 0x8 float32
+    std::uint8_t m_flLinearAngle[0x4]; // 0xC float32
+    std::uint8_t m_flToeStrength[0x4]; // 0x10 float32
+    std::uint8_t m_flToeNum[0x4]; // 0x14 float32
+    std::uint8_t m_flToeDenom[0x4]; // 0x18 float32
+    std::uint8_t m_flWhitePoint[0x4]; // 0x1C float32
+    std::uint8_t m_flLuminanceSource[0x4]; // 0x20 float32
+    std::uint8_t m_flExposureBiasShadows[0x4]; // 0x24 float32
+    std::uint8_t m_flExposureBiasHighlights[0x4]; // 0x28 float32
+    std::uint8_t m_flMinShadowLum[0x4]; // 0x2C float32
+    std::uint8_t m_flMaxShadowLum[0x4]; // 0x30 float32
+    std::uint8_t m_flMinHighlightLum[0x4]; // 0x34 float32
+    std::uint8_t m_flMaxHighlightLum[0x4]; // 0x38 float32
+};
 
-    // PostProcessingTonemapParameters_t
-/*
-   fields: 15
-   size: 0x3C
-*/
-    //   @MGetKV3ClassDefaults
-    class PostProcessingTonemapParameters_t {
-    public:
-        SCHEMA_FIELD(float                           , m_flExposureBias                                , 0x0) // float32
-        SCHEMA_FIELD(float                           , m_flShoulderStrength                            , 0x4) // float32
-        SCHEMA_FIELD(float                           , m_flLinearStrength                              , 0x8) // float32
-        SCHEMA_FIELD(float                           , m_flLinearAngle                                 , 0xC) // float32
-        SCHEMA_FIELD(float                           , m_flToeStrength                                 , 0x10) // float32
-        SCHEMA_FIELD(float                           , m_flToeNum                                      , 0x14) // float32
-        SCHEMA_FIELD(float                           , m_flToeDenom                                    , 0x18) // float32
-        SCHEMA_FIELD(float                           , m_flWhitePoint                                  , 0x1C) // float32
-        SCHEMA_FIELD(float                           , m_flLuminanceSource                             , 0x20) // float32
-        SCHEMA_FIELD(float                           , m_flExposureBiasShadows                         , 0x24) // float32
-        SCHEMA_FIELD(float                           , m_flExposureBiasHighlights                      , 0x28) // float32
-        SCHEMA_FIELD(float                           , m_flMinShadowLum                                , 0x2C) // float32
-        SCHEMA_FIELD(float                           , m_flMaxShadowLum                                , 0x30) // float32
-        SCHEMA_FIELD(float                           , m_flMinHighlightLum                             , 0x34) // float32
-        SCHEMA_FIELD(float                           , m_flMaxHighlightLum                             , 0x38) // float32
-    };
+struct PostProcessingFogScatteringParameters_t {
+    static constexpr std::size_t size = 0x20;
+    std::uint8_t m_fRadius[0x4]; // 0x0 float32
+    std::uint8_t m_fScale[0x4]; // 0x4 float32
+    std::uint8_t m_fCubemapScale[0x4]; // 0x8 float32
+    std::uint8_t m_fVolumetricScale[0x4]; // 0xC float32
+    std::uint8_t m_fGradientScale[0x4]; // 0x10 float32
+    std::uint8_t m_fWaterScale[0x4]; // 0x14 float32
+    std::uint8_t m_fWaterDensity[0x4]; // 0x18 float32
+    std::uint8_t m_fWaterDepthBlurRadius[0x4]; // 0x1C float32
+};
 
-    // MaterialParamTexture_t
-/*
-   fields: 1
-   size: 0x10
-*/
-    //   @MGetKV3ClassDefaults
-    class MaterialParamTexture_t {
-    public:
-        SCHEMA_FIELD(CStrongHandle<InfoForResourceTypeCTextureBase>, m_pValue                                        , 0x8) // CStrongHandle<InfoForResourceTypeCTextureBase>
-    };
+struct MaterialParamBuffer_t {
+    static constexpr std::size_t size = 0x18;
+    std::uint8_t pad_0[0x8]; // 0x0
+    std::uint8_t m_value[0x10]; // 0x8 CUtlBinaryBlock
+};
 
-    // MaterialParam_t
-/*
-   fields: 1
-   size: 0x8
-*/
-    //   @MGetKV3ClassDefaults
-    class MaterialParam_t {
-    public:
-        SCHEMA_FIELD(::CUtlString                    , m_name                                          , 0x0) // CUtlString
-    };
+struct MaterialResourceData_t {
+    static constexpr std::size_t size = 0x130;
+    std::uint8_t m_materialName[0x8]; // 0x0 CUtlString
+    std::uint8_t m_shaderName[0x8]; // 0x8 CUtlString
+    std::uint8_t m_intParams[0x18]; // 0x10 CUtlVector<MaterialParamInt_t>
+    std::uint8_t m_floatParams[0x18]; // 0x28 CUtlVector<MaterialParamFloat_t>
+    std::uint8_t m_vectorParams[0x18]; // 0x40 CUtlVector<MaterialParamVector_t>
+    std::uint8_t m_textureParams[0x18]; // 0x58 CUtlVector<MaterialParamTexture_t>
+    std::uint8_t m_dynamicParams[0x18]; // 0x70 CUtlVector<MaterialParamBuffer_t>
+    std::uint8_t m_dynamicTextureParams[0x18]; // 0x88 CUtlVector<MaterialParamBuffer_t>
+    std::uint8_t m_intAttributes[0x18]; // 0xA0 CUtlVector<MaterialParamInt_t>
+    std::uint8_t m_floatAttributes[0x18]; // 0xB8 CUtlVector<MaterialParamFloat_t>
+    std::uint8_t m_vectorAttributes[0x18]; // 0xD0 CUtlVector<MaterialParamVector_t>
+    std::uint8_t m_textureAttributes[0x18]; // 0xE8 CUtlVector<MaterialParamTexture_t>
+    std::uint8_t m_stringAttributes[0x18]; // 0x100 CUtlVector<MaterialParamString_t>
+    std::uint8_t m_renderAttributesUsed[0x18]; // 0x118 CUtlVector<CUtlString>
+};
 
-    // MaterialParamBuffer_t
-/*
-   fields: 1
-   size: 0x18
-*/
-    //   @MGetKV3ClassDefaults
-    class MaterialParamBuffer_t {
-    public:
-        SCHEMA_FIELD(::CUtlBinaryBlock               , m_value                                         , 0x8) // CUtlBinaryBlock
-    };
+struct PostProcessingBloomParameters_t {
+    static constexpr std::size_t size = 0x88;
+    std::uint8_t m_blendMode[0x4]; // 0x0 BloomBlendMode_t
+    std::uint8_t m_flBloomStrength[0x4]; // 0x4 float32
+    std::uint8_t m_flScreenBloomStrength[0x4]; // 0x8 float32
+    std::uint8_t m_flBlurBloomStrength[0x4]; // 0xC float32
+    std::uint8_t m_flBloomThreshold[0x4]; // 0x10 float32
+    std::uint8_t m_flBloomThresholdWidth[0x4]; // 0x14 float32
+    std::uint8_t m_flSkyboxBloomStrength[0x4]; // 0x18 float32
+    std::uint8_t m_flBloomStartValue[0x4]; // 0x1C float32
+    std::uint8_t m_flComputeBloomStrength[0x4]; // 0x20 float32
+    std::uint8_t m_flComputeBloomThreshold[0x4]; // 0x24 float32
+    std::uint8_t m_flComputeBloomRadius[0x4]; // 0x28 float32
+    std::uint8_t m_flComputeBloomEffectsScale[0x4]; // 0x2C float32
+    std::uint8_t m_flComputeBloomLensDirtStrength[0x4]; // 0x30 float32
+    std::uint8_t m_flComputeBloomLensDirtBlackLevel[0x4]; // 0x34 float32
+    std::uint8_t m_flBlurWeight[0x14]; // 0x38 float32[5]
+    std::uint8_t m_vBlurTint[0x3C]; // 0x4C Vector[5]
+};
 
-    // PostProcessingResource_t
-/*
-   fields: 15
-   size: 0x158
-*/
-    //   @MGetKV3ClassDefaults
-    class PostProcessingResource_t {
-    public:
-        SCHEMA_FIELD(bool                            , m_bHasTonemapParams                             , 0x0) // bool
-        SCHEMA_FIELD(PostProcessingTonemapParameters_t, m_toneMapParams                                 , 0x4) // PostProcessingTonemapParameters_t
-        SCHEMA_FIELD(bool                            , m_bHasBloomParams                               , 0x40) // bool
-        SCHEMA_FIELD(PostProcessingBloomParameters_t , m_bloomParams                                   , 0x44) // PostProcessingBloomParameters_t
-        SCHEMA_FIELD(bool                            , m_bHasVignetteParams                            , 0xCC) // bool
-        SCHEMA_FIELD(PostProcessingVignetteParameters_t, m_vignetteParams                                , 0xD0) // PostProcessingVignetteParameters_t
-        SCHEMA_FIELD(bool                            , m_bHasLocalContrastParams                       , 0xF4) // bool
-        SCHEMA_FIELD(PostProcessingLocalContrastParameters_t, m_localConstrastParams                          , 0xF8) // PostProcessingLocalContrastParameters_t
-        SCHEMA_FIELD(std::int32_t                    , m_nColorCorrectionVolumeDim                     , 0x10C) // int32
-        SCHEMA_FIELD(::CUtlBinaryBlock               , m_colorCorrectionVolumeData                     , 0x110) // CUtlBinaryBlock
-        SCHEMA_FIELD(bool                            , m_bHasColorCorrection                           , 0x120) // bool
-        SCHEMA_FIELD(bool                            , m_bHasFogScatteringParams                       , 0x121) // bool
-        SCHEMA_FIELD(PostProcessingFogScatteringParameters_t, m_fogScatteringParams                           , 0x124) // PostProcessingFogScatteringParameters_t
-        SCHEMA_FIELD(bool                            , m_bHasLocalExposureParams                       , 0x144) // bool
-        SCHEMA_FIELD(PostProcessingLocalExposureParameters_t, m_localExposureParams                           , 0x148) // PostProcessingLocalExposureParameters_t
-    };
+struct MaterialParamFloat_t {
+    static constexpr std::size_t size = 0x10;
+    std::uint8_t pad_0[0x8]; // 0x0
+    std::uint8_t m_flValue[0x8]; // 0x8 float32
+};
 
-    // PostProcessingBloomParameters_t
-/*
-   fields: 16
-   size: 0x88
-*/
-    //   @MGetKV3ClassDefaults
-    class PostProcessingBloomParameters_t {
-    public:
-        SCHEMA_FIELD(BloomBlendMode_t                , m_blendMode                                     , 0x0) // BloomBlendMode_t
-        SCHEMA_FIELD(float                           , m_flBloomStrength                               , 0x4) // float32
-        SCHEMA_FIELD(float                           , m_flScreenBloomStrength                         , 0x8) // float32
-        SCHEMA_FIELD(float                           , m_flBlurBloomStrength                           , 0xC) // float32
-        SCHEMA_FIELD(float                           , m_flBloomThreshold                              , 0x10) // float32
-        SCHEMA_FIELD(float                           , m_flBloomThresholdWidth                         , 0x14) // float32
-        SCHEMA_FIELD(float                           , m_flSkyboxBloomStrength                         , 0x18) // float32
-        SCHEMA_FIELD(float                           , m_flBloomStartValue                             , 0x1C) // float32
-        SCHEMA_FIELD(float                           , m_flComputeBloomStrength                        , 0x20) // float32
-        SCHEMA_FIELD(float                           , m_flComputeBloomThreshold                       , 0x24) // float32
-        SCHEMA_FIELD(float                           , m_flComputeBloomRadius                          , 0x28) // float32
-        SCHEMA_FIELD(float                           , m_flComputeBloomEffectsScale                    , 0x2C) // float32
-        SCHEMA_FIELD(float                           , m_flComputeBloomLensDirtStrength                , 0x30) // float32
-        SCHEMA_FIELD(float                           , m_flComputeBloomLensDirtBlackLevel              , 0x34) // float32
-        SCHEMA_FIELD(float                           , m_flBlurWeight                                  , 0x38) // float32[5]
-        SCHEMA_FIELD(::Vector                        , m_vBlurTint                                     , 0x4C) // Vector[5]
-    };
+struct PostProcessingLocalExposureParameters_t {
+    static constexpr std::size_t size = 0x10;
+    std::uint8_t m_fShadowOffsetEV[0x4]; // 0x0 float32
+    std::uint8_t m_fHighlightOffsetEV[0x4]; // 0x4 float32
+    std::uint8_t m_fSigma[0x4]; // 0x8 float32
+    std::uint8_t m_fBoostLocalContrast[0x4]; // 0xC float32
+};
 
-    // PostProcessingFogScatteringParameters_t
-/*
-   fields: 8
-   size: 0x20
-*/
-    //   @MGetKV3ClassDefaults
-    class PostProcessingFogScatteringParameters_t {
-    public:
-        SCHEMA_FIELD(float                           , m_fRadius                                       , 0x0) // float32
-        SCHEMA_FIELD(float                           , m_fScale                                        , 0x4) // float32
-        SCHEMA_FIELD(float                           , m_fCubemapScale                                 , 0x8) // float32
-        SCHEMA_FIELD(float                           , m_fVolumetricScale                              , 0xC) // float32
-        SCHEMA_FIELD(float                           , m_fGradientScale                                , 0x10) // float32
-        SCHEMA_FIELD(float                           , m_fWaterScale                                   , 0x14) // float32
-        SCHEMA_FIELD(float                           , m_fWaterDensity                                 , 0x18) // float32
-        SCHEMA_FIELD(float                           , m_fWaterDepthBlurRadius                         , 0x1C) // float32
-    };
+struct MaterialParamTexture_t {
+    static constexpr std::size_t size = 0x10;
+    std::uint8_t pad_0[0x8]; // 0x0
+    std::uint8_t m_pValue[0x8]; // 0x8 CStrongHandle<InfoForResourceTypeCTextureBase>
+};
 
-    // MaterialParamString_t
-/*
-   fields: 1
-   size: 0x10
-*/
-    //   @MGetKV3ClassDefaults
-    class MaterialParamString_t {
-    public:
-        SCHEMA_FIELD(::CUtlString                    , m_value                                         , 0x8) // CUtlString
-    };
-
-    // KV3 ID type - used for material system KV3 loading
-    struct kv3_id_t {
-        const char* m_pString;
-        std::uint64_t m_hash1;
-        std::uint64_t m_hash2;
-    };
-
-} // namespace materialsystem2
+} // namespace

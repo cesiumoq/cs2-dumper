@@ -1,251 +1,156 @@
-// Generated using https://github.com/a2x/cs2-dumper
-// 2026-11-03 12:42:01.636437600 UTC
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Generated from the live CS2 schema system.
+*/
 
-#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
+#![allow(non_snake_case, non_camel_case_types, dead_code)]
 
-pub mod cs2_dumper {
-    pub mod schemas {
-        // Module: materialsystem2.dll
-        // Class count: 15
-        // Enum count: 5
-        pub mod materialsystem2_dll {
-            // Alignment: 4
-            // Member count: 4
-            #[repr(u32)]
-            pub enum VertJustification_e {
-                VERT_JUSTIFICATION_TOP = 0x0,
-                VERT_JUSTIFICATION_CENTER = 0x1,
-                VERT_JUSTIFICATION_BOTTOM = 0x2,
-                VERT_JUSTIFICATION_NONE = 0x3
-            }
-            // Alignment: 4
-            // Member count: 3
-            #[repr(u32)]
-            pub enum LayoutPositionType_e {
-                LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE = 0x0,
-                LAYOUTPOSITIONTYPE_FRACTIONAL = 0x1,
-                LAYOUTPOSITIONTYPE_NONE = 0x2
-            }
-            // Alignment: 4
-            // Member count: 3
-            #[repr(u32)]
-            pub enum ViewFadeMode_t {
-                VIEW_FADE_CONSTANT_COLOR = 0x0,
-                VIEW_FADE_MODULATE = 0x1,
-                VIEW_FADE_MOD2X = 0x2
-            }
-            // Alignment: 4
-            // Member count: 3
-            #[repr(u32)]
-            pub enum BloomBlendMode_t {
-                BLOOM_BLEND_ADD = 0x0,
-                BLOOM_BLEND_SCREEN = 0x1,
-                BLOOM_BLEND_BLUR = 0x2
-            }
-            // Alignment: 4
-            // Member count: 4
-            #[repr(u32)]
-            pub enum HorizJustification_e {
-                HORIZ_JUSTIFICATION_LEFT = 0x0,
-                HORIZ_JUSTIFICATION_CENTER = 0x1,
-                HORIZ_JUSTIFICATION_RIGHT = 0x2,
-                HORIZ_JUSTIFICATION_NONE = 0x3
-            }
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod MaterialParam_t {
-                pub const m_name: usize = 0x0; // CUtlString
-            }
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod MaterialParamVector_t {
-                pub const m_value: usize = 0x8; // Vector4D
-            }
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod MaterialParamString_t {
-                pub const m_value: usize = 0x8; // CUtlString
-            }
-            // Parent: None
-            // Field count: 15
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod PostProcessingResource_t {
-                pub const m_bHasTonemapParams: usize = 0x0; // bool
-                pub const m_toneMapParams: usize = 0x4; // PostProcessingTonemapParameters_t
-                pub const m_bHasBloomParams: usize = 0x40; // bool
-                pub const m_bloomParams: usize = 0x44; // PostProcessingBloomParameters_t
-                pub const m_bHasVignetteParams: usize = 0xCC; // bool
-                pub const m_vignetteParams: usize = 0xD0; // PostProcessingVignetteParameters_t
-                pub const m_bHasLocalContrastParams: usize = 0xF4; // bool
-                pub const m_localConstrastParams: usize = 0xF8; // PostProcessingLocalContrastParameters_t
-                pub const m_nColorCorrectionVolumeDim: usize = 0x10C; // int32
-                pub const m_colorCorrectionVolumeData: usize = 0x110; // CUtlBinaryBlock
-                pub const m_bHasColorCorrection: usize = 0x120; // bool
-                pub const m_bHasFogScatteringParams: usize = 0x121; // bool
-                pub const m_fogScatteringParams: usize = 0x124; // PostProcessingFogScatteringParameters_t
-                pub const m_bHasLocalExposureParams: usize = 0x144; // bool
-                pub const m_localExposureParams: usize = 0x148; // PostProcessingLocalExposureParameters_t
-            }
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod MaterialParamInt_t {
-                pub const m_nValue: usize = 0x8; // int32
-            }
-            // Parent: None
-            // Field count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod PostProcessingVignetteParameters_t {
-                pub const m_flVignetteStrength: usize = 0x0; // float32
-                pub const m_vCenter: usize = 0x4; // Vector2D
-                pub const m_flRadius: usize = 0xC; // float32
-                pub const m_flRoundness: usize = 0x10; // float32
-                pub const m_flFeather: usize = 0x14; // float32
-                pub const m_vColorTint: usize = 0x18; // Vector
-            }
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod PostProcessingLocalContrastParameters_t {
-                pub const m_flLocalContrastStrength: usize = 0x0; // float32
-                pub const m_flLocalContrastEdgeStrength: usize = 0x4; // float32
-                pub const m_flLocalContrastVignetteStart: usize = 0x8; // float32
-                pub const m_flLocalContrastVignetteEnd: usize = 0xC; // float32
-                pub const m_flLocalContrastVignetteBlur: usize = 0x10; // float32
-            }
-            // Parent: None
-            // Field count: 15
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod PostProcessingTonemapParameters_t {
-                pub const m_flExposureBias: usize = 0x0; // float32
-                pub const m_flShoulderStrength: usize = 0x4; // float32
-                pub const m_flLinearStrength: usize = 0x8; // float32
-                pub const m_flLinearAngle: usize = 0xC; // float32
-                pub const m_flToeStrength: usize = 0x10; // float32
-                pub const m_flToeNum: usize = 0x14; // float32
-                pub const m_flToeDenom: usize = 0x18; // float32
-                pub const m_flWhitePoint: usize = 0x1C; // float32
-                pub const m_flLuminanceSource: usize = 0x20; // float32
-                pub const m_flExposureBiasShadows: usize = 0x24; // float32
-                pub const m_flExposureBiasHighlights: usize = 0x28; // float32
-                pub const m_flMinShadowLum: usize = 0x2C; // float32
-                pub const m_flMaxShadowLum: usize = 0x30; // float32
-                pub const m_flMinHighlightLum: usize = 0x34; // float32
-                pub const m_flMaxHighlightLum: usize = 0x38; // float32
-            }
-            // Parent: None
-            // Field count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod PostProcessingFogScatteringParameters_t {
-                pub const m_fRadius: usize = 0x0; // float32
-                pub const m_fScale: usize = 0x4; // float32
-                pub const m_fCubemapScale: usize = 0x8; // float32
-                pub const m_fVolumetricScale: usize = 0xC; // float32
-                pub const m_fGradientScale: usize = 0x10; // float32
-                pub const m_fWaterScale: usize = 0x14; // float32
-                pub const m_fWaterDensity: usize = 0x18; // float32
-                pub const m_fWaterDepthBlurRadius: usize = 0x1C; // float32
-            }
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod MaterialParamBuffer_t {
-                pub const m_value: usize = 0x8; // CUtlBinaryBlock
-            }
-            // Parent: None
-            // Field count: 14
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod MaterialResourceData_t {
-                pub const m_materialName: usize = 0x0; // CUtlString
-                pub const m_shaderName: usize = 0x8; // CUtlString
-                pub const m_intParams: usize = 0x10; // CUtlVector<MaterialParamInt_t>
-                pub const m_floatParams: usize = 0x28; // CUtlVector<MaterialParamFloat_t>
-                pub const m_vectorParams: usize = 0x40; // CUtlVector<MaterialParamVector_t>
-                pub const m_textureParams: usize = 0x58; // CUtlVector<MaterialParamTexture_t>
-                pub const m_dynamicParams: usize = 0x70; // CUtlVector<MaterialParamBuffer_t>
-                pub const m_dynamicTextureParams: usize = 0x88; // CUtlVector<MaterialParamBuffer_t>
-                pub const m_intAttributes: usize = 0xA0; // CUtlVector<MaterialParamInt_t>
-                pub const m_floatAttributes: usize = 0xB8; // CUtlVector<MaterialParamFloat_t>
-                pub const m_vectorAttributes: usize = 0xD0; // CUtlVector<MaterialParamVector_t>
-                pub const m_textureAttributes: usize = 0xE8; // CUtlVector<MaterialParamTexture_t>
-                pub const m_stringAttributes: usize = 0x100; // CUtlVector<MaterialParamString_t>
-                pub const m_renderAttributesUsed: usize = 0x118; // CUtlVector<CUtlString>
-            }
-            // Parent: None
-            // Field count: 16
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod PostProcessingBloomParameters_t {
-                pub const m_blendMode: usize = 0x0; // BloomBlendMode_t
-                pub const m_flBloomStrength: usize = 0x4; // float32
-                pub const m_flScreenBloomStrength: usize = 0x8; // float32
-                pub const m_flBlurBloomStrength: usize = 0xC; // float32
-                pub const m_flBloomThreshold: usize = 0x10; // float32
-                pub const m_flBloomThresholdWidth: usize = 0x14; // float32
-                pub const m_flSkyboxBloomStrength: usize = 0x18; // float32
-                pub const m_flBloomStartValue: usize = 0x1C; // float32
-                pub const m_flComputeBloomStrength: usize = 0x20; // float32
-                pub const m_flComputeBloomThreshold: usize = 0x24; // float32
-                pub const m_flComputeBloomRadius: usize = 0x28; // float32
-                pub const m_flComputeBloomEffectsScale: usize = 0x2C; // float32
-                pub const m_flComputeBloomLensDirtStrength: usize = 0x30; // float32
-                pub const m_flComputeBloomLensDirtBlackLevel: usize = 0x34; // float32
-                pub const m_flBlurWeight: usize = 0x38; // float32[5]
-                pub const m_vBlurTint: usize = 0x4C; // Vector[5]
-            }
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod MaterialParamFloat_t {
-                pub const m_flValue: usize = 0x8; // float32
-            }
-            // Parent: None
-            // Field count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod PostProcessingLocalExposureParameters_t {
-                pub const m_fShadowOffsetEV: usize = 0x0; // float32
-                pub const m_fHighlightOffsetEV: usize = 0x4; // float32
-                pub const m_fSigma: usize = 0x8; // float32
-                pub const m_fBoostLocalContrast: usize = 0xC; // float32
-            }
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod MaterialParamTexture_t {
-                pub const m_pValue: usize = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            }
-        }
+pub mod materialsystem2 {
+
+    pub type VertJustification_e = i32;
+    pub type LayoutPositionType_e = i32;
+    pub type ViewFadeMode_t = i32;
+    pub type BloomBlendMode_t = i32;
+    pub type HorizJustification_e = i32;
+    #[repr(C)]
+    pub struct MaterialParam_t {
+        pub m_name: [u8; 0x8], // 0x0
+    }
+    #[repr(C)]
+    pub struct MaterialParamVector_t {
+        pub pad_0: [u8; 0x8], // 0x0
+        pub m_value: [u8; 0x10], // 0x8
+    }
+    #[repr(C)]
+    pub struct MaterialParamString_t {
+        pub pad_0: [u8; 0x8], // 0x0
+        pub m_value: [u8; 0x8], // 0x8
+    }
+    #[repr(C)]
+    pub struct PostProcessingResource_t {
+        pub m_bHasTonemapParams: [u8; 0x4], // 0x0
+        pub m_toneMapParams: [u8; 0x3C], // 0x4
+        pub m_bHasBloomParams: [u8; 0x4], // 0x40
+        pub m_bloomParams: [u8; 0x88], // 0x44
+        pub m_bHasVignetteParams: [u8; 0x4], // 0xCC
+        pub m_vignetteParams: [u8; 0x24], // 0xD0
+        pub m_bHasLocalContrastParams: [u8; 0x4], // 0xF4
+        pub m_localConstrastParams: [u8; 0x14], // 0xF8
+        pub m_nColorCorrectionVolumeDim: [u8; 0x4], // 0x10C
+        pub m_colorCorrectionVolumeData: [u8; 0x10], // 0x110
+        pub m_bHasColorCorrection: [u8; 0x1], // 0x120
+        pub m_bHasFogScatteringParams: [u8; 0x3], // 0x121
+        pub m_fogScatteringParams: [u8; 0x20], // 0x124
+        pub m_bHasLocalExposureParams: [u8; 0x4], // 0x144
+        pub m_localExposureParams: [u8; 0x10], // 0x148
+    }
+    #[repr(C)]
+    pub struct MaterialParamInt_t {
+        pub pad_0: [u8; 0x8], // 0x0
+        pub m_nValue: [u8; 0x8], // 0x8
+    }
+    #[repr(C)]
+    pub struct PostProcessingVignetteParameters_t {
+        pub m_flVignetteStrength: [u8; 0x4], // 0x0
+        pub m_vCenter: [u8; 0x8], // 0x4
+        pub m_flRadius: [u8; 0x4], // 0xC
+        pub m_flRoundness: [u8; 0x4], // 0x10
+        pub m_flFeather: [u8; 0x4], // 0x14
+        pub m_vColorTint: [u8; 0xC], // 0x18
+    }
+    #[repr(C)]
+    pub struct PostProcessingLocalContrastParameters_t {
+        pub m_flLocalContrastStrength: [u8; 0x4], // 0x0
+        pub m_flLocalContrastEdgeStrength: [u8; 0x4], // 0x4
+        pub m_flLocalContrastVignetteStart: [u8; 0x4], // 0x8
+        pub m_flLocalContrastVignetteEnd: [u8; 0x4], // 0xC
+        pub m_flLocalContrastVignetteBlur: [u8; 0x4], // 0x10
+    }
+    #[repr(C)]
+    pub struct PostProcessingTonemapParameters_t {
+        pub m_flExposureBias: [u8; 0x4], // 0x0
+        pub m_flShoulderStrength: [u8; 0x4], // 0x4
+        pub m_flLinearStrength: [u8; 0x4], // 0x8
+        pub m_flLinearAngle: [u8; 0x4], // 0xC
+        pub m_flToeStrength: [u8; 0x4], // 0x10
+        pub m_flToeNum: [u8; 0x4], // 0x14
+        pub m_flToeDenom: [u8; 0x4], // 0x18
+        pub m_flWhitePoint: [u8; 0x4], // 0x1C
+        pub m_flLuminanceSource: [u8; 0x4], // 0x20
+        pub m_flExposureBiasShadows: [u8; 0x4], // 0x24
+        pub m_flExposureBiasHighlights: [u8; 0x4], // 0x28
+        pub m_flMinShadowLum: [u8; 0x4], // 0x2C
+        pub m_flMaxShadowLum: [u8; 0x4], // 0x30
+        pub m_flMinHighlightLum: [u8; 0x4], // 0x34
+        pub m_flMaxHighlightLum: [u8; 0x4], // 0x38
+    }
+    #[repr(C)]
+    pub struct PostProcessingFogScatteringParameters_t {
+        pub m_fRadius: [u8; 0x4], // 0x0
+        pub m_fScale: [u8; 0x4], // 0x4
+        pub m_fCubemapScale: [u8; 0x4], // 0x8
+        pub m_fVolumetricScale: [u8; 0x4], // 0xC
+        pub m_fGradientScale: [u8; 0x4], // 0x10
+        pub m_fWaterScale: [u8; 0x4], // 0x14
+        pub m_fWaterDensity: [u8; 0x4], // 0x18
+        pub m_fWaterDepthBlurRadius: [u8; 0x4], // 0x1C
+    }
+    #[repr(C)]
+    pub struct MaterialParamBuffer_t {
+        pub pad_0: [u8; 0x8], // 0x0
+        pub m_value: [u8; 0x10], // 0x8
+    }
+    #[repr(C)]
+    pub struct MaterialResourceData_t {
+        pub m_materialName: [u8; 0x8], // 0x0
+        pub m_shaderName: [u8; 0x8], // 0x8
+        pub m_intParams: [u8; 0x18], // 0x10
+        pub m_floatParams: [u8; 0x18], // 0x28
+        pub m_vectorParams: [u8; 0x18], // 0x40
+        pub m_textureParams: [u8; 0x18], // 0x58
+        pub m_dynamicParams: [u8; 0x18], // 0x70
+        pub m_dynamicTextureParams: [u8; 0x18], // 0x88
+        pub m_intAttributes: [u8; 0x18], // 0xA0
+        pub m_floatAttributes: [u8; 0x18], // 0xB8
+        pub m_vectorAttributes: [u8; 0x18], // 0xD0
+        pub m_textureAttributes: [u8; 0x18], // 0xE8
+        pub m_stringAttributes: [u8; 0x18], // 0x100
+        pub m_renderAttributesUsed: [u8; 0x18], // 0x118
+    }
+    #[repr(C)]
+    pub struct PostProcessingBloomParameters_t {
+        pub m_blendMode: [u8; 0x4], // 0x0
+        pub m_flBloomStrength: [u8; 0x4], // 0x4
+        pub m_flScreenBloomStrength: [u8; 0x4], // 0x8
+        pub m_flBlurBloomStrength: [u8; 0x4], // 0xC
+        pub m_flBloomThreshold: [u8; 0x4], // 0x10
+        pub m_flBloomThresholdWidth: [u8; 0x4], // 0x14
+        pub m_flSkyboxBloomStrength: [u8; 0x4], // 0x18
+        pub m_flBloomStartValue: [u8; 0x4], // 0x1C
+        pub m_flComputeBloomStrength: [u8; 0x4], // 0x20
+        pub m_flComputeBloomThreshold: [u8; 0x4], // 0x24
+        pub m_flComputeBloomRadius: [u8; 0x4], // 0x28
+        pub m_flComputeBloomEffectsScale: [u8; 0x4], // 0x2C
+        pub m_flComputeBloomLensDirtStrength: [u8; 0x4], // 0x30
+        pub m_flComputeBloomLensDirtBlackLevel: [u8; 0x4], // 0x34
+        pub m_flBlurWeight: [u8; 0x14], // 0x38
+        pub m_vBlurTint: [u8; 0x3C], // 0x4C
+    }
+    #[repr(C)]
+    pub struct MaterialParamFloat_t {
+        pub pad_0: [u8; 0x8], // 0x0
+        pub m_flValue: [u8; 0x8], // 0x8
+    }
+    #[repr(C)]
+    pub struct PostProcessingLocalExposureParameters_t {
+        pub m_fShadowOffsetEV: [u8; 0x4], // 0x0
+        pub m_fHighlightOffsetEV: [u8; 0x4], // 0x4
+        pub m_fSigma: [u8; 0x4], // 0x8
+        pub m_fBoostLocalContrast: [u8; 0x4], // 0xC
+    }
+    #[repr(C)]
+    pub struct MaterialParamTexture_t {
+        pub pad_0: [u8; 0x8], // 0x0
+        pub m_pValue: [u8; 0x8], // 0x8
     }
 }

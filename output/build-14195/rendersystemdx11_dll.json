@@ -1,224 +1,611 @@
 {
-  "rendersystemdx11.dll": {
-    "classes": {
-      "RenderInputLayoutField_t": {
-        "fields": {
-          "m_nOffset": 40,
-          "m_nSemanticIndex": 32,
-          "m_nSlot": 42,
-          "m_nSlotType": 43,
-          "m_pSemanticName": 0,
-          "m_szShaderSemantic": 44
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "RsBlendStateDesc_t": {
-        "fields": {
-          "m_bAlphaToCoverageEnable": 0,
-          "m_bIndependentBlendEnable": 0,
-          "m_blendEnableBits": 28,
-          "m_blendOpAlphaBits": 24,
-          "m_blendOpBits": 0,
-          "m_destBlendAlphaBits": 12,
-          "m_destBlendBits": 4,
-          "m_renderTargetWriteMaskBits": 16,
-          "m_srcBlendAlphaBits": 8,
-          "m_srcBlendBits": 0,
-          "m_srgbWriteEnableBits": 29
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "RsDepthStencilStateDesc_t": {
-        "fields": {
-          "m_bDepthTestEnable": 0,
-          "m_bDepthWriteEnable": 0,
-          "m_depthFunc": 0,
-          "m_stencilState": 2
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "RsRasterizerStateDesc_t": {
-        "fields": {
-          "m_bDepthClipEnable": 2,
-          "m_bMultisampleEnable": 3,
-          "m_flDepthBiasClamp": 8,
-          "m_flSlopeScaledDepthBias": 12,
-          "m_nCullMode": 1,
-          "m_nDepthBias": 4,
-          "m_nFillMode": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "RsStencilStateDesc_t": {
-        "fields": {
-          "m_bStencilEnable": 0,
-          "m_backStencilDepthFailOp": 0,
-          "m_backStencilFailOp": 0,
-          "m_backStencilFunc": 0,
-          "m_backStencilPassOp": 0,
-          "m_frontStencilDepthFailOp": 0,
-          "m_frontStencilFailOp": 0,
-          "m_frontStencilFunc": 0,
-          "m_frontStencilPassOp": 0,
-          "m_nStencilReadMask": 4,
-          "m_nStencilWriteMask": 5
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "SheetSequenceIntegerId_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "VsInputSignatureElement_t": {
-        "fields": {
-          "m_nD3DSemanticIndex": 192,
-          "m_pD3DSemanticName": 128,
-          "m_pName": 0,
-          "m_pSemantic": 64
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "VsInputSignature_t": {
-        "fields": {
-          "m_depth_elems": 24,
-          "m_elems": 0
-        },
-        "metadata": [],
-        "parent": null
-      }
-    },
-    "enums": {
-      "InputLayoutVariation_t": {
-        "alignment": 1,
-        "members": {
-          "INPUT_LAYOUT_VARIATION_DEFAULT": 0,
-          "INPUT_LAYOUT_VARIATION_MAX": 3,
-          "INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID": 1,
-          "INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID": 2
-        },
-        "type": "uint8"
-      },
-      "RenderBufferFlags_t": {
-        "alignment": 4,
-        "members": {
-          "RENDER_BUFFER_ACCELERATION_STRUCTURE": 512,
-          "RENDER_BUFFER_BYTEADDRESS_BUFFER": 16,
-          "RENDER_BUFFER_DYNAMIC_ZERO_COPY": 16384,
-          "RENDER_BUFFER_IMMOVABLE_ALLOCATION": 8192,
-          "RENDER_BUFFER_POOL_ALLOCATED": 2048,
-          "RENDER_BUFFER_SHADER_BINDING_TABLE": 1024,
-          "RENDER_BUFFER_STRUCTURED_BUFFER": 32,
-          "RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS": 256,
-          "RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING": 4096,
-          "RENDER_BUFFER_USAGE_INDEX_BUFFER": 2,
-          "RENDER_BUFFER_USAGE_NONE": 0,
-          "RENDER_BUFFER_USAGE_SHADER_RESOURCE": 4,
-          "RENDER_BUFFER_USAGE_UNORDERED_ACCESS": 8,
-          "RENDER_BUFFER_USAGE_VERTEX_BUFFER": 1
-        },
-        "type": "uint32"
-      },
-      "RenderMultisampleType_t": {
-        "alignment": 1,
-        "members": {
-          "RENDER_MULTISAMPLE_16X": 5,
-          "RENDER_MULTISAMPLE_2X": 1,
-          "RENDER_MULTISAMPLE_4X": 2,
-          "RENDER_MULTISAMPLE_6X": 3,
-          "RENDER_MULTISAMPLE_8X": 4,
-          "RENDER_MULTISAMPLE_INVALID": -1,
-          "RENDER_MULTISAMPLE_NONE": 0,
-          "RENDER_MULTISAMPLE_TYPE_COUNT": 6
-        },
-        "type": "uint8"
-      },
-      "RenderPrimitiveType_t": {
-        "alignment": 4,
-        "members": {
-          "RENDER_PRIM_COMPUTE_SHADER": 11,
-          "RENDER_PRIM_HETEROGENOUS": 10,
-          "RENDER_PRIM_INSTANCED_QUADS": 9,
-          "RENDER_PRIM_LINES": 1,
-          "RENDER_PRIM_LINES_WITH_ADJACENCY": 2,
-          "RENDER_PRIM_LINE_STRIP": 3,
-          "RENDER_PRIM_LINE_STRIP_WITH_ADJACENCY": 4,
-          "RENDER_PRIM_MESH_SHADER": 12,
-          "RENDER_PRIM_POINTS": 0,
-          "RENDER_PRIM_TRIANGLES": 5,
-          "RENDER_PRIM_TRIANGLES_WITH_ADJACENCY": 6,
-          "RENDER_PRIM_TRIANGLE_STRIP": 7,
-          "RENDER_PRIM_TRIANGLE_STRIP_WITH_ADJACENCY": 8,
-          "RENDER_PRIM_TYPE_COUNT": 13
-        },
-        "type": "uint32"
-      },
-      "RenderSlotType_t": {
-        "alignment": 1,
-        "members": {
-          "RENDER_SLOT_INVALID": -1,
-          "RENDER_SLOT_PER_INSTANCE": 1,
-          "RENDER_SLOT_PER_VERTEX": 0
-        },
-        "type": "uint8"
-      },
-      "RsComparison_t": {
-        "alignment": 1,
-        "members": {
-          "RS_CMP_ALWAYS": 7,
-          "RS_CMP_CLOSER": 9,
-          "RS_CMP_CLOSER_EQUAL": 11,
-          "RS_CMP_CLOSER_FARTHER_FLAG": 8,
-          "RS_CMP_EQUAL": 2,
-          "RS_CMP_FARTHER": 12,
-          "RS_CMP_FARTHER_EQUAL": 14,
-          "RS_CMP_FUNC_MASK": 7,
-          "RS_CMP_GREATER": 4,
-          "RS_CMP_GREATER_EQUAL": 6,
-          "RS_CMP_LESS": 1,
-          "RS_CMP_LESS_EQUAL": 3,
-          "RS_CMP_NEVER": 0,
-          "RS_CMP_NOT_EQUAL": 5
-        },
-        "type": "uint8"
-      },
-      "RsCullMode_t": {
-        "alignment": 1,
-        "members": {
-          "RS_CULL_BACK": 1,
-          "RS_CULL_FRONT": 2,
-          "RS_CULL_NONE": 0
-        },
-        "type": "uint8"
-      },
-      "RsFillMode_t": {
-        "alignment": 1,
-        "members": {
-          "RS_FILL_SOLID": 0,
-          "RS_FILL_WIREFRAME": 1
-        },
-        "type": "uint8"
-      },
-      "UpscalerType_t": {
-        "alignment": 4,
-        "members": {
-          "UPSCALER_AMD_FSR2": 1,
-          "UPSCALER_AMD_FSR3": 2,
-          "UPSCALER_COUNT": 5,
-          "UPSCALER_INTEL_XESS": 4,
-          "UPSCALER_NONE": 0,
-          "UPSCALER_NVIDIA_DLSS": 3
-        },
-        "type": "uint32"
-      }
-    }
-  }
+ "rendersystemdx11.dll": {
+  "classes": [
+   {
+    "name": "RsDepthStencilStateDesc_t",
+    "module": "RsDepthStencilStateDesc_t.dll",
+    "size": 8,
+    "fields": [
+     {
+      "name": "m_bDepthTestEnable",
+      "type": "bitfield:1",
+      "offset": 0
+     },
+     {
+      "name": "m_bDepthWriteEnable",
+      "type": "bitfield:1",
+      "offset": 0
+     },
+     {
+      "name": "m_depthFunc",
+      "type": "bitfield:4",
+      "offset": 0
+     },
+     {
+      "name": "m_stencilState",
+      "type": "RsStencilStateDesc_t",
+      "offset": 2
+     }
+    ]
+   },
+   {
+    "name": "SheetSequenceIntegerId_t",
+    "module": "SheetSequenceIntegerId_t.dll",
+    "size": 4,
+    "fields": [
+     {
+      "name": "m_Value",
+      "type": "uint32",
+      "offset": 0
+     }
+    ]
+   },
+   {
+    "name": "RsBlendStateDesc_t",
+    "module": "RsBlendStateDesc_t.dll",
+    "size": 32,
+    "fields": [
+     {
+      "name": "m_srcBlendBits",
+      "type": "uint32",
+      "offset": 0
+     },
+     {
+      "name": "m_destBlendBits",
+      "type": "uint32",
+      "offset": 4
+     },
+     {
+      "name": "m_srcBlendAlphaBits",
+      "type": "uint32",
+      "offset": 8
+     },
+     {
+      "name": "m_destBlendAlphaBits",
+      "type": "uint32",
+      "offset": 12
+     },
+     {
+      "name": "m_renderTargetWriteMaskBits",
+      "type": "uint32",
+      "offset": 16
+     },
+     {
+      "name": "m_blendOpBits",
+      "type": "bitfield:30",
+      "offset": 0
+     },
+     {
+      "name": "m_bAlphaToCoverageEnable",
+      "type": "bitfield:1",
+      "offset": 0
+     },
+     {
+      "name": "m_bIndependentBlendEnable",
+      "type": "bitfield:1",
+      "offset": 0
+     },
+     {
+      "name": "m_blendOpAlphaBits",
+      "type": "uint32",
+      "offset": 24
+     },
+     {
+      "name": "m_blendEnableBits",
+      "type": "uint8",
+      "offset": 28
+     },
+     {
+      "name": "m_srgbWriteEnableBits",
+      "type": "uint8",
+      "offset": 29
+     }
+    ]
+   },
+   {
+    "name": "VsInputSignatureElement_t",
+    "module": "VsInputSignatureElement_t.dll",
+    "size": 196,
+    "fields": [
+     {
+      "name": "m_pName",
+      "type": "char[64]",
+      "offset": 0
+     },
+     {
+      "name": "m_pSemantic",
+      "type": "char[64]",
+      "offset": 64
+     },
+     {
+      "name": "m_pD3DSemanticName",
+      "type": "char[64]",
+      "offset": 128
+     },
+     {
+      "name": "m_nD3DSemanticIndex",
+      "type": "int32",
+      "offset": 192
+     }
+    ]
+   },
+   {
+    "name": "RsRasterizerStateDesc_t",
+    "module": "RsRasterizerStateDesc_t.dll",
+    "size": 16,
+    "fields": [
+     {
+      "name": "m_nFillMode",
+      "type": "RsFillMode_t",
+      "offset": 0
+     },
+     {
+      "name": "m_nCullMode",
+      "type": "RsCullMode_t",
+      "offset": 1
+     },
+     {
+      "name": "m_bDepthClipEnable",
+      "type": "bool",
+      "offset": 2
+     },
+     {
+      "name": "m_bMultisampleEnable",
+      "type": "bool",
+      "offset": 3
+     },
+     {
+      "name": "m_nDepthBias",
+      "type": "int32",
+      "offset": 4
+     },
+     {
+      "name": "m_flDepthBiasClamp",
+      "type": "float32",
+      "offset": 8
+     },
+     {
+      "name": "m_flSlopeScaledDepthBias",
+      "type": "float32",
+      "offset": 12
+     }
+    ]
+   },
+   {
+    "name": "RsStencilStateDesc_t",
+    "module": "RsStencilStateDesc_t.dll",
+    "size": 6,
+    "fields": [
+     {
+      "name": "m_frontStencilFunc",
+      "type": "bitfield:4",
+      "offset": 0
+     },
+     {
+      "name": "m_backStencilFunc",
+      "type": "bitfield:4",
+      "offset": 0
+     },
+     {
+      "name": "m_bStencilEnable",
+      "type": "bitfield:1",
+      "offset": 0
+     },
+     {
+      "name": "m_frontStencilFailOp",
+      "type": "bitfield:3",
+      "offset": 0
+     },
+     {
+      "name": "m_frontStencilDepthFailOp",
+      "type": "bitfield:3",
+      "offset": 0
+     },
+     {
+      "name": "m_frontStencilPassOp",
+      "type": "bitfield:3",
+      "offset": 0
+     },
+     {
+      "name": "m_backStencilFailOp",
+      "type": "bitfield:3",
+      "offset": 0
+     },
+     {
+      "name": "m_backStencilDepthFailOp",
+      "type": "bitfield:3",
+      "offset": 0
+     },
+     {
+      "name": "m_backStencilPassOp",
+      "type": "bitfield:3",
+      "offset": 0
+     },
+     {
+      "name": "m_nStencilReadMask",
+      "type": "uint8",
+      "offset": 4
+     },
+     {
+      "name": "m_nStencilWriteMask",
+      "type": "uint8",
+      "offset": 5
+     }
+    ]
+   },
+   {
+    "name": "VsInputSignature_t",
+    "module": "VsInputSignature_t.dll",
+    "size": 48,
+    "fields": [
+     {
+      "name": "m_elems",
+      "type": "CUtlVector<VsInputSignatureElement_t>",
+      "offset": 0
+     },
+     {
+      "name": "m_depth_elems",
+      "type": "CUtlVector<VsInputSignatureElement_t>",
+      "offset": 24
+     }
+    ]
+   },
+   {
+    "name": "RenderInputLayoutField_t",
+    "module": "RenderInputLayoutField_t.dll",
+    "size": 76,
+    "fields": [
+     {
+      "name": "m_pSemanticName",
+      "type": "char[32]",
+      "offset": 0
+     },
+     {
+      "name": "m_nSemanticIndex",
+      "type": "int8",
+      "offset": 32
+     },
+     {
+      "name": "m_nOffset",
+      "type": "int16",
+      "offset": 40
+     },
+     {
+      "name": "m_nSlot",
+      "type": "int8",
+      "offset": 42
+     },
+     {
+      "name": "m_nSlotType",
+      "type": "RenderSlotType_t",
+      "offset": 43
+     },
+     {
+      "name": "m_szShaderSemantic",
+      "type": "char[32]",
+      "offset": 44
+     }
+    ]
+   }
+  ],
+  "enums": [
+   {
+    "name": "RenderPrimitiveType_t",
+    "members": [
+     {
+      "name": "RENDER_PRIM_POINTS",
+      "value": 0
+     },
+     {
+      "name": "RENDER_PRIM_LINES",
+      "value": 1
+     },
+     {
+      "name": "RENDER_PRIM_LINES_WITH_ADJACENCY",
+      "value": 2
+     },
+     {
+      "name": "RENDER_PRIM_LINE_STRIP",
+      "value": 3
+     },
+     {
+      "name": "RENDER_PRIM_LINE_STRIP_WITH_ADJACENCY",
+      "value": 4
+     },
+     {
+      "name": "RENDER_PRIM_TRIANGLES",
+      "value": 5
+     },
+     {
+      "name": "RENDER_PRIM_TRIANGLES_WITH_ADJACENCY",
+      "value": 6
+     },
+     {
+      "name": "RENDER_PRIM_TRIANGLE_STRIP",
+      "value": 7
+     },
+     {
+      "name": "RENDER_PRIM_TRIANGLE_STRIP_WITH_ADJACENCY",
+      "value": 8
+     },
+     {
+      "name": "RENDER_PRIM_INSTANCED_QUADS",
+      "value": 9
+     },
+     {
+      "name": "RENDER_PRIM_HETEROGENOUS",
+      "value": 10
+     },
+     {
+      "name": "RENDER_PRIM_COMPUTE_SHADER",
+      "value": 11
+     },
+     {
+      "name": "RENDER_PRIM_MESH_SHADER",
+      "value": 12
+     },
+     {
+      "name": "RENDER_PRIM_TYPE_COUNT",
+      "value": 13
+     }
+    ]
+   },
+   {
+    "name": "RenderBufferFlags_t",
+    "members": [
+     {
+      "name": "RENDER_BUFFER_USAGE_NONE",
+      "value": 0
+     },
+     {
+      "name": "RENDER_BUFFER_USAGE_VERTEX_BUFFER",
+      "value": 1
+     },
+     {
+      "name": "RENDER_BUFFER_USAGE_INDEX_BUFFER",
+      "value": 2
+     },
+     {
+      "name": "RENDER_BUFFER_USAGE_SHADER_RESOURCE",
+      "value": 4
+     },
+     {
+      "name": "RENDER_BUFFER_USAGE_UNORDERED_ACCESS",
+      "value": 8
+     },
+     {
+      "name": "RENDER_BUFFER_BYTEADDRESS_BUFFER",
+      "value": 16
+     },
+     {
+      "name": "RENDER_BUFFER_STRUCTURED_BUFFER",
+      "value": 32
+     },
+     {
+      "name": "RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS",
+      "value": 256
+     },
+     {
+      "name": "RENDER_BUFFER_ACCELERATION_STRUCTURE",
+      "value": 512
+     },
+     {
+      "name": "RENDER_BUFFER_SHADER_BINDING_TABLE",
+      "value": 1024
+     },
+     {
+      "name": "RENDER_BUFFER_POOL_ALLOCATED",
+      "value": 2048
+     },
+     {
+      "name": "RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING",
+      "value": 4096
+     },
+     {
+      "name": "RENDER_BUFFER_IMMOVABLE_ALLOCATION",
+      "value": 8192
+     },
+     {
+      "name": "RENDER_BUFFER_DYNAMIC_ZERO_COPY",
+      "value": 16384
+     }
+    ]
+   },
+   {
+    "name": "RsCullMode_t",
+    "members": [
+     {
+      "name": "RS_CULL_NONE",
+      "value": 0
+     },
+     {
+      "name": "RS_CULL_BACK",
+      "value": 1
+     },
+     {
+      "name": "RS_CULL_FRONT",
+      "value": 2
+     }
+    ]
+   },
+   {
+    "name": "RsComparison_t",
+    "members": [
+     {
+      "name": "RS_CMP_NEVER",
+      "value": 0
+     },
+     {
+      "name": "RS_CMP_LESS",
+      "value": 1
+     },
+     {
+      "name": "RS_CMP_EQUAL",
+      "value": 2
+     },
+     {
+      "name": "RS_CMP_LESS_EQUAL",
+      "value": 3
+     },
+     {
+      "name": "RS_CMP_GREATER",
+      "value": 4
+     },
+     {
+      "name": "RS_CMP_NOT_EQUAL",
+      "value": 5
+     },
+     {
+      "name": "RS_CMP_GREATER_EQUAL",
+      "value": 6
+     },
+     {
+      "name": "RS_CMP_ALWAYS",
+      "value": 7
+     },
+     {
+      "name": "RS_CMP_FUNC_MASK",
+      "value": 7
+     },
+     {
+      "name": "RS_CMP_CLOSER_FARTHER_FLAG",
+      "value": 8
+     },
+     {
+      "name": "RS_CMP_CLOSER",
+      "value": 9
+     },
+     {
+      "name": "RS_CMP_CLOSER_EQUAL",
+      "value": 11
+     },
+     {
+      "name": "RS_CMP_FARTHER",
+      "value": 12
+     },
+     {
+      "name": "RS_CMP_FARTHER_EQUAL",
+      "value": 14
+     }
+    ]
+   },
+   {
+    "name": "RsFillMode_t",
+    "members": [
+     {
+      "name": "RS_FILL_SOLID",
+      "value": 0
+     },
+     {
+      "name": "RS_FILL_WIREFRAME",
+      "value": 1
+     }
+    ]
+   },
+   {
+    "name": "RenderMultisampleType_t",
+    "members": [
+     {
+      "name": "RENDER_MULTISAMPLE_INVALID",
+      "value": 18446744073709551615
+     },
+     {
+      "name": "RENDER_MULTISAMPLE_NONE",
+      "value": 0
+     },
+     {
+      "name": "RENDER_MULTISAMPLE_2X",
+      "value": 1
+     },
+     {
+      "name": "RENDER_MULTISAMPLE_4X",
+      "value": 2
+     },
+     {
+      "name": "RENDER_MULTISAMPLE_6X",
+      "value": 3
+     },
+     {
+      "name": "RENDER_MULTISAMPLE_8X",
+      "value": 4
+     },
+     {
+      "name": "RENDER_MULTISAMPLE_16X",
+      "value": 5
+     },
+     {
+      "name": "RENDER_MULTISAMPLE_TYPE_COUNT",
+      "value": 6
+     }
+    ]
+   },
+   {
+    "name": "InputLayoutVariation_t",
+    "members": [
+     {
+      "name": "INPUT_LAYOUT_VARIATION_DEFAULT",
+      "value": 0
+     },
+     {
+      "name": "INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID",
+      "value": 1
+     },
+     {
+      "name": "INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID",
+      "value": 2
+     },
+     {
+      "name": "INPUT_LAYOUT_VARIATION_MAX",
+      "value": 3
+     }
+    ]
+   },
+   {
+    "name": "UpscalerType_t",
+    "members": [
+     {
+      "name": "UPSCALER_NONE",
+      "value": 0
+     },
+     {
+      "name": "UPSCALER_AMD_FSR2",
+      "value": 1
+     },
+     {
+      "name": "UPSCALER_AMD_FSR3",
+      "value": 2
+     },
+     {
+      "name": "UPSCALER_NVIDIA_DLSS",
+      "value": 3
+     },
+     {
+      "name": "UPSCALER_INTEL_XESS",
+      "value": 4
+     },
+     {
+      "name": "UPSCALER_COUNT",
+      "value": 5
+     }
+    ]
+   },
+   {
+    "name": "RenderSlotType_t",
+    "members": [
+     {
+      "name": "RENDER_SLOT_INVALID",
+      "value": 18446744073709551615
+     },
+     {
+      "name": "RENDER_SLOT_PER_VERTEX",
+      "value": 0
+     },
+     {
+      "name": "RENDER_SLOT_PER_INSTANCE",
+      "value": 1
+     }
+    ]
+   }
+  ]
+ }
 }
