@@ -1,0 +1,39 @@
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Total Offsets   : 202
+/*  Dumped At       : 12:53 05/11/2026 (GMT)
+/*  Dumped In       : 46,1s
+*/
+
+client.dll.dwCSGOInput = 0x2580A10
+client.dll.dwEntityList = 0x271FBB8
+client.dll.dwGameEntitySystem = 0x271FBB8
+client.dll.dwGameEntitySystem_highestEntityIndex = 0x2120
+client.dll.dwGameRules = 0x256A3F8
+client.dll.dwGlobalVars = 0x2235108
+client.dll.dwGlowManager = 0x2567120
+client.dll.dwLocalPlayerController = 0x2542548
+client.dll.dwLocalPlayerPawn = 0x256A948
+client.dll.dwPlantedC4 = 0x24D0B70
+client.dll.dwPrediction = 0x256A850
+client.dll.dwSensitivity = 0x2567C48
+client.dll.dwSensitivity_sensitivity = 0x58
+client.dll.dwViewAngles = 0x2581098
+client.dll.dwViewMatrix = 0x2570250
+client.dll.dwViewRender = 0x2570C18
+client.dll.dwWeaponC4 = 0x24CF118
+engine2.dll.dwBuildNumber = 0x6BA028
+engine2.dll.dwNetworkGameClient = 0x9B88C0
+engine2.dll.dwNetworkGameClient_clientTickCount = 0x398
+engine2.dll.dwNetworkGameClient_deltaTick = 0x24C
+engine2.dll.dwNetworkGameClient_isBackgroundMap = 0x2C143F
+engine2.dll.dwNetworkGameClient_localPlayer = 0xF8
+engine2.dll.dwNetworkGameClient_maxClients = 0x240
+engine2.dll.dwNetworkGameClient_serverTickCount = 0x24C
+engine2.dll.dwNetworkGameClient_signOnState = 0x230
+engine2.dll.dwWindowHeight = 0x9BCFEC
+engine2.dll.dwWindowWidth = 0x9BCFE8
+inputsystem.dll.dwInputSystem = 0x46BC0
+matchmaking.dll.dwGameTypes = 0x1B0FD0
+soundsystem.dll.dwSoundSystem = 0x532420
+soundsystem.dll.dwSoundSystem_engineViewData = 0x6C

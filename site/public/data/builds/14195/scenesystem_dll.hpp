@@ -1,145 +1,227 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:59 04/11/2026 (GMT)
+/*  Dumped At       : 22:10 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
 
-/*                       cesium dumper
-/*                  https://cs2-dump.vercel.app
-/*  Generated from the live CS2 schema system.
-*/
-
 #pragma once
-#include <cstddef>
-#include <cstdint>
+#include "../macros.hpp"
 
-namespace cs2::scenesystem_dll {
+namespace scenesystem {
 
-enum class ESceneObjectMeshletVisualization : std::int32_t {
-    SCENEOBJECT_MESHLET_VIS_NONE = 0,
-    SCENEOBJECT_MESHLET_VIS_MESHLET = 1,
-    SCENEOBJECT_MESHLET_VIS_CULLED = 2,
-};
+    class CSSDSMsg_ViewTarget;
+    class SceneViewId_t;
+    class CSSDSEndFrameViewInfo;
+    class CSSDSMsg_PostLayer;
+    class CSSDSMsg_LayerBase;
+    class CSSDSMsg_PreLayer;
+    class CSSDSMsg_ViewTargetList;
+    class CSSDSMsg_ViewRender;
+    class CSSDSMsg_EndFrame;
 
-enum class SceneStatsSections_t : std::int32_t {
-    SCENE_STATS_NONE = 0,
-    SCENE_STATS_FRAME = 1,
-    SCENE_STATS_GEOMETRY = 2,
-    SCENE_STATS_CULLING = 4,
-    SCENE_STATS_MATERIALS = 8,
-    SCENE_STATS_LIGHTING = 16,
-    SCENE_STATS_RAYTRACING = 32,
-    SCENE_STATS_INTERNALS = 64,
-    SCENE_STATS_RENDERDEVICE = 128,
-    SCENE_STATS_ALL = 255,
-    SCENE_STATS_DEFAULT = 127,
-};
+    enum class ESceneObjectMeshletVisualization : std::uint32_t {
+        SCENEOBJECT_MESHLET_VIS_NONE = 0x0,
+        SCENEOBJECT_MESHLET_VIS_MESHLET = 0x1,
+        SCENEOBJECT_MESHLET_VIS_CULLED = 0x2,
+    };
 
-enum class ESceneViewDebugOverlaysListenerDataType_t : std::int32_t {
-    k_ESceneViewDebugOverlaysListenerDataType_Unknown = 0,
-    k_ESceneViewDebugOverlaysListenerDataType_Sphere = 1,
-    k_ESceneViewDebugOverlaysListenerDataType_Capsule = 2,
-    k_ESceneViewDebugOverlaysListenerDataType_BoxAngles = 3,
-    k_ESceneViewDebugOverlaysListenerDataType_Line = 4,
-    k_ESceneViewDebugOverlaysListenerDataType_SolidBoxAngles = 5,
-    k_ESceneViewDebugOverlaysListenerDataType_Text3D = 6,
-};
+    enum class SceneStatsSections_t : std::uint32_t {
+        SCENE_STATS_NONE = 0x0,
+        SCENE_STATS_FRAME = 0x1,
+        SCENE_STATS_GEOMETRY = 0x2,
+        SCENE_STATS_CULLING = 0x4,
+        SCENE_STATS_MATERIALS = 0x8,
+        SCENE_STATS_LIGHTING = 0x10,
+        SCENE_STATS_RAYTRACING = 0x20,
+        SCENE_STATS_INTERNALS = 0x40,
+        SCENE_STATS_RENDERDEVICE = 0x80,
+        SCENE_STATS_ALL = 0xFF, // MEnumeratorIsNotAFlag
+        SCENE_STATS_DEFAULT = 0x7F, // MEnumeratorIsNotAFlag
+    };
 
-enum class ESilhouetteType_t : std::int32_t {
-    SILHOUETTE_NONE = 0,
-    SILHOUETTE_LIGHT = 1,
-    SILHOUETTE_ENVMAP = 2,
-    SILHOUETTE_LPV = 4,
-};
+    enum class ESceneViewDebugOverlaysListenerDataType_t : std::uint32_t {
+        k_ESceneViewDebugOverlaysListenerDataType_Unknown = 0x0,
+        k_ESceneViewDebugOverlaysListenerDataType_Sphere = 0x1,
+        k_ESceneViewDebugOverlaysListenerDataType_Capsule = 0x2,
+        k_ESceneViewDebugOverlaysListenerDataType_BoxAngles = 0x3,
+        k_ESceneViewDebugOverlaysListenerDataType_Line = 0x4,
+        k_ESceneViewDebugOverlaysListenerDataType_SolidBoxAngles = 0x5,
+        k_ESceneViewDebugOverlaysListenerDataType_Text3D = 0x6,
+    };
 
-enum class DisableShadows_t : std::int32_t {
-    kDisableShadows_None = 0,
-    kDisableShadows_All = 1,
-    kDisableShadows_Baked = 2,
-    kDisableShadows_Realtime = 3,
-    kDisableShadows_ReallyNone = 4,
-};
+    enum class ESilhouetteType_t : std::uint32_t {
+        SILHOUETTE_NONE = 0x0,
+        SILHOUETTE_LIGHT = 0x1,
+        SILHOUETTE_ENVMAP = 0x2,
+        SILHOUETTE_LPV = 0x4,
+    };
 
-enum class DecalRtEncoding_t : std::int32_t {
-    kDecalInvalid = 255,
-    kDecalMin = 0,
-    kDecalBlood = 0,
-    kDecalCloak = 1,
-    kDecalMax = 2,
-    kDecalDefault = 0,
-};
+    enum class DisableShadows_t : std::uint8_t {
+        kDisableShadows_None = 0x0,
+        kDisableShadows_All = 0x1,
+        kDisableShadows_Baked = 0x2,
+        kDisableShadows_Realtime = 0x3,
+        kDisableShadows_ReallyNone = 0x4,
+    };
 
-enum class ESceneObjectVisualization : std::int32_t {
-    SCENEOBJECT_VIS_NONE = 0,
-    SCENEOBJECT_VIS_OBJECT = 1,
-    SCENEOBJECT_VIS_MATERIAL = 2,
-    SCENEOBJECT_VIS_TEXTURE_SIZE = 3,
-    SCENEOBJECT_VIS_LOD = 4,
-    SCENEOBJECT_VIS_INSTANCING = 5,
-};
+    enum class DecalRtEncoding_t : std::uint8_t {
+        kDecalInvalid = 0xFF,
+        kDecalMin = 0x0, // MPropertySuppressEnumerator
+        kDecalBlood = 0x0,
+        kDecalCloak = 0x1,
+        kDecalMax = 0x2, // MPropertySuppressEnumerator
+        kDecalDefault = 0x0, // MPropertySuppressEnumerator
+    };
 
-struct CSSDSMsg_ViewTarget {
-    static constexpr std::size_t size = 0x30;
-    std::uint8_t _[0x8]; // 0x0 
-    std::uint8_t _[0x8]; // 0x8 
-    std::uint8_t _[0x4]; // 0x10 
-    std::uint8_t _[0x4]; // 0x14 
-    std::uint8_t _[0x4]; // 0x18 
-    std::uint8_t _[0x4]; // 0x1c 
-    std::uint8_t _[0x4]; // 0x20 
-    std::uint8_t _[0x4]; // 0x24 
-    std::uint8_t _[0x4]; // 0x28 
-    std::uint8_t _[0x4]; // 0x2c 
-};
+    enum class ESceneObjectVisualization : std::uint32_t {
+        SCENEOBJECT_VIS_NONE = 0x0,
+        SCENEOBJECT_VIS_OBJECT = 0x1,
+        SCENEOBJECT_VIS_MATERIAL = 0x2,
+        SCENEOBJECT_VIS_TEXTURE_SIZE = 0x3,
+        SCENEOBJECT_VIS_LOD = 0x4,
+        SCENEOBJECT_VIS_INSTANCING = 0x5,
+    };
 
-struct SceneViewId_t {
-    static constexpr std::size_t size = 0x10;
-    std::uint8_t _[0x8]; // 0x0 
-    std::uint8_t _[0x8]; // 0x8 
-};
+    // CSSDSMsg_EndFrame
+/*
+   fields: 1
+   size: 0x18
+*/
+    //   @MGetKV3ClassDefaults
+    class CSSDSMsg_EndFrame {
+    public:
+        SCHEMA_FIELD(CUtlVector<CSSDSEndFrameViewInfo>, m_Views                                         , 0x0) // CUtlVector<CSSDSEndFrameViewInfo>
+    };
 
-struct CSSDSEndFrameViewInfo {
-    static constexpr std::size_t size = 0x10;
-    std::uint8_t _[0x8]; // 0x0 
-    std::uint8_t _[0x8]; // 0x8 
-};
+    // CSSDSMsg_PostLayer
+/*
+   fields: 0
+   size: 0x30
+*/
+    //   @MGetKV3ClassDefaults
+    class CSSDSMsg_PostLayer {
+    public:
+    };
 
-struct CSSDSMsg_PostLayer {
-    static constexpr std::size_t size = 0x30;
-    std::uint8_t pad_0[0x30]; // 0x0
-};
+    // CSSDSMsg_ViewTarget
+/*
+   fields: 10
+   size: 0x30
+*/
+    //   @MGetKV3ClassDefaults
+    class CSSDSMsg_ViewTarget {
+    public:
+        SCHEMA_FIELD(::CUtlString                    , m_Name                                          , 0x0) // CUtlString
+        SCHEMA_FIELD(std::uint64_t                   , m_TextureId                                     , 0x8) // uint64
+        SCHEMA_FIELD(std::int32_t                    , m_nWidth                                        , 0x10) // int32
+        SCHEMA_FIELD(std::int32_t                    , m_nHeight                                       , 0x14) // int32
+        SCHEMA_FIELD(std::int32_t                    , m_nRequestedWidth                               , 0x18) // int32
+        SCHEMA_FIELD(std::int32_t                    , m_nRequestedHeight                              , 0x1C) // int32
+        SCHEMA_FIELD(std::int32_t                    , m_nNumMipLevels                                 , 0x20) // int32
+        SCHEMA_FIELD(std::int32_t                    , m_nDepth                                        , 0x24) // int32
+        SCHEMA_FIELD(std::int32_t                    , m_nMultisampleNumSamples                        , 0x28) // int32
+        SCHEMA_FIELD(std::int32_t                    , m_nFormat                                       , 0x2C) // int32
+    };
 
-struct CSSDSMsg_LayerBase {
-    static constexpr std::size_t size = 0x30;
-    std::uint8_t _[0x10]; // 0x0 
-    std::uint8_t _[0x8]; // 0x10 
-    std::uint8_t _[0x8]; // 0x18 
-    std::uint8_t _[0x8]; // 0x20 
-    std::uint8_t _[0x8]; // 0x28 
-};
+    // CSSDSMsg_PreLayer
+/*
+   fields: 0
+   size: 0x30
+*/
+    //   @MGetKV3ClassDefaults
+    class CSSDSMsg_PreLayer {
+    public:
+    };
 
-struct CSSDSMsg_PreLayer {
-    static constexpr std::size_t size = 0x30;
-    std::uint8_t pad_0[0x30]; // 0x0
-};
+    // CSSDSMsg_ViewRender
+/*
+   fields: 2
+   size: 0x18
+*/
+    //   @MGetKV3ClassDefaults
+    class CSSDSMsg_ViewRender {
+    public:
+        SCHEMA_FIELD(SceneViewId_t                   , m_viewId                                        , 0x0) // SceneViewId_t
+        SCHEMA_FIELD(::CUtlString                    , m_ViewName                                      , 0x10) // CUtlString
+    };
 
-struct CSSDSMsg_ViewTargetList {
-    static constexpr std::size_t size = 0x30;
-    std::uint8_t _[0x10]; // 0x0 
-    std::uint8_t _[0x8]; // 0x10 
-    std::uint8_t _[0x18]; // 0x18 
-};
+    // CSSDSMsg_LayerBase
+/*
+   fields: 5
+   size: 0x30
+*/
+    //   @MGetKV3ClassDefaults
+    class CSSDSMsg_LayerBase {
+    public:
+        SCHEMA_FIELD(SceneViewId_t                   , m_viewId                                        , 0x0) // SceneViewId_t
+        SCHEMA_FIELD(::CUtlString                    , m_ViewName                                      , 0x10) // CUtlString
+        SCHEMA_FIELD(std::uint64_t                   , m_nLayerId                                      , 0x18) // uint64
+        SCHEMA_FIELD(::CUtlString                    , m_LayerName                                     , 0x20) // CUtlString
+        SCHEMA_FIELD(::CUtlString                    , m_displayText                                   , 0x28) // CUtlString
+    };
 
-struct CSSDSMsg_ViewRender {
-    static constexpr std::size_t size = 0x18;
-    std::uint8_t _[0x10]; // 0x0 
-    std::uint8_t _[0x8]; // 0x10 
-};
+    // SceneViewId_t
+/*
+   fields: 2
+   size: 0x10
+*/
+    //   @MGetKV3ClassDefaults
+    class SceneViewId_t {
+    public:
+        SCHEMA_FIELD(std::uint64_t                   , m_nViewId                                       , 0x0) // uint64
+        SCHEMA_FIELD(std::uint64_t                   , m_nFrameCount                                   , 0x8) // uint64
+    };
 
-struct CSSDSMsg_EndFrame {
-    static constexpr std::size_t size = 0x18;
-    std::uint8_t _[0x18]; // 0x0 
-};
+    // CSSDSMsg_ViewTargetList
+/*
+   fields: 3
+   size: 0x30
+*/
+    //   @MGetKV3ClassDefaults
+    class CSSDSMsg_ViewTargetList {
+    public:
+        SCHEMA_FIELD(SceneViewId_t                   , m_viewId                                        , 0x0) // SceneViewId_t
+        SCHEMA_FIELD(::CUtlString                    , m_ViewName                                      , 0x10) // CUtlString
+        SCHEMA_FIELD(CUtlVector<CSSDSMsg_ViewTarget> , m_Targets                                       , 0x18) // CUtlVector<CSSDSMsg_ViewTarget>
+    };
 
-} // namespace
+    // CSSDSEndFrameViewInfo
+/*
+   fields: 2
+   size: 0x10
+*/
+    //   @MGetKV3ClassDefaults
+    class CSSDSEndFrameViewInfo {
+    public:
+        SCHEMA_FIELD(std::uint64_t                   , m_nViewId                                       , 0x0) // uint64
+        SCHEMA_FIELD(::CUtlString                    , m_ViewName                                      , 0x8) // CUtlString
+    };
+
+    // c_mesh_draw_primitive — per-element mesh draw primitive (0x68 bytes)
+    struct c_mesh_draw_primitive {
+        std::byte _pad0[0x20];
+        void* m_material;          // +0x20
+        std::byte _pad1[0x28];
+        std::uint32_t m_tint_color;   // +0x50 — packed RGBA uint32 (0xAABBGGRR)
+        float m_alpha_scale;       // +0x54 — alpha scale (default 1.0f)
+        std::byte _pad3[0x62 - 0x58];
+        std::uint16_t m_render_flags;  // +0x62
+        std::uint16_t m_render_flags2; // +0x64
+        std::byte _pad4[0x68 - 0x66];
+    };
+
+    // c_mesh_primitive_output_buffer — output buffer passed to GeneratePrimitives
+    struct c_mesh_primitive_output_buffer {
+        c_mesh_draw_primitive* m_out;              // +0x00
+        int m_max_output_primitives;               // +0x08
+        int m_start_primitive;                     // +0x0C
+    };
+
+    // CSceneAnimatableObject — owner of a scene object hierarchy
+    struct CSceneAnimatableObject {
+        std::byte _pad0[0xC0];                    // +0x00 padding
+        CEntityHandle m_hOwner;                    // +0xC0 entity handle
+    };
+
+} // namespace scenesystem

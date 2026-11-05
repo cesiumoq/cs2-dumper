@@ -1,0 +1,269 @@
+/* cesium dumper | generated from live schema */
+pub const worldrenderer_dll = struct {
+    pub const CEntityInstance = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+        _: [0x18]u8, // 0x10
+        _: [0x8]u8, // 0x28
+    };
+    pub const CEntityComponent = extern struct {
+        pad_0: [0x8]u8, // 0x0
+    };
+    pub const CScriptComponent = extern struct {
+        pad_0: [0x30]u8, // 0x0
+        _: [0x8]u8, // 0x30
+    };
+    pub const CEntityIdentity = extern struct {
+        pad_0: [0x14]u8, // 0x0
+        _: [0x4]u8, // 0x14
+        _: [0x8]u8, // 0x18
+        _: [0x10]u8, // 0x20
+        _: [0x8]u8, // 0x30
+        _: [0x4]u8, // 0x38
+        _: [0x4]u8, // 0x3c
+        _: [0x8]u8, // 0x40
+        _: [0x8]u8, // 0x48
+        _: [0x8]u8, // 0x50
+        _: [0x8]u8, // 0x58
+        _: [0x8]u8, // 0x60
+        _: [0x8]u8, // 0x68
+    };
+    pub const RTProxyInstanceInfo_t = extern struct {
+        _: [0x1]u8, // 0x0
+        _: [0x1]u8, // 0x1
+        _: [0x2]u8, // 0x2
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0x30]u8, // 0x18
+        _: [0x4]u8, // 0x48
+    };
+    pub const AggregateVertexAlbedoStreamOnDiskData_t = extern struct {
+        _: [0x10]u8, // 0x0
+    };
+    pub const SceneObject_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x30]u8, // 0x4
+        _: [0x4]u8, // 0x34
+        _: [0x4]u8, // 0x38
+        _: [0x14]u8, // 0x3c
+        _: [0x8]u8, // 0x50
+        _: [0x4]u8, // 0x58
+        _: [0xc]u8, // 0x5c
+        _: [0x2]u8, // 0x68
+        _: [0x2]u8, // 0x6a
+        _: [0x4]u8, // 0x6c
+        _: [0x4]u8, // 0x70
+        _: [0xc]u8, // 0x74
+        _: [0x8]u8, // 0x80
+        _: [0x8]u8, // 0x88
+    };
+    pub const AggregateLODSetup_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0x4]u8, // 0xc
+        _: [0x18]u8, // 0x10
+    };
+    pub const ExtraVertexStreamOverride_t = extern struct {
+        pad_0: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x20]u8, // 0x10
+    };
+    pub const ClutterTile_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x18]u8, // 0x8
+    };
+    pub const AggregateSceneObject_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x2]u8, // 0x8
+        _: [0x2]u8, // 0xa
+        _: [0x2]u8, // 0xc
+        _: [0x2]u8, // 0xe
+        _: [0x18]u8, // 0x10
+        _: [0x18]u8, // 0x28
+        _: [0x18]u8, // 0x40
+        _: [0x18]u8, // 0x58
+        _: [0x8]u8, // 0x70
+    };
+    pub const NodeData_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0xc]u8, // 0xc
+        _: [0x10]u8, // 0x18
+        _: [0x8]u8, // 0x28
+    };
+    pub const VMapResourceData_t = extern struct {
+        pad_0: [0x1]u8, // 0x0
+    };
+    pub const AggregateInstanceStreamOnDiskData_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x10]u8, // 0x8
+    };
+    pub const RTProxyBLAS_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x2]u8, // 0x10
+        _: [0x2]u8, // 0x12
+        _: [0x18]u8, // 0x14
+        _: [0xc]u8, // 0x2c
+        _: [0xc]u8, // 0x38
+    };
+    pub const AggregateVertexEmissiveStreamOnDiskData_t = extern struct {
+        _: [0x10]u8, // 0x0
+    };
+    pub const ClutterSceneObject_t = extern struct {
+        _: [0x18]u8, // 0x0
+        _: [0x4]u8, // 0x18
+        _: [0x4]u8, // 0x1c
+        _: [0x30]u8, // 0x20
+        _: [0x18]u8, // 0x50
+        _: [0x18]u8, // 0x68
+        _: [0x18]u8, // 0x80
+        _: [0x8]u8, // 0x98
+        _: [0x4]u8, // 0xa0
+        _: [0x4]u8, // 0xa4
+        _: [0x8]u8, // 0xa8
+    };
+    pub const WorldBuilderParams_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x1]u8, // 0x4
+        _: [0x3]u8, // 0x5
+        _: [0x48]u8, // 0x8
+        _: [0x8]u8, // 0x50
+        _: [0x8]u8, // 0x58
+    };
+    pub const PermEntityLumpData_t = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+        _: [0x18]u8, // 0x10
+        _: [0x10]u8, // 0x28
+    };
+    pub const WorldNode_t = extern struct {
+        _: [0x18]u8, // 0x0
+        _: [0x18]u8, // 0x18
+        _: [0x18]u8, // 0x30
+        _: [0x18]u8, // 0x48
+        _: [0x18]u8, // 0x60
+        _: [0x18]u8, // 0x78
+        _: [0x18]u8, // 0x90
+        _: [0x18]u8, // 0xa8
+        _: [0x18]u8, // 0xc0
+        _: [0x18]u8, // 0xd8
+        _: [0x18]u8, // 0xf0
+        _: [0x18]u8, // 0x108
+        _: [0x18]u8, // 0x120
+        _: [0x8]u8, // 0x138
+        _: [0x48]u8, // 0x140
+        _: [0x8]u8, // 0x188
+    };
+    pub const BaseSceneObjectOverride_t = extern struct {
+        _: [0x4]u8, // 0x0
+    };
+    pub const EntityIOConnectionData_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+        _: [0x8]u8, // 0x10
+        _: [0x8]u8, // 0x18
+        _: [0x8]u8, // 0x20
+        _: [0x4]u8, // 0x28
+        _: [0x4]u8, // 0x2c
+        _: [0x10]u8, // 0x30
+    };
+    pub const BakedLightingInfo_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x8]u8, // 0x8
+        _: [0x1]u8, // 0x10
+        _: [0x1]u8, // 0x11
+        _: [0x1]u8, // 0x12
+        _: [0x1]u8, // 0x13
+        _: [0x1]u8, // 0x14
+        _: [0x1]u8, // 0x15
+        _: [0x2]u8, // 0x16
+        _: [0x18]u8, // 0x18
+        _: [0x18]u8, // 0x30
+    };
+    pub const VoxelVisBlockOffset_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+    };
+    pub const InfoForResourceTypeVMapResourceData_t = extern struct {
+        pad_0: [0x1]u8, // 0x0
+    };
+    pub const WorldNodeOnDiskBufferData_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x18]u8, // 0x8
+        _: [0x18]u8, // 0x20
+    };
+    pub const AggregateMeshInfo_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x1]u8, // 0x4
+        _: [0x1]u8, // 0x5
+        _: [0x2]u8, // 0x6
+        _: [0x2]u8, // 0x8
+        _: [0x2]u8, // 0xa
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0x4]u8, // 0x18
+        _: [0x4]u8, // 0x1c
+        _: [0x4]u8, // 0x20
+        _: [0x4]u8, // 0x24
+        _: [0x4]u8, // 0x28
+    };
+    pub const World_t = extern struct {
+        _: [0x60]u8, // 0x0
+        _: [0x18]u8, // 0x60
+        _: [0x48]u8, // 0x78
+        _: [0x18]u8, // 0xc0
+    };
+    pub const BakedLightingInfo_t__BakedShadowAssignment_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+    };
+    pub const MaterialOverride_t = extern struct {
+        pad_0: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x8]u8, // 0x8
+        _: [0x8]u8, // 0x10
+        _: [0x10]u8, // 0x18
+    };
+    pub const AggregateRTProxySceneObject_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x18]u8, // 0x8
+        _: [0x18]u8, // 0x20
+        _: [0x10]u8, // 0x38
+        _: [0x10]u8, // 0x48
+        _: [0x10]u8, // 0x58
+        _: [0x10]u8, // 0x68
+    };
+    pub const EntityKeyValueData_t = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        _: [0x18]u8, // 0x8
+        _: [0x18]u8, // 0x20
+    };
+    pub const CVoxelVisibility = extern struct {
+        pad_0: [0x40]u8, // 0x0
+        _: [0x4]u8, // 0x40
+        _: [0x4]u8, // 0x44
+        _: [0xc]u8, // 0x48
+        _: [0xc]u8, // 0x54
+        _: [0x4]u8, // 0x60
+        _: [0x4]u8, // 0x64
+        _: [0x4]u8, // 0x68
+        _: [0x8]u8, // 0x6c
+        _: [0x8]u8, // 0x74
+        _: [0x8]u8, // 0x7c
+        _: [0x8]u8, // 0x84
+        _: [0x8]u8, // 0x8c
+        _: [0xc]u8, // 0x94
+    };
+};

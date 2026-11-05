@@ -1,691 +1,466 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:59 04/11/2026 (GMT)
+/*  Dumped At       : 22:10 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
 
-/*                       cesium dumper
-/*                  https://cs2-dump.vercel.app
-/*  Generated from the live CS2 schema system.
-*/
-
 #pragma once
-#include <cstddef>
-#include <cstdint>
-
-namespace cs2::pulse_system_dll {
-
-enum class PulseBestOutflowRules_t : std::int32_t {
-    SORT_BY_NUMBER_OF_VALID_CRITERIA = 0,
-    SORT_BY_OUTFLOW_INDEX = 1,
-};
-
-enum class PulseTestEnumFlags_t : std::int32_t {
-    NONE = 0,
-    FIRST = 1,
-    SECOND = 2,
-    THIRD = 4,
-};
-
-enum class PulseTestEnumShape_t : std::int32_t {
-    CIRCLE = 100,
-    SQUARE = 200,
-    TRIANGLE = 300,
-};
-
-enum class PulseCursorCancelPriority_t : std::int32_t {
-    None = 0,
-    CancelOnSucceeded = 1,
-    SoftCancel = 2,
-    HardCancel = 3,
-};
-
-enum class PulseTestEnumFlagsAlt_t : std::int32_t {
-    NONE = 0,
-    FIRST = 1,
-};
-
-enum class PulseMethodCallMode_t : std::int32_t {
-    SYNC_WAIT_FOR_COMPLETION = 0,
-    ASYNC_FIRE_AND_FORGET = 1,
-};
-
-enum class PulseTestEnumColor_t : std::int32_t {
-    BLACK = 0,
-    WHITE = 1,
-    RED = 2,
-    GREEN = 3,
-    BLUE = 4,
-};
-
-enum class PulseCursorWakePriority_t : std::int32_t {
-    WakeElegantly = 0,
-    WakeImmediate = 1,
-};
-
-struct CPulseCell_Step_TestDomainDestroyFakeEntity {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_WaitForCursorsWithTag {
-    static constexpr std::size_t size = 0x130;
-    std::uint8_t pad_0[0x128]; // 0x0
-    std::uint8_t _[0x4]; // 0x128 
-    std::uint8_t _[0x4]; // 0x12c 
-};
-
-struct CPulseCell_RaceCursors {
-    static constexpr std::size_t size = 0x138;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x18]; // 0xd8 
-    std::uint8_t _[0x48]; // 0xf0 
-};
-
-struct CPulseCell_Test_NoInflow {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseGraphInstance_TestDomain_FakeEntityOwner {
-    static constexpr std::size_t size = 0x88;
-    std::uint8_t pad_0[0x88]; // 0x0
-};
-
-struct CPulseCell_Base {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t _[0x40]; // 0x8 
-};
-
-struct CPulse_ResumePoint {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CTestDomainDerived_Cursor {
-    static constexpr std::size_t size = 0xe0;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x4]; // 0xd8 
-    std::uint8_t _[0x4]; // 0xdc 
-};
-
-struct CPulseCell_PickBestOutflowSelector {
-    static constexpr std::size_t size = 0x68;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x8]; // 0x48 
-    std::uint8_t _[0x18]; // 0x50 
-};
-
-struct CPulseCell_WaitForObservable {
-    static constexpr std::size_t size = 0x1b0;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x90]; // 0xd8 
-    std::uint8_t _[0x48]; // 0x168 
-};
-
-struct CPulse_OutflowConnection {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t _[0x10]; // 0x0 
-    std::uint8_t _[0x4]; // 0x10 
-    std::uint8_t _[0x4]; // 0x14 
-    std::uint8_t _[0x30]; // 0x18 
-};
-
-struct CPulseGraphDef {
-    static constexpr std::size_t size = 0x1c0;
-    std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t _[0x10]; // 0x8 
-    std::uint8_t _[0x18]; // 0x18 
-    std::uint8_t _[0x10]; // 0x30 
-    std::uint8_t _[0x10]; // 0x40 
-    std::uint8_t _[0x18]; // 0x50 
-    std::uint8_t _[0x18]; // 0x68 
-    std::uint8_t _[0x18]; // 0x80 
-    std::uint8_t _[0x18]; // 0x98 
-    std::uint8_t _[0x18]; // 0xb0 
-    std::uint8_t _[0x18]; // 0xc8 
-    std::uint8_t _[0x18]; // 0xe0 
-    std::uint8_t _[0x18]; // 0xf8 
-    std::uint8_t _[0x18]; // 0x110 
-    std::uint8_t _[0x18]; // 0x128 
-    std::uint8_t _[0x80]; // 0x140 
-};
-
-struct CPulseCell_TestYieldForever {
-    static constexpr std::size_t size = 0xd8;
-    std::uint8_t pad_0[0xd8]; // 0x0
-};
-
-struct CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView {
-    static constexpr std::size_t size = 0xd0;
-    std::uint8_t pad_0[0xd0]; // 0x0
-};
-
-struct CPulseCell_TestWaitWithCursorState__InstanceState_t {
-    static constexpr std::size_t size = 0x4;
-    std::uint8_t _[0x4]; // 0x0 
-};
-
-struct CPulseCell_FireCursors {
-    static constexpr std::size_t size = 0x140;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x18]; // 0xd8 
-    std::uint8_t _[0x8]; // 0xf0 
-    std::uint8_t _[0x48]; // 0xf8 
-};
-
-struct CPulseCell_Timeline__TimelineEvent_t {
-    static constexpr std::size_t size = 0x50;
-    std::uint8_t _[0x8]; // 0x0 
-    std::uint8_t _[0x48]; // 0x8 
-};
-
-struct CPulseCell_IntervalTimer__CursorState_t {
-    static constexpr std::size_t size = 0x14;
-    std::uint8_t _[0x4]; // 0x0 
-    std::uint8_t _[0x4]; // 0x4 
-    std::uint8_t _[0x4]; // 0x8 
-    std::uint8_t _[0x4]; // 0xc 
-    std::uint8_t _[0x4]; // 0x10 
-};
-
-struct CPulseCell_BaseRequirement {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_BaseState {
-    static constexpr std::size_t size = 0xd8;
-    std::uint8_t pad_0[0xd8]; // 0x0
-};
-
-struct OutflowWithRequirements_t {
-    static constexpr std::size_t size = 0x80;
-    std::uint8_t _[0x48]; // 0x0 
-    std::uint8_t _[0x8]; // 0x48 
-    std::uint8_t _[0x18]; // 0x50 
-    std::uint8_t _[0x18]; // 0x68 
-};
-
-struct CPulseCell_IsRequirementValid {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_Value_Gradient {
-    static constexpr std::size_t size = 0x60;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x18]; // 0x48 
-};
-
-struct CPulseCell_TestWaitWithAutoTracepoints {
-    static constexpr std::size_t size = 0x128;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x8]; // 0xd8 
-    std::uint8_t _[0x48]; // 0xe0 
-};
-
-struct PulseNodeDynamicOutflows_t__DynamicOutflow_t {
-    static constexpr std::size_t size = 0x50;
-    std::uint8_t _[0x8]; // 0x0 
-    std::uint8_t _[0x48]; // 0x8 
-};
-
-struct CPulseCell_Test_MultiOutflow_WithParams {
-    static constexpr std::size_t size = 0xd8;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x48]; // 0x48 
-    std::uint8_t _[0x48]; // 0x90 
-};
-
-struct CBasePulseGraphInstance {
-    static constexpr std::size_t size = 0x88;
-    std::uint8_t pad_0[0x88]; // 0x0
-};
-
-struct CPulseCell_Inflow_GraphHook {
-    static constexpr std::size_t size = 0x90;
-    std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t _[0x10]; // 0x80 
-};
-
-struct SignatureOutflow_Resume {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_Test_MultiOutflow_WithParams_Yielding__CursorState_t {
-    static constexpr std::size_t size = 0x4;
-    std::uint8_t _[0x4]; // 0x0 
-};
-
-struct CPulseTurtleGraphicsCursor {
-    static constexpr std::size_t size = 0xf0;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x4]; // 0xd8 
-    std::uint8_t _[0x8]; // 0xdc 
-    std::uint8_t _[0x4]; // 0xe4 
-    std::uint8_t _[0x8]; // 0xe8 
-};
-
-struct CPulseCell_TestWaitWithCursorState__CursorState_t {
-    static constexpr std::size_t size = 0x24;
-    std::uint8_t _[0x4]; // 0x0 
-    std::uint8_t _[0x4]; // 0x4 
-    std::uint8_t _[0xc]; // 0x8 
-    std::uint8_t _[0x8]; // 0x14 
-    std::uint8_t _[0x8]; // 0x1c 
-};
-
-struct CPulseCell_Inflow_BaseEntrypoint {
-    static constexpr std::size_t size = 0x80;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x8]; // 0x48 
-    std::uint8_t _[0x30]; // 0x50 
-};
-
-struct CPulseCell_Test_MultiInflow_NoDefault {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_WaitForCursorsWithTagBase {
-    static constexpr std::size_t size = 0x128;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x8]; // 0xd8 
-    std::uint8_t _[0x48]; // 0xe0 
-};
-
-struct CPulse_InvokeBinding {
-    static constexpr std::size_t size = 0xb0;
-    std::uint8_t _[0x30]; // 0x0 
-    std::uint8_t _[0x10]; // 0x30 
-    std::uint8_t _[0x4]; // 0x40 
-    std::uint8_t _[0x4]; // 0x44 
-    std::uint8_t _[0x68]; // 0x48 
-};
-
-struct CPulseCell_IntervalTimer {
-    static constexpr std::size_t size = 0x168;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x48]; // 0xd8 
-    std::uint8_t _[0x48]; // 0x120 
-};
-
-struct CPulseCell_BaseLerp {
-    static constexpr std::size_t size = 0x120;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x48]; // 0xd8 
-};
-
-struct CPulseCell_Value_TestValue50 {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_Test_MultiOutflow_WithParams_Yielding {
-    static constexpr std::size_t size = 0x240;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x48]; // 0xd8 
-    std::uint8_t _[0x48]; // 0x120 
-    std::uint8_t _[0x48]; // 0x168 
-    std::uint8_t _[0x48]; // 0x1b0 
-    std::uint8_t _[0x48]; // 0x1f8 
-};
-
-struct CPulseCell_Value_Curve {
-    static constexpr std::size_t size = 0x88;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x40]; // 0x48 
-};
-
-struct CPulseCell_Inflow_EventHandler {
-    static constexpr std::size_t size = 0x90;
-    std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t _[0x10]; // 0x80 
-};
-
-struct CPulseCell_BaseFlow {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_Step_TestDomainTracepoint {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_Outflow_CycleShuffled__InstanceState_t {
-    static constexpr std::size_t size = 0x28;
-    std::uint8_t _[0x20]; // 0x0 
-    std::uint8_t _[0x8]; // 0x20 
-};
-
-struct CPulseCell_BaseLerp__CursorState_t {
-    static constexpr std::size_t size = 0x8;
-    std::uint8_t _[0x4]; // 0x0 
-    std::uint8_t _[0x4]; // 0x4 
-};
-
-struct CPulseGraphInstance_TestDomain_Derived {
-    static constexpr std::size_t size = 0xd8;
-    std::uint8_t pad_0[0xd0]; // 0x0
-    std::uint8_t _[0x8]; // 0xd0 
-};
-
-struct CPulseGraphInstance_TestDomain {
-    static constexpr std::size_t size = 0xd0;
-    std::uint8_t pad_0[0xa0]; // 0x0
-    std::uint8_t _[0x1]; // 0xa0 
-    std::uint8_t _[0x1]; // 0xa1 
-    std::uint8_t _[0x1]; // 0xa2 
-    std::uint8_t _[0x1]; // 0xa3 
-    std::uint8_t _[0x4]; // 0xa4 
-    std::uint8_t _[0x4]; // 0xa8 
-    std::uint8_t _[0x4]; // 0xac 
-    std::uint8_t _[0x18]; // 0xb0 
-    std::uint8_t _[0x8]; // 0xc8 
-};
-
-struct SignatureOutflow_Continue {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_Timeline {
-    static constexpr std::size_t size = 0x140;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x18]; // 0xd8 
-    std::uint8_t _[0x8]; // 0xf0 
-    std::uint8_t _[0x48]; // 0xf8 
-};
-
-struct CPulseCell_Inflow_EntOutputHandler {
-    static constexpr std::size_t size = 0xb8;
-    std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t _[0x10]; // 0x80 
-    std::uint8_t _[0x10]; // 0x90 
-    std::uint8_t _[0x18]; // 0xa0 
-};
-
-struct CPulseCell_Outflow_TestExplicitYesNo {
-    static constexpr std::size_t size = 0xd8;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x48]; // 0x48 
-    std::uint8_t _[0x48]; // 0x90 
-};
-
-struct CPulseCell_Outflow_TestRandomYesNo {
-    static constexpr std::size_t size = 0xd8;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x48]; // 0x48 
-    std::uint8_t _[0x48]; // 0x90 
-};
-
-struct CPulseCell_Outflow_CycleOrdered__InstanceState_t {
-    static constexpr std::size_t size = 0x4;
-    std::uint8_t _[0x4]; // 0x0 
-};
-
-struct CPulseCell_LimitCount__InstanceState_t {
-    static constexpr std::size_t size = 0x4;
-    std::uint8_t _[0x4]; // 0x0 
-};
-
-struct CPulseCell_Test_MultiInflow_WithDefault {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_Step_DebugLog {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_BaseYieldingInflow {
-    static constexpr std::size_t size = 0xd8;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x48]; // 0x48 
-    std::uint8_t _[0x48]; // 0x90 
-};
-
-struct PulseNodeDynamicOutflows_t {
-    static constexpr std::size_t size = 0x18;
-    std::uint8_t _[0x18]; // 0x0 
-};
-
-struct CPulseCell_IsRequirementValid__Criteria_t {
-    static constexpr std::size_t size = 0x1;
-    std::uint8_t _[0x1]; // 0x0 
-};
-
-struct CPulseCell_Inflow_ObservableVariableListener {
-    static constexpr std::size_t size = 0x88;
-    std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t _[0x2]; // 0x80 
-    std::uint8_t _[0x6]; // 0x82 
-};
-
-struct CPulseCell_Outflow_CycleOrdered {
-    static constexpr std::size_t size = 0x60;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x18]; // 0x48 
-};
-
-struct PulseSelectorOutflowList_t {
-    static constexpr std::size_t size = 0x18;
-    std::uint8_t _[0x18]; // 0x0 
-};
-
-struct CPulseGraphInstance_TurtleGraphics {
-    static constexpr std::size_t size = 0xb0;
-    std::uint8_t pad_0[0xb0]; // 0x0
-};
-
-struct CPulseCell_Val_TestDomainGetEntityName {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_Inflow_Wait {
-    static constexpr std::size_t size = 0x120;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x48]; // 0xd8 
-};
-
-struct CPulseCell_TestWaitWithCursorState {
-    static constexpr std::size_t size = 0x168;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x48]; // 0xd8 
-    std::uint8_t _[0x48]; // 0x120 
-};
-
-struct CPulseCell_Outflow_CycleShuffled {
-    static constexpr std::size_t size = 0x60;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x18]; // 0x48 
-};
-
-struct CPulseCell_Inflow_Method {
-    static constexpr std::size_t size = 0xc0;
-    std::uint8_t pad_0[0x80]; // 0x0
-    std::uint8_t _[0x10]; // 0x80 
-    std::uint8_t _[0x8]; // 0x90 
-    std::uint8_t _[0x8]; // 0x98 
-    std::uint8_t _[0x10]; // 0xa0 
-    std::uint8_t _[0x10]; // 0xb0 
-};
-
-struct CPulseCell_BaseValue {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_BooleanSwitchState {
-    static constexpr std::size_t size = 0x1f8;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x90]; // 0xd8 
-    std::uint8_t _[0x48]; // 0x168 
-    std::uint8_t _[0x48]; // 0x1b0 
-};
-
-struct CPulseCell_Inflow_Yield {
-    static constexpr std::size_t size = 0x120;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x48]; // 0xd8 
-};
-
-struct CPulseCell_Unknown {
-    static constexpr std::size_t size = 0x58;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x10]; // 0x48 
-};
-
-struct CPulseCell_Outflow_CycleRandom {
-    static constexpr std::size_t size = 0x60;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x18]; // 0x48 
-};
-
-struct CPulseCell_Step_PublicOutput {
-    static constexpr std::size_t size = 0x50;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x8]; // 0x48 
-};
-
-struct CPulseCell_Val_TestDomainFindEntityByName {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulse_BlackboardReference {
-    static constexpr std::size_t size = 0x28;
-    std::uint8_t _[0x8]; // 0x0 
-    std::uint8_t _[0x10]; // 0x8 
-    std::uint8_t _[0x8]; // 0x18 
-    std::uint8_t _[0x8]; // 0x20 
-};
-
-struct CPulseCell_ReturnValues {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_Value_RandomInt {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_TestEnums {
-    static constexpr std::size_t size = 0x50;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x4]; // 0x48 
-    std::uint8_t _[0x4]; // 0x4c 
-};
-
-struct CPulseCell_Step_TestDomainEntFire {
-    static constexpr std::size_t size = 0x50;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x8]; // 0x48 
-};
-
-struct CPulseCell_ExampleSelector {
-    static constexpr std::size_t size = 0x60;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x18]; // 0x48 
-};
-
-struct CPulse_CallInfo {
-    static constexpr std::size_t size = 0x60;
-    std::uint8_t _[0x10]; // 0x0 
-    std::uint8_t _[0x8]; // 0x10 
-    std::uint8_t _[0x30]; // 0x18 
-    std::uint8_t _[0x4]; // 0x48 
-    std::uint8_t _[0x4]; // 0x4c 
-    std::uint8_t _[0x4]; // 0x50 
-    std::uint8_t _[0x4]; // 0x54 
-    std::uint8_t _[0x8]; // 0x58 
-};
-
-struct CPulseCell_InlineNodeSkipSelector {
-    static constexpr std::size_t size = 0xb0;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x4]; // 0x48 
-    std::uint8_t _[0x4]; // 0x4c 
-    std::uint8_t _[0x18]; // 0x50 
-    std::uint8_t _[0x48]; // 0x68 
-};
-
-struct CPulseCell_ExampleCriteria__Criteria_t {
-    static constexpr std::size_t size = 0xc;
-    std::uint8_t _[0x4]; // 0x0 
-    std::uint8_t _[0x4]; // 0x4 
-    std::uint8_t _[0x4]; // 0x8 
-};
-
-struct CPulseCell_ExampleCriteria {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_LimitCount {
-    static constexpr std::size_t size = 0x50;
-    std::uint8_t pad_0[0x48]; // 0x0
-    std::uint8_t _[0x8]; // 0x48 
-};
-
-struct CPulseCell_Step_CallExternalMethod {
-    static constexpr std::size_t size = 0x150;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x10]; // 0xd8 
-    std::uint8_t _[0x8]; // 0xe8 
-    std::uint8_t _[0x10]; // 0xf0 
-    std::uint8_t _[0x8]; // 0x100 
-    std::uint8_t _[0x48]; // 0x108 
-};
-
-struct CPulseCell_LimitCount__Criteria_t {
-    static constexpr std::size_t size = 0x1;
-    std::uint8_t _[0x1]; // 0x0 
-};
-
-struct CPulseCell_Step_TestDomainCreateFakeEntity {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseCell_TestYieldWithObservables {
-    static constexpr std::size_t size = 0x250;
-    std::uint8_t pad_0[0xd8]; // 0x0
-    std::uint8_t _[0x8]; // 0xd8 
-    std::uint8_t _[0x90]; // 0xe0 
-    std::uint8_t _[0x8]; // 0x170 
-    std::uint8_t _[0x90]; // 0x178 
-    std::uint8_t _[0x48]; // 0x208 
-};
-
-struct CPulseCell_CursorQueue {
-    static constexpr std::size_t size = 0x130;
-    std::uint8_t pad_0[0x128]; // 0x0
-    std::uint8_t _[0x8]; // 0x128 
-};
-
-struct CPulseCell_Value_RandomFloat {
-    static constexpr std::size_t size = 0x48;
-    std::uint8_t pad_0[0x48]; // 0x0
-};
-
-struct CPulseExecCursor {
-    static constexpr std::size_t size = 0xd8;
-    std::uint8_t pad_0[0xd8]; // 0x0
-};
-
-struct TestComponent_t {
-    static constexpr std::size_t size = 0x10;
-    std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t _[0x8]; // 0x8 
-};
-
-} // namespace
+#include "../macros.hpp"
+
+namespace pulse_system {
+
+    class CPulseCell_Step_TestDomainDestroyFakeEntity;
+    class CPulseCell_Test_NoInflow;
+    class CPulseGraphInstance_TestDomain_FakeEntityOwner;
+    class CTestDomainDerived_Cursor;
+    class CPulseCell_TestYieldForever;
+    class CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView;
+    class CPulseCell_TestWaitWithCursorState_InstanceState_t;
+    class CPulseCell_TestWaitWithAutoTracepoints;
+    class CPulseCell_Test_MultiOutflow_WithParams;
+    class CPulseCell_Test_MultiOutflow_WithParams_Yielding_CursorState_t;
+    class CPulseTurtleGraphicsCursor;
+    class CPulseCell_TestWaitWithCursorState_CursorState_t;
+    class CPulseCell_Test_MultiInflow_NoDefault;
+    class CPulseCell_Value_TestValue50;
+    class CPulseCell_Test_MultiOutflow_WithParams_Yielding;
+    class CPulseCell_Step_TestDomainTracepoint;
+    class CPulseGraphInstance_TestDomain_Derived;
+    class CPulseGraphInstance_TestDomain;
+    class CPulseCell_Outflow_TestExplicitYesNo;
+    class CPulseCell_Outflow_TestRandomYesNo;
+    class CPulseCell_Test_MultiInflow_WithDefault;
+    class CPulseGraphInstance_TurtleGraphics;
+    class CPulseCell_Val_TestDomainGetEntityName;
+    class CPulseCell_TestWaitWithCursorState;
+    class CPulseCell_Val_TestDomainFindEntityByName;
+    class CPulseCell_TestEnums;
+    class CPulseCell_Step_TestDomainEntFire;
+    class CPulseCell_ExampleSelector;
+    class CPulseCell_ExampleCriteria_Criteria_t;
+    class CPulseCell_ExampleCriteria;
+    class CPulseCell_Step_TestDomainCreateFakeEntity;
+    class CPulseCell_TestYieldWithObservables;
+    class TestComponent_t;
+
+    enum class PulseTestEnumFlags_t : std::uint32_t {
+        NONE = 0x0, // MPropertyFriendlyName
+        FIRST = 0x1, // MPropertyFriendlyName
+        SECOND = 0x2, // MPropertyFriendlyName
+        THIRD = 0x4, // MPropertyFriendlyName
+    };
+
+    enum class PulseTestEnumShape_t : std::uint32_t {
+        CIRCLE = 0x64, // MPropertyFriendlyName
+        SQUARE = 0xC8, // MPropertyFriendlyName
+        TRIANGLE = 0x12C, // MPropertyFriendlyName
+    };
+
+    enum class PulseTestEnumFlagsAlt_t : std::uint32_t {
+        NONE = 0x0,
+        FIRST = 0x1,
+    };
+
+    enum class PulseTestEnumColor_t : std::uint32_t {
+        BLACK = 0x0, // MPropertyFriendlyName
+        WHITE = 0x1, // MPropertyFriendlyName
+        RED = 0x2, // MPropertyFriendlyName
+        GREEN = 0x3, // MPropertyFriendlyName
+        BLUE = 0x4, // MPropertyFriendlyName
+    };
+
+    // CPulseCell_TestEnums
+/*
+   fields: 2
+   size: 0x50
+*/
+    //   @MGetKV3ClassDefaults
+    //   @MPropertyFriendlyName
+    class CPulseCell_TestEnums {
+    public:
+        SCHEMA_FIELD(PulseTestEnumColor_t            , m_nReferenceColor                               , 0x48) // PulseTestEnumColor_t
+        SCHEMA_FIELD(PulseTestEnumFlags_t            , m_nReferenceFlags                               , 0x4C) // PulseTestEnumFlags_t
+    };
+
+    // CPulseGraphInstance_TestDomain_FakeEntityOwner
+/*
+   fields: 0
+   size: 0x88
+*/
+    class CPulseGraphInstance_TestDomain_FakeEntityOwner {
+    public:
+    };
+
+    // CPulseCell_TestYieldForever
+/*
+   fields: 0
+   size: 0xD8
+*/
+    //   @MGetKV3ClassDefaults
+    class CPulseCell_TestYieldForever {
+    public:
+    };
+
+    // CPulseCell_Outflow_TestExplicitYesNo
+/*
+   fields: 2
+   size: 0xD8
+*/
+    //   @MGetKV3ClassDefaults
+    //   @MPropertyFriendlyName
+    //   @MPropertyDescription
+    class CPulseCell_Outflow_TestExplicitYesNo {
+    public:
+        SCHEMA_FIELD(::animationsystem::CPulse_OutflowConnection, m_Yes                                           , 0x48) // CPulse_OutflowConnection [MPropertyFriendlyName]
+        SCHEMA_FIELD(::animationsystem::CPulse_OutflowConnection, m_No                                            , 0x90) // CPulse_OutflowConnection [MPropertyFriendlyName]
+    };
+
+    // CPulseCell_Step_TestDomainDestroyFakeEntity
+/*
+   fields: 0
+   size: 0x48
+*/
+    //   @MGetKV3ClassDefaults
+    //   @MPropertyFriendlyName
+    class CPulseCell_Step_TestDomainDestroyFakeEntity {
+    public:
+    };
+
+    // CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView
+/*
+   fields: 0
+   size: 0xD0
+*/
+    class CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView {
+    public:
+    };
+
+    // CPulseCell_Step_TestDomainCreateFakeEntity
+/*
+   fields: 0
+   size: 0x48
+*/
+    //   @MGetKV3ClassDefaults
+    //   @MPropertyFriendlyName
+    class CPulseCell_Step_TestDomainCreateFakeEntity {
+    public:
+    };
+
+    // CPulseCell_Test_MultiInflow_WithDefault
+/*
+   fields: 0
+   size: 0x48
+*/
+    //   @MGetKV3ClassDefaults
+    class CPulseCell_Test_MultiInflow_WithDefault {
+    public:
+    };
+
+    // CTestDomainDerived_Cursor
+/*
+   fields: 2
+   size: 0xE0
+*/
+    class CTestDomainDerived_Cursor {
+    public:
+        SCHEMA_FIELD(std::int32_t                    , m_nCursorValueA                                 , 0xD8) // int32
+        SCHEMA_FIELD(std::int32_t                    , m_nCursorValueB                                 , 0xDC) // int32
+    };
+
+    // CPulseCell_TestWaitWithAutoTracepoints
+/*
+   fields: 2
+   size: 0x128
+*/
+    //   @MGetKV3ClassDefaults
+    //   @MPropertyFriendlyName
+    class CPulseCell_TestWaitWithAutoTracepoints {
+    public:
+        SCHEMA_FIELD(::CUtlString                    , m_TracePrefix                                   , 0xD8) // CUtlString
+        SCHEMA_FIELD(::animationsystem::CPulse_ResumePoint, m_WakeResume                                    , 0xE0) // CPulse_ResumePoint
+    };
+
+    // CPulseCell_ExampleCriteria
+/*
+   fields: 0
+   size: 0x48
+*/
+    //   @MGetKV3ClassDefaults
+    //   @MPropertyFriendlyName
+    //   @MPropertyDescription
+    class CPulseCell_ExampleCriteria {
+    public:
+    };
+
+    // CPulseCell_Outflow_TestRandomYesNo
+/*
+   fields: 2
+   size: 0xD8
+*/
+    //   @MGetKV3ClassDefaults
+    //   @MPropertyFriendlyName
+    //   @MPropertyDescription
+    class CPulseCell_Outflow_TestRandomYesNo {
+    public:
+        SCHEMA_FIELD(::animationsystem::CPulse_OutflowConnection, m_Yes                                           , 0x48) // CPulse_OutflowConnection [MPropertyFriendlyName, MPropertyDescription]
+        SCHEMA_FIELD(::animationsystem::CPulse_OutflowConnection, m_No                                            , 0x90) // CPulse_OutflowConnection [MPropertyFriendlyName, MPropertyDescription]
+    };
+
+    // CPulseCell_Val_TestDomainFindEntityByName
+/*
+   fields: 0
+   size: 0x48
+*/
+    //   @MGetKV3ClassDefaults
+    //   @MPropertyFriendlyName
+    class CPulseCell_Val_TestDomainFindEntityByName {
+    public:
+    };
+
+/*
+   CPulseCell_TestWaitWithCursorState::InstanceState_t
+   fields: 1
+   size: 0x4
+*/
+    //   @MGetKV3ClassDefaults
+    class CPulseCell_TestWaitWithCursorState_InstanceState_t {
+    public:
+        SCHEMA_FIELD(std::int32_t                    , m_nDummy                                        , 0x0) // int32
+    };
+
+    // CPulseCell_Test_MultiOutflow_WithParams
+/*
+   fields: 2
+   size: 0xD8
+*/
+    //   @MGetKV3ClassDefaults
+    class CPulseCell_Test_MultiOutflow_WithParams {
+    public:
+        SCHEMA_FIELD(::animationsystem::SignatureOutflow_Continue, m_Out1                                          , 0x48) // SignatureOutflow_Continue
+        SCHEMA_FIELD(::animationsystem::SignatureOutflow_Continue, m_Out2                                          , 0x90) // SignatureOutflow_Continue
+    };
+
+    // CPulseCell_ExampleSelector
+/*
+   fields: 1
+   size: 0x60
+*/
+    //   @MGetKV3ClassDefaults
+    //   @MPropertyFriendlyName
+    //   @MPropertyDescription
+    //   @MPulseEditorHeaderIcon
+    //   @MPulseEditorCanvasItemSpecKV3
+    class CPulseCell_ExampleSelector {
+    public:
+        SCHEMA_FIELD(::animationsystem::PulseSelectorOutflowList_t, m_OutflowList                                   , 0x48) // PulseSelectorOutflowList_t
+    };
+
+    // CPulseGraphInstance_TestDomain_Derived
+/*
+   fields: 1
+   size: 0xD8
+*/
+    class CPulseGraphInstance_TestDomain_Derived {
+    public:
+        SCHEMA_FIELD(std::int32_t                    , m_nInstanceValueX                               , 0xD0) // int32
+    };
+
+    // CPulseCell_Test_MultiInflow_NoDefault
+/*
+   fields: 0
+   size: 0x48
+*/
+    //   @MGetKV3ClassDefaults
+    class CPulseCell_Test_MultiInflow_NoDefault {
+    public:
+    };
+
+    // CPulseCell_Value_TestValue50
+/*
+   fields: 0
+   size: 0x48
+*/
+    //   @MGetKV3ClassDefaults
+    //   @MPropertyFriendlyName
+    //   @MPropertyDescription
+    class CPulseCell_Value_TestValue50 {
+    public:
+    };
+
+    // CPulseCell_Step_TestDomainEntFire
+/*
+   fields: 1
+   size: 0x50
+*/
+    //   @MGetKV3ClassDefaults
+    //   @MPropertyFriendlyName
+    //   @MPulseEditorHeaderText
+    class CPulseCell_Step_TestDomainEntFire {
+    public:
+        SCHEMA_FIELD(::CUtlString                    , m_Input                                         , 0x48) // CUtlString
+    };
+
+    // CPulseCell_TestWaitWithCursorState
+/*
+   fields: 2
+   size: 0x168
+*/
+    //   @MGetKV3ClassDefaults
+    class CPulseCell_TestWaitWithCursorState {
+    public:
+        SCHEMA_FIELD(::animationsystem::CPulse_ResumePoint, m_WakeResume                                    , 0xD8) // CPulse_ResumePoint
+        SCHEMA_FIELD(::animationsystem::CPulse_ResumePoint, m_WakeFail                                      , 0x120) // CPulse_ResumePoint
+    };
+
+/*
+   CPulseCell_ExampleCriteria::Criteria_t
+   fields: 3
+   size: 0xC
+*/
+    class CPulseCell_ExampleCriteria_Criteria_t {
+    public:
+        SCHEMA_FIELD(float                           , m_flFloatValue1                                 , 0x0) // float32
+        SCHEMA_FIELD(float                           , m_flFloatValue2                                 , 0x4) // float32
+        SCHEMA_FIELD(bool                            , m_bMyBool                                       , 0x8) // bool
+    };
+
+    // CPulseCell_TestYieldWithObservables
+/*
+   fields: 5
+   size: 0x250
+*/
+    //   @MGetKV3ClassDefaults
+    class CPulseCell_TestYieldWithObservables {
+    public:
+        SCHEMA_FIELD(float                           , m_flWatchForFloatValue                          , 0xD8) // float32
+        SCHEMA_FIELD(CPulseObservableExpression<float32>, m_LiveFloatValue                                , 0xE0) // CPulseObservableExpression<float32>
+        SCHEMA_FIELD(::CUtlString                    , m_WatchForStringValue                           , 0x170) // CUtlString
+        SCHEMA_FIELD(CPulseObservableExpression<CUtlString>, m_LiveStringValue                               , 0x178) // CPulseObservableExpression<CUtlString>
+        SCHEMA_FIELD(::animationsystem::CPulse_ResumePoint, m_WakeResume                                    , 0x208) // CPulse_ResumePoint
+    };
+
+/*
+   CPulseCell_TestWaitWithCursorState::CursorState_t
+   fields: 5
+   size: 0x24
+*/
+    //   @MGetKV3ClassDefaults
+    class CPulseCell_TestWaitWithCursorState_CursorState_t {
+    public:
+        SCHEMA_FIELD(float                           , flWaitValue                                     , 0x0) // float32
+        SCHEMA_FIELD(bool                            , bFail                                           , 0x4) // bool
+        SCHEMA_FIELD(HYieldedCursor                  , m_hSelfCursor                                   , 0x8) // HYieldedCursor
+        SCHEMA_FIELD(HPulseCellBase                  , m_hSelfCellInstanceUntyped                      , 0x14) // HPulseCellBase
+        SCHEMA_FIELD(HPulseCell<CPulseCell_TestWaitWithCursorState>, m_hSelfCellInstance                             , 0x1C) // HPulseCell<CPulseCell_TestWaitWithCursorState>
+    };
+
+    // CPulseGraphInstance_TurtleGraphics
+/*
+   fields: 0
+   size: 0xB0
+*/
+    class CPulseGraphInstance_TurtleGraphics {
+    public:
+    };
+
+    // CPulseCell_Test_NoInflow
+/*
+   fields: 0
+   size: 0x48
+*/
+    //   @MGetKV3ClassDefaults
+    class CPulseCell_Test_NoInflow {
+    public:
+    };
+
+    // CPulseCell_Val_TestDomainGetEntityName
+/*
+   fields: 0
+   size: 0x48
+*/
+    //   @MGetKV3ClassDefaults
+    //   @MPropertyFriendlyName
+    class CPulseCell_Val_TestDomainGetEntityName {
+    public:
+    };
+
+    // CPulseCell_Test_MultiOutflow_WithParams_Yielding
+/*
+   fields: 5
+   size: 0x240
+*/
+    //   @MGetKV3ClassDefaults
+    class CPulseCell_Test_MultiOutflow_WithParams_Yielding {
+    public:
+        SCHEMA_FIELD(::animationsystem::SignatureOutflow_Continue, m_Out1                                          , 0xD8) // SignatureOutflow_Continue
+        SCHEMA_FIELD(::animationsystem::SignatureOutflow_Continue, m_AsyncChild1                                   , 0x120) // SignatureOutflow_Continue
+        SCHEMA_FIELD(::animationsystem::SignatureOutflow_Continue, m_AsyncChild2                                   , 0x168) // SignatureOutflow_Continue
+        SCHEMA_FIELD(::animationsystem::SignatureOutflow_Resume, m_YieldResume1                                  , 0x1B0) // SignatureOutflow_Resume
+        SCHEMA_FIELD(::animationsystem::SignatureOutflow_Resume, m_YieldResume2                                  , 0x1F8) // SignatureOutflow_Resume
+    };
+
+    // CPulseTurtleGraphicsCursor
+/*
+   fields: 4
+   size: 0xF0
+*/
+    class CPulseTurtleGraphicsCursor {
+    public:
+        SCHEMA_FIELD(::Color                         , m_Color                                         , 0xD8) // Color
+        SCHEMA_FIELD(::Vector2D                      , m_vPos                                          , 0xDC) // Vector2D
+        SCHEMA_FIELD(float                           , m_flHeadingDeg                                  , 0xE4) // float32
+        SCHEMA_FIELD(bool                            , m_bPenUp                                        , 0xE8) // bool
+    };
+
+/*
+   CPulseCell_Test_MultiOutflow_WithParams_Yielding::CursorState_t
+   fields: 1
+   size: 0x4
+*/
+    //   @MGetKV3ClassDefaults
+    class CPulseCell_Test_MultiOutflow_WithParams_Yielding_CursorState_t {
+    public:
+        SCHEMA_FIELD(std::int32_t                    , nTestStep                                       , 0x0) // int32
+    };
+
+    // CPulseGraphInstance_TestDomain
+/*
+   fields: 9
+   size: 0xD0
+*/
+    class CPulseGraphInstance_TestDomain {
+    public:
+        SCHEMA_FIELD(bool                            , m_bIsRunningUnitTests                           , 0xA0) // bool
+        SCHEMA_FIELD(bool                            , m_bExplicitTimeStepping                         , 0xA1) // bool
+        SCHEMA_FIELD(bool                            , m_bExpectingToDestroyWithYieldedCursors         , 0xA2) // bool
+        SCHEMA_FIELD(bool                            , m_bQuietTracepoints                             , 0xA3) // bool
+        SCHEMA_FIELD(bool                            , m_bExpectingCursorTerminatedDueToMaxInstructions, 0xA4) // bool
+        SCHEMA_FIELD(std::int32_t                    , m_nCursorsTerminatedDueToMaxInstructions        , 0xA8) // int32
+        SCHEMA_FIELD(std::int32_t                    , m_nNextValidateIndex                            , 0xAC) // int32
+        SCHEMA_FIELD(CUtlVector<CUtlString>          , m_Tracepoints                                   , 0xB0) // CUtlVector<CUtlString>
+        SCHEMA_FIELD(bool                            , m_bTestYesOrNoPath                              , 0xC8) // bool
+    };
+
+    // CPulseCell_Step_TestDomainTracepoint
+/*
+   fields: 0
+   size: 0x48
+*/
+    //   @MGetKV3ClassDefaults
+    //   @MPropertyFriendlyName
+    class CPulseCell_Step_TestDomainTracepoint {
+    public:
+    };
+
+    // TestComponent_t
+/*
+   fields: 1
+   size: 0x10
+*/
+    class TestComponent_t {
+    public:
+        SCHEMA_FIELD(::CUtlString                    , m_ComponentData                                 , 0x8) // CUtlString
+    };
+
+} // namespace pulse_system

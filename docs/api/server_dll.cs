@@ -1,8 +1,8 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:59 04/11/2026 (GMT)
-/*  Dumped In       : 1,7s
+/*  Dumped At       : 12:53 05/11/2026 (GMT)
+/*  Dumped In       : 46,1s
 */
 
 /* cesium dumper | generated from live schema */
@@ -3335,9 +3335,9 @@ namespace Cs2.server_dll {
         [FieldOffset(0x80)] public fixed byte _[0x10];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x668)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x670)]
     public unsafe struct CCSPointScriptEntity {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x668];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x670];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x48)]
@@ -4061,8 +4061,8 @@ namespace Cs2.server_dll {
         [FieldOffset(0x3298)] public fixed byte _[0xc];
         [FieldOffset(0x32a4)] public fixed byte _[0x4];
         [FieldOffset(0x32a8)] public fixed byte _[0x20];
-        [FieldOffset(0x32c8)] public fixed byte _[0x1a];
-        [FieldOffset(0x32e2)] public fixed byte _[0xe];
+        [FieldOffset(0x32c8)] public fixed byte _[0x1b];
+        [FieldOffset(0x32e3)] public fixed byte _[0xd];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0xd50)]

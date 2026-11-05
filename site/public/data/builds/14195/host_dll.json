@@ -1,31 +1,21 @@
 {
- "host.dll": {
-  "classes": [
-   {
-    "name": "EmptyTestScript",
-    "module": "EmptyTestScript.dll",
-    "size": 32,
-    "fields": [
-     {
-      "name": "m_hTest",
-      "type": "CAnimScriptParam<float32>",
-      "offset": 16
-     }
-    ]
-   },
-   {
-    "name": "CAnimScriptBase",
-    "module": "CAnimScriptBase.dll",
-    "size": 16,
-    "fields": [
-     {
-      "name": "m_bIsValid",
-      "type": "bool",
-      "offset": 8
-     }
-    ]
-   }
-  ],
-  "enums": []
- }
+  "host.dll": {
+    "classes": {
+      "CAnimScriptBase": {
+        "fields": {
+          "m_bIsValid": 8
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "EmptyTestScript": {
+        "fields": {
+          "m_hTest": 16
+        },
+        "metadata": [],
+        "parent": null
+      }
+    },
+    "enums": {}
+  }
 }

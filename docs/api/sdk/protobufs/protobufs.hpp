@@ -3,7 +3,7 @@
 #include <cstddef>
 #include <cstdint>
 
-namespace pb { inline constexpr std::uint32_t CS2_BUILD = 14195; }
+namespace pb { inline constexpr std::uint32_t CS2_BUILD = 14196; }
 
 namespace pb {
     // std::string the message owns (ArenaStringPtr points at one). Opaque.

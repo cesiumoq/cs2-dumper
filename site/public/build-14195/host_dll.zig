@@ -1,11 +1,22 @@
-/* cesium dumper | generated from live schema */
-pub const host_dll = struct {
-    pub const EmptyTestScript = extern struct {
-        pad_0: [0x10]u8, // 0x0
-        _: [0x10]u8, // 0x10
-    };
-    pub const CAnimScriptBase = extern struct {
-        pad_0: [0x8]u8, // 0x0
-        _: [0x8]u8, // 0x8
+// Generated using https://github.com/a2x/cs2-dumper
+// 2026-11-03 12:42:01.636437600 UTC
+
+pub const cs2_dumper = struct {
+    pub const schemas = struct {
+        // Module: host.dll
+        // Class count: 2
+        // Enum count: 0
+        pub const host_dll = struct {
+            // Parent: None
+            // Field count: 1
+            pub const EmptyTestScript = struct {
+                pub const m_hTest: usize = 0x10; // CAnimScriptParam<float32>
+            };
+            // Parent: None
+            // Field count: 1
+            pub const CAnimScriptBase = struct {
+                pub const m_bIsValid: usize = 0x8; // bool
+            };
+        };
     };
 };

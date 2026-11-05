@@ -1,5545 +1,3127 @@
 {
- "soundsystem.dll": {
-  "classes": [
-   {
-    "name": "CVMixInputBase",
-    "module": "CVMixInputBase.dll",
-    "size": 16,
-    "fields": [
-     {
-      "name": "m_name",
-      "type": "CUtlString",
-      "offset": 0
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerBlender",
-    "module": "CVoiceContainerBlender.dll",
-    "size": 192,
-    "fields": [
-     {
-      "name": "m_firstSound",
-      "type": "CSoundContainerReference",
-      "offset": 120
-     },
-     {
-      "name": "m_secondSound",
-      "type": "CSoundContainerReference",
-      "offset": 152
-     },
-     {
-      "name": "m_flBlendFactor",
-      "type": "float32",
-      "offset": 184
-     }
-    ]
-   },
-   {
-    "name": "CVMixPitchShiftProcessorDesc",
-    "module": "CVMixPitchShiftProcessorDesc.dll",
-    "size": 64,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixPitchShiftDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_paramPitchScale",
-      "type": "CVMixParameterFloat",
-      "offset": 56
-     }
-    ]
-   },
-   {
-    "name": "VMixFreeverbDesc_t",
-    "module": "VMixFreeverbDesc_t.dll",
-    "size": 16,
-    "fields": [
-     {
-      "name": "m_flRoomSize",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_flDamp",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_flWidth",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_flLateReflections",
-      "type": "float32",
-      "offset": 12
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerStaticAdditiveSynth::CHarmonic",
-    "module": "CVoiceContainerStaticAdditiveSynth::CHarmonic.dll",
-    "size": 104,
-    "fields": [
-     {
-      "name": "m_nWaveform",
-      "type": "EWaveform",
-      "offset": 0
-     },
-     {
-      "name": "m_nFundamental",
-      "type": "EMidiNote",
-      "offset": 1
-     },
-     {
-      "name": "m_nOctave",
-      "type": "int32",
-      "offset": 4
-     },
-     {
-      "name": "m_flCents",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_flPhase",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_curve",
-      "type": "CPiecewiseCurve",
-      "offset": 16
-     },
-     {
-      "name": "m_volumeScaling",
-      "type": "CVoiceContainerStaticAdditiveSynth::CGainScalePerInstance",
-      "offset": 80
-     }
-    ]
-   },
-   {
-    "name": "CVsndTriggerSlot",
-    "module": "CVsndTriggerSlot.dll",
-    "size": 136,
-    "fields": [
-     {
-      "name": "m_bEnableVsnd",
-      "type": "bool",
-      "offset": 0
-     },
-     {
-      "name": "m_vsnd",
-      "type": "CSoundContainerReference",
-      "offset": 8
-     },
-     {
-      "name": "m_bEnableEndcap",
-      "type": "bool",
-      "offset": 40
-     },
-     {
-      "name": "m_endcapVsnd",
-      "type": "CSoundContainerReference",
-      "offset": 48
-     },
-     {
-      "name": "m_bEnableLoopcap",
-      "type": "bool",
-      "offset": 80
-     },
-     {
-      "name": "m_loopcapVsnd",
-      "type": "CSoundContainerReference",
-      "offset": 88
-     },
-     {
-      "name": "m_volume",
-      "type": "float32",
-      "offset": 120
-     },
-     {
-      "name": "m_fadeOut",
-      "type": "float32",
-      "offset": 124
-     },
-     {
-      "name": "m_mode",
-      "type": "EVsndTriggerMode",
-      "offset": 128
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerStaticAdditiveSynth::CTone",
-    "module": "CVoiceContainerStaticAdditiveSynth::CTone.dll",
-    "size": 96,
-    "fields": [
-     {
-      "name": "m_harmonics",
-      "type": "CUtlVector<CVoiceContainerStaticAdditiveSynth::CHarmonic>",
-      "offset": 0
-     },
-     {
-      "name": "m_curve",
-      "type": "CPiecewiseCurve",
-      "offset": 24
-     },
-     {
-      "name": "m_bSyncInstances",
-      "type": "bool",
-      "offset": 88
-     }
-    ]
-   },
-   {
-    "name": "CSosGroupActionOcclusionSchema",
-    "module": "CSosGroupActionOcclusionSchema.dll",
-    "size": 32,
-    "fields": [
-     {
-      "name": "m_flCalculationInterval",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_flRadius",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_flOcclusionScale",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_flOcclusionMin",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_flOcclusionMax",
-      "type": "float32",
-      "offset": 24
-     },
-     {
-      "name": "m_flTestDepth",
-      "type": "float32",
-      "offset": 28
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerRandomSampler",
-    "module": "CVoiceContainerRandomSampler.dll",
-    "size": 432,
-    "fields": [
-     {
-      "name": "m_flAmplitude",
-      "type": "float32",
-      "offset": 136
-     },
-     {
-      "name": "m_flAmplitudeJitter",
-      "type": "float32",
-      "offset": 140
-     },
-     {
-      "name": "m_flTimeJitter",
-      "type": "float32",
-      "offset": 144
-     },
-     {
-      "name": "m_flMaxLength",
-      "type": "float32",
-      "offset": 148
-     },
-     {
-      "name": "m_nNumDelayVariations",
-      "type": "int32",
-      "offset": 152
-     },
-     {
-      "name": "m_grainResources",
-      "type": "CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>",
-      "offset": 160
-     }
-    ]
-   },
-   {
-    "name": "CVMixSteamAudioDirectProcessorDesc",
-    "module": "CVMixSteamAudioDirectProcessorDesc.dll",
-    "size": 144,
-    "fields": [
-     {
-      "name": "m_paramPositionX",
-      "type": "CVMixParameterFloat",
-      "offset": 40
-     },
-     {
-      "name": "m_paramPositionY",
-      "type": "CVMixParameterFloat",
-      "offset": 44
-     },
-     {
-      "name": "m_paramPositionZ",
-      "type": "CVMixParameterFloat",
-      "offset": 48
-     },
-     {
-      "name": "m_paramRightX",
-      "type": "CVMixParameterFloat",
-      "offset": 52
-     },
-     {
-      "name": "m_paramRightY",
-      "type": "CVMixParameterFloat",
-      "offset": 56
-     },
-     {
-      "name": "m_paramRightZ",
-      "type": "CVMixParameterFloat",
-      "offset": 60
-     },
-     {
-      "name": "m_paramUpX",
-      "type": "CVMixParameterFloat",
-      "offset": 64
-     },
-     {
-      "name": "m_paramUpY",
-      "type": "CVMixParameterFloat",
-      "offset": 68
-     },
-     {
-      "name": "m_paramUpZ",
-      "type": "CVMixParameterFloat",
-      "offset": 72
-     },
-     {
-      "name": "m_paramAheadX",
-      "type": "CVMixParameterFloat",
-      "offset": 76
-     },
-     {
-      "name": "m_paramAheadY",
-      "type": "CVMixParameterFloat",
-      "offset": 80
-     },
-     {
-      "name": "m_paramAheadZ",
-      "type": "CVMixParameterFloat",
-      "offset": 84
-     },
-     {
-      "name": "m_paramApplyDistanceAttenuation",
-      "type": "CVMixParameterFloat",
-      "offset": 88
-     },
-     {
-      "name": "m_paramApplyAirAbsorption",
-      "type": "CVMixParameterFloat",
-      "offset": 92
-     },
-     {
-      "name": "m_paramApplyDirectivity",
-      "type": "CVMixParameterFloat",
-      "offset": 96
-     },
-     {
-      "name": "m_paramApplyOcclusion",
-      "type": "CVMixParameterFloat",
-      "offset": 100
-     },
-     {
-      "name": "m_paramApplyTransmission",
-      "type": "CVMixParameterFloat",
-      "offset": 104
-     },
-     {
-      "name": "m_paramDipoleWeight",
-      "type": "CVMixParameterFloat",
-      "offset": 108
-     },
-     {
-      "name": "m_paramDipolePower",
-      "type": "CVMixParameterFloat",
-      "offset": 112
-     },
-     {
-      "name": "m_paramOcclusion",
-      "type": "CVMixParameterFloat",
-      "offset": 116
-     },
-     {
-      "name": "m_paramTransmissionLow",
-      "type": "CVMixParameterFloat",
-      "offset": 120
-     },
-     {
-      "name": "m_paramTransmissionMid",
-      "type": "CVMixParameterFloat",
-      "offset": 124
-     },
-     {
-      "name": "m_paramTransmissionHigh",
-      "type": "CVMixParameterFloat",
-      "offset": 128
-     },
-     {
-      "name": "m_paramBand",
-      "type": "CVMixParameterFloat",
-      "offset": 132
-     },
-     {
-      "name": "m_paramTransmission",
-      "type": "CVMixDataOffset",
-      "offset": 136
-     }
-    ]
-   },
-   {
-    "name": "CVMixSteamAudioHRTFProcessorDesc",
-    "module": "CVMixSteamAudioHRTFProcessorDesc.dll",
-    "size": 80,
-    "fields": [
-     {
-      "name": "m_paramPositionX",
-      "type": "CVMixParameterFloat",
-      "offset": 40
-     },
-     {
-      "name": "m_paramPositionY",
-      "type": "CVMixParameterFloat",
-      "offset": 44
-     },
-     {
-      "name": "m_paramPositionZ",
-      "type": "CVMixParameterFloat",
-      "offset": 48
-     },
-     {
-      "name": "m_paramInterpolation",
-      "type": "CVMixParameterFloat",
-      "offset": 52
-     },
-     {
-      "name": "m_paramDirectMixLevel",
-      "type": "CVMixParameterFloat",
-      "offset": 56
-     },
-     {
-      "name": "m_paramPerspectiveCorrection",
-      "type": "CVMixParameterFloat",
-      "offset": 60
-     },
-     {
-      "name": "m_paramRelativePosition",
-      "type": "CVMixParameterFloat",
-      "offset": 64
-     },
-     {
-      "name": "m_paramDelayLeft",
-      "type": "CVMixParameterFloat",
-      "offset": 68
-     },
-     {
-      "name": "m_paramDelayRight",
-      "type": "CVMixParameterFloat",
-      "offset": 72
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerDefault",
-    "module": "CVoiceContainerDefault.dll",
-    "size": 120,
-    "fields": []
-   },
-   {
-    "name": "CVSound",
-    "module": "CVSound.dll",
-    "size": 64,
-    "fields": [
-     {
-      "name": "m_Sentences",
-      "type": "CUtlLeanVector<CAudioSentence>",
-      "offset": 0
-     },
-     {
-      "name": "m_nRate",
-      "type": "int32",
-      "offset": 16
-     },
-     {
-      "name": "m_nFormat",
-      "type": "CVSoundFormat_t",
-      "offset": 20
-     },
-     {
-      "name": "m_nChannels",
-      "type": "uint32",
-      "offset": 24
-     },
-     {
-      "name": "m_nLoopStart",
-      "type": "int32",
-      "offset": 28
-     },
-     {
-      "name": "m_nSampleCount",
-      "type": "uint32",
-      "offset": 32
-     },
-     {
-      "name": "m_flDuration",
-      "type": "float32",
-      "offset": 36
-     },
-     {
-      "name": "m_nStreamingSize",
-      "type": "uint32",
-      "offset": 40
-     },
-     {
-      "name": "m_nLoopEnd",
-      "type": "int32",
-      "offset": 44
-     }
-    ]
-   },
-   {
-    "name": "CDSPPresetMixgroupModifierTable",
-    "module": "CDSPPresetMixgroupModifierTable.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_table",
-      "type": "CUtlVector<CDspPresetModifierList>",
-      "offset": 0
-     }
-    ]
-   },
-   {
-    "name": "CSosGroupActionSoundeventClusterSchema",
-    "module": "CSosGroupActionSoundeventClusterSchema.dll",
-    "size": 80,
-    "fields": [
-     {
-      "name": "m_nMinNearby",
-      "type": "int32",
-      "offset": 8
-     },
-     {
-      "name": "m_flClusterEpsilon",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_shouldPlayOpvar",
-      "type": "CUtlString",
-      "offset": 16
-     },
-     {
-      "name": "m_shouldPlayClusterChild",
-      "type": "CUtlString",
-      "offset": 24
-     },
-     {
-      "name": "m_clusterSizeOpvar",
-      "type": "CUtlString",
-      "offset": 32
-     },
-     {
-      "name": "m_groupBoundingBoxMinsOpvar",
-      "type": "CUtlString",
-      "offset": 40
-     },
-     {
-      "name": "m_groupBoundingBoxMaxsOpvar",
-      "type": "CUtlString",
-      "offset": 48
-     }
-    ]
-   },
-   {
-    "name": "CSosGroupActionSetSoundeventParameterSchema",
-    "module": "CSosGroupActionSetSoundeventParameterSchema.dll",
-    "size": 40,
-    "fields": [
-     {
-      "name": "m_nMaxCount",
-      "type": "int32",
-      "offset": 8
-     },
-     {
-      "name": "m_flMinValue",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_flMaxValue",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_opvarName",
-      "type": "CUtlString",
-      "offset": 24
-     },
-     {
-      "name": "m_nSortType",
-      "type": "SosActionSetParamSortType_t",
-      "offset": 32
-     }
-    ]
-   },
-   {
-    "name": "CSoundContainerReference",
-    "module": "CSoundContainerReference.dll",
-    "size": 32,
-    "fields": [
-     {
-      "name": "m_namespace",
-      "type": "CUtlString",
-      "offset": 0
-     },
-     {
-      "name": "m_bUseReference",
-      "type": "bool",
-      "offset": 8
-     },
-     {
-      "name": "m_sound",
-      "type": "CStrongHandle<InfoForResourceTypeCVoiceContainerBase>",
-      "offset": 16
-     },
-     {
-      "name": "m_pSound",
-      "type": "CVoiceContainerBase*",
-      "offset": 24
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerNull",
-    "module": "CVoiceContainerNull.dll",
-    "size": 120,
-    "fields": []
-   },
-   {
-    "name": "VMixSubgraphSwitchDesc_t",
-    "module": "VMixSubgraphSwitchDesc_t.dll",
-    "size": 56,
-    "fields": [
-     {
-      "name": "m_name",
-      "type": "CUtlString",
-      "offset": 0
-     },
-     {
-      "name": "m_effectName",
-      "type": "CUtlString",
-      "offset": 8
-     },
-     {
-      "name": "m_subgraphs",
-      "type": "CUtlVector<CUtlString>",
-      "offset": 16
-     },
-     {
-      "name": "m_interpolationMode",
-      "type": "VMixSubgraphSwitchInterpolationType_t",
-      "offset": 40
-     },
-     {
-      "name": "m_bOnlyTailsOnFadeOut",
-      "type": "bool",
-      "offset": 44
-     },
-     {
-      "name": "m_flInterpolationTime",
-      "type": "float32",
-      "offset": 48
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerAnalysisBase",
-    "module": "CVoiceContainerAnalysisBase.dll",
-    "size": 72,
-    "fields": [
-     {
-      "name": "m_curve",
-      "type": "CPiecewiseCurve",
-      "offset": 8
-     }
-    ]
-   },
-   {
-    "name": "CSosGroupActionSoundeventMinMaxValuesSchema",
-    "module": "CSosGroupActionSoundeventMinMaxValuesSchema.dll",
-    "size": 64,
-    "fields": [
-     {
-      "name": "m_strQueryPublicFieldName",
-      "type": "CUtlString",
-      "offset": 8
-     },
-     {
-      "name": "m_strDelayPublicFieldName",
-      "type": "CUtlString",
-      "offset": 16
-     },
-     {
-      "name": "m_bExcludeStoppedSounds",
-      "type": "bool",
-      "offset": 24
-     },
-     {
-      "name": "m_bExcludeDelayedSounds",
-      "type": "bool",
-      "offset": 25
-     },
-     {
-      "name": "m_bExcludeSoundsBelowThreshold",
-      "type": "bool",
-      "offset": 26
-     },
-     {
-      "name": "m_flExcludeSoundsMinThresholdValue",
-      "type": "float32",
-      "offset": 28
-     },
-     {
-      "name": "m_bExcludSoundsAboveThreshold",
-      "type": "bool",
-      "offset": 32
-     },
-     {
-      "name": "m_flExcludeSoundsMaxThresholdValue",
-      "type": "float32",
-      "offset": 36
-     },
-     {
-      "name": "m_strMinValueName",
-      "type": "CUtlString",
-      "offset": 40
-     },
-     {
-      "name": "m_strMaxValueName",
-      "type": "CUtlString",
-      "offset": 48
-     }
-    ]
-   },
-   {
-    "name": "CVMixEnvelopeProcessorDesc",
-    "module": "CVMixEnvelopeProcessorDesc.dll",
-    "size": 64,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixEnvelopeDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_outParamLevel",
-      "type": "CVMixParameterFloat",
-      "offset": 52
-     },
-     {
-      "name": "m_outParamdBLevel",
-      "type": "CVMixParameterFloat",
-      "offset": 56
-     }
-    ]
-   },
-   {
-    "name": "CVMixCommand",
-    "module": "CVMixCommand.dll",
-    "size": 32,
-    "fields": [
-     {
-      "name": "m_nCommand",
-      "type": "VMixGraphCommandID_t",
-      "offset": 0
-     },
-     {
-      "name": "m_nParameterNameHash",
-      "type": "uint32",
-      "offset": 4
-     },
-     {
-      "name": "m_nOutputSubmix",
-      "type": "CVMixDataOffset",
-      "offset": 8
-     },
-     {
-      "name": "m_nInputSubmix0",
-      "type": "CVMixDataOffset",
-      "offset": 12
-     },
-     {
-      "name": "m_nInputSubmix1",
-      "type": "CVMixDataOffset",
-      "offset": 16
-     },
-     {
-      "name": "m_nProcessor",
-      "type": "int32",
-      "offset": 20
-     },
-     {
-      "name": "m_nInputValue0",
-      "type": "CVMixDataOffset",
-      "offset": 24
-     },
-     {
-      "name": "m_nInputValue1",
-      "type": "CVMixDataOffset",
-      "offset": 28
-     }
-    ]
-   },
-   {
-    "name": "SamplerVoice_t",
-    "module": "SamplerVoice_t.dll",
-    "size": 8,
-    "fields": [
-     {
-      "name": "nNoteNum",
-      "type": "uint8",
-      "offset": 0
-     }
-    ]
-   },
-   {
-    "name": "CVMixControlInput",
-    "module": "CVMixControlInput.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_flDefaultValue",
-      "type": "float32",
-      "offset": 16
-     }
-    ]
-   },
-   {
-    "name": "CVMixBoxverbProcessorDesc",
-    "module": "CVMixBoxverbProcessorDesc.dll",
-    "size": 120,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixBoxverbDesc_t",
-      "offset": 40
-     }
-    ]
-   },
-   {
-    "name": "CVMixDynamicsCompressorProcessorDesc",
-    "module": "CVMixDynamicsCompressorProcessorDesc.dll",
-    "size": 96,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixDynamicsCompressorDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_outParamLevel",
-      "type": "CVMixParameterFloat",
-      "offset": 80
-     },
-     {
-      "name": "m_outParamdBLevel",
-      "type": "CVMixParameterFloat",
-      "offset": 84
-     },
-     {
-      "name": "m_outParamReduction",
-      "type": "CVMixParameterFloat",
-      "offset": 88
-     }
-    ]
-   },
-   {
-    "name": "VMixPannerDesc_t",
-    "module": "VMixPannerDesc_t.dll",
-    "size": 8,
-    "fields": [
-     {
-      "name": "m_type",
-      "type": "VMixPannerType_t",
-      "offset": 0
-     },
-     {
-      "name": "m_flStrength",
-      "type": "float32",
-      "offset": 4
-     }
-    ]
-   },
-   {
-    "name": "CSosGroupActionSoundeventPrioritySchema",
-    "module": "CSosGroupActionSoundeventPrioritySchema.dll",
-    "size": 56,
-    "fields": [
-     {
-      "name": "m_priorityValue",
-      "type": "CUtlString",
-      "offset": 8
-     },
-     {
-      "name": "m_priorityVolumeScalar",
-      "type": "CUtlString",
-      "offset": 16
-     },
-     {
-      "name": "m_priorityContributeButDontRead",
-      "type": "CUtlString",
-      "offset": 24
-     },
-     {
-      "name": "m_bPriorityReadButDontContribute",
-      "type": "CUtlString",
-      "offset": 32
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerRealtimeFMSineWave",
-    "module": "CVoiceContainerRealtimeFMSineWave.dll",
-    "size": 136,
-    "fields": [
-     {
-      "name": "m_flCarrierFrequency",
-      "type": "float32",
-      "offset": 120
-     },
-     {
-      "name": "m_flModulatorFrequency",
-      "type": "float32",
-      "offset": 124
-     },
-     {
-      "name": "m_flModulatorAmount",
-      "type": "float32",
-      "offset": 128
-     }
-    ]
-   },
-   {
-    "name": "SelectedEditItemInfo_t",
-    "module": "SelectedEditItemInfo_t.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_EditItems",
-      "type": "CUtlVector<SosEditItemInfo_t>",
-      "offset": 0
-     }
-    ]
-   },
-   {
-    "name": "VMixModDelayDesc_t",
-    "module": "VMixModDelayDesc_t.dll",
-    "size": 48,
-    "fields": [
-     {
-      "name": "m_feedbackFilter",
-      "type": "VMixFilterDesc_t",
-      "offset": 0
-     },
-     {
-      "name": "m_bPhaseInvert",
-      "type": "bool",
-      "offset": 16
-     },
-     {
-      "name": "m_flGlideTime",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_flDelay",
-      "type": "float32",
-      "offset": 24
-     },
-     {
-      "name": "m_flOutputGain",
-      "type": "float32",
-      "offset": 28
-     },
-     {
-      "name": "m_flFeedbackGain",
-      "type": "float32",
-      "offset": 32
-     },
-     {
-      "name": "m_flModRate",
-      "type": "float32",
-      "offset": 36
-     },
-     {
-      "name": "m_flModDepth",
-      "type": "float32",
-      "offset": 40
-     },
-     {
-      "name": "m_bApplyAntialiasing",
-      "type": "bool",
-      "offset": 44
-     }
-    ]
-   },
-   {
-    "name": "CSndSeqInstSndEvtSchema",
-    "module": "CSndSeqInstSndEvtSchema.dll",
-    "size": 32,
-    "fields": []
-   },
-   {
-    "name": "CVMixNameInputMeter",
-    "module": "CVMixNameInputMeter.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_nValueIndex",
-      "type": "CVMixDataOffset",
-      "offset": 16
-     }
-    ]
-   },
-   {
-    "name": "CSndSeqInstruments",
-    "module": "CSndSeqInstruments.dll",
-    "size": 40,
-    "fields": []
-   },
-   {
-    "name": "CVMixDynamics3BandProcessorDesc",
-    "module": "CVMixDynamics3BandProcessorDesc.dll",
-    "size": 184,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixDynamics3BandDesc_t",
-      "offset": 40
-     }
-    ]
-   },
-   {
-    "name": "VMixBoxverbDesc_t",
-    "module": "VMixBoxverbDesc_t.dll",
-    "size": 80,
-    "fields": [
-     {
-      "name": "m_flSizeMax",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_flSizeMin",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_flComplexity",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_flDiffusion",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_flModDepth",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_flModRate",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_bParallel",
-      "type": "bool",
-      "offset": 24
-     },
-     {
-      "name": "m_filterType",
-      "type": "VMixFilterDesc_t",
-      "offset": 28
-     },
-     {
-      "name": "m_flWidth",
-      "type": "float32",
-      "offset": 44
-     },
-     {
-      "name": "m_flHeight",
-      "type": "float32",
-      "offset": 48
-     },
-     {
-      "name": "m_flDepth",
-      "type": "float32",
-      "offset": 52
-     },
-     {
-      "name": "m_flFeedbackScale",
-      "type": "float32",
-      "offset": 56
-     },
-     {
-      "name": "m_flFeedbackWidth",
-      "type": "float32",
-      "offset": 60
-     },
-     {
-      "name": "m_flFeedbackHeight",
-      "type": "float32",
-      "offset": 64
-     },
-     {
-      "name": "m_flFeedbackDepth",
-      "type": "float32",
-      "offset": 68
-     },
-     {
-      "name": "m_flOutputGain",
-      "type": "float32",
-      "offset": 72
-     },
-     {
-      "name": "m_flTaps",
-      "type": "float32",
-      "offset": 76
-     }
-    ]
-   },
-   {
-    "name": "CSosGroupActionSchema",
-    "module": "CSosGroupActionSchema.dll",
-    "size": 8,
-    "fields": []
-   },
-   {
-    "name": "CSosSoundEventGroupSchema",
-    "module": "CSosSoundEventGroupSchema.dll",
-    "size": 112,
-    "fields": [
-     {
-      "name": "m_nGroupType",
-      "type": "SosGroupType_t",
-      "offset": 8
-     },
-     {
-      "name": "m_bBlocksEvents",
-      "type": "bool",
-      "offset": 12
-     },
-     {
-      "name": "m_nBlockMaxCount",
-      "type": "int32",
-      "offset": 16
-     },
-     {
-      "name": "m_flMemberLifespanTime",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_bInvertMatch",
-      "type": "bool",
-      "offset": 24
-     },
-     {
-      "name": "m_Behavior_EventName",
-      "type": "SosGroupFieldBehavior_t",
-      "offset": 28
-     },
-     {
-      "name": "m_matchSoundEventName",
-      "type": "CUtlString",
-      "offset": 32
-     },
-     {
-      "name": "m_bMatchEventSubString",
-      "type": "bool",
-      "offset": 40
-     },
-     {
-      "name": "m_matchSoundEventSubString",
-      "type": "CUtlString",
-      "offset": 48
-     },
-     {
-      "name": "m_Behavior_EntIndex",
-      "type": "SosGroupFieldBehavior_t",
-      "offset": 56
-     },
-     {
-      "name": "m_flEntIndex",
-      "type": "float32",
-      "offset": 60
-     },
-     {
-      "name": "m_Behavior_Opvar",
-      "type": "SosGroupFieldBehavior_t",
-      "offset": 64
-     },
-     {
-      "name": "m_flOpvar",
-      "type": "float32",
-      "offset": 68
-     },
-     {
-      "name": "m_Behavior_String",
-      "type": "SosGroupFieldBehavior_t",
-      "offset": 72
-     },
-     {
-      "name": "m_opvarString",
-      "type": "CUtlString",
-      "offset": 80
-     },
-     {
-      "name": "m_vActions",
-      "type": "CUtlVector<CSosGroupActionSchema*>",
-      "offset": 88
-     }
-    ]
-   },
-   {
-    "name": "CSndSeqInstMidiSampler",
-    "module": "CSndSeqInstMidiSampler.dll",
-    "size": 224,
-    "fields": [
-     {
-      "name": "m_bIsSoundEvent",
-      "type": "bool",
-      "offset": 32
-     },
-     {
-      "name": "m_bStopPrevious",
-      "type": "bool",
-      "offset": 33
-     },
-     {
-      "name": "m_nMinNote",
-      "type": "uint8",
-      "offset": 34
-     },
-     {
-      "name": "m_nMaxNote",
-      "type": "uint8",
-      "offset": 35
-     },
-     {
-      "name": "m_flMinVelocityAtten",
-      "type": "float32",
-      "offset": 36
-     },
-     {
-      "name": "m_flMaxVelocityAtten",
-      "type": "float32",
-      "offset": 40
-     },
-     {
-      "name": "m_flAttack",
-      "type": "float32",
-      "offset": 44
-     },
-     {
-      "name": "m_flRelease",
-      "type": "float32",
-      "offset": 48
-     },
-     {
-      "name": "m_bBeatEnvelopes",
-      "type": "bool",
-      "offset": 52
-     },
-     {
-      "name": "m_nNextVoiceSlot",
-      "type": "uint8",
-      "offset": 212
-     },
-     {
-      "name": "m_hSoundEventHash",
-      "type": "uint32",
-      "offset": 216
-     }
-    ]
-   },
-   {
-    "name": "VMixPointerFixupEntry_t",
-    "module": "VMixPointerFixupEntry_t.dll",
-    "size": 8,
-    "fields": [
-     {
-      "name": "m_nIndex",
-      "type": "uint32",
-      "offset": 0
-     },
-     {
-      "name": "m_offset",
-      "type": "CVMixDataOffset",
-      "offset": 4
-     }
-    ]
-   },
-   {
-    "name": "CSndSeqInstBaseSchema",
-    "module": "CSndSeqInstBaseSchema.dll",
-    "size": 32,
-    "fields": [
-     {
-      "name": "m_nType",
-      "type": "SndSeqInstrumentType_t",
-      "offset": 8
-     },
-     {
-      "name": "m_bStopCurrentEvents",
-      "type": "bool",
-      "offset": 14
-     },
-     {
-      "name": "m_flBPM",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_flBPMFactor",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_flBPMInvFactor",
-      "type": "float32",
-      "offset": 24
-     }
-    ]
-   },
-   {
-    "name": "VMixDynamics3BandDesc_t",
-    "module": "VMixDynamics3BandDesc_t.dll",
-    "size": 144,
-    "fields": [
-     {
-      "name": "m_fldbGainOutput",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_flRMSTimeMS",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_fldbKneeWidth",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_flDepth",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_flWetMix",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_flTimeScale",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_flLowCutoffFreq",
-      "type": "float32",
-      "offset": 24
-     },
-     {
-      "name": "m_flHighCutoffFreq",
-      "type": "float32",
-      "offset": 28
-     },
-     {
-      "name": "m_bPeakMode",
-      "type": "bool",
-      "offset": 32
-     },
-     {
-      "name": "m_bandDesc",
-      "type": "VMixDynamicsBand_t[3]",
-      "offset": 36
-     }
-    ]
-   },
-   {
-    "name": "CVMixEQ8ProcessorDesc",
-    "module": "CVMixEQ8ProcessorDesc.dll",
-    "size": 208,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixEQ8Desc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_paramEQScale",
-      "type": "CVMixParameterFloat",
-      "offset": 200
-     }
-    ]
-   },
-   {
-    "name": "CDSPMixgroupModifier",
-    "module": "CDSPMixgroupModifier.dll",
-    "size": 32,
-    "fields": [
-     {
-      "name": "m_mixgroup",
-      "type": "CUtlString",
-      "offset": 0
-     },
-     {
-      "name": "m_flModifier",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_flModifierMin",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_flSourceModifier",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_flSourceModifierMin",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_flListenerReverbModifierWhenSourceReverbIsActive",
-      "type": "float32",
-      "offset": 24
-     }
-    ]
-   },
-   {
-    "name": "CAudioMorphData",
-    "module": "CAudioMorphData.dll",
-    "size": 104,
-    "fields": [
-     {
-      "name": "m_times",
-      "type": "CUtlVector<float32>",
-      "offset": 0
-     },
-     {
-      "name": "m_nameHashCodes",
-      "type": "CUtlVector<uint32>",
-      "offset": 24
-     },
-     {
-      "name": "m_nameStrings",
-      "type": "CUtlVector<CUtlString>",
-      "offset": 48
-     },
-     {
-      "name": "m_samples",
-      "type": "CUtlVector<CUtlVector<float32>>",
-      "offset": 72
-     },
-     {
-      "name": "m_flEaseIn",
-      "type": "float32",
-      "offset": 96
-     },
-     {
-      "name": "m_flEaseOut",
-      "type": "float32",
-      "offset": 100
-     }
-    ]
-   },
-   {
-    "name": "SndBeatEventKeyedFloats_t",
-    "module": "SndBeatEventKeyedFloats_t.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_flFloat",
-      "type": "float32",
-      "offset": 16
-     }
-    ]
-   },
-   {
-    "name": "VMixDualCompressorDesc_t",
-    "module": "VMixDualCompressorDesc_t.dll",
-    "size": 52,
-    "fields": [
-     {
-      "name": "m_flRMSTimeMS",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_fldbKneeWidth",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_flWetMix",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_bPeakMode",
-      "type": "bool",
-      "offset": 12
-     },
-     {
-      "name": "m_bandDesc",
-      "type": "VMixDynamicsBand_t",
-      "offset": 16
-     }
-    ]
-   },
-   {
-    "name": "CVMixRuntimeGraph",
-    "module": "CVMixRuntimeGraph.dll",
-    "size": 296,
-    "fields": [
-     {
-      "name": "m_submixes",
-      "type": "CUtlLeanVector<CVMixSubmix>",
-      "offset": 208
-     },
-     {
-      "name": "m_impulseResponseValues",
-      "type": "CUtlLeanVector<uint64>",
-      "offset": 224
-     },
-     {
-      "name": "m_inputDefaultValues",
-      "type": "KeyValues3",
-      "offset": 240
-     },
-     {
-      "name": "m_sources",
-      "type": "KeyValues3",
-      "offset": 256
-     },
-     {
-      "name": "m_fixups",
-      "type": "CUtlVector<VMixPointerFixupEntry_t>",
-      "offset": 272
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerStaticAdditiveSynth",
-    "module": "CVoiceContainerStaticAdditiveSynth.dll",
-    "size": 184,
-    "fields": [
-     {
-      "name": "m_tones",
-      "type": "CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>",
-      "offset": 136
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerShapedNoise",
-    "module": "CVoiceContainerShapedNoise.dll",
-    "size": 336,
-    "fields": [
-     {
-      "name": "m_bUseCurveForFrequency",
-      "type": "bool",
-      "offset": 120
-     },
-     {
-      "name": "m_flFrequency",
-      "type": "float32",
-      "offset": 124
-     },
-     {
-      "name": "m_frequencySweep",
-      "type": "CPiecewiseCurve",
-      "offset": 128
-     },
-     {
-      "name": "m_bUseCurveForResonance",
-      "type": "bool",
-      "offset": 192
-     },
-     {
-      "name": "m_flResonance",
-      "type": "float32",
-      "offset": 196
-     },
-     {
-      "name": "m_resonanceSweep",
-      "type": "CPiecewiseCurve",
-      "offset": 200
-     },
-     {
-      "name": "m_bUseCurveForAmplitude",
-      "type": "bool",
-      "offset": 264
-     },
-     {
-      "name": "m_flGainInDecibels",
-      "type": "float32",
-      "offset": 268
-     },
-     {
-      "name": "m_gainSweep",
-      "type": "CPiecewiseCurve",
-      "offset": 272
-     }
-    ]
-   },
-   {
-    "name": "CDspPresetModifierList",
-    "module": "CDspPresetModifierList.dll",
-    "size": 32,
-    "fields": [
-     {
-      "name": "m_dspName",
-      "type": "CUtlString",
-      "offset": 0
-     },
-     {
-      "name": "m_modifiers",
-      "type": "CUtlVector<CDSPMixgroupModifier>",
-      "offset": 8
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerBase",
-    "module": "CVoiceContainerBase.dll",
-    "size": 120,
-    "fields": [
-     {
-      "name": "m_bRegisteredVMix",
-      "type": "bool",
-      "offset": 16
-     },
-     {
-      "name": "m_nResourceName",
-      "type": "CUtlStringToken",
-      "offset": 20
-     },
-     {
-      "name": "m_vSound",
-      "type": "CVSound",
-      "offset": 48
-     },
-     {
-      "name": "m_pEnvelopeAnalyzer",
-      "type": "CVoiceContainerAnalysisBase*",
-      "offset": 112
-     }
-    ]
-   },
-   {
-    "name": "CVMixDiffusorProcessorDesc",
-    "module": "CVMixDiffusorProcessorDesc.dll",
-    "size": 56,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixDiffusorDesc_t",
-      "offset": 40
-     }
-    ]
-   },
-   {
-    "name": "CVMixUtilityProcessorDesc",
-    "module": "CVMixUtilityProcessorDesc.dll",
-    "size": 64,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixUtilityDesc_t",
-      "offset": 40
-     }
-    ]
-   },
-   {
-    "name": "CRandomPannerControls",
-    "module": "CRandomPannerControls.dll",
-    "size": 32,
-    "fields": [
-     {
-      "name": "m_panningControlInputName",
-      "type": "CUtlString",
-      "offset": 0
-     },
-     {
-      "name": "m_volumeControlInputName",
-      "type": "CUtlString",
-      "offset": 8
-     },
-     {
-      "name": "m_flMinVolume",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_flMaxVolume",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_strVectorStackParam",
-      "type": "CUtlString",
-      "offset": 24
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerGranulator",
-    "module": "CVoiceContainerGranulator.dll",
-    "size": 376,
-    "fields": [
-     {
-      "name": "m_flGrainLength",
-      "type": "float32",
-      "offset": 136
-     },
-     {
-      "name": "m_flGrainCrossfadeAmount",
-      "type": "float32",
-      "offset": 140
-     },
-     {
-      "name": "m_flStartJitter",
-      "type": "float32",
-      "offset": 144
-     },
-     {
-      "name": "m_flPlaybackJitter",
-      "type": "float32",
-      "offset": 148
-     },
-     {
-      "name": "m_bShouldWraparound",
-      "type": "bool",
-      "offset": 152
-     },
-     {
-      "name": "m_sourceAudio",
-      "type": "CStrongHandle<InfoForResourceTypeCVoiceContainerBase>",
-      "offset": 160
-     },
-     {
-      "name": "m_bDoubleBufferSourceAudio",
-      "type": "bool",
-      "offset": 168
-     },
-     {
-      "name": "m_flMaxSourceLength",
-      "type": "float32",
-      "offset": 172
-     }
-    ]
-   },
-   {
-    "name": "CVMixPresetDSPProcessorDesc",
-    "module": "CVMixPresetDSPProcessorDesc.dll",
-    "size": 64,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixPresetDSPDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_paramEffectName",
-      "type": "CVMixParameterEffectName",
-      "offset": 56
-     }
-    ]
-   },
-   {
-    "name": "VMixDelayDesc_t",
-    "module": "VMixDelayDesc_t.dll",
-    "size": 40,
-    "fields": [
-     {
-      "name": "m_feedbackFilter",
-      "type": "VMixFilterDesc_t",
-      "offset": 0
-     },
-     {
-      "name": "m_bEnableFilter",
-      "type": "bool",
-      "offset": 16
-     },
-     {
-      "name": "m_flDelay",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_flDirectGain",
-      "type": "float32",
-      "offset": 24
-     },
-     {
-      "name": "m_flDelayGain",
-      "type": "float32",
-      "offset": 28
-     },
-     {
-      "name": "m_flFeedbackGain",
-      "type": "float32",
-      "offset": 32
-     },
-     {
-      "name": "m_flWidth",
-      "type": "float32",
-      "offset": 36
-     }
-    ]
-   },
-   {
-    "name": "VMixEQ8Desc_t",
-    "module": "VMixEQ8Desc_t.dll",
-    "size": 160,
-    "fields": [
-     {
-      "name": "m_stages",
-      "type": "VMixEQFilterDesc_t[8]",
-      "offset": 0
-     }
-    ]
-   },
-   {
-    "name": "CVMixDynamicsProcessorDesc",
-    "module": "CVMixDynamicsProcessorDesc.dll",
-    "size": 96,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixDynamicsDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_outParamLevel",
-      "type": "CVMixParameterFloat",
-      "offset": 88
-     },
-     {
-      "name": "m_outParamdBLevel",
-      "type": "CVMixParameterFloat",
-      "offset": 92
-     }
-    ]
-   },
-   {
-    "name": "VMixEQFilterDesc_t",
-    "module": "VMixEQFilterDesc_t.dll",
-    "size": 20,
-    "fields": [
-     {
-      "name": "m_nChannelSet",
-      "type": "VMixFilterChannelSet_t",
-      "offset": 16
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerLoopXFade",
-    "module": "CVoiceContainerLoopXFade.dll",
-    "size": 176,
-    "fields": [
-     {
-      "name": "m_sound",
-      "type": "CSoundContainerReference",
-      "offset": 120
-     },
-     {
-      "name": "m_flLoopEnd",
-      "type": "float32",
-      "offset": 152
-     },
-     {
-      "name": "m_flLoopStart",
-      "type": "float32",
-      "offset": 156
-     },
-     {
-      "name": "m_flFadeOut",
-      "type": "float32",
-      "offset": 160
-     },
-     {
-      "name": "m_flFadeIn",
-      "type": "float32",
-      "offset": 164
-     },
-     {
-      "name": "m_bPlayHead",
-      "type": "bool",
-      "offset": 168
-     },
-     {
-      "name": "m_bPlayTail",
-      "type": "bool",
-      "offset": 169
-     },
-     {
-      "name": "m_bEqualPow",
-      "type": "bool",
-      "offset": 170
-     }
-    ]
-   },
-   {
-    "name": "VMixPresetDSPDesc_t",
-    "module": "VMixPresetDSPDesc_t.dll",
-    "size": 16,
-    "fields": [
-     {
-      "name": "m_effectName",
-      "type": "CUtlString",
-      "offset": 0
-     }
-    ]
-   },
-   {
-    "name": "CAudioPhonemeTag",
-    "module": "CAudioPhonemeTag.dll",
-    "size": 12,
-    "fields": [
-     {
-      "name": "m_flStartTime",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_flEndTime",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_nPhonemeCode",
-      "type": "int32",
-      "offset": 8
-     }
-    ]
-   },
-   {
-    "name": "CVsndRadioButtonSlot",
-    "module": "CVsndRadioButtonSlot.dll",
-    "size": 136,
-    "fields": [
-     {
-      "name": "m_bEnableVsnd",
-      "type": "bool",
-      "offset": 0
-     },
-     {
-      "name": "m_vsnd",
-      "type": "CSoundContainerReference",
-      "offset": 8
-     },
-     {
-      "name": "m_bEnableEndcap",
-      "type": "bool",
-      "offset": 40
-     },
-     {
-      "name": "m_endcapVsnd",
-      "type": "CSoundContainerReference",
-      "offset": 48
-     },
-     {
-      "name": "m_bEnableLoopcap",
-      "type": "bool",
-      "offset": 80
-     },
-     {
-      "name": "m_loopcapVsnd",
-      "type": "CSoundContainerReference",
-      "offset": 88
-     },
-     {
-      "name": "m_group",
-      "type": "int32",
-      "offset": 120
-     },
-     {
-      "name": "m_volume",
-      "type": "float32",
-      "offset": 124
-     },
-     {
-      "name": "m_fadeOut",
-      "type": "float32",
-      "offset": 128
-     },
-     {
-      "name": "m_mode",
-      "type": "EVsndPlaybackMode",
-      "offset": 132
-     }
-    ]
-   },
-   {
-    "name": "CSosGroupActionSoundeventCountSchema",
-    "module": "CSosGroupActionSoundeventCountSchema.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_bExcludeStoppedSounds",
-      "type": "bool",
-      "offset": 8
-     },
-     {
-      "name": "m_strCountKeyName",
-      "type": "CUtlString",
-      "offset": 16
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerEnvelopeAnalyzer",
-    "module": "CVoiceContainerEnvelopeAnalyzer.dll",
-    "size": 88,
-    "fields": [
-     {
-      "name": "m_mode",
-      "type": "EMode_t",
-      "offset": 72
-     },
-     {
-      "name": "m_fAnalysisWindowMs",
-      "type": "float32",
-      "offset": 76
-     },
-     {
-      "name": "m_flThreshold",
-      "type": "float32",
-      "offset": 80
-     }
-    ]
-   },
-   {
-    "name": "CVMixBaseProcessorDesc",
-    "module": "CVMixBaseProcessorDesc.dll",
-    "size": 40,
-    "fields": [
-     {
-      "name": "m_name",
-      "type": "CUtlString",
-      "offset": 8
-     },
-     {
-      "name": "m_nDebugId",
-      "type": "uint32",
-      "offset": 16
-     },
-     {
-      "name": "m_flxfade",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_nChannels",
-      "type": "int32",
-      "offset": 24
-     },
-     {
-      "name": "m_bDebugBypass",
-      "type": "bool",
-      "offset": 28
-     },
-     {
-      "name": "m_paramEnable",
-      "type": "CVMixParameterFloat",
-      "offset": 32
-     },
-     {
-      "name": "m_paramMix",
-      "type": "CVMixParameterFloat",
-      "offset": 36
-     }
-    ]
-   },
-   {
-    "name": "CVMixImpulseResponseInput",
-    "module": "CVMixImpulseResponseInput.dll",
-    "size": 16,
-    "fields": []
-   },
-   {
-    "name": "CVMixSteamAudioHybridReverbProcessorDesc",
-    "module": "CVMixSteamAudioHybridReverbProcessorDesc.dll",
-    "size": 64,
-    "fields": [
-     {
-      "name": "m_paramReverbTimeLow",
-      "type": "CVMixParameterFloat",
-      "offset": 40
-     },
-     {
-      "name": "m_paramReverbTimeMid",
-      "type": "CVMixParameterFloat",
-      "offset": 44
-     },
-     {
-      "name": "m_paramReverbTimeHigh",
-      "type": "CVMixParameterFloat",
-      "offset": 48
-     },
-     {
-      "name": "m_paramBand",
-      "type": "CVMixParameterFloat",
-      "offset": 52
-     },
-     {
-      "name": "m_paramReverbTime",
-      "type": "CVMixDataOffset",
-      "offset": 56
-     }
-    ]
-   },
-   {
-    "name": "VMixPitchShiftDesc_t",
-    "module": "VMixPitchShiftDesc_t.dll",
-    "size": 16,
-    "fields": [
-     {
-      "name": "m_nGrainSampleCount",
-      "type": "int32",
-      "offset": 0
-     },
-     {
-      "name": "m_flPitchShift",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_nQuality",
-      "type": "int32",
-      "offset": 8
-     },
-     {
-      "name": "m_nProcType",
-      "type": "int32",
-      "offset": 12
-     }
-    ]
-   },
-   {
-    "name": "CVMixControlOutput",
-    "module": "CVMixControlOutput.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_flDefaultValue",
-      "type": "float32",
-      "offset": 16
-     }
-    ]
-   },
-   {
-    "name": "CVMixModDelayProcessorDesc",
-    "module": "CVMixModDelayProcessorDesc.dll",
-    "size": 104,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixModDelayDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_paramCutoffFrequency",
-      "type": "CVMixParameterFloat",
-      "offset": 88
-     },
-     {
-      "name": "m_paramDelay",
-      "type": "CVMixParameterFloat",
-      "offset": 92
-     },
-     {
-      "name": "m_paramModRate",
-      "type": "CVMixParameterFloat",
-      "offset": 96
-     },
-     {
-      "name": "m_paramModDepth",
-      "type": "CVMixParameterFloat",
-      "offset": 100
-     }
-    ]
-   },
-   {
-    "name": "CVMixShaperProcessorDesc",
-    "module": "CVMixShaperProcessorDesc.dll",
-    "size": 64,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixShaperDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_paramDrive",
-      "type": "CVMixParameterFloat",
-      "offset": 60
-     }
-    ]
-   },
-   {
-    "name": "CVMixParameterFloat",
-    "module": "CVMixParameterFloat.dll",
-    "size": 4,
-    "fields": [
-     {
-      "name": "m_offset",
-      "type": "CVMixDataOffset",
-      "offset": 0
-     }
-    ]
-   },
-   {
-    "name": "CVMixBaseGraphDescription",
-    "module": "CVMixBaseGraphDescription.dll",
-    "size": 208,
-    "fields": [
-     {
-      "name": "m_name",
-      "type": "CUtlString",
-      "offset": 0
-     },
-     {
-      "name": "m_nGraphOutputChannels",
-      "type": "int32",
-      "offset": 8
-     },
-     {
-      "name": "m_bIsMainGraph",
-      "type": "bool",
-      "offset": 12
-     },
-     {
-      "name": "m_processorNodes",
-      "type": "CUtlLeanVector<std::unique_ptr<CVMixBaseProcessorDesc>>",
-      "offset": 16
-     },
-     {
-      "name": "m_graphInputs",
-      "type": "CUtlLeanVector<CVMixGraphInput>",
-      "offset": 32
-     },
-     {
-      "name": "m_controlTransientInputs",
-      "type": "CUtlLeanVector<CVMixControlInput>",
-      "offset": 48
-     },
-     {
-      "name": "m_controlOutputs",
-      "type": "CUtlLeanVector<CVMixControlOutput>",
-      "offset": 64
-     },
-     {
-      "name": "m_impulseResponseInputs",
-      "type": "CUtlLeanVector<CVMixImpulseResponseInput>",
-      "offset": 80
-     },
-     {
-      "name": "m_mixCommands",
-      "type": "CUtlLeanVector<CVMixCommand>",
-      "offset": 96
-     },
-     {
-      "name": "m_heap",
-      "type": "CVMixHeap",
-      "offset": 112
-     },
-     {
-      "name": "m_audioMeters",
-      "type": "CUtlLeanVector<CVMixAudioMeter>",
-      "offset": 128
-     },
-     {
-      "name": "m_controlMeters",
-      "type": "CUtlLeanVector<CVMixControlMeter>",
-      "offset": 144
-     },
-     {
-      "name": "m_nameInputMeters",
-      "type": "CUtlLeanVector<CVMixNameInputMeter>",
-      "offset": 160
-     },
-     {
-      "name": "m_additionalOutputs",
-      "type": "CUtlLeanVector<CVMixAdditionalOutput>",
-      "offset": 176
-     },
-     {
-      "name": "m_automaticControlInputs",
-      "type": "CUtlLeanVector<CVMixAutomaticControlInput>",
-      "offset": 192
-     }
-    ]
-   },
-   {
-    "name": "CVMixAutomaticControlInput",
-    "module": "CVMixAutomaticControlInput.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_name",
-      "type": "CUtlString",
-      "offset": 0
-     },
-     {
-      "name": "m_nGraphInputIndex",
-      "type": "int32",
-      "offset": 12
-     },
-     {
-      "name": "m_nControlType",
-      "type": "VMixAutoControlType_t",
-      "offset": 16
-     }
-    ]
-   },
-   {
-    "name": "CSndBeatTrack",
-    "module": "CSndBeatTrack.dll",
-    "size": 152,
-    "fields": [
-     {
-      "name": "m_name",
-      "type": "CUtlString",
-      "offset": 0
-     },
-     {
-      "name": "m_playbackType",
-      "type": "SndBeatTrackPlaybackType_t",
-      "offset": 32
-     },
-     {
-      "name": "m_nTranspose",
-      "type": "int32",
-      "offset": 36
-     },
-     {
-      "name": "m_bSyncToVoice",
-      "type": "bool",
-      "offset": 40
-     },
-     {
-      "name": "m_flBPM",
-      "type": "float32",
-      "offset": 44
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerVsndRadioButton",
-    "module": "CVoiceContainerVsndRadioButton.dll",
-    "size": 2304,
-    "fields": [
-     {
-      "name": "m_namespace",
-      "type": "CUtlString",
-      "offset": 120
-     },
-     {
-      "name": "m_slot1",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 128
-     },
-     {
-      "name": "m_slot2",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 264
-     },
-     {
-      "name": "m_slot3",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 400
-     },
-     {
-      "name": "m_slot4",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 536
-     },
-     {
-      "name": "m_slot5",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 672
-     },
-     {
-      "name": "m_slot6",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 808
-     },
-     {
-      "name": "m_slot7",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 944
-     },
-     {
-      "name": "m_slot8",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 1080
-     },
-     {
-      "name": "m_slot9",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 1216
-     },
-     {
-      "name": "m_slot10",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 1352
-     },
-     {
-      "name": "m_slot11",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 1488
-     },
-     {
-      "name": "m_slot12",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 1624
-     },
-     {
-      "name": "m_slot13",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 1760
-     },
-     {
-      "name": "m_slot14",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 1896
-     },
-     {
-      "name": "m_slot15",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 2032
-     },
-     {
-      "name": "m_slot16",
-      "type": "CVsndRadioButtonSlot",
-      "offset": 2168
-     }
-    ]
-   },
-   {
-    "name": "CAudioEmphasisSample",
-    "module": "CAudioEmphasisSample.dll",
-    "size": 8,
-    "fields": [
-     {
-      "name": "m_flTime",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_flValue",
-      "type": "float32",
-      "offset": 4
-     }
-    ]
-   },
-   {
-    "name": "CVMixOscProcessorDesc",
-    "module": "CVMixOscProcessorDesc.dll",
-    "size": 64,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixOscDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_paramFrequency",
-      "type": "CVMixParameterFloat",
-      "offset": 52
-     },
-     {
-      "name": "m_paramPhase",
-      "type": "CVMixParameterFloat",
-      "offset": 56
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerLoopTriggerWithRandomPanner",
-    "module": "CVoiceContainerLoopTriggerWithRandomPanner.dll",
-    "size": 200,
-    "fields": [
-     {
-      "name": "m_randomPannerControls",
-      "type": "CRandomPannerControls",
-      "offset": 168
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerGenerator",
-    "module": "CVoiceContainerGenerator.dll",
-    "size": 120,
-    "fields": []
-   },
-   {
-    "name": "CVoiceContainerSet",
-    "module": "CVoiceContainerSet.dll",
-    "size": 168,
-    "fields": [
-     {
-      "name": "m_soundsToPlay",
-      "type": "CUtlVector<CVoiceContainerSetElement>",
-      "offset": 120
-     }
-    ]
-   },
-   {
-    "name": "VMixConvolutionDesc_t",
-    "module": "VMixConvolutionDesc_t.dll",
-    "size": 32,
-    "fields": [
-     {
-      "name": "m_fldbGain",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_flPreDelayMS",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_flWetMix",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_fldbLow",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_fldbMid",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_fldbHigh",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_flLowCutoffFreq",
-      "type": "float32",
-      "offset": 24
-     },
-     {
-      "name": "m_flHighCutoffFreq",
-      "type": "float32",
-      "offset": 28
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerVsndTrigger",
-    "module": "CVoiceContainerVsndTrigger.dll",
-    "size": 2304,
-    "fields": [
-     {
-      "name": "m_namespace",
-      "type": "CUtlString",
-      "offset": 120
-     },
-     {
-      "name": "m_slot1",
-      "type": "CVsndTriggerSlot",
-      "offset": 128
-     },
-     {
-      "name": "m_slot2",
-      "type": "CVsndTriggerSlot",
-      "offset": 264
-     },
-     {
-      "name": "m_slot3",
-      "type": "CVsndTriggerSlot",
-      "offset": 400
-     },
-     {
-      "name": "m_slot4",
-      "type": "CVsndTriggerSlot",
-      "offset": 536
-     },
-     {
-      "name": "m_slot5",
-      "type": "CVsndTriggerSlot",
-      "offset": 672
-     },
-     {
-      "name": "m_slot6",
-      "type": "CVsndTriggerSlot",
-      "offset": 808
-     },
-     {
-      "name": "m_slot7",
-      "type": "CVsndTriggerSlot",
-      "offset": 944
-     },
-     {
-      "name": "m_slot8",
-      "type": "CVsndTriggerSlot",
-      "offset": 1080
-     },
-     {
-      "name": "m_slot9",
-      "type": "CVsndTriggerSlot",
-      "offset": 1216
-     },
-     {
-      "name": "m_slot10",
-      "type": "CVsndTriggerSlot",
-      "offset": 1352
-     },
-     {
-      "name": "m_slot11",
-      "type": "CVsndTriggerSlot",
-      "offset": 1488
-     },
-     {
-      "name": "m_slot12",
-      "type": "CVsndTriggerSlot",
-      "offset": 1624
-     },
-     {
-      "name": "m_slot13",
-      "type": "CVsndTriggerSlot",
-      "offset": 1760
-     },
-     {
-      "name": "m_slot14",
-      "type": "CVsndTriggerSlot",
-      "offset": 1896
-     },
-     {
-      "name": "m_slot15",
-      "type": "CVsndTriggerSlot",
-      "offset": 2032
-     },
-     {
-      "name": "m_slot16",
-      "type": "CVsndTriggerSlot",
-      "offset": 2168
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerSetElement",
-    "module": "CVoiceContainerSetElement.dll",
-    "size": 40,
-    "fields": [
-     {
-      "name": "m_sound",
-      "type": "CSoundContainerReference",
-      "offset": 0
-     },
-     {
-      "name": "m_flVolumeDB",
-      "type": "float32",
-      "offset": 32
-     }
-    ]
-   },
-   {
-    "name": "CSndBeatPatternManager",
-    "module": "CSndBeatPatternManager.dll",
-    "size": 144,
-    "fields": [
-     {
-      "name": "m_vecPatterns",
-      "type": "CUtlVector<CSndBeatPattern>",
-      "offset": 56
-     },
-     {
-      "name": "m_vecActiveTracks",
-      "type": "CUtlVector<CSndBeatTrack>",
-      "offset": 112
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerAsyncGenerator",
-    "module": "CVoiceContainerAsyncGenerator.dll",
-    "size": 136,
-    "fields": []
-   },
-   {
-    "name": "CSoundInfoHeader",
-    "module": "CSoundInfoHeader.dll",
-    "size": 1,
-    "fields": []
-   },
-   {
-    "name": "CVMixDescription",
-    "module": "CVMixDescription.dll",
-    "size": 272,
-    "fields": [
-     {
-      "name": "m_submixList",
-      "type": "CUtlLeanVector<CSubmix>",
-      "offset": 208
-     },
-     {
-      "name": "m_sources",
-      "type": "CUtlLeanVector<std::unique_ptr<CVoiceContainerBase>>",
-      "offset": 224
-     },
-     {
-      "name": "m_impulseResponseValues",
-      "type": "CUtlLeanVector<uint64>",
-      "offset": 240
-     },
-     {
-      "name": "m_nNameHashCode",
-      "type": "uint32",
-      "offset": 256
-     }
-    ]
-   },
-   {
-    "name": "SosEditItemInfo_t",
-    "module": "SosEditItemInfo_t.dll",
-    "size": 48,
-    "fields": [
-     {
-      "name": "itemType",
-      "type": "SosEditItemType_t",
-      "offset": 0
-     },
-     {
-      "name": "itemName",
-      "type": "CUtlString",
-      "offset": 8
-     },
-     {
-      "name": "itemTypeName",
-      "type": "CUtlString",
-      "offset": 16
-     },
-     {
-      "name": "itemKVString",
-      "type": "CUtlString",
-      "offset": 32
-     },
-     {
-      "name": "itemPos",
-      "type": "Vector2D",
-      "offset": 40
-     }
-    ]
-   },
-   {
-    "name": "CVMixSubmix",
-    "module": "CVMixSubmix.dll",
-    "size": 56,
-    "fields": [
-     {
-      "name": "m_name",
-      "type": "CUtlString",
-      "offset": 0
-     },
-     {
-      "name": "m_SendNames",
-      "type": "CUtlString[4]",
-      "offset": 8
-     },
-     {
-      "name": "m_nSoloNameHash",
-      "type": "uint32",
-      "offset": 44
-     },
-     {
-      "name": "m_nChannels",
-      "type": "int32",
-      "offset": 48
-     },
-     {
-      "name": "m_nSendOperator",
-      "type": "VMixSendOperator_t",
-      "offset": 52
-     },
-     {
-      "name": "m_nMixDownRule",
-      "type": "VMixMixDownRule_t",
-      "offset": 54
-     },
-     {
-      "name": "m_nUpMixRule",
-      "type": "VMixUpMixRule_t",
-      "offset": 55
-     }
-    ]
-   },
-   {
-    "name": "CVMixFlangerProcessorDesc",
-    "module": "CVMixFlangerProcessorDesc.dll",
-    "size": 88,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixFlangerDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_paramDelay",
-      "type": "CVMixParameterFloat",
-      "offset": 76
-     },
-     {
-      "name": "m_paramModRate",
-      "type": "CVMixParameterFloat",
-      "offset": 80
-     },
-     {
-      "name": "m_paramModDepth",
-      "type": "CVMixParameterFloat",
-      "offset": 84
-     }
-    ]
-   },
-   {
-    "name": "CVMixEffectChainProcessorDesc",
-    "module": "CVMixEffectChainProcessorDesc.dll",
-    "size": 56,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixEffectChainDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_paramEffectName",
-      "type": "CVMixParameterEffectName",
-      "offset": 48
-     }
-    ]
-   },
-   {
-    "name": "KeyGroup_t",
-    "module": "KeyGroup_t.dll",
-    "size": 16,
-    "fields": [
-     {
-      "name": "nCenterNote",
-      "type": "uint8",
-      "offset": 0
-     },
-     {
-      "name": "nMinNote",
-      "type": "uint8",
-      "offset": 1
-     },
-     {
-      "name": "nMaxNote",
-      "type": "uint8",
-      "offset": 2
-     },
-     {
-      "name": "nNumVelocityZones",
-      "type": "uint8",
-      "offset": 3
-     },
-     {
-      "name": "pVelocityZones",
-      "type": "VelocityZone_t*",
-      "offset": 8
-     }
-    ]
-   },
-   {
-    "name": "CVMixFreeverbProcessorDesc",
-    "module": "CVMixFreeverbProcessorDesc.dll",
-    "size": 56,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixFreeverbDesc_t",
-      "offset": 40
-     }
-    ]
-   },
-   {
-    "name": "VMixPlateverbDesc_t",
-    "module": "VMixPlateverbDesc_t.dll",
-    "size": 28,
-    "fields": [
-     {
-      "name": "m_flPrefilter",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_flInputDiffusion1",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_flInputDiffusion2",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_flDecay",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_flDamp",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_flFeedbackDiffusion1",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_flFeedbackDiffusion2",
-      "type": "float32",
-      "offset": 24
-     }
-    ]
-   },
-   {
-    "name": "CVMixConvolutionProcessorDesc",
-    "module": "CVMixConvolutionProcessorDesc.dll",
-    "size": 80,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixConvolutionDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_paramImpulseResponse",
-      "type": "CVMixDataOffset",
-      "offset": 72
-     }
-    ]
-   },
-   {
-    "name": "CVMixParameterBool",
-    "module": "CVMixParameterBool.dll",
-    "size": 4,
-    "fields": [
-     {
-      "name": "m_offset",
-      "type": "CVMixDataOffset",
-      "offset": 0
-     }
-    ]
-   },
-   {
-    "name": "CSoundContainerReferenceArray",
-    "module": "CSoundContainerReferenceArray.dll",
-    "size": 56,
-    "fields": [
-     {
-      "name": "m_bUseReference",
-      "type": "bool",
-      "offset": 0
-     },
-     {
-      "name": "m_sounds",
-      "type": "CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>",
-      "offset": 8
-     },
-     {
-      "name": "m_pSounds",
-      "type": "CUtlVector<CVoiceContainerBase*>",
-      "offset": 32
-     }
-    ]
-   },
-   {
-    "name": "CVMixFilterProcessorDesc",
-    "module": "CVMixFilterProcessorDesc.dll",
-    "size": 64,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixFilterDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_paramCutoffFreq",
-      "type": "CVMixParameterFloat",
-      "offset": 56
-     },
-     {
-      "name": "m_paramQ",
-      "type": "CVMixParameterFloat",
-      "offset": 60
-     }
-    ]
-   },
-   {
-    "name": "CVMixAdditionalOutput",
-    "module": "CVMixAdditionalOutput.dll",
-    "size": 16,
-    "fields": [
-     {
-      "name": "m_name",
-      "type": "CUtlString",
-      "offset": 0
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerTapePlayer",
-    "module": "CVoiceContainerTapePlayer.dll",
-    "size": 216,
-    "fields": [
-     {
-      "name": "m_bShouldWraparound",
-      "type": "bool",
-      "offset": 136
-     },
-     {
-      "name": "m_sourceAudio",
-      "type": "CStrongHandle<InfoForResourceTypeCVoiceContainerBase>",
-      "offset": 144
-     },
-     {
-      "name": "m_flTapeSpeedAttackTime",
-      "type": "float32",
-      "offset": 152
-     },
-     {
-      "name": "m_flTapeSpeedReleaseTime",
-      "type": "float32",
-      "offset": 156
-     }
-    ]
-   },
-   {
-    "name": "CVMixSubgraphSwitchProcessorDesc",
-    "module": "CVMixSubgraphSwitchProcessorDesc.dll",
-    "size": 104,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixSubgraphSwitchDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_paramEffectName",
-      "type": "CVMixParameterEffectName",
-      "offset": 96
-     },
-     {
-      "name": "m_paramSelectionIndex",
-      "type": "CVMixParameterFloat",
-      "offset": 100
-     }
-    ]
-   },
-   {
-    "name": "VMixDiffusorDesc_t",
-    "module": "VMixDiffusorDesc_t.dll",
-    "size": 16,
-    "fields": [
-     {
-      "name": "m_flSize",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_flComplexity",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_flFeedback",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_flOutputGain",
-      "type": "float32",
-      "offset": 12
-     }
-    ]
-   },
-   {
-    "name": "CVMixSteamAudioPathingProcessorDesc",
-    "module": "CVMixSteamAudioPathingProcessorDesc.dll",
-    "size": 72,
-    "fields": [
-     {
-      "name": "m_paramPositionX",
-      "type": "CVMixParameterFloat",
-      "offset": 40
-     },
-     {
-      "name": "m_paramPositionY",
-      "type": "CVMixParameterFloat",
-      "offset": 44
-     },
-     {
-      "name": "m_paramPositionZ",
-      "type": "CVMixParameterFloat",
-      "offset": 48
-     },
-     {
-      "name": "m_paramPathingMixLevel",
-      "type": "CVMixParameterFloat",
-      "offset": 52
-     },
-     {
-      "name": "m_paramBand",
-      "type": "CVMixParameterFloat",
-      "offset": 56
-     },
-     {
-      "name": "m_paramArrayPathingEQ",
-      "type": "CVMixDataOffset",
-      "offset": 60
-     },
-     {
-      "name": "m_paramArrayPathingCoefficients",
-      "type": "CVMixDataOffset",
-      "offset": 64
-     }
-    ]
-   },
-   {
-    "name": "CVMixPannerProcessorDesc",
-    "module": "CVMixPannerProcessorDesc.dll",
-    "size": 56,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixPannerDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_paramPan",
-      "type": "CVMixParameterFloat",
-      "offset": 48
-     }
-    ]
-   },
-   {
-    "name": "VMixDynamicsCompressorDesc_t",
-    "module": "VMixDynamicsCompressorDesc_t.dll",
-    "size": 40,
-    "fields": [
-     {
-      "name": "m_fldbOutputGain",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_fldbCompressionThreshold",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_fldbKneeWidth",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_flCompressionRatio",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_flAttackTimeMS",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_flReleaseTimeMS",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_flRMSTimeMS",
-      "type": "float32",
-      "offset": 24
-     },
-     {
-      "name": "m_flWetMix",
-      "type": "float32",
-      "offset": 28
-     },
-     {
-      "name": "m_flSCHighPassFreq",
-      "type": "float32",
-      "offset": 32
-     },
-     {
-      "name": "m_bPeakMode",
-      "type": "bool",
-      "offset": 36
-     },
-     {
-      "name": "m_bAutoMakeupGain",
-      "type": "bool",
-      "offset": 37
-     }
-    ]
-   },
-   {
-    "name": "CVMixHeap",
-    "module": "CVMixHeap.dll",
-    "size": 16,
-    "fields": [
-     {
-      "name": "m_storage",
-      "type": "CUtlLeanVector<uint32>",
-      "offset": 0
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerVMixSnd",
-    "module": "CVoiceContainerVMixSnd.dll",
-    "size": 400,
-    "fields": [
-     {
-      "name": "m_resourceName",
-      "type": "CUtlString",
-      "offset": 392
-     }
-    ]
-   },
-   {
-    "name": "CVMixStereoDelayProcessorDesc",
-    "module": "CVMixStereoDelayProcessorDesc.dll",
-    "size": 48,
-    "fields": [
-     {
-      "name": "m_paramDelayLeft",
-      "type": "CVMixParameterFloat",
-      "offset": 40
-     },
-     {
-      "name": "m_paramDelayRight",
-      "type": "CVMixParameterFloat",
-      "offset": 44
-     }
-    ]
-   },
-   {
-    "name": "VMixShaperDesc_t",
-    "module": "VMixShaperDesc_t.dll",
-    "size": 20,
-    "fields": [
-     {
-      "name": "m_nShape",
-      "type": "int32",
-      "offset": 0
-     },
-     {
-      "name": "m_fldbDrive",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_fldbOutputGain",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_flWetMix",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_nOversampleFactor",
-      "type": "int32",
-      "offset": 16
-     }
-    ]
-   },
-   {
-    "name": "CVMixDataOffset",
-    "module": "CVMixDataOffset.dll",
-    "size": 4,
-    "fields": [
-     {
-      "name": "m_nOffset",
-      "type": "uint32",
-      "offset": 0
-     }
-    ]
-   },
-   {
-    "name": "VMixEnvelopeDesc_t",
-    "module": "VMixEnvelopeDesc_t.dll",
-    "size": 12,
-    "fields": [
-     {
-      "name": "m_flAttackTimeMS",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_flHoldTimeMS",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_flReleaseTimeMS",
-      "type": "float32",
-      "offset": 8
-     }
-    ]
-   },
-   {
-    "name": "CAudioSentence",
-    "module": "CAudioSentence.dll",
-    "size": 160,
-    "fields": [
-     {
-      "name": "m_bShouldVoiceDuck",
-      "type": "bool",
-      "offset": 0
-     },
-     {
-      "name": "m_RunTimePhonemes",
-      "type": "CUtlVector<CAudioPhonemeTag>",
-      "offset": 8
-     },
-     {
-      "name": "m_EmphasisSamples",
-      "type": "CUtlVector<CAudioEmphasisSample>",
-      "offset": 32
-     },
-     {
-      "name": "m_morphData",
-      "type": "CAudioMorphData",
-      "offset": 56
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerParameterBlender",
-    "module": "CVoiceContainerParameterBlender.dll",
-    "size": 456,
-    "fields": [
-     {
-      "name": "m_firstSound",
-      "type": "CSoundContainerReference",
-      "offset": 120
-     },
-     {
-      "name": "m_secondSound",
-      "type": "CSoundContainerReference",
-      "offset": 152
-     },
-     {
-      "name": "m_bEnableOcclusionBlend",
-      "type": "bool",
-      "offset": 184
-     },
-     {
-      "name": "m_curve1",
-      "type": "CPiecewiseCurve",
-      "offset": 192
-     },
-     {
-      "name": "m_curve2",
-      "type": "CPiecewiseCurve",
-      "offset": 256
-     },
-     {
-      "name": "m_bEnableDistanceBlend",
-      "type": "bool",
-      "offset": 320
-     },
-     {
-      "name": "m_curve3",
-      "type": "CPiecewiseCurve",
-      "offset": 328
-     },
-     {
-      "name": "m_curve4",
-      "type": "CPiecewiseCurve",
-      "offset": 392
-     }
-    ]
-   },
-   {
-    "name": "CVMixAudioMeter",
-    "module": "CVMixAudioMeter.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_name",
-      "type": "CUtlString",
-      "offset": 0
-     },
-     {
-      "name": "m_displayName",
-      "type": "CUtlString",
-      "offset": 8
-     },
-     {
-      "name": "m_nDebugId",
-      "type": "uint32",
-      "offset": 16
-     }
-    ]
-   },
-   {
-    "name": "CVMixVocoderProcessorDesc",
-    "module": "CVMixVocoderProcessorDesc.dll",
-    "size": 88,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixVocoderDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_paramBandwidth",
-      "type": "CVMixParameterFloat",
-      "offset": 80
-     }
-    ]
-   },
-   {
-    "name": "CSosGroupActionLimitSchema",
-    "module": "CSosGroupActionLimitSchema.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_nMaxCount",
-      "type": "int32",
-      "offset": 8
-     },
-     {
-      "name": "m_nStopType",
-      "type": "SosActionStopType_t",
-      "offset": 12
-     },
-     {
-      "name": "m_nSortType",
-      "type": "SosActionLimitSortType_t",
-      "offset": 16
-     },
-     {
-      "name": "m_bStopImmediate",
-      "type": "bool",
-      "offset": 20
-     },
-     {
-      "name": "m_bCountStopped",
-      "type": "bool",
-      "offset": 21
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerAmpedDecayingSineWave",
-    "module": "CVoiceContainerAmpedDecayingSineWave.dll",
-    "size": 136,
-    "fields": [
-     {
-      "name": "m_flGainAmount",
-      "type": "float32",
-      "offset": 128
-     }
-    ]
-   },
-   {
-    "name": "VMixAutoFilterDesc_t",
-    "module": "VMixAutoFilterDesc_t.dll",
-    "size": 44,
-    "fields": [
-     {
-      "name": "m_flEnvelopeAmount",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_flAttackTimeMS",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_flReleaseTimeMS",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_filter",
-      "type": "VMixFilterDesc_t",
-      "offset": 12
-     },
-     {
-      "name": "m_flLFOAmount",
-      "type": "float32",
-      "offset": 28
-     },
-     {
-      "name": "m_flLFORate",
-      "type": "float32",
-      "offset": 32
-     },
-     {
-      "name": "m_flPhase",
-      "type": "float32",
-      "offset": 36
-     },
-     {
-      "name": "m_nLFOShape",
-      "type": "VMixLFOShape_t",
-      "offset": 40
-     }
-    ]
-   },
-   {
-    "name": "VMixDynamicsBand_t",
-    "module": "VMixDynamicsBand_t.dll",
-    "size": 36,
-    "fields": [
-     {
-      "name": "m_fldbGainInput",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_fldbGainOutput",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_fldbThresholdBelow",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_fldbThresholdAbove",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_flRatioBelow",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_flRatioAbove",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_flAttackTimeMS",
-      "type": "float32",
-      "offset": 24
-     },
-     {
-      "name": "m_flReleaseTimeMS",
-      "type": "float32",
-      "offset": 28
-     },
-     {
-      "name": "m_bEnable",
-      "type": "bool",
-      "offset": 32
-     },
-     {
-      "name": "m_bSolo",
-      "type": "bool",
-      "offset": 33
-     }
-    ]
-   },
-   {
-    "name": "VMixEffectChainDesc_t",
-    "module": "VMixEffectChainDesc_t.dll",
-    "size": 8,
-    "fields": [
-     {
-      "name": "m_effectName",
-      "type": "CUtlString",
-      "offset": 0
-     }
-    ]
-   },
-   {
-    "name": "CVMixPlateReverbProcessorDesc",
-    "module": "CVMixPlateReverbProcessorDesc.dll",
-    "size": 72,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixPlateverbDesc_t",
-      "offset": 40
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerMultiBlender",
-    "module": "CVoiceContainerMultiBlender.dll",
-    "size": 184,
-    "fields": [
-     {
-      "name": "m_soundsToPlay",
-      "type": "CSoundContainerReferenceArray",
-      "offset": 120
-     },
-     {
-      "name": "m_flBlendFactor",
-      "type": "float32",
-      "offset": 176
-     },
-     {
-      "name": "m_flCrossover",
-      "type": "float32",
-      "offset": 180
-     }
-    ]
-   },
-   {
-    "name": "CVMixVsndInput",
-    "module": "CVMixVsndInput.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_defaultValue",
-      "type": "CUtlString",
-      "offset": 0
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerStaticAdditiveSynth::CGainScalePerInstance",
-    "module": "CVoiceContainerStaticAdditiveSynth::CGainScalePerInstance.dll",
-    "size": 16,
-    "fields": [
-     {
-      "name": "m_flMinVolume",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_nInstancesAtMinVolume",
-      "type": "int32",
-      "offset": 4
-     },
-     {
-      "name": "m_flMaxVolume",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_nInstancesAtMaxVolume",
-      "type": "int32",
-      "offset": 12
-     }
-    ]
-   },
-   {
-    "name": "CVMixParameterEffectName",
-    "module": "CVMixParameterEffectName.dll",
-    "size": 4,
-    "fields": [
-     {
-      "name": "m_offset",
-      "type": "CVMixDataOffset",
-      "offset": 0
-     }
-    ]
-   },
-   {
-    "name": "SndBeatTimeSignature_t",
-    "module": "SndBeatTimeSignature_t.dll",
-    "size": 2,
-    "fields": [
-     {
-      "name": "nNumerator",
-      "type": "uint8",
-      "offset": 0
-     },
-     {
-      "name": "nDenominator",
-      "type": "uint8",
-      "offset": 1
-     }
-    ]
-   },
-   {
-    "name": "VelocityZone_t",
-    "module": "VelocityZone_t.dll",
-    "size": 20,
-    "fields": [
-     {
-      "name": "nMaxVel",
-      "type": "uint8",
-      "offset": 0
-     },
-     {
-      "name": "nNextSelection",
-      "type": "uint8",
-      "offset": 1
-     },
-     {
-      "name": "nNumSamples",
-      "type": "uint8",
-      "offset": 2
-     },
-     {
-      "name": "pSamples",
-      "type": "uint32[4]",
-      "offset": 4
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerSelector",
-    "module": "CVoiceContainerSelector.dll",
-    "size": 240,
-    "fields": [
-     {
-      "name": "m_mode",
-      "type": "PlayBackMode_t",
-      "offset": 120
-     },
-     {
-      "name": "m_soundsToPlay",
-      "type": "CSoundContainerReferenceArray",
-      "offset": 128
-     },
-     {
-      "name": "m_fProbabilityWeights",
-      "type": "CUtlVector<float32>",
-      "offset": 184
-     }
-    ]
-   },
-   {
-    "name": "SndBeatEventKeyedSndEvts_t",
-    "module": "SndBeatEventKeyedSndEvts_t.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_strSoundEventName",
-      "type": "CUtlString",
-      "offset": 16
-     }
-    ]
-   },
-   {
-    "name": "CVMixGraphInput",
-    "module": "CVMixGraphInput.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_nOffset",
-      "type": "CVMixDataOffset",
-      "offset": 16
-     }
-    ]
-   },
-   {
-    "name": "CSosGroupActionTimeBlockLimitSchema",
-    "module": "CSosGroupActionTimeBlockLimitSchema.dll",
-    "size": 16,
-    "fields": [
-     {
-      "name": "m_nMaxCount",
-      "type": "int32",
-      "offset": 8
-     },
-     {
-      "name": "m_flMaxDuration",
-      "type": "float32",
-      "offset": 12
-     }
-    ]
-   },
-   {
-    "name": "SndBeatEventKeyedMidiNotes_t",
-    "module": "SndBeatEventKeyedMidiNotes_t.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_nStatus",
-      "type": "uint8",
-      "offset": 16
-     },
-     {
-      "name": "m_nNote",
-      "type": "uint8",
-      "offset": 17
-     },
-     {
-      "name": "m_nVelocity",
-      "type": "uint8",
-      "offset": 18
-     }
-    ]
-   },
-   {
-    "name": "CSosGroupActionMemberCountEnvelopeSchema",
-    "module": "CSosGroupActionMemberCountEnvelopeSchema.dll",
-    "size": 48,
-    "fields": [
-     {
-      "name": "m_nBaseCount",
-      "type": "int32",
-      "offset": 8
-     },
-     {
-      "name": "m_nTargetCount",
-      "type": "int32",
-      "offset": 12
-     },
-     {
-      "name": "m_flBaseValue",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_flTargetValue",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_flAttack",
-      "type": "float32",
-      "offset": 24
-     },
-     {
-      "name": "m_flDecay",
-      "type": "float32",
-      "offset": 28
-     },
-     {
-      "name": "m_resultVarName",
-      "type": "CUtlString",
-      "offset": 32
-     },
-     {
-      "name": "m_bSaveToGroup",
-      "type": "bool",
-      "offset": 40
-     }
-    ]
-   },
-   {
-    "name": "CVMixDualCompressorProcessorDesc",
-    "module": "CVMixDualCompressorProcessorDesc.dll",
-    "size": 104,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixDualCompressorDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_outParamLevel",
-      "type": "CVMixParameterFloat",
-      "offset": 92
-     },
-     {
-      "name": "m_outParamdBLevel",
-      "type": "CVMixParameterFloat",
-      "offset": 96
-     },
-     {
-      "name": "m_outParamReduction",
-      "type": "CVMixParameterFloat",
-      "offset": 100
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerSwitch",
-    "module": "CVoiceContainerSwitch.dll",
-    "size": 144,
-    "fields": [
-     {
-      "name": "m_soundsToPlay",
-      "type": "CUtlVector<CSoundContainerReference>",
-      "offset": 120
-     }
-    ]
-   },
-   {
-    "name": "CVMixControlMeter",
-    "module": "CVMixControlMeter.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_nValueIndex",
-      "type": "CVMixDataOffset",
-      "offset": 16
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerEnum",
-    "module": "CVoiceContainerEnum.dll",
-    "size": 184,
-    "fields": [
-     {
-      "name": "m_soundsToPlay",
-      "type": "CSoundContainerReferenceArray",
-      "offset": 120
-     },
-     {
-      "name": "m_iSelection",
-      "type": "int32",
-      "offset": 176
-     },
-     {
-      "name": "m_flCrossfadeTime",
-      "type": "float32",
-      "offset": 180
-     }
-    ]
-   },
-   {
-    "name": "CSosGroupActionTimeLimitSchema",
-    "module": "CSosGroupActionTimeLimitSchema.dll",
-    "size": 16,
-    "fields": [
-     {
-      "name": "m_flMaxDuration",
-      "type": "float32",
-      "offset": 8
-     }
-    ]
-   },
-   {
-    "name": "VMixVocoderDesc_t",
-    "module": "VMixVocoderDesc_t.dll",
-    "size": 40,
-    "fields": [
-     {
-      "name": "m_nBandCount",
-      "type": "int32",
-      "offset": 0
-     },
-     {
-      "name": "m_flBandwidth",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_fldBModGain",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_flFreqRangeStart",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_flFreqRangeEnd",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_fldBUnvoicedGain",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_flAttackTimeMS",
-      "type": "float32",
-      "offset": 24
-     },
-     {
-      "name": "m_flReleaseTimeMS",
-      "type": "float32",
-      "offset": 28
-     },
-     {
-      "name": "m_nDebugBand",
-      "type": "int32",
-      "offset": 32
-     },
-     {
-      "name": "m_bPeakMode",
-      "type": "bool",
-      "offset": 36
-     }
-    ]
-   },
-   {
-    "name": "VMixUtilityDesc_t",
-    "module": "VMixUtilityDesc_t.dll",
-    "size": 24,
-    "fields": [
-     {
-      "name": "m_nOp",
-      "type": "VMixChannelOperation_t",
-      "offset": 0
-     },
-     {
-      "name": "m_flInputPan",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_flOutputBalance",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_fldbOutputGain",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_bBassMono",
-      "type": "bool",
-      "offset": 16
-     },
-     {
-      "name": "m_flBassFreq",
-      "type": "float32",
-      "offset": 20
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerLoopTrigger",
-    "module": "CVoiceContainerLoopTrigger.dll",
-    "size": 168,
-    "fields": [
-     {
-      "name": "m_flRetriggerTimeMin",
-      "type": "float32",
-      "offset": 120
-     },
-     {
-      "name": "m_flRetriggerTimeMax",
-      "type": "float32",
-      "offset": 124
-     },
-     {
-      "name": "m_flFadeTime",
-      "type": "float32",
-      "offset": 128
-     },
-     {
-      "name": "m_bCrossFade",
-      "type": "bool",
-      "offset": 132
-     },
-     {
-      "name": "m_sound",
-      "type": "CSoundContainerReference",
-      "offset": 136
-     }
-    ]
-   },
-   {
-    "name": "SndBeatEventKeys_t",
-    "module": "SndBeatEventKeys_t.dll",
-    "size": 16,
-    "fields": [
-     {
-      "name": "m_flKey",
-      "type": "float32",
-      "offset": 8
-     }
-    ]
-   },
-   {
-    "name": "CVoiceContainerDecayingSineWave",
-    "module": "CVoiceContainerDecayingSineWave.dll",
-    "size": 128,
-    "fields": [
-     {
-      "name": "m_flFrequency",
-      "type": "float32",
-      "offset": 120
-     },
-     {
-      "name": "m_flDecayTime",
-      "type": "float32",
-      "offset": 124
-     }
-    ]
-   },
-   {
-    "name": "CVMixDelayProcessorDesc",
-    "module": "CVMixDelayProcessorDesc.dll",
-    "size": 88,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixDelayDesc_t",
-      "offset": 40
-     },
-     {
-      "name": "m_paramCutoffFrequency",
-      "type": "CVMixParameterFloat",
-      "offset": 80
-     },
-     {
-      "name": "m_paramDelay",
-      "type": "CVMixParameterFloat",
-      "offset": 84
-     }
-    ]
-   },
-   {
-    "name": "CVMixBoxverb2ProcessorDesc",
-    "module": "CVMixBoxverb2ProcessorDesc.dll",
-    "size": 120,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixBoxverbDesc_t",
-      "offset": 40
-     }
-    ]
-   },
-   {
-    "name": "VMixFilterDesc_t",
-    "module": "VMixFilterDesc_t.dll",
-    "size": 16,
-    "fields": [
-     {
-      "name": "m_fldbGain",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_flCutoffFreq",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_flQ",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_nFilterType",
-      "type": "VMixFilterType_t",
-      "offset": 12
-     },
-     {
-      "name": "m_nFilterSlope",
-      "type": "VMixFilterSlope_t",
-      "offset": 13
-     },
-     {
-      "name": "m_bEnabled",
-      "type": "bool",
-      "offset": 14
-     }
-    ]
-   },
-   {
-    "name": "CSndBeatPattern",
-    "module": "CSndBeatPattern.dll",
-    "size": 184,
-    "fields": [
-     {
-      "name": "m_name",
-      "type": "CUtlString",
-      "offset": 0
-     },
-     {
-      "name": "m_flSyncPriority",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_syncStartType",
-      "type": "SndBeatSyncStartType_t",
-      "offset": 16
-     },
-     {
-      "name": "m_syncType",
-      "type": "SndBeatSyncType_t",
-      "offset": 20
-     },
-     {
-      "name": "m_timeSignature",
-      "type": "SndBeatTimeSignature_t",
-      "offset": 24
-     },
-     {
-      "name": "m_flLength",
-      "type": "float32",
-      "offset": 32
-     },
-     {
-      "name": "m_bLooping",
-      "type": "bool",
-      "offset": 36
-     },
-     {
-      "name": "m_playEventType",
-      "type": "SndBeatEventType_t",
-      "offset": 40
-     },
-     {
-      "name": "m_flPlayBeatMult",
-      "type": "float32",
-      "offset": 44
-     },
-     {
-      "name": "m_playKeyType",
-      "type": "SndBeatKeyType_t",
-      "offset": 48
-     },
-     {
-      "name": "m_vecPatternKeys",
-      "type": "CUtlVector<SndBeatEventKeys_t>",
-      "offset": 56
-     },
-     {
-      "name": "m_vecPatternFloats",
-      "type": "CUtlVector<SndBeatEventKeyedFloats_t>",
-      "offset": 80
-     },
-     {
-      "name": "m_vecPatternSndEvts",
-      "type": "CUtlVector<SndBeatEventKeyedSndEvts_t>",
-      "offset": 104
-     },
-     {
-      "name": "m_vecPatternMidi",
-      "type": "CUtlVector<SndBeatEventKeyedMidiNotes_t>",
-      "offset": 128
-     },
-     {
-      "name": "m_syncEventType",
-      "type": "SndBeatEventType_t",
-      "offset": 152
-     },
-     {
-      "name": "m_flSyncBeatMult",
-      "type": "float32",
-      "offset": 156
-     },
-     {
-      "name": "m_vecSyncPatternKeys",
-      "type": "CUtlVector<SndBeatEventKeys_t>",
-      "offset": 160
-     }
-    ]
-   },
-   {
-    "name": "CSubmix",
-    "module": "CSubmix.dll",
-    "size": 80,
-    "fields": []
-   },
-   {
-    "name": "VMixOscDesc_t",
-    "module": "VMixOscDesc_t.dll",
-    "size": 12,
-    "fields": [
-     {
-      "name": "oscType",
-      "type": "VMixLFOShape_t",
-      "offset": 0
-     },
-     {
-      "name": "m_freq",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_flPhase",
-      "type": "float32",
-      "offset": 8
-     }
-    ]
-   },
-   {
-    "name": "CVMixAutoFilterProcessorDesc",
-    "module": "CVMixAutoFilterProcessorDesc.dll",
-    "size": 88,
-    "fields": [
-     {
-      "name": "m_desc",
-      "type": "VMixAutoFilterDesc_t",
-      "offset": 40
-     }
-    ]
-   },
-   {
-    "name": "ISndSeqInstruments",
-    "module": "ISndSeqInstruments.dll",
-    "size": 8,
-    "fields": []
-   },
-   {
-    "name": "VMixFlangerDesc_t",
-    "module": "VMixFlangerDesc_t.dll",
-    "size": 36,
-    "fields": [
-     {
-      "name": "m_bPhaseInvert",
-      "type": "bool",
-      "offset": 0
-     },
-     {
-      "name": "m_flGlideTime",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_flDelay",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_flOutputGain",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_flFeedbackGain",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_flFeedforwardGain",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_flModRate",
-      "type": "float32",
-      "offset": 24
-     },
-     {
-      "name": "m_flModDepth",
-      "type": "float32",
-      "offset": 28
-     },
-     {
-      "name": "m_bApplyAntialiasing",
-      "type": "bool",
-      "offset": 32
-     }
-    ]
-   },
-   {
-    "name": "VMixDynamicsDesc_t",
-    "module": "VMixDynamicsDesc_t.dll",
-    "size": 48,
-    "fields": [
-     {
-      "name": "m_fldbGain",
-      "type": "float32",
-      "offset": 0
-     },
-     {
-      "name": "m_fldbNoiseGateThreshold",
-      "type": "float32",
-      "offset": 4
-     },
-     {
-      "name": "m_fldbCompressionThreshold",
-      "type": "float32",
-      "offset": 8
-     },
-     {
-      "name": "m_fldbLimiterThreshold",
-      "type": "float32",
-      "offset": 12
-     },
-     {
-      "name": "m_fldbKneeWidth",
-      "type": "float32",
-      "offset": 16
-     },
-     {
-      "name": "m_flRatio",
-      "type": "float32",
-      "offset": 20
-     },
-     {
-      "name": "m_flLimiterRatio",
-      "type": "float32",
-      "offset": 24
-     },
-     {
-      "name": "m_flAttackTimeMS",
-      "type": "float32",
-      "offset": 28
-     },
-     {
-      "name": "m_flReleaseTimeMS",
-      "type": "float32",
-      "offset": 32
-     },
-     {
-      "name": "m_flRMSTimeMS",
-      "type": "float32",
-      "offset": 36
-     },
-     {
-      "name": "m_flWetMix",
-      "type": "float32",
-      "offset": 40
-     },
-     {
-      "name": "m_bPeakMode",
-      "type": "bool",
-      "offset": 44
-     }
-    ]
-   }
-  ],
-  "enums": [
-   {
-    "name": "VMixUpMixRule_t",
-    "members": [
-     {
-      "name": "DIVIDE",
-      "value": 0
-     },
-     {
-      "name": "BROADCAST",
-      "value": 1
-     }
-    ]
-   },
-   {
-    "name": "SndSeqInstrumentType_t",
-    "members": [
-     {
-      "name": "eSndSeqInstNull",
-      "value": 0
-     },
-     {
-      "name": "eSndSeqInstSndEvt",
-      "value": 1
-     },
-     {
-      "name": "eSndSeqInstMidiSampler",
-      "value": 2
-     }
-    ]
-   },
-   {
-    "name": "EMode_t",
-    "members": [
-     {
-      "name": "Peak",
-      "value": 0
-     },
-     {
-      "name": "RMS",
-      "value": 1
-     }
-    ]
-   },
-   {
-    "name": "SndBeatMidiStatusType_t",
-    "members": [
-     {
-      "name": "SndSeqMidiStatusNoteOff",
-      "value": 8
-     },
-     {
-      "name": "SndSeqMidiStatusNoteOn",
-      "value": 9
-     },
-     {
-      "name": "SndSeqMidiStatusKeyPressure",
-      "value": 10
-     },
-     {
-      "name": "SndSeqMidiStatusCtrlChange",
-      "value": 11
-     },
-     {
-      "name": "SndSeqMidiStatusProgramChange",
-      "value": 12
-     },
-     {
-      "name": "SndSeqMidiStatusChannelPressure",
-      "value": 13
-     },
-     {
-      "name": "SndSeqMidiStatusPitchBend",
-      "value": 14
-     }
-    ]
-   },
-   {
-    "name": "VMixGraphCommandID_t",
-    "members": [
-     {
-      "name": "CMD_INVALID",
-      "value": 18446744073709551615
-     },
-     {
-      "name": "CMD_CONTROL_CONVERT_DB_TO_GAIN",
-      "value": 1
-     },
-     {
-      "name": "CMD_CONTROL_TRANSIENT_INPUT_STORE",
-      "value": 2
-     },
-     {
-      "name": "CMD_CONTROL_TRANSIENT_INPUT_RESET",
-      "value": 3
-     },
-     {
-      "name": "CMD_CONTROL_OUTPUT_STORE",
-      "value": 4
-     },
-     {
-      "name": "CMD_CONTROL_EVALUATE_CURVE",
-      "value": 5
-     },
-     {
-      "name": "CMD_CONTROL_COPY",
-      "value": 6
-     },
-     {
-      "name": "CMD_CONTROL_COND_COPY_IF_NEGATIVE",
-      "value": 7
-     },
-     {
-      "name": "CMD_CONTROL_REMAP_LINEAR",
-      "value": 8
-     },
-     {
-      "name": "CMD_CONTROL_REMAP_SINE",
-      "value": 9
-     },
-     {
-      "name": "CMD_CONTROL_REMAP_LOGLINEAR",
-      "value": 10
-     },
-     {
-      "name": "CMD_CONTROL_MAX",
-      "value": 11
-     },
-     {
-      "name": "CMD_CONTROL_RESET_TIMER",
-      "value": 12
-     },
-     {
-      "name": "CMD_CONTROL_INCREMENT_TIMER",
-      "value": 13
-     },
-     {
-      "name": "CMD_CONTROL_EVAL_ENVELOPE",
-      "value": 14
-     },
-     {
-      "name": "CMD_CONTROL_SINE_BLEND",
-      "value": 15
-     },
-     {
-      "name": "CMD_SUBMIX_PROCESS",
-      "value": 16
-     },
-     {
-      "name": "CMD_SUBMIX_GENERATE",
-      "value": 17
-     },
-     {
-      "name": "CMD_SUBMIX_GENERATE_SIDECHAIN",
-      "value": 18
-     },
-     {
-      "name": "CMD_SUBMIX_EXTRACTCONTAINER",
-      "value": 19
-     },
-     {
-      "name": "CMD_SUBMIX_DEBUG",
-      "value": 20
-     },
-     {
-      "name": "CMD_SUBMIX_MIX2x1",
-      "value": 21
-     },
-     {
-      "name": "CMD_SUBMIX_OUTPUT",
-      "value": 22
-     },
-     {
-      "name": "CMD_SUBMIX_OUTPUTx2",
-      "value": 23
-     },
-     {
-      "name": "CMD_SUBMIX_COPY",
-      "value": 24
-     },
-     {
-      "name": "CMD_SUBMIX_ACCUMULATE",
-      "value": 25
-     },
-     {
-      "name": "CMD_SUBMIX_METER",
-      "value": 26
-     },
-     {
-      "name": "CMD_SUBMIX_METER_SPECTRUM",
-      "value": 27
-     },
-     {
-      "name": "CMD_IMPULSERESPONSE_INPUT_STORE",
-      "value": 28
-     },
-     {
-      "name": "CMD_PROCESSOR_SET_IMPULSERESPONSE_VALUE",
-      "value": 29
-     },
-     {
-      "name": "CMD_REMAP_VSND_TO_IMPULSERESPONSE",
-      "value": 30
-     },
-     {
-      "name": "CMD_IMPULSERESPONSE_RESET",
-      "value": 31
-     },
-     {
-      "name": "CMD_BLEND_VSNDS_TO_IMPULSERESPONSE",
-      "value": 32
-     },
-     {
-      "name": "CMD_IMPULSERESPONSE_DELAY",
-      "value": 33
-     }
-    ]
-   },
-   {
-    "name": "EWaveform",
-    "members": [
-     {
-      "name": "Sine",
-      "value": 0
-     },
-     {
-      "name": "Square",
-      "value": 1
-     },
-     {
-      "name": "Saw",
-      "value": 2
-     },
-     {
-      "name": "Triangle",
-      "value": 3
-     },
-     {
-      "name": "Noise",
-      "value": 4
-     }
-    ]
-   },
-   {
-    "name": "VMixFilterChannelSet_t",
-    "members": [
-     {
-      "name": "FILTER_ALL_CHANNELS",
-      "value": 0
-     },
-     {
-      "name": "FILTER_LEFT_ONLY",
-      "value": 1
-     },
-     {
-      "name": "FILTER_RIGHT_ONLY",
-      "value": 2
-     },
-     {
-      "name": "FILTER_MID_ONLY",
-      "value": 3
-     },
-     {
-      "name": "FILTER_SIDE_ONLY",
-      "value": 4
-     },
-     {
-      "name": "FILTER_CHANNEL_SET_MAX",
-      "value": 5
-     }
-    ]
-   },
-   {
-    "name": "VMixLFOShape_t",
-    "members": [
-     {
-      "name": "LFO_SHAPE_SINE",
-      "value": 0
-     },
-     {
-      "name": "LFO_SHAPE_SQUARE",
-      "value": 1
-     },
-     {
-      "name": "LFO_SHAPE_TRI",
-      "value": 2
-     },
-     {
-      "name": "LFO_SHAPE_SAW",
-      "value": 3
-     },
-     {
-      "name": "LFO_SHAPE_NOISE",
-      "value": 4
-     }
-    ]
-   },
-   {
-    "name": "VMixOffsetType_t",
-    "members": [
-     {
-      "name": "VO_CHAR",
-      "value": 0
-     },
-     {
-      "name": "VO_ARRAY",
-      "value": 1
-     },
-     {
-      "name": "VO_BOOL",
-      "value": 2
-     },
-     {
-      "name": "VO_FLOAT",
-      "value": 3
-     },
-     {
-      "name": "VO_UINT32",
-      "value": 4
-     },
-     {
-      "name": "VO_INT32",
-      "value": 5
-     },
-     {
-      "name": "VO_VECTOR",
-      "value": 6
-     },
-     {
-      "name": "VO_QUATERNION",
-      "value": 7
-     },
-     {
-      "name": "VO_CUBIC_SPLINE",
-      "value": 8
-     },
-     {
-      "name": "VO_VSND_INPUT",
-      "value": 9
-     },
-     {
-      "name": "VO_FLOAT_UTLVECTOR",
-      "value": 10
-     },
-     {
-      "name": "VO_SHAREDPTR_IR",
-      "value": 11
-     },
-     {
-      "name": "VO_TYPE_COUNT",
-      "value": 12
-     }
-    ]
-   },
-   {
-    "name": "VMixMixDownRule_t",
-    "members": [
-     {
-      "name": "SUM",
-      "value": 0
-     },
-     {
-      "name": "LEFT",
-      "value": 1
-     },
-     {
-      "name": "RIGHT",
-      "value": 2
-     },
-     {
-      "name": "MID",
-      "value": 3
-     },
-     {
-      "name": "SIDE",
-      "value": 4
-     }
-    ]
-   },
-   {
-    "name": "VMixFilterType_t",
-    "members": [
-     {
-      "name": "FILTER_UNKNOWN",
-      "value": 18446744073709551615
-     },
-     {
-      "name": "FILTER_LOWPASS",
-      "value": 0
-     },
-     {
-      "name": "FILTER_HIGHPASS",
-      "value": 1
-     },
-     {
-      "name": "FILTER_BANDPASS",
-      "value": 2
-     },
-     {
-      "name": "FILTER_NOTCH",
-      "value": 3
-     },
-     {
-      "name": "FILTER_PEAKING_EQ",
-      "value": 4
-     },
-     {
-      "name": "FILTER_LOW_SHELF",
-      "value": 5
-     },
-     {
-      "name": "FILTER_HIGH_SHELF",
-      "value": 6
-     },
-     {
-      "name": "FILTER_ALLPASS",
-      "value": 7
-     },
-     {
-      "name": "FILTER_PASSTHROUGH",
-      "value": 8
-     }
-    ]
-   },
-   {
-    "name": "SndBeatTrackPlaybackType_t",
-    "members": [
-     {
-      "name": "eSndBeatTrackPlaybackTypeStep",
-      "value": 0
-     },
-     {
-      "name": "eSndBeatTrackPlaybackTypeFwd",
-      "value": 1
-     }
-    ]
-   },
-   {
-    "name": "VMixSendOperator_t",
-    "members": [
-     {
-      "name": "NO_VOICES",
-      "value": 18446744073709551615
-     },
-     {
-      "name": "ALL_VOICES",
-      "value": 0
-     },
-     {
-      "name": "ROOM_VOICES",
-      "value": 1
-     },
-     {
-      "name": "FACING_VOICES",
-      "value": 2
-     },
-     {
-      "name": "MIXGROUP_VOICES",
-      "value": 3
-     },
-     {
-      "name": "NAMED_SEND",
-      "value": 4
-     },
-     {
-      "name": "INVERSE_NAMED_SENDS",
-      "value": 5
-     },
-     {
-      "name": "INVERSE_TOTAL_SEND",
-      "value": 6
-     },
-     {
-      "name": "ALL_MAX_SEND",
-      "value": 7
-     },
-     {
-      "name": "TRACK",
-      "value": 8
-     }
-    ]
-   },
-   {
-    "name": "SndBeatEventType_t",
-    "members": [
-     {
-      "name": "eSndBeatEventTypeInvalid",
-      "value": 0
-     },
-     {
-      "name": "eSndBeatEventTypeBeat",
-      "value": 1
-     },
-     {
-      "name": "eSndBeatEventTypeBar",
-      "value": 2
-     },
-     {
-      "name": "eSndBeatEventTypePhrase",
-      "value": 3
-     },
-     {
-      "name": "eSndBeatEventTypeLength",
-      "value": 4
-     },
-     {
-      "name": "eSndBeatEventTypeKeys",
-      "value": 5
-     }
-    ]
-   },
-   {
-    "name": "SosActionStopType_t",
-    "members": [
-     {
-      "name": "SOS_STOPTYPE_NONE",
-      "value": 0
-     },
-     {
-      "name": "SOS_STOPTYPE_TIME",
-      "value": 1
-     },
-     {
-      "name": "SOS_STOPTYPE_OPVAR",
-      "value": 2
-     }
-    ]
-   },
-   {
-    "name": "SndBeatKeyType_t",
-    "members": [
-     {
-      "name": "eSndBeatPatternTypeNone",
-      "value": 0
-     },
-     {
-      "name": "eSndBeatPatternTypeKeys",
-      "value": 1
-     },
-     {
-      "name": "eSndBeatPatternTypeKeyedFloats",
-      "value": 2
-     },
-     {
-      "name": "eSndBeatPatternTypeKeyedSndEvts",
-      "value": 3
-     },
-     {
-      "name": "eSndBeatPatternTypeKeyedMidi",
-      "value": 4
-     }
-    ]
-   },
-   {
-    "name": "SosEditItemType_t",
-    "members": [
-     {
-      "name": "SOS_EDIT_ITEM_TYPE_SOUNDEVENTS",
-      "value": 0
-     },
-     {
-      "name": "SOS_EDIT_ITEM_TYPE_SOUNDEVENT",
-      "value": 1
-     },
-     {
-      "name": "SOS_EDIT_ITEM_TYPE_LIBRARYSTACKS",
-      "value": 2
-     },
-     {
-      "name": "SOS_EDIT_ITEM_TYPE_STACK",
-      "value": 3
-     },
-     {
-      "name": "SOS_EDIT_ITEM_TYPE_OPERATOR",
-      "value": 4
-     },
-     {
-      "name": "SOS_EDIT_ITEM_TYPE_FIELD",
-      "value": 5
-     }
-    ]
-   },
-   {
-    "name": "SndBeatSyncType_t",
-    "members": [
-     {
-      "name": "eSndBeatSyncTypeInvalid",
-      "value": 0
-     },
-     {
-      "name": "eSndBeatSyncTypeReset",
-      "value": 1
-     },
-     {
-      "name": "eSndBeatSyncTypeSeekImmediate",
-      "value": 2
-     }
-    ]
-   },
-   {
-    "name": "PlayBackMode_t",
-    "members": [
-     {
-      "name": "Random",
-      "value": 0
-     },
-     {
-      "name": "RandomNoRepeats",
-      "value": 1
-     },
-     {
-      "name": "RandomAvoidLast",
-      "value": 2
-     },
-     {
-      "name": "Sequential",
-      "value": 3
-     },
-     {
-      "name": "RandomWeights",
-      "value": 4
-     }
-    ]
-   },
-   {
-    "name": "EVsndTriggerMode",
-    "members": [
-     {
-      "name": "Trigger",
-      "value": 0
-     },
-     {
-      "name": "Gate",
-      "value": 1
-     }
-    ]
-   },
-   {
-    "name": "SosGroupFieldBehavior_t",
-    "members": [
-     {
-      "name": "kIgnore",
-      "value": 0
-     },
-     {
-      "name": "kBranch",
-      "value": 1
-     },
-     {
-      "name": "kMatch",
-      "value": 2
-     }
-    ]
-   },
-   {
-    "name": "soundlevel_t",
-    "members": [
-     {
-      "name": "SNDLVL_NONE",
-      "value": 0
-     },
-     {
-      "name": "SNDLVL_20dB",
-      "value": 20
-     },
-     {
-      "name": "SNDLVL_25dB",
-      "value": 25
-     },
-     {
-      "name": "SNDLVL_30dB",
-      "value": 30
-     },
-     {
-      "name": "SNDLVL_35dB",
-      "value": 35
-     },
-     {
-      "name": "SNDLVL_40dB",
-      "value": 40
-     },
-     {
-      "name": "SNDLVL_45dB",
-      "value": 45
-     },
-     {
-      "name": "SNDLVL_50dB",
-      "value": 50
-     },
-     {
-      "name": "SNDLVL_55dB",
-      "value": 55
-     },
-     {
-      "name": "SNDLVL_IDLE",
-      "value": 60
-     },
-     {
-      "name": "SNDLVL_60dB",
-      "value": 60
-     },
-     {
-      "name": "SNDLVL_65dB",
-      "value": 65
-     },
-     {
-      "name": "SNDLVL_STATIC",
-      "value": 66
-     },
-     {
-      "name": "SNDLVL_70dB",
-      "value": 70
-     },
-     {
-      "name": "SNDLVL_NORM",
-      "value": 75
-     },
-     {
-      "name": "SNDLVL_75dB",
-      "value": 75
-     },
-     {
-      "name": "SNDLVL_80dB",
-      "value": 80
-     },
-     {
-      "name": "SNDLVL_TALKING",
-      "value": 80
-     },
-     {
-      "name": "SNDLVL_85dB",
-      "value": 85
-     },
-     {
-      "name": "SNDLVL_90dB",
-      "value": 90
-     },
-     {
-      "name": "SNDLVL_95dB",
-      "value": 95
-     },
-     {
-      "name": "SNDLVL_100dB",
-      "value": 100
-     },
-     {
-      "name": "SNDLVL_105dB",
-      "value": 105
-     },
-     {
-      "name": "SNDLVL_110dB",
-      "value": 110
-     },
-     {
-      "name": "SNDLVL_120dB",
-      "value": 120
-     },
-     {
-      "name": "SNDLVL_130dB",
-      "value": 130
-     },
-     {
-      "name": "SNDLVL_GUNFIRE",
-      "value": 140
-     },
-     {
-      "name": "SNDLVL_140dB",
-      "value": 140
-     },
-     {
-      "name": "SNDLVL_150dB",
-      "value": 150
-     },
-     {
-      "name": "SNDLVL_180dB",
-      "value": 180
-     }
-    ]
-   },
-   {
-    "name": "VMixPannerType_t",
-    "members": [
-     {
-      "name": "PANNER_TYPE_LINEAR",
-      "value": 0
-     },
-     {
-      "name": "PANNER_TYPE_EQUAL_POWER",
-      "value": 1
-     }
-    ]
-   },
-   {
-    "name": "VMixChannelOperation_t",
-    "members": [
-     {
-      "name": "VMIX_CHAN_STEREO",
-      "value": 0
-     },
-     {
-      "name": "VMIX_CHAN_LEFT",
-      "value": 1
-     },
-     {
-      "name": "VMIX_CHAN_RIGHT",
-      "value": 2
-     },
-     {
-      "name": "VMIX_CHAN_SWAP",
-      "value": 3
-     },
-     {
-      "name": "VMIX_CHAN_MONO",
-      "value": 4
-     },
-     {
-      "name": "VMIX_CHAN_MID_SIDE",
-      "value": 5
-     }
-    ]
-   },
-   {
-    "name": "EMidiNote",
-    "members": [
-     {
-      "name": "C",
-      "value": 0
-     },
-     {
-      "name": "C_Sharp",
-      "value": 1
-     },
-     {
-      "name": "D",
-      "value": 2
-     },
-     {
-      "name": "D_Sharp",
-      "value": 3
-     },
-     {
-      "name": "E",
-      "value": 4
-     },
-     {
-      "name": "F",
-      "value": 5
-     },
-     {
-      "name": "F_Sharp",
-      "value": 6
-     },
-     {
-      "name": "G",
-      "value": 7
-     },
-     {
-      "name": "G_Sharp",
-      "value": 8
-     },
-     {
-      "name": "A",
-      "value": 9
-     },
-     {
-      "name": "A_Sharp",
-      "value": 10
-     },
-     {
-      "name": "B",
-      "value": 11
-     },
-     {
-      "name": "Count",
-      "value": 12
-     }
-    ]
-   },
-   {
-    "name": "VMixAutoControlType_t",
-    "members": [
-     {
-      "name": "VMIX_AUTO_SEND_LEVEL",
-      "value": 0
-     },
-     {
-      "name": "VMIX_AUTO_STACK_VAR",
-      "value": 1
-     },
-     {
-      "name": "VMIX_AUTO_PLAYTIME",
-      "value": 2
-     },
-     {
-      "name": "VMIX_AUTO_DISTANCE",
-      "value": 3
-     },
-     {
-      "name": "VMIX_AUTO_POSITION_X",
-      "value": 4
-     },
-     {
-      "name": "VMIX_AUTO_POSITION_Y",
-      "value": 5
-     },
-     {
-      "name": "VMIX_AUTO_POSITION_Z",
-      "value": 6
-     },
-     {
-      "name": "VMIX_AUTO_POSITION_VECTOR",
-      "value": 7
-     },
-     {
-      "name": "VMIX_AUTO_LISTENER_YAW_SIN",
-      "value": 8
-     },
-     {
-      "name": "VMIX_AUTO_LISTENER_YAW_COS",
-      "value": 9
-     },
-     {
-      "name": "VMIX_AUTO_LISTENER_PITCH_SIN",
-      "value": 10
-     },
-     {
-      "name": "VMIX_AUTO_LISTENER_PITCH_COS",
-      "value": 11
-     },
-     {
-      "name": "VMIX_AUTO_LISTENER_ROLL_SIN",
-      "value": 12
-     },
-     {
-      "name": "VMIX_AUTO_LISTENER_ROLL_COS",
-      "value": 13
-     }
-    ]
-   },
-   {
-    "name": "CVSoundFormat_t",
-    "members": [
-     {
-      "name": "PCM16",
-      "value": 0
-     },
-     {
-      "name": "PCM8",
-      "value": 1
-     },
-     {
-      "name": "MP3",
-      "value": 2
-     },
-     {
-      "name": "ADPCM",
-      "value": 3
-     }
-    ]
-   },
-   {
-    "name": "VMixFilterSlope_t",
-    "members": [
-     {
-      "name": "FILTER_SLOPE_1POLE_6dB",
-      "value": 0
-     },
-     {
-      "name": "FILTER_SLOPE_1POLE_12dB",
-      "value": 1
-     },
-     {
-      "name": "FILTER_SLOPE_1POLE_18dB",
-      "value": 2
-     },
-     {
-      "name": "FILTER_SLOPE_1POLE_24dB",
-      "value": 3
-     },
-     {
-      "name": "FILTER_SLOPE_12dB",
-      "value": 4
-     },
-     {
-      "name": "FILTER_SLOPE_24dB",
-      "value": 5
-     },
-     {
-      "name": "FILTER_SLOPE_36dB",
-      "value": 6
-     },
-     {
-      "name": "FILTER_SLOPE_48dB",
-      "value": 7
-     },
-     {
-      "name": "FILTER_SLOPE_MAX",
-      "value": 7
-     }
-    ]
-   },
-   {
-    "name": "SosActionLimitSortType_t",
-    "members": [
-     {
-      "name": "SOS_LIMIT_SORTTYPE_HIGHEST",
-      "value": 0
-     },
-     {
-      "name": "SOS_LIMIT_SORTTYPE_LOWEST",
-      "value": 1
-     }
-    ]
-   },
-   {
-    "name": "VMixSubgraphSwitchInterpolationType_t",
-    "members": [
-     {
-      "name": "SUBGRAPH_INTERPOLATION_TEMPORAL_CROSSFADE",
-      "value": 0
-     },
-     {
-      "name": "SUBGRAPH_INTERPOLATION_TEMPORAL_FADE_OUT",
-      "value": 1
-     },
-     {
-      "name": "SUBGRAPH_INTERPOLATION_KEEP_LAST_SUBGRAPH_RUNNING",
-      "value": 2
-     }
-    ]
-   },
-   {
-    "name": "SosGroupType_t",
-    "members": [
-     {
-      "name": "SOS_GROUPTYPE_DYNAMIC",
-      "value": 0
-     },
-     {
-      "name": "SOS_GROUPTYPE_STATIC",
-      "value": 1
-     }
-    ]
-   },
-   {
-    "name": "VMixOffsetCategory_t",
-    "members": [
-     {
-      "name": "NULL_POINTER",
-      "value": 0
-     },
-     {
-      "name": "HEAP_OFFSET",
-      "value": 1
-     },
-     {
-      "name": "INPUT_INDEX",
-      "value": 2
-     },
-     {
-      "name": "SUBMIX_INDEX",
-      "value": 3
-     }
-    ]
-   },
-   {
-    "name": "SndBeatSyncStartType_t",
-    "members": [
-     {
-      "name": "eSndBeatSyncStartTypeInvalid",
-      "value": 0
-     },
-     {
-      "name": "eSndBeatSyncStartTypeImmediate",
-      "value": 1
-     },
-     {
-      "name": "eSndBeatSyncStartTypeQueue",
-      "value": 2
-     }
-    ]
-   },
-   {
-    "name": "SosActionSetParamSortType_t",
-    "members": [
-     {
-      "name": "SOS_SETPARAM_SORTTYPE_HIGHEST",
-      "value": 0
-     },
-     {
-      "name": "SOS_SETPARAM_SORTTYPE_LOWEST",
-      "value": 1
-     }
-    ]
-   },
-   {
-    "name": "EVsndPlaybackMode",
-    "members": [
-     {
-      "name": "Trigger",
-      "value": 0
-     },
-     {
-      "name": "Gate",
-      "value": 1
-     }
-    ]
-   }
-  ]
- }
+  "soundsystem.dll": {
+    "classes": {
+      "CAudioEmphasisSample": {
+        "fields": {
+          "m_flTime": 0,
+          "m_flValue": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CAudioMorphData": {
+        "fields": {
+          "m_flEaseIn": 96,
+          "m_flEaseOut": 100,
+          "m_nameHashCodes": 24,
+          "m_nameStrings": 48,
+          "m_samples": 72,
+          "m_times": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CAudioPhonemeTag": {
+        "fields": {
+          "m_flEndTime": 4,
+          "m_flStartTime": 0,
+          "m_nPhonemeCode": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CAudioSentence": {
+        "fields": {
+          "m_EmphasisSamples": 32,
+          "m_RunTimePhonemes": 8,
+          "m_bShouldVoiceDuck": 0,
+          "m_morphData": 56
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CDSPMixgroupModifier": {
+        "fields": {
+          "m_flListenerReverbModifierWhenSourceReverbIsActive": 24,
+          "m_flModifier": 8,
+          "m_flModifierMin": 12,
+          "m_flSourceModifier": 16,
+          "m_flSourceModifierMin": 20,
+          "m_mixgroup": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CDSPPresetMixgroupModifierTable": {
+        "fields": {
+          "m_table": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MVDataNodeType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CDspPresetModifierList": {
+        "fields": {
+          "m_dspName": 0,
+          "m_modifiers": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CRandomPannerControls": {
+        "fields": {
+          "m_flMaxVolume": 20,
+          "m_flMinVolume": 16,
+          "m_panningControlInputName": 0,
+          "m_strVectorStackParam": 24,
+          "m_volumeControlInputName": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSndBeatPattern": {
+        "fields": {
+          "m_bLooping": 36,
+          "m_flLength": 32,
+          "m_flPlayBeatMult": 44,
+          "m_flSyncBeatMult": 156,
+          "m_flSyncPriority": 12,
+          "m_name": 0,
+          "m_playEventType": 40,
+          "m_playKeyType": 48,
+          "m_syncEventType": 152,
+          "m_syncStartType": 16,
+          "m_syncType": 20,
+          "m_timeSignature": 24,
+          "m_vecPatternFloats": 80,
+          "m_vecPatternKeys": 56,
+          "m_vecPatternMidi": 128,
+          "m_vecPatternSndEvts": 104,
+          "m_vecSyncPatternKeys": 160
+        },
+        "metadata": [
+          {
+            "name": "MPropertyArrayElementNameKey",
+            "type": "Unknown"
+          },
+          {
+            "name": "MVDataOutlinerNameExpr",
+            "type": "Unknown"
+          },
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSndBeatPatternManager": {
+        "fields": {
+          "m_vecActiveTracks": 112,
+          "m_vecPatterns": 56
+        },
+        "metadata": [
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSndBeatTrack": {
+        "fields": {
+          "m_bSyncToVoice": 40,
+          "m_flBPM": 44,
+          "m_nTranspose": 36,
+          "m_name": 0,
+          "m_playbackType": 32
+        },
+        "metadata": [
+          {
+            "name": "MPropertyArrayElementNameKey",
+            "type": "Unknown"
+          },
+          {
+            "name": "MVDataOutlinerNameExpr",
+            "type": "Unknown"
+          },
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSndSeqInstBaseSchema": {
+        "fields": {
+          "m_bStopCurrentEvents": 14,
+          "m_flBPM": 16,
+          "m_flBPMFactor": 20,
+          "m_flBPMInvFactor": 24,
+          "m_nType": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSndSeqInstMidiSampler": {
+        "fields": {
+          "m_bBeatEnvelopes": 52,
+          "m_bIsSoundEvent": 32,
+          "m_bStopPrevious": 33,
+          "m_flAttack": 44,
+          "m_flMaxVelocityAtten": 40,
+          "m_flMinVelocityAtten": 36,
+          "m_flRelease": 48,
+          "m_hSoundEventHash": 216,
+          "m_nMaxNote": 35,
+          "m_nMinNote": 34,
+          "m_nNextVoiceSlot": 212
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSndSeqInstSndEvtSchema": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSndSeqInstruments": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "CSosGroupActionLimitSchema": {
+        "fields": {
+          "m_bCountStopped": 21,
+          "m_bStopImmediate": 20,
+          "m_nMaxCount": 8,
+          "m_nSortType": 16,
+          "m_nStopType": 12
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionMemberCountEnvelopeSchema": {
+        "fields": {
+          "m_bSaveToGroup": 40,
+          "m_flAttack": 24,
+          "m_flBaseValue": 16,
+          "m_flDecay": 28,
+          "m_flTargetValue": 20,
+          "m_nBaseCount": 8,
+          "m_nTargetCount": 12,
+          "m_resultVarName": 32
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionOcclusionSchema": {
+        "fields": {
+          "m_flCalculationInterval": 8,
+          "m_flOcclusionMax": 24,
+          "m_flOcclusionMin": 20,
+          "m_flOcclusionScale": 16,
+          "m_flRadius": 12,
+          "m_flTestDepth": 28
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionSchema": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionSetSoundeventParameterSchema": {
+        "fields": {
+          "m_flMaxValue": 16,
+          "m_flMinValue": 12,
+          "m_nMaxCount": 8,
+          "m_nSortType": 32,
+          "m_opvarName": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionSoundeventClusterSchema": {
+        "fields": {
+          "m_clusterSizeOpvar": 32,
+          "m_flClusterEpsilon": 12,
+          "m_groupBoundingBoxMaxsOpvar": 48,
+          "m_groupBoundingBoxMinsOpvar": 40,
+          "m_nMinNearby": 8,
+          "m_shouldPlayClusterChild": 24,
+          "m_shouldPlayOpvar": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionSoundeventCountSchema": {
+        "fields": {
+          "m_bExcludeStoppedSounds": 8,
+          "m_strCountKeyName": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionSoundeventMinMaxValuesSchema": {
+        "fields": {
+          "m_bExcludSoundsAboveThreshold": 32,
+          "m_bExcludeDelayedSounds": 25,
+          "m_bExcludeSoundsBelowThreshold": 26,
+          "m_bExcludeStoppedSounds": 24,
+          "m_flExcludeSoundsMaxThresholdValue": 36,
+          "m_flExcludeSoundsMinThresholdValue": 28,
+          "m_strDelayPublicFieldName": 16,
+          "m_strMaxValueName": 48,
+          "m_strMinValueName": 40,
+          "m_strQueryPublicFieldName": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionSoundeventPrioritySchema": {
+        "fields": {
+          "m_bPriorityReadButDontContribute": 32,
+          "m_priorityContributeButDontRead": 24,
+          "m_priorityValue": 8,
+          "m_priorityVolumeScalar": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionTimeBlockLimitSchema": {
+        "fields": {
+          "m_flMaxDuration": 12,
+          "m_nMaxCount": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionTimeLimitSchema": {
+        "fields": {
+          "m_flMaxDuration": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosSoundEventGroupSchema": {
+        "fields": {
+          "m_Behavior_EntIndex": 56,
+          "m_Behavior_EventName": 28,
+          "m_Behavior_Opvar": 64,
+          "m_Behavior_String": 72,
+          "m_bBlocksEvents": 12,
+          "m_bInvertMatch": 24,
+          "m_bMatchEventSubString": 40,
+          "m_flEntIndex": 60,
+          "m_flMemberLifespanTime": 20,
+          "m_flOpvar": 68,
+          "m_matchSoundEventName": 32,
+          "m_matchSoundEventSubString": 48,
+          "m_nBlockMaxCount": 16,
+          "m_nGroupType": 8,
+          "m_opvarString": 80,
+          "m_vActions": 88
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSoundContainerReference": {
+        "fields": {
+          "m_bUseReference": 8,
+          "m_namespace": 0,
+          "m_pSound": 24,
+          "m_sound": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSoundContainerReferenceArray": {
+        "fields": {
+          "m_bUseReference": 0,
+          "m_pSounds": 32,
+          "m_sounds": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSoundInfoHeader": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSubmix": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixAdditionalOutput": {
+        "fields": {
+          "m_name": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixAudioMeter": {
+        "fields": {
+          "m_displayName": 8,
+          "m_nDebugId": 16,
+          "m_name": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixAutoFilterProcessorDesc": {
+        "fields": {
+          "m_desc": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixAutomaticControlInput": {
+        "fields": {
+          "m_nControlType": 16,
+          "m_nGraphInputIndex": 12,
+          "m_name": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixBaseGraphDescription": {
+        "fields": {
+          "m_additionalOutputs": 176,
+          "m_audioMeters": 128,
+          "m_automaticControlInputs": 192,
+          "m_bIsMainGraph": 12,
+          "m_controlMeters": 144,
+          "m_controlOutputs": 64,
+          "m_controlTransientInputs": 48,
+          "m_graphInputs": 32,
+          "m_heap": 112,
+          "m_impulseResponseInputs": 80,
+          "m_mixCommands": 96,
+          "m_nGraphOutputChannels": 8,
+          "m_name": 0,
+          "m_nameInputMeters": 160,
+          "m_processorNodes": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixBaseProcessorDesc": {
+        "fields": {
+          "m_bDebugBypass": 28,
+          "m_flxfade": 20,
+          "m_nChannels": 24,
+          "m_nDebugId": 16,
+          "m_name": 8,
+          "m_paramEnable": 32,
+          "m_paramMix": 36
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixBoxverb2ProcessorDesc": {
+        "fields": {
+          "m_desc": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixBoxverbProcessorDesc": {
+        "fields": {
+          "m_desc": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixCommand": {
+        "fields": {
+          "m_nCommand": 0,
+          "m_nInputSubmix0": 12,
+          "m_nInputSubmix1": 16,
+          "m_nInputValue0": 24,
+          "m_nInputValue1": 28,
+          "m_nOutputSubmix": 8,
+          "m_nParameterNameHash": 4,
+          "m_nProcessor": 20
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixControlInput": {
+        "fields": {
+          "m_flDefaultValue": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixControlMeter": {
+        "fields": {
+          "m_nValueIndex": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixControlOutput": {
+        "fields": {
+          "m_flDefaultValue": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixConvolutionProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_paramImpulseResponse": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixDataOffset": {
+        "fields": {
+          "m_nOffset": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "CVMixDelayProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_paramCutoffFrequency": 80,
+          "m_paramDelay": 84
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixDescription": {
+        "fields": {
+          "m_impulseResponseValues": 240,
+          "m_nNameHashCode": 256,
+          "m_sources": 224,
+          "m_submixList": 208
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixDiffusorProcessorDesc": {
+        "fields": {
+          "m_desc": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixDualCompressorProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_outParamLevel": 92,
+          "m_outParamReduction": 100,
+          "m_outParamdBLevel": 96
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixDynamics3BandProcessorDesc": {
+        "fields": {
+          "m_desc": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixDynamicsCompressorProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_outParamLevel": 80,
+          "m_outParamReduction": 88,
+          "m_outParamdBLevel": 84
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixDynamicsProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_outParamLevel": 88,
+          "m_outParamdBLevel": 92
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixEQ8ProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_paramEQScale": 200
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixEffectChainProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_paramEffectName": 48
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixEnvelopeProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_outParamLevel": 52,
+          "m_outParamdBLevel": 56
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixFilterProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_paramCutoffFreq": 56,
+          "m_paramQ": 60
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixFlangerProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_paramDelay": 76,
+          "m_paramModDepth": 84,
+          "m_paramModRate": 80
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixFreeverbProcessorDesc": {
+        "fields": {
+          "m_desc": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixGraphInput": {
+        "fields": {
+          "m_nOffset": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixHeap": {
+        "fields": {
+          "m_storage": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixImpulseResponseInput": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixInputBase": {
+        "fields": {
+          "m_name": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixModDelayProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_paramCutoffFrequency": 88,
+          "m_paramDelay": 92,
+          "m_paramModDepth": 100,
+          "m_paramModRate": 96
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixNameInputMeter": {
+        "fields": {
+          "m_nValueIndex": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixOscProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_paramFrequency": 52,
+          "m_paramPhase": 56
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixPannerProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_paramPan": 48
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixParameterBool": {
+        "fields": {
+          "m_offset": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixParameterEffectName": {
+        "fields": {
+          "m_offset": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixParameterFloat": {
+        "fields": {
+          "m_offset": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixPitchShiftProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_paramPitchScale": 56
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixPlateReverbProcessorDesc": {
+        "fields": {
+          "m_desc": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixPresetDSPProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_paramEffectName": 56
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixRuntimeGraph": {
+        "fields": {
+          "m_fixups": 272,
+          "m_impulseResponseValues": 224,
+          "m_inputDefaultValues": 240,
+          "m_sources": 256,
+          "m_submixes": 208
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixShaperProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_paramDrive": 60
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixSteamAudioDirectProcessorDesc": {
+        "fields": {
+          "m_paramAheadX": 76,
+          "m_paramAheadY": 80,
+          "m_paramAheadZ": 84,
+          "m_paramApplyAirAbsorption": 92,
+          "m_paramApplyDirectivity": 96,
+          "m_paramApplyDistanceAttenuation": 88,
+          "m_paramApplyOcclusion": 100,
+          "m_paramApplyTransmission": 104,
+          "m_paramBand": 132,
+          "m_paramDipolePower": 112,
+          "m_paramDipoleWeight": 108,
+          "m_paramOcclusion": 116,
+          "m_paramPositionX": 40,
+          "m_paramPositionY": 44,
+          "m_paramPositionZ": 48,
+          "m_paramRightX": 52,
+          "m_paramRightY": 56,
+          "m_paramRightZ": 60,
+          "m_paramTransmission": 136,
+          "m_paramTransmissionHigh": 128,
+          "m_paramTransmissionLow": 120,
+          "m_paramTransmissionMid": 124,
+          "m_paramUpX": 64,
+          "m_paramUpY": 68,
+          "m_paramUpZ": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixSteamAudioHRTFProcessorDesc": {
+        "fields": {
+          "m_paramDelayLeft": 68,
+          "m_paramDelayRight": 72,
+          "m_paramDirectMixLevel": 56,
+          "m_paramInterpolation": 52,
+          "m_paramPerspectiveCorrection": 60,
+          "m_paramPositionX": 40,
+          "m_paramPositionY": 44,
+          "m_paramPositionZ": 48,
+          "m_paramRelativePosition": 64
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixSteamAudioHybridReverbProcessorDesc": {
+        "fields": {
+          "m_paramBand": 52,
+          "m_paramReverbTime": 56,
+          "m_paramReverbTimeHigh": 48,
+          "m_paramReverbTimeLow": 40,
+          "m_paramReverbTimeMid": 44
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixSteamAudioPathingProcessorDesc": {
+        "fields": {
+          "m_paramArrayPathingCoefficients": 64,
+          "m_paramArrayPathingEQ": 60,
+          "m_paramBand": 56,
+          "m_paramPathingMixLevel": 52,
+          "m_paramPositionX": 40,
+          "m_paramPositionY": 44,
+          "m_paramPositionZ": 48
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixStereoDelayProcessorDesc": {
+        "fields": {
+          "m_paramDelayLeft": 40,
+          "m_paramDelayRight": 44
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixSubgraphSwitchProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_paramEffectName": 96,
+          "m_paramSelectionIndex": 100
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixSubmix": {
+        "fields": {
+          "m_SendNames": 8,
+          "m_nChannels": 48,
+          "m_nMixDownRule": 54,
+          "m_nSendOperator": 52,
+          "m_nSoloNameHash": 44,
+          "m_nUpMixRule": 55,
+          "m_name": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixUtilityProcessorDesc": {
+        "fields": {
+          "m_desc": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixVocoderProcessorDesc": {
+        "fields": {
+          "m_desc": 40,
+          "m_paramBandwidth": 80
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVMixVsndInput": {
+        "fields": {
+          "m_defaultValue": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVSound": {
+        "fields": {
+          "m_Sentences": 0,
+          "m_flDuration": 36,
+          "m_nChannels": 24,
+          "m_nFormat": 20,
+          "m_nLoopEnd": 44,
+          "m_nLoopStart": 28,
+          "m_nRate": 16,
+          "m_nSampleCount": 32,
+          "m_nStreamingSize": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerAmpedDecayingSineWave": {
+        "fields": {
+          "m_flGainAmount": 128
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerAnalysisBase": {
+        "fields": {
+          "m_curve": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MVDataNodeType",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerAsyncGenerator": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerBase": {
+        "fields": {
+          "m_bRegisteredVMix": 16,
+          "m_nResourceName": 20,
+          "m_pEnvelopeAnalyzer": 112,
+          "m_vSound": 48
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MVDataNodeType",
+            "type": "Unknown"
+          },
+          {
+            "name": "MVDataFileExtension",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerBlender": {
+        "fields": {
+          "m_firstSound": 120,
+          "m_flBlendFactor": 184,
+          "m_secondSound": 152
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerDecayingSineWave": {
+        "fields": {
+          "m_flDecayTime": 124,
+          "m_flFrequency": 120
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerDefault": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerEnum": {
+        "fields": {
+          "m_flCrossfadeTime": 180,
+          "m_iSelection": 176,
+          "m_soundsToPlay": 120
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerEnvelopeAnalyzer": {
+        "fields": {
+          "m_fAnalysisWindowMs": 76,
+          "m_flThreshold": 80,
+          "m_mode": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerGenerator": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerGranulator": {
+        "fields": {
+          "m_bDoubleBufferSourceAudio": 168,
+          "m_bShouldWraparound": 152,
+          "m_flGrainCrossfadeAmount": 140,
+          "m_flGrainLength": 136,
+          "m_flMaxSourceLength": 172,
+          "m_flPlaybackJitter": 148,
+          "m_flStartJitter": 144,
+          "m_sourceAudio": 160
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerLoopTrigger": {
+        "fields": {
+          "m_bCrossFade": 132,
+          "m_flFadeTime": 128,
+          "m_flRetriggerTimeMax": 124,
+          "m_flRetriggerTimeMin": 120,
+          "m_sound": 136
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerLoopTriggerWithRandomPanner": {
+        "fields": {
+          "m_randomPannerControls": 168
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerLoopXFade": {
+        "fields": {
+          "m_bEqualPow": 170,
+          "m_bPlayHead": 168,
+          "m_bPlayTail": 169,
+          "m_flFadeIn": 164,
+          "m_flFadeOut": 160,
+          "m_flLoopEnd": 152,
+          "m_flLoopStart": 156,
+          "m_sound": 120
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerMultiBlender": {
+        "fields": {
+          "m_flBlendFactor": 176,
+          "m_flCrossover": 180,
+          "m_soundsToPlay": 120
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerNull": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerParameterBlender": {
+        "fields": {
+          "m_bEnableDistanceBlend": 320,
+          "m_bEnableOcclusionBlend": 184,
+          "m_curve1": 192,
+          "m_curve2": 256,
+          "m_curve3": 328,
+          "m_curve4": 392,
+          "m_firstSound": 120,
+          "m_secondSound": 152
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerRandomSampler": {
+        "fields": {
+          "m_flAmplitude": 136,
+          "m_flAmplitudeJitter": 140,
+          "m_flMaxLength": 148,
+          "m_flTimeJitter": 144,
+          "m_grainResources": 160,
+          "m_nNumDelayVariations": 152
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerRealtimeFMSineWave": {
+        "fields": {
+          "m_flCarrierFrequency": 120,
+          "m_flModulatorAmount": 128,
+          "m_flModulatorFrequency": 124
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerSelector": {
+        "fields": {
+          "m_fProbabilityWeights": 184,
+          "m_mode": 120,
+          "m_soundsToPlay": 128
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerSet": {
+        "fields": {
+          "m_soundsToPlay": 120
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerSetElement": {
+        "fields": {
+          "m_flVolumeDB": 32,
+          "m_sound": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerShapedNoise": {
+        "fields": {
+          "m_bUseCurveForAmplitude": 264,
+          "m_bUseCurveForFrequency": 120,
+          "m_bUseCurveForResonance": 192,
+          "m_flFrequency": 124,
+          "m_flGainInDecibels": 268,
+          "m_flResonance": 196,
+          "m_frequencySweep": 128,
+          "m_gainSweep": 272,
+          "m_resonanceSweep": 200
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerStaticAdditiveSynth": {
+        "fields": {
+          "m_tones": 136
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerStaticAdditiveSynth__CGainScalePerInstance": {
+        "fields": {
+          "m_flMaxVolume": 8,
+          "m_flMinVolume": 0,
+          "m_nInstancesAtMaxVolume": 12,
+          "m_nInstancesAtMinVolume": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerStaticAdditiveSynth__CHarmonic": {
+        "fields": {
+          "m_curve": 16,
+          "m_flCents": 8,
+          "m_flPhase": 12,
+          "m_nFundamental": 1,
+          "m_nOctave": 4,
+          "m_nWaveform": 0,
+          "m_volumeScaling": 80
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerStaticAdditiveSynth__CTone": {
+        "fields": {
+          "m_bSyncInstances": 88,
+          "m_curve": 24,
+          "m_harmonics": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerSwitch": {
+        "fields": {
+          "m_soundsToPlay": 120
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerTapePlayer": {
+        "fields": {
+          "m_bShouldWraparound": 136,
+          "m_flTapeSpeedAttackTime": 152,
+          "m_flTapeSpeedReleaseTime": 156,
+          "m_sourceAudio": 144
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerVMixSnd": {
+        "fields": {
+          "m_resourceName": 392
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerVsndRadioButton": {
+        "fields": {
+          "m_namespace": 120,
+          "m_slot1": 128,
+          "m_slot10": 1352,
+          "m_slot11": 1488,
+          "m_slot12": 1624,
+          "m_slot13": 1760,
+          "m_slot14": 1896,
+          "m_slot15": 2032,
+          "m_slot16": 2168,
+          "m_slot2": 264,
+          "m_slot3": 400,
+          "m_slot4": 536,
+          "m_slot5": 672,
+          "m_slot6": 808,
+          "m_slot7": 944,
+          "m_slot8": 1080,
+          "m_slot9": 1216
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerVsndTrigger": {
+        "fields": {
+          "m_namespace": 120,
+          "m_slot1": 128,
+          "m_slot10": 1352,
+          "m_slot11": 1488,
+          "m_slot12": 1624,
+          "m_slot13": 1760,
+          "m_slot14": 1896,
+          "m_slot15": 2032,
+          "m_slot16": 2168,
+          "m_slot2": 264,
+          "m_slot3": 400,
+          "m_slot4": 536,
+          "m_slot5": 672,
+          "m_slot6": 808,
+          "m_slot7": 944,
+          "m_slot8": 1080,
+          "m_slot9": 1216
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVsndRadioButtonSlot": {
+        "fields": {
+          "m_bEnableEndcap": 40,
+          "m_bEnableLoopcap": 80,
+          "m_bEnableVsnd": 0,
+          "m_endcapVsnd": 48,
+          "m_fadeOut": 128,
+          "m_group": 120,
+          "m_loopcapVsnd": 88,
+          "m_mode": 132,
+          "m_volume": 124,
+          "m_vsnd": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVsndTriggerSlot": {
+        "fields": {
+          "m_bEnableEndcap": 40,
+          "m_bEnableLoopcap": 80,
+          "m_bEnableVsnd": 0,
+          "m_endcapVsnd": 48,
+          "m_fadeOut": 124,
+          "m_loopcapVsnd": 88,
+          "m_mode": 128,
+          "m_volume": 120,
+          "m_vsnd": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "ISndSeqInstruments": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "KeyGroup_t": {
+        "fields": {
+          "nCenterNote": 0,
+          "nMaxNote": 2,
+          "nMinNote": 1,
+          "nNumVelocityZones": 3,
+          "pVelocityZones": 8
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "SamplerVoice_t": {
+        "fields": {
+          "nNoteNum": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "SelectedEditItemInfo_t": {
+        "fields": {
+          "m_EditItems": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "SndBeatEventKeyedFloats_t": {
+        "fields": {
+          "m_flFloat": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "SndBeatEventKeyedMidiNotes_t": {
+        "fields": {
+          "m_nNote": 17,
+          "m_nStatus": 16,
+          "m_nVelocity": 18
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "SndBeatEventKeyedSndEvts_t": {
+        "fields": {
+          "m_strSoundEventName": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "SndBeatEventKeys_t": {
+        "fields": {
+          "m_flKey": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MVDataNodeType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "SndBeatTimeSignature_t": {
+        "fields": {
+          "nDenominator": 1,
+          "nNumerator": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "SosEditItemInfo_t": {
+        "fields": {
+          "itemKVString": 32,
+          "itemName": 8,
+          "itemPos": 40,
+          "itemType": 0,
+          "itemTypeName": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixAutoFilterDesc_t": {
+        "fields": {
+          "m_filter": 12,
+          "m_flAttackTimeMS": 4,
+          "m_flEnvelopeAmount": 0,
+          "m_flLFOAmount": 28,
+          "m_flLFORate": 32,
+          "m_flPhase": 36,
+          "m_flReleaseTimeMS": 8,
+          "m_nLFOShape": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixBoxverbDesc_t": {
+        "fields": {
+          "m_bParallel": 24,
+          "m_filterType": 28,
+          "m_flComplexity": 8,
+          "m_flDepth": 52,
+          "m_flDiffusion": 12,
+          "m_flFeedbackDepth": 68,
+          "m_flFeedbackHeight": 64,
+          "m_flFeedbackScale": 56,
+          "m_flFeedbackWidth": 60,
+          "m_flHeight": 48,
+          "m_flModDepth": 16,
+          "m_flModRate": 20,
+          "m_flOutputGain": 72,
+          "m_flSizeMax": 0,
+          "m_flSizeMin": 4,
+          "m_flTaps": 76,
+          "m_flWidth": 44
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixConvolutionDesc_t": {
+        "fields": {
+          "m_flHighCutoffFreq": 28,
+          "m_flLowCutoffFreq": 24,
+          "m_flPreDelayMS": 4,
+          "m_flWetMix": 8,
+          "m_fldbGain": 0,
+          "m_fldbHigh": 20,
+          "m_fldbLow": 12,
+          "m_fldbMid": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixDelayDesc_t": {
+        "fields": {
+          "m_bEnableFilter": 16,
+          "m_feedbackFilter": 0,
+          "m_flDelay": 20,
+          "m_flDelayGain": 28,
+          "m_flDirectGain": 24,
+          "m_flFeedbackGain": 32,
+          "m_flWidth": 36
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixDiffusorDesc_t": {
+        "fields": {
+          "m_flComplexity": 4,
+          "m_flFeedback": 8,
+          "m_flOutputGain": 12,
+          "m_flSize": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixDualCompressorDesc_t": {
+        "fields": {
+          "m_bPeakMode": 12,
+          "m_bandDesc": 16,
+          "m_flRMSTimeMS": 0,
+          "m_flWetMix": 8,
+          "m_fldbKneeWidth": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixDynamics3BandDesc_t": {
+        "fields": {
+          "m_bPeakMode": 32,
+          "m_bandDesc": 36,
+          "m_flDepth": 12,
+          "m_flHighCutoffFreq": 28,
+          "m_flLowCutoffFreq": 24,
+          "m_flRMSTimeMS": 4,
+          "m_flTimeScale": 20,
+          "m_flWetMix": 16,
+          "m_fldbGainOutput": 0,
+          "m_fldbKneeWidth": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixDynamicsBand_t": {
+        "fields": {
+          "m_bEnable": 32,
+          "m_bSolo": 33,
+          "m_flAttackTimeMS": 24,
+          "m_flRatioAbove": 20,
+          "m_flRatioBelow": 16,
+          "m_flReleaseTimeMS": 28,
+          "m_fldbGainInput": 0,
+          "m_fldbGainOutput": 4,
+          "m_fldbThresholdAbove": 12,
+          "m_fldbThresholdBelow": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixDynamicsCompressorDesc_t": {
+        "fields": {
+          "m_bAutoMakeupGain": 37,
+          "m_bPeakMode": 36,
+          "m_flAttackTimeMS": 16,
+          "m_flCompressionRatio": 12,
+          "m_flRMSTimeMS": 24,
+          "m_flReleaseTimeMS": 20,
+          "m_flSCHighPassFreq": 32,
+          "m_flWetMix": 28,
+          "m_fldbCompressionThreshold": 4,
+          "m_fldbKneeWidth": 8,
+          "m_fldbOutputGain": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixDynamicsDesc_t": {
+        "fields": {
+          "m_bPeakMode": 44,
+          "m_flAttackTimeMS": 28,
+          "m_flLimiterRatio": 24,
+          "m_flRMSTimeMS": 36,
+          "m_flRatio": 20,
+          "m_flReleaseTimeMS": 32,
+          "m_flWetMix": 40,
+          "m_fldbCompressionThreshold": 8,
+          "m_fldbGain": 0,
+          "m_fldbKneeWidth": 16,
+          "m_fldbLimiterThreshold": 12,
+          "m_fldbNoiseGateThreshold": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixEQ8Desc_t": {
+        "fields": {
+          "m_stages": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixEQFilterDesc_t": {
+        "fields": {
+          "m_nChannelSet": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixEffectChainDesc_t": {
+        "fields": {
+          "m_effectName": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixEnvelopeDesc_t": {
+        "fields": {
+          "m_flAttackTimeMS": 0,
+          "m_flHoldTimeMS": 4,
+          "m_flReleaseTimeMS": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixFilterDesc_t": {
+        "fields": {
+          "m_bEnabled": 14,
+          "m_flCutoffFreq": 4,
+          "m_flQ": 8,
+          "m_fldbGain": 0,
+          "m_nFilterSlope": 13,
+          "m_nFilterType": 12
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixFlangerDesc_t": {
+        "fields": {
+          "m_bApplyAntialiasing": 32,
+          "m_bPhaseInvert": 0,
+          "m_flDelay": 8,
+          "m_flFeedbackGain": 16,
+          "m_flFeedforwardGain": 20,
+          "m_flGlideTime": 4,
+          "m_flModDepth": 28,
+          "m_flModRate": 24,
+          "m_flOutputGain": 12
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixFreeverbDesc_t": {
+        "fields": {
+          "m_flDamp": 4,
+          "m_flLateReflections": 12,
+          "m_flRoomSize": 0,
+          "m_flWidth": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixModDelayDesc_t": {
+        "fields": {
+          "m_bApplyAntialiasing": 44,
+          "m_bPhaseInvert": 16,
+          "m_feedbackFilter": 0,
+          "m_flDelay": 24,
+          "m_flFeedbackGain": 32,
+          "m_flGlideTime": 20,
+          "m_flModDepth": 40,
+          "m_flModRate": 36,
+          "m_flOutputGain": 28
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixOscDesc_t": {
+        "fields": {
+          "m_flPhase": 8,
+          "m_freq": 4,
+          "oscType": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixPannerDesc_t": {
+        "fields": {
+          "m_flStrength": 4,
+          "m_type": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixPitchShiftDesc_t": {
+        "fields": {
+          "m_flPitchShift": 4,
+          "m_nGrainSampleCount": 0,
+          "m_nProcType": 12,
+          "m_nQuality": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixPlateverbDesc_t": {
+        "fields": {
+          "m_flDamp": 16,
+          "m_flDecay": 12,
+          "m_flFeedbackDiffusion1": 20,
+          "m_flFeedbackDiffusion2": 24,
+          "m_flInputDiffusion1": 4,
+          "m_flInputDiffusion2": 8,
+          "m_flPrefilter": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixPointerFixupEntry_t": {
+        "fields": {
+          "m_nIndex": 0,
+          "m_offset": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixPresetDSPDesc_t": {
+        "fields": {
+          "m_effectName": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixShaperDesc_t": {
+        "fields": {
+          "m_flWetMix": 12,
+          "m_fldbDrive": 4,
+          "m_fldbOutputGain": 8,
+          "m_nOversampleFactor": 16,
+          "m_nShape": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixSubgraphSwitchDesc_t": {
+        "fields": {
+          "m_bOnlyTailsOnFadeOut": 44,
+          "m_effectName": 8,
+          "m_flInterpolationTime": 48,
+          "m_interpolationMode": 40,
+          "m_name": 0,
+          "m_subgraphs": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixUtilityDesc_t": {
+        "fields": {
+          "m_bBassMono": 16,
+          "m_flBassFreq": 20,
+          "m_flInputPan": 4,
+          "m_flOutputBalance": 8,
+          "m_fldbOutputGain": 12,
+          "m_nOp": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixVocoderDesc_t": {
+        "fields": {
+          "m_bPeakMode": 36,
+          "m_flAttackTimeMS": 24,
+          "m_flBandwidth": 4,
+          "m_flFreqRangeEnd": 16,
+          "m_flFreqRangeStart": 12,
+          "m_flReleaseTimeMS": 28,
+          "m_fldBModGain": 8,
+          "m_fldBUnvoicedGain": 20,
+          "m_nBandCount": 0,
+          "m_nDebugBand": 32
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VelocityZone_t": {
+        "fields": {
+          "nMaxVel": 0,
+          "nNextSelection": 1,
+          "nNumSamples": 2,
+          "pSamples": 4
+        },
+        "metadata": [],
+        "parent": null
+      }
+    },
+    "enums": {
+      "CVSoundFormat_t": {
+        "alignment": 1,
+        "members": {
+          "ADPCM": 3,
+          "MP3": 2,
+          "PCM16": 0,
+          "PCM8": 1
+        },
+        "type": "uint8"
+      },
+      "EMidiNote": {
+        "alignment": 1,
+        "members": {
+          "A": 9,
+          "A_Sharp": 10,
+          "B": 11,
+          "C": 0,
+          "C_Sharp": 1,
+          "Count": 12,
+          "D": 2,
+          "D_Sharp": 3,
+          "E": 4,
+          "F": 5,
+          "F_Sharp": 6,
+          "G": 7,
+          "G_Sharp": 8
+        },
+        "type": "uint8"
+      },
+      "EMode_t": {
+        "alignment": 4,
+        "members": {
+          "Peak": 0,
+          "RMS": 1
+        },
+        "type": "uint32"
+      },
+      "EVsndPlaybackMode": {
+        "alignment": 4,
+        "members": {
+          "Gate": 1,
+          "Trigger": 0
+        },
+        "type": "uint32"
+      },
+      "EVsndTriggerMode": {
+        "alignment": 4,
+        "members": {
+          "Gate": 1,
+          "Trigger": 0
+        },
+        "type": "uint32"
+      },
+      "EWaveform": {
+        "alignment": 1,
+        "members": {
+          "Noise": 4,
+          "Saw": 2,
+          "Sine": 0,
+          "Square": 1,
+          "Triangle": 3
+        },
+        "type": "uint8"
+      },
+      "PlayBackMode_t": {
+        "alignment": 4,
+        "members": {
+          "Random": 0,
+          "RandomAvoidLast": 2,
+          "RandomNoRepeats": 1,
+          "RandomWeights": 4,
+          "Sequential": 3
+        },
+        "type": "uint32"
+      },
+      "SndBeatEventType_t": {
+        "alignment": 4,
+        "members": {
+          "eSndBeatEventTypeBar": 2,
+          "eSndBeatEventTypeBeat": 1,
+          "eSndBeatEventTypeInvalid": 0,
+          "eSndBeatEventTypeKeys": 5,
+          "eSndBeatEventTypeLength": 4,
+          "eSndBeatEventTypePhrase": 3
+        },
+        "type": "uint32"
+      },
+      "SndBeatKeyType_t": {
+        "alignment": 4,
+        "members": {
+          "eSndBeatPatternTypeKeyedFloats": 2,
+          "eSndBeatPatternTypeKeyedMidi": 4,
+          "eSndBeatPatternTypeKeyedSndEvts": 3,
+          "eSndBeatPatternTypeKeys": 1,
+          "eSndBeatPatternTypeNone": 0
+        },
+        "type": "uint32"
+      },
+      "SndBeatMidiStatusType_t": {
+        "alignment": 4,
+        "members": {
+          "SndSeqMidiStatusChannelPressure": 13,
+          "SndSeqMidiStatusCtrlChange": 11,
+          "SndSeqMidiStatusKeyPressure": 10,
+          "SndSeqMidiStatusNoteOff": 8,
+          "SndSeqMidiStatusNoteOn": 9,
+          "SndSeqMidiStatusPitchBend": 14,
+          "SndSeqMidiStatusProgramChange": 12
+        },
+        "type": "uint32"
+      },
+      "SndBeatSyncStartType_t": {
+        "alignment": 4,
+        "members": {
+          "eSndBeatSyncStartTypeImmediate": 1,
+          "eSndBeatSyncStartTypeInvalid": 0,
+          "eSndBeatSyncStartTypeQueue": 2
+        },
+        "type": "uint32"
+      },
+      "SndBeatSyncType_t": {
+        "alignment": 4,
+        "members": {
+          "eSndBeatSyncTypeInvalid": 0,
+          "eSndBeatSyncTypeReset": 1,
+          "eSndBeatSyncTypeSeekImmediate": 2
+        },
+        "type": "uint32"
+      },
+      "SndBeatTrackPlaybackType_t": {
+        "alignment": 4,
+        "members": {
+          "eSndBeatTrackPlaybackTypeFwd": 1,
+          "eSndBeatTrackPlaybackTypeStep": 0
+        },
+        "type": "uint32"
+      },
+      "SndSeqInstrumentType_t": {
+        "alignment": 4,
+        "members": {
+          "eSndSeqInstMidiSampler": 2,
+          "eSndSeqInstNull": 0,
+          "eSndSeqInstSndEvt": 1
+        },
+        "type": "uint32"
+      },
+      "SosActionLimitSortType_t": {
+        "alignment": 4,
+        "members": {
+          "SOS_LIMIT_SORTTYPE_HIGHEST": 0,
+          "SOS_LIMIT_SORTTYPE_LOWEST": 1
+        },
+        "type": "uint32"
+      },
+      "SosActionSetParamSortType_t": {
+        "alignment": 4,
+        "members": {
+          "SOS_SETPARAM_SORTTYPE_HIGHEST": 0,
+          "SOS_SETPARAM_SORTTYPE_LOWEST": 1
+        },
+        "type": "uint32"
+      },
+      "SosActionStopType_t": {
+        "alignment": 4,
+        "members": {
+          "SOS_STOPTYPE_NONE": 0,
+          "SOS_STOPTYPE_OPVAR": 2,
+          "SOS_STOPTYPE_TIME": 1
+        },
+        "type": "uint32"
+      },
+      "SosEditItemType_t": {
+        "alignment": 4,
+        "members": {
+          "SOS_EDIT_ITEM_TYPE_FIELD": 5,
+          "SOS_EDIT_ITEM_TYPE_LIBRARYSTACKS": 2,
+          "SOS_EDIT_ITEM_TYPE_OPERATOR": 4,
+          "SOS_EDIT_ITEM_TYPE_SOUNDEVENT": 1,
+          "SOS_EDIT_ITEM_TYPE_SOUNDEVENTS": 0,
+          "SOS_EDIT_ITEM_TYPE_STACK": 3
+        },
+        "type": "uint32"
+      },
+      "SosGroupFieldBehavior_t": {
+        "alignment": 4,
+        "members": {
+          "kBranch": 1,
+          "kIgnore": 0,
+          "kMatch": 2
+        },
+        "type": "uint32"
+      },
+      "SosGroupType_t": {
+        "alignment": 4,
+        "members": {
+          "SOS_GROUPTYPE_DYNAMIC": 0,
+          "SOS_GROUPTYPE_STATIC": 1
+        },
+        "type": "uint32"
+      },
+      "VMixAutoControlType_t": {
+        "alignment": 1,
+        "members": {
+          "VMIX_AUTO_DISTANCE": 3,
+          "VMIX_AUTO_LISTENER_PITCH_COS": 11,
+          "VMIX_AUTO_LISTENER_PITCH_SIN": 10,
+          "VMIX_AUTO_LISTENER_ROLL_COS": 13,
+          "VMIX_AUTO_LISTENER_ROLL_SIN": 12,
+          "VMIX_AUTO_LISTENER_YAW_COS": 9,
+          "VMIX_AUTO_LISTENER_YAW_SIN": 8,
+          "VMIX_AUTO_PLAYTIME": 2,
+          "VMIX_AUTO_POSITION_VECTOR": 7,
+          "VMIX_AUTO_POSITION_X": 4,
+          "VMIX_AUTO_POSITION_Y": 5,
+          "VMIX_AUTO_POSITION_Z": 6,
+          "VMIX_AUTO_SEND_LEVEL": 0,
+          "VMIX_AUTO_STACK_VAR": 1
+        },
+        "type": "uint8"
+      },
+      "VMixChannelOperation_t": {
+        "alignment": 4,
+        "members": {
+          "VMIX_CHAN_LEFT": 1,
+          "VMIX_CHAN_MID_SIDE": 5,
+          "VMIX_CHAN_MONO": 4,
+          "VMIX_CHAN_RIGHT": 2,
+          "VMIX_CHAN_STEREO": 0,
+          "VMIX_CHAN_SWAP": 3
+        },
+        "type": "uint32"
+      },
+      "VMixFilterChannelSet_t": {
+        "alignment": 1,
+        "members": {
+          "FILTER_ALL_CHANNELS": 0,
+          "FILTER_CHANNEL_SET_MAX": 5,
+          "FILTER_LEFT_ONLY": 1,
+          "FILTER_MID_ONLY": 3,
+          "FILTER_RIGHT_ONLY": 2,
+          "FILTER_SIDE_ONLY": 4
+        },
+        "type": "uint8"
+      },
+      "VMixFilterSlope_t": {
+        "alignment": 1,
+        "members": {
+          "FILTER_SLOPE_12dB": 4,
+          "FILTER_SLOPE_1POLE_12dB": 1,
+          "FILTER_SLOPE_1POLE_18dB": 2,
+          "FILTER_SLOPE_1POLE_24dB": 3,
+          "FILTER_SLOPE_1POLE_6dB": 0,
+          "FILTER_SLOPE_24dB": 5,
+          "FILTER_SLOPE_36dB": 6,
+          "FILTER_SLOPE_48dB": 7,
+          "FILTER_SLOPE_MAX": 7
+        },
+        "type": "uint8"
+      },
+      "VMixFilterType_t": {
+        "alignment": 1,
+        "members": {
+          "FILTER_ALLPASS": 7,
+          "FILTER_BANDPASS": 2,
+          "FILTER_HIGHPASS": 1,
+          "FILTER_HIGH_SHELF": 6,
+          "FILTER_LOWPASS": 0,
+          "FILTER_LOW_SHELF": 5,
+          "FILTER_NOTCH": 3,
+          "FILTER_PASSTHROUGH": 8,
+          "FILTER_PEAKING_EQ": 4,
+          "FILTER_UNKNOWN": -1
+        },
+        "type": "uint8"
+      },
+      "VMixGraphCommandID_t": {
+        "alignment": 4,
+        "members": {
+          "CMD_BLEND_VSNDS_TO_IMPULSERESPONSE": 32,
+          "CMD_CONTROL_COND_COPY_IF_NEGATIVE": 7,
+          "CMD_CONTROL_CONVERT_DB_TO_GAIN": 1,
+          "CMD_CONTROL_COPY": 6,
+          "CMD_CONTROL_EVALUATE_CURVE": 5,
+          "CMD_CONTROL_EVAL_ENVELOPE": 14,
+          "CMD_CONTROL_INCREMENT_TIMER": 13,
+          "CMD_CONTROL_MAX": 11,
+          "CMD_CONTROL_OUTPUT_STORE": 4,
+          "CMD_CONTROL_REMAP_LINEAR": 8,
+          "CMD_CONTROL_REMAP_LOGLINEAR": 10,
+          "CMD_CONTROL_REMAP_SINE": 9,
+          "CMD_CONTROL_RESET_TIMER": 12,
+          "CMD_CONTROL_SINE_BLEND": 15,
+          "CMD_CONTROL_TRANSIENT_INPUT_RESET": 3,
+          "CMD_CONTROL_TRANSIENT_INPUT_STORE": 2,
+          "CMD_IMPULSERESPONSE_DELAY": 33,
+          "CMD_IMPULSERESPONSE_INPUT_STORE": 28,
+          "CMD_IMPULSERESPONSE_RESET": 31,
+          "CMD_INVALID": -1,
+          "CMD_PROCESSOR_SET_IMPULSERESPONSE_VALUE": 29,
+          "CMD_REMAP_VSND_TO_IMPULSERESPONSE": 30,
+          "CMD_SUBMIX_ACCUMULATE": 25,
+          "CMD_SUBMIX_COPY": 24,
+          "CMD_SUBMIX_DEBUG": 20,
+          "CMD_SUBMIX_EXTRACTCONTAINER": 19,
+          "CMD_SUBMIX_GENERATE": 17,
+          "CMD_SUBMIX_GENERATE_SIDECHAIN": 18,
+          "CMD_SUBMIX_METER": 26,
+          "CMD_SUBMIX_METER_SPECTRUM": 27,
+          "CMD_SUBMIX_MIX2x1": 21,
+          "CMD_SUBMIX_OUTPUT": 22,
+          "CMD_SUBMIX_OUTPUTx2": 23,
+          "CMD_SUBMIX_PROCESS": 16
+        },
+        "type": "uint32"
+      },
+      "VMixLFOShape_t": {
+        "alignment": 4,
+        "members": {
+          "LFO_SHAPE_NOISE": 4,
+          "LFO_SHAPE_SAW": 3,
+          "LFO_SHAPE_SINE": 0,
+          "LFO_SHAPE_SQUARE": 1,
+          "LFO_SHAPE_TRI": 2
+        },
+        "type": "uint32"
+      },
+      "VMixMixDownRule_t": {
+        "alignment": 1,
+        "members": {
+          "LEFT": 1,
+          "MID": 3,
+          "RIGHT": 2,
+          "SIDE": 4,
+          "SUM": 0
+        },
+        "type": "uint8"
+      },
+      "VMixOffsetCategory_t": {
+        "alignment": 4,
+        "members": {
+          "HEAP_OFFSET": 1,
+          "INPUT_INDEX": 2,
+          "NULL_POINTER": 0,
+          "SUBMIX_INDEX": 3
+        },
+        "type": "uint32"
+      },
+      "VMixOffsetType_t": {
+        "alignment": 4,
+        "members": {
+          "VO_ARRAY": 1,
+          "VO_BOOL": 2,
+          "VO_CHAR": 0,
+          "VO_CUBIC_SPLINE": 8,
+          "VO_FLOAT": 3,
+          "VO_FLOAT_UTLVECTOR": 10,
+          "VO_INT32": 5,
+          "VO_QUATERNION": 7,
+          "VO_SHAREDPTR_IR": 11,
+          "VO_TYPE_COUNT": 12,
+          "VO_UINT32": 4,
+          "VO_VECTOR": 6,
+          "VO_VSND_INPUT": 9
+        },
+        "type": "uint32"
+      },
+      "VMixPannerType_t": {
+        "alignment": 4,
+        "members": {
+          "PANNER_TYPE_EQUAL_POWER": 1,
+          "PANNER_TYPE_LINEAR": 0
+        },
+        "type": "uint32"
+      },
+      "VMixSendOperator_t": {
+        "alignment": 2,
+        "members": {
+          "ALL_MAX_SEND": 7,
+          "ALL_VOICES": 0,
+          "FACING_VOICES": 2,
+          "INVERSE_NAMED_SENDS": 5,
+          "INVERSE_TOTAL_SEND": 6,
+          "MIXGROUP_VOICES": 3,
+          "NAMED_SEND": 4,
+          "NO_VOICES": -1,
+          "ROOM_VOICES": 1,
+          "TRACK": 8
+        },
+        "type": "uint16"
+      },
+      "VMixSubgraphSwitchInterpolationType_t": {
+        "alignment": 4,
+        "members": {
+          "SUBGRAPH_INTERPOLATION_KEEP_LAST_SUBGRAPH_RUNNING": 2,
+          "SUBGRAPH_INTERPOLATION_TEMPORAL_CROSSFADE": 0,
+          "SUBGRAPH_INTERPOLATION_TEMPORAL_FADE_OUT": 1
+        },
+        "type": "uint32"
+      },
+      "VMixUpMixRule_t": {
+        "alignment": 1,
+        "members": {
+          "BROADCAST": 1,
+          "DIVIDE": 0
+        },
+        "type": "uint8"
+      },
+      "soundlevel_t": {
+        "alignment": 4,
+        "members": {
+          "SNDLVL_100dB": 100,
+          "SNDLVL_105dB": 105,
+          "SNDLVL_110dB": 110,
+          "SNDLVL_120dB": 120,
+          "SNDLVL_130dB": 130,
+          "SNDLVL_140dB": 140,
+          "SNDLVL_150dB": 150,
+          "SNDLVL_180dB": 180,
+          "SNDLVL_20dB": 20,
+          "SNDLVL_25dB": 25,
+          "SNDLVL_30dB": 30,
+          "SNDLVL_35dB": 35,
+          "SNDLVL_40dB": 40,
+          "SNDLVL_45dB": 45,
+          "SNDLVL_50dB": 50,
+          "SNDLVL_55dB": 55,
+          "SNDLVL_60dB": 60,
+          "SNDLVL_65dB": 65,
+          "SNDLVL_70dB": 70,
+          "SNDLVL_75dB": 75,
+          "SNDLVL_80dB": 80,
+          "SNDLVL_85dB": 85,
+          "SNDLVL_90dB": 90,
+          "SNDLVL_95dB": 95,
+          "SNDLVL_GUNFIRE": 140,
+          "SNDLVL_IDLE": 60,
+          "SNDLVL_NONE": 0,
+          "SNDLVL_NORM": 75,
+          "SNDLVL_STATIC": 66,
+          "SNDLVL_TALKING": 80
+        },
+        "type": "uint32"
+      }
+    }
+  }
 }

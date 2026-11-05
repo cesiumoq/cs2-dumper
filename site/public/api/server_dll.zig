@@ -2703,7 +2703,7 @@ pub const server_dll = struct {
         _: [0x10]u8, // 0x80
     };
     pub const CCSPointScriptEntity = extern struct {
-        pad_0: [0x668]u8, // 0x0
+        pad_0: [0x670]u8, // 0x0
     };
     pub const CPulseCell_BaseFlow = extern struct {
         pad_0: [0x48]u8, // 0x0
@@ -3321,8 +3321,8 @@ pub const server_dll = struct {
         _: [0xc]u8, // 0x3298
         _: [0x4]u8, // 0x32a4
         _: [0x20]u8, // 0x32a8
-        _: [0x1a]u8, // 0x32c8
-        _: [0xe]u8, // 0x32e2
+        _: [0x1b]u8, // 0x32c8
+        _: [0xd]u8, // 0x32e3
     };
     pub const CPhysicsPropRespawnable = extern struct {
         pad_0: [0xd10]u8, // 0x0

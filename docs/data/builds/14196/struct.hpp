@@ -1,0 +1,44 @@
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Total Offsets   : 202
+/*  Dumped At       : 12:53 05/11/2026 (GMT)
+/*  Dumped In       : 46,1s
+*/
+
+// Single-include amalgamation header for CS2 internal cheats.
+// Add the dump's `include/` to your include path and:
+//     #include <cs2.hpp>
+
+#pragma once
+
+inline constexpr unsigned int CS2_BUILD = 14196;
+
+#include "macros.hpp"
+
+// Per-module schema classes
+#include "schemas/animationsystem_dll.hpp"
+#include "schemas/engine2_dll.hpp"
+#include "schemas/host_dll.hpp"
+#include "schemas/materialsystem2_dll.hpp"
+#include "schemas/networksystem_dll.hpp"
+#include "schemas/panorama_dll.hpp"
+#include "schemas/particles_dll.hpp"
+#include "schemas/pulse_system_dll.hpp"
+#include "schemas/rendersystemdx11_dll.hpp"
+#include "schemas/resourcesystem_dll.hpp"
+#include "schemas/scenesystem_dll.hpp"
+#include "schemas/schemasystem_dll.hpp"
+#include "schemas/client_dll.hpp"
+#include "schemas/server_dll.hpp"
+#include "schemas/soundsystem_dll.hpp"
+#include "schemas/steamaudio_dll.hpp"
+#include "schemas/vphysics2_dll.hpp"
+#include "schemas/worldrenderer_dll.hpp"
+
+#include "offsets/offsets.hpp"
+#include "interfaces/interfaces.hpp"
+#include "buttons.hpp"
+#include "protobufs/protobufs.hpp"
+#include "patterns/patterns.hpp"
+
+#include "impl/entity_system.hpp"

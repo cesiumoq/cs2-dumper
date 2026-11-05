@@ -1,0 +1,129 @@
+/* cesium dumper | generated from live schema */
+pub const materialsystem2_dll = struct {
+    pub const MaterialParam_t = extern struct {
+        _: [0x8]u8, // 0x0
+    };
+    pub const MaterialParamVector_t = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        _: [0x10]u8, // 0x8
+    };
+    pub const MaterialParamString_t = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+    };
+    pub const PostProcessingResource_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x3c]u8, // 0x4
+        _: [0x4]u8, // 0x40
+        _: [0x88]u8, // 0x44
+        _: [0x4]u8, // 0xcc
+        _: [0x24]u8, // 0xd0
+        _: [0x4]u8, // 0xf4
+        _: [0x14]u8, // 0xf8
+        _: [0x4]u8, // 0x10c
+        _: [0x10]u8, // 0x110
+        _: [0x1]u8, // 0x120
+        _: [0x3]u8, // 0x121
+        _: [0x20]u8, // 0x124
+        _: [0x4]u8, // 0x144
+        _: [0x10]u8, // 0x148
+    };
+    pub const MaterialParamInt_t = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+    };
+    pub const PostProcessingVignetteParameters_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x8]u8, // 0x4
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0xc]u8, // 0x18
+    };
+    pub const PostProcessingLocalContrastParameters_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+    };
+    pub const PostProcessingTonemapParameters_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0x4]u8, // 0x18
+        _: [0x4]u8, // 0x1c
+        _: [0x4]u8, // 0x20
+        _: [0x4]u8, // 0x24
+        _: [0x4]u8, // 0x28
+        _: [0x4]u8, // 0x2c
+        _: [0x4]u8, // 0x30
+        _: [0x4]u8, // 0x34
+        _: [0x4]u8, // 0x38
+    };
+    pub const PostProcessingFogScatteringParameters_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0x4]u8, // 0x18
+        _: [0x4]u8, // 0x1c
+    };
+    pub const MaterialParamBuffer_t = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        _: [0x10]u8, // 0x8
+    };
+    pub const MaterialResourceData_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+        _: [0x18]u8, // 0x10
+        _: [0x18]u8, // 0x28
+        _: [0x18]u8, // 0x40
+        _: [0x18]u8, // 0x58
+        _: [0x18]u8, // 0x70
+        _: [0x18]u8, // 0x88
+        _: [0x18]u8, // 0xa0
+        _: [0x18]u8, // 0xb8
+        _: [0x18]u8, // 0xd0
+        _: [0x18]u8, // 0xe8
+        _: [0x18]u8, // 0x100
+        _: [0x18]u8, // 0x118
+    };
+    pub const PostProcessingBloomParameters_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0x4]u8, // 0x18
+        _: [0x4]u8, // 0x1c
+        _: [0x4]u8, // 0x20
+        _: [0x4]u8, // 0x24
+        _: [0x4]u8, // 0x28
+        _: [0x4]u8, // 0x2c
+        _: [0x4]u8, // 0x30
+        _: [0x4]u8, // 0x34
+        _: [0x14]u8, // 0x38
+        _: [0x3c]u8, // 0x4c
+    };
+    pub const MaterialParamFloat_t = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+    };
+    pub const PostProcessingLocalExposureParameters_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+    };
+    pub const MaterialParamTexture_t = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+    };
+};

@@ -3329,7 +3329,7 @@ pub mod server_dll {
 
     #[repr(C)]
     pub struct CCSPointScriptEntity {
-        pub pad_0: [u8; 0x668], // 0x0
+        pub pad_0: [u8; 0x670], // 0x0
     }
 
     #[repr(C)]
@@ -4053,8 +4053,8 @@ pub mod server_dll {
         pub _: [u8; 0xc], // 0x3298
         pub _: [u8; 0x4], // 0x32a4
         pub _: [u8; 0x20], // 0x32a8
-        pub _: [u8; 0x1a], // 0x32c8
-        pub _: [u8; 0xe], // 0x32e2
+        pub _: [u8; 0x1b], // 0x32c8
+        pub _: [u8; 0xd], // 0x32e3
     }
 
     #[repr(C)]

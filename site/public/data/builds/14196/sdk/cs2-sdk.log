@@ -1,0 +1,2 @@
+12:51:58 [WARN] FrameStageNotify: pattern re-anchored via previous prologue: client.dll -> 0xB6EFE0 (was 0xB6EE70); database needs the new pattern
+12:52:17 [WARN] 1 Pattern(s) matched more than once in their .text section — consider tightening

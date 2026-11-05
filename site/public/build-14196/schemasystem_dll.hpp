@@ -1,0 +1,173 @@
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Total Offsets   : 202
+/*  Dumped At       : 12:53 05/11/2026 (GMT)
+/*  Dumped In       : 46,1s
+*/
+
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
+/*  Generated from the live CS2 schema system.
+*/
+
+#pragma once
+#include <cstddef>
+#include <cstdint>
+
+namespace cs2::schemasystem_dll {
+
+enum class fieldtype_t : std::int32_t {
+    FIELD_VOID = 0,
+    FIELD_FLOAT32 = 1,
+    FIELD_STRING = 2,
+    FIELD_VECTOR = 3,
+    FIELD_QUATERNION = 4,
+    FIELD_INT32 = 5,
+    FIELD_BOOLEAN = 6,
+    FIELD_INT16 = 7,
+    FIELD_CHARACTER = 8,
+    FIELD_COLOR32 = 9,
+    FIELD_EMBEDDED = 10,
+    FIELD_CUSTOM = 11,
+    FIELD_CLASSPTR = 12,
+    FIELD_EHANDLE = 13,
+    FIELD_POSITION_VECTOR = 14,
+    FIELD_TIME = 15,
+    FIELD_TICK = 16,
+    FIELD_SOUNDNAME = 17,
+    FIELD_INPUT = 18,
+    FIELD_FUNCTION = 19,
+    FIELD_VMATRIX = 20,
+    FIELD_VMATRIX_WORLDSPACE = 21,
+    FIELD_MATRIX3X4_WORLDSPACE = 22,
+    FIELD_INTERVAL = 23,
+    FIELD_UNUSED = 24,
+    FIELD_VECTOR2D = 25,
+    FIELD_INT64 = 26,
+    FIELD_VECTOR4D = 27,
+    FIELD_RESOURCE = 28,
+    FIELD_TYPEUNKNOWN = 29,
+    FIELD_CSTRING = 30,
+    FIELD_HSCRIPT = 31,
+    FIELD_VARIANT = 32,
+    FIELD_UINT64 = 33,
+    FIELD_FLOAT64 = 34,
+    FIELD_POSITIVEINTEGER_OR_NULL = 35,
+    FIELD_HSCRIPT_NEW_INSTANCE = 36,
+    FIELD_UINT32 = 37,
+    FIELD_UTLSTRINGTOKEN = 38,
+    FIELD_QANGLE = 39,
+    FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTOR = 40,
+    FIELD_HMATERIAL = 41,
+    FIELD_HMODEL = 42,
+    FIELD_NETWORK_QUANTIZED_VECTOR = 43,
+    FIELD_NETWORK_QUANTIZED_FLOAT = 44,
+    FIELD_DIRECTION_VECTOR_WORLDSPACE = 45,
+    FIELD_QANGLE_WORLDSPACE = 46,
+    FIELD_QUATERNION_WORLDSPACE = 47,
+    FIELD_HSCRIPT_LIGHTBINDING = 48,
+    FIELD_V8_VALUE = 49,
+    FIELD_V8_OBJECT = 50,
+    FIELD_V8_ARRAY = 51,
+    FIELD_V8_CALLBACK_INFO = 52,
+    FIELD_UTLSTRING = 53,
+    FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_POSITION_VECTOR = 54,
+    FIELD_HRENDERTEXTURE = 55,
+    FIELD_HPARTICLESYSTEMDEFINITION = 56,
+    FIELD_UINT8 = 57,
+    FIELD_UINT16 = 58,
+    FIELD_CTRANSFORM = 59,
+    FIELD_CTRANSFORM_WORLDSPACE = 60,
+    FIELD_HPOSTPROCESSING = 61,
+    FIELD_MATRIX3X4 = 62,
+    FIELD_SHIM = 63,
+    FIELD_CMOTIONTRANSFORM = 64,
+    FIELD_CMOTIONTRANSFORM_WORLDSPACE = 65,
+    FIELD_ATTACHMENT_HANDLE = 66,
+    FIELD_AMMO_INDEX = 67,
+    FIELD_CONDITION_ID = 68,
+    DEPRECATED_FIELD_AI_SCHEDULE_BITS = 69,
+    FIELD_MODIFIER_HANDLE = 70,
+    FIELD_ROTATION_VECTOR = 71,
+    FIELD_ROTATION_VECTOR_WORLDSPACE = 72,
+    FIELD_HVDATA = 73,
+    FIELD_SCALE32 = 74,
+    FIELD_STRING_AND_TOKEN = 75,
+    FIELD_ENGINE_TIME = 76,
+    FIELD_ENGINE_TICK = 77,
+    FIELD_WORLD_GROUP_ID = 78,
+    FIELD_GLOBALSYMBOL = 79,
+    FIELD_HNMGRAPHDEFINITION = 80,
+    FIELD_NETWORK_QUANTIZED_VECTORWS = 81,
+    FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTORWS = 82,
+    FIELD_TYPECOUNT = 83,
+};
+
+enum class ThreeState_t : std::int32_t {
+    TRS_FALSE = 0,
+    TRS_TRUE = 1,
+    TRS_NONE = 2,
+};
+
+struct InfoForResourceTypeCResourceManifestInternal {
+    static constexpr std::size_t size = 0x1;
+    std::uint8_t pad_0[0x1]; // 0x0
+};
+
+struct CSchemaSystemInternalRegistration {
+    static constexpr std::size_t size = 0x180;
+    std::uint8_t _[0x8]; // 0x0 
+    std::uint8_t _[0xc]; // 0x8 
+    std::uint8_t _[0xc]; // 0x14 
+    std::uint8_t _[0x10]; // 0x20 
+    std::uint8_t _[0x10]; // 0x30 
+    std::uint8_t _[0xc]; // 0x40 
+    std::uint8_t _[0xc]; // 0x4c 
+    std::uint8_t _[0xc]; // 0x58 
+    std::uint8_t _[0xc]; // 0x64 
+    std::uint8_t _[0x10]; // 0x70 
+    std::uint8_t _[0x30]; // 0x80 
+    std::uint8_t _[0x30]; // 0xb0 
+    std::uint8_t _[0x4]; // 0xe0 
+    std::uint8_t _[0x1c]; // 0xe4 
+    std::uint8_t _[0x20]; // 0x100 
+    std::uint8_t _[0x8]; // 0x120 
+    std::uint8_t _[0x10]; // 0x128 
+    std::uint8_t _[0x8]; // 0x138 
+    std::uint8_t _[0x4]; // 0x140 
+    std::uint8_t _[0x4]; // 0x144 
+    std::uint8_t _[0x18]; // 0x148 
+    std::uint8_t _[0x8]; // 0x160 
+    std::uint8_t _[0x18]; // 0x168 
+};
+
+struct CExampleSchemaVData_PolymorphicDerivedA {
+    static constexpr std::size_t size = 0x18;
+    std::uint8_t pad_0[0x10]; // 0x0
+    std::uint8_t _[0x8]; // 0x10 
+};
+
+struct CExampleSchemaVData_PolymorphicBase {
+    static constexpr std::size_t size = 0x10;
+    std::uint8_t pad_0[0x8]; // 0x0
+    std::uint8_t _[0x8]; // 0x8 
+};
+
+struct CExampleSchemaVData_PolymorphicDerivedB {
+    static constexpr std::size_t size = 0x18;
+    std::uint8_t pad_0[0x10]; // 0x0
+    std::uint8_t _[0x8]; // 0x10 
+};
+
+struct ResourceId_t {
+    static constexpr std::size_t size = 0x8;
+    std::uint8_t _[0x8]; // 0x0 
+};
+
+struct CExampleSchemaVData_Monomorphic {
+    static constexpr std::size_t size = 0x8;
+    std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
+};
+
+} // namespace

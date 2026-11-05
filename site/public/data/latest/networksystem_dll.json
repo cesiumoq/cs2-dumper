@@ -1,19 +1,14 @@
 {
- "networksystem.dll": {
-  "classes": [
-   {
-    "name": "ChangeAccessorFieldPathIndex_t",
-    "module": "ChangeAccessorFieldPathIndex_t.dll",
-    "size": 4,
-    "fields": [
-     {
-      "name": "m_Value",
-      "type": "int32",
-      "offset": 0
-     }
-    ]
-   }
-  ],
-  "enums": []
- }
+  "networksystem.dll": {
+    "classes": {
+      "ChangeAccessorFieldPathIndex_t": {
+        "fields": {
+          "m_Value": 0
+        },
+        "metadata": [],
+        "parent": null
+      }
+    },
+    "enums": {}
+  }
 }

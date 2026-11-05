@@ -1,137 +1,49 @@
 {
- "panorama.dll": {
-  "classes": [],
-  "enums": [
-   {
-    "name": "ELayoutNodeType",
-    "members": [
-     {
-      "name": "ROOT",
-      "value": 0
-     },
-     {
-      "name": "STYLES",
-      "value": 1
-     },
-     {
-      "name": "SCRIPT_BODY",
-      "value": 2
-     },
-     {
-      "name": "SCRIPTS",
-      "value": 3
-     },
-     {
-      "name": "SNIPPETS",
-      "value": 4
-     },
-     {
-      "name": "INCLUDE",
-      "value": 5
-     },
-     {
-      "name": "SNIPPET",
-      "value": 6
-     },
-     {
-      "name": "PANEL",
-      "value": 7
-     },
-     {
-      "name": "PANEL_ATTRIBUTE",
-      "value": 8
-     },
-     {
-      "name": "PANEL_ATTRIBUTE_VALUE",
-      "value": 9
-     },
-     {
-      "name": "REFERENCE_CONTENT",
-      "value": 10
-     },
-     {
-      "name": "REFERENCE_COMPILED",
-      "value": 11
-     },
-     {
-      "name": "REFERENCE_PASSTHROUGH",
-      "value": 12
-     }
-    ]
-   },
-   {
-    "name": "EStyleNodeType",
-    "members": [
-     {
-      "name": "ROOT",
-      "value": 0
-     },
-     {
-      "name": "EXPRESSION",
-      "value": 1
-     },
-     {
-      "name": "PROPERTY",
-      "value": 2
-     },
-     {
-      "name": "DEFINE",
-      "value": 3
-     },
-     {
-      "name": "IMPORT",
-      "value": 4
-     },
-     {
-      "name": "KEYFRAMES",
-      "value": 5
-     },
-     {
-      "name": "KEYFRAME_SELECTOR",
-      "value": 6
-     },
-     {
-      "name": "STYLE_SELECTOR",
-      "value": 7
-     },
-     {
-      "name": "WHITESPACE",
-      "value": 8
-     },
-     {
-      "name": "EXPRESSION_TEXT",
-      "value": 9
-     },
-     {
-      "name": "EXPRESSION_URL",
-      "value": 10
-     },
-     {
-      "name": "EXPRESSION_CONCAT",
-      "value": 11
-     },
-     {
-      "name": "REFERENCE_CONTENT",
-      "value": 12
-     },
-     {
-      "name": "REFERENCE_COMPILED",
-      "value": 13
-     },
-     {
-      "name": "REFERENCE_PASSTHROUGH",
-      "value": 14
-     },
-     {
-      "name": "REFERENCE_PANEL",
-      "value": 15
-     },
-     {
-      "name": "COMPILER_CONDITIONAL",
-      "value": 16
-     }
-    ]
-   }
-  ]
- }
+  "panorama.dll": {
+    "classes": {},
+    "enums": {
+      "ELayoutNodeType": {
+        "alignment": 4,
+        "members": {
+          "INCLUDE": 5,
+          "PANEL": 7,
+          "PANEL_ATTRIBUTE": 8,
+          "PANEL_ATTRIBUTE_VALUE": 9,
+          "REFERENCE_COMPILED": 11,
+          "REFERENCE_CONTENT": 10,
+          "REFERENCE_PASSTHROUGH": 12,
+          "ROOT": 0,
+          "SCRIPTS": 3,
+          "SCRIPT_BODY": 2,
+          "SNIPPET": 6,
+          "SNIPPETS": 4,
+          "STYLES": 1
+        },
+        "type": "uint32"
+      },
+      "EStyleNodeType": {
+        "alignment": 4,
+        "members": {
+          "COMPILER_CONDITIONAL": 16,
+          "DEFINE": 3,
+          "EXPRESSION": 1,
+          "EXPRESSION_CONCAT": 11,
+          "EXPRESSION_TEXT": 9,
+          "EXPRESSION_URL": 10,
+          "IMPORT": 4,
+          "KEYFRAMES": 5,
+          "KEYFRAME_SELECTOR": 6,
+          "PROPERTY": 2,
+          "REFERENCE_COMPILED": 13,
+          "REFERENCE_CONTENT": 12,
+          "REFERENCE_PANEL": 15,
+          "REFERENCE_PASSTHROUGH": 14,
+          "ROOT": 0,
+          "STYLE_SELECTOR": 7,
+          "WHITESPACE": 8
+        },
+        "type": "uint32"
+      }
+    }
+  }
 }

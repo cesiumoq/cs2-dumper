@@ -1,179 +1,224 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:59 04/11/2026 (GMT)
+/*  Dumped At       : 22:10 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
 
-/*                       cesium dumper
-/*                  https://cs2-dump.vercel.app
-/*  Generated from the live CS2 schema system.
-*/
-
 #pragma once
-#include <cstddef>
-#include <cstdint>
+#include "../macros.hpp"
 
-namespace cs2::rendersystemdx11_dll {
+namespace rendersystemdx11 {
 
-enum class RenderPrimitiveType_t : std::int32_t {
-    RENDER_PRIM_POINTS = 0,
-    RENDER_PRIM_LINES = 1,
-    RENDER_PRIM_LINES_WITH_ADJACENCY = 2,
-    RENDER_PRIM_LINE_STRIP = 3,
-    RENDER_PRIM_LINE_STRIP_WITH_ADJACENCY = 4,
-    RENDER_PRIM_TRIANGLES = 5,
-    RENDER_PRIM_TRIANGLES_WITH_ADJACENCY = 6,
-    RENDER_PRIM_TRIANGLE_STRIP = 7,
-    RENDER_PRIM_TRIANGLE_STRIP_WITH_ADJACENCY = 8,
-    RENDER_PRIM_INSTANCED_QUADS = 9,
-    RENDER_PRIM_HETEROGENOUS = 10,
-    RENDER_PRIM_COMPUTE_SHADER = 11,
-    RENDER_PRIM_MESH_SHADER = 12,
-    RENDER_PRIM_TYPE_COUNT = 13,
-};
+    class RsDepthStencilStateDesc_t;
+    class SheetSequenceIntegerId_t;
+    class RsBlendStateDesc_t;
+    class VsInputSignatureElement_t;
+    class RsRasterizerStateDesc_t;
+    class RsStencilStateDesc_t;
+    class VsInputSignature_t;
+    class RenderInputLayoutField_t;
 
-enum class RenderBufferFlags_t : std::int32_t {
-    RENDER_BUFFER_USAGE_NONE = 0,
-    RENDER_BUFFER_USAGE_VERTEX_BUFFER = 1,
-    RENDER_BUFFER_USAGE_INDEX_BUFFER = 2,
-    RENDER_BUFFER_USAGE_SHADER_RESOURCE = 4,
-    RENDER_BUFFER_USAGE_UNORDERED_ACCESS = 8,
-    RENDER_BUFFER_BYTEADDRESS_BUFFER = 16,
-    RENDER_BUFFER_STRUCTURED_BUFFER = 32,
-    RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS = 256,
-    RENDER_BUFFER_ACCELERATION_STRUCTURE = 512,
-    RENDER_BUFFER_SHADER_BINDING_TABLE = 1024,
-    RENDER_BUFFER_POOL_ALLOCATED = 2048,
-    RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING = 4096,
-    RENDER_BUFFER_IMMOVABLE_ALLOCATION = 8192,
-    RENDER_BUFFER_DYNAMIC_ZERO_COPY = 16384,
-};
+    enum class RenderBufferFlags_t : std::uint32_t {
+        RENDER_BUFFER_USAGE_NONE = 0x0,
+        RENDER_BUFFER_USAGE_VERTEX_BUFFER = 0x1,
+        RENDER_BUFFER_USAGE_INDEX_BUFFER = 0x2,
+        RENDER_BUFFER_USAGE_SHADER_RESOURCE = 0x4,
+        RENDER_BUFFER_USAGE_UNORDERED_ACCESS = 0x8,
+        RENDER_BUFFER_BYTEADDRESS_BUFFER = 0x10,
+        RENDER_BUFFER_STRUCTURED_BUFFER = 0x20,
+        RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS = 0x100,
+        RENDER_BUFFER_ACCELERATION_STRUCTURE = 0x200,
+        RENDER_BUFFER_SHADER_BINDING_TABLE = 0x400,
+        RENDER_BUFFER_POOL_ALLOCATED = 0x800,
+        RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING = 0x1000,
+        RENDER_BUFFER_IMMOVABLE_ALLOCATION = 0x2000,
+        RENDER_BUFFER_DYNAMIC_ZERO_COPY = 0x4000,
+    };
 
-enum class RsCullMode_t : std::int32_t {
-    RS_CULL_NONE = 0,
-    RS_CULL_BACK = 1,
-    RS_CULL_FRONT = 2,
-};
+    enum class RsCullMode_t : std::uint8_t {
+        RS_CULL_NONE = 0x0,
+        RS_CULL_BACK = 0x1,
+        RS_CULL_FRONT = 0x2,
+    };
 
-enum class RsComparison_t : std::int32_t {
-    RS_CMP_NEVER = 0,
-    RS_CMP_LESS = 1,
-    RS_CMP_EQUAL = 2,
-    RS_CMP_LESS_EQUAL = 3,
-    RS_CMP_GREATER = 4,
-    RS_CMP_NOT_EQUAL = 5,
-    RS_CMP_GREATER_EQUAL = 6,
-    RS_CMP_ALWAYS = 7,
-    RS_CMP_FUNC_MASK = 7,
-    RS_CMP_CLOSER_FARTHER_FLAG = 8,
-    RS_CMP_CLOSER = 9,
-    RS_CMP_CLOSER_EQUAL = 11,
-    RS_CMP_FARTHER = 12,
-    RS_CMP_FARTHER_EQUAL = 14,
-};
+    enum class RsComparison_t : std::uint8_t {
+        RS_CMP_NEVER = 0x0,
+        RS_CMP_LESS = 0x1,
+        RS_CMP_EQUAL = 0x2,
+        RS_CMP_LESS_EQUAL = 0x3,
+        RS_CMP_GREATER = 0x4,
+        RS_CMP_NOT_EQUAL = 0x5,
+        RS_CMP_GREATER_EQUAL = 0x6,
+        RS_CMP_ALWAYS = 0x7,
+        RS_CMP_FUNC_MASK = 0x7,
+        RS_CMP_CLOSER_FARTHER_FLAG = 0x8,
+        RS_CMP_CLOSER = 0x9,
+        RS_CMP_CLOSER_EQUAL = 0xB,
+        RS_CMP_FARTHER = 0xC,
+        RS_CMP_FARTHER_EQUAL = 0xE,
+    };
 
-enum class RsFillMode_t : std::int32_t {
-    RS_FILL_SOLID = 0,
-    RS_FILL_WIREFRAME = 1,
-};
+    enum class RsFillMode_t : std::uint8_t {
+        RS_FILL_SOLID = 0x0,
+        RS_FILL_WIREFRAME = 0x1,
+    };
 
-enum class RenderMultisampleType_t : std::int32_t {
-    RENDER_MULTISAMPLE_INVALID = -1,
-    RENDER_MULTISAMPLE_NONE = 0,
-    RENDER_MULTISAMPLE_2X = 1,
-    RENDER_MULTISAMPLE_4X = 2,
-    RENDER_MULTISAMPLE_6X = 3,
-    RENDER_MULTISAMPLE_8X = 4,
-    RENDER_MULTISAMPLE_16X = 5,
-    RENDER_MULTISAMPLE_TYPE_COUNT = 6,
-};
+    enum class RenderMultisampleType_t : std::int8_t {
+        RENDER_MULTISAMPLE_INVALID = -1,
+        RENDER_MULTISAMPLE_NONE = 0x0,
+        RENDER_MULTISAMPLE_2X = 0x1,
+        RENDER_MULTISAMPLE_4X = 0x2,
+        RENDER_MULTISAMPLE_6X = 0x3,
+        RENDER_MULTISAMPLE_8X = 0x4,
+        RENDER_MULTISAMPLE_16X = 0x5,
+        RENDER_MULTISAMPLE_TYPE_COUNT = 0x6,
+    };
 
-enum class InputLayoutVariation_t : std::int32_t {
-    INPUT_LAYOUT_VARIATION_DEFAULT = 0,
-    INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID = 1,
-    INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID = 2,
-    INPUT_LAYOUT_VARIATION_MAX = 3,
-};
+    enum class InputLayoutVariation_t : std::uint8_t {
+        INPUT_LAYOUT_VARIATION_DEFAULT = 0x0,
+        INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID = 0x1,
+        INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID = 0x2,
+        INPUT_LAYOUT_VARIATION_MAX = 0x3,
+    };
 
-enum class UpscalerType_t : std::int32_t {
-    UPSCALER_NONE = 0,
-    UPSCALER_AMD_FSR2 = 1,
-    UPSCALER_AMD_FSR3 = 2,
-    UPSCALER_NVIDIA_DLSS = 3,
-    UPSCALER_INTEL_XESS = 4,
-    UPSCALER_COUNT = 5,
-};
+    enum class UpscalerType_t : std::uint32_t {
+        UPSCALER_NONE = 0x0,
+        UPSCALER_AMD_FSR2 = 0x1,
+        UPSCALER_AMD_FSR3 = 0x2,
+        UPSCALER_NVIDIA_DLSS = 0x3,
+        UPSCALER_INTEL_XESS = 0x4,
+        UPSCALER_COUNT = 0x5,
+    };
 
-enum class RenderSlotType_t : std::int32_t {
-    RENDER_SLOT_INVALID = -1,
-    RENDER_SLOT_PER_VERTEX = 0,
-    RENDER_SLOT_PER_INSTANCE = 1,
-};
+    enum class RenderSlotType_t : std::int8_t {
+        RENDER_SLOT_INVALID = -1,
+        RENDER_SLOT_PER_VERTEX = 0x0,
+        RENDER_SLOT_PER_INSTANCE = 0x1,
+    };
 
-struct RsDepthStencilStateDesc_t {
-    static constexpr std::size_t size = 0x8;
-    std::uint8_t _[0x2]; // 0x0 
-    std::uint8_t _[0x6]; // 0x2 
-};
+    // RsRasterizerStateDesc_t
+/*
+   fields: 7
+   size: 0x10
+*/
+    class RsRasterizerStateDesc_t {
+    public:
+        SCHEMA_FIELD(RsFillMode_t                    , m_nFillMode                                     , 0x0) // RsFillMode_t
+        SCHEMA_FIELD(RsCullMode_t                    , m_nCullMode                                     , 0x1) // RsCullMode_t
+        SCHEMA_FIELD(bool                            , m_bDepthClipEnable                              , 0x2) // bool
+        SCHEMA_FIELD(bool                            , m_bMultisampleEnable                            , 0x3) // bool
+        SCHEMA_FIELD(std::int32_t                    , m_nDepthBias                                    , 0x4) // int32
+        SCHEMA_FIELD(float                           , m_flDepthBiasClamp                              , 0x8) // float32
+        SCHEMA_FIELD(float                           , m_flSlopeScaledDepthBias                        , 0xC) // float32
+    };
 
-struct SheetSequenceIntegerId_t {
-    static constexpr std::size_t size = 0x4;
-    std::uint8_t _[0x4]; // 0x0 
-};
+    // RsStencilStateDesc_t
+/*
+   fields: 11
+   size: 0x6
+*/
+    class RsStencilStateDesc_t {
+    public:
+/*
+   SKIPPED: m_frontStencilFunc (bitfield type not supported)
+   SKIPPED: m_backStencilFunc (bitfield type not supported)
+   SKIPPED: m_bStencilEnable (bitfield type not supported)
+   SKIPPED: m_frontStencilFailOp (bitfield type not supported)
+   SKIPPED: m_frontStencilDepthFailOp (bitfield type not supported)
+   SKIPPED: m_frontStencilPassOp (bitfield type not supported)
+   SKIPPED: m_backStencilFailOp (bitfield type not supported)
+   SKIPPED: m_backStencilDepthFailOp (bitfield type not supported)
+   SKIPPED: m_backStencilPassOp (bitfield type not supported)
+*/
+        SCHEMA_FIELD(std::uint8_t                    , m_nStencilReadMask                              , 0x4) // uint8
+        SCHEMA_FIELD(std::uint8_t                    , m_nStencilWriteMask                             , 0x5) // uint8
+    };
 
-struct RsBlendStateDesc_t {
-    static constexpr std::size_t size = 0x20;
-    std::uint8_t _[0x4]; // 0x0 
-    std::uint8_t _[0x4]; // 0x4 
-    std::uint8_t _[0x4]; // 0x8 
-    std::uint8_t _[0x4]; // 0xc 
-    std::uint8_t _[0x8]; // 0x10 
-    std::uint8_t _[0x4]; // 0x18 
-    std::uint8_t _[0x1]; // 0x1c 
-    std::uint8_t _[0x3]; // 0x1d 
-};
+    // RenderInputLayoutField_t
+/*
+   fields: 6
+   size: 0x4C
+*/
+    class RenderInputLayoutField_t {
+    public:
+        SCHEMA_FIELD(char                            , m_pSemanticName                                 , 0x0) // char[32]
+        SCHEMA_FIELD(std::int8_t                     , m_nSemanticIndex                                , 0x20) // int8
+        SCHEMA_FIELD(std::int16_t                    , m_nOffset                                       , 0x28) // int16
+        SCHEMA_FIELD(std::int8_t                     , m_nSlot                                         , 0x2A) // int8
+        SCHEMA_FIELD(RenderSlotType_t                , m_nSlotType                                     , 0x2B) // RenderSlotType_t
+        SCHEMA_FIELD(char                            , m_szShaderSemantic                              , 0x2C) // char[32]
+    };
 
-struct VsInputSignatureElement_t {
-    static constexpr std::size_t size = 0xc4;
-    std::uint8_t _[0x40]; // 0x0 
-    std::uint8_t _[0x40]; // 0x40 
-    std::uint8_t _[0x40]; // 0x80 
-    std::uint8_t _[0x4]; // 0xc0 
-};
+    // VsInputSignatureElement_t
+/*
+   fields: 4
+   size: 0xC4
+*/
+    class VsInputSignatureElement_t {
+    public:
+        SCHEMA_FIELD(char                            , m_pName                                         , 0x0) // char[64]
+        SCHEMA_FIELD(char                            , m_pSemantic                                     , 0x40) // char[64]
+        SCHEMA_FIELD(char                            , m_pD3DSemanticName                              , 0x80) // char[64]
+        SCHEMA_FIELD(std::int32_t                    , m_nD3DSemanticIndex                             , 0xC0) // int32
+    };
 
-struct RsRasterizerStateDesc_t {
-    static constexpr std::size_t size = 0x10;
-    std::uint8_t _[0x1]; // 0x0 
-    std::uint8_t _[0x1]; // 0x1 
-    std::uint8_t _[0x1]; // 0x2 
-    std::uint8_t _[0x1]; // 0x3 
-    std::uint8_t _[0x4]; // 0x4 
-    std::uint8_t _[0x4]; // 0x8 
-    std::uint8_t _[0x4]; // 0xc 
-};
+    // RsDepthStencilStateDesc_t
+/*
+   fields: 4
+   size: 0x8
+*/
+    class RsDepthStencilStateDesc_t {
+    public:
+/*
+   SKIPPED: m_bDepthTestEnable (bitfield type not supported)
+   SKIPPED: m_bDepthWriteEnable (bitfield type not supported)
+   SKIPPED: m_depthFunc (bitfield type not supported)
+*/
+        SCHEMA_FIELD(RsStencilStateDesc_t            , m_stencilState                                  , 0x2) // RsStencilStateDesc_t
+    };
 
-struct RsStencilStateDesc_t {
-    static constexpr std::size_t size = 0x6;
-    std::uint8_t _[0x4]; // 0x0 
-    std::uint8_t _[0x1]; // 0x4 
-    std::uint8_t _[0x1]; // 0x5 
-};
+    // SheetSequenceIntegerId_t
+/*
+   fields: 1
+   size: 0x4
+*/
+    class SheetSequenceIntegerId_t {
+    public:
+        SCHEMA_FIELD(std::uint32_t                   , m_Value                                         , 0x0) // uint32
+    };
 
-struct VsInputSignature_t {
-    static constexpr std::size_t size = 0x30;
-    std::uint8_t _[0x18]; // 0x0 
-    std::uint8_t _[0x18]; // 0x18 
-};
+    // RsBlendStateDesc_t
+/*
+   fields: 11
+   size: 0x20
+*/
+    class RsBlendStateDesc_t {
+    public:
+        SCHEMA_FIELD(std::uint32_t                   , m_srcBlendBits                                  , 0x0) // uint32
+        SCHEMA_FIELD(std::uint32_t                   , m_destBlendBits                                 , 0x4) // uint32
+        SCHEMA_FIELD(std::uint32_t                   , m_srcBlendAlphaBits                             , 0x8) // uint32
+        SCHEMA_FIELD(std::uint32_t                   , m_destBlendAlphaBits                            , 0xC) // uint32
+        SCHEMA_FIELD(std::uint32_t                   , m_renderTargetWriteMaskBits                     , 0x10) // uint32
+/*
+   SKIPPED: m_blendOpBits (bitfield type not supported)
+   SKIPPED: m_bAlphaToCoverageEnable (bitfield type not supported)
+   SKIPPED: m_bIndependentBlendEnable (bitfield type not supported)
+*/
+        SCHEMA_FIELD(std::uint32_t                   , m_blendOpAlphaBits                              , 0x18) // uint32
+        SCHEMA_FIELD(std::uint8_t                    , m_blendEnableBits                               , 0x1C) // uint8
+        SCHEMA_FIELD(std::uint8_t                    , m_srgbWriteEnableBits                           , 0x1D) // uint8
+    };
 
-struct RenderInputLayoutField_t {
-    static constexpr std::size_t size = 0x4c;
-    std::uint8_t _[0x20]; // 0x0 
-    std::uint8_t _[0x8]; // 0x20 
-    std::uint8_t _[0x2]; // 0x28 
-    std::uint8_t _[0x1]; // 0x2a 
-    std::uint8_t _[0x1]; // 0x2b 
-    std::uint8_t _[0x20]; // 0x2c 
-};
+    // VsInputSignature_t
+/*
+   fields: 2
+   size: 0x30
+*/
+    class VsInputSignature_t {
+    public:
+        SCHEMA_FIELD(CUtlVector<VsInputSignatureElement_t>, m_elems                                         , 0x0) // CUtlVector<VsInputSignatureElement_t>
+        SCHEMA_FIELD(CUtlVector<VsInputSignatureElement_t>, m_depth_elems                                   , 0x18) // CUtlVector<VsInputSignatureElement_t>
+    };
 
-} // namespace
+} // namespace rendersystemdx11

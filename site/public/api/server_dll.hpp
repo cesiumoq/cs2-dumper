@@ -1,8 +1,8 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:59 04/11/2026 (GMT)
-/*  Dumped In       : 1,7s
+/*  Dumped At       : 12:53 05/11/2026 (GMT)
+/*  Dumped In       : 46,1s
 */
 
 /*                       cesium dumper
@@ -6478,8 +6478,8 @@ struct CPulseCell_Inflow_EventHandler {
 };
 
 struct CCSPointScriptEntity {
-    static constexpr std::size_t size = 0x668;
-    std::uint8_t pad_0[0x668]; // 0x0
+    static constexpr std::size_t size = 0x670;
+    std::uint8_t pad_0[0x670]; // 0x0
 };
 
 struct CPulseCell_BaseFlow {
@@ -7203,8 +7203,8 @@ struct CChicken {
     std::uint8_t _[0xc]; // 0x3298 
     std::uint8_t _[0x4]; // 0x32a4 
     std::uint8_t _[0x20]; // 0x32a8 
-    std::uint8_t _[0x1a]; // 0x32c8 
-    std::uint8_t _[0xe]; // 0x32e2 
+    std::uint8_t _[0x1b]; // 0x32c8 
+    std::uint8_t _[0xd]; // 0x32e3 
 };
 
 struct CPhysicsPropRespawnable {

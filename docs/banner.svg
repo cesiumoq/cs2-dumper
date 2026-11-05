@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="CS2 Dump build 14195">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="CS2 Dump build 14196">
   <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b0b0d"/><stop offset="1" stop-color="#151518"/></linearGradient></defs>
   <rect width="1200" height="300" rx="18" fill="url(#bg)"/>
   <text x="60" y="84" fill="#fafafa" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="0.5">CS2 Dump</text>
-  <text x="62" y="112" fill="#a1a1aa" font-family="Consolas, monospace" font-size="13" letter-spacing="2">BUILD 14195</text>
+  <text x="62" y="112" fill="#a1a1aa" font-family="Consolas, monospace" font-size="13" letter-spacing="2">BUILD 14196</text>
   <g font-family="Consolas, monospace" fill="#a1a1aa" font-size="14">
-    <text x="62" y="174"><tspan fill="#fafafa" font-size="22" font-weight="700">577</tspan>  signatures</text>
+    <text x="62" y="174"><tspan fill="#fafafa" font-size="22" font-weight="700">571</tspan>  signatures</text>
     <text x="322" y="174"><tspan fill="#fafafa" font-size="22" font-weight="700">202</tspan>  offsets</text>
     <text x="582" y="174"><tspan fill="#fafafa" font-size="22" font-weight="700">1</tspan>  interfaces</text>
     <text x="842" y="174"><tspan fill="#fafafa" font-size="22" font-weight="700">3300</tspan>  classes</text>
@@ -13,5 +13,5 @@
     <text x="582" y="220"><tspan fill="#fafafa" font-size="22" font-weight="700">167</tspan>  entities</text>
     <text x="842" y="220"><tspan fill="#fafafa" font-size="22" font-weight="700">44</tspan>  weapons</text>
   </g>
-  <text x="62" y="268" fill="#71717a" font-family="Consolas, monospace" font-size="12">cs2-dump.vercel.app  /  updated 04/11/2026 22:59 UTC</text>
+  <text x="62" y="268" fill="#71717a" font-family="Consolas, monospace" font-size="12">cs2-dump.vercel.app  /  updated 05/11/2026 12:53 UTC</text>
 </svg>

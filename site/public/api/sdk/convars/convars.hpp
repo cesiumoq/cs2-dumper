@@ -1,3 +1,6 @@
+// convars.hpp — CS2 ConVar / ConCommand catalogue (auto-generated)
+// build: 14196
+// 4131 convars, 1186 commands. Read-only snapshot of the tier0 CCvar registry.
 #pragma once
 
 // === ConVars ===
@@ -876,7 +879,7 @@ If 'match', the server will maintain a 1:N ratio of humans to bots, where N is b
 // cs_ShowStateTransitions                                   int32    -2                    FCVAR_GAMEDLL|FCVAR_CHEAT  // cs_ShowStateTransitions <ent index or -1 for all>. Show player state transitions.
 // cs_hostage_near_rescue_music_distance                     float32  2000                  FCVAR_GAMEDLL|FCVAR_CHEAT
 // cs_logtouchexpansion                                      int32    -2                    FCVAR_GAMEDLL|FCVAR_CHEAT  // cs_logtouchexpansion <ent index or -1 for all>. Log player touch expansion component.
-// cs_minimap_create_output_size                             int32    720                   FCVAR_CLIENTDLL|FCVAR_RELEASE  // Size of minimap texture generated with cs_minimap_create (512 default)
+// cs_minimap_create_output_size                             int32    1024                  FCVAR_CLIENTDLL|FCVAR_RELEASE  // Size of minimap texture generated with cs_minimap_create (512 default)
 // cs_minimap_renderdoc_capture_enabled                      bool     false                 FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL|FCVAR_CHEAT
 // cs_minimap_rendering_msaa_mode                            int32    2                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL|FCVAR_CHEAT  // MSAA mode used for minimap rendering 0-none, 1-2xMSAA, 2-4xMSAA, 3-6X, 4-8X, etc
 // cs_steamvideo_max_kills_per_multikill                     int32    5                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Max number of kills for a single multikill event
@@ -1125,7 +1128,7 @@ If 'match', the server will maintain a 1:N ratio of humans to bots, where N is b
 // fov_cs_super_ultrawide_near_z                             float32  1                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL|FCVAR_CHEAT
 // fov_cs_ultrawide_near_z                                   float32  4                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL|FCVAR_CHEAT
 // fov_desired                                               float32  75                    FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_USERINFO  // Sets the base field-of-view.
-// fps_max                                                   float32  0                     FCVAR_ARCHIVE|FCVAR_RELEASE  // Frame rate limiter.  0=no limit.  Does not apply to dedicated server.
+// fps_max                                                   float32  64                    FCVAR_ARCHIVE|FCVAR_RELEASE  // Frame rate limiter.  0=no limit.  Does not apply to dedicated server.
 // fps_max_tools                                             float32  120                   FCVAR_ARCHIVE  // Additional frame rate limit while in tools mode and a window other than the game window has focus. Note that fps_max still applies, this only allows the maximum frame rate for tools mode to be lower. 0=no tools specific limit.
 // fps_max_ui                                                float32  200                   FCVAR_ARCHIVE  // Frame rate limiter while the game UI is displayed.  0=no limit.  Does not apply to dedicated server.
 // frag_grenade_blip_frequency                               float32  1                     FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED
@@ -2307,7 +2310,7 @@ If the server is behind NAT, y
 // player_nevershow_communityservermessage                   string   0                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_PER_USER
 // player_ping_token_cooldown                                float32  20                    FCVAR_GAMEDLL|FCVAR_CHEAT|FCVAR_RELEASE  // Cooldown for how long it takes for a player's ping token to refresh allowing them to ping again (they get 5 tokens).
 // player_survival_list_10_0_303                             string   mg_dz_blacksite,mg_…  FCVAR_CLIENTDLL|FCVAR_ARCHIVE
-// player_teamplayedlast                                     int32    3                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_PER_USER
+// player_teamplayedlast                                     int32    2                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_PER_USER
 // player_use_radius                                         float32  80                    FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED|FCVAR_CHEAT
 // player_wargames_list2_10_0_0                              string                         FCVAR_CLIENTDLL|FCVAR_ARCHIVE
 // population_distribution_debug                             float32  0                     FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_REPLICATED
@@ -3405,8 +3408,8 @@ If the server is behind NAT, y
 // stats_highlight_interval                                  float32  10                    FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Interval between hightlight screens in the transition stats panel
 // steam_controller_haptics                                  bool     true                  FCVAR_CLIENTDLL|FCVAR_RELEASE
 // steamaudio_customdata_dimensions_numrays                  int32    32768                 FCVAR_DEVELOPMENTONLY  // Number of rays to trace for estimating inside outside status of a probe.
-// steamworks_sessionid_client                               string   8950924850839         FCVAR_CLIENTDLL|FCVAR_USERINFO  // The client session ID for the new steamworks gamestats.
-// steamworks_sessionid_server                               string   8950924856670         FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED  // The server session ID for the new steamworks gamestats.
+// steamworks_sessionid_client                               string   8951015595329         FCVAR_CLIENTDLL|FCVAR_USERINFO  // The client session ID for the new steamworks gamestats.
+// steamworks_sessionid_server                               string   8951015589847         FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED  // The server session ID for the new steamworks gamestats.
 // sticky_tooltips                                           bool     false                 FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Don't ever hide tooltips. Helpful when debugging complicated tooltip layouts.
 // surf_speed_slow                                           float32  50                    FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED|FCVAR_RELEASE  // Speed above which surf sounds are played.
 // suspicious_hit_odds_threshold                             float32  0.01                  FCVAR_GAMEDLL|FCVAR_RELEASE
@@ -3983,8 +3986,8 @@ If the server is behind NAT, y
 // ui_news_last_read_link2                                   string                         FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_notification_tb_snooze                                 string                         FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_party_msg_sound_enabled                                bool     true                  FCVAR_CLIENTDLL|FCVAR_RELEASE  // When enabled, lobby messages will play a short sound
-// ui_playsettings_custom_preset                             string   mg_rush_001           FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
-// ui_playsettings_directchallengekey                        string                         FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
+// ui_playsettings_custom_preset                             string   mg_casualalpha        FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
+// ui_playsettings_directchallengekey                        string   AXZTR-NYDJ-SM58L-NX…  FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_flags_listen_casual                       string   0                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_flags_listen_competitive                  string   16                    FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_flags_listen_cooperative                  string   0                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
@@ -4016,12 +4019,12 @@ If the server is behind NAT, y
 // ui_playsettings_maps_listen_scrimcomp2v2                  string   mg_de_inferno         FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_maps_official_casual                      string   mg_casualalpha        FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_maps_official_deathmatch                  string   mg_casualalpha        FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
-// ui_playsettings_maps_official_gungameprogressive          string   mg_armsrace           FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
+// ui_playsettings_maps_official_gungameprogressive          string   mg_skirmish_armsrace  FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_maps_official_retakes                     string   mg_casualalpha        FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_maps_official_rush                        string   mg_rush_001           FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_maps_workshop                             string   @workshop/307024446…  FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_mode_listen                               string   deathmatch            FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
-// ui_playsettings_mode_official_v20                         string   rush                  FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
+// ui_playsettings_mode_official_v20                         string   retakes               FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_survival_solo                             string   0                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_warmup_map_name                           string   de_mirage             FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_popup_weaponupdate_version                             string   0                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE

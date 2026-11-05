@@ -1,11 +1,19 @@
-/* cesium dumper | generated from live schema */
-#![allow(non_snake_case, non_camel_case_types, dead_code)]
+// Generated using https://github.com/a2x/cs2-dumper
+// 2026-11-03 12:42:01.636437600 UTC
 
-pub mod networksystem_dll {
+#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
-    #[repr(C)]
-    pub struct ChangeAccessorFieldPathIndex_t {
-        pub _: [u8; 0x4], // 0x0
+pub mod cs2_dumper {
+    pub mod schemas {
+        // Module: networksystem.dll
+        // Class count: 1
+        // Enum count: 0
+        pub mod networksystem_dll {
+            // Parent: None
+            // Field count: 1
+            pub mod ChangeAccessorFieldPathIndex_t {
+                pub const m_Value: usize = 0x0; // int32
+            }
+        }
     }
-
 }

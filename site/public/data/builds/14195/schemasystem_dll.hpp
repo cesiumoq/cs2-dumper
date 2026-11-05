@@ -1,173 +1,124 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 22:59 04/11/2026 (GMT)
+/*  Dumped At       : 22:10 04/11/2026 (GMT)
 /*  Dumped In       : 1,7s
 */
 
-/*                       cesium dumper
-/*                  https://cs2-dump.vercel.app
-/*  Generated from the live CS2 schema system.
-*/
-
 #pragma once
-#include <cstddef>
-#include <cstdint>
+#include "../macros.hpp"
 
-namespace cs2::schemasystem_dll {
+namespace schemasystem {
 
-enum class fieldtype_t : std::int32_t {
-    FIELD_VOID = 0,
-    FIELD_FLOAT32 = 1,
-    FIELD_STRING = 2,
-    FIELD_VECTOR = 3,
-    FIELD_QUATERNION = 4,
-    FIELD_INT32 = 5,
-    FIELD_BOOLEAN = 6,
-    FIELD_INT16 = 7,
-    FIELD_CHARACTER = 8,
-    FIELD_COLOR32 = 9,
-    FIELD_EMBEDDED = 10,
-    FIELD_CUSTOM = 11,
-    FIELD_CLASSPTR = 12,
-    FIELD_EHANDLE = 13,
-    FIELD_POSITION_VECTOR = 14,
-    FIELD_TIME = 15,
-    FIELD_TICK = 16,
-    FIELD_SOUNDNAME = 17,
-    FIELD_INPUT = 18,
-    FIELD_FUNCTION = 19,
-    FIELD_VMATRIX = 20,
-    FIELD_VMATRIX_WORLDSPACE = 21,
-    FIELD_MATRIX3X4_WORLDSPACE = 22,
-    FIELD_INTERVAL = 23,
-    FIELD_UNUSED = 24,
-    FIELD_VECTOR2D = 25,
-    FIELD_INT64 = 26,
-    FIELD_VECTOR4D = 27,
-    FIELD_RESOURCE = 28,
-    FIELD_TYPEUNKNOWN = 29,
-    FIELD_CSTRING = 30,
-    FIELD_HSCRIPT = 31,
-    FIELD_VARIANT = 32,
-    FIELD_UINT64 = 33,
-    FIELD_FLOAT64 = 34,
-    FIELD_POSITIVEINTEGER_OR_NULL = 35,
-    FIELD_HSCRIPT_NEW_INSTANCE = 36,
-    FIELD_UINT32 = 37,
-    FIELD_UTLSTRINGTOKEN = 38,
-    FIELD_QANGLE = 39,
-    FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTOR = 40,
-    FIELD_HMATERIAL = 41,
-    FIELD_HMODEL = 42,
-    FIELD_NETWORK_QUANTIZED_VECTOR = 43,
-    FIELD_NETWORK_QUANTIZED_FLOAT = 44,
-    FIELD_DIRECTION_VECTOR_WORLDSPACE = 45,
-    FIELD_QANGLE_WORLDSPACE = 46,
-    FIELD_QUATERNION_WORLDSPACE = 47,
-    FIELD_HSCRIPT_LIGHTBINDING = 48,
-    FIELD_V8_VALUE = 49,
-    FIELD_V8_OBJECT = 50,
-    FIELD_V8_ARRAY = 51,
-    FIELD_V8_CALLBACK_INFO = 52,
-    FIELD_UTLSTRING = 53,
-    FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_POSITION_VECTOR = 54,
-    FIELD_HRENDERTEXTURE = 55,
-    FIELD_HPARTICLESYSTEMDEFINITION = 56,
-    FIELD_UINT8 = 57,
-    FIELD_UINT16 = 58,
-    FIELD_CTRANSFORM = 59,
-    FIELD_CTRANSFORM_WORLDSPACE = 60,
-    FIELD_HPOSTPROCESSING = 61,
-    FIELD_MATRIX3X4 = 62,
-    FIELD_SHIM = 63,
-    FIELD_CMOTIONTRANSFORM = 64,
-    FIELD_CMOTIONTRANSFORM_WORLDSPACE = 65,
-    FIELD_ATTACHMENT_HANDLE = 66,
-    FIELD_AMMO_INDEX = 67,
-    FIELD_CONDITION_ID = 68,
-    DEPRECATED_FIELD_AI_SCHEDULE_BITS = 69,
-    FIELD_MODIFIER_HANDLE = 70,
-    FIELD_ROTATION_VECTOR = 71,
-    FIELD_ROTATION_VECTOR_WORLDSPACE = 72,
-    FIELD_HVDATA = 73,
-    FIELD_SCALE32 = 74,
-    FIELD_STRING_AND_TOKEN = 75,
-    FIELD_ENGINE_TIME = 76,
-    FIELD_ENGINE_TICK = 77,
-    FIELD_WORLD_GROUP_ID = 78,
-    FIELD_GLOBALSYMBOL = 79,
-    FIELD_HNMGRAPHDEFINITION = 80,
-    FIELD_NETWORK_QUANTIZED_VECTORWS = 81,
-    FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTORWS = 82,
-    FIELD_TYPECOUNT = 83,
-};
+    class InfoForResourceTypeCResourceManifestInternal;
+    class CSchemaSystemInternalRegistration;
+    class CExampleSchemaVData_PolymorphicDerivedA;
+    class CExampleSchemaVData_PolymorphicBase;
+    class CExampleSchemaVData_PolymorphicDerivedB;
+    class ResourceId_t;
+    class CExampleSchemaVData_Monomorphic;
 
-enum class ThreeState_t : std::int32_t {
-    TRS_FALSE = 0,
-    TRS_TRUE = 1,
-    TRS_NONE = 2,
-};
+    enum class ThreeState_t : std::uint32_t {
+        TRS_FALSE = 0x0,
+        TRS_TRUE = 0x1,
+        TRS_NONE = 0x2,
+    };
 
-struct InfoForResourceTypeCResourceManifestInternal {
-    static constexpr std::size_t size = 0x1;
-    std::uint8_t pad_0[0x1]; // 0x0
-};
+    // CExampleSchemaVData_PolymorphicDerivedB
+/*
+   fields: 1
+   size: 0x18
+*/
+    //   @MGetKV3ClassDefaults
+    class CExampleSchemaVData_PolymorphicDerivedB {
+    public:
+        SCHEMA_FIELD(std::int32_t                    , m_nDerivedB                                     , 0x10) // int32
+    };
 
-struct CSchemaSystemInternalRegistration {
-    static constexpr std::size_t size = 0x180;
-    std::uint8_t _[0x8]; // 0x0 
-    std::uint8_t _[0xc]; // 0x8 
-    std::uint8_t _[0xc]; // 0x14 
-    std::uint8_t _[0x10]; // 0x20 
-    std::uint8_t _[0x10]; // 0x30 
-    std::uint8_t _[0xc]; // 0x40 
-    std::uint8_t _[0xc]; // 0x4c 
-    std::uint8_t _[0xc]; // 0x58 
-    std::uint8_t _[0xc]; // 0x64 
-    std::uint8_t _[0x10]; // 0x70 
-    std::uint8_t _[0x30]; // 0x80 
-    std::uint8_t _[0x30]; // 0xb0 
-    std::uint8_t _[0x4]; // 0xe0 
-    std::uint8_t _[0x1c]; // 0xe4 
-    std::uint8_t _[0x20]; // 0x100 
-    std::uint8_t _[0x8]; // 0x120 
-    std::uint8_t _[0x10]; // 0x128 
-    std::uint8_t _[0x8]; // 0x138 
-    std::uint8_t _[0x4]; // 0x140 
-    std::uint8_t _[0x4]; // 0x144 
-    std::uint8_t _[0x18]; // 0x148 
-    std::uint8_t _[0x8]; // 0x160 
-    std::uint8_t _[0x18]; // 0x168 
-};
+    // ResourceId_t
+/*
+   fields: 1
+   size: 0x8
+*/
+    class ResourceId_t {
+    public:
+        SCHEMA_FIELD(std::uint64_t                   , m_Value                                         , 0x0) // uint64
+    };
 
-struct CExampleSchemaVData_PolymorphicDerivedA {
-    static constexpr std::size_t size = 0x18;
-    std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t _[0x8]; // 0x10 
-};
+    // CSchemaSystemInternalRegistration
+/*
+   fields: 23
+   size: 0x180
+*/
+    class CSchemaSystemInternalRegistration {
+    public:
+        SCHEMA_FIELD(::Vector2D                      , m_Vector2D                                      , 0x0) // Vector2D
+        SCHEMA_FIELD(::Vector                        , m_Vector                                        , 0x8) // Vector
+        SCHEMA_FIELD(VectorWS                        , m_VectorWS                                      , 0x14) // VectorWS
+        SCHEMA_FIELD(VectorAligned                   , m_VectorAligned                                 , 0x20) // VectorAligned
+        SCHEMA_FIELD(::Quaternion                    , m_Quaternion                                    , 0x30) // Quaternion
+        SCHEMA_FIELD(::QAngle                        , m_QAngle                                        , 0x40) // QAngle
+        SCHEMA_FIELD(RotationVector                  , m_RotationVector                                , 0x4C) // RotationVector
+        SCHEMA_FIELD(RadianEuler                     , m_RadianEuler                                   , 0x58) // RadianEuler
+        SCHEMA_FIELD(DegreeEuler                     , m_DegreeEuler                                   , 0x64) // DegreeEuler
+        SCHEMA_FIELD(QuaternionStorage               , m_QuaternionStorage                             , 0x70) // QuaternionStorage
+        SCHEMA_FIELD(::matrix3x4_t                   , m_matrix3x4_t                                   , 0x80) // matrix3x4_t
+        SCHEMA_FIELD(matrix3x4a_t                    , m_matrix3x4a_t                                  , 0xB0) // matrix3x4a_t
+        SCHEMA_FIELD(::Color                         , m_Color                                         , 0xE0) // Color
+        SCHEMA_FIELD(::Vector4D                      , m_Vector4D                                      , 0xE4) // Vector4D
+        SCHEMA_FIELD(CTransform                      , m_CTransform                                    , 0x100) // CTransform
+        SCHEMA_FIELD(KeyValues*                      , m_pKeyValues                                    , 0x120) // KeyValues*
+        SCHEMA_FIELD(::CUtlBinaryBlock               , m_CUtlBinaryBlock                               , 0x128) // CUtlBinaryBlock
+        SCHEMA_FIELD(::CUtlString                    , m_CUtlString                                    , 0x138) // CUtlString
+        SCHEMA_FIELD(CUtlSymbol                      , m_CUtlSymbol                                    , 0x140) // CUtlSymbol
+        SCHEMA_FIELD(CUtlStringToken                 , m_stringToken                                   , 0x144) // CUtlStringToken
+        SCHEMA_FIELD(CUtlStringTokenWithStorage      , m_stringTokenWithStorage                        , 0x148) // CUtlStringTokenWithStorage
+        SCHEMA_FIELD(CResourceArray<CResourcePointer<CResourceString>>, m_ResourceTypes                                 , 0x160) // CResourceArray<CResourcePointer<CResourceString>>
+        SCHEMA_FIELD(KeyValues3                      , m_KV3                                           , 0x168) // KeyValues3
+    };
 
-struct CExampleSchemaVData_PolymorphicBase {
-    static constexpr std::size_t size = 0x10;
-    std::uint8_t pad_0[0x8]; // 0x0
-    std::uint8_t _[0x8]; // 0x8 
-};
+    // CExampleSchemaVData_PolymorphicDerivedA
+/*
+   fields: 1
+   size: 0x18
+*/
+    //   @MGetKV3ClassDefaults
+    class CExampleSchemaVData_PolymorphicDerivedA {
+    public:
+        SCHEMA_FIELD(std::int32_t                    , m_nDerivedA                                     , 0x10) // int32
+    };
 
-struct CExampleSchemaVData_PolymorphicDerivedB {
-    static constexpr std::size_t size = 0x18;
-    std::uint8_t pad_0[0x10]; // 0x0
-    std::uint8_t _[0x8]; // 0x10 
-};
+    // InfoForResourceTypeCResourceManifestInternal
+/*
+   fields: 0
+   size: 0x1
+*/
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCResourceManifestInternal {
+    public:
+    };
 
-struct ResourceId_t {
-    static constexpr std::size_t size = 0x8;
-    std::uint8_t _[0x8]; // 0x0 
-};
+    // CExampleSchemaVData_PolymorphicBase
+/*
+   fields: 1
+   size: 0x10
+*/
+    //   @MGetKV3ClassDefaults
+    class CExampleSchemaVData_PolymorphicBase {
+    public:
+        SCHEMA_FIELD(std::int32_t                    , m_nBase                                         , 0x8) // int32
+    };
 
-struct CExampleSchemaVData_Monomorphic {
-    static constexpr std::size_t size = 0x8;
-    std::uint8_t _[0x4]; // 0x0 
-    std::uint8_t _[0x4]; // 0x4 
-};
+    // CExampleSchemaVData_Monomorphic
+/*
+   fields: 2
+   size: 0x8
+*/
+    //   @MGetKV3ClassDefaults
+    class CExampleSchemaVData_Monomorphic {
+    public:
+        SCHEMA_FIELD(std::int32_t                    , m_nExample1                                     , 0x0) // int32
+        SCHEMA_FIELD(std::int32_t                    , m_nExample2                                     , 0x4) // int32
+    };
 
-} // namespace
+} // namespace schemasystem

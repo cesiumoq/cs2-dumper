@@ -1,376 +1,378 @@
-/* cesium dumper | generated from live schema */
-#![allow(non_snake_case, non_camel_case_types, dead_code)]
+// Generated using https://github.com/a2x/cs2-dumper
+// 2026-11-03 12:42:01.636437600 UTC
 
-pub mod engine2_dll {
+#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
-    #[repr(C)]
-    pub struct CEntityInstance {
-        pub pad_0: [u8; 0x8], // 0x0
-        pub _: [u8; 0x8], // 0x8
-        pub _: [u8; 0x18], // 0x10
-        pub _: [u8; 0x8], // 0x28
+pub mod cs2_dumper {
+    pub mod schemas {
+        // Module: engine2.dll
+        // Class count: 57
+        // Enum count: 2
+        pub mod engine2_dll {
+            // Alignment: 4
+            // Member count: 3
+            #[repr(u32)]
+            pub enum EntityDormancyType_t {
+                ENTITY_NOT_DORMANT = 0x0,
+                ENTITY_DORMANT = 0x1,
+                ENTITY_SUSPENDED = 0x2
+            }
+            // Alignment: 4
+            // Member count: 4
+            #[repr(u32)]
+            pub enum EntityIOTargetType_t {
+                ENTITY_IO_TARGET_INVALID = u32::MAX,
+                ENTITY_IO_TARGET_ENTITYNAME = 0x2,
+                ENTITY_IO_TARGET_EHANDLE = 0x6,
+                ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME = 0x7
+            }
+            // Parent: None
+            // Field count: 3
+            pub mod CEntityInstance {
+                pub const m_iszPrivateVScripts: usize = 0x8; // CUtlSymbolLarge
+                pub const m_pEntity: usize = 0x10; // CEntityIdentity*
+                pub const m_CScriptComponent: usize = 0x28; // CScriptComponent*
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod CEntityComponent {
+            }
+            // Parent: None
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CScriptComponent {
+                pub const m_scriptClassName: usize = 0x30; // CUtlSymbolLarge
+            }
+            // Parent: None
+            // Field count: 12
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CEntityIdentity {
+                pub const m_nameStringTableIndex: usize = 0x14; // int32
+                pub const m_name: usize = 0x18; // CUtlSymbolLarge
+                pub const m_designerName: usize = 0x20; // CUtlSymbolLarge
+                pub const m_flags: usize = 0x30; // uint32
+                pub const m_worldGroupId: usize = 0x38; // WorldGroupId_t
+                pub const m_fDataObjectTypes: usize = 0x3C; // uint32
+                pub const m_PathIndex: usize = 0x40; // ChangeAccessorFieldPathIndex_t
+                pub const m_pAttributes: usize = 0x48; // CEntityAttributeTable*
+                pub const m_pPrev: usize = 0x50; // CEntityIdentity*
+                pub const m_pNext: usize = 0x58; // CEntityIdentity*
+                pub const m_pPrevByClass: usize = 0x60; // CEntityIdentity*
+                pub const m_pNextByClass: usize = 0x68; // CEntityIdentity*
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventClientPostSimulate_t {
+            }
+            // Parent: None
+            // Field count: 3
+            pub mod EventSimpleLoopFrameUpdate_t {
+                pub const m_LoopState: usize = 0x0; // EngineLoopState_t
+                pub const m_flRealTime: usize = 0x28; // float32
+                pub const m_flFrameTime: usize = 0x2C; // float32
+            }
+            // Parent: None
+            // Field count: 4
+            pub mod EventPostAdvanceTick_t {
+                pub const m_nCurrentTick: usize = 0x30; // int32
+                pub const m_nCurrentTickThisFrame: usize = 0x34; // int32
+                pub const m_nTotalTicksThisFrame: usize = 0x38; // int32
+                pub const m_nTotalTicks: usize = 0x3C; // int32
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod CEntityIOOutput {
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod EventClientSceneSystemThreadStateChange_t {
+                pub const m_bThreadsActive: usize = 0x0; // bool
+            }
+            // Parent: None
+            // Field count: 5
+            pub mod EventClientOutput_t {
+                pub const m_LoopState: usize = 0x0; // EngineLoopState_t
+                pub const m_flRenderTime: usize = 0x28; // float32
+                pub const m_flRealTime: usize = 0x2C; // float32
+                pub const m_flRenderFrameTimeUnbounded: usize = 0x30; // float32
+                pub const m_bRenderOnly: usize = 0x34; // bool
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod EventServerPostSimulate_t {
+                pub const m_bLastTickBeforeClientUpdate: usize = 0x30; // bool
+            }
+            // Parent: None
+            // Field count: 4
+            pub mod CEntityComponentHelper {
+                pub const m_flags: usize = 0x8; // uint32
+                pub const m_pInfo: usize = 0x10; // EntComponentInfo_t*
+                pub const m_nPriority: usize = 0x18; // int32
+                pub const m_pNext: usize = 0x20; // CEntityComponentHelper*
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod GameTime_t {
+                pub const m_Value: usize = 0x0; // float32
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventServerBeginSimulate_t {
+            }
+            // Parent: None
+            // Field count: 10
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod EntityIOQueuePrioritizedEvent_t {
+                pub const m_flFireTime: usize = 0x4; // GameTime_t
+                pub const m_targetType: usize = 0x8; // EntityIOTargetType_t
+                pub const m_pTarget: usize = 0x10; // CUtlSymbolLarge
+                pub const m_pTargetInput: usize = 0x18; // CUtlSymbolLarge
+                pub const m_hActivator: usize = 0x20; // CEntityHandle
+                pub const m_hCaller: usize = 0x24; // CEntityHandle
+                pub const m_hEntTarget: usize = 0x28; // CEntityHandle
+                pub const m_variantValue: usize = 0x30; // CVariantBase<CVariantDefaultAllocator>
+                pub const m_PulseArguments: usize = 0x40; // CPulseArgumentPack
+                pub const m_paramMap: usize = 0xD0; // CPulseInputParamMap
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventServerEndAsyncPostTickWork_t {
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventClientAdvanceTick_t {
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod CNetworkVarChainer {
+                pub const m_PathIndex: usize = 0x20; // ChangeAccessorFieldPathIndex_t
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventClientSimulate_t {
+            }
+            // Parent: None
+            // Field count: 5
+            pub mod EventClientPostOutput_t {
+                pub const m_LoopState: usize = 0x0; // EngineLoopState_t
+                pub const m_flRenderTime: usize = 0x28; // float64
+                pub const m_flRenderFrameTime: usize = 0x30; // float32
+                pub const m_flRenderFrameTimeUnbounded: usize = 0x34; // float32
+                pub const m_bRenderOnly: usize = 0x38; // bool
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod GameTick_t {
+                pub const m_Value: usize = 0x0; // int32
+            }
+            // Parent: None
+            // Field count: 2
+            pub mod EventClientPollInput_t {
+                pub const m_LoopState: usize = 0x0; // EngineLoopState_t
+                pub const m_flRealTime: usize = 0x28; // float32
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod EventPreDataUpdate_t {
+                pub const m_nCount: usize = 0x0; // int32
+            }
+            // Parent: None
+            // Field count: 3
+            pub mod EventClientProcessGameInput_t {
+                pub const m_LoopState: usize = 0x0; // EngineLoopState_t
+                pub const m_flRealTime: usize = 0x28; // float32
+                pub const m_flFrameTime: usize = 0x2C; // float32
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod EventFrameBoundary_t {
+                pub const m_flFrameTime: usize = 0x0; // float32
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod EventAppShutdown_t {
+                pub const m_nDummy0: usize = 0x0; // int32
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod EventServerPostAdvanceTick_t {
+                pub const m_bLastTickBeforeClientUpdate: usize = 0x40; // bool
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod EventProfileStorageAvailable_t {
+                pub const m_nSplitScreenSlot: usize = 0x0; // CSplitScreenSlot
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod EventPostDataUpdate_t {
+                pub const m_nCount: usize = 0x0; // int32
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventClientPreSimulate_t {
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventClientPauseSimulate_t {
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod EventClientProcessNetworking_t {
+                pub const m_nTickCount: usize = 0x0; // int32
+            }
+            // Parent: None
+            // Field count: 2
+            pub mod CEntityAttributeTable {
+                pub const m_Attributes: usize = 0x0; // CUtlOrderedMap<CUtlStringTokenNoRegistration,Attribute_t>
+                pub const m_Names: usize = 0x28; // CUtlOrderedMap<CUtlStringTokenNoRegistration,CUtlString>
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventClientPreOutputParallelWithServer_t {
+            }
+            // Parent: None
+            // Field count: 4
+            pub mod EventAdvanceTick_t {
+                pub const m_nCurrentTick: usize = 0x30; // int32
+                pub const m_nCurrentTickThisFrame: usize = 0x34; // int32
+                pub const m_nTotalTicksThisFrame: usize = 0x38; // int32
+                pub const m_nTotalTicks: usize = 0x3C; // int32
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventSplitScreenStateChanged_t {
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventClientPostAdvanceTick_t {
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventBugBug_t {
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod CVariantDefaultAllocator {
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod EventBugBugComplete_t {
+                pub const m_pPayload: usize = 0x0; // EventBugBug_t*
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventModInitialized_t {
+            }
+            // Parent: None
+            // Field count: 6
+            pub mod EventClientPreOutput_t {
+                pub const m_LoopState: usize = 0x0; // EngineLoopState_t
+                pub const m_flRenderTime: usize = 0x28; // float64
+                pub const m_flRenderFrameTime: usize = 0x30; // float64
+                pub const m_flRenderFrameTimeUnbounded: usize = 0x38; // float64
+                pub const m_flRealTime: usize = 0x40; // float32
+                pub const m_bRenderOnly: usize = 0x44; // bool
+            }
+            // Parent: None
+            // Field count: 4
+            pub mod EventClientFrameSimulate_t {
+                pub const m_LoopState: usize = 0x0; // EngineLoopState_t
+                pub const m_flRealTime: usize = 0x28; // float32
+                pub const m_flFrameTime: usize = 0x2C; // float32
+                pub const m_bScheduleSendTickPacket: usize = 0x30; // bool
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventServerAdvanceTick_t {
+            }
+            // Parent: None
+            // Field count: 8
+            pub mod EventSetTime_t {
+                pub const m_LoopState: usize = 0x0; // EngineLoopState_t
+                pub const m_nClientOutputFrames: usize = 0x28; // int32
+                pub const m_flRealTime: usize = 0x30; // float64
+                pub const m_flRenderTime: usize = 0x38; // float64
+                pub const m_flRenderFrameTime: usize = 0x40; // float64
+                pub const m_flRenderFrameTimeUnbounded: usize = 0x48; // float64
+                pub const m_flRenderFrameTimeUnscaled: usize = 0x50; // float64
+                pub const m_flTickRemainder: usize = 0x58; // float64
+            }
+            // Parent: None
+            // Field count: 3
+            pub mod EventSimulate_t {
+                pub const m_LoopState: usize = 0x0; // EngineLoopState_t
+                pub const m_bFirstTick: usize = 0x28; // bool
+                pub const m_bLastTick: usize = 0x29; // bool
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod CEntityKeyValues {
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventClientAdvanceNonRenderedFrame_t {
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventServerProcessNetworking_t {
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod CEmptyEntityInstance {
+            }
+            // Parent: None
+            // Field count: 7
+            pub mod EntComponentInfo_t {
+                pub const m_pName: usize = 0x0; // char*
+                pub const m_pCPPClassname: usize = 0x8; // char*
+                pub const m_pNetworkDataReferencedDescription: usize = 0x10; // char*
+                pub const m_pNetworkDataReferencedPtrPropDescription: usize = 0x18; // char*
+                pub const m_nRuntimeIndex: usize = 0x20; // int32
+                pub const m_nFlags: usize = 0x24; // uint32
+                pub const m_pBaseClassComponentHelper: usize = 0x58; // CEntityComponentHelper*
+            }
+            // Parent: None
+            // Field count: 4
+            pub mod EngineLoopState_t {
+                pub const m_nPlatWindowWidth: usize = 0x18; // int32
+                pub const m_nPlatWindowHeight: usize = 0x1C; // int32
+                pub const m_nRenderWidth: usize = 0x20; // int32
+                pub const m_nRenderHeight: usize = 0x24; // int32
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod EventClientPollNetworking_t {
+                pub const m_nTickCount: usize = 0x0; // int32
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod EventServerBeginAsyncPostTickWork_t {
+                pub const m_bIsOncePerFrameAsyncWorkPhase: usize = 0x0; // bool
+            }
+            // Parent: None
+            // Field count: 4
+            pub mod EventClientProcessInput_t {
+                pub const m_LoopState: usize = 0x0; // EngineLoopState_t
+                pub const m_flRealTime: usize = 0x28; // float32
+                pub const m_flTickInterval: usize = 0x2C; // float32
+                pub const m_flTickStartTime: usize = 0x30; // float64
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod EventServerEndSimulate_t {
+                pub const m_bLastTick: usize = 0x0; // bool
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventServerPollNetworking_t {
+            }
+        }
     }
-
-    #[repr(C)]
-    pub struct CEntityComponent {
-        pub pad_0: [u8; 0x8], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct CScriptComponent {
-        pub pad_0: [u8; 0x30], // 0x0
-        pub _: [u8; 0x8], // 0x30
-    }
-
-    #[repr(C)]
-    pub struct CEntityIdentity {
-        pub pad_0: [u8; 0x14], // 0x0
-        pub _: [u8; 0x4], // 0x14
-        pub _: [u8; 0x8], // 0x18
-        pub _: [u8; 0x10], // 0x20
-        pub _: [u8; 0x8], // 0x30
-        pub _: [u8; 0x4], // 0x38
-        pub _: [u8; 0x4], // 0x3c
-        pub _: [u8; 0x8], // 0x40
-        pub _: [u8; 0x8], // 0x48
-        pub _: [u8; 0x8], // 0x50
-        pub _: [u8; 0x8], // 0x58
-        pub _: [u8; 0x8], // 0x60
-        pub _: [u8; 0x8], // 0x68
-    }
-
-    #[repr(C)]
-    pub struct EventClientPostSimulate_t {
-        pub pad_0: [u8; 0x30], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventSimpleLoopFrameUpdate_t {
-        pub _: [u8; 0x28], // 0x0
-        pub _: [u8; 0x4], // 0x28
-        pub _: [u8; 0x4], // 0x2c
-    }
-
-    #[repr(C)]
-    pub struct EventPostAdvanceTick_t {
-        pub pad_0: [u8; 0x30], // 0x0
-        pub _: [u8; 0x4], // 0x30
-        pub _: [u8; 0x4], // 0x34
-        pub _: [u8; 0x4], // 0x38
-        pub _: [u8; 0x4], // 0x3c
-    }
-
-    #[repr(C)]
-    pub struct CEntityIOOutput {
-        pub pad_0: [u8; 0x18], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventClientSceneSystemThreadStateChange_t {
-        pub _: [u8; 0x1], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventClientOutput_t {
-        pub _: [u8; 0x28], // 0x0
-        pub _: [u8; 0x4], // 0x28
-        pub _: [u8; 0x4], // 0x2c
-        pub _: [u8; 0x4], // 0x30
-        pub _: [u8; 0x4], // 0x34
-    }
-
-    #[repr(C)]
-    pub struct EventServerPostSimulate_t {
-        pub pad_0: [u8; 0x30], // 0x0
-        pub _: [u8; 0x8], // 0x30
-    }
-
-    #[repr(C)]
-    pub struct CEntityComponentHelper {
-        pub pad_0: [u8; 0x8], // 0x0
-        pub _: [u8; 0x8], // 0x8
-        pub _: [u8; 0x8], // 0x10
-        pub _: [u8; 0x8], // 0x18
-        pub _: [u8; 0x8], // 0x20
-    }
-
-    #[repr(C)]
-    pub struct GameTime_t {
-        pub _: [u8; 0x4], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventServerBeginSimulate_t {
-        pub pad_0: [u8; 0x30], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EntityIOQueuePrioritizedEvent_t {
-        pub pad_0: [u8; 0x4], // 0x0
-        pub _: [u8; 0x4], // 0x4
-        pub _: [u8; 0x8], // 0x8
-        pub _: [u8; 0x8], // 0x10
-        pub _: [u8; 0x8], // 0x18
-        pub _: [u8; 0x4], // 0x20
-        pub _: [u8; 0x4], // 0x24
-        pub _: [u8; 0x8], // 0x28
-        pub _: [u8; 0x10], // 0x30
-        pub _: [u8; 0x90], // 0x40
-        pub _: [u8; 0x28], // 0xd0
-    }
-
-    #[repr(C)]
-    pub struct EventServerEndAsyncPostTickWork_t {
-        pub pad_0: [u8; 0x1], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventClientAdvanceTick_t {
-        pub pad_0: [u8; 0x40], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct CNetworkVarChainer {
-        pub pad_0: [u8; 0x20], // 0x0
-        pub _: [u8; 0x8], // 0x20
-    }
-
-    #[repr(C)]
-    pub struct EventClientSimulate_t {
-        pub pad_0: [u8; 0x30], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventClientPostOutput_t {
-        pub _: [u8; 0x28], // 0x0
-        pub _: [u8; 0x8], // 0x28
-        pub _: [u8; 0x4], // 0x30
-        pub _: [u8; 0x4], // 0x34
-        pub _: [u8; 0x8], // 0x38
-    }
-
-    #[repr(C)]
-    pub struct GameTick_t {
-        pub _: [u8; 0x4], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventClientPollInput_t {
-        pub _: [u8; 0x28], // 0x0
-        pub _: [u8; 0x8], // 0x28
-    }
-
-    #[repr(C)]
-    pub struct EventPreDataUpdate_t {
-        pub _: [u8; 0x10], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventClientProcessGameInput_t {
-        pub _: [u8; 0x28], // 0x0
-        pub _: [u8; 0x4], // 0x28
-        pub _: [u8; 0x4], // 0x2c
-    }
-
-    #[repr(C)]
-    pub struct EventFrameBoundary_t {
-        pub _: [u8; 0x4], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventAppShutdown_t {
-        pub _: [u8; 0x4], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventServerPostAdvanceTick_t {
-        pub pad_0: [u8; 0x40], // 0x0
-        pub _: [u8; 0x8], // 0x40
-    }
-
-    #[repr(C)]
-    pub struct EventProfileStorageAvailable_t {
-        pub _: [u8; 0x4], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventPostDataUpdate_t {
-        pub _: [u8; 0x10], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventClientPreSimulate_t {
-        pub pad_0: [u8; 0x30], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventClientPauseSimulate_t {
-        pub pad_0: [u8; 0x30], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventClientProcessNetworking_t {
-        pub _: [u8; 0x4], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct CEntityAttributeTable {
-        pub _: [u8; 0x28], // 0x0
-        pub _: [u8; 0x28], // 0x28
-    }
-
-    #[repr(C)]
-    pub struct EventClientPreOutputParallelWithServer_t {
-        pub pad_0: [u8; 0x48], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventAdvanceTick_t {
-        pub pad_0: [u8; 0x30], // 0x0
-        pub _: [u8; 0x4], // 0x30
-        pub _: [u8; 0x4], // 0x34
-        pub _: [u8; 0x4], // 0x38
-        pub _: [u8; 0x4], // 0x3c
-    }
-
-    #[repr(C)]
-    pub struct EventSplitScreenStateChanged_t {
-        pub pad_0: [u8; 0x1], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventClientPostAdvanceTick_t {
-        pub pad_0: [u8; 0x40], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventBugBug_t {
-        pub pad_0: [u8; 0x20], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct CVariantDefaultAllocator {
-        pub pad_0: [u8; 0x1], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventBugBugComplete_t {
-        pub _: [u8; 0x8], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventModInitialized_t {
-        pub pad_0: [u8; 0x1], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventClientPreOutput_t {
-        pub _: [u8; 0x28], // 0x0
-        pub _: [u8; 0x8], // 0x28
-        pub _: [u8; 0x8], // 0x30
-        pub _: [u8; 0x8], // 0x38
-        pub _: [u8; 0x4], // 0x40
-        pub _: [u8; 0x4], // 0x44
-    }
-
-    #[repr(C)]
-    pub struct EventClientFrameSimulate_t {
-        pub _: [u8; 0x28], // 0x0
-        pub _: [u8; 0x4], // 0x28
-        pub _: [u8; 0x4], // 0x2c
-        pub _: [u8; 0x8], // 0x30
-    }
-
-    #[repr(C)]
-    pub struct EventServerAdvanceTick_t {
-        pub pad_0: [u8; 0x40], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventSetTime_t {
-        pub _: [u8; 0x28], // 0x0
-        pub _: [u8; 0x8], // 0x28
-        pub _: [u8; 0x8], // 0x30
-        pub _: [u8; 0x8], // 0x38
-        pub _: [u8; 0x8], // 0x40
-        pub _: [u8; 0x8], // 0x48
-        pub _: [u8; 0x8], // 0x50
-        pub _: [u8; 0x8], // 0x58
-    }
-
-    #[repr(C)]
-    pub struct EventSimulate_t {
-        pub _: [u8; 0x28], // 0x0
-        pub _: [u8; 0x1], // 0x28
-        pub _: [u8; 0x7], // 0x29
-    }
-
-    #[repr(C)]
-    pub struct CEntityKeyValues {
-        pub pad_0: [u8; 0x38], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventClientAdvanceNonRenderedFrame_t {
-        pub pad_0: [u8; 0x1], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventServerProcessNetworking_t {
-        pub pad_0: [u8; 0x30], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct CEmptyEntityInstance {
-        pub pad_0: [u8; 0x1], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EntComponentInfo_t {
-        pub _: [u8; 0x8], // 0x0
-        pub _: [u8; 0x8], // 0x8
-        pub _: [u8; 0x8], // 0x10
-        pub _: [u8; 0x8], // 0x18
-        pub _: [u8; 0x4], // 0x20
-        pub _: [u8; 0x34], // 0x24
-        pub _: [u8; 0x8], // 0x58
-    }
-
-    #[repr(C)]
-    pub struct EngineLoopState_t {
-        pub pad_0: [u8; 0x18], // 0x0
-        pub _: [u8; 0x4], // 0x18
-        pub _: [u8; 0x4], // 0x1c
-        pub _: [u8; 0x4], // 0x20
-        pub _: [u8; 0x4], // 0x24
-    }
-
-    #[repr(C)]
-    pub struct EventClientPollNetworking_t {
-        pub _: [u8; 0x4], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventServerBeginAsyncPostTickWork_t {
-        pub _: [u8; 0x1], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventClientProcessInput_t {
-        pub _: [u8; 0x28], // 0x0
-        pub _: [u8; 0x4], // 0x28
-        pub _: [u8; 0x4], // 0x2c
-        pub _: [u8; 0x8], // 0x30
-    }
-
-    #[repr(C)]
-    pub struct EventServerEndSimulate_t {
-        pub _: [u8; 0x1], // 0x0
-    }
-
-    #[repr(C)]
-    pub struct EventServerPollNetworking_t {
-        pub pad_0: [u8; 0x30], // 0x0
-    }
-
 }

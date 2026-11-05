@@ -1,0 +1,4451 @@
+/* cesium dumper | generated from live schema */
+pub const particles_dll = struct {
+    pub const CPulseCell_WaitForCursorsWithTag = extern struct {
+        pad_0: [0x128]u8, // 0x0
+        _: [0x4]u8, // 0x128
+        _: [0x4]u8, // 0x12c
+    };
+    pub const CPulseCell_RaceCursors = extern struct {
+        pad_0: [0xd8]u8, // 0x0
+        _: [0x18]u8, // 0xd8
+        _: [0x48]u8, // 0xf0
+    };
+    pub const CPulseCell_Base = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        _: [0x40]u8, // 0x8
+    };
+    pub const CPulse_ResumePoint = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_PickBestOutflowSelector = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        _: [0x8]u8, // 0x48
+        _: [0x18]u8, // 0x50
+    };
+    pub const CParticleBindingRealPulse = extern struct {
+        pad_0: [0xa8]u8, // 0x0
+    };
+    pub const CPulseCell_WaitForObservable = extern struct {
+        pad_0: [0xd8]u8, // 0x0
+        _: [0x90]u8, // 0xd8
+        _: [0x48]u8, // 0x168
+    };
+    pub const CPulse_OutflowConnection = extern struct {
+        _: [0x10]u8, // 0x0
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0x30]u8, // 0x18
+    };
+    pub const CPulseGraphDef = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        _: [0x10]u8, // 0x8
+        _: [0x18]u8, // 0x18
+        _: [0x10]u8, // 0x30
+        _: [0x10]u8, // 0x40
+        _: [0x18]u8, // 0x50
+        _: [0x18]u8, // 0x68
+        _: [0x18]u8, // 0x80
+        _: [0x18]u8, // 0x98
+        _: [0x18]u8, // 0xb0
+        _: [0x18]u8, // 0xc8
+        _: [0x18]u8, // 0xe0
+        _: [0x18]u8, // 0xf8
+        _: [0x18]u8, // 0x110
+        _: [0x18]u8, // 0x128
+        _: [0x80]u8, // 0x140
+    };
+    pub const CPulseCell_FireCursors = extern struct {
+        pad_0: [0xd8]u8, // 0x0
+        _: [0x18]u8, // 0xd8
+        _: [0x8]u8, // 0xf0
+        _: [0x48]u8, // 0xf8
+    };
+    pub const CPulseCell_Timeline__TimelineEvent_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x48]u8, // 0x8
+    };
+    pub const CPulseCell_IntervalTimer__CursorState_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+    };
+    pub const CPulseCell_BaseRequirement = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_BaseState = extern struct {
+        pad_0: [0xd8]u8, // 0x0
+    };
+    pub const OutflowWithRequirements_t = extern struct {
+        _: [0x48]u8, // 0x0
+        _: [0x8]u8, // 0x48
+        _: [0x18]u8, // 0x50
+        _: [0x18]u8, // 0x68
+    };
+    pub const CPulseCell_IsRequirementValid = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_Value_Gradient = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        _: [0x18]u8, // 0x48
+    };
+    pub const PulseNodeDynamicOutflows_t__DynamicOutflow_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x48]u8, // 0x8
+    };
+    pub const CBasePulseGraphInstance = extern struct {
+        pad_0: [0x88]u8, // 0x0
+    };
+    pub const CPulseCell_Inflow_GraphHook = extern struct {
+        pad_0: [0x80]u8, // 0x0
+        _: [0x10]u8, // 0x80
+    };
+    pub const SignatureOutflow_Resume = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_Inflow_BaseEntrypoint = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        _: [0x8]u8, // 0x48
+        _: [0x30]u8, // 0x50
+    };
+    pub const CPulseCell_WaitForCursorsWithTagBase = extern struct {
+        pad_0: [0xd8]u8, // 0x0
+        _: [0x8]u8, // 0xd8
+        _: [0x48]u8, // 0xe0
+    };
+    pub const CPulse_InvokeBinding = extern struct {
+        _: [0x30]u8, // 0x0
+        _: [0x10]u8, // 0x30
+        _: [0x4]u8, // 0x40
+        _: [0x4]u8, // 0x44
+        _: [0x68]u8, // 0x48
+    };
+    pub const CPulseCell_IntervalTimer = extern struct {
+        pad_0: [0xd8]u8, // 0x0
+        _: [0x48]u8, // 0xd8
+        _: [0x48]u8, // 0x120
+    };
+    pub const CPulseCell_BaseLerp = extern struct {
+        pad_0: [0xd8]u8, // 0x0
+        _: [0x48]u8, // 0xd8
+    };
+    pub const CPulseCell_Value_Curve = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        _: [0x40]u8, // 0x48
+    };
+    pub const CPulseCell_Inflow_EventHandler = extern struct {
+        pad_0: [0x80]u8, // 0x0
+        _: [0x10]u8, // 0x80
+    };
+    pub const CPulseCell_BaseFlow = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_Outflow_CycleShuffled__InstanceState_t = extern struct {
+        _: [0x20]u8, // 0x0
+        _: [0x8]u8, // 0x20
+    };
+    pub const CPulseCell_BaseLerp__CursorState_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+    };
+    pub const SignatureOutflow_Continue = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_Timeline = extern struct {
+        pad_0: [0xd8]u8, // 0x0
+        _: [0x18]u8, // 0xd8
+        _: [0x8]u8, // 0xf0
+        _: [0x48]u8, // 0xf8
+    };
+    pub const CPulseCell_Inflow_EntOutputHandler = extern struct {
+        pad_0: [0x80]u8, // 0x0
+        _: [0x10]u8, // 0x80
+        _: [0x10]u8, // 0x90
+        _: [0x18]u8, // 0xa0
+    };
+    pub const CPulseCell_Outflow_CycleOrdered__InstanceState_t = extern struct {
+        _: [0x4]u8, // 0x0
+    };
+    pub const CParticleCollectionBindingInstance = extern struct {
+        pad_0: [0xa8]u8, // 0x0
+    };
+    pub const CPulseCell_LimitCount__InstanceState_t = extern struct {
+        _: [0x4]u8, // 0x0
+    };
+    pub const CPulseCell_Step_DebugLog = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_BaseYieldingInflow = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        _: [0x48]u8, // 0x48
+        _: [0x48]u8, // 0x90
+    };
+    pub const PulseNodeDynamicOutflows_t = extern struct {
+        _: [0x18]u8, // 0x0
+    };
+    pub const CPulseCell_IsRequirementValid__Criteria_t = extern struct {
+        _: [0x1]u8, // 0x0
+    };
+    pub const CPulseCell_Inflow_ObservableVariableListener = extern struct {
+        pad_0: [0x80]u8, // 0x0
+        _: [0x2]u8, // 0x80
+        _: [0x6]u8, // 0x82
+    };
+    pub const CPulseCell_Outflow_CycleOrdered = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        _: [0x18]u8, // 0x48
+    };
+    pub const PulseSelectorOutflowList_t = extern struct {
+        _: [0x18]u8, // 0x0
+    };
+    pub const CPulseCell_Inflow_Wait = extern struct {
+        pad_0: [0xd8]u8, // 0x0
+        _: [0x48]u8, // 0xd8
+    };
+    pub const CPulseCell_Outflow_CycleShuffled = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        _: [0x18]u8, // 0x48
+    };
+    pub const CPulseCell_Inflow_Method = extern struct {
+        pad_0: [0x80]u8, // 0x0
+        _: [0x10]u8, // 0x80
+        _: [0x8]u8, // 0x90
+        _: [0x8]u8, // 0x98
+        _: [0x10]u8, // 0xa0
+        _: [0x10]u8, // 0xb0
+    };
+    pub const CPulseCell_BaseValue = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_BooleanSwitchState = extern struct {
+        pad_0: [0xd8]u8, // 0x0
+        _: [0x90]u8, // 0xd8
+        _: [0x48]u8, // 0x168
+        _: [0x48]u8, // 0x1b0
+    };
+    pub const CPulseCell_Inflow_Yield = extern struct {
+        pad_0: [0xd8]u8, // 0x0
+        _: [0x48]u8, // 0xd8
+    };
+    pub const CPulseCell_Unknown = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        _: [0x10]u8, // 0x48
+    };
+    pub const CPulseCell_Outflow_CycleRandom = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        _: [0x18]u8, // 0x48
+    };
+    pub const CPulseCell_Step_PublicOutput = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        _: [0x8]u8, // 0x48
+    };
+    pub const CPulse_BlackboardReference = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x10]u8, // 0x8
+        _: [0x8]u8, // 0x18
+        _: [0x8]u8, // 0x20
+    };
+    pub const CPulseCell_ReturnValues = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseCell_Value_RandomInt = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulse_CallInfo = extern struct {
+        _: [0x10]u8, // 0x0
+        _: [0x8]u8, // 0x10
+        _: [0x30]u8, // 0x18
+        _: [0x4]u8, // 0x48
+        _: [0x4]u8, // 0x4c
+        _: [0x4]u8, // 0x50
+        _: [0x4]u8, // 0x54
+        _: [0x8]u8, // 0x58
+    };
+    pub const CPulseCell_InlineNodeSkipSelector = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        _: [0x4]u8, // 0x48
+        _: [0x4]u8, // 0x4c
+        _: [0x18]u8, // 0x50
+        _: [0x48]u8, // 0x68
+    };
+    pub const CPulseCell_LimitCount = extern struct {
+        pad_0: [0x48]u8, // 0x0
+        _: [0x8]u8, // 0x48
+    };
+    pub const CPulseCell_Step_CallExternalMethod = extern struct {
+        pad_0: [0xd8]u8, // 0x0
+        _: [0x10]u8, // 0xd8
+        _: [0x8]u8, // 0xe8
+        _: [0x10]u8, // 0xf0
+        _: [0x8]u8, // 0x100
+        _: [0x48]u8, // 0x108
+    };
+    pub const CPulseCell_LimitCount__Criteria_t = extern struct {
+        _: [0x1]u8, // 0x0
+    };
+    pub const CPulseCell_CursorQueue = extern struct {
+        pad_0: [0x128]u8, // 0x0
+        _: [0x8]u8, // 0x128
+    };
+    pub const CPulseCell_Value_RandomFloat = extern struct {
+        pad_0: [0x48]u8, // 0x0
+    };
+    pub const CPulseExecCursor = extern struct {
+        pad_0: [0xd8]u8, // 0x0
+    };
+    pub const IParticleCollection = extern struct {
+        pad_0: [0x10]u8, // 0x0
+    };
+    pub const C_OP_RemapGravityToVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e0
+        _: [0x4]u8, // 0x8b8
+        _: [0x4]u8, // 0x8bc
+        _: [0x70]u8, // 0x8c0
+    };
+    pub const C_OP_Decay = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x1]u8, // 0x1e0
+        _: [0x7]u8, // 0x1e1
+    };
+    pub const C_OP_RenderDeferredLight = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x4]u8, // 0x230
+        _: [0x4]u8, // 0x234
+        _: [0x8]u8, // 0x238
+        _: [0x6d8]u8, // 0x240
+        _: [0x4]u8, // 0x918
+        _: [0x1]u8, // 0x91c
+        _: [0x3]u8, // 0x91d
+        _: [0x8]u8, // 0x920
+        _: [0x4]u8, // 0x928
+        _: [0x4]u8, // 0x92c
+        _: [0x4]u8, // 0x930
+        _: [0x4]u8, // 0x934
+        _: [0x4]u8, // 0x938
+        _: [0x4]u8, // 0x93c
+        _: [0x4]u8, // 0x940
+        _: [0x4]u8, // 0x944
+    };
+    pub const C_OP_RemapSpeedtoCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+    };
+    pub const C_OP_RemapTransformToVelocity = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x68]u8, // 0x1e0
+    };
+    pub const CollisionGroupContext_t = extern struct {
+        _: [0x4]u8, // 0x0
+    };
+    pub const CParticleFunctionPreEmission = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+    };
+    pub const C_OP_FadeOutSimple = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+    };
+    pub const C_OP_SpringToVectorConstraint = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x178]u8, // 0x358
+        _: [0x178]u8, // 0x4d0
+        _: [0x178]u8, // 0x648
+        _: [0x6d8]u8, // 0x7c0
+    };
+    pub const C_OP_RenderRopes = extern struct {
+        pad_0: [0x2ed8]u8, // 0x0
+        _: [0x4]u8, // 0x2ed8
+        _: [0x4]u8, // 0x2edc
+        _: [0x4]u8, // 0x2ee0
+        _: [0x4]u8, // 0x2ee4
+        _: [0x4]u8, // 0x2ee8
+        _: [0x4]u8, // 0x2eec
+        _: [0x8]u8, // 0x2ef0
+        _: [0x178]u8, // 0x2ef8
+        _: [0x4]u8, // 0x3070
+        _: [0x4]u8, // 0x3074
+        _: [0x4]u8, // 0x3078
+        _: [0x4]u8, // 0x307c
+        _: [0x178]u8, // 0x3080
+        _: [0x178]u8, // 0x31f8
+        _: [0x178]u8, // 0x3370
+        _: [0x4]u8, // 0x34e8
+        _: [0x4]u8, // 0x34ec
+        _: [0x4]u8, // 0x34f0
+        _: [0x4]u8, // 0x34f4
+        _: [0x4]u8, // 0x34f8
+        _: [0x4]u8, // 0x34fc
+        _: [0x5]u8, // 0x3500
+        _: [0x3]u8, // 0x3505
+        _: [0x4]u8, // 0x3508
+        _: [0x4]u8, // 0x350c
+        _: [0x1]u8, // 0x3510
+        _: [0x3]u8, // 0x3511
+        _: [0x4]u8, // 0x3514
+        _: [0x4]u8, // 0x3518
+        _: [0x4]u8, // 0x351c
+        _: [0x4]u8, // 0x3520
+        _: [0x1]u8, // 0x3524
+        _: [0x3]u8, // 0x3525
+    };
+    pub const C_INIT_StatusEffectCitadel = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x4]u8, // 0x208
+        _: [0x4]u8, // 0x20c
+        _: [0x4]u8, // 0x210
+        _: [0x4]u8, // 0x214
+        _: [0x4]u8, // 0x218
+        _: [0x4]u8, // 0x21c
+        _: [0x4]u8, // 0x220
+        _: [0x4]u8, // 0x224
+        _: [0x4]u8, // 0x228
+        _: [0x4]u8, // 0x22c
+        _: [0x8]u8, // 0x230
+    };
+    pub const C_OP_RenderSound = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x4]u8, // 0x230
+        _: [0x4]u8, // 0x234
+        _: [0x4]u8, // 0x238
+        _: [0x4]u8, // 0x23c
+        _: [0x4]u8, // 0x240
+        _: [0x4]u8, // 0x244
+        _: [0x4]u8, // 0x248
+        _: [0x4]u8, // 0x24c
+        _: [0x4]u8, // 0x250
+        _: [0x4]u8, // 0x254
+        _: [0x100]u8, // 0x258
+        _: [0x8]u8, // 0x358
+    };
+    pub const CParticleVisibilityInputs = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0x4]u8, // 0x18
+        _: [0x4]u8, // 0x1c
+        _: [0x4]u8, // 0x20
+        _: [0x4]u8, // 0x24
+        _: [0x4]u8, // 0x28
+        _: [0x1]u8, // 0x2c
+        _: [0x3]u8, // 0x2d
+        _: [0x4]u8, // 0x30
+        _: [0x4]u8, // 0x34
+        _: [0x4]u8, // 0x38
+        _: [0x4]u8, // 0x3c
+        _: [0x4]u8, // 0x40
+        _: [0x4]u8, // 0x44
+    };
+    pub const C_OP_SetControlPointsToParticle = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x1]u8, // 0x1f0
+        _: [0x3]u8, // 0x1f1
+        _: [0x4]u8, // 0x1f4
+        _: [0x8]u8, // 0x1f8
+    };
+    pub const C_OP_RemapCPVelocityToVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+    };
+    pub const C_OP_PointVectorAtNextParticle = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x178]u8, // 0x1e8
+        _: [0x8]u8, // 0x360
+    };
+    pub const ParticlePreviewBodyGroup_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+    };
+    pub const C_OP_OscillateScalarSimple = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x30]u8, // 0x1f0
+    };
+    pub const C_INIT_StatusEffect = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x4]u8, // 0x208
+        _: [0x4]u8, // 0x20c
+        _: [0x4]u8, // 0x210
+        _: [0x4]u8, // 0x214
+        _: [0x4]u8, // 0x218
+        _: [0x4]u8, // 0x21c
+        _: [0x4]u8, // 0x220
+        _: [0x4]u8, // 0x224
+        _: [0x4]u8, // 0x228
+        _: [0x1c]u8, // 0x22c
+    };
+    pub const C_INIT_RtEnvCull = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0xc]u8, // 0x1e8
+        _: [0xc]u8, // 0x1f4
+        _: [0x1]u8, // 0x200
+        _: [0x1]u8, // 0x201
+        _: [0x1]u8, // 0x202
+        _: [0x81]u8, // 0x203
+        _: [0x4]u8, // 0x284
+        _: [0x8]u8, // 0x288
+    };
+    pub const C_OP_ConstrainDistance = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x178]u8, // 0x358
+        _: [0x68]u8, // 0x4d0
+        _: [0x6d8]u8, // 0x538
+        _: [0x8]u8, // 0xc10
+    };
+    pub const C_INIT_RandomVector = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0xc]u8, // 0x1e8
+        _: [0xc]u8, // 0x1f4
+        _: [0x4]u8, // 0x200
+        _: [0xc]u8, // 0x204
+    };
+    pub const C_INIT_InitialVelocityNoise = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0xc]u8, // 0x1e8
+        _: [0xc]u8, // 0x1f4
+        _: [0x6d8]u8, // 0x200
+        _: [0x178]u8, // 0x8d8
+        _: [0x6d8]u8, // 0xa50
+        _: [0x6d8]u8, // 0x1128
+        _: [0x178]u8, // 0x1800
+        _: [0x178]u8, // 0x1978
+        _: [0x68]u8, // 0x1af0
+        _: [0x8]u8, // 0x1b58
+    };
+    pub const ParticleChildrenInfo_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x4]u8, // 0x8
+        _: [0x1]u8, // 0xc
+        _: [0x3]u8, // 0xd
+        _: [0x10]u8, // 0x10
+    };
+    pub const C_OP_RemapScalarOnceTimed = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+    };
+    pub const C_INIT_RandomNamedModelSequence = extern struct {
+        pad_0: [0x210]u8, // 0x0
+    };
+    pub const C_OP_PlaneCull = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x4]u8, // 0x8c0
+        _: [0x4]u8, // 0x8c4
+    };
+    pub const C_INIT_VelocityRandom = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x178]u8, // 0x1f0
+        _: [0x178]u8, // 0x368
+        _: [0x6d8]u8, // 0x4e0
+        _: [0x6d8]u8, // 0xbb8
+        _: [0x4]u8, // 0x1290
+        _: [0xc]u8, // 0x1294
+    };
+    pub const C_OP_ModelDampenMovement = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x1]u8, // 0x1e4
+        _: [0x1]u8, // 0x1e5
+        _: [0x1]u8, // 0x1e6
+        _: [0x81]u8, // 0x1e7
+        _: [0x6d8]u8, // 0x268
+        _: [0x8]u8, // 0x940
+    };
+    pub const C_OP_TwistAroundAxis = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x4]u8, // 0x1f0
+        _: [0xc]u8, // 0x1f4
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+    };
+    pub const C_OP_TeleportBeam = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0xc]u8, // 0x1f8
+        _: [0x4]u8, // 0x204
+        _: [0x4]u8, // 0x208
+        _: [0x4]u8, // 0x20c
+        _: [0x8]u8, // 0x210
+    };
+    pub const C_OP_RemapExternalWindToCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x6d8]u8, // 0x1f0
+        _: [0x4]u8, // 0x8c8
+        _: [0x4]u8, // 0x8cc
+    };
+    pub const CBaseRendererSource2 = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x178]u8, // 0x230
+        _: [0x178]u8, // 0x3a8
+        _: [0x178]u8, // 0x520
+        _: [0x8]u8, // 0x698
+        _: [0x6d8]u8, // 0x6a0
+        _: [0x4]u8, // 0xd78
+        _: [0x4]u8, // 0xd7c
+        _: [0x8]u8, // 0xd80
+        _: [0x178]u8, // 0xd88
+        _: [0x178]u8, // 0xf00
+        _: [0x4]u8, // 0x1078
+        _: [0x4]u8, // 0x107c
+        _: [0x10]u8, // 0x1080
+        _: [0x4]u8, // 0x1090
+        _: [0x4]u8, // 0x1094
+        _: [0x8]u8, // 0x1098
+        _: [0x178]u8, // 0x10a0
+        _: [0x178]u8, // 0x1218
+        _: [0x178]u8, // 0x1390
+        _: [0x178]u8, // 0x1508
+        _: [0x178]u8, // 0x1680
+        _: [0x4]u8, // 0x17f8
+        _: [0x4]u8, // 0x17fc
+        _: [0x1]u8, // 0x1800
+        _: [0x7]u8, // 0x1801
+        _: [0x178]u8, // 0x1808
+        _: [0x178]u8, // 0x1980
+        _: [0x178]u8, // 0x1af8
+        _: [0x4]u8, // 0x1c70
+        _: [0x4]u8, // 0x1c74
+        _: [0x178]u8, // 0x1c78
+        _: [0x1]u8, // 0x1df0
+        _: [0x3]u8, // 0x1df1
+        _: [0x4]u8, // 0x1df4
+        _: [0x4]u8, // 0x1df8
+        _: [0x4]u8, // 0x1dfc
+        _: [0x178]u8, // 0x1e00
+        _: [0x178]u8, // 0x1f78
+        _: [0x178]u8, // 0x20f0
+        _: [0x1]u8, // 0x2268
+        _: [0x1]u8, // 0x2269
+        _: [0x6]u8, // 0x226a
+        _: [0x178]u8, // 0x2270
+        _: [0x4]u8, // 0x23e8
+        _: [0x4]u8, // 0x23ec
+        _: [0x1]u8, // 0x23f0
+        _: [0x1]u8, // 0x23f1
+        _: [0x1]u8, // 0x23f2
+        _: [0x1]u8, // 0x23f3
+        _: [0x80]u8, // 0x23f4
+        _: [0x1]u8, // 0x2474
+        _: [0x80]u8, // 0x2475
+        _: [0x1]u8, // 0x24f5
+        _: [0x1]u8, // 0x24f6
+        _: [0x1]u8, // 0x24f7
+        _: [0x4]u8, // 0x24f8
+        _: [0x4]u8, // 0x24fc
+        _: [0x178]u8, // 0x2500
+        _: [0x178]u8, // 0x2678
+        _: [0x178]u8, // 0x27f0
+        _: [0x178]u8, // 0x2968
+        _: [0x178]u8, // 0x2ae0
+        _: [0x4]u8, // 0x2c58
+        _: [0x1]u8, // 0x2c5c
+        _: [0x27b]u8, // 0x2c5d
+    };
+    pub const CSpinUpdateBase = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+    };
+    pub const C_OP_OrientTo2dDirection = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e0
+        _: [0x4]u8, // 0x8b8
+        _: [0x4]u8, // 0x8bc
+        _: [0x8]u8, // 0x8c0
+    };
+    pub const C_OP_RemapDotProductToCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x178]u8, // 0x1f8
+        _: [0x178]u8, // 0x370
+        _: [0x178]u8, // 0x4e8
+        _: [0x178]u8, // 0x660
+    };
+    pub const C_INIT_RemapParticleCountToNamedModelElementScalar = extern struct {
+        pad_0: [0x218]u8, // 0x0
+        _: [0x8]u8, // 0x218
+        _: [0x8]u8, // 0x220
+        _: [0x8]u8, // 0x228
+        _: [0x8]u8, // 0x230
+    };
+    pub const C_OP_RenderTrails = extern struct {
+        pad_0: [0x3358]u8, // 0x0
+        _: [0x4]u8, // 0x3358
+        _: [0x4]u8, // 0x335c
+        _: [0x4]u8, // 0x3360
+        _: [0x4]u8, // 0x3364
+        _: [0x4]u8, // 0x3368
+        _: [0x4]u8, // 0x336c
+        _: [0x4]u8, // 0x3370
+        _: [0x4]u8, // 0x3374
+        _: [0x4]u8, // 0x3378
+        _: [0x4]u8, // 0x337c
+        _: [0x178]u8, // 0x3380
+        _: [0x6d8]u8, // 0x34f8
+        _: [0x178]u8, // 0x3bd0
+        _: [0x178]u8, // 0x3d48
+        _: [0x6d8]u8, // 0x3ec0
+        _: [0x178]u8, // 0x4598
+        _: [0x4]u8, // 0x4710
+        _: [0x4]u8, // 0x4714
+        _: [0x4]u8, // 0x4718
+        _: [0x4]u8, // 0x471c
+    };
+    pub const C_OP_SetControlPointPositionToTimeOfDayValue = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x80]u8, // 0x1ec
+        _: [0x14]u8, // 0x26c
+    };
+    pub const C_OP_DecayMaintainCount = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+        _: [0x8]u8, // 0x1f0
+        _: [0x8]u8, // 0x1f8
+        _: [0x178]u8, // 0x200
+        _: [0x8]u8, // 0x378
+    };
+    pub const C_INIT_RandomModelSequence = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x100]u8, // 0x1e8
+        _: [0x100]u8, // 0x2e8
+        _: [0x8]u8, // 0x3e8
+    };
+    pub const C_OP_ExternalGameImpulseForce = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x178]u8, // 0x1f0
+        _: [0x1]u8, // 0x368
+        _: [0x1]u8, // 0x369
+        _: [0x1]u8, // 0x36a
+        _: [0x5]u8, // 0x36b
+    };
+    pub const C_OP_RemapAverageHitboxSpeedtoCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x178]u8, // 0x1f8
+        _: [0x178]u8, // 0x370
+        _: [0x178]u8, // 0x4e8
+        _: [0x178]u8, // 0x660
+        _: [0x8]u8, // 0x7d8
+        _: [0x6d8]u8, // 0x7e0
+        _: [0x80]u8, // 0xeb8
+    };
+    pub const C_INIT_RandomAlpha = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0xc]u8, // 0x1f0
+        _: [0x4]u8, // 0x1fc
+    };
+    pub const C_OP_NormalizeVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+    };
+    pub const C_OP_FadeInSimple = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+    };
+    pub const C_OP_RepeatedTriggerChildGroup = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x178]u8, // 0x1f0
+        _: [0x178]u8, // 0x368
+        _: [0x178]u8, // 0x4e0
+        _: [0x8]u8, // 0x658
+    };
+    pub const C_OP_RemapVelocityToVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+    };
+    pub const C_INIT_SetHitboxToClosest = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x6d8]u8, // 0x1f0
+        _: [0x80]u8, // 0x8c8
+        _: [0x1]u8, // 0x948
+        _: [0x3]u8, // 0x949
+        _: [0x4]u8, // 0x94c
+        _: [0x178]u8, // 0x950
+        _: [0x8]u8, // 0xac8
+    };
+    pub const C_INIT_RingWave = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x68]u8, // 0x1e8
+        _: [0x178]u8, // 0x250
+        _: [0x178]u8, // 0x3c8
+        _: [0x178]u8, // 0x540
+        _: [0x178]u8, // 0x6b8
+        _: [0x178]u8, // 0x830
+        _: [0x178]u8, // 0x9a8
+        _: [0x178]u8, // 0xb20
+        _: [0x178]u8, // 0xc98
+        _: [0x1]u8, // 0xe10
+        _: [0x7]u8, // 0xe11
+    };
+    pub const C_INIT_RandomTrailLength = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+    };
+    pub const C_OP_RemapScalar = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x8]u8, // 0x1f8
+    };
+    pub const C_OP_DistanceBetweenTransforms = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x68]u8, // 0x1e8
+        _: [0x68]u8, // 0x250
+        _: [0x178]u8, // 0x2b8
+        _: [0x178]u8, // 0x430
+        _: [0x178]u8, // 0x5a8
+        _: [0x178]u8, // 0x720
+        _: [0x4]u8, // 0x898
+        _: [0x4]u8, // 0x89c
+        _: [0x80]u8, // 0x8a0
+        _: [0x4]u8, // 0x920
+        _: [0x4]u8, // 0x924
+        _: [0x8]u8, // 0x928
+    };
+    pub const C_OP_DecayOffscreen = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+    };
+    pub const C_INIT_CreateSequentialPath = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x1]u8, // 0x1f0
+        _: [0x1]u8, // 0x1f1
+        _: [0xe]u8, // 0x1f2
+        _: [0x40]u8, // 0x200
+    };
+    pub const C_OP_EndCapTimedDecay = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+    };
+    pub const C_OP_RemapDistanceToLineSegmentBase = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+    };
+    pub const C_OP_ContinuousEmitter = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x178]u8, // 0x4d8
+        _: [0x4]u8, // 0x650
+        _: [0x4]u8, // 0x654
+        _: [0x4]u8, // 0x658
+        _: [0x4]u8, // 0x65c
+        _: [0x8]u8, // 0x660
+        _: [0x8]u8, // 0x668
+        _: [0x4]u8, // 0x670
+        _: [0x1]u8, // 0x674
+        _: [0xb]u8, // 0x675
+    };
+    pub const C_OP_OscillateVectorSimple = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0xc]u8, // 0x1e0
+        _: [0xc]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+    };
+    pub const C_INIT_SequenceLifeTime = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+    };
+    pub const C_INIT_MoveBetweenPoints = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x178]u8, // 0x4d8
+        _: [0x178]u8, // 0x650
+        _: [0x178]u8, // 0x7c8
+        _: [0x4]u8, // 0x940
+        _: [0x4]u8, // 0x944
+    };
+    pub const C_INIT_StatusEffectTf = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x4]u8, // 0x208
+        _: [0x4]u8, // 0x20c
+        _: [0x4]u8, // 0x210
+        _: [0x4]u8, // 0x214
+        _: [0x4]u8, // 0x218
+        _: [0x4]u8, // 0x21c
+        _: [0x4]u8, // 0x220
+        _: [0x4]u8, // 0x224
+        _: [0x4]u8, // 0x228
+        _: [0x4]u8, // 0x22c
+        _: [0x4]u8, // 0x230
+        _: [0x4]u8, // 0x234
+    };
+    pub const C_OP_SetUserEvent = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x178]u8, // 0x358
+        _: [0x8]u8, // 0x4d0
+        _: [0x178]u8, // 0x4d8
+        _: [0x8]u8, // 0x650
+    };
+    pub const C_OP_QuantizeFloat = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x28]u8, // 0x358
+    };
+    pub const C_OP_BasicMovement = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e0
+        _: [0x178]u8, // 0x8b8
+        _: [0x470]u8, // 0xa30
+        _: [0x4]u8, // 0xea0
+        _: [0x4]u8, // 0xea4
+    };
+    pub const C_INIT_RandomNamedModelElement = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x18]u8, // 0x1f0
+        _: [0x1]u8, // 0x208
+        _: [0x1]u8, // 0x209
+        _: [0x2]u8, // 0x20a
+        _: [0x4]u8, // 0x20c
+    };
+    pub const C_INIT_InitFromParentKilled = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x84]u8, // 0x1ec
+    };
+    pub const C_OP_Callback = extern struct {
+        pad_0: [0x230]u8, // 0x0
+    };
+    pub const CParticleFunction = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        _: [0x178]u8, // 0x8
+        _: [0x4]u8, // 0x180
+        _: [0x4]u8, // 0x184
+        _: [0x4]u8, // 0x188
+        _: [0x4]u8, // 0x18c
+        _: [0x4]u8, // 0x190
+        _: [0x4]u8, // 0x194
+        _: [0x4]u8, // 0x198
+        _: [0x4]u8, // 0x19c
+        _: [0x4]u8, // 0x1a0
+        _: [0x4]u8, // 0x1a4
+        _: [0x4]u8, // 0x1a8
+        _: [0x4]u8, // 0x1ac
+        _: [0x4]u8, // 0x1b0
+        _: [0x6]u8, // 0x1b4
+        _: [0x6]u8, // 0x1ba
+        _: [0x20]u8, // 0x1c0
+    };
+    pub const C_OP_GlobalLight = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x1]u8, // 0x1e4
+        _: [0x3]u8, // 0x1e5
+    };
+    pub const C_INIT_OffsetVectorToVector = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0xc]u8, // 0x1f0
+        _: [0xc]u8, // 0x1fc
+        _: [0x8]u8, // 0x208
+    };
+    pub const C_OP_SetPerChildControlPointFromAttribute = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+    };
+    pub const C_OP_SetParentControlPointsToChildCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x8]u8, // 0x1f8
+    };
+    pub const C_OP_BoxConstraint = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e0
+        _: [0x6d8]u8, // 0x8b8
+        _: [0x4]u8, // 0xf90
+        _: [0x1]u8, // 0xf94
+        _: [0x3]u8, // 0xf95
+    };
+    pub const C_INIT_CreatePhyllotaxis = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x4]u8, // 0x208
+        _: [0x4]u8, // 0x20c
+        _: [0x4]u8, // 0x210
+        _: [0x1]u8, // 0x214
+        _: [0x1]u8, // 0x215
+        _: [0x2]u8, // 0x216
+    };
+    pub const C_OP_AttractToControlPoint = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x10]u8, // 0x1f0
+        _: [0x178]u8, // 0x200
+        _: [0x178]u8, // 0x378
+        _: [0x8]u8, // 0x4f0
+        _: [0x68]u8, // 0x4f8
+        _: [0x178]u8, // 0x560
+        _: [0x8]u8, // 0x6d8
+    };
+    pub const C_INIT_RandomLifeTime = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+    };
+    pub const C_INIT_RemapParticleCountToNamedModelSequenceScalar = extern struct {
+        pad_0: [0x238]u8, // 0x0
+    };
+    pub const C_INIT_VelocityRadialRandom = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x6d8]u8, // 0x1f0
+        _: [0x6d8]u8, // 0x8c8
+        _: [0x178]u8, // 0xfa0
+        _: [0x178]u8, // 0x1118
+        _: [0xd]u8, // 0x1290
+        _: [0x3]u8, // 0x129d
+    };
+    pub const C_INIT_RandomRadius = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+    };
+    pub const C_OP_Orient2DRelToCP = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+    };
+    pub const TextureControls_t = extern struct {
+        _: [0x178]u8, // 0x0
+        _: [0x178]u8, // 0x178
+        _: [0x178]u8, // 0x2f0
+        _: [0x178]u8, // 0x468
+        _: [0x178]u8, // 0x5e0
+        _: [0x178]u8, // 0x758
+        _: [0x178]u8, // 0x8d0
+        _: [0x1]u8, // 0xa48
+        _: [0x3]u8, // 0xa49
+        _: [0x4]u8, // 0xa4c
+        _: [0x4]u8, // 0xa50
+        _: [0x4]u8, // 0xa54
+        _: [0x4]u8, // 0xa58
+        _: [0x4]u8, // 0xa5c
+        _: [0x4]u8, // 0xa60
+        _: [0x4]u8, // 0xa64
+    };
+    pub const ControlPointReference_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0xc]u8, // 0x4
+        _: [0x4]u8, // 0x10
+    };
+    pub const C_OP_SetControlPointToVectorExpression = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x6d8]u8, // 0x1f0
+        _: [0x6d8]u8, // 0x8c8
+        _: [0x178]u8, // 0xfa0
+        _: [0x8]u8, // 0x1118
+    };
+    pub const C_OP_LightningSnapshotGenerator = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+        _: [0x178]u8, // 0x1f8
+        _: [0x178]u8, // 0x370
+        _: [0x178]u8, // 0x4e8
+        _: [0x178]u8, // 0x660
+        _: [0x178]u8, // 0x7d8
+        _: [0x178]u8, // 0x950
+        _: [0x178]u8, // 0xac8
+        _: [0x178]u8, // 0xc40
+        _: [0x8]u8, // 0xdb8
+        _: [0x178]u8, // 0xdc0
+        _: [0x8]u8, // 0xf38
+        _: [0x178]u8, // 0xf40
+        _: [0x178]u8, // 0x10b8
+        _: [0x8]u8, // 0x1230
+        _: [0x178]u8, // 0x1238
+        _: [0x178]u8, // 0x13b0
+        _: [0x178]u8, // 0x1528
+    };
+    pub const C_OP_RemapNamedModelMeshGroupOnceTimed = extern struct {
+        pad_0: [0x240]u8, // 0x0
+    };
+    pub const C_INIT_RemapQAnglesToRotation = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x68]u8, // 0x1e8
+    };
+    pub const C_INIT_PositionWarp = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x6d8]u8, // 0x8c0
+        _: [0x4]u8, // 0xf98
+        _: [0x4]u8, // 0xf9c
+        _: [0x4]u8, // 0xfa0
+        _: [0x4]u8, // 0xfa4
+        _: [0x4]u8, // 0xfa8
+        _: [0x4]u8, // 0xfac
+        _: [0x1]u8, // 0xfb0
+        _: [0x7]u8, // 0xfb1
+    };
+    pub const C_OP_SetControlPointFieldToScalarExpression = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x178]u8, // 0x1f0
+        _: [0x178]u8, // 0x368
+        _: [0x178]u8, // 0x4e0
+        _: [0x4]u8, // 0x658
+        _: [0x4]u8, // 0x65c
+        _: [0x178]u8, // 0x660
+    };
+    pub const C_OP_CreateParticleSystemRenderer = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x8]u8, // 0x230
+        _: [0x8]u8, // 0x238
+        _: [0x10]u8, // 0x240
+        _: [0x8]u8, // 0x250
+        _: [0x6d8]u8, // 0x258
+    };
+    pub const CParticleFunctionForce = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+    };
+    pub const C_INIT_RandomVectorComponent = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+    };
+    pub const C_OP_InheritFromParentParticles = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+    };
+    pub const C_INIT_SetVectorAttributeToVectorExpression = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x6d8]u8, // 0x1f0
+        _: [0x6d8]u8, // 0x8c8
+        _: [0x178]u8, // 0xfa0
+        _: [0x4]u8, // 0x1118
+        _: [0x4]u8, // 0x111c
+        _: [0x70]u8, // 0x1120
+    };
+    pub const C_OP_RemapTransformVisibilityToVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x68]u8, // 0x1e8
+        _: [0x4]u8, // 0x250
+        _: [0x4]u8, // 0x254
+        _: [0x4]u8, // 0x258
+        _: [0xc]u8, // 0x25c
+        _: [0xc]u8, // 0x268
+        _: [0x4]u8, // 0x274
+    };
+    pub const C_OP_DirectionBetweenVecsToVec = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x6d8]u8, // 0x8c0
+    };
+    pub const C_OP_MovementLoopInsideSphere = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x178]u8, // 0x1e8
+        _: [0x6d8]u8, // 0x360
+        _: [0x8]u8, // 0xa38
+    };
+    pub const C_OP_RenderSimpleModelCollection = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x8]u8, // 0x230
+        _: [0x8]u8, // 0x238
+        _: [0x60]u8, // 0x240
+        _: [0x178]u8, // 0x2a0
+        _: [0x1]u8, // 0x418
+        _: [0x1]u8, // 0x419
+        _: [0x6]u8, // 0x41a
+        _: [0x178]u8, // 0x420
+        _: [0x18]u8, // 0x598
+    };
+    pub const C_OP_QuantizeCPComponent = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x4]u8, // 0x360
+        _: [0x4]u8, // 0x364
+        _: [0x178]u8, // 0x368
+    };
+    pub const C_OP_PlayEndCapWhenFinished = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x1]u8, // 0x1e8
+        _: [0x7]u8, // 0x1e9
+    };
+    pub const C_INIT_InitFloatCollection = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x8]u8, // 0x360
+    };
+    pub const CPathParameters = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0xc]u8, // 0x18
+        _: [0xc]u8, // 0x24
+        _: [0x10]u8, // 0x30
+    };
+    pub const C_OP_RemapScalarEndCap = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+    };
+    pub const C_INIT_CreateFromPlaneCache = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0xc]u8, // 0x1e8
+        _: [0xd]u8, // 0x1f4
+        _: [0x7]u8, // 0x201
+    };
+    pub const C_OP_LazyCullCompareFloat = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x178]u8, // 0x358
+        _: [0x178]u8, // 0x4d0
+    };
+    pub const C_OP_ControlPointToRadialScreenSpace = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0xc]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x8]u8, // 0x200
+    };
+    pub const C_OP_SpinUpdate = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+    };
+    pub const C_INIT_NormalOffset = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0xc]u8, // 0x1e8
+        _: [0xc]u8, // 0x1f4
+        _: [0x4]u8, // 0x200
+        _: [0x1]u8, // 0x204
+        _: [0x3]u8, // 0x205
+    };
+    pub const C_OP_RemapDistanceToLineSegmentToVector = extern struct {
+        pad_0: [0x1f8]u8, // 0x0
+        _: [0x4]u8, // 0x1f8
+        _: [0xc]u8, // 0x1fc
+        _: [0x10]u8, // 0x208
+    };
+    pub const C_OP_RenderAsModels = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x1c]u8, // 0x230
+        _: [0x4]u8, // 0x24c
+        _: [0x1]u8, // 0x250
+        _: [0x3]u8, // 0x251
+        _: [0x4]u8, // 0x254
+        _: [0x4]u8, // 0x258
+        _: [0x4]u8, // 0x25c
+        _: [0x8]u8, // 0x260
+    };
+    pub const C_INIT_CreationNoise = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x1]u8, // 0x1ec
+        _: [0x3]u8, // 0x1ed
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0xc]u8, // 0x204
+        _: [0x8]u8, // 0x210
+    };
+    pub const C_OP_Spin = extern struct {
+        pad_0: [0x1f8]u8, // 0x0
+    };
+    pub const C_OP_GameLiquidSpill = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x178]u8, // 0x230
+        _: [0x178]u8, // 0x3a8
+        _: [0x178]u8, // 0x520
+        _: [0x4]u8, // 0x698
+        _: [0x4]u8, // 0x69c
+    };
+    pub const C_OP_InstantaneousEmitter = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x4]u8, // 0x4d8
+        _: [0x4]u8, // 0x4dc
+        _: [0x178]u8, // 0x4e0
+        _: [0x4]u8, // 0x658
+        _: [0x4]u8, // 0x65c
+        _: [0x8]u8, // 0x660
+    };
+    pub const C_OP_ConstrainLineLength = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+    };
+    pub const C_INIT_LifespanFromVelocity = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0xc]u8, // 0x1e8
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x8]u8, // 0x200
+        _: [0x80]u8, // 0x208
+        _: [0x10]u8, // 0x288
+        _: [0x8]u8, // 0x298
+    };
+    pub const CBaseTrailRenderer = extern struct {
+        pad_0: [0x2ed8]u8, // 0x0
+        _: [0x4]u8, // 0x2ed8
+        _: [0x4]u8, // 0x2edc
+        _: [0x4]u8, // 0x2ee0
+        _: [0x4]u8, // 0x2ee4
+        _: [0x178]u8, // 0x2ee8
+        _: [0x178]u8, // 0x3060
+        _: [0x178]u8, // 0x31d8
+        _: [0x8]u8, // 0x3350
+    };
+    pub const C_INIT_VelocityFromCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x68]u8, // 0x8c0
+        _: [0x4]u8, // 0x928
+        _: [0x4]u8, // 0x92c
+    };
+    pub const C_OP_SetControlPointOrientation = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x2]u8, // 0x1e8
+        _: [0x1]u8, // 0x1ea
+        _: [0x1]u8, // 0x1eb
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0xc]u8, // 0x1f4
+        _: [0x10]u8, // 0x200
+        _: [0x178]u8, // 0x210
+    };
+    pub const C_OP_MovementSkinnedPositionFromCPSnapshot = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x1]u8, // 0x1f0
+        _: [0x3]u8, // 0x1f1
+        _: [0x4]u8, // 0x1f4
+        _: [0x178]u8, // 0x1f8
+        _: [0x178]u8, // 0x370
+        _: [0x178]u8, // 0x4e8
+        _: [0x178]u8, // 0x660
+        _: [0x178]u8, // 0x7d8
+    };
+    pub const C_OP_MultiSegmentDisplaySnapshotGenerator = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+        _: [0x8]u8, // 0x1f8
+        _: [0x178]u8, // 0x200
+        _: [0x178]u8, // 0x378
+        _: [0x18]u8, // 0x4f0
+        _: [0x6d8]u8, // 0x508
+        _: [0x6d8]u8, // 0xbe0
+        _: [0x178]u8, // 0x12b8
+        _: [0x178]u8, // 0x1430
+        _: [0x178]u8, // 0x15a8
+        _: [0x178]u8, // 0x1720
+        _: [0x8]u8, // 0x1898
+        _: [0x178]u8, // 0x18a0
+    };
+    pub const C_OP_OscillateVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0xc]u8, // 0x1e0
+        _: [0xc]u8, // 0x1ec
+        _: [0xc]u8, // 0x1f8
+        _: [0xc]u8, // 0x204
+        _: [0x4]u8, // 0x210
+        _: [0x1]u8, // 0x214
+        _: [0x1]u8, // 0x215
+        _: [0x2]u8, // 0x216
+        _: [0x4]u8, // 0x218
+        _: [0x4]u8, // 0x21c
+        _: [0x4]u8, // 0x220
+        _: [0x4]u8, // 0x224
+        _: [0x178]u8, // 0x228
+        _: [0x178]u8, // 0x3a0
+        _: [0x178]u8, // 0x518
+    };
+    pub const C_OP_PositionLock = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x68]u8, // 0x1e0
+        _: [0x4]u8, // 0x248
+        _: [0x4]u8, // 0x24c
+        _: [0x4]u8, // 0x250
+        _: [0x4]u8, // 0x254
+        _: [0x4]u8, // 0x258
+        _: [0x4]u8, // 0x25c
+        _: [0x8]u8, // 0x260
+        _: [0x178]u8, // 0x268
+        _: [0x4]u8, // 0x3e0
+        _: [0x4]u8, // 0x3e4
+        _: [0x8]u8, // 0x3e8
+        _: [0x6d8]u8, // 0x3f0
+        _: [0x4]u8, // 0xac8
+        _: [0x4]u8, // 0xacc
+    };
+    pub const C_OP_RenderVRHapticEvent = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x4]u8, // 0x230
+        _: [0x4]u8, // 0x234
+        _: [0x8]u8, // 0x238
+        _: [0x178]u8, // 0x240
+    };
+    pub const C_OP_SetControlPointToImpactPoint = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+        _: [0x178]u8, // 0x1f8
+        _: [0x4]u8, // 0x370
+        _: [0x4]u8, // 0x374
+        _: [0xc]u8, // 0x378
+        _: [0x80]u8, // 0x384
+        _: [0x4]u8, // 0x404
+        _: [0x1]u8, // 0x408
+        _: [0x1]u8, // 0x409
+        _: [0x6]u8, // 0x40a
+    };
+    pub const C_OP_InterpolateRadius = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x3c]u8, // 0x1f4
+    };
+    pub const C_OP_ReinitializeScalarEndCap = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+    };
+    pub const C_OP_TurbulenceForce = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0xc]u8, // 0x200
+        _: [0xc]u8, // 0x20c
+        _: [0xc]u8, // 0x218
+        _: [0xc]u8, // 0x224
+    };
+    pub const C_OP_RemapNamedModelElementOnceTimed = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x18]u8, // 0x1e8
+        _: [0x18]u8, // 0x200
+        _: [0x18]u8, // 0x218
+        _: [0x1]u8, // 0x230
+        _: [0x3]u8, // 0x231
+        _: [0x4]u8, // 0x234
+        _: [0x4]u8, // 0x238
+        _: [0x4]u8, // 0x23c
+    };
+    pub const C_OP_SetControlPointToPlayer = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0xc]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+    };
+    pub const C_OP_EndCapTimedFreeze = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+    };
+    pub const C_OP_RenderGpuImplicit = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x4]u8, // 0x230
+        _: [0x4]u8, // 0x234
+        _: [0x8]u8, // 0x238
+        _: [0x178]u8, // 0x240
+        _: [0x178]u8, // 0x3b8
+        _: [0x178]u8, // 0x530
+        _: [0x8]u8, // 0x6a8
+        _: [0x8]u8, // 0x6b0
+    };
+    pub const C_OP_SetRandomControlPointPosition = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x1]u8, // 0x1e8
+        _: [0x3]u8, // 0x1e9
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+        _: [0x178]u8, // 0x1f8
+        _: [0xc]u8, // 0x370
+        _: [0xc]u8, // 0x37c
+        _: [0x178]u8, // 0x388
+    };
+    pub const C_OP_RenderVolumetricEmitter = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x8]u8, // 0x230
+        _: [0x4]u8, // 0x238
+        _: [0x4]u8, // 0x23c
+        _: [0x8]u8, // 0x240
+        _: [0x6d8]u8, // 0x248
+        _: [0x6d8]u8, // 0x920
+        _: [0x6d8]u8, // 0xff8
+        _: [0x178]u8, // 0x16d0
+        _: [0x178]u8, // 0x1848
+        _: [0x178]u8, // 0x19c0
+        _: [0x178]u8, // 0x1b38
+        _: [0x178]u8, // 0x1cb0
+        _: [0x178]u8, // 0x1e28
+        _: [0x178]u8, // 0x1fa0
+        _: [0x178]u8, // 0x2118
+    };
+    pub const C_OP_RemapTransformVisibilityToScalar = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x68]u8, // 0x1e8
+        _: [0x4]u8, // 0x250
+        _: [0x4]u8, // 0x254
+        _: [0x4]u8, // 0x258
+        _: [0x4]u8, // 0x25c
+        _: [0x4]u8, // 0x260
+        _: [0x4]u8, // 0x264
+    };
+    pub const C_OP_RemapControlPointDirectionToVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+    };
+    pub const C_OP_ScreenSpacePositionOfTarget = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e0
+        _: [0x4]u8, // 0x8b8
+        _: [0x4]u8, // 0x8bc
+        _: [0x178]u8, // 0x8c0
+        _: [0x8]u8, // 0xa38
+    };
+    pub const CParticleFunctionOperator = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+    };
+    pub const C_OP_DragRelativeToPlane = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x178]u8, // 0x358
+        _: [0x8]u8, // 0x4d0
+        _: [0x6d8]u8, // 0x4d8
+        _: [0x8]u8, // 0xbb0
+    };
+    pub const C_OP_SetCPtoVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+    };
+    pub const C_INIT_RandomYaw = extern struct {
+        pad_0: [0x208]u8, // 0x0
+    };
+    pub const C_OP_SnapshotRigidSkinToBones = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x1]u8, // 0x1e0
+        _: [0x3]u8, // 0x1e1
+        _: [0x4]u8, // 0x1e4
+    };
+    pub const C_OP_SetSingleControlPointPosition = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x6d8]u8, // 0x1f0
+        _: [0x68]u8, // 0x8c8
+    };
+    pub const C_INIT_DistanceToNeighborCull = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x8]u8, // 0x360
+        _: [0x178]u8, // 0x368
+        _: [0x8]u8, // 0x4e0
+        _: [0x178]u8, // 0x4e8
+        _: [0x4]u8, // 0x660
+        _: [0x4]u8, // 0x664
+    };
+    pub const C_OP_RemapCPtoScalar = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x8]u8, // 0x208
+    };
+    pub const CParticleFunctionRenderer = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x48]u8, // 0x1e0
+        _: [0x8]u8, // 0x228
+    };
+    pub const CParticleSystemDefinition = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+        _: [0x18]u8, // 0x10
+        _: [0x18]u8, // 0x28
+        _: [0x18]u8, // 0x40
+        _: [0x18]u8, // 0x58
+        _: [0x18]u8, // 0x70
+        _: [0x18]u8, // 0x88
+        _: [0x18]u8, // 0xa0
+        _: [0xc0]u8, // 0xb8
+        _: [0xe0]u8, // 0x178
+        _: [0x4]u8, // 0x258
+        _: [0x4]u8, // 0x25c
+        _: [0x4]u8, // 0x260
+        _: [0xc]u8, // 0x264
+        _: [0xc]u8, // 0x270
+        _: [0x4]u8, // 0x27c
+        _: [0x4]u8, // 0x280
+        _: [0x1]u8, // 0x284
+        _: [0x3]u8, // 0x285
+        _: [0x8]u8, // 0x288
+        _: [0x18]u8, // 0x290
+        _: [0x4]u8, // 0x2a8
+        _: [0xc]u8, // 0x2ac
+        _: [0x4]u8, // 0x2b8
+        _: [0x4]u8, // 0x2bc
+        _: [0x4]u8, // 0x2c0
+        _: [0x4]u8, // 0x2c4
+        _: [0x4]u8, // 0x2c8
+        _: [0x4]u8, // 0x2cc
+        _: [0x8]u8, // 0x2d0
+        _: [0x8]u8, // 0x2d8
+        _: [0x8]u8, // 0x2e0
+        _: [0x4]u8, // 0x2e8
+        _: [0x4]u8, // 0x2ec
+        _: [0x8]u8, // 0x2f0
+        _: [0x8]u8, // 0x2f8
+        _: [0x8]u8, // 0x300
+        _: [0x8]u8, // 0x308
+        _: [0x8]u8, // 0x310
+        _: [0x4]u8, // 0x318
+        _: [0x4]u8, // 0x31c
+        _: [0x4]u8, // 0x320
+        _: [0x4]u8, // 0x324
+        _: [0x4]u8, // 0x328
+        _: [0x4]u8, // 0x32c
+        _: [0x4]u8, // 0x330
+        _: [0x4]u8, // 0x334
+        _: [0x4]u8, // 0x338
+        _: [0x4]u8, // 0x33c
+        _: [0x4]u8, // 0x340
+        _: [0x4]u8, // 0x344
+        _: [0x4]u8, // 0x348
+        _: [0x4]u8, // 0x34c
+        _: [0x4]u8, // 0x350
+        _: [0x4]u8, // 0x354
+        _: [0x1]u8, // 0x358
+        _: [0x1]u8, // 0x359
+        _: [0x1]u8, // 0x35a
+        _: [0x1]u8, // 0x35b
+        _: [0x4]u8, // 0x35c
+        _: [0x8]u8, // 0x360
+        _: [0x8]u8, // 0x368
+        _: [0x4]u8, // 0x370
+        _: [0x4]u8, // 0x374
+        _: [0x48]u8, // 0x378
+        _: [0x1d0]u8, // 0x3c0
+    };
+    pub const C_OP_RemapNamedModelMeshGroupEndCap = extern struct {
+        pad_0: [0x240]u8, // 0x0
+    };
+    pub const C_OP_PercentageBetweenTransformsVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0xc]u8, // 0x1ec
+        _: [0x10]u8, // 0x1f8
+        _: [0x68]u8, // 0x208
+        _: [0x68]u8, // 0x270
+        _: [0x4]u8, // 0x2d8
+        _: [0x1]u8, // 0x2dc
+        _: [0x3]u8, // 0x2dd
+    };
+    pub const C_OP_RenderScreenVelocityRotate = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x4]u8, // 0x230
+        _: [0x4]u8, // 0x234
+    };
+    pub const C_OP_UpdateLightSource = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+    };
+    pub const C_INIT_CreateWithinBox = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x6d8]u8, // 0x8c0
+        _: [0x4]u8, // 0xf98
+        _: [0x4]u8, // 0xf9c
+        _: [0x8]u8, // 0xfa0
+        _: [0x8]u8, // 0xfa8
+    };
+    pub const C_OP_ChooseRandomChildrenInGroup = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x178]u8, // 0x1f0
+    };
+    pub const C_OP_ControlpointLight = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x490]u8, // 0x1e0
+        _: [0x4]u8, // 0x670
+        _: [0x4]u8, // 0x674
+        _: [0x4]u8, // 0x678
+        _: [0x4]u8, // 0x67c
+        _: [0xc]u8, // 0x680
+        _: [0xc]u8, // 0x68c
+        _: [0xc]u8, // 0x698
+        _: [0xc]u8, // 0x6a4
+        _: [0x4]u8, // 0x6b0
+        _: [0x4]u8, // 0x6b4
+        _: [0x4]u8, // 0x6b8
+        _: [0x4]u8, // 0x6bc
+        _: [0x4]u8, // 0x6c0
+        _: [0x4]u8, // 0x6c4
+        _: [0x4]u8, // 0x6c8
+        _: [0x4]u8, // 0x6cc
+        _: [0x4]u8, // 0x6d0
+        _: [0x4]u8, // 0x6d4
+        _: [0x4]u8, // 0x6d8
+        _: [0x4]u8, // 0x6dc
+        _: [0x1]u8, // 0x6e0
+        _: [0x1]u8, // 0x6e1
+        _: [0x1]u8, // 0x6e2
+        _: [0x1]u8, // 0x6e3
+        _: [0x1]u8, // 0x6e4
+        _: [0x1]u8, // 0x6e5
+        _: [0x1]u8, // 0x6e6
+        _: [0x1]u8, // 0x6e7
+        _: [0x1]u8, // 0x6e8
+        _: [0x5]u8, // 0x6e9
+        _: [0x1]u8, // 0x6ee
+        _: [0x1]u8, // 0x6ef
+    };
+    pub const C_OP_VectorFieldSnapshot = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+        _: [0x178]u8, // 0x1f0
+        _: [0x6d8]u8, // 0x368
+        _: [0x4]u8, // 0xa40
+        _: [0x1]u8, // 0xa44
+        _: [0x3]u8, // 0xa45
+        _: [0x8]u8, // 0xa48
+    };
+    pub const C_OP_CylindricalDistanceToTransform = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x178]u8, // 0x4d8
+        _: [0x178]u8, // 0x650
+        _: [0x68]u8, // 0x7c8
+        _: [0x68]u8, // 0x830
+        _: [0x4]u8, // 0x898
+        _: [0x1]u8, // 0x89c
+        _: [0x1]u8, // 0x89d
+        _: [0x2]u8, // 0x89e
+    };
+    pub const C_INIT_PositionPlaceOnGround = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x6d8]u8, // 0x4d8
+        _: [0x80]u8, // 0xbb0
+        _: [0x10]u8, // 0xc30
+        _: [0x4]u8, // 0xc40
+        _: [0x4]u8, // 0xc44
+        _: [0x4]u8, // 0xc48
+        _: [0x1]u8, // 0xc4c
+        _: [0x3]u8, // 0xc4d
+        _: [0x4]u8, // 0xc50
+        _: [0x4]u8, // 0xc54
+        _: [0x4]u8, // 0xc58
+        _: [0x4]u8, // 0xc5c
+        _: [0x8]u8, // 0xc60
+    };
+    pub const C_INIT_RandomScalar = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+    };
+    pub const C_OP_RenderPostProcessing = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x178]u8, // 0x230
+        _: [0x8]u8, // 0x3a8
+        _: [0x8]u8, // 0x3b0
+    };
+    pub const C_OP_WorldTraceConstraint = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0xc]u8, // 0x1e4
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x80]u8, // 0x1fc
+        _: [0x1]u8, // 0x27c
+        _: [0x1]u8, // 0x27d
+        _: [0x2]u8, // 0x27e
+        _: [0x4]u8, // 0x280
+        _: [0x4]u8, // 0x284
+        _: [0x4]u8, // 0x288
+        _: [0x4]u8, // 0x28c
+        _: [0x4]u8, // 0x290
+        _: [0x4]u8, // 0x294
+        _: [0x178]u8, // 0x298
+        _: [0x178]u8, // 0x410
+        _: [0x178]u8, // 0x588
+        _: [0x178]u8, // 0x700
+        _: [0x1]u8, // 0x878
+        _: [0x3]u8, // 0x879
+        _: [0x4]u8, // 0x87c
+        _: [0x1]u8, // 0x880
+        _: [0x3]u8, // 0x881
+        _: [0x4]u8, // 0x884
+        _: [0x178]u8, // 0x888
+        _: [0x4]u8, // 0xa00
+        _: [0x4]u8, // 0xa04
+    };
+    pub const C_OP_RenderBlobs = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x178]u8, // 0x230
+        _: [0x178]u8, // 0x3a8
+        _: [0x178]u8, // 0x520
+        _: [0x4]u8, // 0x698
+        _: [0x4]u8, // 0x69c
+        _: [0x8]u8, // 0x6a0
+        _: [0x30]u8, // 0x6a8
+        _: [0x8]u8, // 0x6d8
+    };
+    pub const C_OP_OscillateScalar = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x1]u8, // 0x1f4
+        _: [0x3]u8, // 0x1f5
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x4]u8, // 0x208
+        _: [0x4]u8, // 0x20c
+    };
+    pub const C_OP_FadeOut = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x34]u8, // 0x1ec
+        _: [0x1]u8, // 0x220
+        _: [0xf]u8, // 0x221
+    };
+    pub const C_OP_WaterImpulseRenderer = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x6d8]u8, // 0x230
+        _: [0x178]u8, // 0x908
+        _: [0x178]u8, // 0xa80
+        _: [0x178]u8, // 0xbf8
+        _: [0x178]u8, // 0xd70
+        _: [0x178]u8, // 0xee8
+        _: [0x4]u8, // 0x1060
+        _: [0x4]u8, // 0x1064
+    };
+    pub const C_INIT_RandomSequence = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x1]u8, // 0x1f0
+        _: [0x7]u8, // 0x1f1
+        _: [0x38]u8, // 0x1f8
+    };
+    pub const C_OP_RampScalarSplineSimple = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x28]u8, // 0x1e8
+        _: [0x4]u8, // 0x210
+        _: [0xc]u8, // 0x214
+    };
+    pub const C_INIT_DistanceCull = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x178]u8, // 0x1f0
+        _: [0x8]u8, // 0x368
+    };
+    pub const C_OP_CollideWithParentParticles = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x178]u8, // 0x358
+    };
+    pub const C_INIT_InitFromVectorFieldSnapshot = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x6d8]u8, // 0x1f8
+    };
+    pub const C_OP_SetVectorAttributeToVectorExpression = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x6d8]u8, // 0x8c0
+        _: [0x178]u8, // 0xf98
+        _: [0x4]u8, // 0x1110
+        _: [0x4]u8, // 0x1114
+        _: [0x68]u8, // 0x1118
+    };
+    pub const C_INIT_AddVectorToVector = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0xc]u8, // 0x1e8
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0xc]u8, // 0x1fc
+        _: [0xc]u8, // 0x208
+        _: [0xc]u8, // 0x214
+    };
+    pub const C_INIT_RemapInitialVisibilityScalar = extern struct {
+        pad_0: [0x1ec]u8, // 0x0
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+    };
+    pub const C_OP_RemapTransformOrientationToYaw = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x68]u8, // 0x1e0
+        _: [0x4]u8, // 0x248
+        _: [0x4]u8, // 0x24c
+        _: [0x8]u8, // 0x250
+    };
+    pub const C_OP_RenderStatusEffect = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x8]u8, // 0x230
+        _: [0x8]u8, // 0x238
+        _: [0x8]u8, // 0x240
+        _: [0x8]u8, // 0x248
+        _: [0x8]u8, // 0x250
+        _: [0x8]u8, // 0x258
+        _: [0x8]u8, // 0x260
+    };
+    pub const C_OP_RandomForce = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0xc]u8, // 0x1f0
+        _: [0xc]u8, // 0x1fc
+    };
+    pub const C_OP_RemapParticleCountOnScalarEndCap = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x8]u8, // 0x1f8
+    };
+    pub const ParticlePreviewState_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x8]u8, // 0x10
+        _: [0x8]u8, // 0x18
+        _: [0x8]u8, // 0x20
+        _: [0x8]u8, // 0x28
+        _: [0x18]u8, // 0x30
+        _: [0x4]u8, // 0x48
+        _: [0x4]u8, // 0x4c
+        _: [0x1]u8, // 0x50
+        _: [0x1]u8, // 0x51
+        _: [0x1]u8, // 0x52
+        _: [0x1]u8, // 0x53
+        _: [0x1]u8, // 0x54
+        _: [0x3]u8, // 0x55
+        _: [0xc]u8, // 0x58
+        _: [0xc]u8, // 0x64
+    };
+    pub const C_OP_LocalAccelerationForce = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x6d8]u8, // 0x1f8
+    };
+    pub const C_OP_ModelCull = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x1]u8, // 0x1e4
+        _: [0x1]u8, // 0x1e5
+        _: [0x1]u8, // 0x1e6
+        _: [0x81]u8, // 0x1e7
+    };
+    pub const C_OP_SetFloat = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x4]u8, // 0x358
+        _: [0x4]u8, // 0x35c
+        _: [0x1b0]u8, // 0x360
+    };
+    pub const C_INIT_RemapTransformToVector = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0xc]u8, // 0x1ec
+        _: [0xc]u8, // 0x1f8
+        _: [0xc]u8, // 0x204
+        _: [0x10]u8, // 0x210
+        _: [0x68]u8, // 0x220
+        _: [0x68]u8, // 0x288
+        _: [0x4]u8, // 0x2f0
+        _: [0x4]u8, // 0x2f4
+        _: [0x4]u8, // 0x2f8
+        _: [0x1]u8, // 0x2fc
+        _: [0x3]u8, // 0x2fd
+        _: [0x8]u8, // 0x300
+    };
+    pub const C_OP_ScreenSpaceDistanceToEdge = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x28]u8, // 0x4d8
+    };
+    pub const C_OP_RenderStatusEffectTf = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x8]u8, // 0x230
+        _: [0x8]u8, // 0x238
+        _: [0x8]u8, // 0x240
+        _: [0x8]u8, // 0x248
+        _: [0x8]u8, // 0x250
+        _: [0x8]u8, // 0x258
+        _: [0x8]u8, // 0x260
+    };
+    pub const C_OP_RemapDistanceToLineSegmentToScalar = extern struct {
+        pad_0: [0x1f8]u8, // 0x0
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x8]u8, // 0x200
+    };
+    pub const C_OP_RemapVectortoCP = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+    };
+    pub const C_OP_SetFromCPSnapshot = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x8]u8, // 0x1e8
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x1]u8, // 0x1fc
+        _: [0x3]u8, // 0x1fd
+        _: [0x8]u8, // 0x200
+        _: [0x178]u8, // 0x208
+        _: [0x178]u8, // 0x380
+        _: [0x178]u8, // 0x4f8
+        _: [0x1]u8, // 0x670
+        _: [0x7]u8, // 0x671
+    };
+    pub const C_OP_DistanceBetweenCPsToCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x4]u8, // 0x208
+        _: [0x4]u8, // 0x20c
+        _: [0x4]u8, // 0x210
+        _: [0x1]u8, // 0x214
+        _: [0x83]u8, // 0x215
+        _: [0x4]u8, // 0x298
+        _: [0x4]u8, // 0x29c
+    };
+    pub const C_OP_SetControlPointToHand = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0xc]u8, // 0x1f0
+        _: [0x4]u8, // 0x1fc
+    };
+    pub const C_OP_ConstrainDistanceToPath = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x40]u8, // 0x1f0
+        _: [0x4]u8, // 0x230
+        _: [0x4]u8, // 0x234
+        _: [0x8]u8, // 0x238
+    };
+    pub const C_OP_DistanceCull = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0xc]u8, // 0x1e4
+        _: [0x178]u8, // 0x1f0
+        _: [0x4]u8, // 0x368
+        _: [0x4]u8, // 0x36c
+    };
+    pub const C_INIT_CreateAlongPath = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x180]u8, // 0x360
+        _: [0x40]u8, // 0x4e0
+        _: [0x4]u8, // 0x520
+        _: [0xc]u8, // 0x524
+        _: [0x10]u8, // 0x530
+    };
+    pub const C_OP_GameDecalRenderer = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x8]u8, // 0x230
+        _: [0x8]u8, // 0x238
+        _: [0x8]u8, // 0x240
+        _: [0x8]u8, // 0x248
+        _: [0x6d8]u8, // 0x250
+        _: [0x6d8]u8, // 0x928
+        _: [0x178]u8, // 0x1000
+        _: [0x178]u8, // 0x1178
+        _: [0x178]u8, // 0x12f0
+        _: [0x178]u8, // 0x1468
+        _: [0x6d8]u8, // 0x15e0
+        _: [0x1]u8, // 0x1cb8
+        _: [0x1]u8, // 0x1cb9
+        _: [0x1]u8, // 0x1cba
+        _: [0x1]u8, // 0x1cbb
+        _: [0x4]u8, // 0x1cbc
+    };
+    pub const C_OP_SetControlPointsToModelParticles = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x80]u8, // 0x1e0
+        _: [0x80]u8, // 0x260
+        _: [0x4]u8, // 0x2e0
+        _: [0x4]u8, // 0x2e4
+        _: [0x4]u8, // 0x2e8
+        _: [0x1]u8, // 0x2ec
+        _: [0x3]u8, // 0x2ed
+    };
+    pub const C_OP_ColorInterpolateRandom = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x1c]u8, // 0x1e0
+        _: [0x10]u8, // 0x1fc
+        _: [0x4]u8, // 0x20c
+        _: [0x4]u8, // 0x210
+        _: [0x4]u8, // 0x214
+        _: [0x8]u8, // 0x218
+    };
+    pub const C_INIT_RemapNamedModelSequenceToScalar = extern struct {
+        pad_0: [0x230]u8, // 0x0
+    };
+    pub const C_OP_RenderLights = extern struct {
+        pad_0: [0x238]u8, // 0x0
+        _: [0x4]u8, // 0x238
+        _: [0x4]u8, // 0x23c
+        _: [0x4]u8, // 0x240
+        _: [0x4]u8, // 0x244
+        _: [0x4]u8, // 0x248
+        _: [0x4]u8, // 0x24c
+        _: [0x8]u8, // 0x250
+    };
+    pub const C_OP_DecayClampCount = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+    };
+    pub const CRandomNumberGeneratorParameters = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+    };
+    pub const C_INIT_ColorLitPerParticle = extern struct {
+        pad_0: [0x200]u8, // 0x0
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x4]u8, // 0x208
+        _: [0x4]u8, // 0x20c
+        _: [0x4]u8, // 0x210
+        _: [0x4]u8, // 0x214
+        _: [0x8]u8, // 0x218
+    };
+    pub const C_OP_RenderPoints = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x8]u8, // 0x230
+    };
+    pub const C_INIT_SetAttributeToScalarExpression = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x178]u8, // 0x1f0
+        _: [0x178]u8, // 0x368
+        _: [0x178]u8, // 0x4e0
+        _: [0x4]u8, // 0x658
+        _: [0x24]u8, // 0x65c
+    };
+    pub const C_INIT_CreateOnGrid = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x178]u8, // 0x4d8
+        _: [0x178]u8, // 0x650
+        _: [0x178]u8, // 0x7c8
+        _: [0x178]u8, // 0x940
+        _: [0x4]u8, // 0xab8
+        _: [0x1]u8, // 0xabc
+        _: [0x1]u8, // 0xabd
+        _: [0x2]u8, // 0xabe
+    };
+    pub const C_OP_RampCPLinearRandom = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0xc]u8, // 0x1ec
+        _: [0x10]u8, // 0x1f8
+    };
+    pub const C_OP_VelocityMatchingForce = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+    };
+    pub const C_INIT_RandomAlphaWindowThreshold = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+    };
+    pub const C_INIT_CreateOnModelAtHeight = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x1]u8, // 0x1e8
+        _: [0x3]u8, // 0x1e9
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x178]u8, // 0x1f8
+        _: [0x6d8]u8, // 0x370
+        _: [0x6d8]u8, // 0xa48
+        _: [0x4]u8, // 0x1120
+        _: [0x1]u8, // 0x1124
+        _: [0x1]u8, // 0x1125
+        _: [0x82]u8, // 0x1126
+        _: [0x178]u8, // 0x11a8
+        _: [0x178]u8, // 0x1320
+    };
+    pub const C_OP_ModelSurfaceSnapshotGenerator = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x60]u8, // 0x1f0
+        _: [0x178]u8, // 0x250
+        _: [0x178]u8, // 0x3c8
+        _: [0x178]u8, // 0x540
+        _: [0x178]u8, // 0x6b8
+        _: [0x1]u8, // 0x830
+        _: [0x1]u8, // 0x831
+        _: [0x1]u8, // 0x832
+        _: [0x5]u8, // 0x833
+    };
+    pub const C_OP_RestartAfterDuration = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+    };
+    pub const C_OP_RenderClothForce = extern struct {
+        pad_0: [0x230]u8, // 0x0
+    };
+    pub const C_OP_RemapVisibilityScalar = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x8]u8, // 0x1f8
+    };
+    pub const C_INIT_CreateSequentialPathV2 = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x1]u8, // 0x4d8
+        _: [0x1]u8, // 0x4d9
+        _: [0x6]u8, // 0x4da
+        _: [0x50]u8, // 0x4e0
+    };
+    pub const VecInputMaterialVariable_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x6d8]u8, // 0x8
+    };
+    pub const C_INIT_RemapInitialDirectionToTransformToVector = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x68]u8, // 0x1e8
+        _: [0x4]u8, // 0x250
+        _: [0x4]u8, // 0x254
+        _: [0x4]u8, // 0x258
+        _: [0xc]u8, // 0x25c
+        _: [0x8]u8, // 0x268
+    };
+    pub const C_OP_LockToSavedSequentialPathV2 = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+        _: [0x40]u8, // 0x1f0
+    };
+    pub const C_OP_NormalLock = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+    };
+    pub const C_INIT_RemapTransformOrientationToRotations = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x68]u8, // 0x1e8
+        _: [0xc]u8, // 0x250
+        _: [0x1]u8, // 0x25c
+        _: [0x3]u8, // 0x25d
+    };
+    pub const C_OP_Cull = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+    };
+    pub const C_INIT_RandomYawFlip = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+    };
+    pub const SequenceWeightedList_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+    };
+    pub const C_OP_ReadFromNeighboringParticle = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+        _: [0x178]u8, // 0x1f0
+        _: [0x178]u8, // 0x368
+    };
+    pub const C_OP_RenderText = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x8]u8, // 0x230
+        _: [0x8]u8, // 0x238
+    };
+    pub const C_OP_LerpToInitialPosition = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x178]u8, // 0x1e8
+        _: [0x8]u8, // 0x360
+        _: [0x178]u8, // 0x368
+        _: [0x6d8]u8, // 0x4e0
+    };
+    pub const C_INIT_RandomRotation = extern struct {
+        pad_0: [0x208]u8, // 0x0
+    };
+    pub const C_OP_LerpEndCapVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0xc]u8, // 0x1e4
+        _: [0x8]u8, // 0x1f0
+    };
+    pub const C_OP_VelocityDecay = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+    };
+    pub const C_OP_SetCPOrientationToPointAtCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x178]u8, // 0x1f0
+        _: [0x1]u8, // 0x368
+        _: [0x1]u8, // 0x369
+        _: [0x6]u8, // 0x36a
+    };
+    pub const C_OP_LockToPointList = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x18]u8, // 0x1e8
+        _: [0x1]u8, // 0x200
+        _: [0x3]u8, // 0x201
+        _: [0x4]u8, // 0x204
+    };
+    pub const C_INIT_CreateWithinCone = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x68]u8, // 0x1e8
+        _: [0x178]u8, // 0x250
+        _: [0x178]u8, // 0x3c8
+        _: [0x178]u8, // 0x540
+        _: [0x178]u8, // 0x6b8
+        _: [0x4]u8, // 0x830
+        _: [0xc]u8, // 0x834
+    };
+    pub const C_OP_MovementPlaceOnGround = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x4]u8, // 0x358
+        _: [0x4]u8, // 0x35c
+        _: [0x6d8]u8, // 0x360
+        _: [0x4]u8, // 0xa38
+        _: [0x4]u8, // 0xa3c
+        _: [0x80]u8, // 0xa40
+        _: [0x4]u8, // 0xac0
+        _: [0x4]u8, // 0xac4
+        _: [0x4]u8, // 0xac8
+        _: [0xc]u8, // 0xacc
+        _: [0x4]u8, // 0xad8
+        _: [0x1]u8, // 0xadc
+        _: [0x3]u8, // 0xadd
+        _: [0x1]u8, // 0xae0
+        _: [0x3]u8, // 0xae1
+        _: [0x4]u8, // 0xae4
+        _: [0x8]u8, // 0xae8
+    };
+    pub const C_OP_SetCPOrientationToDirection = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+    };
+    pub const C_OP_RemapCrossProductOfTwoVectorsToVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e0
+        _: [0x6d8]u8, // 0x8b8
+        _: [0x4]u8, // 0xf90
+        _: [0x4]u8, // 0xf94
+    };
+    pub const C_OP_RemapTransformOrientationToRotations = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x68]u8, // 0x1e0
+        _: [0xc]u8, // 0x248
+        _: [0x1]u8, // 0x254
+        _: [0x3]u8, // 0x255
+    };
+    pub const C_INIT_RandomRotationSpeed = extern struct {
+        pad_0: [0x208]u8, // 0x0
+    };
+    pub const C_OP_InheritFromParentParticlesV2 = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x8]u8, // 0x358
+        _: [0x178]u8, // 0x360
+        _: [0x1]u8, // 0x4d8
+        _: [0x1]u8, // 0x4d9
+        _: [0x2]u8, // 0x4da
+        _: [0x4]u8, // 0x4dc
+        _: [0x178]u8, // 0x4e0
+    };
+    pub const C_INIT_RandomSecondSequence = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+    };
+    pub const C_OP_SetFloatCollection = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x4]u8, // 0x358
+        _: [0x4]u8, // 0x35c
+        _: [0x1a0]u8, // 0x360
+    };
+    pub const PointDefinition_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0xc]u8, // 0x8
+    };
+    pub const C_OP_SetControlPointPositionToRandomActiveCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+        _: [0x178]u8, // 0x1f8
+    };
+    pub const C_OP_Diffusion = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+    };
+    pub const C_INIT_AgeNoise = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x1]u8, // 0x1e8
+        _: [0x3]u8, // 0x1e9
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x10]u8, // 0x200
+    };
+    pub const C_OP_RemapVectorComponentToScalar = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+    };
+    pub const CGeneralRandomRotation = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0xc]u8, // 0x1fc
+    };
+    pub const C_OP_DistanceBetweenVecs = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x6d8]u8, // 0x8c0
+        _: [0x178]u8, // 0xf98
+        _: [0x178]u8, // 0x1110
+        _: [0x178]u8, // 0x1288
+        _: [0x178]u8, // 0x1400
+        _: [0x4]u8, // 0x1578
+        _: [0x4]u8, // 0x157c
+    };
+    pub const C_OP_DampenToCP = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+    };
+    pub const C_OP_CalculateVectorAttribute = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0xc]u8, // 0x1e0
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x14]u8, // 0x1fc
+        _: [0x4]u8, // 0x210
+        _: [0x14]u8, // 0x214
+        _: [0x4]u8, // 0x228
+        _: [0x4]u8, // 0x22c
+        _: [0x10]u8, // 0x230
+    };
+    pub const C_OP_LockToBone = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x60]u8, // 0x1e0
+        _: [0x68]u8, // 0x240
+        _: [0x4]u8, // 0x2a8
+        _: [0x4]u8, // 0x2ac
+        _: [0x4]u8, // 0x2b0
+        _: [0x4]u8, // 0x2b4
+        _: [0x80]u8, // 0x2b8
+        _: [0x1]u8, // 0x338
+        _: [0x3]u8, // 0x339
+        _: [0x4]u8, // 0x33c
+        _: [0x4]u8, // 0x340
+        _: [0x4]u8, // 0x344
+        _: [0x8]u8, // 0x348
+        _: [0x6d8]u8, // 0x350
+        _: [0x178]u8, // 0xa28
+    };
+    pub const C_OP_RemapNamedModelBodyPartOnceTimed = extern struct {
+        pad_0: [0x240]u8, // 0x0
+    };
+    pub const C_OP_ScreenSpaceRotateTowardTarget = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e0
+        _: [0x178]u8, // 0x8b8
+        _: [0x8]u8, // 0xa30
+        _: [0x178]u8, // 0xa38
+    };
+    pub const C_OP_MovementMaintainOffset = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0xc]u8, // 0x1e0
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+    };
+    pub const C_INIT_CreateWithinCapsuleTransform = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x178]u8, // 0x4d8
+        _: [0x68]u8, // 0x650
+        _: [0x178]u8, // 0x6b8
+        _: [0x178]u8, // 0x830
+        _: [0x8]u8, // 0x9a8
+        _: [0x6d8]u8, // 0x9b0
+        _: [0x6d8]u8, // 0x1088
+        _: [0x4]u8, // 0x1760
+        _: [0x4]u8, // 0x1764
+    };
+    pub const C_OP_SetVec = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e0
+        _: [0x4]u8, // 0x8b8
+        _: [0x4]u8, // 0x8bc
+        _: [0x178]u8, // 0x8c0
+        _: [0x8]u8, // 0xa38
+    };
+    pub const C_INIT_CreateFromParentParticles = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x1]u8, // 0x1f8
+        _: [0x7]u8, // 0x1f9
+    };
+    pub const C_INIT_CheckParticleForWater = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x8]u8, // 0x360
+        _: [0x178]u8, // 0x368
+        _: [0x8]u8, // 0x4e0
+    };
+    pub const C_INIT_RandomNamedModelBodyPart = extern struct {
+        pad_0: [0x210]u8, // 0x0
+    };
+    pub const C_OP_RenderOmni2Light = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x4]u8, // 0x230
+        _: [0x4]u8, // 0x234
+        _: [0x6d8]u8, // 0x238
+        _: [0x8]u8, // 0x910
+        _: [0x8]u8, // 0x918
+        _: [0x178]u8, // 0x920
+        _: [0x8]u8, // 0xa98
+        _: [0x178]u8, // 0xaa0
+        _: [0x178]u8, // 0xc18
+        _: [0x1]u8, // 0xd90
+        _: [0x7]u8, // 0xd91
+        _: [0x178]u8, // 0xd98
+        _: [0x8]u8, // 0xf10
+        _: [0x178]u8, // 0xf18
+        _: [0x178]u8, // 0x1090
+        _: [0x8]u8, // 0x1208
+        _: [0x6d8]u8, // 0x1210
+        _: [0x6d8]u8, // 0x18e8
+        _: [0x178]u8, // 0x1fc0
+        _: [0x178]u8, // 0x2138
+        _: [0x178]u8, // 0x22b0
+        _: [0x178]u8, // 0x2428
+        _: [0x178]u8, // 0x25a0
+        _: [0x178]u8, // 0x2718
+        _: [0x178]u8, // 0x2890
+        _: [0x178]u8, // 0x2a08
+        _: [0x178]u8, // 0x2b80
+        _: [0x178]u8, // 0x2cf8
+        _: [0x8]u8, // 0x2e70
+        _: [0x10]u8, // 0x2e78
+    };
+    pub const C_OP_ConnectParentParticleToNearest = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+        _: [0x178]u8, // 0x1f0
+        _: [0x178]u8, // 0x368
+    };
+    pub const CPAssignment_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x6d8]u8, // 0x8
+        _: [0x8]u8, // 0x6e0
+    };
+    pub const C_INIT_RemapParticleCountToNamedModelBodyPartScalar = extern struct {
+        pad_0: [0x238]u8, // 0x0
+    };
+    pub const C_INIT_InitSkinnedPositionFromCPSnapshot = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x1]u8, // 0x1f8
+        _: [0x1]u8, // 0x1f9
+        _: [0x2]u8, // 0x1fa
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x178]u8, // 0x208
+        _: [0x4]u8, // 0x380
+        _: [0x4]u8, // 0x384
+        _: [0x4]u8, // 0x388
+        _: [0x4]u8, // 0x38c
+        _: [0x4]u8, // 0x390
+        _: [0x1]u8, // 0x394
+        _: [0x1]u8, // 0x395
+        _: [0x2]u8, // 0x396
+    };
+    pub const C_OP_LagCompensation = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+    };
+    pub const C_OP_CollideWithSelf = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x178]u8, // 0x358
+    };
+    pub const C_OP_Noise = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+    };
+    pub const C_OP_FadeAndKillForTracers = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+    };
+    pub const C_OP_ColorAdjustHSL = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x178]u8, // 0x358
+        _: [0x178]u8, // 0x4d0
+    };
+    pub const CParticleMassCalculationParameters = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x178]u8, // 0x8
+        _: [0x178]u8, // 0x180
+        _: [0x178]u8, // 0x2f8
+    };
+    pub const C_OP_SequenceFromModel = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+    };
+    pub const C_OP_AlphaDecay = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+    };
+    pub const C_OP_RemapDensityGradientToVectorAttribute = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+    };
+    pub const C_INIT_InitVec = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x4]u8, // 0x8c0
+        _: [0x4]u8, // 0x8c4
+        _: [0x1]u8, // 0x8c8
+        _: [0x7]u8, // 0x8c9
+    };
+    pub const C_INIT_SetHitboxToModel = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x6d8]u8, // 0x1f8
+        _: [0xc]u8, // 0x8d0
+        _: [0x1]u8, // 0x8dc
+        _: [0x1]u8, // 0x8dd
+        _: [0x82]u8, // 0x8de
+        _: [0x178]u8, // 0x960
+    };
+    pub const C_OP_MovementMoveAlongSkinnedCPSnapshot = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x1]u8, // 0x1e8
+        _: [0x7]u8, // 0x1e9
+        _: [0x178]u8, // 0x1f0
+        _: [0x178]u8, // 0x368
+    };
+    pub const C_OP_LerpScalar = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x178]u8, // 0x1e8
+        _: [0x4]u8, // 0x360
+        _: [0x4]u8, // 0x364
+    };
+    pub const C_INIT_InitialRepulsionVelocity = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x80]u8, // 0x1e8
+        _: [0x4]u8, // 0x268
+        _: [0xc]u8, // 0x26c
+        _: [0xc]u8, // 0x278
+        _: [0x4]u8, // 0x284
+        _: [0x1]u8, // 0x288
+        _: [0x1]u8, // 0x289
+        _: [0x2]u8, // 0x28a
+        _: [0x4]u8, // 0x28c
+        _: [0x1]u8, // 0x290
+        _: [0x3]u8, // 0x291
+        _: [0x4]u8, // 0x294
+        _: [0x8]u8, // 0x298
+    };
+    pub const C_OP_ClampScalar = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+    };
+    pub const C_OP_SetControlPointToHMD = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0xc]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f8
+    };
+    pub const C_OP_DifferencePreviousParticle = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x1]u8, // 0x1fc
+        _: [0x3]u8, // 0x1fd
+    };
+    pub const C_OP_SetControlPointFieldFromVectorExpression = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x6d8]u8, // 0x1f0
+        _: [0x6d8]u8, // 0x8c8
+        _: [0x178]u8, // 0xfa0
+        _: [0x178]u8, // 0x1118
+        _: [0x4]u8, // 0x1290
+        _: [0x4]u8, // 0x1294
+    };
+    pub const C_OP_PercentageBetweenTransforms = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+        _: [0x68]u8, // 0x1f8
+        _: [0x68]u8, // 0x260
+        _: [0x4]u8, // 0x2c8
+        _: [0x1]u8, // 0x2cc
+        _: [0x3]u8, // 0x2cd
+    };
+    pub const C_INIT_PlaneCull = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x178]u8, // 0x1f0
+        _: [0x8]u8, // 0x368
+    };
+    pub const C_OP_RemapNamedModelSequenceEndCap = extern struct {
+        pad_0: [0x240]u8, // 0x0
+    };
+    pub const C_INIT_InitFromCPSnapshot = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x8]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x1]u8, // 0x204
+        _: [0x3]u8, // 0x205
+        _: [0x178]u8, // 0x208
+        _: [0x178]u8, // 0x380
+        _: [0x4]u8, // 0x4f8
+        _: [0x4]u8, // 0x4fc
+    };
+    pub const C_OP_RenderCables = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x178]u8, // 0x230
+        _: [0x178]u8, // 0x3a8
+        _: [0x6d8]u8, // 0x520
+        _: [0x8]u8, // 0xbf8
+        _: [0x8]u8, // 0xc00
+        _: [0x8]u8, // 0xc08
+        _: [0x178]u8, // 0xc10
+        _: [0x178]u8, // 0xd88
+        _: [0x178]u8, // 0xf00
+        _: [0x178]u8, // 0x1078
+        _: [0x178]u8, // 0x11f0
+        _: [0x178]u8, // 0x1368
+        _: [0x4]u8, // 0x14e0
+        _: [0x4]u8, // 0x14e4
+        _: [0x4]u8, // 0x14e8
+        _: [0x4]u8, // 0x14ec
+        _: [0x4]u8, // 0x14f0
+        _: [0x4]u8, // 0x14f4
+        _: [0x4]u8, // 0x14f8
+        _: [0x1]u8, // 0x14fc
+        _: [0x3]u8, // 0x14fd
+        _: [0x68]u8, // 0x1500
+        _: [0x20]u8, // 0x1568
+        _: [0x20]u8, // 0x1588
+    };
+    pub const C_INIT_InheritVelocity = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+    };
+    pub const C_OP_SetControlPointToWaterSurface = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x8]u8, // 0x1f8
+        _: [0x178]u8, // 0x200
+        _: [0x8]u8, // 0x378
+    };
+    pub const C_INIT_PositionOffset = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x6d8]u8, // 0x8c0
+        _: [0x68]u8, // 0xf98
+        _: [0x1]u8, // 0x1000
+        _: [0x3]u8, // 0x1001
+        _: [0xc]u8, // 0x1004
+    };
+    pub const C_INIT_NormalAlignToCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x68]u8, // 0x1e8
+        _: [0x8]u8, // 0x250
+    };
+    pub const C_OP_ShapeMatchingConstraint = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+    };
+    pub const C_OP_SetChildControlPoints = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+        _: [0x178]u8, // 0x1f0
+        _: [0x1]u8, // 0x368
+        _: [0x3]u8, // 0x369
+        _: [0x4]u8, // 0x36c
+    };
+    pub const C_OP_ChladniWave = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x178]u8, // 0x4d8
+        _: [0x178]u8, // 0x650
+        _: [0x6d8]u8, // 0x7c8
+        _: [0x6d8]u8, // 0xea0
+        _: [0x4]u8, // 0x1578
+        _: [0x4]u8, // 0x157c
+        _: [0x8]u8, // 0x1580
+    };
+    pub const C_OP_RemapDirectionToCPToVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0xc]u8, // 0x1f0
+        _: [0x4]u8, // 0x1fc
+        _: [0x8]u8, // 0x200
+    };
+    pub const C_OP_DriveCPFromGlobalSoundFloat = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x8]u8, // 0x200
+        _: [0x8]u8, // 0x208
+        _: [0x10]u8, // 0x210
+    };
+    pub const C_INIT_ScreenSpacePositionOfTarget = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x4]u8, // 0x8c0
+        _: [0x4]u8, // 0x8c4
+        _: [0x178]u8, // 0x8c8
+    };
+    pub const C_OP_RtEnvCull = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0xc]u8, // 0x1e0
+        _: [0xc]u8, // 0x1ec
+        _: [0x1]u8, // 0x1f8
+        _: [0x1]u8, // 0x1f9
+        _: [0x82]u8, // 0x1fa
+        _: [0x4]u8, // 0x27c
+        _: [0x8]u8, // 0x280
+    };
+    pub const C_OP_PinParticleToCP = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x4]u8, // 0x8c0
+        _: [0x4]u8, // 0x8c4
+        _: [0x178]u8, // 0x8c8
+        _: [0x8]u8, // 0xa40
+        _: [0x178]u8, // 0xa48
+        _: [0x178]u8, // 0xbc0
+        _: [0x178]u8, // 0xd38
+        _: [0x4]u8, // 0xeb0
+        _: [0x4]u8, // 0xeb4
+        _: [0x178]u8, // 0xeb8
+        _: [0x178]u8, // 0x1030
+        _: [0x8]u8, // 0x11a8
+    };
+    pub const C_OP_RemapCPtoVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0xc]u8, // 0x1ec
+        _: [0xc]u8, // 0x1f8
+        _: [0xc]u8, // 0x204
+        _: [0xc]u8, // 0x210
+        _: [0x4]u8, // 0x21c
+        _: [0x4]u8, // 0x220
+        _: [0x4]u8, // 0x224
+        _: [0x4]u8, // 0x228
+        _: [0x1]u8, // 0x22c
+        _: [0x3]u8, // 0x22d
+    };
+    pub const C_INIT_CreateParticleImpulse = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x8]u8, // 0x4d8
+        _: [0x178]u8, // 0x4e0
+        _: [0x8]u8, // 0x658
+    };
+    pub const C_OP_DensityForce = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x8]u8, // 0x1f8
+    };
+    pub const C_INIT_CreateInEpitrochoid = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x68]u8, // 0x1f0
+        _: [0x178]u8, // 0x258
+        _: [0x178]u8, // 0x3d0
+        _: [0x178]u8, // 0x548
+        _: [0x178]u8, // 0x6c0
+        _: [0x1]u8, // 0x838
+        _: [0x1]u8, // 0x839
+        _: [0x6]u8, // 0x83a
+    };
+    pub const C_OP_ConstrainDistanceToUserSpecifiedPath = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x18]u8, // 0x1f0
+    };
+    pub const C_OP_SetControlPointPositions = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x1]u8, // 0x1e8
+        _: [0x1]u8, // 0x1e9
+        _: [0x2]u8, // 0x1ea
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0xc]u8, // 0x1fc
+        _: [0xc]u8, // 0x208
+        _: [0xc]u8, // 0x214
+        _: [0xc]u8, // 0x220
+        _: [0x4]u8, // 0x22c
+    };
+    pub const C_OP_SetFloatAttributeToVectorExpression = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x6d8]u8, // 0x8c0
+        _: [0x178]u8, // 0xf98
+        _: [0x4]u8, // 0x1110
+        _: [0x4]u8, // 0x1114
+    };
+    pub const C_OP_MovementRotateParticleAroundAxis = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e0
+        _: [0x178]u8, // 0x8b8
+        _: [0x68]u8, // 0xa30
+        _: [0x8]u8, // 0xa98
+    };
+    pub const C_OP_IntraParticleForce = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x8]u8, // 0x208
+    };
+    pub const C_INIT_InitFloat = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x4]u8, // 0x360
+        _: [0x4]u8, // 0x364
+        _: [0x180]u8, // 0x368
+    };
+    pub const C_INIT_CreateOnModel = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x60]u8, // 0x1e8
+        _: [0x68]u8, // 0x248
+        _: [0x4]u8, // 0x2b0
+        _: [0x1]u8, // 0x2b4
+        _: [0x3]u8, // 0x2b5
+        _: [0x178]u8, // 0x2b8
+        _: [0x8]u8, // 0x430
+        _: [0x6d8]u8, // 0x438
+        _: [0x4]u8, // 0xb10
+        _: [0x4]u8, // 0xb14
+        _: [0x6d8]u8, // 0xb18
+        _: [0x80]u8, // 0x11f0
+        _: [0x1]u8, // 0x1270
+        _: [0x1]u8, // 0x1271
+        _: [0x6]u8, // 0x1272
+        _: [0x178]u8, // 0x1278
+    };
+    pub const C_OP_InheritFromPeerSystem = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+    };
+    pub const C_OP_PerParticleForce = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x178]u8, // 0x1f0
+        _: [0x6d8]u8, // 0x368
+        _: [0x8]u8, // 0xa40
+    };
+    pub const C_INIT_RandomNamedModelMeshGroup = extern struct {
+        pad_0: [0x210]u8, // 0x0
+    };
+    pub const C_OP_RenderProjected = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x1]u8, // 0x230
+        _: [0x1]u8, // 0x231
+        _: [0x1]u8, // 0x232
+        _: [0x1]u8, // 0x233
+        _: [0x4]u8, // 0x234
+        _: [0x4]u8, // 0x238
+        _: [0x4]u8, // 0x23c
+        _: [0x18]u8, // 0x240
+        _: [0x178]u8, // 0x258
+        _: [0x4]u8, // 0x3d0
+        _: [0x4]u8, // 0x3d4
+        _: [0x18]u8, // 0x3d8
+        _: [0x178]u8, // 0x3f0
+        _: [0x178]u8, // 0x568
+        _: [0x178]u8, // 0x6e0
+        _: [0x8]u8, // 0x858
+        _: [0x6d8]u8, // 0x860
+        _: [0x20]u8, // 0xf38
+    };
+    pub const C_OP_MaxVelocity = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x178]u8, // 0x358
+    };
+    pub const C_INIT_VelocityFromNormal = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+    };
+    pub const C_OP_MaintainEmitter = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x8]u8, // 0x360
+        _: [0x178]u8, // 0x368
+        _: [0x4]u8, // 0x4e0
+        _: [0x4]u8, // 0x4e4
+        _: [0x8]u8, // 0x4e8
+        _: [0x1]u8, // 0x4f0
+        _: [0x7]u8, // 0x4f1
+        _: [0x178]u8, // 0x4f8
+    };
+    pub const C_INIT_PositionOffsetToCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+    };
+    pub const C_INIT_RemapInitialTransformDirectionToRotation = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x68]u8, // 0x1e8
+        _: [0x4]u8, // 0x250
+        _: [0x4]u8, // 0x254
+        _: [0x8]u8, // 0x258
+    };
+    pub const C_OP_FadeAndKill = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x8]u8, // 0x1f8
+    };
+    pub const C_OP_ColorInterpolate = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x10]u8, // 0x1e0
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+    };
+    pub const C_OP_RampScalarSpline = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x28]u8, // 0x1f8
+        _: [0x4]u8, // 0x220
+        _: [0x1]u8, // 0x224
+        _: [0xb]u8, // 0x225
+    };
+    pub const C_OP_RemapNamedModelSequenceOnceTimed = extern struct {
+        pad_0: [0x240]u8, // 0x0
+    };
+    pub const C_OP_SetControlPointFromObjectScale = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+    };
+    pub const C_OP_MaintainSequentialPath = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x178]u8, // 0x358
+        _: [0x178]u8, // 0x4d0
+        _: [0x4]u8, // 0x648
+        _: [0x1]u8, // 0x64c
+        _: [0x3]u8, // 0x64d
+        _: [0x40]u8, // 0x650
+    };
+    pub const C_OP_RemapNamedModelBodyPartEndCap = extern struct {
+        pad_0: [0x240]u8, // 0x0
+    };
+    pub const C_OP_StopAfterCPDuration = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x1]u8, // 0x360
+        _: [0x7]u8, // 0x361
+    };
+    pub const CGeneralSpin = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x8]u8, // 0x1e4
+        _: [0xc]u8, // 0x1ec
+    };
+    pub const C_OP_LockToSavedSequentialPath = extern struct {
+        pad_0: [0x1e4]u8, // 0x0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x40]u8, // 0x1f0
+    };
+    pub const C_INIT_RemapNamedModelElementToScalar = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x18]u8, // 0x1f0
+        _: [0x18]u8, // 0x208
+        _: [0x4]u8, // 0x220
+        _: [0x4]u8, // 0x224
+        _: [0x4]u8, // 0x228
+        _: [0x4]u8, // 0x22c
+    };
+    pub const C_OP_ClampVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x6d8]u8, // 0x8c0
+    };
+    pub const C_OP_RenderStatusEffectCitadel = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x8]u8, // 0x230
+        _: [0x8]u8, // 0x238
+        _: [0x8]u8, // 0x240
+        _: [0x8]u8, // 0x248
+        _: [0x8]u8, // 0x250
+        _: [0x8]u8, // 0x258
+    };
+    pub const IParticleSystemDefinition = extern struct {
+        pad_0: [0x8]u8, // 0x0
+    };
+    pub const C_OP_WindForce = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x10]u8, // 0x1f0
+    };
+    pub const C_OP_SetVariable = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x50]u8, // 0x1e8
+        _: [0x68]u8, // 0x238
+        _: [0xc]u8, // 0x2a0
+        _: [0xc]u8, // 0x2ac
+        _: [0x6d8]u8, // 0x2b8
+        _: [0x178]u8, // 0x990
+    };
+    pub const C_OP_RenderStandardLight = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x4]u8, // 0x230
+        _: [0x4]u8, // 0x234
+        _: [0x6d8]u8, // 0x238
+        _: [0x8]u8, // 0x910
+        _: [0x8]u8, // 0x918
+        _: [0x178]u8, // 0x920
+        _: [0x178]u8, // 0xa98
+        _: [0x1]u8, // 0xc10
+        _: [0x7]u8, // 0xc11
+        _: [0x178]u8, // 0xc18
+        _: [0x178]u8, // 0xd90
+        _: [0x178]u8, // 0xf08
+        _: [0x178]u8, // 0x1080
+        _: [0x8]u8, // 0x11f8
+        _: [0x178]u8, // 0x1200
+        _: [0x178]u8, // 0x1378
+        _: [0x178]u8, // 0x14f0
+        _: [0x1]u8, // 0x1668
+        _: [0x7]u8, // 0x1669
+        _: [0x8]u8, // 0x1670
+        _: [0x4]u8, // 0x1678
+        _: [0x4]u8, // 0x167c
+        _: [0x178]u8, // 0x1680
+        _: [0x4]u8, // 0x17f8
+        _: [0x4]u8, // 0x17fc
+        _: [0x1]u8, // 0x1800
+        _: [0x3]u8, // 0x1801
+        _: [0x4]u8, // 0x1804
+        _: [0x4]u8, // 0x1808
+        _: [0x4]u8, // 0x180c
+        _: [0x4]u8, // 0x1810
+        _: [0x4]u8, // 0x1814
+        _: [0x4]u8, // 0x1818
+        _: [0xc]u8, // 0x181c
+    };
+    pub const C_OP_DistanceToTransform = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x178]u8, // 0x4d8
+        _: [0x178]u8, // 0x650
+        _: [0x68]u8, // 0x7c8
+        _: [0x1]u8, // 0x830
+        _: [0x83]u8, // 0x831
+        _: [0x4]u8, // 0x8b4
+        _: [0x4]u8, // 0x8b8
+        _: [0x4]u8, // 0x8bc
+        _: [0x4]u8, // 0x8c0
+        _: [0x1]u8, // 0x8c4
+        _: [0x3]u8, // 0x8c5
+        _: [0x6d8]u8, // 0x8c8
+    };
+    pub const C_OP_RemapControlPointOrientationToRotation = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+    };
+    pub const C_OP_SetControlPointToCenter = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0xc]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+    };
+    pub const C_OP_RemapAverageScalarValuetoCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x178]u8, // 0x1f0
+        _: [0x4]u8, // 0x368
+        _: [0x4]u8, // 0x36c
+        _: [0x8]u8, // 0x370
+        _: [0x178]u8, // 0x378
+    };
+    pub const C_OP_RemapDotProductToScalar = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x1]u8, // 0x204
+        _: [0x3]u8, // 0x205
+    };
+    pub const C_OP_RemapCPtoCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x4]u8, // 0x208
+        _: [0x4]u8, // 0x20c
+    };
+    pub const C_OP_SetControlPointRotation = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x178]u8, // 0x8c0
+        _: [0x4]u8, // 0xa38
+        _: [0x4]u8, // 0xa3c
+    };
+    pub const C_OP_CurlNoiseForce = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x8]u8, // 0x1f0
+        _: [0x6d8]u8, // 0x1f8
+        _: [0x6d8]u8, // 0x8d0
+        _: [0x6d8]u8, // 0xfa8
+        _: [0x6d8]u8, // 0x1680
+        _: [0x178]u8, // 0x1d58
+        _: [0x178]u8, // 0x1ed0
+    };
+    pub const C_INIT_Orient2DRelToCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+    };
+    pub const C_OP_SetSimulationRate = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+    };
+    pub const C_OP_FadeIn = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+    };
+    pub const C_OP_RenderScreenShake = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x4]u8, // 0x230
+        _: [0x4]u8, // 0x234
+        _: [0x4]u8, // 0x238
+        _: [0x4]u8, // 0x23c
+        _: [0x4]u8, // 0x240
+        _: [0x4]u8, // 0x244
+        _: [0x4]u8, // 0x248
+        _: [0x4]u8, // 0x24c
+        _: [0x8]u8, // 0x250
+    };
+    pub const C_OP_RemapBoundingVolumetoCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x8]u8, // 0x1f8
+    };
+    pub const C_OP_HSVShiftToCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x14]u8, // 0x1f4
+    };
+    pub const C_OP_RemapVectorToRotations = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e0
+        _: [0x6d8]u8, // 0x8b8
+    };
+    pub const C_INIT_GlobalScale = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x1]u8, // 0x1f4
+        _: [0x1]u8, // 0x1f5
+        _: [0x2]u8, // 0x1f6
+    };
+    pub const C_INIT_RadiusFromCPObject = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+    };
+    pub const C_INIT_InitialVelocityFromHitbox = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x80]u8, // 0x1f4
+        _: [0x4]u8, // 0x274
+    };
+    pub const C_OP_LerpVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0xc]u8, // 0x1e4
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x8]u8, // 0x1f8
+    };
+    pub const C_OP_SetControlPointFieldToWater = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+    };
+    pub const TextureGroup_t = extern struct {
+        _: [0x1]u8, // 0x0
+        _: [0x7]u8, // 0x1
+        _: [0x8]u8, // 0x8
+        _: [0x18]u8, // 0x10
+        _: [0x4]u8, // 0x28
+        _: [0x4]u8, // 0x2c
+        _: [0x8]u8, // 0x30
+        _: [0x178]u8, // 0x38
+        _: [0xa68]u8, // 0x1b0
+    };
+    pub const C_OP_TimeVaryingForce = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x4]u8, // 0x1f0
+        _: [0xc]u8, // 0x1f4
+        _: [0x4]u8, // 0x200
+        _: [0xc]u8, // 0x204
+    };
+    pub const C_OP_SetCPOrientationToGroundNormal = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x80]u8, // 0x1f0
+        _: [0x4]u8, // 0x270
+        _: [0x4]u8, // 0x274
+        _: [0x10]u8, // 0x278
+        _: [0x8]u8, // 0x288
+    };
+    pub const C_OP_SnapshotSkinToBones = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x1]u8, // 0x1e0
+        _: [0x3]u8, // 0x1e1
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+    };
+    pub const C_INIT_CreateWithinSphereTransform = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x6d8]u8, // 0x4d8
+        _: [0x10]u8, // 0xbb0
+        _: [0x68]u8, // 0xbc0
+        _: [0x178]u8, // 0xc28
+        _: [0x178]u8, // 0xda0
+        _: [0x4]u8, // 0xf18
+        _: [0x4]u8, // 0xf1c
+        _: [0x6d8]u8, // 0xf20
+        _: [0x6d8]u8, // 0x15f8
+        _: [0x4]u8, // 0x1cd0
+        _: [0x4]u8, // 0x1cd4
+    };
+    pub const C_OP_RadiusDecay = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+    };
+    pub const C_INIT_RemapNamedModelBodyPartToScalar = extern struct {
+        pad_0: [0x230]u8, // 0x0
+    };
+    pub const C_INIT_RemapScalarToVector = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0xc]u8, // 0x1f8
+        _: [0xc]u8, // 0x204
+        _: [0x4]u8, // 0x210
+        _: [0x4]u8, // 0x214
+        _: [0x4]u8, // 0x218
+        _: [0x4]u8, // 0x21c
+        _: [0x4]u8, // 0x220
+        _: [0xc]u8, // 0x224
+    };
+    pub const C_INIT_InitialSequenceFromModel = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+    };
+    pub const C_OP_NoiseEmitter = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x1]u8, // 0x200
+        _: [0x3]u8, // 0x201
+        _: [0x4]u8, // 0x204
+        _: [0x4]u8, // 0x208
+        _: [0x4]u8, // 0x20c
+        _: [0x4]u8, // 0x210
+        _: [0x4]u8, // 0x214
+        _: [0xc]u8, // 0x218
+        _: [0x4]u8, // 0x224
+    };
+    pub const CParticleFunctionInitializer = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+    };
+    pub const C_OP_SelectivelyEnableChildren = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x178]u8, // 0x4d8
+        _: [0x1]u8, // 0x650
+        _: [0x7]u8, // 0x651
+    };
+    pub const ModelReference_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+    };
+    pub const C_OP_PlanarConstraint = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0xc]u8, // 0x1e0
+        _: [0xc]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f8
+        _: [0x1]u8, // 0x1fc
+        _: [0x3]u8, // 0x1fd
+        _: [0x178]u8, // 0x200
+        _: [0x178]u8, // 0x378
+        _: [0x8]u8, // 0x4f0
+    };
+    pub const C_INIT_CreateFromCPs = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x8]u8, // 0x1f0
+        _: [0x178]u8, // 0x1f8
+    };
+    pub const C_OP_LockPoints = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+    };
+    pub const C_INIT_CreateSpiralSphere = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x68]u8, // 0x1e8
+        _: [0x178]u8, // 0x250
+        _: [0x178]u8, // 0x3c8
+        _: [0x178]u8, // 0x540
+        _: [0x178]u8, // 0x6b8
+        _: [0x8]u8, // 0x830
+    };
+    pub const C_OP_CPVelocityForce = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x8]u8, // 0x1f0
+        _: [0x178]u8, // 0x1f8
+    };
+    pub const C_OP_RemapNamedModelElementEndCap = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x18]u8, // 0x1e8
+        _: [0x18]u8, // 0x200
+        _: [0x18]u8, // 0x218
+        _: [0x4]u8, // 0x230
+        _: [0x4]u8, // 0x234
+        _: [0x8]u8, // 0x238
+    };
+    pub const C_INIT_ScaleVelocity = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e8
+    };
+    pub const C_OP_MoveToHitbox = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x60]u8, // 0x1e0
+        _: [0x6c]u8, // 0x240
+        _: [0x4]u8, // 0x2ac
+        _: [0x4]u8, // 0x2b0
+        _: [0x4]u8, // 0x2b4
+        _: [0x80]u8, // 0x2b8
+        _: [0x4]u8, // 0x338
+        _: [0x4]u8, // 0x33c
+        _: [0x178]u8, // 0x340
+    };
+    pub const C_OP_PinRopeSegmentParticleToParent = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+    };
+    pub const C_INIT_PointList = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x18]u8, // 0x1f0
+        _: [0x1]u8, // 0x208
+        _: [0x3]u8, // 0x209
+        _: [0x4]u8, // 0x20c
+    };
+    pub const C_OP_LerpToOtherAttribute = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x4]u8, // 0x358
+        _: [0x4]u8, // 0x35c
+        _: [0x30]u8, // 0x360
+    };
+    pub const C_INIT_RandomColor = extern struct {
+        pad_0: [0x204]u8, // 0x0
+        _: [0x4]u8, // 0x204
+        _: [0x4]u8, // 0x208
+        _: [0x4]u8, // 0x20c
+        _: [0x4]u8, // 0x210
+        _: [0x4]u8, // 0x214
+        _: [0x4]u8, // 0x218
+        _: [0x4]u8, // 0x21c
+        _: [0x4]u8, // 0x220
+        _: [0x4]u8, // 0x224
+        _: [0x8]u8, // 0x228
+    };
+    pub const C_OP_SetGravityToCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x178]u8, // 0x1f0
+        _: [0x1]u8, // 0x368
+        _: [0x1]u8, // 0x369
+        _: [0x6]u8, // 0x36a
+    };
+    pub const C_INIT_RemapParticleCountToScalar = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x1]u8, // 0x208
+        _: [0x1]u8, // 0x209
+        _: [0x2]u8, // 0x20a
+        _: [0xc]u8, // 0x20c
+    };
+    pub const C_INIT_InheritFromParentParticles = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x8]u8, // 0x1f8
+    };
+    pub const C_OP_RampScalarLinearSimple = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x28]u8, // 0x1e8
+        _: [0x10]u8, // 0x210
+    };
+    pub const C_INIT_ChaoticAttractor = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x8]u8, // 0x208
+    };
+    pub const C_OP_MovementRigidAttachToCP = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+    };
+    pub const C_OP_RenderFlattenGrass = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x4]u8, // 0x230
+        _: [0x4]u8, // 0x234
+        _: [0x8]u8, // 0x238
+    };
+    pub const C_OP_RenderLightBeam = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x8]u8, // 0x230
+        _: [0x6d8]u8, // 0x238
+        _: [0x8]u8, // 0x910
+        _: [0x8]u8, // 0x918
+        _: [0x178]u8, // 0x920
+        _: [0x178]u8, // 0xa98
+        _: [0x178]u8, // 0xc10
+        _: [0x1]u8, // 0xd88
+        _: [0x7]u8, // 0xd89
+        _: [0x178]u8, // 0xd90
+        _: [0x178]u8, // 0xf08
+        _: [0x178]u8, // 0x1080
+        _: [0x178]u8, // 0x11f8
+        _: [0x178]u8, // 0x1370
+        _: [0x178]u8, // 0x14e8
+        _: [0x6d8]u8, // 0x1660
+        _: [0x8]u8, // 0x1d38
+        _: [0x178]u8, // 0x1d40
+        _: [0x178]u8, // 0x1eb8
+        _: [0x8]u8, // 0x2030
+    };
+    pub const C_INIT_SkyVisCull = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x4]u8, // 0x8c0
+        _: [0x4]u8, // 0x8c4
+    };
+    pub const C_OP_EnableChildrenFromParentParticleCount = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x178]u8, // 0x1f0
+        _: [0x1]u8, // 0x368
+        _: [0x1]u8, // 0x369
+        _: [0x6]u8, // 0x36a
+    };
+    pub const C_INIT_DistanceToCPInit = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x178]u8, // 0x1f0
+        _: [0x178]u8, // 0x368
+        _: [0x178]u8, // 0x4e0
+        _: [0x178]u8, // 0x658
+        _: [0x4]u8, // 0x7d0
+        _: [0x1]u8, // 0x7d4
+        _: [0x83]u8, // 0x7d5
+        _: [0x8]u8, // 0x858
+        _: [0x178]u8, // 0x860
+        _: [0x4]u8, // 0x9d8
+        _: [0x4]u8, // 0x9dc
+        _: [0x4]u8, // 0x9e0
+        _: [0xc]u8, // 0x9e4
+        _: [0x8]u8, // 0x9f0
+    };
+    pub const C_OP_EndCapDecay = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+    };
+    pub const C_OP_ForceBasedOnDistanceToPlane = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x4]u8, // 0x1f0
+        _: [0xc]u8, // 0x1f4
+        _: [0x4]u8, // 0x200
+        _: [0xc]u8, // 0x204
+        _: [0xc]u8, // 0x210
+        _: [0x4]u8, // 0x21c
+        _: [0x8]u8, // 0x220
+    };
+    pub const C_OP_RemapDensityToVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0xc]u8, // 0x1f0
+        _: [0xc]u8, // 0x1fc
+        _: [0x4]u8, // 0x208
+        _: [0x4]u8, // 0x20c
+    };
+    pub const ParticleControlPointConfiguration_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x18]u8, // 0x8
+        _: [0x70]u8, // 0x20
+    };
+    pub const C_INIT_SetRigidAttachment = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+    };
+    pub const MaterialVariable_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+    };
+    pub const CParticleFunctionConstraint = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+    };
+    pub const C_OP_RemapSpeed = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x8]u8, // 0x1f8
+    };
+    pub const C_OP_RenderModels = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x1]u8, // 0x230
+        _: [0x1]u8, // 0x231
+        _: [0x1]u8, // 0x232
+        _: [0x5]u8, // 0x233
+        _: [0x18]u8, // 0x238
+        _: [0x4]u8, // 0x250
+        _: [0x4]u8, // 0x254
+        _: [0x1]u8, // 0x258
+        _: [0x1]u8, // 0x259
+        _: [0x6]u8, // 0x25a
+        _: [0x6d8]u8, // 0x260
+        _: [0x6d8]u8, // 0x938
+        _: [0x4]u8, // 0x1010
+        _: [0x4]u8, // 0x1014
+        _: [0x6d8]u8, // 0x1018
+        _: [0x4]u8, // 0x16f0
+        _: [0x4]u8, // 0x16f4
+        _: [0x8]u8, // 0x16f8
+        _: [0x178]u8, // 0x1700
+        _: [0x1]u8, // 0x1878
+        _: [0x1]u8, // 0x1879
+        _: [0x1]u8, // 0x187a
+        _: [0x1]u8, // 0x187b
+        _: [0x4]u8, // 0x187c
+        _: [0x4]u8, // 0x1880
+        _: [0x4]u8, // 0x1884
+        _: [0x100]u8, // 0x1888
+        _: [0x100]u8, // 0x1988
+        _: [0x1]u8, // 0x1a88
+        _: [0x1]u8, // 0x1a89
+        _: [0x46]u8, // 0x1a8a
+        _: [0x8]u8, // 0x1ad0
+        _: [0x8]u8, // 0x1ad8
+        _: [0x178]u8, // 0x1ae0
+        _: [0x18]u8, // 0x1c58
+        _: [0x178]u8, // 0x1c70
+        _: [0x178]u8, // 0x1de8
+        _: [0x60]u8, // 0x1f60
+        _: [0x4]u8, // 0x1fc0
+        _: [0x100]u8, // 0x1fc4
+        _: [0x1]u8, // 0x20c4
+        _: [0x3]u8, // 0x20c5
+        _: [0x4]u8, // 0x20c8
+        _: [0x1]u8, // 0x20cc
+        _: [0x1]u8, // 0x20cd
+        _: [0x1]u8, // 0x20ce
+        _: [0x1]u8, // 0x20cf
+        _: [0x1]u8, // 0x20d0
+        _: [0x1]u8, // 0x20d1
+        _: [0x106]u8, // 0x20d2
+        _: [0x178]u8, // 0x21d8
+        _: [0x178]u8, // 0x2350
+        _: [0x178]u8, // 0x24c8
+        _: [0x8]u8, // 0x2640
+        _: [0x6d8]u8, // 0x2648
+        _: [0x8]u8, // 0x2d20
+        _: [0x8]u8, // 0x2d28
+        _: [0x1b8]u8, // 0x2d30
+    };
+    pub const C_OP_RenderClientPhysicsImpulse = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x178]u8, // 0x230
+        _: [0x178]u8, // 0x3a8
+        _: [0x8]u8, // 0x520
+    };
+    pub const CParticleFunctionEmitter = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+    };
+    pub const C_INIT_RemapNamedModelMeshGroupToScalar = extern struct {
+        pad_0: [0x230]u8, // 0x0
+    };
+    pub const C_OP_SetControlPointOrientationToCPVelocity = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+    };
+    pub const C_OP_RopeSpringConstraint = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x178]u8, // 0x1e0
+        _: [0x178]u8, // 0x358
+        _: [0x178]u8, // 0x4d0
+        _: [0x8]u8, // 0x648
+        _: [0x178]u8, // 0x650
+    };
+    pub const C_INIT_PositionWarpScalar = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0xc]u8, // 0x1e8
+        _: [0xc]u8, // 0x1f4
+        _: [0x178]u8, // 0x200
+        _: [0x4]u8, // 0x378
+        _: [0x4]u8, // 0x37c
+        _: [0x8]u8, // 0x380
+    };
+    pub const C_OP_ForceControlPointStub = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+    };
+    pub const C_OP_VectorNoise = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0xc]u8, // 0x1e4
+        _: [0xc]u8, // 0x1f0
+        _: [0x4]u8, // 0x1fc
+        _: [0x1]u8, // 0x200
+        _: [0x3]u8, // 0x201
+        _: [0x4]u8, // 0x204
+    };
+    pub const C_OP_RemapParticleCountToScalar = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x178]u8, // 0x4d8
+        _: [0x178]u8, // 0x650
+        _: [0x4]u8, // 0x7c8
+        _: [0x4]u8, // 0x7cc
+    };
+    pub const C_INIT_QuantizeFloat = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x178]u8, // 0x1e8
+        _: [0x8]u8, // 0x360
+    };
+    pub const C_OP_RemapModelVolumetoCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x4]u8, // 0x208
+        _: [0x1]u8, // 0x20c
+        _: [0x3]u8, // 0x20d
+    };
+    pub const C_OP_SetToCP = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0xc]u8, // 0x1e4
+        _: [0x8]u8, // 0x1f0
+    };
+    pub const ParticleControlPointDriver_t = extern struct {
+        _: [0x10]u8, // 0x0
+        _: [0x8]u8, // 0x10
+        _: [0x8]u8, // 0x18
+        _: [0xc]u8, // 0x20
+        _: [0xc]u8, // 0x2c
+        _: [0x8]u8, // 0x38
+    };
+    pub const C_OP_ParentVortices = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x4]u8, // 0x1f0
+        _: [0xc]u8, // 0x1f4
+        _: [0x8]u8, // 0x200
+    };
+    pub const C_OP_SetControlPointToCPVelocity = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x8]u8, // 0x1f8
+        _: [0x6d8]u8, // 0x200
+    };
+    pub const C_OP_ClientPhysics = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x8]u8, // 0x230
+        _: [0x8]u8, // 0x238
+        _: [0x178]u8, // 0x240
+        _: [0x178]u8, // 0x3b8
+        _: [0x4]u8, // 0x530
+        _: [0x4]u8, // 0x534
+        _: [0x1]u8, // 0x538
+        _: [0x1]u8, // 0x539
+        _: [0x2]u8, // 0x53a
+        _: [0x4]u8, // 0x53c
+        _: [0x4]u8, // 0x540
+        _: [0x4]u8, // 0x544
+        _: [0x4]u8, // 0x548
+        _: [0x4]u8, // 0x54c
+        _: [0x8]u8, // 0x550
+    };
+    pub const C_OP_SpinYaw = extern struct {
+        pad_0: [0x1f8]u8, // 0x0
+    };
+    pub const PointDefinitionWithTimeValues_t = extern struct {
+        pad_0: [0x14]u8, // 0x0
+        _: [0x4]u8, // 0x14
+    };
+    pub const RenderProjectedMaterial_t = extern struct {
+        _: [0x8]u8, // 0x0
+    };
+    pub const C_INIT_SetFloatAttributeToVectorExpression = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x8]u8, // 0x1e8
+        _: [0x6d8]u8, // 0x1f0
+        _: [0x6d8]u8, // 0x8c8
+        _: [0x178]u8, // 0xfa0
+        _: [0x4]u8, // 0x1118
+        _: [0x4]u8, // 0x111c
+    };
+    pub const C_OP_ExternalWindForce = extern struct {
+        pad_0: [0x1f0]u8, // 0x0
+        _: [0x6d8]u8, // 0x1f0
+        _: [0x6d8]u8, // 0x8c8
+        _: [0x1]u8, // 0xfa0
+        _: [0x1]u8, // 0xfa1
+        _: [0x1]u8, // 0xfa2
+        _: [0x5]u8, // 0xfa3
+        _: [0x6d8]u8, // 0xfa8
+        _: [0x8]u8, // 0x1680
+        _: [0x178]u8, // 0x1688
+        _: [0x178]u8, // 0x1800
+        _: [0x6d8]u8, // 0x1978
+    };
+    pub const C_INIT_ModelCull = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x4]u8, // 0x1e8
+        _: [0x1]u8, // 0x1ec
+        _: [0x1]u8, // 0x1ed
+        _: [0x1]u8, // 0x1ee
+        _: [0x81]u8, // 0x1ef
+    };
+    pub const C_OP_RenderSprites = extern struct {
+        pad_0: [0x2ed8]u8, // 0x0
+        _: [0x178]u8, // 0x2ed8
+        _: [0x4]u8, // 0x3050
+        _: [0x4]u8, // 0x3054
+        _: [0x4]u8, // 0x3058
+        _: [0x4]u8, // 0x305c
+        _: [0x178]u8, // 0x3060
+        _: [0x178]u8, // 0x31d8
+        _: [0x178]u8, // 0x3350
+        _: [0x178]u8, // 0x34c8
+        _: [0x178]u8, // 0x3640
+        _: [0x4]u8, // 0x37b8
+        _: [0x4]u8, // 0x37bc
+        _: [0x1]u8, // 0x37c0
+        _: [0x3]u8, // 0x37c1
+        _: [0x4]u8, // 0x37c4
+        _: [0x4]u8, // 0x37c8
+        _: [0x4]u8, // 0x37cc
+        _: [0x4]u8, // 0x37d0
+        _: [0x4]u8, // 0x37d4
+        _: [0x4]u8, // 0x37d8
+        _: [0x4]u8, // 0x37dc
+        _: [0x4]u8, // 0x37e0
+        _: [0x4]u8, // 0x37e4
+        _: [0x8]u8, // 0x37e8
+        _: [0x6d8]u8, // 0x37f0
+        _: [0x178]u8, // 0x3ec8
+        _: [0x178]u8, // 0x4040
+        _: [0x4]u8, // 0x41b8
+        _: [0xc]u8, // 0x41bc
+    };
+    pub const C_OP_PercentageBetweenTransformLerpCPs = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+        _: [0x68]u8, // 0x1f0
+        _: [0x68]u8, // 0x258
+        _: [0x4]u8, // 0x2c0
+        _: [0x4]u8, // 0x2c4
+        _: [0x4]u8, // 0x2c8
+        _: [0x4]u8, // 0x2cc
+        _: [0x4]u8, // 0x2d0
+        _: [0x1]u8, // 0x2d4
+        _: [0x3]u8, // 0x2d5
+    };
+    pub const C_OP_SetPerChildControlPoint = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+        _: [0x178]u8, // 0x1f0
+        _: [0x178]u8, // 0x368
+        _: [0x4]u8, // 0x4e0
+        _: [0x4]u8, // 0x4e4
+        _: [0x8]u8, // 0x4e8
+    };
+    pub const C_OP_RenderTreeShake = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x4]u8, // 0x230
+        _: [0x4]u8, // 0x234
+        _: [0x4]u8, // 0x238
+        _: [0x4]u8, // 0x23c
+        _: [0x4]u8, // 0x240
+        _: [0x4]u8, // 0x244
+        _: [0x4]u8, // 0x248
+        _: [0x4]u8, // 0x24c
+        _: [0x4]u8, // 0x250
+        _: [0x4]u8, // 0x254
+    };
+    pub const C_OP_WorldCollideConstraint = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+    };
+    pub const C_OP_SetAttributeToScalarExpression = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x8]u8, // 0x1e0
+        _: [0x178]u8, // 0x1e8
+        _: [0x178]u8, // 0x360
+        _: [0x178]u8, // 0x4d8
+        _: [0x4]u8, // 0x650
+        _: [0x2c]u8, // 0x654
+    };
+    pub const C_OP_CycleScalar = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x1]u8, // 0x1f0
+        _: [0x3]u8, // 0x1f1
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x8]u8, // 0x200
+    };
+    pub const C_OP_RenderMaterialProxy = extern struct {
+        pad_0: [0x230]u8, // 0x0
+        _: [0x4]u8, // 0x230
+        _: [0x4]u8, // 0x234
+        _: [0x18]u8, // 0x238
+        _: [0x8]u8, // 0x250
+        _: [0x178]u8, // 0x258
+        _: [0x6d8]u8, // 0x3d0
+        _: [0x178]u8, // 0xaa8
+        _: [0x20]u8, // 0xc20
+    };
+    pub const FloatInputMaterialVariable_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x178]u8, // 0x8
+    };
+    pub const C_OP_RampScalarLinear = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x2c]u8, // 0x1f4
+        _: [0x4]u8, // 0x220
+        _: [0xc]u8, // 0x224
+    };
+    pub const C_OP_RotateVector = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0xc]u8, // 0x1e4
+        _: [0xc]u8, // 0x1f0
+        _: [0x4]u8, // 0x1fc
+        _: [0x4]u8, // 0x200
+        _: [0x4]u8, // 0x204
+        _: [0x178]u8, // 0x208
+    };
+    pub const C_INIT_InitVecCollection = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x6d8]u8, // 0x1e8
+        _: [0x8]u8, // 0x8c0
+    };
+    pub const C_INIT_RemapParticleCountToNamedModelMeshGroupScalar = extern struct {
+        pad_0: [0x238]u8, // 0x0
+    };
+    pub const C_INIT_SequenceFromCP = extern struct {
+        pad_0: [0x1e8]u8, // 0x0
+        _: [0x1]u8, // 0x1e8
+        _: [0x3]u8, // 0x1e9
+        _: [0x4]u8, // 0x1ec
+        _: [0x10]u8, // 0x1f0
+    };
+    pub const C_OP_CPOffsetToPercentageBetweenCPs = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x4]u8, // 0x1e8
+        _: [0x4]u8, // 0x1ec
+        _: [0x4]u8, // 0x1f0
+        _: [0x4]u8, // 0x1f4
+        _: [0x4]u8, // 0x1f8
+        _: [0x4]u8, // 0x1fc
+        _: [0x1]u8, // 0x200
+        _: [0x3]u8, // 0x201
+        _: [0xc]u8, // 0x204
+    };
+    pub const C_OP_LerpEndCapScalar = extern struct {
+        pad_0: [0x1e0]u8, // 0x0
+        _: [0x4]u8, // 0x1e0
+        _: [0x4]u8, // 0x1e4
+        _: [0x8]u8, // 0x1e8
+    };
+};
