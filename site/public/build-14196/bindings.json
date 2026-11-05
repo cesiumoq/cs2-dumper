@@ -1,0 +1,10 @@
+{
+  "bindings": [
+    {"name": "CameraTrace", "module": "client.dll", "rva": "0xA1B760", "status": "ok", "bytes": "4C 8B DC 49 89 5B 08 49 89 6B 10 49 89 73 18 49 89 7B 20 41 54 41 56 41"},
+    {"name": "hull", "module": "client.dll", "rva": "0xA1B760", "status": "ok", "bytes": "4C 8B DC 49 89 5B 08 49 89 6B 10 49 89 73 18 49 89 7B 20 41 54 41 56 41"},
+    {"name": "allocate", "module": "client.dll", "rva": "0x4F8380", "status": "ok", "bytes": "48 89 5C 24 10 57 48 83 EC 20 33 FF 48 8B D9 48 85 C9 75 23 B9 30 00 00"},
+    {"name": "GetPaintKit", "module": "client.dll", "rva": "0x1190A44", "status": "ok", "bytes": "48 89 6C 24 50 4C 89 64 24 58 4C 89 74 24 60 4C 8D 34 C9 49 C1 E6 03 2B"},
+    {"name": "UpdateCompositeOwner", "module": "client.dll", "rva": "0x14EBB77", "status": "ok", "bytes": "48 89 58 08 48 89 68 10 48 8B E9 48 89 78 20 4C 89 60 F8 45 33 E4 4C 89"},
+    {"name": "fire_event_client_side", "module": "client.dll", "rva": "0x0", "status": "missing", "bytes": ""}
+  ]
+}
