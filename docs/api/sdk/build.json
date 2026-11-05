@@ -1,12 +1,12 @@
 {
   "build_number": 14196,
-  "dump_seconds": 46.1,
-  "generated_at": "2026-11-05T13:52:19",
+  "dump_seconds": 1.2,
+  "generated_at": "2026-11-05T13:59:28",
   "patch_version": "1.41.9.4",
-  "valid": false,
-  "publish_ready": false,
-  "reason": "signature resolution incomplete",
-  "signatures": {"total": 578, "found": 571, "recovered": 11, "missing": [{"name": "DrawLegs", "module": "client.dll"}, {"name": "FirstPersonLegs", "module": "client.dll"}, {"name": "GloveApply_PerTick", "module": "client.dll"}, {"name": "C_CSWeaponBase_GetRecoilOffset", "module": "client.dll"}, {"name": "C_CSWeaponBase_UpdateAccuracyPenalty", "module": "client.dll"}, {"name": "GameSystem_Think_CheckSteamBan", "module": "server.dll"}, {"name": "C_EconItemView_GetBasePlayerWeaponVData", "module": "client.dll"}]},
+  "valid": true,
+  "publish_ready": true,
+  "reason": "1 signature allowed as unresolved",
+  "signatures": {"total": 578, "found": 577, "recovered": 17, "missing": [{"name": "GameSystem_Think_CheckSteamBan", "module": "server.dll"}]},
   "recovered_patterns": "recovered_patterns.json",
   "offsets": {"count": 202},
   "modules": {

@@ -1,13 +1,9 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 202
-/*  Dumped At       : 12:53 05/11/2026 (GMT)
-/*  Dumped In       : 46,1s
+/*  Dumped At       : 13:00 05/11/2026 (GMT)
+/*  Dumped In       : 1,2s
 */
-
-// Single-include amalgamation header for CS2 internal cheats.
-// Add the dump's `include/` to your include path and:
-//     #include <cs2.hpp>
 
 #pragma once
 

@@ -1,13 +1,19 @@
 {
   "BulkRegenIterator": {"module": "client.dll", "rva": "0x80514A", "resolve": "raw"},
+  "DrawLegs": {"module": "client.dll", "rva": "0x1330F20", "resolve": "absolute"},
+  "FirstPersonLegs": {"module": "client.dll", "rva": "0x1330F20", "resolve": "absolute"},
   "GetWeaponInAccuracyRecoveryTime": {"module": "client.dll", "rva": "0x80E060", "resolve": "raw"},
+  "GloveApply_PerTick": {"module": "client.dll", "rva": "0xC66F9A", "resolve": "absolute"},
   "IsOverwatch": {"module": "client.dll", "rva": "0x152BB90", "resolve": "raw"},
   "RegenerateWeaponSkin": {"module": "client.dll", "rva": "0x82B57C", "resolve": "raw"},
   "RegenerateWeaponSkin_v2": {"module": "client.dll", "rva": "0x82B57C", "resolve": "raw"},
+  "C_CSWeaponBase_GetRecoilOffset": {"module": "client.dll", "rva": "0x7CF510", "resolve": "absolute"},
+  "C_CSWeaponBase_UpdateAccuracyPenalty": {"module": "client.dll", "rva": "0x8282D9", "resolve": "absolute"},
   "pWeaponRecoilTable": {"module": "client.dll", "rva": "0x221D040", "resolve": "absolute"},
   "ProcessMessages": {"module": "networksystem.dll", "rva": "0xC0F80", "resolve": "raw"},
   "pSoundChannels": {"module": "soundsystem.dll", "rva": "0x654C78", "resolve": "absolute"},
   "pSoundSystem": {"module": "soundsystem.dll", "rva": "0x532420", "resolve": "absolute"},
   "SomeUtlSymbolFunc": {"module": "soundsystem.dll", "rva": "0xACAC0", "resolve": "raw"},
+  "C_EconItemView_GetBasePlayerWeaponVData": {"module": "client.dll", "rva": "0x7CDD40", "resolve": "absolute"},
   "C_CSWeaponBase_UpdateCompositeMaterialSet": {"module": "client.dll", "rva": "0x800DF0", "resolve": "raw"}
 }
