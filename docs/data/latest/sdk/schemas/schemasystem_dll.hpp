@@ -47,14 +47,12 @@ namespace schemasystem {
         SCHEMA_FIELD(KeyValues3                      , m_KV3                                           , 0x168) // KeyValues3
     };
 
-    // CExampleSchemaVData_Monomorphic
-    //   fields: 2
-    //   size: 0x8
-    //   @MGetKV3ClassDefaults
-    class CExampleSchemaVData_Monomorphic {
+    // InfoForResourceTypeCResourceManifestInternal
+    //   fields: 0
+    //   size: 0x1
+    //   @MResourceTypeForInfoType
+    class InfoForResourceTypeCResourceManifestInternal {
     public:
-        SCHEMA_FIELD(std::int32_t                    , m_nExample1                                     , 0x0) // int32
-        SCHEMA_FIELD(std::int32_t                    , m_nExample2                                     , 0x4) // int32
     };
 
     // CExampleSchemaVData_PolymorphicBase
@@ -66,6 +64,15 @@ namespace schemasystem {
         SCHEMA_FIELD(std::int32_t                    , m_nBase                                         , 0x8) // int32
     };
 
+    // CExampleSchemaVData_PolymorphicDerivedB
+    //   fields: 1
+    //   size: 0x18
+    //   @MGetKV3ClassDefaults
+    class CExampleSchemaVData_PolymorphicDerivedB {
+    public:
+        SCHEMA_FIELD(std::int32_t                    , m_nDerivedB                                     , 0x10) // int32
+    };
+
     // ResourceId_t
     //   fields: 1
     //   size: 0x8
@@ -74,21 +81,14 @@ namespace schemasystem {
         SCHEMA_FIELD(std::uint64_t                   , m_Value                                         , 0x0) // uint64
     };
 
-    // InfoForResourceTypeCResourceManifestInternal
-    //   fields: 0
-    //   size: 0x1
-    //   @MResourceTypeForInfoType
-    class InfoForResourceTypeCResourceManifestInternal {
-    public:
-    };
-
-    // CExampleSchemaVData_PolymorphicDerivedB
-    //   fields: 1
-    //   size: 0x18
+    // CExampleSchemaVData_Monomorphic
+    //   fields: 2
+    //   size: 0x8
     //   @MGetKV3ClassDefaults
-    class CExampleSchemaVData_PolymorphicDerivedB {
+    class CExampleSchemaVData_Monomorphic {
     public:
-        SCHEMA_FIELD(std::int32_t                    , m_nDerivedB                                     , 0x10) // int32
+        SCHEMA_FIELD(std::int32_t                    , m_nExample1                                     , 0x0) // int32
+        SCHEMA_FIELD(std::int32_t                    , m_nExample2                                     , 0x4) // int32
     };
 
     // CExampleSchemaVData_PolymorphicDerivedA

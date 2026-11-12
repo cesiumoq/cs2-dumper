@@ -348,6 +348,7 @@ pub mod engine2_dll {
     #[repr(C)]
     pub struct EventClientPollNetworking_t {
         pub _: [u8; 0x4], // 0x0
+        pub _: [u8; 0x4], // 0x4
     }
 
     #[repr(C)]

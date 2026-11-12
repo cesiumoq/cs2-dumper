@@ -1,8 +1,8 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
-/*  Total Offsets   : 202
-/*  Dumped At       : 14:40 05/11/2026 (GMT)
-/*  Dumped In       : 1,2s
+/*  Total Offsets   : 201
+/*  Dumped At       : 13:18 12/11/2026 (GMT)
+/*  Dumped In       : 68,0s
 */
 
 /* cesium dumper | generated from live schema */
@@ -4061,8 +4061,8 @@ namespace Cs2.server_dll {
         [FieldOffset(0x3298)] public fixed byte _[0xc];
         [FieldOffset(0x32a4)] public fixed byte _[0x4];
         [FieldOffset(0x32a8)] public fixed byte _[0x20];
-        [FieldOffset(0x32c8)] public fixed byte _[0x1b];
-        [FieldOffset(0x32e3)] public fixed byte _[0xd];
+        [FieldOffset(0x32c8)] public fixed byte _[0x1a];
+        [FieldOffset(0x32e2)] public fixed byte _[0xe];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0xd50)]
@@ -8280,7 +8280,7 @@ namespace Cs2.server_dll {
         [FieldOffset(0x8)] public fixed byte _[0x20];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x4d8)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x4e0)]
     public unsafe struct CMapInfo {
         [FieldOffset(0x0)] public fixed byte pad_0[0x4a8];
         [FieldOffset(0x4a8)] public fixed byte _[0x4];
@@ -8298,6 +8298,7 @@ namespace Cs2.server_dll {
         [FieldOffset(0x4cc)] public fixed byte _[0x4];
         [FieldOffset(0x4d0)] public fixed byte _[0x4];
         [FieldOffset(0x4d4)] public fixed byte _[0x4];
+        [FieldOffset(0x4d8)] public fixed byte _[0x8];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x4e8)]
@@ -10236,7 +10237,8 @@ namespace Cs2.server_dll {
         [FieldOffset(0x26)] public fixed byte _[0x2];
         [FieldOffset(0x28)] public fixed byte _[0x4];
         [FieldOffset(0x2c)] public fixed byte _[0x4];
-        [FieldOffset(0x30)] public fixed byte _[0x8];
+        [FieldOffset(0x30)] public fixed byte _[0x4];
+        [FieldOffset(0x34)] public fixed byte _[0x4];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x40)]
@@ -10361,9 +10363,9 @@ namespace Cs2.server_dll {
         [FieldOffset(0x0)] public fixed byte pad_0[0x20];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x130)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f0)]
     public unsafe struct CNmAimCSTask {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x130];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f0];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x4)]

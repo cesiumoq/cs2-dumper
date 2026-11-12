@@ -1,0 +1,860 @@
+/* cesium dumper | generated from live schema */
+pub const vphysics2_dll = struct {
+    pub const RnSphereDesc_t = extern struct {
+        pad_0: [0x18]u8, // 0x0
+        _: [0x10]u8, // 0x18
+    };
+    pub const RnCompoundDesc_t = extern struct {
+        pad_0: [0x18]u8, // 0x0
+        _: [0x160]u8, // 0x18
+    };
+    pub const RnSoftbodyParticle_t = extern struct {
+        _: [0x4]u8, // 0x0
+    };
+    pub const RnHullDesc_t = extern struct {
+        pad_0: [0x18]u8, // 0x0
+        _: [0xf8]u8, // 0x18
+    };
+    pub const RnCapsuleDesc_t = extern struct {
+        pad_0: [0x18]u8, // 0x0
+        _: [0x20]u8, // 0x18
+    };
+    pub const PhysFeModelDesc_t = extern struct {
+        _: [0x18]u8, // 0x0
+        _: [0x18]u8, // 0x18
+        _: [0x4]u8, // 0x30
+        _: [0x4]u8, // 0x34
+        _: [0x4]u8, // 0x38
+        _: [0x4]u8, // 0x3c
+        _: [0x2]u8, // 0x40
+        _: [0x2]u8, // 0x42
+        _: [0x2]u8, // 0x44
+        _: [0x2]u8, // 0x46
+        _: [0x2]u8, // 0x48
+        _: [0x2]u8, // 0x4a
+        _: [0x2]u8, // 0x4c
+        _: [0x2]u8, // 0x4e
+        _: [0x2]u8, // 0x50
+        _: [0x2]u8, // 0x52
+        _: [0x2]u8, // 0x54
+        _: [0x2]u8, // 0x56
+        _: [0x8]u8, // 0x58
+        _: [0x18]u8, // 0x60
+        _: [0x18]u8, // 0x78
+        _: [0x18]u8, // 0x90
+        _: [0x18]u8, // 0xa8
+        _: [0x18]u8, // 0xc0
+        _: [0x18]u8, // 0xd8
+        _: [0x18]u8, // 0xf0
+        _: [0x18]u8, // 0x108
+        _: [0x18]u8, // 0x120
+        _: [0x18]u8, // 0x138
+        _: [0x18]u8, // 0x150
+        _: [0x18]u8, // 0x168
+        _: [0x18]u8, // 0x180
+        _: [0x18]u8, // 0x198
+        _: [0x18]u8, // 0x1b0
+        _: [0x18]u8, // 0x1c8
+        _: [0x18]u8, // 0x1e0
+        _: [0x18]u8, // 0x1f8
+        _: [0x18]u8, // 0x210
+        _: [0x18]u8, // 0x228
+        _: [0x18]u8, // 0x240
+        _: [0x18]u8, // 0x258
+        _: [0x18]u8, // 0x270
+        _: [0x18]u8, // 0x288
+        _: [0x18]u8, // 0x2a0
+        _: [0x18]u8, // 0x2b8
+        _: [0x18]u8, // 0x2d0
+        _: [0x18]u8, // 0x2e8
+        _: [0x18]u8, // 0x300
+        _: [0x18]u8, // 0x318
+        _: [0x18]u8, // 0x330
+        _: [0x18]u8, // 0x348
+        _: [0x18]u8, // 0x360
+        _: [0x18]u8, // 0x378
+        _: [0x18]u8, // 0x390
+        _: [0x18]u8, // 0x3a8
+        _: [0x18]u8, // 0x3c0
+        _: [0x18]u8, // 0x3d8
+        _: [0x18]u8, // 0x3f0
+        _: [0x18]u8, // 0x408
+        _: [0x18]u8, // 0x420
+        _: [0x18]u8, // 0x438
+        _: [0x18]u8, // 0x450
+        _: [0x18]u8, // 0x468
+        _: [0x18]u8, // 0x480
+        _: [0x18]u8, // 0x498
+        _: [0x18]u8, // 0x4b0
+        _: [0x18]u8, // 0x4c8
+        _: [0x18]u8, // 0x4e0
+        _: [0x18]u8, // 0x4f8
+        _: [0x18]u8, // 0x510
+        _: [0x18]u8, // 0x528
+        _: [0x18]u8, // 0x540
+        _: [0x18]u8, // 0x558
+        _: [0x2]u8, // 0x570
+        _: [0x2]u8, // 0x572
+        _: [0x1]u8, // 0x574
+        _: [0x1]u8, // 0x575
+        _: [0x1]u8, // 0x576
+        _: [0x1]u8, // 0x577
+        _: [0x18]u8, // 0x578
+        _: [0x18]u8, // 0x590
+        _: [0x18]u8, // 0x5a8
+        _: [0x18]u8, // 0x5c0
+        _: [0x18]u8, // 0x5d8
+        _: [0x18]u8, // 0x5f0
+        _: [0x18]u8, // 0x608
+        _: [0x18]u8, // 0x620
+        _: [0x18]u8, // 0x638
+        _: [0x18]u8, // 0x650
+        _: [0x18]u8, // 0x668
+        _: [0x18]u8, // 0x680
+        _: [0x18]u8, // 0x698
+        _: [0x18]u8, // 0x6b0
+        _: [0x18]u8, // 0x6c8
+        _: [0x4]u8, // 0x6e0
+        _: [0x4]u8, // 0x6e4
+        _: [0x4]u8, // 0x6e8
+        _: [0x4]u8, // 0x6ec
+        _: [0x4]u8, // 0x6f0
+        _: [0x4]u8, // 0x6f4
+        _: [0x4]u8, // 0x6f8
+        _: [0x4]u8, // 0x6fc
+        _: [0x4]u8, // 0x700
+        _: [0x4]u8, // 0x704
+        _: [0x4]u8, // 0x708
+        _: [0x4]u8, // 0x70c
+        _: [0x4]u8, // 0x710
+        _: [0x4]u8, // 0x714
+        _: [0x4]u8, // 0x718
+        _: [0x4]u8, // 0x71c
+        _: [0x4]u8, // 0x720
+        _: [0x2]u8, // 0x724
+        _: [0x2]u8, // 0x726
+    };
+    pub const RnMeshDesc_t = extern struct {
+        pad_0: [0x18]u8, // 0x0
+        _: [0xc0]u8, // 0x18
+    };
+    pub const RnSoftbodySpring_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+    };
+    pub const RnSoftbodyCapsule_t = extern struct {
+        _: [0x18]u8, // 0x0
+        _: [0x4]u8, // 0x18
+        _: [0x4]u8, // 0x1c
+    };
+    pub const vphysics_save_cphysicsbody_t = extern struct {
+        pad_0: [0xe0]u8, // 0x0
+        _: [0x8]u8, // 0xe0
+    };
+    pub const FeBuildBoxRigid_t = extern struct {
+        pad_0: [0x40]u8, // 0x0
+        _: [0x4]u8, // 0x40
+        _: [0x4]u8, // 0x44
+        _: [0x8]u8, // 0x48
+    };
+    pub const CFeIndexedJiggleBone = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x9c]u8, // 0x8
+    };
+    pub const FeBoneMergeLink_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+    };
+    pub const IPhysAggregateInstance = extern struct {
+        pad_0: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+        _: [0x8]u8, // 0x10
+    };
+    pub const FeBandBendLimit_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0xc]u8, // 0x8
+    };
+    pub const RnCompoundTree_t = extern struct {
+        _: [0x10]u8, // 0x0
+        _: [0x8]u8, // 0x10
+    };
+    pub const FeTaperedCapsuleStretch_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x2]u8, // 0x4
+        _: [0x2]u8, // 0x6
+        _: [0x8]u8, // 0x8
+    };
+    pub const constraint_axislimit_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+    };
+    pub const FeSimdRodConstraintAnim_t = extern struct {
+        _: [0x10]u8, // 0x0
+        _: [0x10]u8, // 0x10
+        _: [0x10]u8, // 0x20
+    };
+    pub const FeSimdRodConstraint_t = extern struct {
+        _: [0x10]u8, // 0x0
+        _: [0x10]u8, // 0x10
+        _: [0x10]u8, // 0x20
+        _: [0x10]u8, // 0x30
+        _: [0x10]u8, // 0x40
+    };
+    pub const IPhysicsParticleRope = extern struct {
+        pad_0: [0x8]u8, // 0x0
+    };
+    pub const constraint_hingeparams_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0xc]u8, // 0xc
+        _: [0x10]u8, // 0x18
+        _: [0x18]u8, // 0x28
+    };
+    pub const IPhysicsBodyList = extern struct {
+        pad_0: [0x8]u8, // 0x0
+    };
+    pub const FeBuildSphereRigid_t = extern struct {
+        pad_0: [0x20]u8, // 0x0
+        _: [0x4]u8, // 0x20
+        _: [0x4]u8, // 0x24
+        _: [0x8]u8, // 0x28
+    };
+    pub const FeSimdAnimStrayRadius_t = extern struct {
+        _: [0x10]u8, // 0x0
+        _: [0x10]u8, // 0x10
+        _: [0x10]u8, // 0x20
+    };
+    pub const RnTriangle_t = extern struct {
+        _: [0xc]u8, // 0x0
+    };
+    pub const FeProxyVertexMap_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+    };
+    pub const FeNodeIntegrator_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+    };
+    pub const RnCapsule_t = extern struct {
+        _: [0x18]u8, // 0x0
+        _: [0x4]u8, // 0x18
+    };
+    pub const CFeNamedJiggleBone = extern struct {
+        _: [0x10]u8, // 0x0
+        _: [0x20]u8, // 0x10
+        _: [0x4]u8, // 0x30
+        _: [0x9c]u8, // 0x34
+    };
+    pub const FePrism_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0x4]u8, // 0xc
+    };
+    pub const FeAntiTunnelProbeBuild_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0x18]u8, // 0x18
+    };
+    pub const RnBodyDesc_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0xc]u8, // 0x8
+        _: [0x10]u8, // 0x14
+        _: [0xc]u8, // 0x24
+        _: [0xc]u8, // 0x30
+        _: [0xc]u8, // 0x3c
+        _: [0x24]u8, // 0x48
+        _: [0x4]u8, // 0x6c
+        _: [0x4]u8, // 0x70
+        _: [0x4]u8, // 0x74
+        _: [0x4]u8, // 0x78
+        _: [0x4]u8, // 0x7c
+        _: [0x4]u8, // 0x80
+        _: [0x4]u8, // 0x84
+        _: [0x4]u8, // 0x88
+        _: [0x4]u8, // 0x8c
+        _: [0x4]u8, // 0x90
+        _: [0xc]u8, // 0x94
+        _: [0xc]u8, // 0xa0
+        _: [0x4]u8, // 0xac
+        _: [0x4]u8, // 0xb0
+        _: [0x4]u8, // 0xb4
+        _: [0x4]u8, // 0xb8
+        _: [0x4]u8, // 0xbc
+        _: [0x4]u8, // 0xc0
+        _: [0x1]u8, // 0xc4
+        _: [0x1]u8, // 0xc5
+        _: [0x1]u8, // 0xc6
+        _: [0x1]u8, // 0xc7
+        _: [0x1]u8, // 0xc8
+        _: [0x1]u8, // 0xc9
+        _: [0x2]u8, // 0xca
+        _: [0xc]u8, // 0xcc
+        _: [0x1]u8, // 0xd8
+        _: [0x1]u8, // 0xd9
+        _: [0x6]u8, // 0xda
+    };
+    pub const OldFeEdge_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0x4]u8, // 0x18
+        _: [0x4]u8, // 0x1c
+        _: [0x4]u8, // 0x20
+        _: [0x4]u8, // 0x24
+        _: [0x4]u8, // 0x28
+        _: [0x4]u8, // 0x2c
+        _: [0x10]u8, // 0x30
+        _: [0x8]u8, // 0x40
+    };
+    pub const FeFollowNode_t = extern struct {
+        _: [0x2]u8, // 0x0
+        _: [0x2]u8, // 0x2
+        _: [0x4]u8, // 0x4
+    };
+    pub const RnMesh_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0xc]u8, // 0xc
+        _: [0x18]u8, // 0x18
+        _: [0x18]u8, // 0x30
+        _: [0x18]u8, // 0x48
+        _: [0x18]u8, // 0x60
+        _: [0x18]u8, // 0x78
+        _: [0x18]u8, // 0x90
+        _: [0xc]u8, // 0xa8
+        _: [0x4]u8, // 0xb4
+        _: [0x4]u8, // 0xb8
+        _: [0x4]u8, // 0xbc
+    };
+    pub const VertexPositionNormal_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0xc]u8, // 0xc
+    };
+    pub const IPhysicsRagdollControl = extern struct {
+        pad_0: [0x8]u8, // 0x0
+    };
+    pub const RnCompoundTreeNode_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0x10]u8, // 0xc
+    };
+    pub const FeBuildSDFRigid_t = extern struct {
+        pad_0: [0x50]u8, // 0x0
+        _: [0x4]u8, // 0x50
+        _: [0x4]u8, // 0x54
+        _: [0x8]u8, // 0x58
+    };
+    pub const RnBlendVertex_t = extern struct {
+        _: [0x2]u8, // 0x0
+        _: [0x2]u8, // 0x2
+        _: [0x2]u8, // 0x4
+        _: [0x2]u8, // 0x6
+        _: [0x2]u8, // 0x8
+        _: [0x2]u8, // 0xa
+        _: [0x2]u8, // 0xc
+        _: [0x2]u8, // 0xe
+    };
+    pub const CFeMorphLayer = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+        _: [0x18]u8, // 0x10
+        _: [0x18]u8, // 0x28
+        _: [0x18]u8, // 0x40
+        _: [0x18]u8, // 0x58
+        _: [0x18]u8, // 0x70
+    };
+    pub const FeCtrlSoftOffset_t = extern struct {
+        _: [0x2]u8, // 0x0
+        _: [0x2]u8, // 0x2
+        _: [0xc]u8, // 0x4
+        _: [0x4]u8, // 0x10
+    };
+    pub const VPhysEntityId_t = extern struct {
+        _: [0x4]u8, // 0x0
+    };
+    pub const RnCompound_t = extern struct {
+        _: [0x18]u8, // 0x0
+        _: [0x4]u8, // 0x18
+        _: [0x4]u8, // 0x1c
+        _: [0x8]u8, // 0x20
+        _: [0xc8]u8, // 0x28
+        _: [0x10]u8, // 0xf0
+        _: [0x10]u8, // 0x100
+        _: [0x10]u8, // 0x110
+        _: [0x10]u8, // 0x120
+        _: [0x18]u8, // 0x130
+        _: [0xc]u8, // 0x148
+        _: [0x4]u8, // 0x154
+        _: [0x8]u8, // 0x158
+    };
+    pub const FeVertexMapDesc_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x2]u8, // 0x14
+        _: [0x2]u8, // 0x16
+        _: [0x4]u8, // 0x18
+        _: [0x4]u8, // 0x1c
+        _: [0xc]u8, // 0x20
+        _: [0x4]u8, // 0x2c
+        _: [0x2]u8, // 0x30
+        _: [0x6]u8, // 0x32
+    };
+    pub const FeTaperedCapsuleRigid_t = extern struct {
+        _: [0x20]u8, // 0x0
+        _: [0x2]u8, // 0x20
+        _: [0x2]u8, // 0x22
+        _: [0x2]u8, // 0x24
+        _: [0xa]u8, // 0x26
+    };
+    pub const FeAnimStrayRadius_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+    };
+    pub const IPhysicsJoint = extern struct {
+        pad_0: [0x8]u8, // 0x0
+    };
+    pub const FeEdgeDesc_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x8]u8, // 0x4
+        _: [0x4]u8, // 0xc
+    };
+    pub const FeNodeStrayBox_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0x4]u8, // 0xc
+        _: [0xc]u8, // 0x10
+        _: [0x4]u8, // 0x1c
+    };
+    pub const FeNodeReverseOffset_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0x2]u8, // 0xc
+        _: [0x2]u8, // 0xe
+    };
+    pub const RnPlane_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0x4]u8, // 0xc
+    };
+    pub const FeSDFRigid_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0xc]u8, // 0xc
+        _: [0x4]u8, // 0x18
+        _: [0x2]u8, // 0x1c
+        _: [0x2]u8, // 0x1e
+        _: [0x2]u8, // 0x20
+        _: [0x6]u8, // 0x22
+        _: [0x18]u8, // 0x28
+        _: [0x4]u8, // 0x40
+        _: [0x4]u8, // 0x44
+        _: [0x8]u8, // 0x48
+    };
+    pub const CFeJiggleBone = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0x4]u8, // 0x18
+        _: [0x4]u8, // 0x1c
+        _: [0x4]u8, // 0x20
+        _: [0x4]u8, // 0x24
+        _: [0x4]u8, // 0x28
+        _: [0x4]u8, // 0x2c
+        _: [0x4]u8, // 0x30
+        _: [0x4]u8, // 0x34
+        _: [0x4]u8, // 0x38
+        _: [0x4]u8, // 0x3c
+        _: [0x4]u8, // 0x40
+        _: [0x4]u8, // 0x44
+        _: [0x4]u8, // 0x48
+        _: [0x4]u8, // 0x4c
+        _: [0x4]u8, // 0x50
+        _: [0x4]u8, // 0x54
+        _: [0x4]u8, // 0x58
+        _: [0x4]u8, // 0x5c
+        _: [0x4]u8, // 0x60
+        _: [0x4]u8, // 0x64
+        _: [0x4]u8, // 0x68
+        _: [0x4]u8, // 0x6c
+        _: [0x4]u8, // 0x70
+        _: [0x4]u8, // 0x74
+        _: [0x4]u8, // 0x78
+        _: [0x4]u8, // 0x7c
+        _: [0xc]u8, // 0x80
+        _: [0xc]u8, // 0x8c
+        _: [0x4]u8, // 0x98
+    };
+    pub const CRegionSVM = extern struct {
+        _: [0x18]u8, // 0x0
+        _: [0x18]u8, // 0x18
+    };
+    pub const FeWorldCollisionParams_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x2]u8, // 0x8
+        _: [0x2]u8, // 0xa
+    };
+    pub const CGenericShapeProxy = extern struct {
+        pad_0: [0x30]u8, // 0x0
+        _: [0x68]u8, // 0x30
+    };
+    pub const RnNode_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0x4]u8, // 0xc
+        _: [0xc]u8, // 0x10
+        _: [0x4]u8, // 0x1c
+    };
+    pub const FeFitMatrix_t = extern struct {
+        _: [0x20]u8, // 0x0
+        _: [0xc]u8, // 0x20
+        _: [0x2]u8, // 0x2c
+        _: [0x2]u8, // 0x2e
+        _: [0x10]u8, // 0x30
+    };
+    pub const FeSimdQuad_t = extern struct {
+        _: [0x20]u8, // 0x0
+        _: [0x10]u8, // 0x20
+        _: [0xc0]u8, // 0x30
+        _: [0x40]u8, // 0xf0
+    };
+    pub const FeSimdSpringIntegrator_t = extern struct {
+        _: [0x10]u8, // 0x0
+        _: [0x10]u8, // 0x10
+        _: [0x10]u8, // 0x20
+        _: [0x10]u8, // 0x30
+        _: [0x10]u8, // 0x40
+    };
+    pub const FeSimdNodeBase_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+        _: [0x8]u8, // 0x10
+        _: [0x8]u8, // 0x18
+        _: [0x8]u8, // 0x20
+        _: [0x8]u8, // 0x28
+        _: [0x40]u8, // 0x30
+    };
+    pub const FeQuad_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x4]u8, // 0x8
+        _: [0x40]u8, // 0xc
+    };
+    pub const FeHingeLimit_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0x4]u8, // 0x18
+        _: [0x4]u8, // 0x1c
+    };
+    pub const RnWing_t = extern struct {
+        _: [0xc]u8, // 0x0
+    };
+    pub const FeWeightedNode_t = extern struct {
+        _: [0x2]u8, // 0x0
+        _: [0x2]u8, // 0x2
+    };
+    pub const CollisionDetailLayerInfo_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+        _: [0x8]u8, // 0x10
+        _: [0x8]u8, // 0x18
+        _: [0x18]u8, // 0x20
+        _: [0x8]u8, // 0x38
+    };
+    pub const FeEffectDesc_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x10]u8, // 0x10
+    };
+    pub const FeSpringIntegrator_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+    };
+    pub const FourVectors2D = extern struct {
+        _: [0x10]u8, // 0x0
+        _: [0x10]u8, // 0x10
+    };
+    pub const FeKelagerBend2_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0x4]u8, // 0xc
+        _: [0x6]u8, // 0x10
+        _: [0x2]u8, // 0x16
+    };
+    pub const vphysics_save_ragdoll_control_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x1]u8, // 0xc
+        _: [0x1]u8, // 0xd
+        _: [0x2]u8, // 0xe
+        _: [0xc]u8, // 0x10
+        _: [0xc]u8, // 0x1c
+        _: [0xc]u8, // 0x28
+        _: [0x4]u8, // 0x34
+    };
+    pub const FeRigidColliderIndices_t = extern struct {
+        _: [0x2]u8, // 0x0
+        _: [0x2]u8, // 0x2
+        _: [0x2]u8, // 0x4
+        _: [0x2]u8, // 0x6
+        _: [0x2]u8, // 0x8
+    };
+    pub const FeCollisionPlane_t = extern struct {
+        _: [0x2]u8, // 0x0
+        _: [0x2]u8, // 0x2
+        _: [0x10]u8, // 0x4
+        _: [0x4]u8, // 0x14
+    };
+    pub const FeStiffHingeBuild_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0xc]u8, // 0x8
+        _: [0x8]u8, // 0x14
+    };
+    pub const FeBoxRigid_t = extern struct {
+        _: [0x20]u8, // 0x0
+        _: [0x2]u8, // 0x20
+        _: [0x2]u8, // 0x22
+        _: [0xc]u8, // 0x24
+        _: [0x2]u8, // 0x30
+        _: [0xe]u8, // 0x32
+    };
+    pub const FeMorphLayerDepr_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+        _: [0x18]u8, // 0x10
+        _: [0x18]u8, // 0x28
+        _: [0x18]u8, // 0x40
+        _: [0x18]u8, // 0x58
+        _: [0x18]u8, // 0x70
+        _: [0x8]u8, // 0x88
+    };
+    pub const FeCtrlOffset_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0x2]u8, // 0xc
+        _: [0x2]u8, // 0xe
+    };
+    pub const IPhysicsPlayerController = extern struct {
+        pad_0: [0x8]u8, // 0x0
+    };
+    pub const FeNodeBase_t = extern struct {
+        _: [0x2]u8, // 0x0
+        _: [0x6]u8, // 0x2
+        _: [0x2]u8, // 0x8
+        _: [0x2]u8, // 0xa
+        _: [0x2]u8, // 0xc
+        _: [0x2]u8, // 0xe
+        _: [0x10]u8, // 0x10
+    };
+    pub const FeVertexMapBuild_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0x18]u8, // 0x18
+    };
+    pub const CFeVertexMapBuildArray = extern struct {
+        _: [0x18]u8, // 0x0
+    };
+    pub const FeTri_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x8]u8, // 0x14
+    };
+    pub const RnHull_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x18]u8, // 0x14
+        _: [0xc]u8, // 0x2c
+        _: [0x30]u8, // 0x38
+        _: [0x4]u8, // 0x68
+        _: [0x4]u8, // 0x6c
+        _: [0x18]u8, // 0x70
+        _: [0x18]u8, // 0x88
+        _: [0x8]u8, // 0xa0
+        _: [0x8]u8, // 0xa8
+        _: [0x18]u8, // 0xb0
+        _: [0x18]u8, // 0xc8
+        _: [0x18]u8, // 0xe0
+    };
+    pub const FeModelSelfCollisionLayer_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x18]u8, // 0x8
+        _: [0x4]u8, // 0x20
+        _: [0x4]u8, // 0x24
+        _: [0x10]u8, // 0x28
+    };
+    pub const FeAntiTunnelGroupBuild_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+    };
+    pub const CovMatrix3 = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+    };
+    pub const PhysicsParticleId_t = extern struct {
+        _: [0x4]u8, // 0x0
+    };
+    pub const RnVertex_t = extern struct {
+        _: [0x1]u8, // 0x0
+    };
+    pub const IPhysicsMotionController = extern struct {
+        pad_0: [0x8]u8, // 0x0
+    };
+    pub const Dop26_t = extern struct {
+        _: [0x68]u8, // 0x0
+    };
+    pub const FeDynKinLink_t = extern struct {
+        _: [0x2]u8, // 0x0
+        _: [0x2]u8, // 0x2
+    };
+    pub const RnFace_t = extern struct {
+        _: [0x1]u8, // 0x0
+    };
+    pub const FeSimdPrism_t = extern struct {
+        _: [0x30]u8, // 0x0
+        _: [0x10]u8, // 0x30
+    };
+    pub const FeCtrlOsOffset_t = extern struct {
+        _: [0x2]u8, // 0x0
+        _: [0x2]u8, // 0x2
+    };
+    pub const FeAntiTunnelProbe_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x2]u8, // 0x8
+        _: [0x2]u8, // 0xa
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+        _: [0x4]u8, // 0x18
+    };
+    pub const FeSourceEdge_t = extern struct {
+        _: [0x4]u8, // 0x0
+    };
+    pub const FeTwistConstraint_t = extern struct {
+        _: [0x2]u8, // 0x0
+        _: [0x2]u8, // 0x2
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+    };
+    pub const FeNodeWindBase_t = extern struct {
+        _: [0x2]u8, // 0x0
+        _: [0x2]u8, // 0x2
+        _: [0x2]u8, // 0x4
+        _: [0x2]u8, // 0x6
+    };
+    pub const FeAxialEdgeBend_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x10]u8, // 0xc
+        _: [0xc]u8, // 0x1c
+    };
+    pub const FourCovMatrices3 = extern struct {
+        _: [0x30]u8, // 0x0
+        _: [0x10]u8, // 0x30
+        _: [0x10]u8, // 0x40
+        _: [0x10]u8, // 0x50
+    };
+    pub const constraint_breakableparams_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x8]u8, // 0xc
+        _: [0x4]u8, // 0x14
+    };
+    pub const FeSphereRigid_t = extern struct {
+        _: [0x10]u8, // 0x0
+        _: [0x2]u8, // 0x10
+        _: [0x2]u8, // 0x12
+        _: [0x2]u8, // 0x14
+        _: [0xa]u8, // 0x16
+    };
+    pub const CollisionDetailLayerInfo_t__Name_t = extern struct {
+        _: [0x8]u8, // 0x0
+        _: [0x8]u8, // 0x8
+    };
+    pub const FeBuildTaperedCapsuleRigid_t = extern struct {
+        pad_0: [0x30]u8, // 0x0
+        _: [0x4]u8, // 0x30
+        _: [0x4]u8, // 0x34
+        _: [0x8]u8, // 0x38
+    };
+    pub const IPhysicsBody = extern struct {
+        pad_0: [0x8]u8, // 0x0
+    };
+    pub const FeSoftParent_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+    };
+    pub const RnShapeDesc_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x8]u8, // 0x8
+        _: [0x1]u8, // 0x10
+        _: [0x3]u8, // 0x11
+        _: [0x4]u8, // 0x14
+    };
+    pub const FeTreeChildren_t = extern struct {
+        _: [0x4]u8, // 0x0
+    };
+    pub const FeRodConstraint_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+    };
+    pub const FeFitWeight_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x2]u8, // 0x4
+        _: [0x2]u8, // 0x6
+    };
+    pub const RnHalfEdge_t = extern struct {
+        _: [0x1]u8, // 0x0
+        _: [0x1]u8, // 0x1
+        _: [0x1]u8, // 0x2
+        _: [0x1]u8, // 0x3
+    };
+    pub const FeSimdTri_t = extern struct {
+        _: [0x30]u8, // 0x0
+        _: [0x10]u8, // 0x30
+        _: [0x10]u8, // 0x40
+        _: [0x10]u8, // 0x50
+        _: [0x20]u8, // 0x60
+    };
+    pub const VertexPositionColor_t = extern struct {
+        _: [0x10]u8, // 0x0
+    };
+    pub const FeFitInfluence_t = extern struct {
+        _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
+        _: [0x4]u8, // 0x8
+    };
+    pub const FeHingeLimitBuild_t = extern struct {
+        _: [0xc]u8, // 0x0
+        _: [0x4]u8, // 0xc
+        _: [0x4]u8, // 0x10
+        _: [0x4]u8, // 0x14
+    };
+};

@@ -379,17 +379,17 @@ pub const client_dll = struct {
         _: [0x6]u8, // 0x632
     };
     pub const C_C4 = extern struct {
-        pad_0: [0x1f20]u8, // 0x0
-        _: [0x4]u8, // 0x1f20
-        _: [0x4]u8, // 0x1f24
-        _: [0x4]u8, // 0x1f28
-        _: [0x4]u8, // 0x1f2c
-        _: [0x1]u8, // 0x1f30
-        _: [0x7]u8, // 0x1f31
-        _: [0x18]u8, // 0x1f38
-        _: [0x4]u8, // 0x1f50
-        _: [0x7]u8, // 0x1f54
-        _: [0x5]u8, // 0x1f5b
+        pad_0: [0x1f60]u8, // 0x0
+        _: [0x4]u8, // 0x1f60
+        _: [0x4]u8, // 0x1f64
+        _: [0x4]u8, // 0x1f68
+        _: [0x4]u8, // 0x1f6c
+        _: [0x1]u8, // 0x1f70
+        _: [0x7]u8, // 0x1f71
+        _: [0x18]u8, // 0x1f78
+        _: [0x4]u8, // 0x1f90
+        _: [0x7]u8, // 0x1f94
+        _: [0x5]u8, // 0x1f9b
     };
     pub const C_CSPlayerPawnBase = extern struct {
         pad_0: [0x14d8]u8, // 0x0
@@ -495,7 +495,7 @@ pub const client_dll = struct {
         _: [0x8]u8, // 0x48
     };
     pub const C_WeaponAWP = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_BaseButton = extern struct {
         pad_0: [0x1098]u8, // 0x0
@@ -571,10 +571,10 @@ pub const client_dll = struct {
         _: [0x30]u8, // 0x18
     };
     pub const C_WeaponUMP45 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_WeaponG3SG1 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_SpotlightEnd = extern struct {
         pad_0: [0x1098]u8, // 0x0
@@ -608,7 +608,7 @@ pub const client_dll = struct {
         _: [0x4]u8, // 0x1354
     };
     pub const C_WeaponFamas = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_EnvVolumetricFogController = extern struct {
         pad_0: [0x600]u8, // 0x0
@@ -714,13 +714,13 @@ pub const client_dll = struct {
         _: [0x4]u8, // 0x14
     };
     pub const C_WeaponNOVA = extern struct {
-        pad_0: [0x1f20]u8, // 0x0
+        pad_0: [0x1f60]u8, // 0x0
     };
     pub const C_CS2HudModelAddon = extern struct {
         pad_0: [0x1330]u8, // 0x0
     };
     pub const C_DEagle = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_TriggerMultiple = extern struct {
         pad_0: [0x1180]u8, // 0x0
@@ -893,7 +893,7 @@ pub const client_dll = struct {
         pad_0: [0x620]u8, // 0x0
     };
     pub const C_MolotovGrenade = extern struct {
-        pad_0: [0x1fe0]u8, // 0x0
+        pad_0: [0x2020]u8, // 0x0
     };
     pub const C_NetTestBaseCombatCharacter = extern struct {
         pad_0: [0x12f0]u8, // 0x0
@@ -903,7 +903,7 @@ pub const client_dll = struct {
         _: [0x130]u8, // 0x80
     };
     pub const C_WeaponM4A1Silencer = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_SkyCameraVolume = extern struct {
         pad_0: [0x618]u8, // 0x0
@@ -1043,64 +1043,64 @@ pub const client_dll = struct {
         _: [0x8]u8, // 0x608
     };
     pub const C_CSWeaponBase = extern struct {
-        pad_0: [0x19a8]u8, // 0x0
-        _: [0x4]u8, // 0x19a8
-        _: [0x4]u8, // 0x19ac
-        _: [0x4]u8, // 0x19b0
-        _: [0x1]u8, // 0x19b4
-        _: [0x2b]u8, // 0x19b5
-        _: [0x4]u8, // 0x19e0
-        _: [0x4]u8, // 0x19e4
-        _: [0x18]u8, // 0x19e8
-        _: [0x4]u8, // 0x1a00
-        _: [0x4]u8, // 0x1a04
-        _: [0xc]u8, // 0x1a08
-        _: [0x4]u8, // 0x1a14
-        _: [0x4]u8, // 0x1a18
-        _: [0x4]u8, // 0x1a1c
+        pad_0: [0x19e8]u8, // 0x0
+        _: [0x4]u8, // 0x19e8
+        _: [0x4]u8, // 0x19ec
+        _: [0x4]u8, // 0x19f0
+        _: [0x1]u8, // 0x19f4
+        _: [0x2b]u8, // 0x19f5
         _: [0x4]u8, // 0x1a20
         _: [0x4]u8, // 0x1a24
-        _: [0x4]u8, // 0x1a28
-        _: [0x4]u8, // 0x1a2c
-        _: [0x4]u8, // 0x1a30
-        _: [0x4]u8, // 0x1a34
-        _: [0x4]u8, // 0x1a38
-        _: [0x4]u8, // 0x1a3c
+        _: [0x18]u8, // 0x1a28
         _: [0x4]u8, // 0x1a40
         _: [0x4]u8, // 0x1a44
-        _: [0x8]u8, // 0x1a48
-        _: [0x1]u8, // 0x1a50
-        _: [0x3]u8, // 0x1a51
+        _: [0xc]u8, // 0x1a48
         _: [0x4]u8, // 0x1a54
-        _: [0x1]u8, // 0x1a58
-        _: [0x3]u8, // 0x1a59
+        _: [0x4]u8, // 0x1a58
         _: [0x4]u8, // 0x1a5c
         _: [0x4]u8, // 0x1a60
         _: [0x4]u8, // 0x1a64
         _: [0x4]u8, // 0x1a68
         _: [0x4]u8, // 0x1a6c
         _: [0x4]u8, // 0x1a70
-        _: [0xac]u8, // 0x1a74
-        _: [0x1]u8, // 0x1b20
-        _: [0x1]u8, // 0x1b21
-        _: [0x2]u8, // 0x1b22
-        _: [0xc]u8, // 0x1b24
-        _: [0x4]u8, // 0x1b30
-        _: [0x4]u8, // 0x1b34
-        _: [0x4]u8, // 0x1b38
-        _: [0x4]u8, // 0x1b3c
-        _: [0x24]u8, // 0x1b40
-        _: [0x4]u8, // 0x1b64
-        _: [0x4]u8, // 0x1b68
-        _: [0x1]u8, // 0x1b6c
-        _: [0x3]u8, // 0x1b6d
+        _: [0x4]u8, // 0x1a74
+        _: [0x4]u8, // 0x1a78
+        _: [0x4]u8, // 0x1a7c
+        _: [0x4]u8, // 0x1a80
+        _: [0x4]u8, // 0x1a84
+        _: [0x8]u8, // 0x1a88
+        _: [0x1]u8, // 0x1a90
+        _: [0x3]u8, // 0x1a91
+        _: [0x4]u8, // 0x1a94
+        _: [0x1]u8, // 0x1a98
+        _: [0x3]u8, // 0x1a99
+        _: [0x4]u8, // 0x1a9c
+        _: [0x4]u8, // 0x1aa0
+        _: [0x4]u8, // 0x1aa4
+        _: [0x4]u8, // 0x1aa8
+        _: [0x4]u8, // 0x1aac
+        _: [0x4]u8, // 0x1ab0
+        _: [0xac]u8, // 0x1ab4
+        _: [0x1]u8, // 0x1b60
+        _: [0x1]u8, // 0x1b61
+        _: [0x2]u8, // 0x1b62
+        _: [0xc]u8, // 0x1b64
         _: [0x4]u8, // 0x1b70
-        _: [0x5c]u8, // 0x1b74
-        _: [0xb0]u8, // 0x1bd0
-        _: [0x78]u8, // 0x1c80
-        _: [0x60]u8, // 0x1cf8
-        _: [0x14]u8, // 0x1d58
-        _: [0x1b4]u8, // 0x1d6c
+        _: [0x4]u8, // 0x1b74
+        _: [0x4]u8, // 0x1b78
+        _: [0x4]u8, // 0x1b7c
+        _: [0x24]u8, // 0x1b80
+        _: [0x4]u8, // 0x1ba4
+        _: [0x4]u8, // 0x1ba8
+        _: [0x1]u8, // 0x1bac
+        _: [0x3]u8, // 0x1bad
+        _: [0x4]u8, // 0x1bb0
+        _: [0x5c]u8, // 0x1bb4
+        _: [0xb0]u8, // 0x1c10
+        _: [0x78]u8, // 0x1cc0
+        _: [0x60]u8, // 0x1d38
+        _: [0x14]u8, // 0x1d98
+        _: [0x1b4]u8, // 0x1dac
     };
     pub const CTimeline = extern struct {
         pad_0: [0x10]u8, // 0x0
@@ -1135,7 +1135,7 @@ pub const client_dll = struct {
         _: [0x48]u8, // 0x8
     };
     pub const C_WeaponMag7 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const WeaponPurchaseCount_t = extern struct {
         pad_0: [0x30]u8, // 0x0
@@ -1230,7 +1230,7 @@ pub const client_dll = struct {
         _: [0x28]u8, // 0x8
     };
     pub const C_Flashbang = extern struct {
-        pad_0: [0x1fe0]u8, // 0x0
+        pad_0: [0x2020]u8, // 0x0
     };
     pub const C_PointClientUIWorldTextPanel = extern struct {
         pad_0: [0x1300]u8, // 0x0
@@ -1265,7 +1265,7 @@ pub const client_dll = struct {
         _: [0x6]u8, // 0x10ea
     };
     pub const C_WeaponMP5SD = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_World = extern struct {
         pad_0: [0x1098]u8, // 0x0
@@ -1274,7 +1274,7 @@ pub const client_dll = struct {
         pad_0: [0x1d18]u8, // 0x0
     };
     pub const C_WeaponGalilAR = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const CCSPlayerBase_CameraServices = extern struct {
         pad_0: [0x298]u8, // 0x0
@@ -1294,7 +1294,7 @@ pub const client_dll = struct {
         _: [0x30]u8, // 0x50
     };
     pub const C_WeaponSG556 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_CSPlayerPawn = extern struct {
         pad_0: [0x1570]u8, // 0x0
@@ -1325,84 +1325,84 @@ pub const client_dll = struct {
         _: [0x1]u8, // 0x15e9
         _: [0x2]u8, // 0x15ea
         _: [0x4]u8, // 0x15ec
-        _: [0x168]u8, // 0x15f0
-        _: [0x4]u8, // 0x1758
-        _: [0x4]u8, // 0x175c
-        _: [0x1]u8, // 0x1760
-        _: [0x3]u8, // 0x1761
-        _: [0x4]u8, // 0x1764
-        _: [0x5]u8, // 0x1768
-        _: [0x3]u8, // 0x176d
-        _: [0x5b0]u8, // 0x1770
-        _: [0x1]u8, // 0x1d20
-        _: [0x3]u8, // 0x1d21
-        _: [0x4]u8, // 0x1d24
-        _: [0xc]u8, // 0x1d28
-        _: [0x40]u8, // 0x1d34
-        _: [0x4]u8, // 0x1d74
-        _: [0xc]u8, // 0x1d78
-        _: [0x4]u8, // 0x1d84
-        _: [0x20]u8, // 0x1d88
-        _: [0x4]u8, // 0x1da8
-        _: [0xc]u8, // 0x1dac
-        _: [0x4]u8, // 0x1db8
-        _: [0x4]u8, // 0x1dbc
-        _: [0x4]u8, // 0x1dc0
-        _: [0x4]u8, // 0x1dc4
-        _: [0x4]u8, // 0x1dc8
-        _: [0x4]u8, // 0x1dcc
-        _: [0x48]u8, // 0x1dd0
-        _: [0x50]u8, // 0x1e18
-        _: [0x18]u8, // 0x1e68
-        _: [0x8]u8, // 0x1e80
-        _: [0x18]u8, // 0x1e88
-        _: [0x1]u8, // 0x1ea0
-        _: [0x1]u8, // 0x1ea1
-        _: [0x1]u8, // 0x1ea2
-        _: [0x1]u8, // 0x1ea3
-        _: [0x4]u8, // 0x1ea4
-        _: [0x4]u8, // 0x1ea8
-        _: [0x4]u8, // 0x1eac
-        _: [0x4]u8, // 0x1eb0
-        _: [0x4]u8, // 0x1eb4
-        _: [0x4]u8, // 0x1eb8
-        _: [0x4]u8, // 0x1ebc
-        _: [0x4]u8, // 0x1ec0
-        _: [0x4]u8, // 0x1ec4
-        _: [0x5]u8, // 0x1ec8
-        _: [0x3]u8, // 0x1ecd
-        _: [0x4]u8, // 0x1ed0
-        _: [0x2]u8, // 0x1ed4
-        _: [0x2]u8, // 0x1ed6
+        _: [0x198]u8, // 0x15f0
+        _: [0x4]u8, // 0x1788
+        _: [0x4]u8, // 0x178c
+        _: [0x1]u8, // 0x1790
+        _: [0x3]u8, // 0x1791
+        _: [0x4]u8, // 0x1794
+        _: [0x5]u8, // 0x1798
+        _: [0x3]u8, // 0x179d
+        _: [0x5b0]u8, // 0x17a0
+        _: [0x1]u8, // 0x1d50
+        _: [0x3]u8, // 0x1d51
+        _: [0x4]u8, // 0x1d54
+        _: [0xc]u8, // 0x1d58
+        _: [0x40]u8, // 0x1d64
+        _: [0x4]u8, // 0x1da4
+        _: [0xc]u8, // 0x1da8
+        _: [0x4]u8, // 0x1db4
+        _: [0x20]u8, // 0x1db8
+        _: [0x4]u8, // 0x1dd8
+        _: [0xc]u8, // 0x1ddc
+        _: [0x4]u8, // 0x1de8
+        _: [0x4]u8, // 0x1dec
+        _: [0x4]u8, // 0x1df0
+        _: [0x4]u8, // 0x1df4
+        _: [0x4]u8, // 0x1df8
+        _: [0x4]u8, // 0x1dfc
+        _: [0x48]u8, // 0x1e00
+        _: [0x50]u8, // 0x1e48
+        _: [0x18]u8, // 0x1e98
+        _: [0x8]u8, // 0x1eb0
+        _: [0x18]u8, // 0x1eb8
+        _: [0x1]u8, // 0x1ed0
+        _: [0x1]u8, // 0x1ed1
+        _: [0x1]u8, // 0x1ed2
+        _: [0x1]u8, // 0x1ed3
+        _: [0x4]u8, // 0x1ed4
         _: [0x4]u8, // 0x1ed8
         _: [0x4]u8, // 0x1edc
-        _: [0x1]u8, // 0x1ee0
-        _: [0x3]u8, // 0x1ee1
+        _: [0x4]u8, // 0x1ee0
         _: [0x4]u8, // 0x1ee4
-        _: [0x38]u8, // 0x1ee8
-        _: [0x4]u8, // 0x1f20
-        _: [0x4]u8, // 0x1f24
-        _: [0xc]u8, // 0x1f28
-        _: [0xc]u8, // 0x1f34
-        _: [0xc]u8, // 0x1f40
-        _: [0xc]u8, // 0x1f4c
-        _: [0x15a8]u8, // 0x1f58
-        _: [0x4]u8, // 0x3500
-        _: [0x4]u8, // 0x3504
-        _: [0x4]u8, // 0x3508
-        _: [0x4]u8, // 0x350c
-        _: [0x4]u8, // 0x3510
-        _: [0x74]u8, // 0x3514
-        _: [0x78]u8, // 0x3588
-        _: [0x90]u8, // 0x3600
-        _: [0x10]u8, // 0x3690
-        _: [0x30]u8, // 0x36a0
-        _: [0xc]u8, // 0x36d0
-        _: [0x4]u8, // 0x36dc
-        _: [0x18]u8, // 0x36e0
-        _: [0x4]u8, // 0x36f8
-        _: [0x4]u8, // 0x36fc
-        _: [0x20]u8, // 0x3700
+        _: [0x4]u8, // 0x1ee8
+        _: [0x4]u8, // 0x1eec
+        _: [0x4]u8, // 0x1ef0
+        _: [0x4]u8, // 0x1ef4
+        _: [0x5]u8, // 0x1ef8
+        _: [0x3]u8, // 0x1efd
+        _: [0x4]u8, // 0x1f00
+        _: [0x2]u8, // 0x1f04
+        _: [0x2]u8, // 0x1f06
+        _: [0x4]u8, // 0x1f08
+        _: [0x4]u8, // 0x1f0c
+        _: [0x1]u8, // 0x1f10
+        _: [0x3]u8, // 0x1f11
+        _: [0x4]u8, // 0x1f14
+        _: [0x38]u8, // 0x1f18
+        _: [0x4]u8, // 0x1f50
+        _: [0x4]u8, // 0x1f54
+        _: [0xc]u8, // 0x1f58
+        _: [0xc]u8, // 0x1f64
+        _: [0xc]u8, // 0x1f70
+        _: [0xc]u8, // 0x1f7c
+        _: [0x15a8]u8, // 0x1f88
+        _: [0x4]u8, // 0x3530
+        _: [0x4]u8, // 0x3534
+        _: [0x4]u8, // 0x3538
+        _: [0x4]u8, // 0x353c
+        _: [0x4]u8, // 0x3540
+        _: [0x74]u8, // 0x3544
+        _: [0x78]u8, // 0x35b8
+        _: [0x90]u8, // 0x3630
+        _: [0x10]u8, // 0x36c0
+        _: [0x30]u8, // 0x36d0
+        _: [0xc]u8, // 0x3700
+        _: [0x4]u8, // 0x370c
+        _: [0x18]u8, // 0x3710
+        _: [0x4]u8, // 0x3728
+        _: [0x4]u8, // 0x372c
+        _: [0x20]u8, // 0x3730
     };
     pub const C_CSGO_TeamIntroTerroristPosition = extern struct {
         pad_0: [0x1d18]u8, // 0x0
@@ -1428,15 +1428,14 @@ pub const client_dll = struct {
         _: [0x4]u8, // 0x1354
         _: [0x4]u8, // 0x1358
         _: [0x4]u8, // 0x135c
-        _: [0x8]u8, // 0x1360
-        _: [0x18]u8, // 0x1368
-        _: [0x10]u8, // 0x1380
-        _: [0x18]u8, // 0x1390
-        _: [0x1]u8, // 0x13a8
-        _: [0x1]u8, // 0x13a9
-        _: [0x6]u8, // 0x13aa
+        _: [0x18]u8, // 0x1360
+        _: [0x10]u8, // 0x1378
+        _: [0x18]u8, // 0x1388
+        _: [0x1]u8, // 0x13a0
+        _: [0x1]u8, // 0x13a1
+        _: [0x6]u8, // 0x13a2
+        _: [0x8]u8, // 0x13a8
         _: [0x8]u8, // 0x13b0
-        _: [0x8]u8, // 0x13b8
     };
     pub const C_fogplayerparams_t = extern struct {
         pad_0: [0x8]u8, // 0x0
@@ -1535,7 +1534,7 @@ pub const client_dll = struct {
         pad_0: [0x620]u8, // 0x0
     };
     pub const C_HEGrenade = extern struct {
-        pad_0: [0x1fe0]u8, // 0x0
+        pad_0: [0x2020]u8, // 0x0
     };
     pub const C_EnvSky = extern struct {
         pad_0: [0x1098]u8, // 0x0
@@ -1567,7 +1566,7 @@ pub const client_dll = struct {
         _: [0x8]u8, // 0x38
     };
     pub const C_WeaponMAC10 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_CSGO_MapPreviewCameraPath = extern struct {
         pad_0: [0x600]u8, // 0x0
@@ -1701,7 +1700,7 @@ pub const client_dll = struct {
         _: [0x48]u8, // 0x120
     };
     pub const C_WeaponXM1014 = extern struct {
-        pad_0: [0x1f20]u8, // 0x0
+        pad_0: [0x1f60]u8, // 0x0
     };
     pub const C_WorldModelGloves = extern struct {
         pad_0: [0x1270]u8, // 0x0
@@ -1719,7 +1718,7 @@ pub const client_dll = struct {
         _: [0x48]u8, // 0xd8
     };
     pub const C_WeaponAug = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_BasePropDoor = extern struct {
         pad_0: [0x14c0]u8, // 0x0
@@ -1747,7 +1746,7 @@ pub const client_dll = struct {
         _: [0x4]u8, // 0x24
     };
     pub const C_Item_Healthshot = extern struct {
-        pad_0: [0x1f30]u8, // 0x0
+        pad_0: [0x1f70]u8, // 0x0
     };
     pub const CCSCustomHudLayout = extern struct {
         pad_0: [0x618]u8, // 0x0
@@ -1957,7 +1956,7 @@ pub const client_dll = struct {
         _: [0x18]u8, // 0x58
     };
     pub const C_WeaponSSG08 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const CPulseCell_Value_Curve = extern struct {
         pad_0: [0x48]u8, // 0x0
@@ -1970,8 +1969,8 @@ pub const client_dll = struct {
         _: [0x610]u8, // 0x14c8
         _: [0x4]u8, // 0x1ad8
         _: [0x4]u8, // 0x1adc
-        _: [0x88]u8, // 0x1ae0
-        _: [0x38]u8, // 0x1b68
+        _: [0xb8]u8, // 0x1ae0
+        _: [0x38]u8, // 0x1b98
     };
     pub const C_BasePlayerPawn = extern struct {
         pad_0: [0x12f0]u8, // 0x0
@@ -2008,7 +2007,7 @@ pub const client_dll = struct {
         pad_0: [0x620]u8, // 0x0
     };
     pub const C_WeaponBizon = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_StattrakModule = extern struct {
         pad_0: [0x1270]u8, // 0x0
@@ -2054,8 +2053,8 @@ pub const client_dll = struct {
         _: [0x8]u8, // 0x1180
     };
     pub const C_Knife = extern struct {
-        pad_0: [0x1f20]u8, // 0x0
-        _: [0x10]u8, // 0x1f20
+        pad_0: [0x1f60]u8, // 0x0
+        _: [0x10]u8, // 0x1f60
     };
     pub const C_CSGO_TerroristWingmanIntroCamera = extern struct {
         pad_0: [0x690]u8, // 0x0
@@ -2100,7 +2099,7 @@ pub const client_dll = struct {
         _: [0x10]u8, // 0x10b8
     };
     pub const C_WeaponUSPSilencer = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_MolotovProjectile = extern struct {
         pad_0: [0x1348]u8, // 0x0
@@ -2110,10 +2109,10 @@ pub const client_dll = struct {
         pad_0: [0x1180]u8, // 0x0
     };
     pub const C_WeaponRevolver = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_WeaponElite = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_DynamicPropAlias_cable_dynamic = extern struct {
         pad_0: [0x14b0]u8, // 0x0
@@ -2278,21 +2277,21 @@ pub const client_dll = struct {
         _: [0x18]u8, // 0xa0
     };
     pub const C_BaseCSGrenade = extern struct {
-        pad_0: [0x1f20]u8, // 0x0
-        _: [0x1]u8, // 0x1f20
-        _: [0x1]u8, // 0x1f21
-        _: [0x1]u8, // 0x1f22
-        _: [0x1]u8, // 0x1f23
-        _: [0x1]u8, // 0x1f24
-        _: [0x3]u8, // 0x1f25
-        _: [0x8]u8, // 0x1f28
-        _: [0x78]u8, // 0x1f30
-        _: [0x4]u8, // 0x1fa8
-        _: [0x4]u8, // 0x1fac
-        _: [0x4]u8, // 0x1fb0
-        _: [0x4]u8, // 0x1fb4
-        _: [0x4]u8, // 0x1fb8
-        _: [0x24]u8, // 0x1fbc
+        pad_0: [0x1f60]u8, // 0x0
+        _: [0x1]u8, // 0x1f60
+        _: [0x1]u8, // 0x1f61
+        _: [0x1]u8, // 0x1f62
+        _: [0x1]u8, // 0x1f63
+        _: [0x1]u8, // 0x1f64
+        _: [0x3]u8, // 0x1f65
+        _: [0x8]u8, // 0x1f68
+        _: [0x78]u8, // 0x1f70
+        _: [0x4]u8, // 0x1fe8
+        _: [0x4]u8, // 0x1fec
+        _: [0x4]u8, // 0x1ff0
+        _: [0x4]u8, // 0x1ff4
+        _: [0x4]u8, // 0x1ff8
+        _: [0x24]u8, // 0x1ffc
     };
     pub const CFilterAttributeInt = extern struct {
         pad_0: [0x638]u8, // 0x0
@@ -2484,9 +2483,9 @@ pub const client_dll = struct {
         pad_0: [0x618]u8, // 0x0
     };
     pub const C_WeaponBaseItem = extern struct {
-        pad_0: [0x1f20]u8, // 0x0
-        _: [0x1]u8, // 0x1f20
-        _: [0xf]u8, // 0x1f21
+        pad_0: [0x1f60]u8, // 0x0
+        _: [0x1]u8, // 0x1f60
+        _: [0xf]u8, // 0x1f61
     };
     pub const CWaterSplasher = extern struct {
         pad_0: [0x1098]u8, // 0x0
@@ -2517,8 +2516,8 @@ pub const client_dll = struct {
         _: [0x4]u8, // 0x0
     };
     pub const C_WeaponCZ75a = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
-        _: [0x10]u8, // 0x1f50
+        pad_0: [0x1f90]u8, // 0x0
+        _: [0x10]u8, // 0x1f90
     };
     pub const C_DynamicLight = extern struct {
         pad_0: [0x1098]u8, // 0x0
@@ -2577,7 +2576,7 @@ pub const client_dll = struct {
         _: [0x68]u8, // 0x48
     };
     pub const C_CSGO_TeamPreviewModel = extern struct {
-        pad_0: [0x37d0]u8, // 0x0
+        pad_0: [0x3800]u8, // 0x0
     };
     pub const C_TonemapController2Alias_env_tonemap_controller2 = extern struct {
         pad_0: [0x618]u8, // 0x0
@@ -2657,7 +2656,7 @@ pub const client_dll = struct {
         _: [0x8]u8, // 0x68
     };
     pub const C_WeaponP90 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_EnvWind = extern struct {
         pad_0: [0x600]u8, // 0x0
@@ -2719,7 +2718,7 @@ pub const client_dll = struct {
         _: [0x1]u8, // 0x0
     };
     pub const C_WeaponTec9 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_PhysPropClientside = extern struct {
         pad_0: [0x13e0]u8, // 0x0
@@ -2785,14 +2784,14 @@ pub const client_dll = struct {
         _: [0x18]u8, // 0x48
     };
     pub const C_CSWeaponBaseGun = extern struct {
-        pad_0: [0x1f20]u8, // 0x0
-        _: [0x4]u8, // 0x1f20
-        _: [0x4]u8, // 0x1f24
-        _: [0x10]u8, // 0x1f28
-        _: [0x4]u8, // 0x1f38
-        _: [0x1]u8, // 0x1f3c
-        _: [0x3]u8, // 0x1f3d
-        _: [0x10]u8, // 0x1f40
+        pad_0: [0x1f60]u8, // 0x0
+        _: [0x4]u8, // 0x1f60
+        _: [0x4]u8, // 0x1f64
+        _: [0x10]u8, // 0x1f68
+        _: [0x4]u8, // 0x1f78
+        _: [0x1]u8, // 0x1f7c
+        _: [0x3]u8, // 0x1f7d
+        _: [0x10]u8, // 0x1f80
     };
     pub const C_CSGameRulesProxy = extern struct {
         pad_0: [0x600]u8, // 0x0
@@ -2819,7 +2818,7 @@ pub const client_dll = struct {
         _: [0xc]u8, // 0xac
     };
     pub const C_WeaponP250 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const CFilterMassGreater = extern struct {
         pad_0: [0x638]u8, // 0x0
@@ -3167,7 +3166,7 @@ pub const client_dll = struct {
         _: [0x18]u8, // 0x48
     };
     pub const C_WeaponSCAR20 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_FuncMover = extern struct {
         pad_0: [0x1098]u8, // 0x0
@@ -3265,7 +3264,7 @@ pub const client_dll = struct {
         _: [0x10]u8, // 0x1e0
     };
     pub const C_DecoyGrenade = extern struct {
-        pad_0: [0x1fe0]u8, // 0x0
+        pad_0: [0x2020]u8, // 0x0
     };
     pub const C_WaterBullet = extern struct {
         pad_0: [0x1268]u8, // 0x0
@@ -3353,7 +3352,7 @@ pub const client_dll = struct {
         pad_0: [0x48]u8, // 0x0
     };
     pub const C_WeaponHKP2000 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_FootstepControl = extern struct {
         pad_0: [0x1180]u8, // 0x0
@@ -3515,7 +3514,7 @@ pub const client_dll = struct {
         _: [0x10]u8, // 0x48
     };
     pub const C_WeaponMP7 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const CSPerRoundStats_t = extern struct {
         pad_0: [0x30]u8, // 0x0
@@ -3753,7 +3752,7 @@ pub const client_dll = struct {
         pad_0: [0x48]u8, // 0x0
     };
     pub const C_CSWeaponBaseShotgun = extern struct {
-        pad_0: [0x1f20]u8, // 0x0
+        pad_0: [0x1f60]u8, // 0x0
     };
     pub const C_RagdollPropAttached = extern struct {
         pad_0: [0x12f0]u8, // 0x0
@@ -3769,9 +3768,9 @@ pub const client_dll = struct {
         pad_0: [0x1098]u8, // 0x0
     };
     pub const C_CSGO_PreviewPlayer = extern struct {
-        pad_0: [0x3720]u8, // 0x0
-        _: [0x8]u8, // 0x3720
-        _: [0xa8]u8, // 0x3728
+        pad_0: [0x3750]u8, // 0x0
+        _: [0x8]u8, // 0x3750
+        _: [0xa8]u8, // 0x3758
     };
     pub const C_RectLight = extern struct {
         pad_0: [0x13a8]u8, // 0x0
@@ -3846,7 +3845,7 @@ pub const client_dll = struct {
         _: [0x1]u8, // 0x67
     };
     pub const C_WeaponM4A1 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_Item = extern struct {
         pad_0: [0x1918]u8, // 0x0
@@ -4046,7 +4045,7 @@ pub const client_dll = struct {
         _: [0x8]u8, // 0x1098
     };
     pub const C_WeaponM249 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_LocalTempEntity = extern struct {
         pad_0: [0x1268]u8, // 0x0
@@ -4077,9 +4076,9 @@ pub const client_dll = struct {
         _: [0xc]u8, // 0x1304
     };
     pub const C_WeaponTaser = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
-        _: [0x4]u8, // 0x1f50
-        _: [0xc]u8, // 0x1f54
+        pad_0: [0x1f90]u8, // 0x0
+        _: [0x4]u8, // 0x1f90
+        _: [0xc]u8, // 0x1f94
     };
     pub const C_PointEntity = extern struct {
         pad_0: [0x600]u8, // 0x0
@@ -4107,13 +4106,13 @@ pub const client_dll = struct {
         _: [0x40]u8, // 0x68
     };
     pub const C_WeaponNegev = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_WeaponFiveSeven = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_WeaponSawedoff = extern struct {
-        pad_0: [0x1f20]u8, // 0x0
+        pad_0: [0x1f60]u8, // 0x0
     };
     pub const C_TriggerVolume = extern struct {
         pad_0: [0x1098]u8, // 0x0
@@ -4131,7 +4130,7 @@ pub const client_dll = struct {
         _: [0x48]u8, // 0x108
     };
     pub const C_WeaponMP9 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_DynamicPropAlias_prop_dynamic_override = extern struct {
         pad_0: [0x14b0]u8, // 0x0
@@ -4148,7 +4147,7 @@ pub const client_dll = struct {
         _: [0x13]u8, // 0x63d
     };
     pub const C_AK47 = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_CSGO_MapPreviewCameraPathNode = extern struct {
         pad_0: [0x600]u8, // 0x0
@@ -4182,7 +4181,7 @@ pub const client_dll = struct {
         _: [0x4]u8, // 0x604
     };
     pub const C_IncendiaryGrenade = extern struct {
-        pad_0: [0x1fe0]u8, // 0x0
+        pad_0: [0x2020]u8, // 0x0
     };
     pub const CFilterClass = extern struct {
         pad_0: [0x638]u8, // 0x0
@@ -4255,6 +4254,7 @@ pub const client_dll = struct {
         _: [0x4]u8, // 0x624
         _: [0x4]u8, // 0x628
         _: [0x4]u8, // 0x62c
+        _: [0x8]u8, // 0x630
     };
     pub const C_CSGO_EndOfMatchCamera = extern struct {
         pad_0: [0x690]u8, // 0x0
@@ -4384,7 +4384,7 @@ pub const client_dll = struct {
         _: [0x8]u8, // 0x608
     };
     pub const C_WeaponGlock = extern struct {
-        pad_0: [0x1f50]u8, // 0x0
+        pad_0: [0x1f90]u8, // 0x0
     };
     pub const C_PhysicsProp = extern struct {
         pad_0: [0x13e0]u8, // 0x0
@@ -4431,10 +4431,10 @@ pub const client_dll = struct {
         _: [0x28]u8, // 0x4f8
     };
     pub const C_SmokeGrenade = extern struct {
-        pad_0: [0x1fe0]u8, // 0x0
+        pad_0: [0x2020]u8, // 0x0
     };
     pub const C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel = extern struct {
-        pad_0: [0x37d0]u8, // 0x0
+        pad_0: [0x3800]u8, // 0x0
     };
     pub const CCSGO_RushIntroCharacterPosition = extern struct {
         pad_0: [0x1d18]u8, // 0x0

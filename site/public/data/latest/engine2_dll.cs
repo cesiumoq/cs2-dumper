@@ -1,8 +1,8 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
-/*  Total Offsets   : 202
-/*  Dumped At       : 14:40 05/11/2026 (GMT)
-/*  Dumped In       : 1,2s
+/*  Total Offsets   : 201
+/*  Dumped At       : 13:18 12/11/2026 (GMT)
+/*  Dumped In       : 68,0s
 */
 
 /* cesium dumper | generated from live schema */
@@ -353,9 +353,10 @@ namespace Cs2.engine2_dll {
         [FieldOffset(0x24)] public fixed byte _[0x4];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x4)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x8)]
     public unsafe struct EventClientPollNetworking_t {
         [FieldOffset(0x0)] public fixed byte _[0x4];
+        [FieldOffset(0x4)] public fixed byte _[0x4];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1)]

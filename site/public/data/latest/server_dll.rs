@@ -4053,8 +4053,8 @@ pub mod server_dll {
         pub _: [u8; 0xc], // 0x3298
         pub _: [u8; 0x4], // 0x32a4
         pub _: [u8; 0x20], // 0x32a8
-        pub _: [u8; 0x1b], // 0x32c8
-        pub _: [u8; 0xd], // 0x32e3
+        pub _: [u8; 0x1a], // 0x32c8
+        pub _: [u8; 0xe], // 0x32e2
     }
 
     #[repr(C)]
@@ -8290,6 +8290,7 @@ pub mod server_dll {
         pub _: [u8; 0x4], // 0x4cc
         pub _: [u8; 0x4], // 0x4d0
         pub _: [u8; 0x4], // 0x4d4
+        pub _: [u8; 0x8], // 0x4d8
     }
 
     #[repr(C)]
@@ -10228,7 +10229,8 @@ pub mod server_dll {
         pub _: [u8; 0x2], // 0x26
         pub _: [u8; 0x4], // 0x28
         pub _: [u8; 0x4], // 0x2c
-        pub _: [u8; 0x8], // 0x30
+        pub _: [u8; 0x4], // 0x30
+        pub _: [u8; 0x4], // 0x34
     }
 
     #[repr(C)]
@@ -10355,7 +10357,7 @@ pub mod server_dll {
 
     #[repr(C)]
     pub struct CNmAimCSTask {
-        pub pad_0: [u8; 0x130], // 0x0
+        pub pad_0: [u8; 0x1f0], // 0x0
     }
 
     #[repr(C)]

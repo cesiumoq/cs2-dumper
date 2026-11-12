@@ -467,17 +467,17 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_C4 {
-        pub pad_0: [u8; 0x1f20], // 0x0
-        pub _: [u8; 0x4], // 0x1f20
-        pub _: [u8; 0x4], // 0x1f24
-        pub _: [u8; 0x4], // 0x1f28
-        pub _: [u8; 0x4], // 0x1f2c
-        pub _: [u8; 0x1], // 0x1f30
-        pub _: [u8; 0x7], // 0x1f31
-        pub _: [u8; 0x18], // 0x1f38
-        pub _: [u8; 0x4], // 0x1f50
-        pub _: [u8; 0x7], // 0x1f54
-        pub _: [u8; 0x5], // 0x1f5b
+        pub pad_0: [u8; 0x1f60], // 0x0
+        pub _: [u8; 0x4], // 0x1f60
+        pub _: [u8; 0x4], // 0x1f64
+        pub _: [u8; 0x4], // 0x1f68
+        pub _: [u8; 0x4], // 0x1f6c
+        pub _: [u8; 0x1], // 0x1f70
+        pub _: [u8; 0x7], // 0x1f71
+        pub _: [u8; 0x18], // 0x1f78
+        pub _: [u8; 0x4], // 0x1f90
+        pub _: [u8; 0x7], // 0x1f94
+        pub _: [u8; 0x5], // 0x1f9b
     }
 
     #[repr(C)]
@@ -603,7 +603,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponAWP {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -707,12 +707,12 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponUMP45 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
     pub struct C_WeaponG3SG1 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -752,7 +752,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponFamas {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -884,7 +884,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponNOVA {
-        pub pad_0: [u8; 0x1f20], // 0x0
+        pub pad_0: [u8; 0x1f60], // 0x0
     }
 
     #[repr(C)]
@@ -894,7 +894,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_DEagle {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -1105,7 +1105,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_MolotovGrenade {
-        pub pad_0: [u8; 0x1fe0], // 0x0
+        pub pad_0: [u8; 0x2020], // 0x0
     }
 
     #[repr(C)]
@@ -1121,7 +1121,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponM4A1Silencer {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -1297,64 +1297,64 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_CSWeaponBase {
-        pub pad_0: [u8; 0x19a8], // 0x0
-        pub _: [u8; 0x4], // 0x19a8
-        pub _: [u8; 0x4], // 0x19ac
-        pub _: [u8; 0x4], // 0x19b0
-        pub _: [u8; 0x1], // 0x19b4
-        pub _: [u8; 0x2b], // 0x19b5
-        pub _: [u8; 0x4], // 0x19e0
-        pub _: [u8; 0x4], // 0x19e4
-        pub _: [u8; 0x18], // 0x19e8
-        pub _: [u8; 0x4], // 0x1a00
-        pub _: [u8; 0x4], // 0x1a04
-        pub _: [u8; 0xc], // 0x1a08
-        pub _: [u8; 0x4], // 0x1a14
-        pub _: [u8; 0x4], // 0x1a18
-        pub _: [u8; 0x4], // 0x1a1c
+        pub pad_0: [u8; 0x19e8], // 0x0
+        pub _: [u8; 0x4], // 0x19e8
+        pub _: [u8; 0x4], // 0x19ec
+        pub _: [u8; 0x4], // 0x19f0
+        pub _: [u8; 0x1], // 0x19f4
+        pub _: [u8; 0x2b], // 0x19f5
         pub _: [u8; 0x4], // 0x1a20
         pub _: [u8; 0x4], // 0x1a24
-        pub _: [u8; 0x4], // 0x1a28
-        pub _: [u8; 0x4], // 0x1a2c
-        pub _: [u8; 0x4], // 0x1a30
-        pub _: [u8; 0x4], // 0x1a34
-        pub _: [u8; 0x4], // 0x1a38
-        pub _: [u8; 0x4], // 0x1a3c
+        pub _: [u8; 0x18], // 0x1a28
         pub _: [u8; 0x4], // 0x1a40
         pub _: [u8; 0x4], // 0x1a44
-        pub _: [u8; 0x8], // 0x1a48
-        pub _: [u8; 0x1], // 0x1a50
-        pub _: [u8; 0x3], // 0x1a51
+        pub _: [u8; 0xc], // 0x1a48
         pub _: [u8; 0x4], // 0x1a54
-        pub _: [u8; 0x1], // 0x1a58
-        pub _: [u8; 0x3], // 0x1a59
+        pub _: [u8; 0x4], // 0x1a58
         pub _: [u8; 0x4], // 0x1a5c
         pub _: [u8; 0x4], // 0x1a60
         pub _: [u8; 0x4], // 0x1a64
         pub _: [u8; 0x4], // 0x1a68
         pub _: [u8; 0x4], // 0x1a6c
         pub _: [u8; 0x4], // 0x1a70
-        pub _: [u8; 0xac], // 0x1a74
-        pub _: [u8; 0x1], // 0x1b20
-        pub _: [u8; 0x1], // 0x1b21
-        pub _: [u8; 0x2], // 0x1b22
-        pub _: [u8; 0xc], // 0x1b24
-        pub _: [u8; 0x4], // 0x1b30
-        pub _: [u8; 0x4], // 0x1b34
-        pub _: [u8; 0x4], // 0x1b38
-        pub _: [u8; 0x4], // 0x1b3c
-        pub _: [u8; 0x24], // 0x1b40
-        pub _: [u8; 0x4], // 0x1b64
-        pub _: [u8; 0x4], // 0x1b68
-        pub _: [u8; 0x1], // 0x1b6c
-        pub _: [u8; 0x3], // 0x1b6d
+        pub _: [u8; 0x4], // 0x1a74
+        pub _: [u8; 0x4], // 0x1a78
+        pub _: [u8; 0x4], // 0x1a7c
+        pub _: [u8; 0x4], // 0x1a80
+        pub _: [u8; 0x4], // 0x1a84
+        pub _: [u8; 0x8], // 0x1a88
+        pub _: [u8; 0x1], // 0x1a90
+        pub _: [u8; 0x3], // 0x1a91
+        pub _: [u8; 0x4], // 0x1a94
+        pub _: [u8; 0x1], // 0x1a98
+        pub _: [u8; 0x3], // 0x1a99
+        pub _: [u8; 0x4], // 0x1a9c
+        pub _: [u8; 0x4], // 0x1aa0
+        pub _: [u8; 0x4], // 0x1aa4
+        pub _: [u8; 0x4], // 0x1aa8
+        pub _: [u8; 0x4], // 0x1aac
+        pub _: [u8; 0x4], // 0x1ab0
+        pub _: [u8; 0xac], // 0x1ab4
+        pub _: [u8; 0x1], // 0x1b60
+        pub _: [u8; 0x1], // 0x1b61
+        pub _: [u8; 0x2], // 0x1b62
+        pub _: [u8; 0xc], // 0x1b64
         pub _: [u8; 0x4], // 0x1b70
-        pub _: [u8; 0x5c], // 0x1b74
-        pub _: [u8; 0xb0], // 0x1bd0
-        pub _: [u8; 0x78], // 0x1c80
-        pub _: [u8; 0x60], // 0x1cf8
-        pub _: [u8; 0x14], // 0x1d58
-        pub _: [u8; 0x1b4], // 0x1d6c
+        pub _: [u8; 0x4], // 0x1b74
+        pub _: [u8; 0x4], // 0x1b78
+        pub _: [u8; 0x4], // 0x1b7c
+        pub _: [u8; 0x24], // 0x1b80
+        pub _: [u8; 0x4], // 0x1ba4
+        pub _: [u8; 0x4], // 0x1ba8
+        pub _: [u8; 0x1], // 0x1bac
+        pub _: [u8; 0x3], // 0x1bad
+        pub _: [u8; 0x4], // 0x1bb0
+        pub _: [u8; 0x5c], // 0x1bb4
+        pub _: [u8; 0xb0], // 0x1c10
+        pub _: [u8; 0x78], // 0x1cc0
+        pub _: [u8; 0x60], // 0x1d38
+        pub _: [u8; 0x14], // 0x1d98
+        pub _: [u8; 0x1b4], // 0x1dac
     }
 
     #[repr(C)]
@@ -1401,7 +1401,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponMag7 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -1526,7 +1526,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_Flashbang {
-        pub pad_0: [u8; 0x1fe0], // 0x0
+        pub pad_0: [u8; 0x2020], // 0x0
     }
 
     #[repr(C)]
@@ -1573,7 +1573,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponMP5SD {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -1588,7 +1588,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponGalilAR {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -1616,7 +1616,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponSG556 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -1649,84 +1649,84 @@ pub mod client_dll {
         pub _: [u8; 0x1], // 0x15e9
         pub _: [u8; 0x2], // 0x15ea
         pub _: [u8; 0x4], // 0x15ec
-        pub _: [u8; 0x168], // 0x15f0
-        pub _: [u8; 0x4], // 0x1758
-        pub _: [u8; 0x4], // 0x175c
-        pub _: [u8; 0x1], // 0x1760
-        pub _: [u8; 0x3], // 0x1761
-        pub _: [u8; 0x4], // 0x1764
-        pub _: [u8; 0x5], // 0x1768
-        pub _: [u8; 0x3], // 0x176d
-        pub _: [u8; 0x5b0], // 0x1770
-        pub _: [u8; 0x1], // 0x1d20
-        pub _: [u8; 0x3], // 0x1d21
-        pub _: [u8; 0x4], // 0x1d24
-        pub _: [u8; 0xc], // 0x1d28
-        pub _: [u8; 0x40], // 0x1d34
-        pub _: [u8; 0x4], // 0x1d74
-        pub _: [u8; 0xc], // 0x1d78
-        pub _: [u8; 0x4], // 0x1d84
-        pub _: [u8; 0x20], // 0x1d88
-        pub _: [u8; 0x4], // 0x1da8
-        pub _: [u8; 0xc], // 0x1dac
-        pub _: [u8; 0x4], // 0x1db8
-        pub _: [u8; 0x4], // 0x1dbc
-        pub _: [u8; 0x4], // 0x1dc0
-        pub _: [u8; 0x4], // 0x1dc4
-        pub _: [u8; 0x4], // 0x1dc8
-        pub _: [u8; 0x4], // 0x1dcc
-        pub _: [u8; 0x48], // 0x1dd0
-        pub _: [u8; 0x50], // 0x1e18
-        pub _: [u8; 0x18], // 0x1e68
-        pub _: [u8; 0x8], // 0x1e80
-        pub _: [u8; 0x18], // 0x1e88
-        pub _: [u8; 0x1], // 0x1ea0
-        pub _: [u8; 0x1], // 0x1ea1
-        pub _: [u8; 0x1], // 0x1ea2
-        pub _: [u8; 0x1], // 0x1ea3
-        pub _: [u8; 0x4], // 0x1ea4
-        pub _: [u8; 0x4], // 0x1ea8
-        pub _: [u8; 0x4], // 0x1eac
-        pub _: [u8; 0x4], // 0x1eb0
-        pub _: [u8; 0x4], // 0x1eb4
-        pub _: [u8; 0x4], // 0x1eb8
-        pub _: [u8; 0x4], // 0x1ebc
-        pub _: [u8; 0x4], // 0x1ec0
-        pub _: [u8; 0x4], // 0x1ec4
-        pub _: [u8; 0x5], // 0x1ec8
-        pub _: [u8; 0x3], // 0x1ecd
-        pub _: [u8; 0x4], // 0x1ed0
-        pub _: [u8; 0x2], // 0x1ed4
-        pub _: [u8; 0x2], // 0x1ed6
+        pub _: [u8; 0x198], // 0x15f0
+        pub _: [u8; 0x4], // 0x1788
+        pub _: [u8; 0x4], // 0x178c
+        pub _: [u8; 0x1], // 0x1790
+        pub _: [u8; 0x3], // 0x1791
+        pub _: [u8; 0x4], // 0x1794
+        pub _: [u8; 0x5], // 0x1798
+        pub _: [u8; 0x3], // 0x179d
+        pub _: [u8; 0x5b0], // 0x17a0
+        pub _: [u8; 0x1], // 0x1d50
+        pub _: [u8; 0x3], // 0x1d51
+        pub _: [u8; 0x4], // 0x1d54
+        pub _: [u8; 0xc], // 0x1d58
+        pub _: [u8; 0x40], // 0x1d64
+        pub _: [u8; 0x4], // 0x1da4
+        pub _: [u8; 0xc], // 0x1da8
+        pub _: [u8; 0x4], // 0x1db4
+        pub _: [u8; 0x20], // 0x1db8
+        pub _: [u8; 0x4], // 0x1dd8
+        pub _: [u8; 0xc], // 0x1ddc
+        pub _: [u8; 0x4], // 0x1de8
+        pub _: [u8; 0x4], // 0x1dec
+        pub _: [u8; 0x4], // 0x1df0
+        pub _: [u8; 0x4], // 0x1df4
+        pub _: [u8; 0x4], // 0x1df8
+        pub _: [u8; 0x4], // 0x1dfc
+        pub _: [u8; 0x48], // 0x1e00
+        pub _: [u8; 0x50], // 0x1e48
+        pub _: [u8; 0x18], // 0x1e98
+        pub _: [u8; 0x8], // 0x1eb0
+        pub _: [u8; 0x18], // 0x1eb8
+        pub _: [u8; 0x1], // 0x1ed0
+        pub _: [u8; 0x1], // 0x1ed1
+        pub _: [u8; 0x1], // 0x1ed2
+        pub _: [u8; 0x1], // 0x1ed3
+        pub _: [u8; 0x4], // 0x1ed4
         pub _: [u8; 0x4], // 0x1ed8
         pub _: [u8; 0x4], // 0x1edc
-        pub _: [u8; 0x1], // 0x1ee0
-        pub _: [u8; 0x3], // 0x1ee1
+        pub _: [u8; 0x4], // 0x1ee0
         pub _: [u8; 0x4], // 0x1ee4
-        pub _: [u8; 0x38], // 0x1ee8
-        pub _: [u8; 0x4], // 0x1f20
-        pub _: [u8; 0x4], // 0x1f24
-        pub _: [u8; 0xc], // 0x1f28
-        pub _: [u8; 0xc], // 0x1f34
-        pub _: [u8; 0xc], // 0x1f40
-        pub _: [u8; 0xc], // 0x1f4c
-        pub _: [u8; 0x15a8], // 0x1f58
-        pub _: [u8; 0x4], // 0x3500
-        pub _: [u8; 0x4], // 0x3504
-        pub _: [u8; 0x4], // 0x3508
-        pub _: [u8; 0x4], // 0x350c
-        pub _: [u8; 0x4], // 0x3510
-        pub _: [u8; 0x74], // 0x3514
-        pub _: [u8; 0x78], // 0x3588
-        pub _: [u8; 0x90], // 0x3600
-        pub _: [u8; 0x10], // 0x3690
-        pub _: [u8; 0x30], // 0x36a0
-        pub _: [u8; 0xc], // 0x36d0
-        pub _: [u8; 0x4], // 0x36dc
-        pub _: [u8; 0x18], // 0x36e0
-        pub _: [u8; 0x4], // 0x36f8
-        pub _: [u8; 0x4], // 0x36fc
-        pub _: [u8; 0x20], // 0x3700
+        pub _: [u8; 0x4], // 0x1ee8
+        pub _: [u8; 0x4], // 0x1eec
+        pub _: [u8; 0x4], // 0x1ef0
+        pub _: [u8; 0x4], // 0x1ef4
+        pub _: [u8; 0x5], // 0x1ef8
+        pub _: [u8; 0x3], // 0x1efd
+        pub _: [u8; 0x4], // 0x1f00
+        pub _: [u8; 0x2], // 0x1f04
+        pub _: [u8; 0x2], // 0x1f06
+        pub _: [u8; 0x4], // 0x1f08
+        pub _: [u8; 0x4], // 0x1f0c
+        pub _: [u8; 0x1], // 0x1f10
+        pub _: [u8; 0x3], // 0x1f11
+        pub _: [u8; 0x4], // 0x1f14
+        pub _: [u8; 0x38], // 0x1f18
+        pub _: [u8; 0x4], // 0x1f50
+        pub _: [u8; 0x4], // 0x1f54
+        pub _: [u8; 0xc], // 0x1f58
+        pub _: [u8; 0xc], // 0x1f64
+        pub _: [u8; 0xc], // 0x1f70
+        pub _: [u8; 0xc], // 0x1f7c
+        pub _: [u8; 0x15a8], // 0x1f88
+        pub _: [u8; 0x4], // 0x3530
+        pub _: [u8; 0x4], // 0x3534
+        pub _: [u8; 0x4], // 0x3538
+        pub _: [u8; 0x4], // 0x353c
+        pub _: [u8; 0x4], // 0x3540
+        pub _: [u8; 0x74], // 0x3544
+        pub _: [u8; 0x78], // 0x35b8
+        pub _: [u8; 0x90], // 0x3630
+        pub _: [u8; 0x10], // 0x36c0
+        pub _: [u8; 0x30], // 0x36d0
+        pub _: [u8; 0xc], // 0x3700
+        pub _: [u8; 0x4], // 0x370c
+        pub _: [u8; 0x18], // 0x3710
+        pub _: [u8; 0x4], // 0x3728
+        pub _: [u8; 0x4], // 0x372c
+        pub _: [u8; 0x20], // 0x3730
     }
 
     #[repr(C)]
@@ -1758,15 +1758,14 @@ pub mod client_dll {
         pub _: [u8; 0x4], // 0x1354
         pub _: [u8; 0x4], // 0x1358
         pub _: [u8; 0x4], // 0x135c
-        pub _: [u8; 0x8], // 0x1360
-        pub _: [u8; 0x18], // 0x1368
-        pub _: [u8; 0x10], // 0x1380
-        pub _: [u8; 0x18], // 0x1390
-        pub _: [u8; 0x1], // 0x13a8
-        pub _: [u8; 0x1], // 0x13a9
-        pub _: [u8; 0x6], // 0x13aa
+        pub _: [u8; 0x18], // 0x1360
+        pub _: [u8; 0x10], // 0x1378
+        pub _: [u8; 0x18], // 0x1388
+        pub _: [u8; 0x1], // 0x13a0
+        pub _: [u8; 0x1], // 0x13a1
+        pub _: [u8; 0x6], // 0x13a2
+        pub _: [u8; 0x8], // 0x13a8
         pub _: [u8; 0x8], // 0x13b0
-        pub _: [u8; 0x8], // 0x13b8
     }
 
     #[repr(C)]
@@ -1887,7 +1886,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_HEGrenade {
-        pub pad_0: [u8; 0x1fe0], // 0x0
+        pub pad_0: [u8; 0x2020], // 0x0
     }
 
     #[repr(C)]
@@ -1927,7 +1926,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponMAC10 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -2091,7 +2090,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponXM1014 {
-        pub pad_0: [u8; 0x1f20], // 0x0
+        pub pad_0: [u8; 0x1f60], // 0x0
     }
 
     #[repr(C)]
@@ -2119,7 +2118,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponAug {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -2155,7 +2154,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_Item_Healthshot {
-        pub pad_0: [u8; 0x1f30], // 0x0
+        pub pad_0: [u8; 0x1f70], // 0x0
     }
 
     #[repr(C)]
@@ -2391,7 +2390,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponSSG08 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -2408,8 +2407,8 @@ pub mod client_dll {
         pub _: [u8; 0x610], // 0x14c8
         pub _: [u8; 0x4], // 0x1ad8
         pub _: [u8; 0x4], // 0x1adc
-        pub _: [u8; 0x88], // 0x1ae0
-        pub _: [u8; 0x38], // 0x1b68
+        pub _: [u8; 0xb8], // 0x1ae0
+        pub _: [u8; 0x38], // 0x1b98
     }
 
     #[repr(C)]
@@ -2452,7 +2451,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponBizon {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -2516,8 +2515,8 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_Knife {
-        pub pad_0: [u8; 0x1f20], // 0x0
-        pub _: [u8; 0x10], // 0x1f20
+        pub pad_0: [u8; 0x1f60], // 0x0
+        pub _: [u8; 0x10], // 0x1f60
     }
 
     #[repr(C)]
@@ -2582,7 +2581,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponUSPSilencer {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -2598,12 +2597,12 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponRevolver {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
     pub struct C_WeaponElite {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -2790,21 +2789,21 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_BaseCSGrenade {
-        pub pad_0: [u8; 0x1f20], // 0x0
-        pub _: [u8; 0x1], // 0x1f20
-        pub _: [u8; 0x1], // 0x1f21
-        pub _: [u8; 0x1], // 0x1f22
-        pub _: [u8; 0x1], // 0x1f23
-        pub _: [u8; 0x1], // 0x1f24
-        pub _: [u8; 0x3], // 0x1f25
-        pub _: [u8; 0x8], // 0x1f28
-        pub _: [u8; 0x78], // 0x1f30
-        pub _: [u8; 0x4], // 0x1fa8
-        pub _: [u8; 0x4], // 0x1fac
-        pub _: [u8; 0x4], // 0x1fb0
-        pub _: [u8; 0x4], // 0x1fb4
-        pub _: [u8; 0x4], // 0x1fb8
-        pub _: [u8; 0x24], // 0x1fbc
+        pub pad_0: [u8; 0x1f60], // 0x0
+        pub _: [u8; 0x1], // 0x1f60
+        pub _: [u8; 0x1], // 0x1f61
+        pub _: [u8; 0x1], // 0x1f62
+        pub _: [u8; 0x1], // 0x1f63
+        pub _: [u8; 0x1], // 0x1f64
+        pub _: [u8; 0x3], // 0x1f65
+        pub _: [u8; 0x8], // 0x1f68
+        pub _: [u8; 0x78], // 0x1f70
+        pub _: [u8; 0x4], // 0x1fe8
+        pub _: [u8; 0x4], // 0x1fec
+        pub _: [u8; 0x4], // 0x1ff0
+        pub _: [u8; 0x4], // 0x1ff4
+        pub _: [u8; 0x4], // 0x1ff8
+        pub _: [u8; 0x24], // 0x1ffc
     }
 
     #[repr(C)]
@@ -3026,9 +3025,9 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponBaseItem {
-        pub pad_0: [u8; 0x1f20], // 0x0
-        pub _: [u8; 0x1], // 0x1f20
-        pub _: [u8; 0xf], // 0x1f21
+        pub pad_0: [u8; 0x1f60], // 0x0
+        pub _: [u8; 0x1], // 0x1f60
+        pub _: [u8; 0xf], // 0x1f61
     }
 
     #[repr(C)]
@@ -3071,8 +3070,8 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponCZ75a {
-        pub pad_0: [u8; 0x1f50], // 0x0
-        pub _: [u8; 0x10], // 0x1f50
+        pub pad_0: [u8; 0x1f90], // 0x0
+        pub _: [u8; 0x10], // 0x1f90
     }
 
     #[repr(C)]
@@ -3143,7 +3142,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_CSGO_TeamPreviewModel {
-        pub pad_0: [u8; 0x37d0], // 0x0
+        pub pad_0: [u8; 0x3800], // 0x0
     }
 
     #[repr(C)]
@@ -3245,7 +3244,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponP90 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -3335,7 +3334,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponTec9 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -3423,14 +3422,14 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_CSWeaponBaseGun {
-        pub pad_0: [u8; 0x1f20], // 0x0
-        pub _: [u8; 0x4], // 0x1f20
-        pub _: [u8; 0x4], // 0x1f24
-        pub _: [u8; 0x10], // 0x1f28
-        pub _: [u8; 0x4], // 0x1f38
-        pub _: [u8; 0x1], // 0x1f3c
-        pub _: [u8; 0x3], // 0x1f3d
-        pub _: [u8; 0x10], // 0x1f40
+        pub pad_0: [u8; 0x1f60], // 0x0
+        pub _: [u8; 0x4], // 0x1f60
+        pub _: [u8; 0x4], // 0x1f64
+        pub _: [u8; 0x10], // 0x1f68
+        pub _: [u8; 0x4], // 0x1f78
+        pub _: [u8; 0x1], // 0x1f7c
+        pub _: [u8; 0x3], // 0x1f7d
+        pub _: [u8; 0x10], // 0x1f80
     }
 
     #[repr(C)]
@@ -3463,7 +3462,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponP250 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -3891,7 +3890,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponSCAR20 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -3997,7 +3996,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_DecoyGrenade {
-        pub pad_0: [u8; 0x1fe0], // 0x0
+        pub pad_0: [u8; 0x2020], // 0x0
     }
 
     #[repr(C)]
@@ -4111,7 +4110,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponHKP2000 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -4311,7 +4310,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponMP7 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -4593,7 +4592,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_CSWeaponBaseShotgun {
-        pub pad_0: [u8; 0x1f20], // 0x0
+        pub pad_0: [u8; 0x1f60], // 0x0
     }
 
     #[repr(C)]
@@ -4615,9 +4614,9 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_CSGO_PreviewPlayer {
-        pub pad_0: [u8; 0x3720], // 0x0
-        pub _: [u8; 0x8], // 0x3720
-        pub _: [u8; 0xa8], // 0x3728
+        pub pad_0: [u8; 0x3750], // 0x0
+        pub _: [u8; 0x8], // 0x3750
+        pub _: [u8; 0xa8], // 0x3758
     }
 
     #[repr(C)]
@@ -4710,7 +4709,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponM4A1 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -4952,7 +4951,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponM249 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -4987,9 +4986,9 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponTaser {
-        pub pad_0: [u8; 0x1f50], // 0x0
-        pub _: [u8; 0x4], // 0x1f50
-        pub _: [u8; 0xc], // 0x1f54
+        pub pad_0: [u8; 0x1f90], // 0x0
+        pub _: [u8; 0x4], // 0x1f90
+        pub _: [u8; 0xc], // 0x1f94
     }
 
     #[repr(C)]
@@ -5033,17 +5032,17 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponNegev {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
     pub struct C_WeaponFiveSeven {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
     pub struct C_WeaponSawedoff {
-        pub pad_0: [u8; 0x1f20], // 0x0
+        pub pad_0: [u8; 0x1f60], // 0x0
     }
 
     #[repr(C)]
@@ -5069,7 +5068,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponMP9 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -5094,7 +5093,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_AK47 {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -5136,7 +5135,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_IncendiaryGrenade {
-        pub pad_0: [u8; 0x1fe0], // 0x0
+        pub pad_0: [u8; 0x2020], // 0x0
     }
 
     #[repr(C)]
@@ -5223,6 +5222,7 @@ pub mod client_dll {
         pub _: [u8; 0x4], // 0x624
         pub _: [u8; 0x4], // 0x628
         pub _: [u8; 0x4], // 0x62c
+        pub _: [u8; 0x8], // 0x630
     }
 
     #[repr(C)]
@@ -5382,7 +5382,7 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_WeaponGlock {
-        pub pad_0: [u8; 0x1f50], // 0x0
+        pub pad_0: [u8; 0x1f90], // 0x0
     }
 
     #[repr(C)]
@@ -5437,12 +5437,12 @@ pub mod client_dll {
 
     #[repr(C)]
     pub struct C_SmokeGrenade {
-        pub pad_0: [u8; 0x1fe0], // 0x0
+        pub pad_0: [u8; 0x2020], // 0x0
     }
 
     #[repr(C)]
     pub struct C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel {
-        pub pad_0: [u8; 0x37d0], // 0x0
+        pub pad_0: [u8; 0x3800], // 0x0
     }
 
     #[repr(C)]

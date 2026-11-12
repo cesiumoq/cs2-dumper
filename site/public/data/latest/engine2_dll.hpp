@@ -1,8 +1,8 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
-/*  Total Offsets   : 202
-/*  Dumped At       : 14:40 05/11/2026 (GMT)
-/*  Dumped In       : 1,2s
+/*  Total Offsets   : 201
+/*  Dumped At       : 13:18 12/11/2026 (GMT)
+/*  Dumped In       : 68,0s
 */
 
 /*                       cesium dumper
@@ -372,8 +372,9 @@ struct EngineLoopState_t {
 };
 
 struct EventClientPollNetworking_t {
-    static constexpr std::size_t size = 0x4;
+    static constexpr std::size_t size = 0x8;
     std::uint8_t _[0x4]; // 0x0 
+    std::uint8_t _[0x4]; // 0x4 
 };
 
 struct EventServerBeginAsyncPostTickWork_t {

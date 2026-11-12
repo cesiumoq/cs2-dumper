@@ -5,13 +5,13 @@
       "name": "FrameStageNotify",
       "old_pattern": "48 89 5C 24 ? 48 89 6C 24 ? 57 48 83 EC ? 48 8B F9 33 ED",
       "pattern": "48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 40 48",
-      "to": "0xB6EFE0"
+      "to": "0xB628B0"
     }
   ],
-  "build_number": 14196,
+  "build_number": 14197,
   "checks": [
     {
-      "detail": "560 of 578 entries resolve; 18 need re-anchoring",
+      "detail": "556 of 578 entries resolve; 22 need re-anchoring",
       "items": [
         {
           "module": "client.dll",
@@ -24,6 +24,10 @@
         {
           "module": "client.dll",
           "name": "FirstPersonLegs"
+        },
+        {
+          "module": "client.dll",
+          "name": "GetChatObject"
         },
         {
           "module": "client.dll",
@@ -58,8 +62,20 @@
           "name": "pWeaponRecoilTable"
         },
         {
+          "module": "engine2.dll",
+          "name": "PostEventAbstract"
+        },
+        {
           "module": "networksystem.dll",
           "name": "ProcessMessages"
+        },
+        {
+          "module": "networksystem.dll",
+          "name": "SendNetMessage"
+        },
+        {
+          "module": "networksystem.dll",
+          "name": "pNetworkSystem"
         },
         {
           "module": "server.dll",
@@ -109,7 +125,7 @@
           "name": "FrameStageNotify",
           "old_pattern": "48 89 5C 24 ? 48 89 6C 24 ? 57 48 83 EC ? 48 8B F9 33 ED",
           "pattern": "48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 40 48",
-          "rva": "0xB6EFE0"
+          "rva": "0xB628B0"
         }
       ],
       "name": "patterns_healed",
@@ -120,87 +136,87 @@
       "items": [
         {
           "global": "dwGameRules",
-          "global_rva": "0x256A3F8",
+          "global_rva": "0x25537E8",
           "module": "client.dll",
           "ok": true,
           "signature": "pGameRules",
-          "signature_rva": "0x256A3F8"
+          "signature_rva": "0x25537E8"
         },
         {
           "global": "dwSensitivity",
-          "global_rva": "0x2567C48",
+          "global_rva": "0x2551038",
           "module": "client.dll",
           "ok": true,
           "signature": "pSensitivity",
-          "signature_rva": "0x2567C48"
+          "signature_rva": "0x2551038"
         },
         {
           "global": "dwPrediction",
-          "global_rva": "0x256A850",
+          "global_rva": "0x2553C40",
           "module": "client.dll",
           "ok": true,
           "signature": "pPrediction",
-          "signature_rva": "0x256A850"
+          "signature_rva": "0x2553C40"
         },
         {
           "global": "dwGlowManager",
-          "global_rva": "0x2567120",
+          "global_rva": "0x2550500",
           "module": "client.dll",
           "ok": true,
           "signature": "pGlowManager",
-          "signature_rva": "0x2567120"
+          "signature_rva": "0x2550500"
         },
         {
           "global": "dwLocalPlayerController",
-          "global_rva": "0x2542548",
+          "global_rva": "0x252B0C8",
           "module": "client.dll",
           "ok": true,
           "signature": "pLocalPlayerController",
-          "signature_rva": "0x2542548"
+          "signature_rva": "0x252B0C8"
         },
         {
           "global": "dwCSGOInput",
-          "global_rva": "0x2580A10",
+          "global_rva": "0x2569E30",
           "module": "client.dll",
           "ok": true,
           "signature": "pCSGOInputInstance",
-          "signature_rva": "0x2580A10"
+          "signature_rva": "0x2569E30"
         },
         {
           "global": "dwBuildNumber",
-          "global_rva": "0x6BA028",
+          "global_rva": "0x6B2D18",
           "module": "engine2.dll",
           "ok": true,
           "signature": "pBuildNumber",
-          "signature_rva": "0x6BA028"
+          "signature_rva": "0x6B2D18"
         },
         {
           "global": "dwNetworkGameClient",
-          "global_rva": "0x9B88C0",
+          "global_rva": "0x9AFB30",
           "module": "engine2.dll",
           "ok": true,
           "signature": "pNetworkGameClient",
-          "signature_rva": "0x9B88C0"
+          "signature_rva": "0x9AFB30"
         },
         {
           "global": "dwWindowWidth",
-          "global_rva": "0x9BCFE8",
+          "global_rva": "0x9B4290",
           "module": "engine2.dll",
           "ok": true,
           "signature": "pWindowWidth",
-          "signature_rva": "0x9BCFE8"
+          "signature_rva": "0x9B4290"
         },
         {
           "global": "dwWindowHeight",
-          "global_rva": "0x9BCFEC",
+          "global_rva": "0x9B4294",
           "module": "engine2.dll",
           "ok": true,
           "signature": "pWindowHeight",
-          "signature_rva": "0x9BCFEC"
+          "signature_rva": "0x9B4294"
         },
         {
           "global": "dwSoundSystem",
-          "global_rva": "0x532420",
+          "global_rva": "0x532470",
           "module": "soundsystem.dll",
           "ok": false,
           "signature": "pSoundSystem",
@@ -217,7 +233,7 @@
       "status": "pass"
     },
     {
-      "detail": "453 function targets start after padding",
+      "detail": "450 function targets start after padding",
       "items": [],
       "name": "function_prologues",
       "status": "pass"
@@ -301,14 +317,14 @@
       "status": "warn"
     }
   ],
-  "client_version": "2000942",
+  "client_version": "2000943",
   "dumper_version": "2.1.8",
-  "generated_at": "2026-11-05T13:51:52.098534500+01:00",
+  "generated_at": "2026-11-12T14:15:12.530061600+01:00",
   "note": "Written by cs2-sdk after every dump. `ok` is false when a check failed; warnings list what to look at. The auto-dump pipeline adds `update`, `auto_healed` and `known_issues`.",
   "ok": false,
-  "patch_version": "1.41.9.6",
+  "patch_version": "1.41.9.7",
   "signatures": {
-    "found": 560,
+    "found": 556,
     "missing": [
       {
         "module": "client.dll",
@@ -321,6 +337,10 @@
       {
         "module": "client.dll",
         "name": "FirstPersonLegs"
+      },
+      {
+        "module": "client.dll",
+        "name": "GetChatObject"
       },
       {
         "module": "client.dll",
@@ -355,8 +375,20 @@
         "name": "pWeaponRecoilTable"
       },
       {
+        "module": "engine2.dll",
+        "name": "PostEventAbstract"
+      },
+      {
         "module": "networksystem.dll",
         "name": "ProcessMessages"
+      },
+      {
+        "module": "networksystem.dll",
+        "name": "SendNetMessage"
+      },
+      {
+        "module": "networksystem.dll",
+        "name": "pNetworkSystem"
       },
       {
         "module": "server.dll",
@@ -384,7 +416,7 @@
       }
     ],
     "total": 578,
-    "unique_functions": 513
+    "unique_functions": 509
   },
   "summary": {
     "fail": 2,

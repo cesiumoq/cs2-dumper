@@ -1,13 +1,17 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
-/*  Total Offsets   : 202
-/*  Dumped At       : 14:40 05/11/2026 (GMT)
-/*  Dumped In       : 1,2s
+/*  Total Offsets   : 201
+/*  Dumped At       : 13:18 12/11/2026 (GMT)
+/*  Dumped In       : 68,0s
 */
+
+// Single-include amalgamation header for CS2 internal cheats.
+// Add the dump's `include/` to your include path and:
+//     #include <cs2.hpp>
 
 #pragma once
 
-inline constexpr unsigned int CS2_BUILD = 14196;
+inline constexpr unsigned int CS2_BUILD = 14197;
 
 #include "macros.hpp"
 

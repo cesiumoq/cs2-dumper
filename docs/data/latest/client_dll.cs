@@ -1,8 +1,8 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
-/*  Total Offsets   : 202
-/*  Dumped At       : 14:40 05/11/2026 (GMT)
-/*  Dumped In       : 1,2s
+/*  Total Offsets   : 201
+/*  Dumped At       : 13:18 12/11/2026 (GMT)
+/*  Dumped In       : 68,0s
 */
 
 /* cesium dumper | generated from live schema */
@@ -473,19 +473,19 @@ namespace Cs2.client_dll {
         [FieldOffset(0x632)] public fixed byte _[0x6];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f60)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1fa0)]
     public unsafe struct C_C4 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f20];
-        [FieldOffset(0x1f20)] public fixed byte _[0x4];
-        [FieldOffset(0x1f24)] public fixed byte _[0x4];
-        [FieldOffset(0x1f28)] public fixed byte _[0x4];
-        [FieldOffset(0x1f2c)] public fixed byte _[0x4];
-        [FieldOffset(0x1f30)] public fixed byte _[0x1];
-        [FieldOffset(0x1f31)] public fixed byte _[0x7];
-        [FieldOffset(0x1f38)] public fixed byte _[0x18];
-        [FieldOffset(0x1f50)] public fixed byte _[0x4];
-        [FieldOffset(0x1f54)] public fixed byte _[0x7];
-        [FieldOffset(0x1f5b)] public fixed byte _[0x5];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f60];
+        [FieldOffset(0x1f60)] public fixed byte _[0x4];
+        [FieldOffset(0x1f64)] public fixed byte _[0x4];
+        [FieldOffset(0x1f68)] public fixed byte _[0x4];
+        [FieldOffset(0x1f6c)] public fixed byte _[0x4];
+        [FieldOffset(0x1f70)] public fixed byte _[0x1];
+        [FieldOffset(0x1f71)] public fixed byte _[0x7];
+        [FieldOffset(0x1f78)] public fixed byte _[0x18];
+        [FieldOffset(0x1f90)] public fixed byte _[0x4];
+        [FieldOffset(0x1f94)] public fixed byte _[0x7];
+        [FieldOffset(0x1f9b)] public fixed byte _[0x5];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1568)]
@@ -609,9 +609,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x48)] public fixed byte _[0x8];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponAWP {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x10a8)]
@@ -713,14 +713,14 @@ namespace Cs2.client_dll {
         [FieldOffset(0x18)] public fixed byte _[0x30];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponUMP45 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponG3SG1 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x10a8)]
@@ -758,9 +758,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x1354)] public fixed byte _[0x4];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponFamas {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x6b0)]
@@ -890,9 +890,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x14)] public fixed byte _[0x4];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f20)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f60)]
     public unsafe struct C_WeaponNOVA {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f20];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f60];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1330)]
@@ -900,9 +900,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x0)] public fixed byte pad_0[0x1330];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_DEagle {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1180)]
@@ -1111,9 +1111,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x0)] public fixed byte pad_0[0x620];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1fe0)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x2020)]
     public unsafe struct C_MolotovGrenade {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1fe0];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x2020];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x12f0)]
@@ -1127,9 +1127,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x80)] public fixed byte _[0x130];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponM4A1Silencer {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x658)]
@@ -1303,66 +1303,66 @@ namespace Cs2.client_dll {
         [FieldOffset(0x608)] public fixed byte _[0x8];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f20)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f60)]
     public unsafe struct C_CSWeaponBase {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x19a8];
-        [FieldOffset(0x19a8)] public fixed byte _[0x4];
-        [FieldOffset(0x19ac)] public fixed byte _[0x4];
-        [FieldOffset(0x19b0)] public fixed byte _[0x4];
-        [FieldOffset(0x19b4)] public fixed byte _[0x1];
-        [FieldOffset(0x19b5)] public fixed byte _[0x2b];
-        [FieldOffset(0x19e0)] public fixed byte _[0x4];
-        [FieldOffset(0x19e4)] public fixed byte _[0x4];
-        [FieldOffset(0x19e8)] public fixed byte _[0x18];
-        [FieldOffset(0x1a00)] public fixed byte _[0x4];
-        [FieldOffset(0x1a04)] public fixed byte _[0x4];
-        [FieldOffset(0x1a08)] public fixed byte _[0xc];
-        [FieldOffset(0x1a14)] public fixed byte _[0x4];
-        [FieldOffset(0x1a18)] public fixed byte _[0x4];
-        [FieldOffset(0x1a1c)] public fixed byte _[0x4];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x19e8];
+        [FieldOffset(0x19e8)] public fixed byte _[0x4];
+        [FieldOffset(0x19ec)] public fixed byte _[0x4];
+        [FieldOffset(0x19f0)] public fixed byte _[0x4];
+        [FieldOffset(0x19f4)] public fixed byte _[0x1];
+        [FieldOffset(0x19f5)] public fixed byte _[0x2b];
         [FieldOffset(0x1a20)] public fixed byte _[0x4];
         [FieldOffset(0x1a24)] public fixed byte _[0x4];
-        [FieldOffset(0x1a28)] public fixed byte _[0x4];
-        [FieldOffset(0x1a2c)] public fixed byte _[0x4];
-        [FieldOffset(0x1a30)] public fixed byte _[0x4];
-        [FieldOffset(0x1a34)] public fixed byte _[0x4];
-        [FieldOffset(0x1a38)] public fixed byte _[0x4];
-        [FieldOffset(0x1a3c)] public fixed byte _[0x4];
+        [FieldOffset(0x1a28)] public fixed byte _[0x18];
         [FieldOffset(0x1a40)] public fixed byte _[0x4];
         [FieldOffset(0x1a44)] public fixed byte _[0x4];
-        [FieldOffset(0x1a48)] public fixed byte _[0x8];
-        [FieldOffset(0x1a50)] public fixed byte _[0x1];
-        [FieldOffset(0x1a51)] public fixed byte _[0x3];
+        [FieldOffset(0x1a48)] public fixed byte _[0xc];
         [FieldOffset(0x1a54)] public fixed byte _[0x4];
-        [FieldOffset(0x1a58)] public fixed byte _[0x1];
-        [FieldOffset(0x1a59)] public fixed byte _[0x3];
+        [FieldOffset(0x1a58)] public fixed byte _[0x4];
         [FieldOffset(0x1a5c)] public fixed byte _[0x4];
         [FieldOffset(0x1a60)] public fixed byte _[0x4];
         [FieldOffset(0x1a64)] public fixed byte _[0x4];
         [FieldOffset(0x1a68)] public fixed byte _[0x4];
         [FieldOffset(0x1a6c)] public fixed byte _[0x4];
         [FieldOffset(0x1a70)] public fixed byte _[0x4];
-        [FieldOffset(0x1a74)] public fixed byte _[0xac];
-        [FieldOffset(0x1b20)] public fixed byte _[0x1];
-        [FieldOffset(0x1b21)] public fixed byte _[0x1];
-        [FieldOffset(0x1b22)] public fixed byte _[0x2];
-        [FieldOffset(0x1b24)] public fixed byte _[0xc];
-        [FieldOffset(0x1b30)] public fixed byte _[0x4];
-        [FieldOffset(0x1b34)] public fixed byte _[0x4];
-        [FieldOffset(0x1b38)] public fixed byte _[0x4];
-        [FieldOffset(0x1b3c)] public fixed byte _[0x4];
-        [FieldOffset(0x1b40)] public fixed byte _[0x24];
-        [FieldOffset(0x1b64)] public fixed byte _[0x4];
-        [FieldOffset(0x1b68)] public fixed byte _[0x4];
-        [FieldOffset(0x1b6c)] public fixed byte _[0x1];
-        [FieldOffset(0x1b6d)] public fixed byte _[0x3];
+        [FieldOffset(0x1a74)] public fixed byte _[0x4];
+        [FieldOffset(0x1a78)] public fixed byte _[0x4];
+        [FieldOffset(0x1a7c)] public fixed byte _[0x4];
+        [FieldOffset(0x1a80)] public fixed byte _[0x4];
+        [FieldOffset(0x1a84)] public fixed byte _[0x4];
+        [FieldOffset(0x1a88)] public fixed byte _[0x8];
+        [FieldOffset(0x1a90)] public fixed byte _[0x1];
+        [FieldOffset(0x1a91)] public fixed byte _[0x3];
+        [FieldOffset(0x1a94)] public fixed byte _[0x4];
+        [FieldOffset(0x1a98)] public fixed byte _[0x1];
+        [FieldOffset(0x1a99)] public fixed byte _[0x3];
+        [FieldOffset(0x1a9c)] public fixed byte _[0x4];
+        [FieldOffset(0x1aa0)] public fixed byte _[0x4];
+        [FieldOffset(0x1aa4)] public fixed byte _[0x4];
+        [FieldOffset(0x1aa8)] public fixed byte _[0x4];
+        [FieldOffset(0x1aac)] public fixed byte _[0x4];
+        [FieldOffset(0x1ab0)] public fixed byte _[0x4];
+        [FieldOffset(0x1ab4)] public fixed byte _[0xac];
+        [FieldOffset(0x1b60)] public fixed byte _[0x1];
+        [FieldOffset(0x1b61)] public fixed byte _[0x1];
+        [FieldOffset(0x1b62)] public fixed byte _[0x2];
+        [FieldOffset(0x1b64)] public fixed byte _[0xc];
         [FieldOffset(0x1b70)] public fixed byte _[0x4];
-        [FieldOffset(0x1b74)] public fixed byte _[0x5c];
-        [FieldOffset(0x1bd0)] public fixed byte _[0xb0];
-        [FieldOffset(0x1c80)] public fixed byte _[0x78];
-        [FieldOffset(0x1cf8)] public fixed byte _[0x60];
-        [FieldOffset(0x1d58)] public fixed byte _[0x14];
-        [FieldOffset(0x1d6c)] public fixed byte _[0x1b4];
+        [FieldOffset(0x1b74)] public fixed byte _[0x4];
+        [FieldOffset(0x1b78)] public fixed byte _[0x4];
+        [FieldOffset(0x1b7c)] public fixed byte _[0x4];
+        [FieldOffset(0x1b80)] public fixed byte _[0x24];
+        [FieldOffset(0x1ba4)] public fixed byte _[0x4];
+        [FieldOffset(0x1ba8)] public fixed byte _[0x4];
+        [FieldOffset(0x1bac)] public fixed byte _[0x1];
+        [FieldOffset(0x1bad)] public fixed byte _[0x3];
+        [FieldOffset(0x1bb0)] public fixed byte _[0x4];
+        [FieldOffset(0x1bb4)] public fixed byte _[0x5c];
+        [FieldOffset(0x1c10)] public fixed byte _[0xb0];
+        [FieldOffset(0x1cc0)] public fixed byte _[0x78];
+        [FieldOffset(0x1d38)] public fixed byte _[0x60];
+        [FieldOffset(0x1d98)] public fixed byte _[0x14];
+        [FieldOffset(0x1dac)] public fixed byte _[0x1b4];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x228)]
@@ -1407,9 +1407,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x8)] public fixed byte _[0x48];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponMag7 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x38)]
@@ -1532,9 +1532,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x8)] public fixed byte _[0x28];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1fe0)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x2020)]
     public unsafe struct C_Flashbang {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1fe0];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x2020];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1500)]
@@ -1579,9 +1579,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x10ea)] public fixed byte _[0x6];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponMP5SD {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1098)]
@@ -1594,9 +1594,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x0)] public fixed byte pad_0[0x1d18];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponGalilAR {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x2b0)]
@@ -1622,12 +1622,12 @@ namespace Cs2.client_dll {
         [FieldOffset(0x50)] public fixed byte _[0x30];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponSG556 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x3720)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x3750)]
     public unsafe struct C_CSPlayerPawn {
         [FieldOffset(0x0)] public fixed byte pad_0[0x1570];
         [FieldOffset(0x1570)] public fixed byte _[0x8];
@@ -1657,84 +1657,84 @@ namespace Cs2.client_dll {
         [FieldOffset(0x15e9)] public fixed byte _[0x1];
         [FieldOffset(0x15ea)] public fixed byte _[0x2];
         [FieldOffset(0x15ec)] public fixed byte _[0x4];
-        [FieldOffset(0x15f0)] public fixed byte _[0x168];
-        [FieldOffset(0x1758)] public fixed byte _[0x4];
-        [FieldOffset(0x175c)] public fixed byte _[0x4];
-        [FieldOffset(0x1760)] public fixed byte _[0x1];
-        [FieldOffset(0x1761)] public fixed byte _[0x3];
-        [FieldOffset(0x1764)] public fixed byte _[0x4];
-        [FieldOffset(0x1768)] public fixed byte _[0x5];
-        [FieldOffset(0x176d)] public fixed byte _[0x3];
-        [FieldOffset(0x1770)] public fixed byte _[0x5b0];
-        [FieldOffset(0x1d20)] public fixed byte _[0x1];
-        [FieldOffset(0x1d21)] public fixed byte _[0x3];
-        [FieldOffset(0x1d24)] public fixed byte _[0x4];
-        [FieldOffset(0x1d28)] public fixed byte _[0xc];
-        [FieldOffset(0x1d34)] public fixed byte _[0x40];
-        [FieldOffset(0x1d74)] public fixed byte _[0x4];
-        [FieldOffset(0x1d78)] public fixed byte _[0xc];
-        [FieldOffset(0x1d84)] public fixed byte _[0x4];
-        [FieldOffset(0x1d88)] public fixed byte _[0x20];
-        [FieldOffset(0x1da8)] public fixed byte _[0x4];
-        [FieldOffset(0x1dac)] public fixed byte _[0xc];
-        [FieldOffset(0x1db8)] public fixed byte _[0x4];
-        [FieldOffset(0x1dbc)] public fixed byte _[0x4];
-        [FieldOffset(0x1dc0)] public fixed byte _[0x4];
-        [FieldOffset(0x1dc4)] public fixed byte _[0x4];
-        [FieldOffset(0x1dc8)] public fixed byte _[0x4];
-        [FieldOffset(0x1dcc)] public fixed byte _[0x4];
-        [FieldOffset(0x1dd0)] public fixed byte _[0x48];
-        [FieldOffset(0x1e18)] public fixed byte _[0x50];
-        [FieldOffset(0x1e68)] public fixed byte _[0x18];
-        [FieldOffset(0x1e80)] public fixed byte _[0x8];
-        [FieldOffset(0x1e88)] public fixed byte _[0x18];
-        [FieldOffset(0x1ea0)] public fixed byte _[0x1];
-        [FieldOffset(0x1ea1)] public fixed byte _[0x1];
-        [FieldOffset(0x1ea2)] public fixed byte _[0x1];
-        [FieldOffset(0x1ea3)] public fixed byte _[0x1];
-        [FieldOffset(0x1ea4)] public fixed byte _[0x4];
-        [FieldOffset(0x1ea8)] public fixed byte _[0x4];
-        [FieldOffset(0x1eac)] public fixed byte _[0x4];
-        [FieldOffset(0x1eb0)] public fixed byte _[0x4];
-        [FieldOffset(0x1eb4)] public fixed byte _[0x4];
-        [FieldOffset(0x1eb8)] public fixed byte _[0x4];
-        [FieldOffset(0x1ebc)] public fixed byte _[0x4];
-        [FieldOffset(0x1ec0)] public fixed byte _[0x4];
-        [FieldOffset(0x1ec4)] public fixed byte _[0x4];
-        [FieldOffset(0x1ec8)] public fixed byte _[0x5];
-        [FieldOffset(0x1ecd)] public fixed byte _[0x3];
-        [FieldOffset(0x1ed0)] public fixed byte _[0x4];
-        [FieldOffset(0x1ed4)] public fixed byte _[0x2];
-        [FieldOffset(0x1ed6)] public fixed byte _[0x2];
+        [FieldOffset(0x15f0)] public fixed byte _[0x198];
+        [FieldOffset(0x1788)] public fixed byte _[0x4];
+        [FieldOffset(0x178c)] public fixed byte _[0x4];
+        [FieldOffset(0x1790)] public fixed byte _[0x1];
+        [FieldOffset(0x1791)] public fixed byte _[0x3];
+        [FieldOffset(0x1794)] public fixed byte _[0x4];
+        [FieldOffset(0x1798)] public fixed byte _[0x5];
+        [FieldOffset(0x179d)] public fixed byte _[0x3];
+        [FieldOffset(0x17a0)] public fixed byte _[0x5b0];
+        [FieldOffset(0x1d50)] public fixed byte _[0x1];
+        [FieldOffset(0x1d51)] public fixed byte _[0x3];
+        [FieldOffset(0x1d54)] public fixed byte _[0x4];
+        [FieldOffset(0x1d58)] public fixed byte _[0xc];
+        [FieldOffset(0x1d64)] public fixed byte _[0x40];
+        [FieldOffset(0x1da4)] public fixed byte _[0x4];
+        [FieldOffset(0x1da8)] public fixed byte _[0xc];
+        [FieldOffset(0x1db4)] public fixed byte _[0x4];
+        [FieldOffset(0x1db8)] public fixed byte _[0x20];
+        [FieldOffset(0x1dd8)] public fixed byte _[0x4];
+        [FieldOffset(0x1ddc)] public fixed byte _[0xc];
+        [FieldOffset(0x1de8)] public fixed byte _[0x4];
+        [FieldOffset(0x1dec)] public fixed byte _[0x4];
+        [FieldOffset(0x1df0)] public fixed byte _[0x4];
+        [FieldOffset(0x1df4)] public fixed byte _[0x4];
+        [FieldOffset(0x1df8)] public fixed byte _[0x4];
+        [FieldOffset(0x1dfc)] public fixed byte _[0x4];
+        [FieldOffset(0x1e00)] public fixed byte _[0x48];
+        [FieldOffset(0x1e48)] public fixed byte _[0x50];
+        [FieldOffset(0x1e98)] public fixed byte _[0x18];
+        [FieldOffset(0x1eb0)] public fixed byte _[0x8];
+        [FieldOffset(0x1eb8)] public fixed byte _[0x18];
+        [FieldOffset(0x1ed0)] public fixed byte _[0x1];
+        [FieldOffset(0x1ed1)] public fixed byte _[0x1];
+        [FieldOffset(0x1ed2)] public fixed byte _[0x1];
+        [FieldOffset(0x1ed3)] public fixed byte _[0x1];
+        [FieldOffset(0x1ed4)] public fixed byte _[0x4];
         [FieldOffset(0x1ed8)] public fixed byte _[0x4];
         [FieldOffset(0x1edc)] public fixed byte _[0x4];
-        [FieldOffset(0x1ee0)] public fixed byte _[0x1];
-        [FieldOffset(0x1ee1)] public fixed byte _[0x3];
+        [FieldOffset(0x1ee0)] public fixed byte _[0x4];
         [FieldOffset(0x1ee4)] public fixed byte _[0x4];
-        [FieldOffset(0x1ee8)] public fixed byte _[0x38];
-        [FieldOffset(0x1f20)] public fixed byte _[0x4];
-        [FieldOffset(0x1f24)] public fixed byte _[0x4];
-        [FieldOffset(0x1f28)] public fixed byte _[0xc];
-        [FieldOffset(0x1f34)] public fixed byte _[0xc];
-        [FieldOffset(0x1f40)] public fixed byte _[0xc];
-        [FieldOffset(0x1f4c)] public fixed byte _[0xc];
-        [FieldOffset(0x1f58)] public fixed byte _[0x15a8];
-        [FieldOffset(0x3500)] public fixed byte _[0x4];
-        [FieldOffset(0x3504)] public fixed byte _[0x4];
-        [FieldOffset(0x3508)] public fixed byte _[0x4];
-        [FieldOffset(0x350c)] public fixed byte _[0x4];
-        [FieldOffset(0x3510)] public fixed byte _[0x4];
-        [FieldOffset(0x3514)] public fixed byte _[0x74];
-        [FieldOffset(0x3588)] public fixed byte _[0x78];
-        [FieldOffset(0x3600)] public fixed byte _[0x90];
-        [FieldOffset(0x3690)] public fixed byte _[0x10];
-        [FieldOffset(0x36a0)] public fixed byte _[0x30];
-        [FieldOffset(0x36d0)] public fixed byte _[0xc];
-        [FieldOffset(0x36dc)] public fixed byte _[0x4];
-        [FieldOffset(0x36e0)] public fixed byte _[0x18];
-        [FieldOffset(0x36f8)] public fixed byte _[0x4];
-        [FieldOffset(0x36fc)] public fixed byte _[0x4];
-        [FieldOffset(0x3700)] public fixed byte _[0x20];
+        [FieldOffset(0x1ee8)] public fixed byte _[0x4];
+        [FieldOffset(0x1eec)] public fixed byte _[0x4];
+        [FieldOffset(0x1ef0)] public fixed byte _[0x4];
+        [FieldOffset(0x1ef4)] public fixed byte _[0x4];
+        [FieldOffset(0x1ef8)] public fixed byte _[0x5];
+        [FieldOffset(0x1efd)] public fixed byte _[0x3];
+        [FieldOffset(0x1f00)] public fixed byte _[0x4];
+        [FieldOffset(0x1f04)] public fixed byte _[0x2];
+        [FieldOffset(0x1f06)] public fixed byte _[0x2];
+        [FieldOffset(0x1f08)] public fixed byte _[0x4];
+        [FieldOffset(0x1f0c)] public fixed byte _[0x4];
+        [FieldOffset(0x1f10)] public fixed byte _[0x1];
+        [FieldOffset(0x1f11)] public fixed byte _[0x3];
+        [FieldOffset(0x1f14)] public fixed byte _[0x4];
+        [FieldOffset(0x1f18)] public fixed byte _[0x38];
+        [FieldOffset(0x1f50)] public fixed byte _[0x4];
+        [FieldOffset(0x1f54)] public fixed byte _[0x4];
+        [FieldOffset(0x1f58)] public fixed byte _[0xc];
+        [FieldOffset(0x1f64)] public fixed byte _[0xc];
+        [FieldOffset(0x1f70)] public fixed byte _[0xc];
+        [FieldOffset(0x1f7c)] public fixed byte _[0xc];
+        [FieldOffset(0x1f88)] public fixed byte _[0x15a8];
+        [FieldOffset(0x3530)] public fixed byte _[0x4];
+        [FieldOffset(0x3534)] public fixed byte _[0x4];
+        [FieldOffset(0x3538)] public fixed byte _[0x4];
+        [FieldOffset(0x353c)] public fixed byte _[0x4];
+        [FieldOffset(0x3540)] public fixed byte _[0x4];
+        [FieldOffset(0x3544)] public fixed byte _[0x74];
+        [FieldOffset(0x35b8)] public fixed byte _[0x78];
+        [FieldOffset(0x3630)] public fixed byte _[0x90];
+        [FieldOffset(0x36c0)] public fixed byte _[0x10];
+        [FieldOffset(0x36d0)] public fixed byte _[0x30];
+        [FieldOffset(0x3700)] public fixed byte _[0xc];
+        [FieldOffset(0x370c)] public fixed byte _[0x4];
+        [FieldOffset(0x3710)] public fixed byte _[0x18];
+        [FieldOffset(0x3728)] public fixed byte _[0x4];
+        [FieldOffset(0x372c)] public fixed byte _[0x4];
+        [FieldOffset(0x3730)] public fixed byte _[0x20];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1d18)]
@@ -1749,7 +1749,7 @@ namespace Cs2.client_dll {
         [FieldOffset(0xe0)] public fixed byte _[0x48];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x13c0)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x13b8)]
     public unsafe struct C_Hostage {
         [FieldOffset(0x0)] public fixed byte pad_0[0x12f0];
         [FieldOffset(0x12f0)] public fixed byte _[0x18];
@@ -1766,15 +1766,14 @@ namespace Cs2.client_dll {
         [FieldOffset(0x1354)] public fixed byte _[0x4];
         [FieldOffset(0x1358)] public fixed byte _[0x4];
         [FieldOffset(0x135c)] public fixed byte _[0x4];
-        [FieldOffset(0x1360)] public fixed byte _[0x8];
-        [FieldOffset(0x1368)] public fixed byte _[0x18];
-        [FieldOffset(0x1380)] public fixed byte _[0x10];
-        [FieldOffset(0x1390)] public fixed byte _[0x18];
-        [FieldOffset(0x13a8)] public fixed byte _[0x1];
-        [FieldOffset(0x13a9)] public fixed byte _[0x1];
-        [FieldOffset(0x13aa)] public fixed byte _[0x6];
+        [FieldOffset(0x1360)] public fixed byte _[0x18];
+        [FieldOffset(0x1378)] public fixed byte _[0x10];
+        [FieldOffset(0x1388)] public fixed byte _[0x18];
+        [FieldOffset(0x13a0)] public fixed byte _[0x1];
+        [FieldOffset(0x13a1)] public fixed byte _[0x1];
+        [FieldOffset(0x13a2)] public fixed byte _[0x6];
+        [FieldOffset(0x13a8)] public fixed byte _[0x8];
         [FieldOffset(0x13b0)] public fixed byte _[0x8];
-        [FieldOffset(0x13b8)] public fixed byte _[0x8];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x40)]
@@ -1893,9 +1892,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x0)] public fixed byte pad_0[0x620];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1fe0)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x2020)]
     public unsafe struct C_HEGrenade {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1fe0];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x2020];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x10f8)]
@@ -1933,9 +1932,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x38)] public fixed byte _[0x8];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponMAC10 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x688)]
@@ -2097,9 +2096,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x120)] public fixed byte _[0x48];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f20)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f60)]
     public unsafe struct C_WeaponXM1014 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f20];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f60];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1270)]
@@ -2125,9 +2124,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0xd8)] public fixed byte _[0x48];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponAug {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x14f0)]
@@ -2161,9 +2160,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x24)] public fixed byte _[0x4];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f30)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f70)]
     public unsafe struct C_Item_Healthshot {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f30];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f70];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x840)]
@@ -2397,9 +2396,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x58)] public fixed byte _[0x18];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponSSG08 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x88)]
@@ -2408,7 +2407,7 @@ namespace Cs2.client_dll {
         [FieldOffset(0x48)] public fixed byte _[0x40];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1ba0)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1bd0)]
     public unsafe struct C_Chicken {
         [FieldOffset(0x0)] public fixed byte pad_0[0x14c0];
         [FieldOffset(0x14c0)] public fixed byte _[0x4];
@@ -2416,8 +2415,8 @@ namespace Cs2.client_dll {
         [FieldOffset(0x14c8)] public fixed byte _[0x610];
         [FieldOffset(0x1ad8)] public fixed byte _[0x4];
         [FieldOffset(0x1adc)] public fixed byte _[0x4];
-        [FieldOffset(0x1ae0)] public fixed byte _[0x88];
-        [FieldOffset(0x1b68)] public fixed byte _[0x38];
+        [FieldOffset(0x1ae0)] public fixed byte _[0xb8];
+        [FieldOffset(0x1b98)] public fixed byte _[0x38];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x14c8)]
@@ -2458,9 +2457,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x0)] public fixed byte pad_0[0x620];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponBizon {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1278)]
@@ -2522,10 +2521,10 @@ namespace Cs2.client_dll {
         [FieldOffset(0x1180)] public fixed byte _[0x8];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f30)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f70)]
     public unsafe struct C_Knife {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f20];
-        [FieldOffset(0x1f20)] public fixed byte _[0x10];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f60];
+        [FieldOffset(0x1f60)] public fixed byte _[0x10];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x690)]
@@ -2588,9 +2587,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x10b8)] public fixed byte _[0x10];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponUSPSilencer {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1370)]
@@ -2604,14 +2603,14 @@ namespace Cs2.client_dll {
         [FieldOffset(0x0)] public fixed byte pad_0[0x1180];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponRevolver {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponElite {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x14b0)]
@@ -2796,23 +2795,23 @@ namespace Cs2.client_dll {
         [FieldOffset(0xa0)] public fixed byte _[0x18];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1fe0)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x2020)]
     public unsafe struct C_BaseCSGrenade {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f20];
-        [FieldOffset(0x1f20)] public fixed byte _[0x1];
-        [FieldOffset(0x1f21)] public fixed byte _[0x1];
-        [FieldOffset(0x1f22)] public fixed byte _[0x1];
-        [FieldOffset(0x1f23)] public fixed byte _[0x1];
-        [FieldOffset(0x1f24)] public fixed byte _[0x1];
-        [FieldOffset(0x1f25)] public fixed byte _[0x3];
-        [FieldOffset(0x1f28)] public fixed byte _[0x8];
-        [FieldOffset(0x1f30)] public fixed byte _[0x78];
-        [FieldOffset(0x1fa8)] public fixed byte _[0x4];
-        [FieldOffset(0x1fac)] public fixed byte _[0x4];
-        [FieldOffset(0x1fb0)] public fixed byte _[0x4];
-        [FieldOffset(0x1fb4)] public fixed byte _[0x4];
-        [FieldOffset(0x1fb8)] public fixed byte _[0x4];
-        [FieldOffset(0x1fbc)] public fixed byte _[0x24];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f60];
+        [FieldOffset(0x1f60)] public fixed byte _[0x1];
+        [FieldOffset(0x1f61)] public fixed byte _[0x1];
+        [FieldOffset(0x1f62)] public fixed byte _[0x1];
+        [FieldOffset(0x1f63)] public fixed byte _[0x1];
+        [FieldOffset(0x1f64)] public fixed byte _[0x1];
+        [FieldOffset(0x1f65)] public fixed byte _[0x3];
+        [FieldOffset(0x1f68)] public fixed byte _[0x8];
+        [FieldOffset(0x1f70)] public fixed byte _[0x78];
+        [FieldOffset(0x1fe8)] public fixed byte _[0x4];
+        [FieldOffset(0x1fec)] public fixed byte _[0x4];
+        [FieldOffset(0x1ff0)] public fixed byte _[0x4];
+        [FieldOffset(0x1ff4)] public fixed byte _[0x4];
+        [FieldOffset(0x1ff8)] public fixed byte _[0x4];
+        [FieldOffset(0x1ffc)] public fixed byte _[0x24];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x640)]
@@ -3032,11 +3031,11 @@ namespace Cs2.client_dll {
         [FieldOffset(0x0)] public fixed byte pad_0[0x618];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f30)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f70)]
     public unsafe struct C_WeaponBaseItem {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f20];
-        [FieldOffset(0x1f20)] public fixed byte _[0x1];
-        [FieldOffset(0x1f21)] public fixed byte _[0xf];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f60];
+        [FieldOffset(0x1f60)] public fixed byte _[0x1];
+        [FieldOffset(0x1f61)] public fixed byte _[0xf];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1098)]
@@ -3077,10 +3076,10 @@ namespace Cs2.client_dll {
         [FieldOffset(0x0)] public fixed byte _[0x4];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f60)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1fa0)]
     public unsafe struct C_WeaponCZ75a {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
-        [FieldOffset(0x1f50)] public fixed byte _[0x10];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
+        [FieldOffset(0x1f90)] public fixed byte _[0x10];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x10c0)]
@@ -3149,9 +3148,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x48)] public fixed byte _[0x68];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x37d0)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x3800)]
     public unsafe struct C_CSGO_TeamPreviewModel {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x37d0];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x3800];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x618)]
@@ -3251,9 +3250,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x68)] public fixed byte _[0x8];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponP90 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x6f8)]
@@ -3341,9 +3340,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x0)] public fixed byte _[0x1];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponTec9 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1410)]
@@ -3429,16 +3428,16 @@ namespace Cs2.client_dll {
         [FieldOffset(0x48)] public fixed byte _[0x18];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_CSWeaponBaseGun {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f20];
-        [FieldOffset(0x1f20)] public fixed byte _[0x4];
-        [FieldOffset(0x1f24)] public fixed byte _[0x4];
-        [FieldOffset(0x1f28)] public fixed byte _[0x10];
-        [FieldOffset(0x1f38)] public fixed byte _[0x4];
-        [FieldOffset(0x1f3c)] public fixed byte _[0x1];
-        [FieldOffset(0x1f3d)] public fixed byte _[0x3];
-        [FieldOffset(0x1f40)] public fixed byte _[0x10];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f60];
+        [FieldOffset(0x1f60)] public fixed byte _[0x4];
+        [FieldOffset(0x1f64)] public fixed byte _[0x4];
+        [FieldOffset(0x1f68)] public fixed byte _[0x10];
+        [FieldOffset(0x1f78)] public fixed byte _[0x4];
+        [FieldOffset(0x1f7c)] public fixed byte _[0x1];
+        [FieldOffset(0x1f7d)] public fixed byte _[0x3];
+        [FieldOffset(0x1f80)] public fixed byte _[0x10];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x608)]
@@ -3469,9 +3468,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0xac)] public fixed byte _[0xc];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponP250 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x640)]
@@ -3897,9 +3896,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x48)] public fixed byte _[0x18];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponSCAR20 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1098)]
@@ -4003,9 +4002,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x1e0)] public fixed byte _[0x10];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1fe0)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x2020)]
     public unsafe struct C_DecoyGrenade {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1fe0];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x2020];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1268)]
@@ -4117,9 +4116,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x0)] public fixed byte pad_0[0x48];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponHKP2000 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1190)]
@@ -4317,9 +4316,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x48)] public fixed byte _[0x10];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponMP7 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x68)]
@@ -4599,9 +4598,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x0)] public fixed byte pad_0[0x48];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f20)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f60)]
     public unsafe struct C_CSWeaponBaseShotgun {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f20];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f60];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1328)]
@@ -4621,11 +4620,11 @@ namespace Cs2.client_dll {
         [FieldOffset(0x0)] public fixed byte pad_0[0x1098];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x37d0)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x3800)]
     public unsafe struct C_CSGO_PreviewPlayer {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x3720];
-        [FieldOffset(0x3720)] public fixed byte _[0x8];
-        [FieldOffset(0x3728)] public fixed byte _[0xa8];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x3750];
+        [FieldOffset(0x3750)] public fixed byte _[0x8];
+        [FieldOffset(0x3758)] public fixed byte _[0xa8];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x13b0)]
@@ -4716,9 +4715,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x67)] public fixed byte _[0x1];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponM4A1 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1a18)]
@@ -4958,9 +4957,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x1098)] public fixed byte _[0x8];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponM249 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1310)]
@@ -4993,11 +4992,11 @@ namespace Cs2.client_dll {
         [FieldOffset(0x1304)] public fixed byte _[0xc];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f60)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1fa0)]
     public unsafe struct C_WeaponTaser {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
-        [FieldOffset(0x1f50)] public fixed byte _[0x4];
-        [FieldOffset(0x1f54)] public fixed byte _[0xc];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
+        [FieldOffset(0x1f90)] public fixed byte _[0x4];
+        [FieldOffset(0x1f94)] public fixed byte _[0xc];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x600)]
@@ -5039,19 +5038,19 @@ namespace Cs2.client_dll {
         [FieldOffset(0x68)] public fixed byte _[0x40];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponNegev {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponFiveSeven {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f20)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f60)]
     public unsafe struct C_WeaponSawedoff {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f20];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f60];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1098)]
@@ -5075,9 +5074,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x108)] public fixed byte _[0x48];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponMP9 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x14b0)]
@@ -5100,9 +5099,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x63d)] public fixed byte _[0x13];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_AK47 {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x650)]
@@ -5142,9 +5141,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x604)] public fixed byte _[0x4];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1fe0)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x2020)]
     public unsafe struct C_IncendiaryGrenade {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1fe0];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x2020];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x640)]
@@ -5213,7 +5212,7 @@ namespace Cs2.client_dll {
         [FieldOffset(0x8)] public fixed byte _[0x68];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x630)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x638)]
     public unsafe struct CMapInfo {
         [FieldOffset(0x0)] public fixed byte pad_0[0x600];
         [FieldOffset(0x600)] public fixed byte _[0x4];
@@ -5231,6 +5230,7 @@ namespace Cs2.client_dll {
         [FieldOffset(0x624)] public fixed byte _[0x4];
         [FieldOffset(0x628)] public fixed byte _[0x4];
         [FieldOffset(0x62c)] public fixed byte _[0x4];
+        [FieldOffset(0x630)] public fixed byte _[0x8];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x690)]
@@ -5388,9 +5388,9 @@ namespace Cs2.client_dll {
         [FieldOffset(0x608)] public fixed byte _[0x8];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1f50)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x1f90)]
     public unsafe struct C_WeaponGlock {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1f50];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x1f90];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x13f0)]
@@ -5443,14 +5443,14 @@ namespace Cs2.client_dll {
         [FieldOffset(0x4f8)] public fixed byte _[0x28];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x1fe0)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x2020)]
     public unsafe struct C_SmokeGrenade {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x1fe0];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x2020];
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 0x37d0)]
+    [StructLayout(LayoutKind.Explicit, Size = 0x3800)]
     public unsafe struct C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel {
-        [FieldOffset(0x0)] public fixed byte pad_0[0x37d0];
+        [FieldOffset(0x0)] public fixed byte pad_0[0x3800];
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 0x1d18)]

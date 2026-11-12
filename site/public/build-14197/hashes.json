@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-11-12T14:15:48",
+  "modules": {
+    "client.dll": {"sha256": "99a6720b29d8b477d55f0a2d7fd4333b5df13f354ba723804e996bead1231aa8", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\csgo\\bin\\win64\\client.dll"},
+    "engine2.dll": {"sha256": "dcb5fe13f60f0db9faa365c7b48c3ca107ce56783748bf9ed9ca41fd892af63c", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\engine2.dll"},
+    "server.dll": {"sha256": "84d596644ad574ac70f427777c89f9006a8023f493c46f4c215f40bceef13cbb", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\csgo\\bin\\win64\\server.dll"},
+    "schemasystem.dll": {"sha256": "f88667df86e23531813e28a0fbd3b8cd66bb9f25e4a689f810c03dd328243479", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\schemasystem.dll"},
+    "animationsystem.dll": {"sha256": "766e37db084fe5e867251120ee5493b2c3e6dc8d28e92e4ac6f9b8d15076552b", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\animationsystem.dll"},
+    "materialsystem2.dll": {"sha256": "c256e7a296c68ba742dee6126bc59d967ac4b2060ce20ef63a7a09f9af9ca78e", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\materialsystem2.dll"},
+    "particles.dll": {"sha256": "e2cc4e44f244f7e90901ff8160f874b89646d3ac7090f10695c859ccda815e91", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\particles.dll"},
+    "scenesystem.dll": {"sha256": "03525e62f9ccdc00a9e53c64c50cbc0601c26e33d052466bee02d64a21c9d5c1", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\scenesystem.dll"},
+    "soundsystem.dll": {"sha256": "d5eb6daf6aa555d4085f74f4ffef639e745d7b366eb367d2a34687dfe9f49cd5", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\soundsystem.dll"},
+    "tier0.dll": {"sha256": "0bcd160dfa72d9f97fbf85095d59baad18fca61f20d840e83a5bd9f7635d5c32", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\tier0.dll"},
+    "vphysics2.dll": {"sha256": "226262075f0fccde39da4040c2d9da911c45a384a5ddacc859b70af9f1ffdeca", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\vphysics2.dll"},
+    "networksystem.dll": {"sha256": "1a04b6549b050472336baba4111d36c6892230e2d432c7a9dfa5e1a6e78df75e", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\networksystem.dll"},
+    "host.dll": {"sha256": "e0decb8e7fbd4968acc28eddef21db25faf570804e99c6f1e0e58fc3c105c582", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\csgo\\bin\\win64\\host.dll"},
+    "panorama.dll": {"sha256": "8b10f2b1f9150ecfaf9ffa21c07cc01abaef23ea89cb74de627e87da7d75693c", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\panorama.dll"},
+    "rendersystemdx11.dll": {"sha256": "c43386d01b87955fa8b4a7be3510777c511a98b92343130fb1e1b3bbd62fcec2", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\rendersystemdx11.dll"},
+    "resourcesystem.dll": {"sha256": "075112bd12ccf50da3e3add370acad7f92ec2e67dca0efb31292ac50169b8f21", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\resourcesystem.dll"},
+    "pulse_system.dll": {"sha256": "b29db0bf30474883f943f75e4cfd6d82221d37197cf59e17094b1506cc11a08e", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\pulse_system.dll"},
+    "inputsystem.dll": {"sha256": "6cc263653ac949c1a007b28a867d02276fa58aac6341f7d8f0318ce66a6f63b3", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\inputsystem.dll"},
+    "filesystem_stdio.dll": {"sha256": "651f16b94ef6e982f6d82a9c0481a6b21b48657aa1c339079730a010156c6454", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\filesystem_stdio.dll"},
+    "meshsystem.dll": {"sha256": "a2ee7346f4b9a7ca75df18f68b8bfbfaed6a90b8dd0152f2318d9d22b144c04b", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\meshsystem.dll"}
+  }
+}

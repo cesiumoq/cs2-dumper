@@ -1,6 +1,6 @@
 // convars.hpp — CS2 ConVar / ConCommand catalogue (auto-generated)
-// build: 14196
-// 4131 convars, 1186 commands. Read-only snapshot of the tier0 CCvar registry.
+// build: 14197
+// 4150 convars, 1191 commands. Read-only snapshot of the tier0 CCvar registry.
 #pragma once
 
 // === ConVars ===
@@ -212,8 +212,8 @@ If 'match', the server will maintain a 1:N ratio of humans to bots, where N is b
 // c_thirdpersonshoulderdist                                 float32  160.8                 FCVAR_CLIENTDLL|FCVAR_ARCHIVE
 // c_thirdpersonshoulderheight                               float32  5                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE
 // c_thirdpersonshoulderoffset                               float32  20                    FCVAR_CLIENTDLL|FCVAR_ARCHIVE
-// cachedvalue_count_partybrowser                            int32    1793291788            FCVAR_CLIENTDLL|FCVAR_ARCHIVE
-// cachedvalue_count_teammates                               int32    1793291787            FCVAR_CLIENTDLL|FCVAR_ARCHIVE
+// cachedvalue_count_partybrowser                            int32    1793896718            FCVAR_CLIENTDLL|FCVAR_ARCHIVE
+// cachedvalue_count_teammates                               int32    1793896716            FCVAR_CLIENTDLL|FCVAR_ARCHIVE
 // cam_collision                                             int32    0                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE  // When in thirdperson and cam_collision is set to 1, an attempt is made to keep the camera from passing though walls.
 // cam_idealdelta                                            float32  4                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE  // Controls the speed when matching offset to ideal angles in thirdperson view
 // cam_idealdist                                             float32  160.8                 FCVAR_CLIENTDLL|FCVAR_ARCHIVE
@@ -319,7 +319,7 @@ If 'match', the server will maintain a 1:N ratio of humans to bots, where N is b
 // cl_clock_recvmargin_timeconstant_speedup                  float32  0.6                   FCVAR_DEVELOPMENTONLY  // Clock sync will remove 63.2% of the error in N seconds
 // cl_clock_recvmargin_window                                float32  4                     FCVAR_DEVELOPMENTONLY  // Clock sync will use past N seconds
 // cl_clockdbg                                               bool     false                 FCVAR_DEVELOPMENTONLY
-// cl_clockdrift_max_ticks                                   int32    3                     FCVAR_RELEASE  // Maximum number of ticks the clock is allowed to drift before the client snaps its clock to the server's.
+// cl_clockdrift_max_secs                                    float32  0.125                 FCVAR_RELEASE  // Maximum duration the client clock is allowed to drift from server snapshots, before the client snaps its clock to the latest server snapshot received
 // cl_clutch_mode                                            bool     false                 FCVAR_CLIENTDLL|FCVAR_RELEASE  // Silence voice and other distracting sounds until the end of round or next death.
 // cl_color                                                  int32    0                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_USERINFO  // Preferred teammate color
 // cl_connectionretrytime_p2p                                float32  20                    FCVAR_RELEASE  // Number of seconds over which to spread retry attempts for P2P.
@@ -495,7 +495,7 @@ If 'match', the server will maintain a 1:N ratio of humans to bots, where N is b
 // cl_interp_animationvars                                   bool     true                  FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Interpolate LATCH_ANIMATION_BIT vars if interpolation interval is greater than simulation interval
 // cl_interp_hermite                                         bool     true                  FCVAR_CLIENTDLL|FCVAR_CHEAT  // Set to zero do disable hermite interpolation.
 // cl_interp_npcs                                            float32  0                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Interpolate NPC positions starting this many seconds in past (or the value as per cl_interp_ratio, if greater)
-// cl_interp_parallel                                        bool     false                 FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Run interpolation in parallel for entities with no children.
+// cl_interp_parallel                                        bool     true                  FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Run interpolation in parallel for entities with no children.
 // cl_interp_ratio                                           float32  0                     FCVAR_CLIENTDLL|FCVAR_USERINFO  // Set number of client simulation interpolation ticks.
 // cl_interp_simulationvars                                  bool     true                  FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Interpolate LATCH_SIMULATION_BIT vars if interpolation interval is greater than animation interval
 // cl_interp_threadmodeticks                                 int32    0                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Additional interpolation ticks to use when interpolating with threaded engine mode set.
@@ -549,6 +549,7 @@ If 'match', the server will maintain a 1:N ratio of humans to bots, where N is b
 // cl_obs_interp_enable                                      bool     true                  FCVAR_CLIENTDLL|FCVAR_ARCHIVE  // Enables interpolation between observer targets
 // cl_obs_interp_speed                                       float32  1                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE  // Spectator camera interpolation speed
 // cl_observed_bot_crosshair                                 int32    2                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE  // Crosshair shown when observing a bot. 0 = show your crosshair, 1 = show your crosshair only when the bot can be taken over (otherwise default), 2 = always show the default crosshair
+// cl_packetentities_merge_before_decode                     bool     true                  FCVAR_DEVELOPMENTONLY  // When an entity is decoded from a baseline plus a wire delta, merge the two and decode once (true), or decode the baseline and then the delta as two passes (false, the old behaviour, which can invoke change callbacks with baseline values for an entity that 
 // cl_paintkit_override                                      string                         FCVAR_CLIENTDLL|FCVAR_CHEAT|FCVAR_RELEASE
 // cl_panel_freeze_time_after_press                          float32  0.5                   FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // time to freeze mouse/pointer motion after a mouse button press
 // cl_parallel_readpacketentities                            bool     true                  FCVAR_DEVELOPMENTONLY  // Set to 1 to use threading snapshot reading (if game supports and server is sending bitcounts).
@@ -2082,15 +2083,25 @@ If the server is behind NAT, y
 // net_detailed_canpacket_log                                bool     false                 FCVAR_DEVELOPMENTONLY
 // net_filelogging                                           bool     false                 FCVAR_DEVELOPMENTONLY  // Log packets to files
 // net_fs_showindirections                                   bool     false                 FCVAR_DEVELOPMENTONLY
-// net_limit_sv_recv_max_message_size_kb                     int32    32                    FCVAR_RELEASE  // Server will reject message larger than N kb
-// net_limit_sv_recv_segments_per_packet                     int32    50                    FCVAR_RELEASE  // Server will reject packets with more than N segments
-// net_limit_sv_recvbuffer_kb                                int32    128                   FCVAR_RELEASE  // Server will not buffer more than N kb from connected clients
-// net_limit_sv_recvbuffer_msg                               int32    100                   FCVAR_RELEASE  // Server will not buffer more than N messages from connected clients
+// net_gather_child_fields_only                              bool     false                 FCVAR_RELEASE  // GatherSendProxyResults only walks struct and array fields, skipping scalar fields.
+// net_limit_sv_listen_max_message_size_kb                   int32    3                     FCVAR_RELEASE  // Server: max SteamNetworkingSockets message size in kb accepted from a connection that does not yet have a netchan
+// net_limit_sv_listen_recvbuffer_kb                         int32    16                    FCVAR_RELEASE  // Server: SteamNetworkingSockets will not buffer more than N kb from a connection that does not yet have a netchan
+// net_limit_sv_listen_recvbuffer_msg                        int32    4                     FCVAR_RELEASE  // Server: SteamNetworkingSockets will not buffer more than N messages from a connection that does not yet have a netchan
+// net_limit_sv_message_process_time_ms_drop_burst           float32  200                   FCVAR_RELEASE  // Drop a client if processing their messages consumes more than N ms of CPU time in a burst (token bucket capacity)
+// net_limit_sv_message_process_time_ms_drop_rate_per_sec    float32  256                   FCVAR_RELEASE  // Drop a client if processing their messages consumes more than N ms of CPU time *PER SECOND*, sustained (token bucket fill rate)
+// net_limit_sv_message_process_time_ms_warn_burst           float32  20                    FCVAR_RELEASE  // Warn if processing messages from a client consumes more than N ms of CPU time in a burst (token bucket capacity)
+// net_limit_sv_message_process_time_ms_warn_rate_per_sec    float32  128                   FCVAR_RELEASE  // Warn if processing messages from a client consumes more than N ms of CPU time *PER SECOND*, sustained (token bucket fill rate)
+// net_limit_sv_recv_chan_buffer_messages                    int32    500                   FCVAR_RELEASE  // Max number of source engine messages that can be queued in a netchan receive buffer for an ordinary connection from a client.
+// net_limit_sv_recv_chan_msgs_per_frame                     int32    250                   FCVAR_RELEASE  // Max number of source engine messages an ordinary client connection may put in a single network frame.  Exceeding this disconnects the client.
+// net_limit_sv_recv_max_frame_size_kb                       int32    40                    FCVAR_RELEASE  // Server will reject uncompressed Source engine frame larger than N kb.  Also sets limit on SteamNetworkingSockets message size
+// net_limit_sv_recv_segments_per_packet                     int32    50                    FCVAR_RELEASE  // Server: SteamNetworkingSockets will reject packets with more than N message segments
+// net_limit_sv_recvbuffer_kb                                int32    128                   FCVAR_RELEASE  // Server: SteamNetworkingSockets will not buffer more than N kb from connected clients
+// net_limit_sv_recvbuffer_msg                               int32    100                   FCVAR_RELEASE  // Server: SteamNetworkingSockets will not buffer more than N messages from connected clients
 // net_log_processing                                        bool     false                 FCVAR_DEVELOPMENTONLY  // Log network processing
 // net_max_message_process_count                             int32    0                     FCVAR_DEVELOPMENTONLY  // Maximum number of messages to process from a client in a single frame (0 == no limit).
 // net_max_message_queue_size                                int32    0                     FCVAR_DEVELOPMENTONLY  // Maximum number of messages to allow waiting in queue after processing; exceeding this disconnects the client. 0 == no limit
 // net_max_polymorphic_spew                                  int32    5                     FCVAR_DEVELOPMENTONLY  // Max polymorphic variants to spew when spewing a flattened serializer.
-// net_message_size_enforce                                  int32    1                     FCVAR_RELEASE  // Check declared engine message size limit, and either warn or reject.  Note that this is ignored in -tools mode.  0=ignore, 1=warn/log, 2=warn/assert, 3=reject
+// net_message_size_enforce                                  int32    2                     FCVAR_RELEASE  // Check declared engine message size limit, and either warn or reject.  Note that this is ignored in -tools mode.  0=ignore, 1=warn/log, 2=warn/assert, 3=reject
 // net_p2p_listen_dedicated                                  bool     false                 FCVAR_DEVELOPMENTONLY  // Should dedicated server listen for new-style P2P?
 // net_public_adr                                            string                         FCVAR_RELEASE  // For servers behind NAT/DHCP meant to be exposed to the public internet, this is the public facing ip address string: ("x.x.x.x" )
 // net_qosinterval_spew                                      bool     false                 FCVAR_DEVELOPMENTONLY  // Spew QoS interval data as we gather it
@@ -2310,7 +2321,7 @@ If the server is behind NAT, y
 // player_nevershow_communityservermessage                   string   0                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_PER_USER
 // player_ping_token_cooldown                                float32  20                    FCVAR_GAMEDLL|FCVAR_CHEAT|FCVAR_RELEASE  // Cooldown for how long it takes for a player's ping token to refresh allowing them to ping again (they get 5 tokens).
 // player_survival_list_10_0_303                             string   mg_dz_blacksite,mg_…  FCVAR_CLIENTDLL|FCVAR_ARCHIVE
-// player_teamplayedlast                                     int32    2                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_PER_USER
+// player_teamplayedlast                                     int32    3                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_PER_USER
 // player_use_radius                                         float32  80                    FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED|FCVAR_CHEAT
 // player_wargames_list2_10_0_0                              string                         FCVAR_CLIENTDLL|FCVAR_ARCHIVE
 // population_distribution_debug                             float32  0                     FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_REPLICATED
@@ -2418,6 +2429,16 @@ If the server is behind NAT, y
 // r_csgo_enable_translucent_screen_space                    bool     true                  FCVAR_CLIENTDLL|FCVAR_CHEAT
 // r_csgo_enable_volume_fog                                  bool     false                 FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL
 // r_csgo_firstpersonlegs_nearz_offset                       float32  0.1                   FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL
+// r_csgo_frost_dry_time                                     float32  20                    FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Seconds for the melted frost to dry
+// r_csgo_frost_force                                        int32    -1                    FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Frost on players, weapons and chickens: -1 = the map's (info_map_parameters frostenabled), 0 = off, 1 = on (outdoors; melts indoors)
+// r_csgo_frost_grow_time                                    float32  10                    FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Seconds outdoors for frost to grow to full
+// r_csgo_frost_heat_barrel_position                         float32  0.33                  FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Frost: where the barrel heat sits, from the shell eject (0) to the muzzle (1)
+// r_csgo_frost_heat_cool_time                               float32  20                    FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Frost: seconds for a hot barrel to cool down
+// r_csgo_frost_heat_light_delay                             float32  1                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Frost: seconds after a molotov is lit before its rag starts to heat (the flame shows a moment after)
+// r_csgo_frost_heat_light_time                              float32  10                    FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Frost: seconds for a lit molotov's rag to reach full heat
+// r_csgo_frost_heat_per_shot                                float32  0.05                  FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Frost: barrel heat per shot (1 = hot enough to clear the whole barrel)
+// r_csgo_frost_indoor_distance                              float32  128                   FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Frost: distance under cover (no sky) over which the cold fades out (indoors)
+// r_csgo_frost_melt_time                                    float32  10                    FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Seconds indoors for full frost to melt
 // r_csgo_fsr_enable_mip_bias                                bool     true                  FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Apply negative mip bias when rendering with FSR.
 // r_csgo_fsr_rcas_sharpness                                 float32  0.25                  FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // RCAS sharpness when using FSR + RCAS upsample.
 // r_csgo_fsr_upsample                                       int32    0                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // 0 == bilinear upsampe, 1 == FSR upsample, 2 == FSR + RCAS upsample
@@ -2459,6 +2480,7 @@ If the server is behind NAT, y
 // r_csgo_opaquerefract_viewmodel_depthcopy                  bool     false                 FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Copy depth in viewmodel for opaquerefract 
 // r_csgo_opaquerefract_viewmodel_quality                    int32    1                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Opaque refract quality in viewmodel: 0 = no background copy, no depth, 1= background copy, depth if enabled 
 // r_csgo_outline_glow_scaledenom                            int32    1                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL|FCVAR_CHEAT
+// r_csgo_parallax                                           int32    1                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Parallax occlusion mapping (Advanced Video setting): 0 = off, 1 = on
 // r_csgo_player_occlusion_query                             bool     true                  FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL
 // r_csgo_player_occlusion_query_debug                       bool     false                 FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL
 // r_csgo_postprocess_enable                                 bool     true                  FCVAR_CLIENTDLL|FCVAR_CHEAT
@@ -3408,8 +3430,8 @@ If the server is behind NAT, y
 // stats_highlight_interval                                  float32  10                    FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Interval between hightlight screens in the transition stats panel
 // steam_controller_haptics                                  bool     true                  FCVAR_CLIENTDLL|FCVAR_RELEASE
 // steamaudio_customdata_dimensions_numrays                  int32    32768                 FCVAR_DEVELOPMENTONLY  // Number of rays to trace for estimating inside outside status of a probe.
-// steamworks_sessionid_client                               string   8951015595329         FCVAR_CLIENTDLL|FCVAR_USERINFO  // The client session ID for the new steamworks gamestats.
-// steamworks_sessionid_server                               string   8951015589847         FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED  // The server session ID for the new steamworks gamestats.
+// steamworks_sessionid_client                               string   0                     FCVAR_CLIENTDLL|FCVAR_USERINFO  // The client session ID for the new steamworks gamestats.
+// steamworks_sessionid_server                               string   0                     FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED  // The server session ID for the new steamworks gamestats.
 // sticky_tooltips                                           bool     false                 FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Don't ever hide tooltips. Helpful when debugging complicated tooltip layouts.
 // surf_speed_slow                                           float32  50                    FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED|FCVAR_RELEASE  // Speed above which surf sounds are played.
 // suspicious_hit_odds_threshold                             float32  0.01                  FCVAR_GAMEDLL|FCVAR_RELEASE
@@ -3645,10 +3667,6 @@ If the server is behind NAT, y
 // sv_mover_pogodampingratio                                 float32  1                     FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_NOTIFY|FCVAR_REPLICATED  // The capsule pogo stick damping ratio [-]
 // sv_mover_pogofrequency                                    float32  10                    FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_NOTIFY|FCVAR_REPLICATED  // The capsule pogo stick frequency [hz].
 // sv_mute_players_with_social_penalties                     bool     true                  FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL
-// sv_net_client_message_process_time_ms_drop_burst          float32  500                   FCVAR_RELEASE  // Drop a client if processing their messages consumes more than N ms of CPU time in a burst (token bucket capacity)
-// sv_net_client_message_process_time_ms_drop_rate           float32  200                   FCVAR_RELEASE  // Drop a client if processing their messages consumes more than N ms of CPU time per second, sustained (token bucket fill rate)
-// sv_net_client_message_process_time_ms_warn_burst          float32  50                    FCVAR_RELEASE  // Warn if processing messages from a client consumes more than N ms of CPU time in a burst (token bucket capacity)
-// sv_net_client_message_process_time_ms_warn_rate           float32  5                     FCVAR_RELEASE  // Warn if processing messages from a client consumes more than N ms of CPU time per second, sustained (token bucket fill rate)
 // sv_netprof_delta_sharing_temp                             bool     false                 FCVAR_RELEASE  // Temp counter for measuring performance impact of some network changes. To be removed by the end of Sept 2026
 // sv_networkvar_log_fullchanges                             bool     false                 FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL  // Log FUL_FULL_EDICT_CHANGED calls.
 // sv_networkvar_perfieldtracking                            bool     true                  FCVAR_RELEASE  // Track individual field offset changes, rather than a single dirty flag for the whole entity.
@@ -3711,7 +3729,6 @@ If the server is behind NAT, y
 // sv_rcon_minfailures                                       int32    5                     FCVAR_DEVELOPMENTONLY  // Number of times a user can fail rcon authentication in sv_rcon_minfailuretime before being banned
 // sv_rcon_minfailuretime                                    float32  30                    FCVAR_DEVELOPMENTONLY  // Number of seconds to track failed rcon authentications
 // sv_record_item_time_data                                  bool     false                 FCVAR_GAMEDLL|FCVAR_RELEASE  // Turn on recording of per player item time data into the server log.
-// sv_recvbuf_messages                                       int32    500                   FCVAR_DEVELOPMENTONLY  // Max number of messages that can be queued in a netchan receive buffer for an ordinary connection from a client.
 // sv_regeneration_force_on                                  bool     false                 FCVAR_GAMEDLL|FCVAR_CHEAT  // Cheat to test regenerative health systems
 // sv_regeneration_wait_time                                 float32  1                     FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_REPLICATED
 // sv_region                                                 int32    -1                    FCVAR_RELEASE  // The region of the world to report this server in.
@@ -3986,7 +4003,7 @@ If the server is behind NAT, y
 // ui_news_last_read_link2                                   string                         FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_notification_tb_snooze                                 string                         FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_party_msg_sound_enabled                                bool     true                  FCVAR_CLIENTDLL|FCVAR_RELEASE  // When enabled, lobby messages will play a short sound
-// ui_playsettings_custom_preset                             string   mg_casualalpha        FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
+// ui_playsettings_custom_preset                             string   mg_skirmish_armsrace  FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_directchallengekey                        string   AXZTR-NYDJ-SM58L-NX…  FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_flags_listen_casual                       string   0                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_flags_listen_competitive                  string   16                    FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
@@ -4024,7 +4041,7 @@ If the server is behind NAT, y
 // ui_playsettings_maps_official_rush                        string   mg_rush_001           FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_maps_workshop                             string   @workshop/307024446…  FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_mode_listen                               string   deathmatch            FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
-// ui_playsettings_mode_official_v20                         string   retakes               FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
+// ui_playsettings_mode_official_v20                         string   gungameprogressive    FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_survival_solo                             string   0                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_playsettings_warmup_map_name                           string   de_mirage             FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
 // ui_popup_weaponupdate_version                             string   0                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_RELEASE
@@ -4052,6 +4069,7 @@ If the server is behind NAT, y
 // videocfg_ao_detail                                        int32    2                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL
 // videocfg_fsr_detail                                       int32    0                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL
 // videocfg_hdr_detail                                       int32    -1                    FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL
+// videocfg_parallax_detail                                  int32    0                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL
 // videocfg_particle_detail                                  int32    3                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL
 // videocfg_shadow_quality                                   int32    0                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL
 // videocfg_texture_detail                                   int32    0                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL
@@ -4123,6 +4141,7 @@ If the server is behind NAT, y
 // vprof_all_threads                                         bool     false                 FCVAR_DEVELOPMENTONLY  // Capture VProf scopes on background threads as well as the target thread. Same option as the All Threads checkbox in the VProf tools -- setting either one updates the other
 // vprof_counters                                            int32    0                     FCVAR_DEVELOPMENTONLY
 // vprof_counters_show_minmax                                bool     false                 FCVAR_DEVELOPMENTONLY
+// vprof_lite_auto                                           bool     true                  FCVAR_RELEASE  // Let demo playback and the game rules start, dump and stop the vprof lite profiler on their own.  The vprof_lite_start, vprof_lite_stop and vprof_lite_dump commands set this to 0 so that a script can drive the profiler itself.
 // vprof_scope_entity_clientthink                            bool     false                 FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Does nothing whatsoever.
 // vprof_scope_entity_thinks                                 bool     false                 FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED
 // vprof_think_limit                                         bool     false                 FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL
@@ -5006,6 +5025,8 @@ Format: find_ent_index <index>
 // net_captureculldata                                       FCVAR_DEVELOPMENTONLY  // Captures low-level data to replay path culling algorithm behavior in controlled unit test environment
 // net_channels                                              FCVAR_RELEASE  // Shows net channel info
 // net_connections_stats                                     FCVAR_RELEASE  // Print detailed network statistics for each network connection
+// net_decode_callback_queue_stats_clear                     FCVAR_DEVELOPMENTONLY  // Clear per-entity decode change callback stats
+// net_decode_callback_queue_stats_dump                      FCVAR_DEVELOPMENTONLY  // Print per-entity decode change callback stats
 // net_fakeclear                                             FCVAR_RELEASE  // Clear all simulated network conditions
 // net_fakejitter                                            FCVAR_RELEASE  // Shortcut to set jitter net options.  Run with no arguments for usage.
 // net_fakelag                                               FCVAR_RELEASE  // Shortcut to set both FakePacketLag_Recv and FakePacketLag_Send net options
@@ -5086,7 +5107,7 @@ Format: find_ent_index <index>
 // plant_bomb                                                FCVAR_GAMEDLL|FCVAR_CHEAT  // Plant a bomb where the player is looking.
 // play                                                      FCVAR_SERVER_CAN_EXECUTE  // Play a sound.
 // playcast                                                  FCVAR_RELEASE  // Play a broadcast
-// playdemo                                                  FCVAR_RELEASE  // Play a recorded demo file (.dem ).
+// playdemo                                                  FCVAR_RELEASE  // Play a recorded demo file (.dem ).  Options: start=<tick> end=<tick> timescale=<float> (run with no arguments for details).
 // player_ping                                               FCVAR_GAMEDLL  // Creates a ping notification where the player is looking.
 // playsound                                                 FCVAR_DEVELOPMENTONLY  // playsound <soundname>
 // playsoundscape                                            FCVAR_CLIENTDLL|FCVAR_CHEAT  // Forces a soundscape to play
@@ -5509,6 +5530,16 @@ Set game server account token to use for logging in to a persistent game server 
 // vprof_generate_report                                     FCVAR_DEVELOPMENTONLY  // Generate a report to the console.
 // vprof_generate_report_budget                              FCVAR_DEVELOPMENTONLY  // Generate a report to the console based on budget group.
 // vprof_generate_report_hierarchy                           FCVAR_DEVELOPMENTONLY  // Generate a report to the console.
+// vprof_lite_dump                                           FCVAR_DEVELOPMENTONLY  // vprof_lite_dump [filename] [stop=1]
+Write the vprof lite budget group statistics as CSV, then stop the profiler and clear its data.
+stop=0 leaves the profiler running with its data.  The default filename is vprof_lite.csv in the mod directory;
+an absolute 
+// vprof_lite_start                                          FCVAR_DEVELOPMENTONLY  // vprof_lite_start [clear=1]
+Start the vprof lite profiler, clearing any data it holds.  clear=0 keeps the data and continues adding to it.
+Sets vprof_lite_auto 0, so the game will not stop or dump the profiler on its own.
+// vprof_lite_stop                                           FCVAR_DEVELOPMENTONLY  // vprof_lite_stop [clear=1]
+Stop the vprof lite profiler and clear its data.  clear=0 keeps the data, for engine_frametime_print_report or vprof_lite_dump.
+Sets vprof_lite_auto 0, so the game will not start the profiler on its own.
 // vprof_loadhitstore_scale                                  FCVAR_DEVELOPMENTONLY  // Scale used when displaying load-hit-stores (0 = use default)
 // vprof_off                                                 FCVAR_DEVELOPMENTONLY  // Disable vprof
 // vprof_on                                                  FCVAR_DEVELOPMENTONLY  // Enable vprof

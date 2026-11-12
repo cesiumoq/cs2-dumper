@@ -3321,8 +3321,8 @@ pub const server_dll = struct {
         _: [0xc]u8, // 0x3298
         _: [0x4]u8, // 0x32a4
         _: [0x20]u8, // 0x32a8
-        _: [0x1b]u8, // 0x32c8
-        _: [0xd]u8, // 0x32e3
+        _: [0x1a]u8, // 0x32c8
+        _: [0xe]u8, // 0x32e2
     };
     pub const CPhysicsPropRespawnable = extern struct {
         pad_0: [0xd10]u8, // 0x0
@@ -6880,6 +6880,7 @@ pub const server_dll = struct {
         _: [0x4]u8, // 0x4cc
         _: [0x4]u8, // 0x4d0
         _: [0x4]u8, // 0x4d4
+        _: [0x8]u8, // 0x4d8
     };
     pub const CGradientFog = extern struct {
         pad_0: [0x4a8]u8, // 0x0
@@ -8408,7 +8409,8 @@ pub const server_dll = struct {
         _: [0x2]u8, // 0x26
         _: [0x4]u8, // 0x28
         _: [0x4]u8, // 0x2c
-        _: [0x8]u8, // 0x30
+        _: [0x4]u8, // 0x30
+        _: [0x4]u8, // 0x34
     };
     pub const CConstantForceController = extern struct {
         pad_0: [0xc]u8, // 0x0
@@ -8501,7 +8503,7 @@ pub const server_dll = struct {
         pad_0: [0x20]u8, // 0x0
     };
     pub const CNmAimCSTask = extern struct {
-        pad_0: [0x130]u8, // 0x0
+        pad_0: [0x1f0]u8, // 0x0
     };
     pub const ParticleIndex_t = extern struct {
         _: [0x4]u8, // 0x0

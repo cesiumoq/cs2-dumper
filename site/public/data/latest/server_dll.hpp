@@ -1,8 +1,8 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
-/*  Total Offsets   : 202
-/*  Dumped At       : 14:40 05/11/2026 (GMT)
-/*  Dumped In       : 1,2s
+/*  Total Offsets   : 201
+/*  Dumped At       : 13:18 12/11/2026 (GMT)
+/*  Dumped In       : 68,0s
 */
 
 /*                       cesium dumper
@@ -7203,8 +7203,8 @@ struct CChicken {
     std::uint8_t _[0xc]; // 0x3298 
     std::uint8_t _[0x4]; // 0x32a4 
     std::uint8_t _[0x20]; // 0x32a8 
-    std::uint8_t _[0x1b]; // 0x32c8 
-    std::uint8_t _[0xd]; // 0x32e3 
+    std::uint8_t _[0x1a]; // 0x32c8 
+    std::uint8_t _[0xe]; // 0x32e2 
 };
 
 struct CPhysicsPropRespawnable {
@@ -11423,7 +11423,7 @@ struct CPulseCell_Outflow_PlaySceneBase__CursorState_t {
 };
 
 struct CMapInfo {
-    static constexpr std::size_t size = 0x4d8;
+    static constexpr std::size_t size = 0x4e0;
     std::uint8_t pad_0[0x4a8]; // 0x0
     std::uint8_t _[0x4]; // 0x4a8 
     std::uint8_t _[0x4]; // 0x4ac 
@@ -11440,6 +11440,7 @@ struct CMapInfo {
     std::uint8_t _[0x4]; // 0x4cc 
     std::uint8_t _[0x4]; // 0x4d0 
     std::uint8_t _[0x4]; // 0x4d4 
+    std::uint8_t _[0x8]; // 0x4d8 
 };
 
 struct CGradientFog {
@@ -13378,7 +13379,8 @@ struct CNmAimCSNode__CDefinition {
     std::uint8_t _[0x2]; // 0x26 
     std::uint8_t _[0x4]; // 0x28 
     std::uint8_t _[0x4]; // 0x2c 
-    std::uint8_t _[0x8]; // 0x30 
+    std::uint8_t _[0x4]; // 0x30 
+    std::uint8_t _[0x4]; // 0x34 
 };
 
 struct CConstantForceController {
@@ -13504,8 +13506,8 @@ struct CExternalAnimGraphList {
 };
 
 struct CNmAimCSTask {
-    static constexpr std::size_t size = 0x130;
-    std::uint8_t pad_0[0x130]; // 0x0
+    static constexpr std::size_t size = 0x1f0;
+    std::uint8_t pad_0[0x1f0]; // 0x0
 };
 
 struct ParticleIndex_t {

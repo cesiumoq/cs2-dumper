@@ -240,6 +240,7 @@ pub const engine2_dll = struct {
     };
     pub const EventClientPollNetworking_t = extern struct {
         _: [0x4]u8, // 0x0
+        _: [0x4]u8, // 0x4
     };
     pub const EventServerBeginAsyncPostTickWork_t = extern struct {
         _: [0x1]u8, // 0x0

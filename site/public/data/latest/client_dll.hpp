@@ -1,8 +1,8 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
-/*  Total Offsets   : 202
-/*  Dumped At       : 14:40 05/11/2026 (GMT)
-/*  Dumped In       : 1,2s
+/*  Total Offsets   : 201
+/*  Dumped At       : 13:18 12/11/2026 (GMT)
+/*  Dumped In       : 68,0s
 */
 
 /*                       cesium dumper
@@ -602,18 +602,18 @@ struct C_VoteController {
 };
 
 struct C_C4 {
-    static constexpr std::size_t size = 0x1f60;
-    std::uint8_t pad_0[0x1f20]; // 0x0
-    std::uint8_t _[0x4]; // 0x1f20 
-    std::uint8_t _[0x4]; // 0x1f24 
-    std::uint8_t _[0x4]; // 0x1f28 
-    std::uint8_t _[0x4]; // 0x1f2c 
-    std::uint8_t _[0x1]; // 0x1f30 
-    std::uint8_t _[0x7]; // 0x1f31 
-    std::uint8_t _[0x18]; // 0x1f38 
-    std::uint8_t _[0x4]; // 0x1f50 
-    std::uint8_t _[0x7]; // 0x1f54 
-    std::uint8_t _[0x5]; // 0x1f5b 
+    static constexpr std::size_t size = 0x1fa0;
+    std::uint8_t pad_0[0x1f60]; // 0x0
+    std::uint8_t _[0x4]; // 0x1f60 
+    std::uint8_t _[0x4]; // 0x1f64 
+    std::uint8_t _[0x4]; // 0x1f68 
+    std::uint8_t _[0x4]; // 0x1f6c 
+    std::uint8_t _[0x1]; // 0x1f70 
+    std::uint8_t _[0x7]; // 0x1f71 
+    std::uint8_t _[0x18]; // 0x1f78 
+    std::uint8_t _[0x4]; // 0x1f90 
+    std::uint8_t _[0x7]; // 0x1f94 
+    std::uint8_t _[0x5]; // 0x1f9b 
 };
 
 struct C_CSPlayerPawnBase {
@@ -738,8 +738,8 @@ struct CPulseCell_Step_EntFire {
 };
 
 struct C_WeaponAWP {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_BaseButton {
@@ -842,13 +842,13 @@ struct CPulse_OutflowConnection {
 };
 
 struct C_WeaponUMP45 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_WeaponG3SG1 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_SpotlightEnd {
@@ -887,8 +887,8 @@ struct C_Fish {
 };
 
 struct C_WeaponFamas {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_EnvVolumetricFogController {
@@ -1019,8 +1019,8 @@ struct CCSPlayerLegacyJump {
 };
 
 struct C_WeaponNOVA {
-    static constexpr std::size_t size = 0x1f20;
-    std::uint8_t pad_0[0x1f20]; // 0x0
+    static constexpr std::size_t size = 0x1f60;
+    std::uint8_t pad_0[0x1f60]; // 0x0
 };
 
 struct C_CS2HudModelAddon {
@@ -1029,8 +1029,8 @@ struct C_CS2HudModelAddon {
 };
 
 struct C_DEagle {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_TriggerMultiple {
@@ -1240,8 +1240,8 @@ struct C_SoundOpvarSetOBBWindEntity {
 };
 
 struct C_MolotovGrenade {
-    static constexpr std::size_t size = 0x1fe0;
-    std::uint8_t pad_0[0x1fe0]; // 0x0
+    static constexpr std::size_t size = 0x2020;
+    std::uint8_t pad_0[0x2020]; // 0x0
 };
 
 struct C_NetTestBaseCombatCharacter {
@@ -1256,8 +1256,8 @@ struct CBodyComponentPoint {
 };
 
 struct C_WeaponM4A1Silencer {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_SkyCameraVolume {
@@ -1432,65 +1432,65 @@ struct C_AttributeContainer {
 };
 
 struct C_CSWeaponBase {
-    static constexpr std::size_t size = 0x1f20;
-    std::uint8_t pad_0[0x19a8]; // 0x0
-    std::uint8_t _[0x4]; // 0x19a8 
-    std::uint8_t _[0x4]; // 0x19ac 
-    std::uint8_t _[0x4]; // 0x19b0 
-    std::uint8_t _[0x1]; // 0x19b4 
-    std::uint8_t _[0x2b]; // 0x19b5 
-    std::uint8_t _[0x4]; // 0x19e0 
-    std::uint8_t _[0x4]; // 0x19e4 
-    std::uint8_t _[0x18]; // 0x19e8 
-    std::uint8_t _[0x4]; // 0x1a00 
-    std::uint8_t _[0x4]; // 0x1a04 
-    std::uint8_t _[0xc]; // 0x1a08 
-    std::uint8_t _[0x4]; // 0x1a14 
-    std::uint8_t _[0x4]; // 0x1a18 
-    std::uint8_t _[0x4]; // 0x1a1c 
+    static constexpr std::size_t size = 0x1f60;
+    std::uint8_t pad_0[0x19e8]; // 0x0
+    std::uint8_t _[0x4]; // 0x19e8 
+    std::uint8_t _[0x4]; // 0x19ec 
+    std::uint8_t _[0x4]; // 0x19f0 
+    std::uint8_t _[0x1]; // 0x19f4 
+    std::uint8_t _[0x2b]; // 0x19f5 
     std::uint8_t _[0x4]; // 0x1a20 
     std::uint8_t _[0x4]; // 0x1a24 
-    std::uint8_t _[0x4]; // 0x1a28 
-    std::uint8_t _[0x4]; // 0x1a2c 
-    std::uint8_t _[0x4]; // 0x1a30 
-    std::uint8_t _[0x4]; // 0x1a34 
-    std::uint8_t _[0x4]; // 0x1a38 
-    std::uint8_t _[0x4]; // 0x1a3c 
+    std::uint8_t _[0x18]; // 0x1a28 
     std::uint8_t _[0x4]; // 0x1a40 
     std::uint8_t _[0x4]; // 0x1a44 
-    std::uint8_t _[0x8]; // 0x1a48 
-    std::uint8_t _[0x1]; // 0x1a50 
-    std::uint8_t _[0x3]; // 0x1a51 
+    std::uint8_t _[0xc]; // 0x1a48 
     std::uint8_t _[0x4]; // 0x1a54 
-    std::uint8_t _[0x1]; // 0x1a58 
-    std::uint8_t _[0x3]; // 0x1a59 
+    std::uint8_t _[0x4]; // 0x1a58 
     std::uint8_t _[0x4]; // 0x1a5c 
     std::uint8_t _[0x4]; // 0x1a60 
     std::uint8_t _[0x4]; // 0x1a64 
     std::uint8_t _[0x4]; // 0x1a68 
     std::uint8_t _[0x4]; // 0x1a6c 
     std::uint8_t _[0x4]; // 0x1a70 
-    std::uint8_t _[0xac]; // 0x1a74 
-    std::uint8_t _[0x1]; // 0x1b20 
-    std::uint8_t _[0x1]; // 0x1b21 
-    std::uint8_t _[0x2]; // 0x1b22 
-    std::uint8_t _[0xc]; // 0x1b24 
-    std::uint8_t _[0x4]; // 0x1b30 
-    std::uint8_t _[0x4]; // 0x1b34 
-    std::uint8_t _[0x4]; // 0x1b38 
-    std::uint8_t _[0x4]; // 0x1b3c 
-    std::uint8_t _[0x24]; // 0x1b40 
-    std::uint8_t _[0x4]; // 0x1b64 
-    std::uint8_t _[0x4]; // 0x1b68 
-    std::uint8_t _[0x1]; // 0x1b6c 
-    std::uint8_t _[0x3]; // 0x1b6d 
+    std::uint8_t _[0x4]; // 0x1a74 
+    std::uint8_t _[0x4]; // 0x1a78 
+    std::uint8_t _[0x4]; // 0x1a7c 
+    std::uint8_t _[0x4]; // 0x1a80 
+    std::uint8_t _[0x4]; // 0x1a84 
+    std::uint8_t _[0x8]; // 0x1a88 
+    std::uint8_t _[0x1]; // 0x1a90 
+    std::uint8_t _[0x3]; // 0x1a91 
+    std::uint8_t _[0x4]; // 0x1a94 
+    std::uint8_t _[0x1]; // 0x1a98 
+    std::uint8_t _[0x3]; // 0x1a99 
+    std::uint8_t _[0x4]; // 0x1a9c 
+    std::uint8_t _[0x4]; // 0x1aa0 
+    std::uint8_t _[0x4]; // 0x1aa4 
+    std::uint8_t _[0x4]; // 0x1aa8 
+    std::uint8_t _[0x4]; // 0x1aac 
+    std::uint8_t _[0x4]; // 0x1ab0 
+    std::uint8_t _[0xac]; // 0x1ab4 
+    std::uint8_t _[0x1]; // 0x1b60 
+    std::uint8_t _[0x1]; // 0x1b61 
+    std::uint8_t _[0x2]; // 0x1b62 
+    std::uint8_t _[0xc]; // 0x1b64 
     std::uint8_t _[0x4]; // 0x1b70 
-    std::uint8_t _[0x5c]; // 0x1b74 
-    std::uint8_t _[0xb0]; // 0x1bd0 
-    std::uint8_t _[0x78]; // 0x1c80 
-    std::uint8_t _[0x60]; // 0x1cf8 
-    std::uint8_t _[0x14]; // 0x1d58 
-    std::uint8_t _[0x1b4]; // 0x1d6c 
+    std::uint8_t _[0x4]; // 0x1b74 
+    std::uint8_t _[0x4]; // 0x1b78 
+    std::uint8_t _[0x4]; // 0x1b7c 
+    std::uint8_t _[0x24]; // 0x1b80 
+    std::uint8_t _[0x4]; // 0x1ba4 
+    std::uint8_t _[0x4]; // 0x1ba8 
+    std::uint8_t _[0x1]; // 0x1bac 
+    std::uint8_t _[0x3]; // 0x1bad 
+    std::uint8_t _[0x4]; // 0x1bb0 
+    std::uint8_t _[0x5c]; // 0x1bb4 
+    std::uint8_t _[0xb0]; // 0x1c10 
+    std::uint8_t _[0x78]; // 0x1cc0 
+    std::uint8_t _[0x60]; // 0x1d38 
+    std::uint8_t _[0x14]; // 0x1d98 
+    std::uint8_t _[0x1b4]; // 0x1dac 
 };
 
 struct CTimeline {
@@ -1536,8 +1536,8 @@ struct PulseNodeDynamicOutflows_t__DynamicOutflow_t {
 };
 
 struct C_WeaponMag7 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct WeaponPurchaseCount_t {
@@ -1661,8 +1661,8 @@ struct CCSGameModeRules {
 };
 
 struct C_Flashbang {
-    static constexpr std::size_t size = 0x1fe0;
-    std::uint8_t pad_0[0x1fe0]; // 0x0
+    static constexpr std::size_t size = 0x2020;
+    std::uint8_t pad_0[0x2020]; // 0x0
 };
 
 struct C_PointClientUIWorldTextPanel {
@@ -1708,8 +1708,8 @@ struct C_FuncLadder {
 };
 
 struct C_WeaponMP5SD {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_World {
@@ -1723,8 +1723,8 @@ struct C_CSGO_TeamSelectCounterTerroristPosition {
 };
 
 struct C_WeaponGalilAR {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct CCSPlayerBase_CameraServices {
@@ -1751,12 +1751,12 @@ struct CPulseCell_Inflow_BaseEntrypoint {
 };
 
 struct C_WeaponSG556 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_CSPlayerPawn {
-    static constexpr std::size_t size = 0x3720;
+    static constexpr std::size_t size = 0x3750;
     std::uint8_t pad_0[0x1570]; // 0x0
     std::uint8_t _[0x8]; // 0x1570 
     std::uint8_t _[0x8]; // 0x1578 
@@ -1785,84 +1785,84 @@ struct C_CSPlayerPawn {
     std::uint8_t _[0x1]; // 0x15e9 
     std::uint8_t _[0x2]; // 0x15ea 
     std::uint8_t _[0x4]; // 0x15ec 
-    std::uint8_t _[0x168]; // 0x15f0 
-    std::uint8_t _[0x4]; // 0x1758 
-    std::uint8_t _[0x4]; // 0x175c 
-    std::uint8_t _[0x1]; // 0x1760 
-    std::uint8_t _[0x3]; // 0x1761 
-    std::uint8_t _[0x4]; // 0x1764 
-    std::uint8_t _[0x5]; // 0x1768 
-    std::uint8_t _[0x3]; // 0x176d 
-    std::uint8_t _[0x5b0]; // 0x1770 
-    std::uint8_t _[0x1]; // 0x1d20 
-    std::uint8_t _[0x3]; // 0x1d21 
-    std::uint8_t _[0x4]; // 0x1d24 
-    std::uint8_t _[0xc]; // 0x1d28 
-    std::uint8_t _[0x40]; // 0x1d34 
-    std::uint8_t _[0x4]; // 0x1d74 
-    std::uint8_t _[0xc]; // 0x1d78 
-    std::uint8_t _[0x4]; // 0x1d84 
-    std::uint8_t _[0x20]; // 0x1d88 
-    std::uint8_t _[0x4]; // 0x1da8 
-    std::uint8_t _[0xc]; // 0x1dac 
-    std::uint8_t _[0x4]; // 0x1db8 
-    std::uint8_t _[0x4]; // 0x1dbc 
-    std::uint8_t _[0x4]; // 0x1dc0 
-    std::uint8_t _[0x4]; // 0x1dc4 
-    std::uint8_t _[0x4]; // 0x1dc8 
-    std::uint8_t _[0x4]; // 0x1dcc 
-    std::uint8_t _[0x48]; // 0x1dd0 
-    std::uint8_t _[0x50]; // 0x1e18 
-    std::uint8_t _[0x18]; // 0x1e68 
-    std::uint8_t _[0x8]; // 0x1e80 
-    std::uint8_t _[0x18]; // 0x1e88 
-    std::uint8_t _[0x1]; // 0x1ea0 
-    std::uint8_t _[0x1]; // 0x1ea1 
-    std::uint8_t _[0x1]; // 0x1ea2 
-    std::uint8_t _[0x1]; // 0x1ea3 
-    std::uint8_t _[0x4]; // 0x1ea4 
-    std::uint8_t _[0x4]; // 0x1ea8 
-    std::uint8_t _[0x4]; // 0x1eac 
-    std::uint8_t _[0x4]; // 0x1eb0 
-    std::uint8_t _[0x4]; // 0x1eb4 
-    std::uint8_t _[0x4]; // 0x1eb8 
-    std::uint8_t _[0x4]; // 0x1ebc 
-    std::uint8_t _[0x4]; // 0x1ec0 
-    std::uint8_t _[0x4]; // 0x1ec4 
-    std::uint8_t _[0x5]; // 0x1ec8 
-    std::uint8_t _[0x3]; // 0x1ecd 
-    std::uint8_t _[0x4]; // 0x1ed0 
-    std::uint8_t _[0x2]; // 0x1ed4 
-    std::uint8_t _[0x2]; // 0x1ed6 
+    std::uint8_t _[0x198]; // 0x15f0 
+    std::uint8_t _[0x4]; // 0x1788 
+    std::uint8_t _[0x4]; // 0x178c 
+    std::uint8_t _[0x1]; // 0x1790 
+    std::uint8_t _[0x3]; // 0x1791 
+    std::uint8_t _[0x4]; // 0x1794 
+    std::uint8_t _[0x5]; // 0x1798 
+    std::uint8_t _[0x3]; // 0x179d 
+    std::uint8_t _[0x5b0]; // 0x17a0 
+    std::uint8_t _[0x1]; // 0x1d50 
+    std::uint8_t _[0x3]; // 0x1d51 
+    std::uint8_t _[0x4]; // 0x1d54 
+    std::uint8_t _[0xc]; // 0x1d58 
+    std::uint8_t _[0x40]; // 0x1d64 
+    std::uint8_t _[0x4]; // 0x1da4 
+    std::uint8_t _[0xc]; // 0x1da8 
+    std::uint8_t _[0x4]; // 0x1db4 
+    std::uint8_t _[0x20]; // 0x1db8 
+    std::uint8_t _[0x4]; // 0x1dd8 
+    std::uint8_t _[0xc]; // 0x1ddc 
+    std::uint8_t _[0x4]; // 0x1de8 
+    std::uint8_t _[0x4]; // 0x1dec 
+    std::uint8_t _[0x4]; // 0x1df0 
+    std::uint8_t _[0x4]; // 0x1df4 
+    std::uint8_t _[0x4]; // 0x1df8 
+    std::uint8_t _[0x4]; // 0x1dfc 
+    std::uint8_t _[0x48]; // 0x1e00 
+    std::uint8_t _[0x50]; // 0x1e48 
+    std::uint8_t _[0x18]; // 0x1e98 
+    std::uint8_t _[0x8]; // 0x1eb0 
+    std::uint8_t _[0x18]; // 0x1eb8 
+    std::uint8_t _[0x1]; // 0x1ed0 
+    std::uint8_t _[0x1]; // 0x1ed1 
+    std::uint8_t _[0x1]; // 0x1ed2 
+    std::uint8_t _[0x1]; // 0x1ed3 
+    std::uint8_t _[0x4]; // 0x1ed4 
     std::uint8_t _[0x4]; // 0x1ed8 
     std::uint8_t _[0x4]; // 0x1edc 
-    std::uint8_t _[0x1]; // 0x1ee0 
-    std::uint8_t _[0x3]; // 0x1ee1 
+    std::uint8_t _[0x4]; // 0x1ee0 
     std::uint8_t _[0x4]; // 0x1ee4 
-    std::uint8_t _[0x38]; // 0x1ee8 
-    std::uint8_t _[0x4]; // 0x1f20 
-    std::uint8_t _[0x4]; // 0x1f24 
-    std::uint8_t _[0xc]; // 0x1f28 
-    std::uint8_t _[0xc]; // 0x1f34 
-    std::uint8_t _[0xc]; // 0x1f40 
-    std::uint8_t _[0xc]; // 0x1f4c 
-    std::uint8_t _[0x15a8]; // 0x1f58 
-    std::uint8_t _[0x4]; // 0x3500 
-    std::uint8_t _[0x4]; // 0x3504 
-    std::uint8_t _[0x4]; // 0x3508 
-    std::uint8_t _[0x4]; // 0x350c 
-    std::uint8_t _[0x4]; // 0x3510 
-    std::uint8_t _[0x74]; // 0x3514 
-    std::uint8_t _[0x78]; // 0x3588 
-    std::uint8_t _[0x90]; // 0x3600 
-    std::uint8_t _[0x10]; // 0x3690 
-    std::uint8_t _[0x30]; // 0x36a0 
-    std::uint8_t _[0xc]; // 0x36d0 
-    std::uint8_t _[0x4]; // 0x36dc 
-    std::uint8_t _[0x18]; // 0x36e0 
-    std::uint8_t _[0x4]; // 0x36f8 
-    std::uint8_t _[0x4]; // 0x36fc 
-    std::uint8_t _[0x20]; // 0x3700 
+    std::uint8_t _[0x4]; // 0x1ee8 
+    std::uint8_t _[0x4]; // 0x1eec 
+    std::uint8_t _[0x4]; // 0x1ef0 
+    std::uint8_t _[0x4]; // 0x1ef4 
+    std::uint8_t _[0x5]; // 0x1ef8 
+    std::uint8_t _[0x3]; // 0x1efd 
+    std::uint8_t _[0x4]; // 0x1f00 
+    std::uint8_t _[0x2]; // 0x1f04 
+    std::uint8_t _[0x2]; // 0x1f06 
+    std::uint8_t _[0x4]; // 0x1f08 
+    std::uint8_t _[0x4]; // 0x1f0c 
+    std::uint8_t _[0x1]; // 0x1f10 
+    std::uint8_t _[0x3]; // 0x1f11 
+    std::uint8_t _[0x4]; // 0x1f14 
+    std::uint8_t _[0x38]; // 0x1f18 
+    std::uint8_t _[0x4]; // 0x1f50 
+    std::uint8_t _[0x4]; // 0x1f54 
+    std::uint8_t _[0xc]; // 0x1f58 
+    std::uint8_t _[0xc]; // 0x1f64 
+    std::uint8_t _[0xc]; // 0x1f70 
+    std::uint8_t _[0xc]; // 0x1f7c 
+    std::uint8_t _[0x15a8]; // 0x1f88 
+    std::uint8_t _[0x4]; // 0x3530 
+    std::uint8_t _[0x4]; // 0x3534 
+    std::uint8_t _[0x4]; // 0x3538 
+    std::uint8_t _[0x4]; // 0x353c 
+    std::uint8_t _[0x4]; // 0x3540 
+    std::uint8_t _[0x74]; // 0x3544 
+    std::uint8_t _[0x78]; // 0x35b8 
+    std::uint8_t _[0x90]; // 0x3630 
+    std::uint8_t _[0x10]; // 0x36c0 
+    std::uint8_t _[0x30]; // 0x36d0 
+    std::uint8_t _[0xc]; // 0x3700 
+    std::uint8_t _[0x4]; // 0x370c 
+    std::uint8_t _[0x18]; // 0x3710 
+    std::uint8_t _[0x4]; // 0x3728 
+    std::uint8_t _[0x4]; // 0x372c 
+    std::uint8_t _[0x20]; // 0x3730 
 };
 
 struct C_CSGO_TeamIntroTerroristPosition {
@@ -1878,7 +1878,7 @@ struct CPulseCell_WaitForCursorsWithTagBase {
 };
 
 struct C_Hostage {
-    static constexpr std::size_t size = 0x13c0;
+    static constexpr std::size_t size = 0x13b8;
     std::uint8_t pad_0[0x12f0]; // 0x0
     std::uint8_t _[0x18]; // 0x12f0 
     std::uint8_t _[0x8]; // 0x1308 
@@ -1894,15 +1894,14 @@ struct C_Hostage {
     std::uint8_t _[0x4]; // 0x1354 
     std::uint8_t _[0x4]; // 0x1358 
     std::uint8_t _[0x4]; // 0x135c 
-    std::uint8_t _[0x8]; // 0x1360 
-    std::uint8_t _[0x18]; // 0x1368 
-    std::uint8_t _[0x10]; // 0x1380 
-    std::uint8_t _[0x18]; // 0x1390 
-    std::uint8_t _[0x1]; // 0x13a8 
-    std::uint8_t _[0x1]; // 0x13a9 
-    std::uint8_t _[0x6]; // 0x13aa 
+    std::uint8_t _[0x18]; // 0x1360 
+    std::uint8_t _[0x10]; // 0x1378 
+    std::uint8_t _[0x18]; // 0x1388 
+    std::uint8_t _[0x1]; // 0x13a0 
+    std::uint8_t _[0x1]; // 0x13a1 
+    std::uint8_t _[0x6]; // 0x13a2 
+    std::uint8_t _[0x8]; // 0x13a8 
     std::uint8_t _[0x8]; // 0x13b0 
-    std::uint8_t _[0x8]; // 0x13b8 
 };
 
 struct C_fogplayerparams_t {
@@ -2022,8 +2021,8 @@ struct CSoundOpvarSetBoxEntity {
 };
 
 struct C_HEGrenade {
-    static constexpr std::size_t size = 0x1fe0;
-    std::uint8_t pad_0[0x1fe0]; // 0x0
+    static constexpr std::size_t size = 0x2020;
+    std::uint8_t pad_0[0x2020]; // 0x0
 };
 
 struct C_EnvSky {
@@ -2062,8 +2061,8 @@ struct C_GameRules {
 };
 
 struct C_WeaponMAC10 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_CSGO_MapPreviewCameraPath {
@@ -2226,8 +2225,8 @@ struct CPulseCell_IntervalTimer {
 };
 
 struct C_WeaponXM1014 {
-    static constexpr std::size_t size = 0x1f20;
-    std::uint8_t pad_0[0x1f20]; // 0x0
+    static constexpr std::size_t size = 0x1f60;
+    std::uint8_t pad_0[0x1f60]; // 0x0
 };
 
 struct C_WorldModelGloves {
@@ -2254,8 +2253,8 @@ struct CPulseCell_BaseLerp {
 };
 
 struct C_WeaponAug {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_BasePropDoor {
@@ -2290,8 +2289,8 @@ struct CNetworkedSequenceOperation {
 };
 
 struct C_Item_Healthshot {
-    static constexpr std::size_t size = 0x1f30;
-    std::uint8_t pad_0[0x1f30]; // 0x0
+    static constexpr std::size_t size = 0x1f70;
+    std::uint8_t pad_0[0x1f70]; // 0x0
 };
 
 struct CCSCustomHudLayout {
@@ -2526,8 +2525,8 @@ struct ActiveModelConfig_t {
 };
 
 struct C_WeaponSSG08 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct CPulseCell_Value_Curve {
@@ -2537,15 +2536,15 @@ struct CPulseCell_Value_Curve {
 };
 
 struct C_Chicken {
-    static constexpr std::size_t size = 0x1ba0;
+    static constexpr std::size_t size = 0x1bd0;
     std::uint8_t pad_0[0x14c0]; // 0x0
     std::uint8_t _[0x4]; // 0x14c0 
     std::uint8_t _[0x4]; // 0x14c4 
     std::uint8_t _[0x610]; // 0x14c8 
     std::uint8_t _[0x4]; // 0x1ad8 
     std::uint8_t _[0x4]; // 0x1adc 
-    std::uint8_t _[0x88]; // 0x1ae0 
-    std::uint8_t _[0x38]; // 0x1b68 
+    std::uint8_t _[0xb8]; // 0x1ae0 
+    std::uint8_t _[0x38]; // 0x1b98 
 };
 
 struct C_BasePlayerPawn {
@@ -2587,8 +2586,8 @@ struct C_SoundOpvarSetAABBEntity {
 };
 
 struct C_WeaponBizon {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_StattrakModule {
@@ -2651,9 +2650,9 @@ struct CBombTarget {
 };
 
 struct C_Knife {
-    static constexpr std::size_t size = 0x1f30;
-    std::uint8_t pad_0[0x1f20]; // 0x0
-    std::uint8_t _[0x10]; // 0x1f20 
+    static constexpr std::size_t size = 0x1f70;
+    std::uint8_t pad_0[0x1f60]; // 0x0
+    std::uint8_t _[0x10]; // 0x1f60 
 };
 
 struct C_CSGO_TerroristWingmanIntroCamera {
@@ -2717,8 +2716,8 @@ struct C_BaseClientUIEntity {
 };
 
 struct C_WeaponUSPSilencer {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_MolotovProjectile {
@@ -2733,13 +2732,13 @@ struct C_TriggerLerpObject {
 };
 
 struct C_WeaponRevolver {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_WeaponElite {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_DynamicPropAlias_cable_dynamic {
@@ -2925,22 +2924,22 @@ struct CPulseCell_Inflow_EntOutputHandler {
 };
 
 struct C_BaseCSGrenade {
-    static constexpr std::size_t size = 0x1fe0;
-    std::uint8_t pad_0[0x1f20]; // 0x0
-    std::uint8_t _[0x1]; // 0x1f20 
-    std::uint8_t _[0x1]; // 0x1f21 
-    std::uint8_t _[0x1]; // 0x1f22 
-    std::uint8_t _[0x1]; // 0x1f23 
-    std::uint8_t _[0x1]; // 0x1f24 
-    std::uint8_t _[0x3]; // 0x1f25 
-    std::uint8_t _[0x8]; // 0x1f28 
-    std::uint8_t _[0x78]; // 0x1f30 
-    std::uint8_t _[0x4]; // 0x1fa8 
-    std::uint8_t _[0x4]; // 0x1fac 
-    std::uint8_t _[0x4]; // 0x1fb0 
-    std::uint8_t _[0x4]; // 0x1fb4 
-    std::uint8_t _[0x4]; // 0x1fb8 
-    std::uint8_t _[0x24]; // 0x1fbc 
+    static constexpr std::size_t size = 0x2020;
+    std::uint8_t pad_0[0x1f60]; // 0x0
+    std::uint8_t _[0x1]; // 0x1f60 
+    std::uint8_t _[0x1]; // 0x1f61 
+    std::uint8_t _[0x1]; // 0x1f62 
+    std::uint8_t _[0x1]; // 0x1f63 
+    std::uint8_t _[0x1]; // 0x1f64 
+    std::uint8_t _[0x3]; // 0x1f65 
+    std::uint8_t _[0x8]; // 0x1f68 
+    std::uint8_t _[0x78]; // 0x1f70 
+    std::uint8_t _[0x4]; // 0x1fe8 
+    std::uint8_t _[0x4]; // 0x1fec 
+    std::uint8_t _[0x4]; // 0x1ff0 
+    std::uint8_t _[0x4]; // 0x1ff4 
+    std::uint8_t _[0x4]; // 0x1ff8 
+    std::uint8_t _[0x24]; // 0x1ffc 
 };
 
 struct CFilterAttributeInt {
@@ -3161,10 +3160,10 @@ struct C_TintController {
 };
 
 struct C_WeaponBaseItem {
-    static constexpr std::size_t size = 0x1f30;
-    std::uint8_t pad_0[0x1f20]; // 0x0
-    std::uint8_t _[0x1]; // 0x1f20 
-    std::uint8_t _[0xf]; // 0x1f21 
+    static constexpr std::size_t size = 0x1f70;
+    std::uint8_t pad_0[0x1f60]; // 0x0
+    std::uint8_t _[0x1]; // 0x1f60 
+    std::uint8_t _[0xf]; // 0x1f61 
 };
 
 struct CWaterSplasher {
@@ -3206,9 +3205,9 @@ struct CPulseCell_LimitCount__InstanceState_t {
 };
 
 struct C_WeaponCZ75a {
-    static constexpr std::size_t size = 0x1f60;
-    std::uint8_t pad_0[0x1f50]; // 0x0
-    std::uint8_t _[0x10]; // 0x1f50 
+    static constexpr std::size_t size = 0x1fa0;
+    std::uint8_t pad_0[0x1f90]; // 0x0
+    std::uint8_t _[0x10]; // 0x1f90 
 };
 
 struct C_DynamicLight {
@@ -3278,8 +3277,8 @@ struct CCSPlayerController_DamageServices {
 };
 
 struct C_CSGO_TeamPreviewModel {
-    static constexpr std::size_t size = 0x37d0;
-    std::uint8_t pad_0[0x37d0]; // 0x0
+    static constexpr std::size_t size = 0x3800;
+    std::uint8_t pad_0[0x3800]; // 0x0
 };
 
 struct C_TonemapController2Alias_env_tonemap_controller2 {
@@ -3380,8 +3379,8 @@ struct CDestructiblePartsComponent {
 };
 
 struct C_WeaponP90 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_EnvWind {
@@ -3470,8 +3469,8 @@ struct CPulseCell_IsRequirementValid__Criteria_t {
 };
 
 struct C_WeaponTec9 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_PhysPropClientside {
@@ -3558,15 +3557,15 @@ struct CPulseCell_Outflow_CycleOrdered {
 };
 
 struct C_CSWeaponBaseGun {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f20]; // 0x0
-    std::uint8_t _[0x4]; // 0x1f20 
-    std::uint8_t _[0x4]; // 0x1f24 
-    std::uint8_t _[0x10]; // 0x1f28 
-    std::uint8_t _[0x4]; // 0x1f38 
-    std::uint8_t _[0x1]; // 0x1f3c 
-    std::uint8_t _[0x3]; // 0x1f3d 
-    std::uint8_t _[0x10]; // 0x1f40 
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f60]; // 0x0
+    std::uint8_t _[0x4]; // 0x1f60 
+    std::uint8_t _[0x4]; // 0x1f64 
+    std::uint8_t _[0x10]; // 0x1f68 
+    std::uint8_t _[0x4]; // 0x1f78 
+    std::uint8_t _[0x1]; // 0x1f7c 
+    std::uint8_t _[0x3]; // 0x1f7d 
+    std::uint8_t _[0x10]; // 0x1f80 
 };
 
 struct C_CSGameRulesProxy {
@@ -3598,8 +3597,8 @@ struct CCollisionProperty {
 };
 
 struct C_WeaponP250 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct CFilterMassGreater {
@@ -4026,8 +4025,8 @@ struct CPulseCell_Outflow_CycleShuffled {
 };
 
 struct C_WeaponSCAR20 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_FuncMover {
@@ -4132,8 +4131,8 @@ struct CLightComponent {
 };
 
 struct C_DecoyGrenade {
-    static constexpr std::size_t size = 0x1fe0;
-    std::uint8_t pad_0[0x1fe0]; // 0x0
+    static constexpr std::size_t size = 0x2020;
+    std::uint8_t pad_0[0x2020]; // 0x0
 };
 
 struct C_WaterBullet {
@@ -4246,8 +4245,8 @@ struct CPulseCell_BaseValue {
 };
 
 struct C_WeaponHKP2000 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_FootstepControl {
@@ -4446,8 +4445,8 @@ struct CPulseCell_Unknown {
 };
 
 struct C_WeaponMP7 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct CSPerRoundStats_t {
@@ -4728,8 +4727,8 @@ struct CPulseCell_Value_RandomInt {
 };
 
 struct C_CSWeaponBaseShotgun {
-    static constexpr std::size_t size = 0x1f20;
-    std::uint8_t pad_0[0x1f20]; // 0x0
+    static constexpr std::size_t size = 0x1f60;
+    std::uint8_t pad_0[0x1f60]; // 0x0
 };
 
 struct C_RagdollPropAttached {
@@ -4750,10 +4749,10 @@ struct C_ModelPointEntity {
 };
 
 struct C_CSGO_PreviewPlayer {
-    static constexpr std::size_t size = 0x37d0;
-    std::uint8_t pad_0[0x3720]; // 0x0
-    std::uint8_t _[0x8]; // 0x3720 
-    std::uint8_t _[0xa8]; // 0x3728 
+    static constexpr std::size_t size = 0x3800;
+    std::uint8_t pad_0[0x3750]; // 0x0
+    std::uint8_t _[0x8]; // 0x3750 
+    std::uint8_t _[0xa8]; // 0x3758 
 };
 
 struct C_RectLight {
@@ -4845,8 +4844,8 @@ struct fogparams_t {
 };
 
 struct C_WeaponM4A1 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_Item {
@@ -5087,8 +5086,8 @@ struct C_LightEntity {
 };
 
 struct C_WeaponM249 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_LocalTempEntity {
@@ -5122,10 +5121,10 @@ struct C_LocalTempEntity {
 };
 
 struct C_WeaponTaser {
-    static constexpr std::size_t size = 0x1f60;
-    std::uint8_t pad_0[0x1f50]; // 0x0
-    std::uint8_t _[0x4]; // 0x1f50 
-    std::uint8_t _[0xc]; // 0x1f54 
+    static constexpr std::size_t size = 0x1fa0;
+    std::uint8_t pad_0[0x1f90]; // 0x0
+    std::uint8_t _[0x4]; // 0x1f90 
+    std::uint8_t _[0xc]; // 0x1f94 
 };
 
 struct C_PointEntity {
@@ -5168,18 +5167,18 @@ struct CPlayer_WeaponServices {
 };
 
 struct C_WeaponNegev {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_WeaponFiveSeven {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_WeaponSawedoff {
-    static constexpr std::size_t size = 0x1f20;
-    std::uint8_t pad_0[0x1f20]; // 0x0
+    static constexpr std::size_t size = 0x1f60;
+    std::uint8_t pad_0[0x1f60]; // 0x0
 };
 
 struct C_TriggerVolume {
@@ -5204,8 +5203,8 @@ struct CPulseCell_Step_CallExternalMethod {
 };
 
 struct C_WeaponMP9 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_DynamicPropAlias_prop_dynamic_override {
@@ -5229,8 +5228,8 @@ struct C_PlayerPing {
 };
 
 struct C_AK47 {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_CSGO_MapPreviewCameraPathNode {
@@ -5271,8 +5270,8 @@ struct CSkyboxReference {
 };
 
 struct C_IncendiaryGrenade {
-    static constexpr std::size_t size = 0x1fe0;
-    std::uint8_t pad_0[0x1fe0]; // 0x0
+    static constexpr std::size_t size = 0x2020;
+    std::uint8_t pad_0[0x2020]; // 0x0
 };
 
 struct CFilterClass {
@@ -5342,7 +5341,7 @@ struct WeaponPurchaseTracker_t {
 };
 
 struct CMapInfo {
-    static constexpr std::size_t size = 0x630;
+    static constexpr std::size_t size = 0x638;
     std::uint8_t pad_0[0x600]; // 0x0
     std::uint8_t _[0x4]; // 0x600 
     std::uint8_t _[0x4]; // 0x604 
@@ -5359,6 +5358,7 @@ struct CMapInfo {
     std::uint8_t _[0x4]; // 0x624 
     std::uint8_t _[0x4]; // 0x628 
     std::uint8_t _[0x4]; // 0x62c 
+    std::uint8_t _[0x8]; // 0x630 
 };
 
 struct C_CSGO_EndOfMatchCamera {
@@ -5517,8 +5517,8 @@ struct C_CsmFovOverride {
 };
 
 struct C_WeaponGlock {
-    static constexpr std::size_t size = 0x1f50;
-    std::uint8_t pad_0[0x1f50]; // 0x0
+    static constexpr std::size_t size = 0x1f90;
+    std::uint8_t pad_0[0x1f90]; // 0x0
 };
 
 struct C_PhysicsProp {
@@ -5572,13 +5572,13 @@ struct CBasePlayerWeaponVData {
 };
 
 struct C_SmokeGrenade {
-    static constexpr std::size_t size = 0x1fe0;
-    std::uint8_t pad_0[0x1fe0]; // 0x0
+    static constexpr std::size_t size = 0x2020;
+    std::uint8_t pad_0[0x2020]; // 0x0
 };
 
 struct C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel {
-    static constexpr std::size_t size = 0x37d0;
-    std::uint8_t pad_0[0x37d0]; // 0x0
+    static constexpr std::size_t size = 0x3800;
+    std::uint8_t pad_0[0x3800]; // 0x0
 };
 
 struct CCSGO_RushIntroCharacterPosition {
