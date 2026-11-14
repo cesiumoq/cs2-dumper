@@ -2,9 +2,13 @@
   "bindings": [
     {"name": "CameraTrace", "module": "client.dll", "rva": "0xA14760", "status": "ok", "bytes": "4C 8B DC 49 89 5B 08 49 89 6B 10 49 89 73 18 49 89 7B 20 41 54 41 56 41"},
     {"name": "hull", "module": "client.dll", "rva": "0xA14760", "status": "ok", "bytes": "4C 8B DC 49 89 5B 08 49 89 6B 10 49 89 73 18 49 89 7B 20 41 54 41 56 41"},
-    {"name": "allocate", "module": "client.dll", "rva": "0x4F5FD0", "status": "ok", "bytes": "48 89 5C 24 10 57 48 83 EC 20 33 FF 48 8B D9 48 85 C9 75 23 B9 30 00 00"},
-    {"name": "GetPaintKit", "module": "client.dll", "rva": "0x1187564", "status": "ok", "bytes": "48 89 6C 24 50 4C 89 64 24 58 4C 89 74 24 60 4C 8D 34 C9 49 C1 E6 03 2B"},
+    {"name": "allocate", "module": "client.dll", "rva": "0x4F6050", "status": "ok", "bytes": "48 89 5C 24 10 57 48 83 EC 20 33 DB 48 8B F9 48 85 C9 75 2D B9 38 00 00"},
+    {"name": "GetPaintKit", "module": "client.dll", "rva": "0x1187F90", "status": "ok", "bytes": "48 89 5C 24 08 57 48 83 EC 40 8B 15 98 50 60 01 48 8B F9 65 48 8B 04 25"},
     {"name": "UpdateCompositeOwner", "module": "client.dll", "rva": "0x14E0167", "status": "ok", "bytes": "48 89 58 08 48 89 68 10 48 8B E9 48 89 78 20 4C 89 60 F8 45 33 E4 4C 89"},
-    {"name": "fire_event_client_side", "module": "client.dll", "rva": "0x9F5F00", "status": "ok", "bytes": "40 55 41 54 41 55 41 56 48 8D 6C 24 C1 48 81 EC"}
+    {"name": "fire_event_client_side", "module": "client.dll", "rva": "0x9F5F00", "status": "ok", "bytes": "40 55 41 54 41 55 41 56 48 8D 6C 24 C1 48 81 EC"},
+    {"name": "worldGroup", "module": "client.dll", "rva": "0x3B8570", "status": "ok", "bytes": "40 55 48 8B EC 48 83 EC 60 85 D2 75 16 48 8B 0D A4 32 3D 02 48 8B 01 FF"},
+    {"name": "SetModel", "module": "client.dll", "rva": "0x95F8C0", "status": "ok", "bytes": "40 53 48 83 EC 20 48 8B D9 4C 8B C2 48 8B 0D CD FB BE 01 48 8D 54 24 40"},
+    {"name": "UpdateCompositeSet", "module": "client.dll", "rva": "0x7FD820", "status": "ok", "bytes": "40 55 56 41 57 48 8D 6C 24 B9 48 81 EC D0 00 00 00 48 8B 05 48 AD CB 01"},
+    {"name": "lightTime", "module": "client.dll", "rva": "0x757E40", "status": "ok", "bytes": "40 53 48 83 EC 20 48 8B D9 85 D2 74 1A 48 8B 05 64 9C AC 01 F3 0F 10 48"}
   ]
 }

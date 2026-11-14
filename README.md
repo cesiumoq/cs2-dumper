@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://cs2-dump.vercel.app/">cs2-dump.vercel.app</a><br>
-  <sub>Last updated 12/11/2026 14:18</sub>
+  <sub>Last updated 14/11/2026 22:05</sub>
 </p>
 
 ## Output

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T14:15:48",
+  "generated_at": "2026-11-14T22:00:30",
   "modules": {
     "client.dll": {"sha256": "99a6720b29d8b477d55f0a2d7fd4333b5df13f354ba723804e996bead1231aa8", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\csgo\\bin\\win64\\client.dll"},
     "engine2.dll": {"sha256": "dcb5fe13f60f0db9faa365c7b48c3ca107ce56783748bf9ed9ca41fd892af63c", "path": "G:\\\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\engine2.dll"},
