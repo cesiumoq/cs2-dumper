@@ -1114,14 +1114,13 @@
                          "name":  "FrameStageNotify",
                          "module":  "client.dll",
                          "resolve":  "raw",
-                         "va":  "0x7FF9A3CD28B0",
-                         "rva":  "0xb6ee70",
-                         "pattern":  "48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 40 48 8B F9 33 ED 48 8B 89 B0 04 00 00 8B DA 48 85 C9",
-                         "bytes":  "48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 40 48 8B F9 33 ED 48 8B 89 B0",
+                         "rva":  "0xB628B0",
+                         "pattern":  "48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 40 48 8B F9 33 ED 48 8B 89 B0 04 00 00 8B DA 48 85 C9 74 1F",
+                         "bytes":  "48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 40 48 8B F9 33 ED 48 8B 89 B0 04 00 00 8B DA 48 85 C9",
                          "pattern_synth":  "48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 40 48",
                          "prototype":  "__int64 __fastcall FrameStageNotify(__int64 a1, int a2)",
                          "healed_from":  "48 89 5C 24 ? 48 89 6C 24 ? 57 48 83 EC ? 48 8B F9 33 ED",
-                         "pattern_wildcard":  "48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 40 48 8B F9 33 ED 48 8B 89 B0 04 00 00 8B DA 48 85 C9"
+                         "pattern_wildcard":  "48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 40 48 8B F9 33 ED 48 8B 89 B0 04 00 00 8B DA 48 85 C9 74 1F"
                      },
                      {
                          "name":  "FX_FireBullets",
@@ -6437,10 +6436,10 @@
                      {
                          "name":  "worldGroup",
                          "module":  "client.dll",
-                         "rva":  "0x3bab20",
+                         "rva":  "0x3B8570",
                          "resolve":  "raw",
-                         "pattern":  "40 55 48 8B EC 48 83 EC 60 85 D2 75 16 48 8B 0D ? ? ? ? 48 8B 01 FF 90 E8 ? ? ? ? 83 C4",
-                         "pattern_wildcard":  "40 55 48 8B EC 48 83 EC 60 85 D2 75 16 48 8B 0D ? ? ? ? 48 8B 01 FF 90 E8 ? ? ? ? 83 C4"
+                         "pattern":  "40 55 48 8B EC 48 83 EC 60 85 D2 75 16 48 8B 0D A4 32 3D 02 48 8B 01 FF",
+                         "pattern_wildcard":  "40 55 48 8B EC 48 83 EC 60 85 D2 75 16 48 8B 0D A4 32 3D 02 48 8B 01 FF"
                      },
                      {
                          "name":  "createScene",
