@@ -6465,6 +6465,14 @@
                          "resolve":  "raw",
                          "pattern":  "40 55 41 54 41 55 41 56 48 8D 6C 24 C1 48 81 EC",
                          "alias_of":  "fire_event_client_side"
+                     },
+                     {
+                         "name":  "MouseInputEnabled",
+                         "module":  "client.dll",
+                         "rva":  "0xCDA980",
+                         "resolve":  "raw",
+                         "pattern":  "40 53 56 57 48 83 EC 40 48 63 C2 48 8D 35 ? ? ? ? 48 6B D8 1C 0F 29 74 24 30 49 8B F8 80 BC",
+                         "alias_of":  "CCSGOInput::slot20"
                      }
                  ]
 }

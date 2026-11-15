@@ -81,11 +81,10 @@
                      {
                          "name":  "MouseInputEnabled",
                          "module":  "client.dll",
-                         "status":  "unresolved",
-                         "candidates":  [
-                                            "ReadFrameInput",
-                                            "ProcessInputEvent"
-                                        ]
+                         "rva":  "0xCDA980",
+                         "status":  "ok",
+                         "bytes":  "",
+                         "alias_of":  "CCSGOInput::slot20"
                      }
                  ]
 }
