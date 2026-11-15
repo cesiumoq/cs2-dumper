@@ -56,6 +56,7 @@ const FILE_LINKS = {
   entities: ["sdk/entities/entities.json"],
   engine: ["sdk/engine/engine_structs.json"],
   features: ["sdk/verified_features.json"],
+  compat: ["compat.json", "rva.json", "callsites.json", "schema_offsets.json", "enums.json", "chains.json", "chains.hpp"],
   sdk: ["struct.hpp", "sdk/cs2.hpp"],
 };
 
@@ -421,6 +422,12 @@ function Api({ build }) {
     ["/api/build.json", "build number, validity, counts, hashes", "build"],
     ["/api/offsets.json", "all netvars and globals by module", "offsets"],
     ["/api/patterns.json", "function signatures with RVA", "patterns"],
+    ["/api/rva.json", "name -> module-relative RVA (functions, globals, vtables, interfaces)", "compat"],
+    ["/api/callsites.json", "direct E8 call sites and RIP-relative data references", "compat"],
+    ["/api/schema_offsets.json", "class -> field -> byte offset", "compat"],
+    ["/api/enums.json", "enum members and values", "compat"],
+    ["/api/chains.json", "entity list, identity, class and schema name chains", "compat"],
+    ["/api/compat.json", "contract manifest and counts", "compat"],
     ["/api/offsets.hpp", "C++ constants", "C++"],
     ["/api/client_dll.hpp", "client classes and fields", "SDK"],
     ["/api/vtables.json", "resolved virtual tables and slots", "vtables"],
@@ -468,6 +475,17 @@ if (live != cached) {
           </div>
         ))}
       </div>
+      <h3>Compatibility layer</h3>
+      <p className="muted">
+        The files above let any cheat, not just one, rebuild its addresses from this build:
+        resolve an old literal to its target RVA, look that RVA up in <code>rva.json</code>, then take the new
+        bytes from <code>callsites.json</code> (direct calls) or <code>patterns.json</code> (function start).
+      </p>
+      <CodeBlock>{`GET /api/compat.json        -> schema_version, build, counts
+GET /api/rva.json           -> { modules: { "client.dll": { "OnAddEntity": { rva, kind } } } }
+GET /api/callsites.json     -> calls[].target + sites[].pattern  (E8 ? ? ? ? ...)
+GET /api/chains.json        -> entity_list, entity_identity, entity_class, schema_class_name
+GET /api/schema_offsets.json-> { classes: { "C_BaseEntity": { fields: { "m_iHealth": 844 } } } }`}</CodeBlock>
       <h3>Examples</h3>
       <div className="segmented api-tabs">
         {["curl", "powershell", "javascript", "cpp"].map((id) => (
@@ -480,7 +498,7 @@ if (live != cached) {
   "build_number": ${build},
   "valid": true,
   "signatures": { "found": 577, "total": 578 },
-  "offsets": { "count": 202 },
+  "offsets": { "count": 201 },
   "modules": 19
 }`}</CodeBlock>
       <h3>Pinned build</h3>
