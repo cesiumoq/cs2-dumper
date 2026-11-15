@@ -6457,6 +6457,14 @@
                          "resolve":  "raw",
                          "pattern":  "48 85 D2 0F 84 7D 01 00 00 48 8B C4 48 89 50 10 53 41 56 48 83 EC 58 48 89 78 E8 ? ? ? ? 8B",
                          "pattern_wildcard":  "48 85 D2 0F 84 7D 01 00 00 48 8B C4 48 89 50 10 53 41 56 48 83 EC 58 48 89 78 E8 ? ? ? ? 8B"
+                     },
+                     {
+                         "name":  "FireEventClientSide",
+                         "module":  "client.dll",
+                         "rva":  "0x9F5F00",
+                         "resolve":  "raw",
+                         "pattern":  "40 55 41 54 41 55 41 56 48 8D 6C 24 C1 48 81 EC",
+                         "alias_of":  "fire_event_client_side"
                      }
                  ]
 }
