@@ -1,14 +1,14 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
 /*  Total Offsets   : 201
-/*  Dumped At       : 21:05 18/11/2026 (GMT)
-/*  Dumped In       : 57,3s
+/*  Dumped At       : 21:17 18/11/2026 (GMT)
+/*  Dumped In       : 63,3s
 */
 
 /*
    Generated using https://github.com/a2x/cs2-dumper
 */
-// 2026-11-18 21:02:49.728570300 UTC
+// 2026-11-18 21:15:08.787106400 UTC
 
 namespace CS2Dumper.Interfaces {
 /*

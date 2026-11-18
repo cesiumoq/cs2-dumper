@@ -319,7 +319,7 @@
       "status": "fail"
     },
     {
-      "detail": "only 6 weapons present in the session; dump in a match with every weapon spawned for full coverage",
+      "detail": "only 5 weapons present in the session; dump in a match with every weapon spawned for full coverage",
       "items": [],
       "name": "weapons_snapshot",
       "status": "warn"
@@ -327,7 +327,7 @@
   ],
   "client_version": "2000946",
   "dumper_version": "2.1.8",
-  "generated_at": "2026-11-18T22:02:51.279177500+01:00",
+  "generated_at": "2026-11-18T22:15:09.957865500+01:00",
   "note": "Written by cs2-sdk after every dump. `ok` is false when a check failed; warnings list what to look at. The auto-dump pipeline adds `update`, `auto_healed` and `known_issues`.",
   "ok": false,
   "patch_version": "1.41.9.8",

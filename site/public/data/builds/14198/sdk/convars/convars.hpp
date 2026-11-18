@@ -1129,7 +1129,7 @@ If 'match', the server will maintain a 1:N ratio of humans to bots, where N is b
 // fov_cs_super_ultrawide_near_z                             float32  1                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL|FCVAR_CHEAT
 // fov_cs_ultrawide_near_z                                   float32  4                     FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL|FCVAR_CHEAT
 // fov_desired                                               float32  75                    FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_USERINFO  // Sets the base field-of-view.
-// fps_max                                                   float32  64                    FCVAR_ARCHIVE|FCVAR_RELEASE  // Frame rate limiter.  0=no limit.  Does not apply to dedicated server.
+// fps_max                                                   float32  0                     FCVAR_ARCHIVE|FCVAR_RELEASE  // Frame rate limiter.  0=no limit.  Does not apply to dedicated server.
 // fps_max_tools                                             float32  120                   FCVAR_ARCHIVE  // Additional frame rate limit while in tools mode and a window other than the game window has focus. Note that fps_max still applies, this only allows the maximum frame rate for tools mode to be lower. 0=no tools specific limit.
 // fps_max_ui                                                float32  200                   FCVAR_ARCHIVE  // Frame rate limiter while the game UI is displayed.  0=no limit.  Does not apply to dedicated server.
 // frag_grenade_blip_frequency                               float32  1                     FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED
@@ -2321,7 +2321,7 @@ If the server is behind NAT, y
 // player_nevershow_communityservermessage                   string   0                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_PER_USER
 // player_ping_token_cooldown                                float32  20                    FCVAR_GAMEDLL|FCVAR_CHEAT|FCVAR_RELEASE  // Cooldown for how long it takes for a player's ping token to refresh allowing them to ping again (they get 5 tokens).
 // player_survival_list_10_0_303                             string   mg_dz_blacksite,mg_…  FCVAR_CLIENTDLL|FCVAR_ARCHIVE
-// player_teamplayedlast                                     int32    3                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_PER_USER
+// player_teamplayedlast                                     int32    2                     FCVAR_CLIENTDLL|FCVAR_ARCHIVE|FCVAR_PER_USER
 // player_use_radius                                         float32  80                    FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED|FCVAR_CHEAT
 // player_wargames_list2_10_0_0                              string                         FCVAR_CLIENTDLL|FCVAR_ARCHIVE
 // population_distribution_debug                             float32  0                     FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_REPLICATED
@@ -3420,8 +3420,8 @@ If the server is behind NAT, y
 // stats_highlight_interval                                  float32  10                    FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Interval between hightlight screens in the transition stats panel
 // steam_controller_haptics                                  bool     true                  FCVAR_CLIENTDLL|FCVAR_RELEASE
 // steamaudio_customdata_dimensions_numrays                  int32    32768                 FCVAR_DEVELOPMENTONLY  // Number of rays to trace for estimating inside outside status of a probe.
-// steamworks_sessionid_client                               string   8951636266606         FCVAR_CLIENTDLL|FCVAR_USERINFO  // The client session ID for the new steamworks gamestats.
-// steamworks_sessionid_server                               string   8951636262832         FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED  // The server session ID for the new steamworks gamestats.
+// steamworks_sessionid_client                               string   8951636683301         FCVAR_CLIENTDLL|FCVAR_USERINFO  // The client session ID for the new steamworks gamestats.
+// steamworks_sessionid_server                               string   8951636683306         FCVAR_DEVELOPMENTONLY|FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED  // The server session ID for the new steamworks gamestats.
 // sticky_tooltips                                           bool     false                 FCVAR_DEVELOPMENTONLY|FCVAR_CLIENTDLL  // Don't ever hide tooltips. Helpful when debugging complicated tooltip layouts.
 // surf_speed_slow                                           float32  50                    FCVAR_GAMEDLL|FCVAR_CLIENTDLL|FCVAR_REPLICATED|FCVAR_RELEASE  // Speed above which surf sounds are played.
 // suspicious_hit_odds_threshold                             float32  0.01                  FCVAR_GAMEDLL|FCVAR_RELEASE
