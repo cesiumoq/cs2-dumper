@@ -1,5 +1,12 @@
 /*                       cesium dumper
 /*                  https://cs2-dump.vercel.app
+/*  Total Offsets   : 201
+/*  Dumped At       : 21:05 18/11/2026 (GMT)
+/*  Dumped In       : 57,3s
+*/
+
+/*                       cesium dumper
+/*                  https://cs2-dump.vercel.app
 /*  Build 14197 engine pointer chains.
 /*  Values are byte offsets. Validate the unverified ones live.
 */

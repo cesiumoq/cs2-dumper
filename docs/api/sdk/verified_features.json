@@ -1,5 +1,5 @@
 {
-  "cs2_build": 14197,
+  "cs2_build": 14198,
   "feature_count": 6,
   "features": [
     {
@@ -70,7 +70,7 @@
             "module": "client.dll",
             "name": "dwEntityList",
             "note": "CGameEntitySystem*",
-            "value": "0x2709010"
+            "value": "0x270C680"
           },
           {
             "module": "client.dll",
@@ -164,7 +164,7 @@
             "prototype": "__int64 __fastcall OnAddEntity(__int64 a1, __int64 a2, int a3)",
             "purpose": "CGameEntitySystem vtable slot 15: an entity became valid",
             "role": "hook",
-            "rva": "0x9F24B0"
+            "rva": "0x9F2F40"
           },
           {
             "module": "client.dll",
@@ -173,7 +173,7 @@
             "prototype": "__int64 __fastcall OnRemoveEntity(__int64 a1, _QWORD *a2, int a3)",
             "purpose": "CGameEntitySystem vtable slot 16: an entity is being destroyed",
             "role": "hook",
-            "rva": "0x9F2F30"
+            "rva": "0x9F39C0"
           }
         ],
         "globals": [],
@@ -338,19 +338,19 @@
             "module": "client.dll",
             "name": "dwEntityList",
             "note": "CGameEntitySystem*",
-            "value": "0x2709010"
+            "value": "0x270C680"
           },
           {
             "module": "client.dll",
             "name": "dwLocalPlayerPawn",
             "note": "C_CSPlayerPawn*",
-            "value": "0x2553D38"
+            "value": "0x2557538"
           },
           {
             "module": "client.dll",
             "name": "dwViewMatrix",
             "note": "float[4][4], row-major",
-            "value": "0x2559640"
+            "value": "0x255CE50"
           }
         ],
         "notes": [
@@ -687,7 +687,7 @@
             "prototype": "__int64 __fastcall FrameStageNotify(__int64 a1, int a2)",
             "purpose": "gather player data on the game thread",
             "role": "hook",
-            "rva": "0xB628B0"
+            "rva": "0xB63350"
           },
           {
             "module": "client.dll",
@@ -696,7 +696,7 @@
             "prototype": "__int64 __fastcall C_BaseEntity_GetBoneIdByName(__int64 a1, __int64 a2)",
             "purpose": "bone name -> index, once per model",
             "role": "call",
-            "rva": "0x94DE50"
+            "rva": "0x94E8E0"
           },
           {
             "module": "rendersystemdx11.dll",
@@ -713,13 +713,13 @@
             "module": "client.dll",
             "name": "dwViewMatrix",
             "note": "float[4][4], row-major",
-            "value": "0x2559640"
+            "value": "0x255CE50"
           },
           {
             "module": "client.dll",
             "name": "dwLocalPlayerPawn",
             "note": "C_CSPlayerPawn*",
-            "value": "0x2553D38"
+            "value": "0x2557538"
           }
         ],
         "notes": [
@@ -780,7 +780,7 @@
             "module": "client.dll",
             "name": "dwLocalPlayerController",
             "note": "CCSPlayerController*",
-            "value": "0x252B0C8"
+            "value": "0x252ED78"
           }
         ],
         "notes": [
@@ -888,7 +888,7 @@
             "prototype": "void __fastcall OverrideView(__int64 a1, __int64 a2)",
             "purpose": "ClientMode::OverrideView(this, CViewSetup*)",
             "role": "hook",
-            "rva": "0xCFA9D0"
+            "rva": "0xCFB560"
           }
         ],
         "globals": [
@@ -896,7 +896,7 @@
             "module": "client.dll",
             "name": "dwLocalPlayerPawn",
             "note": "C_CSPlayerPawn*",
-            "value": "0x2553D38"
+            "value": "0x2557538"
           }
         ],
         "notes": [
@@ -1001,13 +1001,13 @@
             "module": "client.dll",
             "name": "dwViewAngles",
             "note": "QAngle, read and write",
-            "value": "0x256A4B8"
+            "value": "0x256D668"
           },
           {
             "module": "client.dll",
             "name": "dwSensitivity",
             "note": "ConVar pointer; value at dwSensitivity_sensitivity",
-            "value": "0x2551038"
+            "value": "0x25546C8"
           },
           {
             "module": "client.dll",
@@ -1019,19 +1019,19 @@
             "module": "client.dll",
             "name": "dwLocalPlayerPawn",
             "note": "C_CSPlayerPawn*",
-            "value": "0x2553D38"
+            "value": "0x2557538"
           },
           {
             "module": "client.dll",
             "name": "dwLocalPlayerController",
             "note": "CCSPlayerController*",
-            "value": "0x252B0C8"
+            "value": "0x252ED78"
           },
           {
             "module": "client.dll",
             "name": "dwEntityList",
             "note": "CGameEntitySystem*",
-            "value": "0x2709010"
+            "value": "0x270C680"
           }
         ],
         "notes": [
@@ -1297,7 +1297,7 @@
             "prototype": "void __fastcall CreateMove(_QWORD *a1, int a2, char a3)",
             "purpose": "CCSGOInput::CreateMove: aim here",
             "role": "hook",
-            "rva": "0xB5AF90"
+            "rva": "0xB5BA30"
           },
           {
             "module": "client.dll",
@@ -1306,7 +1306,7 @@
             "prototype": "__int64 *__fastcall GetViewAngles(__int64 a1, int a2)",
             "purpose": "current view (input, slot 0)",
             "role": "call",
-            "rva": "0xB66450"
+            "rva": "0xB66EF0"
           },
           {
             "module": "client.dll",
@@ -1315,7 +1315,7 @@
             "prototype": "void __fastcall SetViewAngles(__int64 a1, int a2, __int64 *a3)",
             "purpose": "apply the new view (input, slot 0, &angles)",
             "role": "call",
-            "rva": "0xB763A0"
+            "rva": "0xB76E40"
           },
           {
             "module": "client.dll",
@@ -1324,7 +1324,7 @@
             "prototype": "__int64 __fastcall C_CSPlayerPawn_GetAimPunch(__int64 a1, __int64 a2)",
             "purpose": "aim punch (services, &out, 0)",
             "role": "call",
-            "rva": "0x84E660"
+            "rva": "0x84F0F0"
           },
           {
             "module": "client.dll",
@@ -1333,7 +1333,7 @@
             "prototype": "__int64 __fastcall C_BaseEntity_GetBoneIdByName(__int64 a1, __int64 a2)",
             "purpose": "\"head_0\" -> bone index",
             "role": "call",
-            "rva": "0x94DE50"
+            "rva": "0x94E8E0"
           },
           {
             "module": "client.dll",
@@ -1342,7 +1342,7 @@
             "prototype": "__int64 __fastcall TraceShape(__int64 **a1, __int64 a2, float *a3, __int64 a4, _BYTE *a5, __int64 a6)",
             "purpose": "visibility check",
             "role": "call",
-            "rva": "0xA148D0"
+            "rva": "0xA15360"
           }
         ],
         "globals": [],
@@ -1787,7 +1787,7 @@
             "prototype": "__int64 __fastcall FrameStageNotify(__int64 a1, int a2)",
             "purpose": "apply after the network update",
             "role": "hook",
-            "rva": "0xB628B0"
+            "rva": "0xB63350"
           },
           {
             "module": "client.dll",
@@ -1796,7 +1796,7 @@
             "prototype": "void __fastcall C_EconItemView_SetAttribute(__int64 a1)",
             "purpose": "paint attributes on the item view",
             "role": "call",
-            "rva": "0x119C340"
+            "rva": "0x119DA50"
           },
           {
             "module": "client.dll",
@@ -1805,7 +1805,7 @@
             "prototype": "__int64 __fastcall ApplyEconCustomization(__int64 a1, char a2)",
             "purpose": "queue the econ reload (weapon, 1)",
             "role": "call",
-            "rva": "0x81C660"
+            "rva": "0x81D140"
           },
           {
             "module": "client.dll",
@@ -1814,7 +1814,7 @@
             "prototype": "__int64 __fastcall C_CSWeaponBase_UpdateCompositeMaterial(__int64 *a1, char a2)",
             "purpose": "rebuild the composite material",
             "role": "call",
-            "rva": "0x14E0A90"
+            "rva": "0x14E3930"
           },
           {
             "module": "client.dll",
@@ -1823,7 +1823,7 @@
             "prototype": "void __fastcall SetMeshGroupMask(__int64 a1, __int64 a2)",
             "purpose": "legacy (2) or modern (1) model",
             "role": "call",
-            "rva": "0xAB8670"
+            "rva": "0xAB9110"
           },
           {
             "module": "client.dll",
@@ -1841,7 +1841,7 @@
             "prototype": "void __fastcall C_EconItemView_InvalidateDescription(__int64 a1)",
             "purpose": "refresh the HUD name",
             "role": "call",
-            "rva": "0x1197E70"
+            "rva": "0x1199580"
           }
         ],
         "globals": [],
@@ -2064,7 +2064,7 @@
             "prototype": "__int64 __fastcall FrameStageNotify(__int64 a1, int a2)",
             "purpose": "apply after the network update",
             "role": "hook",
-            "rva": "0xB628B0"
+            "rva": "0xB63350"
           },
           {
             "module": "client.dll",
@@ -2073,7 +2073,7 @@
             "prototype": "void __fastcall C_CSWeaponBase_GetViewModel(_QWORD *a1)",
             "purpose": "refresh after the subclass change",
             "role": "call",
-            "rva": "0xAFC0B0"
+            "rva": "0xAFCB50"
           },
           {
             "module": "client.dll",
@@ -2082,7 +2082,7 @@
             "prototype": "__int64 __fastcall C_CSWeaponBase_GetModelPath(__int64 a1)",
             "purpose": "model for the item view's definition",
             "role": "call",
-            "rva": "0x118AD60"
+            "rva": "0x118C470"
           },
           {
             "module": "client.dll",
@@ -2091,7 +2091,7 @@
             "prototype": "__int64 __fastcall ChangeModel(__int64 a1, __int64 a2)",
             "purpose": "load the new knife model (weapon, path)",
             "role": "call",
-            "rva": "0x95F8C0"
+            "rva": "0x960350"
           },
           {
             "module": "client.dll",
@@ -2100,7 +2100,7 @@
             "prototype": "void __fastcall C_EconItemView_SetAttribute(__int64 a1)",
             "purpose": "paint attributes",
             "role": "call",
-            "rva": "0x119C340"
+            "rva": "0x119DA50"
           },
           {
             "module": "client.dll",
@@ -2109,7 +2109,7 @@
             "prototype": "__int64 __fastcall ApplyEconCustomization(__int64 a1, char a2)",
             "purpose": "queue the econ reload",
             "role": "call",
-            "rva": "0x81C660"
+            "rva": "0x81D140"
           },
           {
             "module": "client.dll",
@@ -2118,7 +2118,7 @@
             "prototype": "void __fastcall SetMeshGroupMask(__int64 a1, __int64 a2)",
             "purpose": "legacy (2) or modern (1) model",
             "role": "call",
-            "rva": "0xAB8670"
+            "rva": "0xAB9110"
           },
           {
             "module": "client.dll",

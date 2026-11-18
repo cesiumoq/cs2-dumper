@@ -1,17 +1,17 @@
 <p align="center">
-  <img src="docs/banner.svg" alt="CS2 Dump build 14197" width="100%">
+  <img src="docs/banner.svg" alt="CS2 Dump build 14198" width="100%">
 </p>
 
 <p align="center">
   <a href="https://cs2-dump.vercel.app/">cs2-dump.vercel.app</a><br>
-  <sub>Last updated 15/11/2026 06:56</sub>
+  <sub>Last updated 18/11/2026 22:05</sub>
 </p>
 
 ## Output
 
 ```text
 output/
-  build-14197/
+  build-14198/
     client_dll.json / .hpp / .cs / .rs / .zig
     engine2_dll.json / .hpp / .cs / .rs / .zig
     server_dll.json / .hpp / .cs / .rs / .zig
@@ -40,7 +40,7 @@ output/
     sdk/
 ```
 
-The same files are mirrored to `cs2-dumper/output/build-14197/`.
+The same files are mirrored to `cs2-dumper/output/build-14198/`.
 
 ## Compatibility layer
 

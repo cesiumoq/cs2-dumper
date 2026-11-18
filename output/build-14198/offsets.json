@@ -1,0 +1,266 @@
+{
+    "client.dll":  {
+                       "dwGameTraceManager":  "0x221AB18",
+                       "CInputPtrGlobal":  "0x2230210",
+                       "ClientBugBugServic001_Client":  "0x2227190",
+                       "ClientToolsInfo_001":  "0x2227160",
+                       "dwCSGOInput":  "0x256CFE0",
+                       "dwEntityList":  "0x270C680",
+                       "dwGameEntitySystem":  "0x270C680",
+                       "dwGameEntitySystem_highestEntityIndex":  "0x2120",
+                       "dwGameRules":  "0x2556E78",
+                       "dwGlobalVars":  "0x2223AD0",
+                       "dwGlowManager":  "0x2553B90",
+                       "dwLocalPlayerController":  "0x252ED78",
+                       "dwLocalPlayerPawn":  "0x2557538",
+                       "dwPlantedC4":  "0x24BD9E8",
+                       "dwPrediction":  "0x2557440",
+                       "dwSensitivity":  "0x25546C8",
+                       "dwSensitivity_sensitivity":  "0x58",
+                       "dwViewAngles":  "0x256D668",
+                       "dwViewMatrix":  "0x255CE50",
+                       "dwViewRender":  "0x255D818",
+                       "dwWeaponC4":  "0x24BB680",
+                       "EmptyWorldService001_Client":  "0x220AEA0",
+                       "GameClientExports001":  "0x2223E08",
+                       "GetAbsOrigin":  "0x219050",
+                       "GetBombsiteACenter":  "0x8C8F30",
+                       "GetBombsiteBCenter":  "0x8C8F90",
+                       "LegacyGameUI001":  "0x22351A0",
+                       "ManageGlowSceneObject":  "0xB6DF80",
+                       "pClientMode":  "0x256AD40",
+                       "pCSGOInputInstance":  "0x256CFE0",
+                       "pCSInventoryManager":  "0x24CA630",
+                       "pCvar":  "0x278EB78",
+                       "pDynamicLightManager":  "0x254B968",
+                       "pEconItemSystem":  "0x25E5EA8",
+                       "pEntitySystem":  "0x23AD148",
+                       "pGameEntitySystem":  "0x270C680",
+                       "pGameEventManager":  "0x253D740",
+                       "pGameRules":  "0x2556E78",
+                       "pGameTraceManager":  "0x221AB18",
+                       "pGlobalVariables":  "0x2223AD0",
+                       "pGlowManager":  "0x2553B90",
+                       "pHudPanel":  "0x25C8148",
+                       "pInterpolationPhase":  "0x21B3088",
+                       "pInventoryCategoryTree":  "0x25E4BE0",
+                       "pLocalPlayerController":  "0x252ED78",
+                       "pMainMenuPanel":  "0x25BB3B8",
+                       "pMatchFramework":  "0x278EC90",
+                       "pMatchmakingReservation":  "0x256E1C8",
+                       "pMaterialManager":  "0x278EDD0",
+                       "pParticleManager":  "0x221AEF8",
+                       "pPlantedC4s":  "0x24BD9E8",
+                       "pPrediction":  "0x2557440",
+                       "pPredictionPlayer":  "0x2549B78",
+                       "pPredictionRandomSeed":  "0x21B7008",
+                       "pRenderGameSystem":  "0x23AE9E0",
+                       "pSensitivity":  "0x25546C8",
+                       "pUiEngine":  "0x2725D40",
+                       "pUIInventory":  "0x251D120",
+                       "pViewRender":  "0x255D818",
+                       "pViewToProjectionMatrix":  "0x255CE10",
+                       "pWeaponC4":  "0x24BB680",
+                       "pWorldToProjectionMatrix":  "0x255CE50",
+                       "SetItemItemIdFunction":  "0xE579D0",
+                       "SetSceneObjectAttributeFloat4":  "0x16A650",
+                       "Source2Client002":  "0x2551080",
+                       "Source2ClientConfig001":  "0x24ADB00",
+                       "Source2ClientPrediction001":  "0x2557440",
+                       "Source2ClientUI001":  "0x22322A0",
+                       "TransformScale3dVMT":  "0x1CB7B08",
+                       "TransformTranslate3dVMT":  "0x1CB7AC8"
+                   },
+    "engine2.dll":  {
+                        "BenchmarkService001":  "0x6B89D0",
+                        "BugBugService001":  "0x6B8AD0",
+                        "BugService001":  "0x9703C0",
+                        "ClientServerEngineLoopService_001":  "0x9B1DE0",
+                        "ClientServerSharedHandleSystem001":  "0x9B13D0",
+                        "dwBuildNumber":  "0x6B2D1C",
+                        "dwNetworkGameClient":  "0x9AFB90",
+                        "dwNetworkGameClient_clientTickCount":  "0x398",
+                        "dwNetworkGameClient_deltaTick":  "0x24C",
+                        "dwNetworkGameClient_isBackgroundMap":  "0x2C143F",
+                        "dwNetworkGameClient_localPlayer":  "0xF8",
+                        "dwNetworkGameClient_maxClients":  "0x240",
+                        "dwNetworkGameClient_serverTickCount":  "0x24C",
+                        "dwNetworkGameClient_signOnState":  "0x230",
+                        "dwWindowHeight":  "0x9B42EC",
+                        "dwWindowWidth":  "0x9B42E8",
+                        "EngineGameUI001":  "0x6B6430",
+                        "EngineServiceMgr001":  "0x9B1680",
+                        "GameEventSystemClientV001":  "0x9B1970",
+                        "GameEventSystemServerV001":  "0x9B1AA0",
+                        "GameResourceServiceClientV001":  "0x6B8B10",
+                        "GameResourceServiceServerV001":  "0x6B8B70",
+                        "GameUIService_001":  "0x970810",
+                        "HostStateMgr001":  "0x6B8FB0",
+                        "INETSUPPORT_001":  "0x6B1980",
+                        "InputService_001":  "0x970AF0",
+                        "KeyValueCache001":  "0x6B9060",
+                        "MapListService_001":  "0x9AF960",
+                        "NetworkClientService_001":  "0x9AFAF0",
+                        "NetworkP2PService_001":  "0x9AFE30",
+                        "NetworkServerService_001":  "0x9AFFE0",
+                        "NetworkService_001":  "0x6B8CE0",
+                        "pBuildNumber":  "0x6B2D1C",
+                        "pFrameInputRing":  "0x9B1FB0",
+                        "pFrameInputRingIndex":  "0x9B196C",
+                        "pNetworkGameClient":  "0x9AFB90",
+                        "pPVSManager":  "0x6B9110",
+                        "pWindowHeight":  "0x9B42EC",
+                        "pWindowWidth":  "0x9B42E8",
+                        "RenderService_001":  "0x9B0250",
+                        "ScreenshotService001":  "0x9B0520",
+                        "SimpleEngineLoopService_001":  "0x6B90C0",
+                        "SoundService_001":  "0x9B06D0",
+                        "Source2EngineToClient001":  "0x6B5D40",
+                        "Source2EngineToClientStringTable001":  "0x6B5DA0",
+                        "Source2EngineToServer001":  "0x6B5E18",
+                        "Source2EngineToServerStringTable001":  "0x6B5E40",
+                        "SplitScreenService_001":  "0x6B8D20",
+                        "StatsService_001":  "0x9B0C10",
+                        "ToolService_001":  "0x6B8E20",
+                        "VENGINE_GAMEUIFUNCS_VERSION005":  "0x6B64C0",
+                        "VProfService_001":  "0x6B8E60"
+                    },
+    "inputsystem.dll":  {
+                            "dwInputSystem":  "0x46BC0",
+                            "InputStackSystemVersion001":  "0x44E90",
+                            "InputSystemVersion001":  "0x46BC0",
+                            "pInputSystemSvc":  "0x46BC0"
+                        },
+    "matchmaking.dll":  {
+                            "dwGameTypes":  "0x1AEFC0",
+                            "GameTypes001":  "0x1AEFC0",
+                            "MATCHFRAMEWORK_001":  "0x1B7080"
+                        },
+    "soundsystem.dll":  {
+                            "dwSoundSystem":  "0x532470",
+                            "dwSoundSystem_engineViewData":  "0x6C",
+                            "SoundBugBugService001_Client":  "0x532C90",
+                            "SoundOpSystem001":  "0x532B70",
+                            "SoundOpSystemEdit001":  "0x532A80",
+                            "SoundSystem001":  "0x532470",
+                            "VMixEditTool001":  "0x5941BBF"
+                        },
+    "animationsystem.dll":  {
+                                "AnimationSystem_001":  "0x8375F8",
+                                "AnimationSystemUtils_001":  "0x83F6D8",
+                                "pAnimationSystemUtils":  "0x83F6B8"
+                            },
+    "filesystem_stdio.dll":  {
+                                 "VAsyncFileSystem2_001":  "0x214610",
+                                 "VFileSystem017":  "0x2143D0"
+                             },
+    "host.dll":  {
+                     "DebugDrawQueueManager001":  "0x13FF70",
+                     "GameModelInfo001":  "0x13FFB0",
+                     "GameSystem2HostHook":  "0x13FFF0",
+                     "HostUtils001":  "0x14F900",
+                     "PredictionDiffManager001":  "0x140100",
+                     "SaveRestoreDataVersion001":  "0x140230",
+                     "SinglePlayerSharedMemory001":  "0x140260",
+                     "Source2Host001":  "0x1402D0"
+                 },
+    "imemanager.dll":  {
+                           "IMEManager001":  "0x37AA0"
+                       },
+    "localize.dll":  {
+                         "Localize_001":  "0x59120"
+                     },
+    "materialsystem2.dll":  {
+                                "FontManager_001":  "0x1638E0",
+                                "MaterialUtils_001":  "0x14BD30",
+                                "PostProcessingSystem_001":  "0x14BC60",
+                                "TextLayout_001":  "0x14BCC0",
+                                "VMaterialSystem2_001":  "0x163530"
+                            },
+    "meshsystem.dll":  {
+                           "MeshSystem001":  "0x180AB0"
+                       },
+    "navsystem.dll":  {
+                          "NavSystem001":  "0x12C000"
+                      },
+    "networksystem.dll":  {
+                              "FlattenedSerializersVersion001":  "0x272A30",
+                              "NetworkMessagesVersion001":  "0x29EE00",
+                              "NetworkSystemVersion001":  "0x28C450",
+                              "SerializedEntitiesVersion001":  "0x28C530"
+                          },
+    "panorama.dll":  {
+                         "PanoramaUIEngine001":  "0x5895F0"
+                     },
+    "panorama_text_pango.dll":  {
+                                    "PanoramaTextServices001":  "0x2BA9D0"
+                                },
+    "panoramauiclient.dll":  {
+                                 "PanoramaUIClient001":  "0x270710"
+                             },
+    "particles.dll":  {
+                          "GetParticleManager":  "0x5FD8A8",
+                          "ParticleSystemMgr003":  "0x65AEE0"
+                      },
+    "pulse_system.dll":  {
+                             "IPulseSystem_001":  "0x238120"
+                         },
+    "rendersystemdx11.dll":  {
+                                 "RenderDeviceMgr001":  "0x4342F0",
+                                 "RenderUtils_001":  "0x434BD0",
+                                 "VRenderDeviceMgrBackdoor001":  "0x434390"
+                             },
+    "resourcesystem.dll":  {
+                               "ResourceSystem013":  "0x89230"
+                           },
+    "scenefilecache.dll":  {
+                               "ResponseRulesCache001":  "0x11D350",
+                               "SceneFileCache002":  "0x11D478"
+                           },
+    "scenesystem.dll":  {
+                            "pSceneLightDataQueue":  "0x921A28",
+                            "pSceneSystem":  "0x91FB20",
+                            "RenderingPipelines_001":  "0x675A00",
+                            "SceneSystem_002":  "0x91FB20",
+                            "SceneUtils_001":  "0x676760"
+                        },
+    "schemasystem.dll":  {
+                             "pSchemaSystem":  "0x76710",
+                             "SchemaSystem_001":  "0x76710"
+                         },
+    "server.dll":  {
+                       "customnavsystem001":  "0x1D924A8",
+                       "EmptyWorldService001_Server":  "0x1DF4EA0",
+                       "EntitySubclassUtilsV001":  "0x1DA4B50",
+                       "NavGameTest001":  "0x1E3C898",
+                       "ServerToolsInfo_001":  "0x1E1B7B8",
+                       "Source2GameClients001":  "0x1E1ACE0",
+                       "Source2GameDirector001":  "0x1F81A80",
+                       "Source2GameEntities001":  "0x1E1AF60",
+                       "Source2Server001":  "0x1E1ADA0",
+                       "Source2ServerConfig001":  "0x20FD3F8"
+                   },
+    "steamaudio.dll":  {
+                           "SteamAudio001":  "0x35C1A0"
+                       },
+    "tier0.dll":  {
+                      "pCVar":  "0x3AC670",
+                      "pCvarRegistry":  "0x3A9568",
+                      "TestScriptMgr001":  "0x3A1960",
+                      "VEngineCvar007":  "0x3AC670",
+                      "VProcessUtils002":  "0x3A1820",
+                      "VStringTokenSystem001":  "0x3D3300"
+                  },
+    "v8system.dll":  {
+                         "Source2V8System001":  "0x34790"
+                     },
+    "vphysics2.dll":  {
+                          "VPhysics2_Interface_001":  "0x460E60"
+                      },
+    "vscript.dll":  {
+                        "VScriptManager010":  "0x13E430"
+                    },
+    "worldrenderer.dll":  {
+                              "WorldRendererMgr001":  "0x236D40"
+                          }
+}

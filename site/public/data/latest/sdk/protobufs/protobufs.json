@@ -61,6 +61,137 @@
         "base": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 }
       }
     },
+    "CMsgTEPlayerAnimEvent": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "player": { "offset": 32, "number": 1, "has_bit": 2, "type": 7, "label": 1 },
+        "event": { "offset": 24, "number": 2, "has_bit": 0, "type": 13, "label": 1 },
+        "data": { "offset": 28, "number": 3, "has_bit": 1, "type": 5, "label": 1 }
+      }
+    },
+    "CMsgTERadioIcon": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "player": { "offset": 24, "number": 1, "has_bit": 0, "type": 7, "label": 1 }
+      }
+    },
+    "CMsgTEFireBullets": {
+      "size": 64,
+      "has_bits_offset": 16,
+      "fields": {
+        "origin": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
+        "angles": { "offset": 32, "number": 2, "has_bit": 1, "type": 11, "label": 1 },
+        "weapon_id": { "offset": 36, "number": 3, "has_bit": 2, "type": 13, "label": 1 },
+        "mode": { "offset": 40, "number": 4, "has_bit": 3, "type": 13, "label": 1 },
+        "seed": { "offset": 44, "number": 5, "has_bit": 4, "type": 13, "label": 1 },
+        "player": { "offset": 48, "number": 6, "has_bit": 5, "type": 7, "label": 1 },
+        "inaccuracy": { "offset": 52, "number": 7, "has_bit": 6, "type": 2, "label": 1 },
+        "recoil_index": { "offset": 56, "number": 8, "has_bit": 7, "type": 2, "label": 1 },
+        "spread": { "offset": 0, "number": 9, "has_bit": 16, "type": 2, "label": 1 },
+        "sound_type": { "offset": 1, "number": 10, "has_bit": 8, "type": 5, "label": 1 },
+        "item_def_index": { "offset": 2, "number": 11, "has_bit": -1, "type": 13, "label": 1 },
+        "sound_dsp_effect": { "offset": 3, "number": 12, "has_bit": -1, "type": 7, "label": 1 },
+        "ent_origin": { "offset": 4, "number": 13, "has_bit": -1, "type": 11, "label": 1 },
+        "num_bullets_remaining": { "offset": 5, "number": 14, "has_bit": -1, "type": 13, "label": 1 },
+        "attack_type": { "offset": 6, "number": 15, "has_bit": 24, "type": 13, "label": 1 },
+        "player_inair": { "offset": 7, "number": 17, "has_bit": 32, "type": 8, "label": 1 },
+        "player_scoped": { "offset": 16, "number": 18, "has_bit": 104, "type": 8, "label": 1 },
+        "tick": { "offset": 8, "number": 19, "has_bit": 56, "type": 5, "label": 1 },
+        "extra": { "offset": 4294967295, "number": 16, "has_bit": 60, "type": 11, "label": 1 }
+      }
+    },
+    "CMsgTEFireBullets_Extra": {
+      "size": 112,
+      "has_bits_offset": 16,
+      "fields": {
+        "aim_punch": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
+        "attack_tick_count": { "offset": 32, "number": 2, "has_bit": 1, "type": 5, "label": 1 },
+        "attack_tick_frac": { "offset": 104, "number": 3, "has_bit": 17, "type": 2, "label": 1 },
+        "render_tick_count": { "offset": 56, "number": 4, "has_bit": 4, "type": 5, "label": 1 },
+        "render_tick_frac": { "offset": 60, "number": 5, "has_bit": 5, "type": 2, "label": 1 },
+        "inaccuracy_move": { "offset": 108, "number": 6, "has_bit": 18, "type": 2, "label": 1 },
+        "inaccuracy_air": { "offset": 64, "number": 7, "has_bit": 6, "type": 2, "label": 1 },
+        "type": { "offset": 68, "number": 8, "has_bit": 7, "type": 5, "label": 1 }
+      }
+    },
+    "CMsgPlayerBulletHit": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "attacker_slot": { "offset": 48, "number": 1, "has_bit": 6, "type": 5, "label": 1 },
+        "victim_slot": { "offset": 52, "number": 2, "has_bit": 7, "type": 5, "label": 1 },
+        "victim_pos": { "offset": 24, "number": 3, "has_bit": 0, "type": 11, "label": 1 },
+        "hit_group": { "offset": 32, "number": 4, "has_bit": 1, "type": 5, "label": 1 },
+        "damage": { "offset": 36, "number": 5, "has_bit": 2, "type": 5, "label": 1 },
+        "penetration_count": { "offset": 40, "number": 6, "has_bit": 3, "type": 5, "label": 1 },
+        "is_kill": { "offset": 44, "number": 7, "has_bit": 4, "type": 8, "label": 1 },
+        "through_smoke": { "offset": 45, "number": 8, "has_bit": 5, "type": 8, "label": 1 }
+      }
+    },
+    "CP2P_TextMessage": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "text": { "offset": 24, "number": 1, "has_bit": 0, "type": 12, "label": 1 }
+      }
+    },
+    "CSteam_Voice_Encoding": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "voice_data": { "offset": 24, "number": 1, "has_bit": 0, "type": 12, "label": 1 }
+      }
+    },
+    "CP2P_Voice": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "audio": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
+        "broadcast_group": { "offset": 32, "number": 2, "has_bit": 1, "type": 13, "label": 1 }
+      }
+    },
+    "CP2P_Ping": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "send_time": { "offset": 24, "number": 1, "has_bit": 0, "type": 4, "label": 1 },
+        "is_reply": { "offset": 32, "number": 2, "has_bit": 1, "type": 8, "label": 1 }
+      }
+    },
+    "CP2P_VRAvatarPosition": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "body_parts": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 3 },
+        "hat_id": { "offset": 32, "number": 2, "has_bit": 1, "type": 5, "label": 1 },
+        "scene_id": { "offset": 0, "number": 3, "has_bit": 16, "type": 5, "label": 1 },
+        "world_scale": { "offset": 1, "number": 4, "has_bit": 8, "type": 5, "label": 1 }
+      }
+    },
+    "CP2P_VRAvatarPosition_COrientation": {
+      "size": 64,
+      "has_bits_offset": 16,
+      "fields": {
+        "pos": { "offset": 24, "number": 1, "has_bit": -1, "type": 11, "label": 1 },
+        "ang": { "offset": 48, "number": 2, "has_bit": 0, "type": 11, "label": 1 }
+      }
+    },
+    "CP2P_WatchSynchronization": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "demo_tick": { "offset": 24, "number": 1, "has_bit": 0, "type": 5, "label": 1 },
+        "paused": { "offset": 28, "number": 2, "has_bit": 1, "type": 8, "label": 1 },
+        "tv_listen_voice_indices": { "offset": 32, "number": 3, "has_bit": 3, "type": 4, "label": 1 },
+        "dota_spectator_mode": { "offset": 40, "number": 4, "has_bit": 4, "type": 5, "label": 1 },
+        "dota_spectator_watching_broadcaster": { "offset": 29, "number": 5, "has_bit": 2, "type": 8, "label": 1 },
+        "dota_spectator_hero_index": { "offset": 44, "number": 6, "has_bit": 5, "type": 5, "label": 1 },
+        "dota_spectator_autospeed": { "offset": 48, "number": 7, "has_bit": 6, "type": 5, "label": 1 },
+        "dota_replay_speed": { "offset": 52, "number": 8, "has_bit": 7, "type": 5, "label": 1 }
+      }
+    },
     "CGCStorePurchaseInit_LineItem": {
       "size": 56,
       "has_bits_offset": 16,
@@ -389,6 +520,25 @@
         "country_deprecated": { "offset": 24, "number": 3, "has_bit": 0, "type": 9, "label": 1 },
         "price_sheet_version": { "offset": 48, "number": 4, "has_bit": 4, "type": 7, "label": 1 },
         "price_sheet": { "offset": 32, "number": 8, "has_bit": 1, "type": 12, "label": 1 }
+      }
+    },
+    "CMsgVolatileContainerPricesheet": {
+      "size": 48,
+      "has_bits_offset": 16,
+      "fields": {
+        "version": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 },
+        "entries": { "offset": 32, "number": 2, "has_bit": 1, "type": 11, "label": 3 }
+      }
+    },
+    "CMsgVolatileContainerPricesheet_Entry": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "key": { "offset": 48, "number": 1, "has_bit": 0, "type": 6, "label": 1 },
+        "cost": { "offset": 24, "number": 2, "has_bit": -1, "type": 13, "label": 1 },
+        "trend": { "offset": 0, "number": 3, "has_bit": 16, "type": 17, "label": 1 },
+        "low": { "offset": 4294967295, "number": 4, "has_bit": 8, "type": 13, "label": 1 },
+        "high": { "offset": 16, "number": 5, "has_bit": -1, "type": 13, "label": 1 }
       }
     },
     "CMsgUpdateItemSchema": {
@@ -3604,182 +3754,6 @@
         "mission_templates": { "offset": 0, "number": 2, "has_bit": -1, "type": 12, "label": 3 }
       }
     },
-    "CMsgTEPlayerAnimEvent": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "player": { "offset": 32, "number": 1, "has_bit": 2, "type": 7, "label": 1 },
-        "event": { "offset": 24, "number": 2, "has_bit": 0, "type": 13, "label": 1 },
-        "data": { "offset": 28, "number": 3, "has_bit": 1, "type": 5, "label": 1 }
-      }
-    },
-    "CMsgTERadioIcon": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "player": { "offset": 24, "number": 1, "has_bit": 0, "type": 7, "label": 1 }
-      }
-    },
-    "CMsgTEFireBullets": {
-      "size": 64,
-      "has_bits_offset": 16,
-      "fields": {
-        "origin": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
-        "angles": { "offset": 32, "number": 2, "has_bit": 1, "type": 11, "label": 1 },
-        "weapon_id": { "offset": 36, "number": 3, "has_bit": 2, "type": 13, "label": 1 },
-        "mode": { "offset": 40, "number": 4, "has_bit": 3, "type": 13, "label": 1 },
-        "seed": { "offset": 44, "number": 5, "has_bit": 4, "type": 13, "label": 1 },
-        "player": { "offset": 48, "number": 6, "has_bit": 5, "type": 7, "label": 1 },
-        "inaccuracy": { "offset": 52, "number": 7, "has_bit": 6, "type": 2, "label": 1 },
-        "recoil_index": { "offset": 56, "number": 8, "has_bit": 7, "type": 2, "label": 1 },
-        "spread": { "offset": 0, "number": 9, "has_bit": 16, "type": 2, "label": 1 },
-        "sound_type": { "offset": 1, "number": 10, "has_bit": 8, "type": 5, "label": 1 },
-        "item_def_index": { "offset": 2, "number": 11, "has_bit": -1, "type": 13, "label": 1 },
-        "sound_dsp_effect": { "offset": 3, "number": 12, "has_bit": -1, "type": 7, "label": 1 },
-        "ent_origin": { "offset": 4, "number": 13, "has_bit": -1, "type": 11, "label": 1 },
-        "num_bullets_remaining": { "offset": 5, "number": 14, "has_bit": -1, "type": 13, "label": 1 },
-        "attack_type": { "offset": 6, "number": 15, "has_bit": 24, "type": 13, "label": 1 },
-        "player_inair": { "offset": 7, "number": 17, "has_bit": 32, "type": 8, "label": 1 },
-        "player_scoped": { "offset": 16, "number": 18, "has_bit": 104, "type": 8, "label": 1 },
-        "tick": { "offset": 8, "number": 19, "has_bit": 56, "type": 5, "label": 1 },
-        "extra": { "offset": 4294967295, "number": 16, "has_bit": 60, "type": 11, "label": 1 }
-      }
-    },
-    "CMsgTEFireBullets_Extra": {
-      "size": 112,
-      "has_bits_offset": 16,
-      "fields": {
-        "aim_punch": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
-        "attack_tick_count": { "offset": 32, "number": 2, "has_bit": 1, "type": 5, "label": 1 },
-        "attack_tick_frac": { "offset": 104, "number": 3, "has_bit": 17, "type": 2, "label": 1 },
-        "render_tick_count": { "offset": 56, "number": 4, "has_bit": 4, "type": 5, "label": 1 },
-        "render_tick_frac": { "offset": 60, "number": 5, "has_bit": 5, "type": 2, "label": 1 },
-        "inaccuracy_move": { "offset": 108, "number": 6, "has_bit": 18, "type": 2, "label": 1 },
-        "inaccuracy_air": { "offset": 64, "number": 7, "has_bit": 6, "type": 2, "label": 1 },
-        "type": { "offset": 68, "number": 8, "has_bit": 7, "type": 5, "label": 1 }
-      }
-    },
-    "CMsgPlayerBulletHit": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "attacker_slot": { "offset": 48, "number": 1, "has_bit": 6, "type": 5, "label": 1 },
-        "victim_slot": { "offset": 52, "number": 2, "has_bit": 7, "type": 5, "label": 1 },
-        "victim_pos": { "offset": 24, "number": 3, "has_bit": 0, "type": 11, "label": 1 },
-        "hit_group": { "offset": 32, "number": 4, "has_bit": 1, "type": 5, "label": 1 },
-        "damage": { "offset": 36, "number": 5, "has_bit": 2, "type": 5, "label": 1 },
-        "penetration_count": { "offset": 40, "number": 6, "has_bit": 3, "type": 5, "label": 1 },
-        "is_kill": { "offset": 44, "number": 7, "has_bit": 4, "type": 8, "label": 1 },
-        "through_smoke": { "offset": 45, "number": 8, "has_bit": 5, "type": 8, "label": 1 }
-      }
-    },
-    "CP2P_TextMessage": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "text": { "offset": 24, "number": 1, "has_bit": 0, "type": 12, "label": 1 }
-      }
-    },
-    "CSteam_Voice_Encoding": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "voice_data": { "offset": 24, "number": 1, "has_bit": 0, "type": 12, "label": 1 }
-      }
-    },
-    "CP2P_Voice": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "audio": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
-        "broadcast_group": { "offset": 32, "number": 2, "has_bit": 1, "type": 13, "label": 1 }
-      }
-    },
-    "CP2P_Ping": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "send_time": { "offset": 24, "number": 1, "has_bit": 0, "type": 4, "label": 1 },
-        "is_reply": { "offset": 32, "number": 2, "has_bit": 1, "type": 8, "label": 1 }
-      }
-    },
-    "CP2P_VRAvatarPosition": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "body_parts": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 3 },
-        "hat_id": { "offset": 32, "number": 2, "has_bit": 1, "type": 5, "label": 1 },
-        "scene_id": { "offset": 0, "number": 3, "has_bit": 16, "type": 5, "label": 1 },
-        "world_scale": { "offset": 1, "number": 4, "has_bit": 8, "type": 5, "label": 1 }
-      }
-    },
-    "CP2P_VRAvatarPosition_COrientation": {
-      "size": 64,
-      "has_bits_offset": 16,
-      "fields": {
-        "pos": { "offset": 24, "number": 1, "has_bit": -1, "type": 11, "label": 1 },
-        "ang": { "offset": 48, "number": 2, "has_bit": 0, "type": 11, "label": 1 }
-      }
-    },
-    "CP2P_WatchSynchronization": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "demo_tick": { "offset": 24, "number": 1, "has_bit": 0, "type": 5, "label": 1 },
-        "paused": { "offset": 28, "number": 2, "has_bit": 1, "type": 8, "label": 1 },
-        "tv_listen_voice_indices": { "offset": 32, "number": 3, "has_bit": 3, "type": 4, "label": 1 },
-        "dota_spectator_mode": { "offset": 40, "number": 4, "has_bit": 4, "type": 5, "label": 1 },
-        "dota_spectator_watching_broadcaster": { "offset": 29, "number": 5, "has_bit": 2, "type": 8, "label": 1 },
-        "dota_spectator_hero_index": { "offset": 44, "number": 6, "has_bit": 5, "type": 5, "label": 1 },
-        "dota_spectator_autospeed": { "offset": 48, "number": 7, "has_bit": 6, "type": 5, "label": 1 },
-        "dota_replay_speed": { "offset": 52, "number": 8, "has_bit": 7, "type": 5, "label": 1 }
-      }
-    },
-    "CMsgGCGiftedItems": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "accountid": { "offset": 40, "number": 1, "has_bit": 0, "type": 13, "label": 1 },
-        "giftdefindex": { "offset": 44, "number": 2, "has_bit": 1, "type": 13, "label": 1 },
-        "max_gifts_possible": { "offset": 48, "number": 3, "has_bit": 2, "type": 13, "label": 1 },
-        "num_eligible_recipients": { "offset": 52, "number": 4, "has_bit": 3, "type": 13, "label": 1 },
-        "recipients_accountids": { "offset": 24, "number": 5, "has_bit": -1, "type": 13, "label": 3 }
-      }
-    },
-    "CMsgGCDev_SchemaReservationRequest": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "schema_typename": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
-        "instance_name": { "offset": 32, "number": 2, "has_bit": 1, "type": 9, "label": 1 },
-        "context": { "offset": 40, "number": 3, "has_bit": 2, "type": 4, "label": 1 },
-        "id": { "offset": 48, "number": 4, "has_bit": 3, "type": 4, "label": 1 }
-      }
-    },
-    "CMsgCasketItem": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "casket_item_id": { "offset": 24, "number": 1, "has_bit": 0, "type": 4, "label": 1 },
-        "item_item_id": { "offset": 32, "number": 2, "has_bit": 1, "type": 4, "label": 1 }
-      }
-    },
-    "CMsgGCUserTrackTimePlayedConsecutively": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "state": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 }
-      }
-    },
-    "CMsgGCItemCustomizationNotification": {
-      "size": 64,
-      "has_bits_offset": 16,
-      "fields": {
-        "item_id": { "offset": 24, "number": 1, "has_bit": -1, "type": 4, "label": 3 },
-        "request": { "offset": 56, "number": 2, "has_bit": 0, "type": 13, "label": 1 },
-        "extra_data": { "offset": 40, "number": 3, "has_bit": -1, "type": 4, "label": 3 }
-      }
-    },
     "CMsgGCHVacVerificationChange": {
       "size": 40,
       "has_bits_offset": 16,
@@ -3906,6 +3880,226 @@
       "has_bits_offset": 16,
       "fields": {
         "gceresult": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 }
+      }
+    },
+    "CMsgGCGiftedItems": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "accountid": { "offset": 40, "number": 1, "has_bit": 0, "type": 13, "label": 1 },
+        "giftdefindex": { "offset": 44, "number": 2, "has_bit": 1, "type": 13, "label": 1 },
+        "max_gifts_possible": { "offset": 48, "number": 3, "has_bit": 2, "type": 13, "label": 1 },
+        "num_eligible_recipients": { "offset": 52, "number": 4, "has_bit": 3, "type": 13, "label": 1 },
+        "recipients_accountids": { "offset": 24, "number": 5, "has_bit": -1, "type": 13, "label": 3 }
+      }
+    },
+    "CMsgGCDev_SchemaReservationRequest": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "schema_typename": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
+        "instance_name": { "offset": 32, "number": 2, "has_bit": 1, "type": 9, "label": 1 },
+        "context": { "offset": 40, "number": 3, "has_bit": 2, "type": 4, "label": 1 },
+        "id": { "offset": 48, "number": 4, "has_bit": 3, "type": 4, "label": 1 }
+      }
+    },
+    "CMsgCasketItem": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "casket_item_id": { "offset": 24, "number": 1, "has_bit": 0, "type": 4, "label": 1 },
+        "item_item_id": { "offset": 32, "number": 2, "has_bit": 1, "type": 4, "label": 1 }
+      }
+    },
+    "CMsgGCUserTrackTimePlayedConsecutively": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "state": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 }
+      }
+    },
+    "CMsgGCItemCustomizationNotification": {
+      "size": 64,
+      "has_bits_offset": 16,
+      "fields": {
+        "item_id": { "offset": 24, "number": 1, "has_bit": -1, "type": 4, "label": 3 },
+        "request": { "offset": 56, "number": 2, "has_bit": 0, "type": 13, "label": 1 },
+        "extra_data": { "offset": 40, "number": 3, "has_bit": -1, "type": 4, "label": 3 }
+      }
+    },
+    "CMsgVDebugGameSessionIDEvent": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "clientid": { "offset": 32, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
+        "gamesessionid": { "offset": 24, "number": 2, "has_bit": 0, "type": 9, "label": 1 }
+      }
+    },
+    "CMsgPlaceDecalEvent": {
+      "size": 112,
+      "has_bits_offset": 16,
+      "fields": {
+        "position": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
+        "normal": { "offset": 32, "number": 2, "has_bit": 1, "type": 11, "label": 1 },
+        "saxis": { "offset": 40, "number": 3, "has_bit": 2, "type": 11, "label": 1 },
+        "boneindex": { "offset": 64, "number": 4, "has_bit": 5, "type": 5, "label": 1 },
+        "triangleindex": { "offset": 100, "number": 13, "has_bit": 13, "type": 5, "label": 1 },
+        "flags": { "offset": 68, "number": 5, "has_bit": 6, "type": 13, "label": 1 },
+        "color": { "offset": 72, "number": 6, "has_bit": 7, "type": 7, "label": 1 },
+        "random_seed": { "offset": 76, "number": 7, "has_bit": 8, "type": 5, "label": 1 },
+        "decal_group_name": { "offset": 80, "number": 8, "has_bit": 9, "type": 13, "label": 1 },
+        "size_override": { "offset": 84, "number": 9, "has_bit": 10, "type": 2, "label": 1 },
+        "entityhandle": { "offset": 104, "number": 10, "has_bit": 14, "type": 13, "label": 1 },
+        "material_id": { "offset": 88, "number": 11, "has_bit": 11, "type": 4, "label": 1 },
+        "sequence_name": { "offset": 96, "number": 12, "has_bit": 12, "type": 13, "label": 1 },
+        "position_objectspace": { "offset": 48, "number": 14, "has_bit": 3, "type": 11, "label": 1 },
+        "normal_objectspace": { "offset": 56, "number": 15, "has_bit": 4, "type": 11, "label": 1 }
+      }
+    },
+    "CMsgClearWorldDecalsEvent": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "flagstoclear": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 }
+      }
+    },
+    "CMsgClearEntityDecalsEvent": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "flagstoclear": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 }
+      }
+    },
+    "CMsgClearDecalsForEntityEvent": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "flagstoclear": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 },
+        "entityhandle": { "offset": 28, "number": 2, "has_bit": 1, "type": 13, "label": 1 }
+      }
+    },
+    "CMsgSource1LegacyGameEventList": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "descriptors": { "offset": 32, "number": 1, "has_bit": 1, "type": 11, "label": 3 }
+      }
+    },
+    "CMsgSource1LegacyGameEventList_key_t": {
+      "size": 64,
+      "has_bits_offset": 16,
+      "fields": {
+        "type": { "offset": 56, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
+        "name": { "offset": 48, "number": 2, "has_bit": 0, "type": 9, "label": 1 }
+      }
+    },
+    "CMsgSource1LegacyGameEventList_descriptor_t": {
+      "size": 48,
+      "has_bits_offset": -1,
+      "fields": {
+        "eventid": { "offset": 16, "number": 1, "has_bit": -1, "type": 5, "label": 1 },
+        "name": { "offset": 16, "number": 2, "has_bit": -1, "type": 9, "label": 1 },
+        "keys": { "offset": 8, "number": 3, "has_bit": -1, "type": 11, "label": 3 }
+      }
+    },
+    "CMsgSource1LegacyListenEvents": {
+      "size": 48,
+      "has_bits_offset": 16,
+      "fields": {
+        "playerslot": { "offset": 40, "number": 1, "has_bit": 0, "type": 5, "label": 1 },
+        "eventarraybits": { "offset": 24, "number": 2, "has_bit": -1, "type": 13, "label": 3 }
+      }
+    },
+    "CMsgSource1LegacyGameEvent": {
+      "size": 64,
+      "has_bits_offset": 16,
+      "fields": {
+        "event_name": { "offset": 32, "number": 1, "has_bit": 1, "type": 9, "label": 1 },
+        "eventid": { "offset": 24, "number": 2, "has_bit": 0, "type": 5, "label": 1 },
+        "keys": { "offset": 36, "number": 3, "has_bit": 2, "type": 11, "label": 3 },
+        "server_tick": { "offset": 40, "number": 4, "has_bit": 3, "type": 5, "label": 1 },
+        "passthrough": { "offset": 44, "number": 5, "has_bit": 4, "type": 5, "label": 1 }
+      }
+    },
+    "CMsgSource1LegacyGameEvent_key_t": {
+      "size": 72,
+      "has_bits_offset": 16,
+      "fields": {
+        "type": { "offset": 48, "number": 1, "has_bit": 0, "type": 5, "label": 1 },
+        "val_string": { "offset": 56, "number": 2, "has_bit": 1, "type": 9, "label": 1 },
+        "val_float": { "offset": 24, "number": 3, "has_bit": -1, "type": 2, "label": 1 },
+        "val_long": { "offset": 60, "number": 4, "has_bit": 2, "type": 5, "label": 1 },
+        "val_short": { "offset": 64, "number": 5, "has_bit": 3, "type": 5, "label": 1 },
+        "val_byte": { "offset": 0, "number": 6, "has_bit": 16, "type": 5, "label": 1 },
+        "val_bool": { "offset": 1, "number": 7, "has_bit": 8, "type": 8, "label": 1 },
+        "val_uint64": { "offset": 4294967295, "number": 8, "has_bit": -1, "type": 4, "label": 1 }
+      }
+    },
+    "CMsgSosStartSoundEvent": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "soundevent_guid": { "offset": 32, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
+        "soundevent_hash": { "offset": 36, "number": 2, "has_bit": 2, "type": 7, "label": 1 },
+        "source_entity_index": { "offset": 48, "number": 3, "has_bit": 5, "type": 5, "label": 1 },
+        "seed": { "offset": 40, "number": 4, "has_bit": 3, "type": 5, "label": 1 },
+        "packed_params": { "offset": 24, "number": 5, "has_bit": 0, "type": 12, "label": 1 },
+        "start_time": { "offset": 44, "number": 6, "has_bit": 4, "type": 2, "label": 1 }
+      }
+    },
+    "CMsgSosStopSoundEvent": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "soundevent_guid": { "offset": 24, "number": 1, "has_bit": 0, "type": 5, "label": 1 }
+      }
+    },
+    "CMsgSosStopSoundEventHash": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "soundevent_hash": { "offset": 24, "number": 1, "has_bit": 0, "type": 7, "label": 1 },
+        "source_entity_index": { "offset": 28, "number": 2, "has_bit": 1, "type": 5, "label": 1 }
+      }
+    },
+    "CMsgSosSetSoundEventParams": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "soundevent_guid": { "offset": 32, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
+        "packed_params": { "offset": 24, "number": 5, "has_bit": 0, "type": 12, "label": 1 }
+      }
+    },
+    "CMsgSosSetLibraryStackFields": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "stack_hash": { "offset": 32, "number": 1, "has_bit": 1, "type": 7, "label": 1 },
+        "packed_fields": { "offset": 24, "number": 5, "has_bit": 0, "type": 12, "label": 1 }
+      }
+    },
+    "CMsgClothStiffenAnimEvent": {
+      "size": 48,
+      "has_bits_offset": 16,
+      "fields": {
+        "source_entity_index": { "offset": 44, "number": 1, "has_bit": 5, "type": 5, "label": 1 },
+        "vertex_set_hash": { "offset": 24, "number": 2, "has_bit": 0, "type": 5, "label": 1 },
+        "intensity": { "offset": 28, "number": 3, "has_bit": 1, "type": 2, "label": 1 },
+        "length": { "offset": 32, "number": 4, "has_bit": 2, "type": 2, "label": 1 },
+        "speed_in": { "offset": 36, "number": 5, "has_bit": 3, "type": 2, "label": 1 },
+        "speed_out": { "offset": 40, "number": 6, "has_bit": 4, "type": 2, "label": 1 }
+      }
+    },
+    "CMsgClothEffectAnimEvent": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "source_entity_index": { "offset": 52, "number": 1, "has_bit": 5, "type": 5, "label": 1 },
+        "effect_name_hash": { "offset": 40, "number": 2, "has_bit": 2, "type": 5, "label": 1 },
+        "operation": { "offset": 44, "number": 3, "has_bit": 3, "type": 5, "label": 1 },
+        "flags": { "offset": 48, "number": 4, "has_bit": 4, "type": 5, "label": 1 },
+        "tags": { "offset": 24, "number": 5, "has_bit": 0, "type": 9, "label": 1 },
+        "pte": { "offset": 32, "number": 6, "has_bit": 1, "type": 11, "label": 1 }
       }
     },
     "CDemoFileHeader": {
@@ -4154,300 +4348,6 @@
       "fields": {
         "spawngrouphandle": { "offset": 32, "number": 1, "has_bit": 1, "type": 13, "label": 1 },
         "was_created": { "offset": 24, "number": 2, "has_bit": 0, "type": 8, "label": 1 }
-      }
-    },
-    "CMsgVDebugGameSessionIDEvent": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "clientid": { "offset": 32, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
-        "gamesessionid": { "offset": 24, "number": 2, "has_bit": 0, "type": 9, "label": 1 }
-      }
-    },
-    "CMsgPlaceDecalEvent": {
-      "size": 112,
-      "has_bits_offset": 16,
-      "fields": {
-        "position": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
-        "normal": { "offset": 32, "number": 2, "has_bit": 1, "type": 11, "label": 1 },
-        "saxis": { "offset": 40, "number": 3, "has_bit": 2, "type": 11, "label": 1 },
-        "boneindex": { "offset": 64, "number": 4, "has_bit": 5, "type": 5, "label": 1 },
-        "triangleindex": { "offset": 100, "number": 13, "has_bit": 13, "type": 5, "label": 1 },
-        "flags": { "offset": 68, "number": 5, "has_bit": 6, "type": 13, "label": 1 },
-        "color": { "offset": 72, "number": 6, "has_bit": 7, "type": 7, "label": 1 },
-        "random_seed": { "offset": 76, "number": 7, "has_bit": 8, "type": 5, "label": 1 },
-        "decal_group_name": { "offset": 80, "number": 8, "has_bit": 9, "type": 13, "label": 1 },
-        "size_override": { "offset": 84, "number": 9, "has_bit": 10, "type": 2, "label": 1 },
-        "entityhandle": { "offset": 104, "number": 10, "has_bit": 14, "type": 13, "label": 1 },
-        "material_id": { "offset": 88, "number": 11, "has_bit": 11, "type": 4, "label": 1 },
-        "sequence_name": { "offset": 96, "number": 12, "has_bit": 12, "type": 13, "label": 1 },
-        "position_objectspace": { "offset": 48, "number": 14, "has_bit": 3, "type": 11, "label": 1 },
-        "normal_objectspace": { "offset": 56, "number": 15, "has_bit": 4, "type": 11, "label": 1 }
-      }
-    },
-    "CMsgClearWorldDecalsEvent": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "flagstoclear": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 }
-      }
-    },
-    "CMsgClearEntityDecalsEvent": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "flagstoclear": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 }
-      }
-    },
-    "CMsgClearDecalsForEntityEvent": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "flagstoclear": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 },
-        "entityhandle": { "offset": 28, "number": 2, "has_bit": 1, "type": 13, "label": 1 }
-      }
-    },
-    "CMsgSource1LegacyGameEventList": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "descriptors": { "offset": 32, "number": 1, "has_bit": 1, "type": 11, "label": 3 }
-      }
-    },
-    "CMsgSource1LegacyGameEventList_key_t": {
-      "size": 64,
-      "has_bits_offset": 16,
-      "fields": {
-        "type": { "offset": 56, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
-        "name": { "offset": 48, "number": 2, "has_bit": 0, "type": 9, "label": 1 }
-      }
-    },
-    "CMsgSource1LegacyGameEventList_descriptor_t": {
-      "size": 48,
-      "has_bits_offset": -1,
-      "fields": {
-        "eventid": { "offset": 16, "number": 1, "has_bit": -1, "type": 5, "label": 1 },
-        "name": { "offset": 16, "number": 2, "has_bit": -1, "type": 9, "label": 1 },
-        "keys": { "offset": 8, "number": 3, "has_bit": -1, "type": 11, "label": 3 }
-      }
-    },
-    "CMsgSource1LegacyListenEvents": {
-      "size": 48,
-      "has_bits_offset": 16,
-      "fields": {
-        "playerslot": { "offset": 40, "number": 1, "has_bit": 0, "type": 5, "label": 1 },
-        "eventarraybits": { "offset": 24, "number": 2, "has_bit": -1, "type": 13, "label": 3 }
-      }
-    },
-    "CMsgSource1LegacyGameEvent": {
-      "size": 64,
-      "has_bits_offset": 16,
-      "fields": {
-        "event_name": { "offset": 32, "number": 1, "has_bit": 1, "type": 9, "label": 1 },
-        "eventid": { "offset": 24, "number": 2, "has_bit": 0, "type": 5, "label": 1 },
-        "keys": { "offset": 36, "number": 3, "has_bit": 2, "type": 11, "label": 3 },
-        "server_tick": { "offset": 40, "number": 4, "has_bit": 3, "type": 5, "label": 1 },
-        "passthrough": { "offset": 44, "number": 5, "has_bit": 4, "type": 5, "label": 1 }
-      }
-    },
-    "CMsgSource1LegacyGameEvent_key_t": {
-      "size": 72,
-      "has_bits_offset": 16,
-      "fields": {
-        "type": { "offset": 48, "number": 1, "has_bit": 0, "type": 5, "label": 1 },
-        "val_string": { "offset": 56, "number": 2, "has_bit": 1, "type": 9, "label": 1 },
-        "val_float": { "offset": 24, "number": 3, "has_bit": -1, "type": 2, "label": 1 },
-        "val_long": { "offset": 60, "number": 4, "has_bit": 2, "type": 5, "label": 1 },
-        "val_short": { "offset": 64, "number": 5, "has_bit": 3, "type": 5, "label": 1 },
-        "val_byte": { "offset": 0, "number": 6, "has_bit": 16, "type": 5, "label": 1 },
-        "val_bool": { "offset": 1, "number": 7, "has_bit": 8, "type": 8, "label": 1 },
-        "val_uint64": { "offset": 4294967295, "number": 8, "has_bit": -1, "type": 4, "label": 1 }
-      }
-    },
-    "CMsgSosStartSoundEvent": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "soundevent_guid": { "offset": 32, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
-        "soundevent_hash": { "offset": 36, "number": 2, "has_bit": 2, "type": 7, "label": 1 },
-        "source_entity_index": { "offset": 48, "number": 3, "has_bit": 5, "type": 5, "label": 1 },
-        "seed": { "offset": 40, "number": 4, "has_bit": 3, "type": 5, "label": 1 },
-        "packed_params": { "offset": 24, "number": 5, "has_bit": 0, "type": 12, "label": 1 },
-        "start_time": { "offset": 44, "number": 6, "has_bit": 4, "type": 2, "label": 1 }
-      }
-    },
-    "CMsgSosStopSoundEvent": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "soundevent_guid": { "offset": 24, "number": 1, "has_bit": 0, "type": 5, "label": 1 }
-      }
-    },
-    "CMsgSosStopSoundEventHash": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "soundevent_hash": { "offset": 24, "number": 1, "has_bit": 0, "type": 7, "label": 1 },
-        "source_entity_index": { "offset": 28, "number": 2, "has_bit": 1, "type": 5, "label": 1 }
-      }
-    },
-    "CMsgSosSetSoundEventParams": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "soundevent_guid": { "offset": 32, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
-        "packed_params": { "offset": 24, "number": 5, "has_bit": 0, "type": 12, "label": 1 }
-      }
-    },
-    "CMsgSosSetLibraryStackFields": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "stack_hash": { "offset": 32, "number": 1, "has_bit": 1, "type": 7, "label": 1 },
-        "packed_fields": { "offset": 24, "number": 5, "has_bit": 0, "type": 12, "label": 1 }
-      }
-    },
-    "CMsgClothStiffenAnimEvent": {
-      "size": 48,
-      "has_bits_offset": 16,
-      "fields": {
-        "source_entity_index": { "offset": 44, "number": 1, "has_bit": 5, "type": 5, "label": 1 },
-        "vertex_set_hash": { "offset": 24, "number": 2, "has_bit": 0, "type": 5, "label": 1 },
-        "intensity": { "offset": 28, "number": 3, "has_bit": 1, "type": 2, "label": 1 },
-        "length": { "offset": 32, "number": 4, "has_bit": 2, "type": 2, "label": 1 },
-        "speed_in": { "offset": 36, "number": 5, "has_bit": 3, "type": 2, "label": 1 },
-        "speed_out": { "offset": 40, "number": 6, "has_bit": 4, "type": 2, "label": 1 }
-      }
-    },
-    "CMsgClothEffectAnimEvent": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "source_entity_index": { "offset": 52, "number": 1, "has_bit": 5, "type": 5, "label": 1 },
-        "effect_name_hash": { "offset": 40, "number": 2, "has_bit": 2, "type": 5, "label": 1 },
-        "operation": { "offset": 44, "number": 3, "has_bit": 3, "type": 5, "label": 1 },
-        "flags": { "offset": 48, "number": 4, "has_bit": 4, "type": 5, "label": 1 },
-        "tags": { "offset": 24, "number": 5, "has_bit": 0, "type": 9, "label": 1 },
-        "pte": { "offset": 32, "number": 6, "has_bit": 1, "type": 11, "label": 1 }
-      }
-    },
-    "MLDict": {
-      "size": 48,
-      "has_bits_offset": 16,
-      "fields": {
-        "key": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
-        "val_string": { "offset": 32, "number": 2, "has_bit": 1, "type": 9, "label": 1 },
-        "val_int": { "offset": 40, "number": 3, "has_bit": 2, "type": 5, "label": 1 },
-        "val_float": { "offset": 44, "number": 4, "has_bit": 3, "type": 2, "label": 1 }
-      }
-    },
-    "MLEvent": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "event_name": { "offset": 48, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
-        "data": { "offset": 24, "number": 2, "has_bit": -1, "type": 11, "label": 3 }
-      }
-    },
-    "MLMatchState": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "game_mode": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
-        "phase": { "offset": 32, "number": 2, "has_bit": 1, "type": 9, "label": 1 },
-        "round": { "offset": 40, "number": 3, "has_bit": 2, "type": 5, "label": 1 },
-        "score_ct": { "offset": 44, "number": 4, "has_bit": 3, "type": 5, "label": 1 },
-        "score_t": { "offset": 48, "number": 5, "has_bit": 4, "type": 5, "label": 1 }
-      }
-    },
-    "MLRoundState": {
-      "size": 48,
-      "has_bits_offset": 16,
-      "fields": {
-        "phase": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
-        "win_team": { "offset": 40, "number": 2, "has_bit": 2, "type": 14, "label": 1 },
-        "bomb_state": { "offset": 32, "number": 3, "has_bit": 1, "type": 9, "label": 1 }
-      }
-    },
-    "MLWeaponState": {
-      "size": 64,
-      "has_bits_offset": 16,
-      "fields": {
-        "index": { "offset": 40, "number": 1, "has_bit": 2, "type": 5, "label": 1 },
-        "name": { "offset": 24, "number": 2, "has_bit": 0, "type": 9, "label": 1 },
-        "type": { "offset": 44, "number": 3, "has_bit": 3, "type": 14, "label": 1 },
-        "ammo_clip": { "offset": 48, "number": 4, "has_bit": 4, "type": 5, "label": 1 },
-        "ammo_clip_max": { "offset": 52, "number": 5, "has_bit": 5, "type": 5, "label": 1 },
-        "ammo_reserve": { "offset": 56, "number": 6, "has_bit": 6, "type": 5, "label": 1 },
-        "state": { "offset": 32, "number": 7, "has_bit": 1, "type": 9, "label": 1 },
-        "recoil_index": { "offset": 60, "number": 8, "has_bit": 7, "type": 2, "label": 1 }
-      }
-    },
-    "MLPlayerState": {
-      "size": 144,
-      "has_bits_offset": 16,
-      "fields": {
-        "account_id": { "offset": 88, "number": 1, "has_bit": 5, "type": 5, "label": 1 },
-        "player_slot": { "offset": 136, "number": 2, "has_bit": 18, "type": 5, "label": 1 },
-        "entindex": { "offset": 92, "number": 3, "has_bit": 6, "type": 5, "label": 1 },
-        "name": { "offset": 48, "number": 4, "has_bit": 0, "type": 9, "label": 1 },
-        "clan": { "offset": 56, "number": 5, "has_bit": 1, "type": 9, "label": 1 },
-        "team": { "offset": 96, "number": 6, "has_bit": 7, "type": 14, "label": 1 },
-        "abspos": { "offset": 64, "number": 7, "has_bit": 2, "type": 11, "label": 1 },
-        "eyeangle": { "offset": 72, "number": 8, "has_bit": 3, "type": 11, "label": 1 },
-        "eyeangle_fwd": { "offset": 80, "number": 9, "has_bit": 4, "type": 11, "label": 1 },
-        "health": { "offset": 100, "number": 10, "has_bit": 8, "type": 5, "label": 1 },
-        "armor": { "offset": 104, "number": 11, "has_bit": 9, "type": 5, "label": 1 },
-        "flashed": { "offset": 108, "number": 12, "has_bit": 10, "type": 2, "label": 1 },
-        "smoked": { "offset": 112, "number": 13, "has_bit": 11, "type": 2, "label": 1 },
-        "money": { "offset": 116, "number": 14, "has_bit": 12, "type": 5, "label": 1 },
-        "round_kills": { "offset": 120, "number": 15, "has_bit": 13, "type": 5, "label": 1 },
-        "round_killhs": { "offset": 124, "number": 16, "has_bit": 14, "type": 5, "label": 1 },
-        "burning": { "offset": 128, "number": 17, "has_bit": 15, "type": 2, "label": 1 },
-        "helmet": { "offset": 132, "number": 18, "has_bit": 16, "type": 8, "label": 1 },
-        "defuse_kit": { "offset": 133, "number": 19, "has_bit": 17, "type": 8, "label": 1 },
-        "weapons": { "offset": 24, "number": 20, "has_bit": -1, "type": 11, "label": 3 }
-      }
-    },
-    "MLGameState": {
-      "size": 64,
-      "has_bits_offset": 16,
-      "fields": {
-        "match": { "offset": 48, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
-        "round": { "offset": 56, "number": 2, "has_bit": 1, "type": 11, "label": 1 },
-        "players": { "offset": 24, "number": 3, "has_bit": -1, "type": 11, "label": 3 }
-      }
-    },
-    "MLDemoHeader": {
-      "size": 48,
-      "has_bits_offset": 16,
-      "fields": {
-        "map_name": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
-        "tick_rate": { "offset": 32, "number": 2, "has_bit": 1, "type": 5, "label": 1 },
-        "version": { "offset": 36, "number": 3, "has_bit": 2, "type": 13, "label": 1 },
-        "steam_universe": { "offset": 40, "number": 4, "has_bit": 3, "type": 13, "label": 1 }
-      }
-    },
-    "MLTick": {
-      "size": 64,
-      "has_bits_offset": 16,
-      "fields": {
-        "tick_count": { "offset": 56, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
-        "state": { "offset": 48, "number": 2, "has_bit": 0, "type": 11, "label": 1 },
-        "events": { "offset": 24, "number": 3, "has_bit": -1, "type": 11, "label": 3 }
-      }
-    },
-    "VacNetShot": {
-      "size": 80,
-      "has_bits_offset": 16,
-      "fields": {
-        "steamid_player": { "offset": 56, "number": 1, "has_bit": 0, "type": 6, "label": 1 },
-        "round_number": { "offset": 64, "number": 2, "has_bit": 1, "type": 5, "label": 1 },
-        "hit_type": { "offset": 68, "number": 3, "has_bit": 2, "type": 5, "label": 1 },
-        "weapon_type": { "offset": 72, "number": 4, "has_bit": 3, "type": 5, "label": 1 },
-        "distance_to_hurt_target": { "offset": 76, "number": 5, "has_bit": 4, "type": 2, "label": 1 },
-        "delta_yaw_window": { "offset": 24, "number": 6, "has_bit": -1, "type": 2, "label": 3 },
-        "delta_pitch_window": { "offset": 40, "number": 7, "has_bit": -1, "type": 2, "label": 3 }
       }
     },
     "CEngineGotvSyncPacket": {
@@ -4920,6 +4820,125 @@
       "fields": {
         "service": { "offset": 48, "number": 1, "has_bit": 0, "type": 13, "label": 1 },
         "version": { "offset": 24, "number": 2, "has_bit": -1, "type": 4, "label": 1 }
+      }
+    },
+    "MLDict": {
+      "size": 48,
+      "has_bits_offset": 16,
+      "fields": {
+        "key": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
+        "val_string": { "offset": 32, "number": 2, "has_bit": 1, "type": 9, "label": 1 },
+        "val_int": { "offset": 40, "number": 3, "has_bit": 2, "type": 5, "label": 1 },
+        "val_float": { "offset": 44, "number": 4, "has_bit": 3, "type": 2, "label": 1 }
+      }
+    },
+    "MLEvent": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "event_name": { "offset": 48, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
+        "data": { "offset": 24, "number": 2, "has_bit": -1, "type": 11, "label": 3 }
+      }
+    },
+    "MLMatchState": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "game_mode": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
+        "phase": { "offset": 32, "number": 2, "has_bit": 1, "type": 9, "label": 1 },
+        "round": { "offset": 40, "number": 3, "has_bit": 2, "type": 5, "label": 1 },
+        "score_ct": { "offset": 44, "number": 4, "has_bit": 3, "type": 5, "label": 1 },
+        "score_t": { "offset": 48, "number": 5, "has_bit": 4, "type": 5, "label": 1 }
+      }
+    },
+    "MLRoundState": {
+      "size": 48,
+      "has_bits_offset": 16,
+      "fields": {
+        "phase": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
+        "win_team": { "offset": 40, "number": 2, "has_bit": 2, "type": 14, "label": 1 },
+        "bomb_state": { "offset": 32, "number": 3, "has_bit": 1, "type": 9, "label": 1 }
+      }
+    },
+    "MLWeaponState": {
+      "size": 64,
+      "has_bits_offset": 16,
+      "fields": {
+        "index": { "offset": 40, "number": 1, "has_bit": 2, "type": 5, "label": 1 },
+        "name": { "offset": 24, "number": 2, "has_bit": 0, "type": 9, "label": 1 },
+        "type": { "offset": 44, "number": 3, "has_bit": 3, "type": 14, "label": 1 },
+        "ammo_clip": { "offset": 48, "number": 4, "has_bit": 4, "type": 5, "label": 1 },
+        "ammo_clip_max": { "offset": 52, "number": 5, "has_bit": 5, "type": 5, "label": 1 },
+        "ammo_reserve": { "offset": 56, "number": 6, "has_bit": 6, "type": 5, "label": 1 },
+        "state": { "offset": 32, "number": 7, "has_bit": 1, "type": 9, "label": 1 },
+        "recoil_index": { "offset": 60, "number": 8, "has_bit": 7, "type": 2, "label": 1 }
+      }
+    },
+    "MLPlayerState": {
+      "size": 144,
+      "has_bits_offset": 16,
+      "fields": {
+        "account_id": { "offset": 88, "number": 1, "has_bit": 5, "type": 5, "label": 1 },
+        "player_slot": { "offset": 136, "number": 2, "has_bit": 18, "type": 5, "label": 1 },
+        "entindex": { "offset": 92, "number": 3, "has_bit": 6, "type": 5, "label": 1 },
+        "name": { "offset": 48, "number": 4, "has_bit": 0, "type": 9, "label": 1 },
+        "clan": { "offset": 56, "number": 5, "has_bit": 1, "type": 9, "label": 1 },
+        "team": { "offset": 96, "number": 6, "has_bit": 7, "type": 14, "label": 1 },
+        "abspos": { "offset": 64, "number": 7, "has_bit": 2, "type": 11, "label": 1 },
+        "eyeangle": { "offset": 72, "number": 8, "has_bit": 3, "type": 11, "label": 1 },
+        "eyeangle_fwd": { "offset": 80, "number": 9, "has_bit": 4, "type": 11, "label": 1 },
+        "health": { "offset": 100, "number": 10, "has_bit": 8, "type": 5, "label": 1 },
+        "armor": { "offset": 104, "number": 11, "has_bit": 9, "type": 5, "label": 1 },
+        "flashed": { "offset": 108, "number": 12, "has_bit": 10, "type": 2, "label": 1 },
+        "smoked": { "offset": 112, "number": 13, "has_bit": 11, "type": 2, "label": 1 },
+        "money": { "offset": 116, "number": 14, "has_bit": 12, "type": 5, "label": 1 },
+        "round_kills": { "offset": 120, "number": 15, "has_bit": 13, "type": 5, "label": 1 },
+        "round_killhs": { "offset": 124, "number": 16, "has_bit": 14, "type": 5, "label": 1 },
+        "burning": { "offset": 128, "number": 17, "has_bit": 15, "type": 2, "label": 1 },
+        "helmet": { "offset": 132, "number": 18, "has_bit": 16, "type": 8, "label": 1 },
+        "defuse_kit": { "offset": 133, "number": 19, "has_bit": 17, "type": 8, "label": 1 },
+        "weapons": { "offset": 24, "number": 20, "has_bit": -1, "type": 11, "label": 3 }
+      }
+    },
+    "MLGameState": {
+      "size": 64,
+      "has_bits_offset": 16,
+      "fields": {
+        "match": { "offset": 48, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
+        "round": { "offset": 56, "number": 2, "has_bit": 1, "type": 11, "label": 1 },
+        "players": { "offset": 24, "number": 3, "has_bit": -1, "type": 11, "label": 3 }
+      }
+    },
+    "MLDemoHeader": {
+      "size": 48,
+      "has_bits_offset": 16,
+      "fields": {
+        "map_name": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
+        "tick_rate": { "offset": 32, "number": 2, "has_bit": 1, "type": 5, "label": 1 },
+        "version": { "offset": 36, "number": 3, "has_bit": 2, "type": 13, "label": 1 },
+        "steam_universe": { "offset": 40, "number": 4, "has_bit": 3, "type": 13, "label": 1 }
+      }
+    },
+    "MLTick": {
+      "size": 64,
+      "has_bits_offset": 16,
+      "fields": {
+        "tick_count": { "offset": 56, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
+        "state": { "offset": 48, "number": 2, "has_bit": 0, "type": 11, "label": 1 },
+        "events": { "offset": 24, "number": 3, "has_bit": -1, "type": 11, "label": 3 }
+      }
+    },
+    "VacNetShot": {
+      "size": 80,
+      "has_bits_offset": 16,
+      "fields": {
+        "steamid_player": { "offset": 56, "number": 1, "has_bit": 0, "type": 6, "label": 1 },
+        "round_number": { "offset": 64, "number": 2, "has_bit": 1, "type": 5, "label": 1 },
+        "hit_type": { "offset": 68, "number": 3, "has_bit": 2, "type": 5, "label": 1 },
+        "weapon_type": { "offset": 72, "number": 4, "has_bit": 3, "type": 5, "label": 1 },
+        "distance_to_hurt_target": { "offset": 76, "number": 5, "has_bit": 4, "type": 2, "label": 1 },
+        "delta_yaw_window": { "offset": 24, "number": 6, "has_bit": -1, "type": 2, "label": 3 },
+        "delta_pitch_window": { "offset": 40, "number": 7, "has_bit": -1, "type": 2, "label": 3 }
       }
     },
     "CMsgVector": {
@@ -5489,33 +5508,6 @@
       "has_bits_offset": 16,
       "fields": {
         "pet_item_id": { "offset": 24, "number": 1, "has_bit": 0, "type": 4, "label": 1 }
-      }
-    },
-    "CPredictionEvent_Teleport": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "origin": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
-        "angles": { "offset": 32, "number": 2, "has_bit": 1, "type": 11, "label": 1 },
-        "drop_to_ground_range": { "offset": 48, "number": 3, "has_bit": 3, "type": 2, "label": 1 },
-        "velocity": { "offset": 40, "number": 4, "has_bit": 2, "type": 11, "label": 1 }
-      }
-    },
-    "CPredictionEvent_StringCommand": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "command": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 }
-      }
-    },
-    "CPredictionEvent_Diagnostic": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "id": { "offset": 40, "number": 1, "has_bit": 0, "type": 13, "label": 1 },
-        "requested_sync": { "offset": 44, "number": 2, "has_bit": 1, "type": 13, "label": 1 },
-        "requested_player_index": { "offset": 48, "number": 3, "has_bit": 2, "type": 13, "label": 1 },
-        "execution_sync": { "offset": 24, "number": 4, "has_bit": -1, "type": 13, "label": 3 }
       }
     },
     "CCLCMsg_ClientInfo": {
@@ -6294,19 +6286,31 @@
         "message_type_id": { "offset": 24, "number": 2, "has_bit": 0, "type": 13, "label": 1 }
       }
     },
-    "COAuthToken_ImplicitGrantNoPrompt_Request": {
+    "CPredictionEvent_Teleport": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "origin": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
+        "angles": { "offset": 32, "number": 2, "has_bit": 1, "type": 11, "label": 1 },
+        "drop_to_ground_range": { "offset": 48, "number": 3, "has_bit": 3, "type": 2, "label": 1 },
+        "velocity": { "offset": 40, "number": 4, "has_bit": 2, "type": 11, "label": 1 }
+      }
+    },
+    "CPredictionEvent_StringCommand": {
       "size": 32,
       "has_bits_offset": 16,
       "fields": {
-        "clientid": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 }
+        "command": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 }
       }
     },
-    "COAuthToken_ImplicitGrantNoPrompt_Response": {
-      "size": 40,
+    "CPredictionEvent_Diagnostic": {
+      "size": 56,
       "has_bits_offset": 16,
       "fields": {
-        "access_token": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
-        "redirect_uri": { "offset": 32, "number": 2, "has_bit": 1, "type": 9, "label": 1 }
+        "id": { "offset": 40, "number": 1, "has_bit": 0, "type": 13, "label": 1 },
+        "requested_sync": { "offset": 44, "number": 2, "has_bit": 1, "type": 13, "label": 1 },
+        "requested_player_index": { "offset": 48, "number": 3, "has_bit": 2, "type": 13, "label": 1 },
+        "execution_sync": { "offset": 24, "number": 4, "has_bit": -1, "type": 13, "label": 3 }
       }
     },
     "CMsgProtoBufHeader": {
@@ -6340,6 +6344,21 @@
       "has_bits_offset": 16,
       "fields": {
         "agreement_url": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 }
+      }
+    },
+    "COAuthToken_ImplicitGrantNoPrompt_Request": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "clientid": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 }
+      }
+    },
+    "COAuthToken_ImplicitGrantNoPrompt_Response": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "access_token": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
+        "redirect_uri": { "offset": 32, "number": 2, "has_bit": 1, "type": 9, "label": 1 }
       }
     },
     "CPlayer_GetMutualFriendsForIncomingInvites_Request": {
@@ -8685,8 +8704,8 @@
       "fields": {
         "path": { "offset": 16, "number": 1, "has_bit": -1, "type": 5, "label": 3 },
         "source_file": { "offset": 0, "number": 2, "has_bit": -1, "type": 9, "label": 1 },
-        "begin": { "offset": 2755267520, "number": 3, "has_bit": -1, "type": 5, "label": 1 },
-        "end": { "offset": 32761, "number": 4, "has_bit": -1, "type": 5, "label": 1 }
+        "begin": { "offset": 2493004384, "number": 3, "has_bit": -1, "type": 5, "label": 1 },
+        "end": { "offset": 32767, "number": 4, "has_bit": -1, "type": 5, "label": 1 }
       }
     }
   },
@@ -8978,8 +8997,8 @@
       "fields": {
         "path": { "offset": 16, "number": 1, "has_bit": -1, "type": 5, "label": 3 },
         "source_file": { "offset": 0, "number": 2, "has_bit": -1, "type": 9, "label": 1 },
-        "begin": { "offset": 3082333280, "number": 3, "has_bit": -1, "type": 5, "label": 1 },
-        "end": { "offset": 32761, "number": 4, "has_bit": -1, "type": 5, "label": 1 }
+        "begin": { "offset": 448639120, "number": 3, "has_bit": -1, "type": 5, "label": 1 },
+        "end": { "offset": 32760, "number": 4, "has_bit": -1, "type": 5, "label": 1 }
       }
     },
     "C2S_CONNECT_SameProcessCheck": {
@@ -10940,8 +10959,8 @@
       "fields": {
         "path": { "offset": 16, "number": 1, "has_bit": -1, "type": 5, "label": 3 },
         "source_file": { "offset": 0, "number": 2, "has_bit": -1, "type": 9, "label": 1 },
-        "begin": { "offset": 3039007360, "number": 3, "has_bit": -1, "type": 5, "label": 1 },
-        "end": { "offset": 32761, "number": 4, "has_bit": -1, "type": 5, "label": 1 }
+        "begin": { "offset": 1188860560, "number": 3, "has_bit": -1, "type": 5, "label": 1 },
+        "end": { "offset": 32760, "number": 4, "has_bit": -1, "type": 5, "label": 1 }
       }
     },
     "NetMessageSplitscreenUserChanged": {
@@ -12380,6 +12399,57 @@
         "base": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 }
       }
     },
+    "CClientMsg_CustomGameEvent": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "event_name": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
+        "data": { "offset": 32, "number": 2, "has_bit": 1, "type": 12, "label": 1 }
+      }
+    },
+    "CClientMsg_CustomGameEventBounce": {
+      "size": 48,
+      "has_bits_offset": 16,
+      "fields": {
+        "event_name": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
+        "data": { "offset": 32, "number": 2, "has_bit": 1, "type": 12, "label": 1 },
+        "player_slot": { "offset": 40, "number": 3, "has_bit": 2, "type": 5, "label": 1 }
+      }
+    },
+    "CClientMsg_ClientUIEvent": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "event": { "offset": 40, "number": 1, "has_bit": 2, "type": 14, "label": 1 },
+        "ent_ehandle": { "offset": 44, "number": 2, "has_bit": 3, "type": 13, "label": 1 },
+        "client_ehandle": { "offset": 48, "number": 3, "has_bit": 4, "type": 13, "label": 1 },
+        "data1": { "offset": 24, "number": 4, "has_bit": 0, "type": 9, "label": 1 },
+        "data2": { "offset": 32, "number": 5, "has_bit": 1, "type": 9, "label": 1 }
+      }
+    },
+    "CClientMsg_DevPaletteVisibilityChangedEvent": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "visible": { "offset": 24, "number": 1, "has_bit": 0, "type": 8, "label": 1 }
+      }
+    },
+    "CClientMsg_WorldUIControllerHasPanelChangedEvent": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "has_panel": { "offset": 24, "number": 1, "has_bit": 0, "type": 8, "label": 1 },
+        "client_ehandle": { "offset": 28, "number": 2, "has_bit": 1, "type": 13, "label": 1 },
+        "literal_hand_type": { "offset": 32, "number": 3, "has_bit": 2, "type": 13, "label": 1 }
+      }
+    },
+    "CClientMsg_RotateAnchor": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "angle": { "offset": 24, "number": 1, "has_bit": 0, "type": 2, "label": 1 }
+      }
+    },
     "CCSPredictionEvent_DamageTag": {
       "size": 40,
       "has_bits_offset": 16,
@@ -12397,75 +12467,6 @@
         "origin": { "offset": 24, "number": 2, "has_bit": 0, "type": 11, "label": 1 },
         "angles": { "offset": 32, "number": 3, "has_bit": 1, "type": 11, "label": 1 },
         "velocity": { "offset": 40, "number": 4, "has_bit": 2, "type": 11, "label": 1 }
-      }
-    },
-    "CMsgTEPlayerAnimEvent": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "player": { "offset": 32, "number": 1, "has_bit": 2, "type": 7, "label": 1 },
-        "event": { "offset": 24, "number": 2, "has_bit": 0, "type": 13, "label": 1 },
-        "data": { "offset": 28, "number": 3, "has_bit": 1, "type": 5, "label": 1 }
-      }
-    },
-    "CMsgTERadioIcon": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "player": { "offset": 24, "number": 1, "has_bit": 0, "type": 7, "label": 1 }
-      }
-    },
-    "CMsgTEFireBullets": {
-      "size": 64,
-      "has_bits_offset": 16,
-      "fields": {
-        "origin": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
-        "angles": { "offset": 32, "number": 2, "has_bit": 1, "type": 11, "label": 1 },
-        "weapon_id": { "offset": 36, "number": 3, "has_bit": 2, "type": 13, "label": 1 },
-        "mode": { "offset": 40, "number": 4, "has_bit": 3, "type": 13, "label": 1 },
-        "seed": { "offset": 44, "number": 5, "has_bit": 4, "type": 13, "label": 1 },
-        "player": { "offset": 48, "number": 6, "has_bit": 5, "type": 7, "label": 1 },
-        "inaccuracy": { "offset": 52, "number": 7, "has_bit": 6, "type": 2, "label": 1 },
-        "recoil_index": { "offset": 56, "number": 8, "has_bit": 7, "type": 2, "label": 1 },
-        "spread": { "offset": 0, "number": 9, "has_bit": 16, "type": 2, "label": 1 },
-        "sound_type": { "offset": 1, "number": 10, "has_bit": 8, "type": 5, "label": 1 },
-        "item_def_index": { "offset": 2, "number": 11, "has_bit": -1, "type": 13, "label": 1 },
-        "sound_dsp_effect": { "offset": 3, "number": 12, "has_bit": -1, "type": 7, "label": 1 },
-        "ent_origin": { "offset": 4, "number": 13, "has_bit": -1, "type": 11, "label": 1 },
-        "num_bullets_remaining": { "offset": 5, "number": 14, "has_bit": -1, "type": 13, "label": 1 },
-        "attack_type": { "offset": 6, "number": 15, "has_bit": 24, "type": 13, "label": 1 },
-        "player_inair": { "offset": 7, "number": 17, "has_bit": 32, "type": 8, "label": 1 },
-        "player_scoped": { "offset": 16, "number": 18, "has_bit": 104, "type": 8, "label": 1 },
-        "tick": { "offset": 8, "number": 19, "has_bit": 56, "type": 5, "label": 1 },
-        "extra": { "offset": 4294967295, "number": 16, "has_bit": 60, "type": 11, "label": 1 }
-      }
-    },
-    "CMsgTEFireBullets_Extra": {
-      "size": 112,
-      "has_bits_offset": 16,
-      "fields": {
-        "aim_punch": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
-        "attack_tick_count": { "offset": 32, "number": 2, "has_bit": 1, "type": 5, "label": 1 },
-        "attack_tick_frac": { "offset": 104, "number": 3, "has_bit": 17, "type": 2, "label": 1 },
-        "render_tick_count": { "offset": 56, "number": 4, "has_bit": 4, "type": 5, "label": 1 },
-        "render_tick_frac": { "offset": 60, "number": 5, "has_bit": 5, "type": 2, "label": 1 },
-        "inaccuracy_move": { "offset": 108, "number": 6, "has_bit": 18, "type": 2, "label": 1 },
-        "inaccuracy_air": { "offset": 64, "number": 7, "has_bit": 6, "type": 2, "label": 1 },
-        "type": { "offset": 68, "number": 8, "has_bit": 7, "type": 5, "label": 1 }
-      }
-    },
-    "CMsgPlayerBulletHit": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "attacker_slot": { "offset": 48, "number": 1, "has_bit": 6, "type": 5, "label": 1 },
-        "victim_slot": { "offset": 52, "number": 2, "has_bit": 7, "type": 5, "label": 1 },
-        "victim_pos": { "offset": 24, "number": 3, "has_bit": 0, "type": 11, "label": 1 },
-        "hit_group": { "offset": 32, "number": 4, "has_bit": 1, "type": 5, "label": 1 },
-        "damage": { "offset": 36, "number": 5, "has_bit": 2, "type": 5, "label": 1 },
-        "penetration_count": { "offset": 40, "number": 6, "has_bit": 3, "type": 5, "label": 1 },
-        "is_kill": { "offset": 44, "number": 7, "has_bit": 4, "type": 8, "label": 1 },
-        "through_smoke": { "offset": 45, "number": 8, "has_bit": 5, "type": 8, "label": 1 }
       }
     },
     "CCSUsrMsg_VGUIMenu": {
@@ -13305,6 +13306,75 @@
       "has_bits_offset": 16,
       "fields": {
         "reviewer_info": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 }
+      }
+    },
+    "CMsgTEPlayerAnimEvent": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "player": { "offset": 32, "number": 1, "has_bit": 2, "type": 7, "label": 1 },
+        "event": { "offset": 24, "number": 2, "has_bit": 0, "type": 13, "label": 1 },
+        "data": { "offset": 28, "number": 3, "has_bit": 1, "type": 5, "label": 1 }
+      }
+    },
+    "CMsgTERadioIcon": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "player": { "offset": 24, "number": 1, "has_bit": 0, "type": 7, "label": 1 }
+      }
+    },
+    "CMsgTEFireBullets": {
+      "size": 64,
+      "has_bits_offset": 16,
+      "fields": {
+        "origin": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
+        "angles": { "offset": 32, "number": 2, "has_bit": 1, "type": 11, "label": 1 },
+        "weapon_id": { "offset": 36, "number": 3, "has_bit": 2, "type": 13, "label": 1 },
+        "mode": { "offset": 40, "number": 4, "has_bit": 3, "type": 13, "label": 1 },
+        "seed": { "offset": 44, "number": 5, "has_bit": 4, "type": 13, "label": 1 },
+        "player": { "offset": 48, "number": 6, "has_bit": 5, "type": 7, "label": 1 },
+        "inaccuracy": { "offset": 52, "number": 7, "has_bit": 6, "type": 2, "label": 1 },
+        "recoil_index": { "offset": 56, "number": 8, "has_bit": 7, "type": 2, "label": 1 },
+        "spread": { "offset": 0, "number": 9, "has_bit": 16, "type": 2, "label": 1 },
+        "sound_type": { "offset": 1, "number": 10, "has_bit": 8, "type": 5, "label": 1 },
+        "item_def_index": { "offset": 2, "number": 11, "has_bit": -1, "type": 13, "label": 1 },
+        "sound_dsp_effect": { "offset": 3, "number": 12, "has_bit": -1, "type": 7, "label": 1 },
+        "ent_origin": { "offset": 4, "number": 13, "has_bit": -1, "type": 11, "label": 1 },
+        "num_bullets_remaining": { "offset": 5, "number": 14, "has_bit": -1, "type": 13, "label": 1 },
+        "attack_type": { "offset": 6, "number": 15, "has_bit": 24, "type": 13, "label": 1 },
+        "player_inair": { "offset": 7, "number": 17, "has_bit": 32, "type": 8, "label": 1 },
+        "player_scoped": { "offset": 16, "number": 18, "has_bit": 104, "type": 8, "label": 1 },
+        "tick": { "offset": 8, "number": 19, "has_bit": 56, "type": 5, "label": 1 },
+        "extra": { "offset": 4294967295, "number": 16, "has_bit": 60, "type": 11, "label": 1 }
+      }
+    },
+    "CMsgTEFireBullets_Extra": {
+      "size": 112,
+      "has_bits_offset": 16,
+      "fields": {
+        "aim_punch": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
+        "attack_tick_count": { "offset": 32, "number": 2, "has_bit": 1, "type": 5, "label": 1 },
+        "attack_tick_frac": { "offset": 104, "number": 3, "has_bit": 17, "type": 2, "label": 1 },
+        "render_tick_count": { "offset": 56, "number": 4, "has_bit": 4, "type": 5, "label": 1 },
+        "render_tick_frac": { "offset": 60, "number": 5, "has_bit": 5, "type": 2, "label": 1 },
+        "inaccuracy_move": { "offset": 108, "number": 6, "has_bit": 18, "type": 2, "label": 1 },
+        "inaccuracy_air": { "offset": 64, "number": 7, "has_bit": 6, "type": 2, "label": 1 },
+        "type": { "offset": 68, "number": 8, "has_bit": 7, "type": 5, "label": 1 }
+      }
+    },
+    "CMsgPlayerBulletHit": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "attacker_slot": { "offset": 48, "number": 1, "has_bit": 6, "type": 5, "label": 1 },
+        "victim_slot": { "offset": 52, "number": 2, "has_bit": 7, "type": 5, "label": 1 },
+        "victim_pos": { "offset": 24, "number": 3, "has_bit": 0, "type": 11, "label": 1 },
+        "hit_group": { "offset": 32, "number": 4, "has_bit": 1, "type": 5, "label": 1 },
+        "damage": { "offset": 36, "number": 5, "has_bit": 2, "type": 5, "label": 1 },
+        "penetration_count": { "offset": 40, "number": 6, "has_bit": 3, "type": 5, "label": 1 },
+        "is_kill": { "offset": 44, "number": 7, "has_bit": 4, "type": 8, "label": 1 },
+        "through_smoke": { "offset": 45, "number": 8, "has_bit": 5, "type": 8, "label": 1 }
       }
     },
     "GameServerPing": {
@@ -15541,6 +15611,25 @@
         "price_sheet": { "offset": 32, "number": 8, "has_bit": 1, "type": 12, "label": 1 }
       }
     },
+    "CMsgVolatileContainerPricesheet": {
+      "size": 48,
+      "has_bits_offset": 16,
+      "fields": {
+        "version": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 },
+        "entries": { "offset": 32, "number": 2, "has_bit": 1, "type": 11, "label": 3 }
+      }
+    },
+    "CMsgVolatileContainerPricesheet_Entry": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "key": { "offset": 48, "number": 1, "has_bit": 0, "type": 6, "label": 1 },
+        "cost": { "offset": 24, "number": 2, "has_bit": -1, "type": 13, "label": 1 },
+        "trend": { "offset": 0, "number": 3, "has_bit": 16, "type": 17, "label": 1 },
+        "low": { "offset": 4294967295, "number": 4, "has_bit": 8, "type": 13, "label": 1 },
+        "high": { "offset": 16, "number": 5, "has_bit": -1, "type": 13, "label": 1 }
+      }
+    },
     "CMsgUpdateItemSchema": {
       "size": 48,
       "has_bits_offset": 16,
@@ -15941,57 +16030,6 @@
         "crate_item_id": { "offset": 24, "number": 1, "has_bit": 0, "type": 4, "label": 1 }
       }
     },
-    "CClientMsg_CustomGameEvent": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "event_name": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
-        "data": { "offset": 32, "number": 2, "has_bit": 1, "type": 12, "label": 1 }
-      }
-    },
-    "CClientMsg_CustomGameEventBounce": {
-      "size": 48,
-      "has_bits_offset": 16,
-      "fields": {
-        "event_name": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 },
-        "data": { "offset": 32, "number": 2, "has_bit": 1, "type": 12, "label": 1 },
-        "player_slot": { "offset": 40, "number": 3, "has_bit": 2, "type": 5, "label": 1 }
-      }
-    },
-    "CClientMsg_ClientUIEvent": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "event": { "offset": 40, "number": 1, "has_bit": 2, "type": 14, "label": 1 },
-        "ent_ehandle": { "offset": 44, "number": 2, "has_bit": 3, "type": 13, "label": 1 },
-        "client_ehandle": { "offset": 48, "number": 3, "has_bit": 4, "type": 13, "label": 1 },
-        "data1": { "offset": 24, "number": 4, "has_bit": 0, "type": 9, "label": 1 },
-        "data2": { "offset": 32, "number": 5, "has_bit": 1, "type": 9, "label": 1 }
-      }
-    },
-    "CClientMsg_DevPaletteVisibilityChangedEvent": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "visible": { "offset": 24, "number": 1, "has_bit": 0, "type": 8, "label": 1 }
-      }
-    },
-    "CClientMsg_WorldUIControllerHasPanelChangedEvent": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "has_panel": { "offset": 24, "number": 1, "has_bit": 0, "type": 8, "label": 1 },
-        "client_ehandle": { "offset": 28, "number": 2, "has_bit": 1, "type": 13, "label": 1 },
-        "literal_hand_type": { "offset": 32, "number": 3, "has_bit": 2, "type": 13, "label": 1 }
-      }
-    },
-    "CClientMsg_RotateAnchor": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "angle": { "offset": 24, "number": 1, "has_bit": 0, "type": 2, "label": 1 }
-      }
-    },
     "MLDict": {
       "size": 48,
       "has_bits_offset": 16,
@@ -16109,181 +16147,6 @@
         "distance_to_hurt_target": { "offset": 76, "number": 5, "has_bit": 4, "type": 2, "label": 1 },
         "delta_yaw_window": { "offset": 24, "number": 6, "has_bit": -1, "type": 2, "label": 3 },
         "delta_pitch_window": { "offset": 40, "number": 7, "has_bit": -1, "type": 2, "label": 3 }
-      }
-    },
-    "CMsgVDebugGameSessionIDEvent": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "clientid": { "offset": 32, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
-        "gamesessionid": { "offset": 24, "number": 2, "has_bit": 0, "type": 9, "label": 1 }
-      }
-    },
-    "CMsgPlaceDecalEvent": {
-      "size": 112,
-      "has_bits_offset": 16,
-      "fields": {
-        "position": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
-        "normal": { "offset": 32, "number": 2, "has_bit": 1, "type": 11, "label": 1 },
-        "saxis": { "offset": 40, "number": 3, "has_bit": 2, "type": 11, "label": 1 },
-        "boneindex": { "offset": 64, "number": 4, "has_bit": 5, "type": 5, "label": 1 },
-        "triangleindex": { "offset": 100, "number": 13, "has_bit": 13, "type": 5, "label": 1 },
-        "flags": { "offset": 68, "number": 5, "has_bit": 6, "type": 13, "label": 1 },
-        "color": { "offset": 72, "number": 6, "has_bit": 7, "type": 7, "label": 1 },
-        "random_seed": { "offset": 76, "number": 7, "has_bit": 8, "type": 5, "label": 1 },
-        "decal_group_name": { "offset": 80, "number": 8, "has_bit": 9, "type": 13, "label": 1 },
-        "size_override": { "offset": 84, "number": 9, "has_bit": 10, "type": 2, "label": 1 },
-        "entityhandle": { "offset": 104, "number": 10, "has_bit": 14, "type": 13, "label": 1 },
-        "material_id": { "offset": 88, "number": 11, "has_bit": 11, "type": 4, "label": 1 },
-        "sequence_name": { "offset": 96, "number": 12, "has_bit": 12, "type": 13, "label": 1 },
-        "position_objectspace": { "offset": 48, "number": 14, "has_bit": 3, "type": 11, "label": 1 },
-        "normal_objectspace": { "offset": 56, "number": 15, "has_bit": 4, "type": 11, "label": 1 }
-      }
-    },
-    "CMsgClearWorldDecalsEvent": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "flagstoclear": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 }
-      }
-    },
-    "CMsgClearEntityDecalsEvent": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "flagstoclear": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 }
-      }
-    },
-    "CMsgClearDecalsForEntityEvent": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "flagstoclear": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 },
-        "entityhandle": { "offset": 28, "number": 2, "has_bit": 1, "type": 13, "label": 1 }
-      }
-    },
-    "CMsgSource1LegacyGameEventList": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "descriptors": { "offset": 32, "number": 1, "has_bit": 1, "type": 11, "label": 3 }
-      }
-    },
-    "CMsgSource1LegacyGameEventList_key_t": {
-      "size": 64,
-      "has_bits_offset": 16,
-      "fields": {
-        "type": { "offset": 56, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
-        "name": { "offset": 48, "number": 2, "has_bit": 0, "type": 9, "label": 1 }
-      }
-    },
-    "CMsgSource1LegacyGameEventList_descriptor_t": {
-      "size": 48,
-      "has_bits_offset": -1,
-      "fields": {
-        "eventid": { "offset": 16, "number": 1, "has_bit": -1, "type": 5, "label": 1 },
-        "name": { "offset": 16, "number": 2, "has_bit": -1, "type": 9, "label": 1 },
-        "keys": { "offset": 8, "number": 3, "has_bit": -1, "type": 11, "label": 3 }
-      }
-    },
-    "CMsgSource1LegacyListenEvents": {
-      "size": 48,
-      "has_bits_offset": 16,
-      "fields": {
-        "playerslot": { "offset": 40, "number": 1, "has_bit": 0, "type": 5, "label": 1 },
-        "eventarraybits": { "offset": 24, "number": 2, "has_bit": -1, "type": 13, "label": 3 }
-      }
-    },
-    "CMsgSource1LegacyGameEvent": {
-      "size": 64,
-      "has_bits_offset": 16,
-      "fields": {
-        "event_name": { "offset": 32, "number": 1, "has_bit": 1, "type": 9, "label": 1 },
-        "eventid": { "offset": 24, "number": 2, "has_bit": 0, "type": 5, "label": 1 },
-        "keys": { "offset": 36, "number": 3, "has_bit": 2, "type": 11, "label": 3 },
-        "server_tick": { "offset": 40, "number": 4, "has_bit": 3, "type": 5, "label": 1 },
-        "passthrough": { "offset": 44, "number": 5, "has_bit": 4, "type": 5, "label": 1 }
-      }
-    },
-    "CMsgSource1LegacyGameEvent_key_t": {
-      "size": 72,
-      "has_bits_offset": 16,
-      "fields": {
-        "type": { "offset": 48, "number": 1, "has_bit": 0, "type": 5, "label": 1 },
-        "val_string": { "offset": 56, "number": 2, "has_bit": 1, "type": 9, "label": 1 },
-        "val_float": { "offset": 24, "number": 3, "has_bit": -1, "type": 2, "label": 1 },
-        "val_long": { "offset": 60, "number": 4, "has_bit": 2, "type": 5, "label": 1 },
-        "val_short": { "offset": 64, "number": 5, "has_bit": 3, "type": 5, "label": 1 },
-        "val_byte": { "offset": 0, "number": 6, "has_bit": 16, "type": 5, "label": 1 },
-        "val_bool": { "offset": 1, "number": 7, "has_bit": 8, "type": 8, "label": 1 },
-        "val_uint64": { "offset": 4294967295, "number": 8, "has_bit": -1, "type": 4, "label": 1 }
-      }
-    },
-    "CMsgSosStartSoundEvent": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "soundevent_guid": { "offset": 32, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
-        "soundevent_hash": { "offset": 36, "number": 2, "has_bit": 2, "type": 7, "label": 1 },
-        "source_entity_index": { "offset": 48, "number": 3, "has_bit": 5, "type": 5, "label": 1 },
-        "seed": { "offset": 40, "number": 4, "has_bit": 3, "type": 5, "label": 1 },
-        "packed_params": { "offset": 24, "number": 5, "has_bit": 0, "type": 12, "label": 1 },
-        "start_time": { "offset": 44, "number": 6, "has_bit": 4, "type": 2, "label": 1 }
-      }
-    },
-    "CMsgSosStopSoundEvent": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "soundevent_guid": { "offset": 24, "number": 1, "has_bit": 0, "type": 5, "label": 1 }
-      }
-    },
-    "CMsgSosStopSoundEventHash": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "soundevent_hash": { "offset": 24, "number": 1, "has_bit": 0, "type": 7, "label": 1 },
-        "source_entity_index": { "offset": 28, "number": 2, "has_bit": 1, "type": 5, "label": 1 }
-      }
-    },
-    "CMsgSosSetSoundEventParams": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "soundevent_guid": { "offset": 32, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
-        "packed_params": { "offset": 24, "number": 5, "has_bit": 0, "type": 12, "label": 1 }
-      }
-    },
-    "CMsgSosSetLibraryStackFields": {
-      "size": 40,
-      "has_bits_offset": 16,
-      "fields": {
-        "stack_hash": { "offset": 32, "number": 1, "has_bit": 1, "type": 7, "label": 1 },
-        "packed_fields": { "offset": 24, "number": 5, "has_bit": 0, "type": 12, "label": 1 }
-      }
-    },
-    "CMsgClothStiffenAnimEvent": {
-      "size": 48,
-      "has_bits_offset": 16,
-      "fields": {
-        "source_entity_index": { "offset": 44, "number": 1, "has_bit": 5, "type": 5, "label": 1 },
-        "vertex_set_hash": { "offset": 24, "number": 2, "has_bit": 0, "type": 5, "label": 1 },
-        "intensity": { "offset": 28, "number": 3, "has_bit": 1, "type": 2, "label": 1 },
-        "length": { "offset": 32, "number": 4, "has_bit": 2, "type": 2, "label": 1 },
-        "speed_in": { "offset": 36, "number": 5, "has_bit": 3, "type": 2, "label": 1 },
-        "speed_out": { "offset": 40, "number": 6, "has_bit": 4, "type": 2, "label": 1 }
-      }
-    },
-    "CMsgClothEffectAnimEvent": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "source_entity_index": { "offset": 52, "number": 1, "has_bit": 5, "type": 5, "label": 1 },
-        "effect_name_hash": { "offset": 40, "number": 2, "has_bit": 2, "type": 5, "label": 1 },
-        "operation": { "offset": 44, "number": 3, "has_bit": 3, "type": 5, "label": 1 },
-        "flags": { "offset": 48, "number": 4, "has_bit": 4, "type": 5, "label": 1 },
-        "tags": { "offset": 24, "number": 5, "has_bit": 0, "type": 9, "label": 1 },
-        "pte": { "offset": 32, "number": 6, "has_bit": 1, "type": 11, "label": 1 }
       }
     },
     "CMsgSOIDOwner": {
@@ -16742,6 +16605,181 @@
         "version": { "offset": 24, "number": 2, "has_bit": -1, "type": 4, "label": 1 }
       }
     },
+    "CMsgVDebugGameSessionIDEvent": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "clientid": { "offset": 32, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
+        "gamesessionid": { "offset": 24, "number": 2, "has_bit": 0, "type": 9, "label": 1 }
+      }
+    },
+    "CMsgPlaceDecalEvent": {
+      "size": 112,
+      "has_bits_offset": 16,
+      "fields": {
+        "position": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
+        "normal": { "offset": 32, "number": 2, "has_bit": 1, "type": 11, "label": 1 },
+        "saxis": { "offset": 40, "number": 3, "has_bit": 2, "type": 11, "label": 1 },
+        "boneindex": { "offset": 64, "number": 4, "has_bit": 5, "type": 5, "label": 1 },
+        "triangleindex": { "offset": 100, "number": 13, "has_bit": 13, "type": 5, "label": 1 },
+        "flags": { "offset": 68, "number": 5, "has_bit": 6, "type": 13, "label": 1 },
+        "color": { "offset": 72, "number": 6, "has_bit": 7, "type": 7, "label": 1 },
+        "random_seed": { "offset": 76, "number": 7, "has_bit": 8, "type": 5, "label": 1 },
+        "decal_group_name": { "offset": 80, "number": 8, "has_bit": 9, "type": 13, "label": 1 },
+        "size_override": { "offset": 84, "number": 9, "has_bit": 10, "type": 2, "label": 1 },
+        "entityhandle": { "offset": 104, "number": 10, "has_bit": 14, "type": 13, "label": 1 },
+        "material_id": { "offset": 88, "number": 11, "has_bit": 11, "type": 4, "label": 1 },
+        "sequence_name": { "offset": 96, "number": 12, "has_bit": 12, "type": 13, "label": 1 },
+        "position_objectspace": { "offset": 48, "number": 14, "has_bit": 3, "type": 11, "label": 1 },
+        "normal_objectspace": { "offset": 56, "number": 15, "has_bit": 4, "type": 11, "label": 1 }
+      }
+    },
+    "CMsgClearWorldDecalsEvent": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "flagstoclear": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 }
+      }
+    },
+    "CMsgClearEntityDecalsEvent": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "flagstoclear": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 }
+      }
+    },
+    "CMsgClearDecalsForEntityEvent": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "flagstoclear": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 },
+        "entityhandle": { "offset": 28, "number": 2, "has_bit": 1, "type": 13, "label": 1 }
+      }
+    },
+    "CMsgSource1LegacyGameEventList": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "descriptors": { "offset": 32, "number": 1, "has_bit": 1, "type": 11, "label": 3 }
+      }
+    },
+    "CMsgSource1LegacyGameEventList_key_t": {
+      "size": 64,
+      "has_bits_offset": 16,
+      "fields": {
+        "type": { "offset": 56, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
+        "name": { "offset": 48, "number": 2, "has_bit": 0, "type": 9, "label": 1 }
+      }
+    },
+    "CMsgSource1LegacyGameEventList_descriptor_t": {
+      "size": 48,
+      "has_bits_offset": -1,
+      "fields": {
+        "eventid": { "offset": 16, "number": 1, "has_bit": -1, "type": 5, "label": 1 },
+        "name": { "offset": 16, "number": 2, "has_bit": -1, "type": 9, "label": 1 },
+        "keys": { "offset": 8, "number": 3, "has_bit": -1, "type": 11, "label": 3 }
+      }
+    },
+    "CMsgSource1LegacyListenEvents": {
+      "size": 48,
+      "has_bits_offset": 16,
+      "fields": {
+        "playerslot": { "offset": 40, "number": 1, "has_bit": 0, "type": 5, "label": 1 },
+        "eventarraybits": { "offset": 24, "number": 2, "has_bit": -1, "type": 13, "label": 3 }
+      }
+    },
+    "CMsgSource1LegacyGameEvent": {
+      "size": 64,
+      "has_bits_offset": 16,
+      "fields": {
+        "event_name": { "offset": 32, "number": 1, "has_bit": 1, "type": 9, "label": 1 },
+        "eventid": { "offset": 24, "number": 2, "has_bit": 0, "type": 5, "label": 1 },
+        "keys": { "offset": 36, "number": 3, "has_bit": 2, "type": 11, "label": 3 },
+        "server_tick": { "offset": 40, "number": 4, "has_bit": 3, "type": 5, "label": 1 },
+        "passthrough": { "offset": 44, "number": 5, "has_bit": 4, "type": 5, "label": 1 }
+      }
+    },
+    "CMsgSource1LegacyGameEvent_key_t": {
+      "size": 72,
+      "has_bits_offset": 16,
+      "fields": {
+        "type": { "offset": 48, "number": 1, "has_bit": 0, "type": 5, "label": 1 },
+        "val_string": { "offset": 56, "number": 2, "has_bit": 1, "type": 9, "label": 1 },
+        "val_float": { "offset": 24, "number": 3, "has_bit": -1, "type": 2, "label": 1 },
+        "val_long": { "offset": 60, "number": 4, "has_bit": 2, "type": 5, "label": 1 },
+        "val_short": { "offset": 64, "number": 5, "has_bit": 3, "type": 5, "label": 1 },
+        "val_byte": { "offset": 0, "number": 6, "has_bit": 16, "type": 5, "label": 1 },
+        "val_bool": { "offset": 1, "number": 7, "has_bit": 8, "type": 8, "label": 1 },
+        "val_uint64": { "offset": 4294967295, "number": 8, "has_bit": -1, "type": 4, "label": 1 }
+      }
+    },
+    "CMsgSosStartSoundEvent": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "soundevent_guid": { "offset": 32, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
+        "soundevent_hash": { "offset": 36, "number": 2, "has_bit": 2, "type": 7, "label": 1 },
+        "source_entity_index": { "offset": 48, "number": 3, "has_bit": 5, "type": 5, "label": 1 },
+        "seed": { "offset": 40, "number": 4, "has_bit": 3, "type": 5, "label": 1 },
+        "packed_params": { "offset": 24, "number": 5, "has_bit": 0, "type": 12, "label": 1 },
+        "start_time": { "offset": 44, "number": 6, "has_bit": 4, "type": 2, "label": 1 }
+      }
+    },
+    "CMsgSosStopSoundEvent": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "soundevent_guid": { "offset": 24, "number": 1, "has_bit": 0, "type": 5, "label": 1 }
+      }
+    },
+    "CMsgSosStopSoundEventHash": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "soundevent_hash": { "offset": 24, "number": 1, "has_bit": 0, "type": 7, "label": 1 },
+        "source_entity_index": { "offset": 28, "number": 2, "has_bit": 1, "type": 5, "label": 1 }
+      }
+    },
+    "CMsgSosSetSoundEventParams": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "soundevent_guid": { "offset": 32, "number": 1, "has_bit": 1, "type": 5, "label": 1 },
+        "packed_params": { "offset": 24, "number": 5, "has_bit": 0, "type": 12, "label": 1 }
+      }
+    },
+    "CMsgSosSetLibraryStackFields": {
+      "size": 40,
+      "has_bits_offset": 16,
+      "fields": {
+        "stack_hash": { "offset": 32, "number": 1, "has_bit": 1, "type": 7, "label": 1 },
+        "packed_fields": { "offset": 24, "number": 5, "has_bit": 0, "type": 12, "label": 1 }
+      }
+    },
+    "CMsgClothStiffenAnimEvent": {
+      "size": 48,
+      "has_bits_offset": 16,
+      "fields": {
+        "source_entity_index": { "offset": 44, "number": 1, "has_bit": 5, "type": 5, "label": 1 },
+        "vertex_set_hash": { "offset": 24, "number": 2, "has_bit": 0, "type": 5, "label": 1 },
+        "intensity": { "offset": 28, "number": 3, "has_bit": 1, "type": 2, "label": 1 },
+        "length": { "offset": 32, "number": 4, "has_bit": 2, "type": 2, "label": 1 },
+        "speed_in": { "offset": 36, "number": 5, "has_bit": 3, "type": 2, "label": 1 },
+        "speed_out": { "offset": 40, "number": 6, "has_bit": 4, "type": 2, "label": 1 }
+      }
+    },
+    "CMsgClothEffectAnimEvent": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "source_entity_index": { "offset": 52, "number": 1, "has_bit": 5, "type": 5, "label": 1 },
+        "effect_name_hash": { "offset": 40, "number": 2, "has_bit": 2, "type": 5, "label": 1 },
+        "operation": { "offset": 44, "number": 3, "has_bit": 3, "type": 5, "label": 1 },
+        "flags": { "offset": 48, "number": 4, "has_bit": 4, "type": 5, "label": 1 },
+        "tags": { "offset": 24, "number": 5, "has_bit": 0, "type": 9, "label": 1 },
+        "pte": { "offset": 32, "number": 6, "has_bit": 1, "type": 11, "label": 1 }
+      }
+    },
     "CDemoFileHeader": {
       "size": 120,
       "has_bits_offset": 16,
@@ -16990,6 +17028,22 @@
         "was_created": { "offset": 24, "number": 2, "has_bit": 0, "type": 8, "label": 1 }
       }
     },
+    "CEngineGotvSyncPacket": {
+      "size": 72,
+      "has_bits_offset": 16,
+      "fields": {
+        "match_id": { "offset": 24, "number": 1, "has_bit": 0, "type": 4, "label": 1 },
+        "instance_id": { "offset": 32, "number": 2, "has_bit": 1, "type": 13, "label": 1 },
+        "signupfragment": { "offset": 36, "number": 3, "has_bit": 2, "type": 13, "label": 1 },
+        "currentfragment": { "offset": 40, "number": 4, "has_bit": 3, "type": 13, "label": 1 },
+        "tickrate": { "offset": 44, "number": 5, "has_bit": 4, "type": 2, "label": 1 },
+        "tick": { "offset": 48, "number": 6, "has_bit": 5, "type": 13, "label": 1 },
+        "rtdelay": { "offset": 52, "number": 8, "has_bit": 6, "type": 2, "label": 1 },
+        "rcvage": { "offset": 56, "number": 9, "has_bit": 7, "type": 2, "label": 1 },
+        "keyframe_interval": { "offset": 60, "number": 10, "has_bit": 8, "type": 2, "label": 1 },
+        "cdndelay": { "offset": 64, "number": 11, "has_bit": 9, "type": 13, "label": 1 }
+      }
+    },
     "CMsgGCGiftedItems": {
       "size": 56,
       "has_bits_offset": 16,
@@ -17033,22 +17087,6 @@
         "item_id": { "offset": 24, "number": 1, "has_bit": -1, "type": 4, "label": 3 },
         "request": { "offset": 56, "number": 2, "has_bit": 0, "type": 13, "label": 1 },
         "extra_data": { "offset": 40, "number": 3, "has_bit": -1, "type": 4, "label": 3 }
-      }
-    },
-    "CEngineGotvSyncPacket": {
-      "size": 72,
-      "has_bits_offset": 16,
-      "fields": {
-        "match_id": { "offset": 24, "number": 1, "has_bit": 0, "type": 4, "label": 1 },
-        "instance_id": { "offset": 32, "number": 2, "has_bit": 1, "type": 13, "label": 1 },
-        "signupfragment": { "offset": 36, "number": 3, "has_bit": 2, "type": 13, "label": 1 },
-        "currentfragment": { "offset": 40, "number": 4, "has_bit": 3, "type": 13, "label": 1 },
-        "tickrate": { "offset": 44, "number": 5, "has_bit": 4, "type": 2, "label": 1 },
-        "tick": { "offset": 48, "number": 6, "has_bit": 5, "type": 13, "label": 1 },
-        "rtdelay": { "offset": 52, "number": 8, "has_bit": 6, "type": 2, "label": 1 },
-        "rcvage": { "offset": 56, "number": 9, "has_bit": 7, "type": 2, "label": 1 },
-        "keyframe_interval": { "offset": 60, "number": 10, "has_bit": 8, "type": 2, "label": 1 },
-        "cdndelay": { "offset": 64, "number": 11, "has_bit": 9, "type": 13, "label": 1 }
       }
     },
     "CMsgVector": {
@@ -18133,33 +18171,6 @@
         "pet_item_id": { "offset": 24, "number": 1, "has_bit": 0, "type": 4, "label": 1 }
       }
     },
-    "CPredictionEvent_Teleport": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "origin": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
-        "angles": { "offset": 32, "number": 2, "has_bit": 1, "type": 11, "label": 1 },
-        "drop_to_ground_range": { "offset": 48, "number": 3, "has_bit": 3, "type": 2, "label": 1 },
-        "velocity": { "offset": 40, "number": 4, "has_bit": 2, "type": 11, "label": 1 }
-      }
-    },
-    "CPredictionEvent_StringCommand": {
-      "size": 32,
-      "has_bits_offset": 16,
-      "fields": {
-        "command": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 }
-      }
-    },
-    "CPredictionEvent_Diagnostic": {
-      "size": 56,
-      "has_bits_offset": 16,
-      "fields": {
-        "id": { "offset": 40, "number": 1, "has_bit": 0, "type": 13, "label": 1 },
-        "requested_sync": { "offset": 44, "number": 2, "has_bit": 1, "type": 13, "label": 1 },
-        "requested_player_index": { "offset": 48, "number": 3, "has_bit": 2, "type": 13, "label": 1 },
-        "execution_sync": { "offset": 24, "number": 4, "has_bit": -1, "type": 13, "label": 3 }
-      }
-    },
     "CMsgGCHVacVerificationChange": {
       "size": 40,
       "has_bits_offset": 16,
@@ -18286,6 +18297,33 @@
       "has_bits_offset": 16,
       "fields": {
         "gceresult": { "offset": 24, "number": 1, "has_bit": 0, "type": 13, "label": 1 }
+      }
+    },
+    "CPredictionEvent_Teleport": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "origin": { "offset": 24, "number": 1, "has_bit": 0, "type": 11, "label": 1 },
+        "angles": { "offset": 32, "number": 2, "has_bit": 1, "type": 11, "label": 1 },
+        "drop_to_ground_range": { "offset": 48, "number": 3, "has_bit": 3, "type": 2, "label": 1 },
+        "velocity": { "offset": 40, "number": 4, "has_bit": 2, "type": 11, "label": 1 }
+      }
+    },
+    "CPredictionEvent_StringCommand": {
+      "size": 32,
+      "has_bits_offset": 16,
+      "fields": {
+        "command": { "offset": 24, "number": 1, "has_bit": 0, "type": 9, "label": 1 }
+      }
+    },
+    "CPredictionEvent_Diagnostic": {
+      "size": 56,
+      "has_bits_offset": 16,
+      "fields": {
+        "id": { "offset": 40, "number": 1, "has_bit": 0, "type": 13, "label": 1 },
+        "requested_sync": { "offset": 44, "number": 2, "has_bit": 1, "type": 13, "label": 1 },
+        "requested_player_index": { "offset": 48, "number": 3, "has_bit": 2, "type": 13, "label": 1 },
+        "execution_sync": { "offset": 24, "number": 4, "has_bit": -1, "type": 13, "label": 3 }
       }
     },
     "CMsgSource2SystemSpecs": {
@@ -20278,8 +20316,8 @@
       "fields": {
         "path": { "offset": 16, "number": 1, "has_bit": -1, "type": 5, "label": 3 },
         "source_file": { "offset": 0, "number": 2, "has_bit": -1, "type": 9, "label": 1 },
-        "begin": { "offset": 2797685104, "number": 3, "has_bit": -1, "type": 5, "label": 1 },
-        "end": { "offset": 32761, "number": 4, "has_bit": -1, "type": 5, "label": 1 }
+        "begin": { "offset": 2535414544, "number": 3, "has_bit": -1, "type": 5, "label": 1 },
+        "end": { "offset": 32767, "number": 4, "has_bit": -1, "type": 5, "label": 1 }
       }
     }
   }

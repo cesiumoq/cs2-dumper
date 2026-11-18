@@ -90,18 +90,17 @@ namespace rendersystemdx11 {
         RENDER_SLOT_PER_INSTANCE = 0x1,
     };
 
-    // RsRasterizerStateDesc_t
-    //   fields: 7
-    //   size: 0x10
-    class RsRasterizerStateDesc_t {
+    // RenderInputLayoutField_t
+    //   fields: 6
+    //   size: 0x4C
+    class RenderInputLayoutField_t {
     public:
-        SCHEMA_FIELD(RsFillMode_t                    , m_nFillMode                                     , 0x0) // RsFillMode_t
-        SCHEMA_FIELD(RsCullMode_t                    , m_nCullMode                                     , 0x1) // RsCullMode_t
-        SCHEMA_FIELD(bool                            , m_bDepthClipEnable                              , 0x2) // bool
-        SCHEMA_FIELD(bool                            , m_bMultisampleEnable                            , 0x3) // bool
-        SCHEMA_FIELD(std::int32_t                    , m_nDepthBias                                    , 0x4) // int32
-        SCHEMA_FIELD(float                           , m_flDepthBiasClamp                              , 0x8) // float32
-        SCHEMA_FIELD(float                           , m_flSlopeScaledDepthBias                        , 0xC) // float32
+        SCHEMA_FIELD(char                            , m_pSemanticName                                 , 0x0) // char[32]
+        SCHEMA_FIELD(std::int8_t                     , m_nSemanticIndex                                , 0x20) // int8
+        SCHEMA_FIELD(std::int16_t                    , m_nOffset                                       , 0x28) // int16
+        SCHEMA_FIELD(std::int8_t                     , m_nSlot                                         , 0x2A) // int8
+        SCHEMA_FIELD(RenderSlotType_t                , m_nSlotType                                     , 0x2B) // RenderSlotType_t
+        SCHEMA_FIELD(char                            , m_szShaderSemantic                              , 0x2C) // char[32]
     };
 
     // RsStencilStateDesc_t
@@ -122,15 +121,6 @@ namespace rendersystemdx11 {
         SCHEMA_FIELD(std::uint8_t                    , m_nStencilWriteMask                             , 0x5) // uint8
     };
 
-    // VsInputSignature_t
-    //   fields: 2
-    //   size: 0x30
-    class VsInputSignature_t {
-    public:
-        SCHEMA_FIELD(CUtlVector<VsInputSignatureElement_t>, m_elems                                         , 0x0) // CUtlVector<VsInputSignatureElement_t>
-        SCHEMA_FIELD(CUtlVector<VsInputSignatureElement_t>, m_depth_elems                                   , 0x18) // CUtlVector<VsInputSignatureElement_t>
-    };
-
     // RsDepthStencilStateDesc_t
     //   fields: 4
     //   size: 0x8
@@ -142,28 +132,18 @@ namespace rendersystemdx11 {
         SCHEMA_FIELD(RsStencilStateDesc_t            , m_stencilState                                  , 0x2) // RsStencilStateDesc_t
     };
 
-    // VsInputSignatureElement_t
-    //   fields: 4
-    //   size: 0xC4
-    class VsInputSignatureElement_t {
+    // RsRasterizerStateDesc_t
+    //   fields: 7
+    //   size: 0x10
+    class RsRasterizerStateDesc_t {
     public:
-        SCHEMA_FIELD(char                            , m_pName                                         , 0x0) // char[64]
-        SCHEMA_FIELD(char                            , m_pSemantic                                     , 0x40) // char[64]
-        SCHEMA_FIELD(char                            , m_pD3DSemanticName                              , 0x80) // char[64]
-        SCHEMA_FIELD(std::int32_t                    , m_nD3DSemanticIndex                             , 0xC0) // int32
-    };
-
-    // RenderInputLayoutField_t
-    //   fields: 6
-    //   size: 0x4C
-    class RenderInputLayoutField_t {
-    public:
-        SCHEMA_FIELD(char                            , m_pSemanticName                                 , 0x0) // char[32]
-        SCHEMA_FIELD(std::int8_t                     , m_nSemanticIndex                                , 0x20) // int8
-        SCHEMA_FIELD(std::int16_t                    , m_nOffset                                       , 0x28) // int16
-        SCHEMA_FIELD(std::int8_t                     , m_nSlot                                         , 0x2A) // int8
-        SCHEMA_FIELD(RenderSlotType_t                , m_nSlotType                                     , 0x2B) // RenderSlotType_t
-        SCHEMA_FIELD(char                            , m_szShaderSemantic                              , 0x2C) // char[32]
+        SCHEMA_FIELD(RsFillMode_t                    , m_nFillMode                                     , 0x0) // RsFillMode_t
+        SCHEMA_FIELD(RsCullMode_t                    , m_nCullMode                                     , 0x1) // RsCullMode_t
+        SCHEMA_FIELD(bool                            , m_bDepthClipEnable                              , 0x2) // bool
+        SCHEMA_FIELD(bool                            , m_bMultisampleEnable                            , 0x3) // bool
+        SCHEMA_FIELD(std::int32_t                    , m_nDepthBias                                    , 0x4) // int32
+        SCHEMA_FIELD(float                           , m_flDepthBiasClamp                              , 0x8) // float32
+        SCHEMA_FIELD(float                           , m_flSlopeScaledDepthBias                        , 0xC) // float32
     };
 
     // SheetSequenceIntegerId_t
@@ -172,6 +152,15 @@ namespace rendersystemdx11 {
     class SheetSequenceIntegerId_t {
     public:
         SCHEMA_FIELD(std::uint32_t                   , m_Value                                         , 0x0) // uint32
+    };
+
+    // VsInputSignature_t
+    //   fields: 2
+    //   size: 0x30
+    class VsInputSignature_t {
+    public:
+        SCHEMA_FIELD(CUtlVector<VsInputSignatureElement_t>, m_elems                                         , 0x0) // CUtlVector<VsInputSignatureElement_t>
+        SCHEMA_FIELD(CUtlVector<VsInputSignatureElement_t>, m_depth_elems                                   , 0x18) // CUtlVector<VsInputSignatureElement_t>
     };
 
     // RsBlendStateDesc_t
@@ -190,6 +179,17 @@ namespace rendersystemdx11 {
         SCHEMA_FIELD(std::uint32_t                   , m_blendOpAlphaBits                              , 0x18) // uint32
         SCHEMA_FIELD(std::uint8_t                    , m_blendEnableBits                               , 0x1C) // uint8
         SCHEMA_FIELD(std::uint8_t                    , m_srgbWriteEnableBits                           , 0x1D) // uint8
+    };
+
+    // VsInputSignatureElement_t
+    //   fields: 4
+    //   size: 0xC4
+    class VsInputSignatureElement_t {
+    public:
+        SCHEMA_FIELD(char                            , m_pName                                         , 0x0) // char[64]
+        SCHEMA_FIELD(char                            , m_pSemantic                                     , 0x40) // char[64]
+        SCHEMA_FIELD(char                            , m_pD3DSemanticName                              , 0x80) // char[64]
+        SCHEMA_FIELD(std::int32_t                    , m_nD3DSemanticIndex                             , 0xC0) // int32
     };
 
 } // namespace rendersystemdx11

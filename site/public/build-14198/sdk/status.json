@@ -1,0 +1,434 @@
+{
+  "auto_healed": [
+    {
+      "module": "client.dll",
+      "name": "DispatchEffect",
+      "old_pattern": "48 89 5C 24 ? 57 48 83 EC ? 48 8B F9 48 8B DA 48 8D 4C 24",
+      "pattern": "48 89 5C 24 08 57 48 83 EC 40 48 8B F9 48 8B DA 48 8D 4C 24",
+      "to": "0x1227F70"
+    },
+    {
+      "module": "client.dll",
+      "name": "FrameStageNotify",
+      "old_pattern": "48 89 5C 24 ? 48 89 6C 24 ? 57 48 83 EC ? 48 8B F9 33 ED",
+      "pattern": "48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 40 48",
+      "to": "0xB63350"
+    }
+  ],
+  "build_number": 14198,
+  "checks": [
+    {
+      "detail": "556 of 578 entries resolve; 22 need re-anchoring",
+      "items": [
+        {
+          "module": "client.dll",
+          "name": "BulkRegenIterator"
+        },
+        {
+          "module": "client.dll",
+          "name": "DrawLegs"
+        },
+        {
+          "module": "client.dll",
+          "name": "FirstPersonLegs"
+        },
+        {
+          "module": "client.dll",
+          "name": "GetChatObject"
+        },
+        {
+          "module": "client.dll",
+          "name": "GetWeaponInAccuracyRecoveryTime"
+        },
+        {
+          "module": "client.dll",
+          "name": "GloveApply_PerTick"
+        },
+        {
+          "module": "client.dll",
+          "name": "IsOverwatch"
+        },
+        {
+          "module": "client.dll",
+          "name": "RegenerateWeaponSkin"
+        },
+        {
+          "module": "client.dll",
+          "name": "RegenerateWeaponSkin_v2"
+        },
+        {
+          "module": "client.dll",
+          "name": "C_CSWeaponBase_GetRecoilOffset"
+        },
+        {
+          "module": "client.dll",
+          "name": "C_CSWeaponBase_UpdateAccuracyPenalty"
+        },
+        {
+          "module": "client.dll",
+          "name": "pWeaponRecoilTable"
+        },
+        {
+          "module": "engine2.dll",
+          "name": "PostEventAbstract"
+        },
+        {
+          "module": "networksystem.dll",
+          "name": "ProcessMessages"
+        },
+        {
+          "module": "networksystem.dll",
+          "name": "SendNetMessage"
+        },
+        {
+          "module": "networksystem.dll",
+          "name": "pNetworkSystem"
+        },
+        {
+          "module": "server.dll",
+          "name": "GameSystem_Think_CheckSteamBan"
+        },
+        {
+          "module": "soundsystem.dll",
+          "name": "pSoundChannels"
+        },
+        {
+          "module": "soundsystem.dll",
+          "name": "pSoundSystem"
+        },
+        {
+          "module": "soundsystem.dll",
+          "name": "SomeUtlSymbolFunc"
+        },
+        {
+          "module": "client.dll",
+          "name": "C_EconItemView_GetBasePlayerWeaponVData"
+        },
+        {
+          "module": "client.dll",
+          "name": "C_CSWeaponBase_UpdateCompositeMaterialSet"
+        }
+      ],
+      "name": "signatures_resolve",
+      "status": "warn"
+    },
+    {
+      "detail": "every pattern matches exactly once in its module",
+      "items": [],
+      "name": "patterns_unique",
+      "status": "pass"
+    },
+    {
+      "detail": "2 pattern(s) stopped matching and were re-anchored through the previous dump's prologue bytes; the new patterns are published here and must be copied into database.rs (tools/verify/heal.py --apply)",
+      "items": [
+        {
+          "module": "client.dll",
+          "name": "DispatchEffect",
+          "old_pattern": "48 89 5C 24 ? 57 48 83 EC ? 48 8B F9 48 8B DA 48 8D 4C 24",
+          "pattern": "48 89 5C 24 08 57 48 83 EC 40 48 8B F9 48 8B DA 48 8D 4C 24",
+          "rva": "0x1227F70"
+        },
+        {
+          "module": "client.dll",
+          "name": "FrameStageNotify",
+          "old_pattern": "48 89 5C 24 ? 48 89 6C 24 ? 57 48 83 EC ? 48 8B F9 33 ED",
+          "pattern": "48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 40 48",
+          "rva": "0xB63350"
+        }
+      ],
+      "name": "patterns_healed",
+      "status": "warn"
+    },
+    {
+      "detail": "1 pair(s) have only one side resolved",
+      "items": [
+        {
+          "global": "dwGameRules",
+          "global_rva": "0x2556E78",
+          "module": "client.dll",
+          "ok": true,
+          "signature": "pGameRules",
+          "signature_rva": "0x2556E78"
+        },
+        {
+          "global": "dwSensitivity",
+          "global_rva": "0x25546C8",
+          "module": "client.dll",
+          "ok": true,
+          "signature": "pSensitivity",
+          "signature_rva": "0x25546C8"
+        },
+        {
+          "global": "dwPrediction",
+          "global_rva": "0x2557440",
+          "module": "client.dll",
+          "ok": true,
+          "signature": "pPrediction",
+          "signature_rva": "0x2557440"
+        },
+        {
+          "global": "dwGlowManager",
+          "global_rva": "0x2553B90",
+          "module": "client.dll",
+          "ok": true,
+          "signature": "pGlowManager",
+          "signature_rva": "0x2553B90"
+        },
+        {
+          "global": "dwLocalPlayerController",
+          "global_rva": "0x252ED78",
+          "module": "client.dll",
+          "ok": true,
+          "signature": "pLocalPlayerController",
+          "signature_rva": "0x252ED78"
+        },
+        {
+          "global": "dwCSGOInput",
+          "global_rva": "0x256CFE0",
+          "module": "client.dll",
+          "ok": true,
+          "signature": "pCSGOInputInstance",
+          "signature_rva": "0x256CFE0"
+        },
+        {
+          "global": "dwBuildNumber",
+          "global_rva": "0x6B2D1C",
+          "module": "engine2.dll",
+          "ok": true,
+          "signature": "pBuildNumber",
+          "signature_rva": "0x6B2D1C"
+        },
+        {
+          "global": "dwNetworkGameClient",
+          "global_rva": "0x9AFB90",
+          "module": "engine2.dll",
+          "ok": true,
+          "signature": "pNetworkGameClient",
+          "signature_rva": "0x9AFB90"
+        },
+        {
+          "global": "dwWindowWidth",
+          "global_rva": "0x9B42E8",
+          "module": "engine2.dll",
+          "ok": true,
+          "signature": "pWindowWidth",
+          "signature_rva": "0x9B42E8"
+        },
+        {
+          "global": "dwWindowHeight",
+          "global_rva": "0x9B42EC",
+          "module": "engine2.dll",
+          "ok": true,
+          "signature": "pWindowHeight",
+          "signature_rva": "0x9B42EC"
+        },
+        {
+          "global": "dwSoundSystem",
+          "global_rva": "0x532470",
+          "module": "soundsystem.dll",
+          "ok": false,
+          "signature": "pSoundSystem",
+          "signature_rva": null
+        }
+      ],
+      "name": "global_twins",
+      "status": "warn"
+    },
+    {
+      "detail": "every module-relative global lands in a data section",
+      "items": [],
+      "name": "globals_in_data",
+      "status": "pass"
+    },
+    {
+      "detail": "450 function targets start after padding",
+      "items": [],
+      "name": "function_prologues",
+      "status": "pass"
+    },
+    {
+      "detail": "no signature global resolves into .text",
+      "items": [],
+      "name": "globals_not_code",
+      "status": "pass"
+    },
+    {
+      "detail": "62 fields agree with the hand-verified engine structs",
+      "items": [],
+      "name": "protobufs_vs_engine",
+      "status": "pass"
+    },
+    {
+      "detail": "every field and global in the feature recipes resolves on this build",
+      "items": [],
+      "name": "verified_fields",
+      "status": "pass"
+    },
+    {
+      "detail": "6 hand-verified offset(s) were verified on an older build — re-check them",
+      "items": [
+        {
+          "feature": "Entity list",
+          "field": "CGameEntitySystem::chunk array",
+          "verified_on": 14184
+        },
+        {
+          "feature": "Entity list",
+          "field": "CEntityIdentity::m_pEntity",
+          "verified_on": 14184
+        },
+        {
+          "feature": "Entity list",
+          "field": "CEntityIdentity::handle",
+          "verified_on": 14184
+        },
+        {
+          "feature": "ESP",
+          "field": "CModel::bone count",
+          "verified_on": 14184
+        },
+        {
+          "feature": "ESP",
+          "field": "CModel::bone names",
+          "verified_on": 14184
+        },
+        {
+          "feature": "Skin changer",
+          "field": "C_CSWeaponBase::composite material set",
+          "verified_on": 14184
+        }
+      ],
+      "name": "verified_manual",
+      "status": "warn"
+    },
+    {
+      "detail": "2 feature hook(s) name a signature that did not resolve",
+      "items": [
+        {
+          "feature": "Skin changer",
+          "module": "client.dll",
+          "signature": "C_CSWeaponBase_UpdateCompositeMaterialSet"
+        },
+        {
+          "feature": "Knife changer",
+          "module": "client.dll",
+          "signature": "C_CSWeaponBase_UpdateCompositeMaterialSet"
+        }
+      ],
+      "name": "verified_hooks",
+      "status": "fail"
+    },
+    {
+      "detail": "only 6 weapons present in the session; dump in a match with every weapon spawned for full coverage",
+      "items": [],
+      "name": "weapons_snapshot",
+      "status": "warn"
+    }
+  ],
+  "client_version": "2000946",
+  "dumper_version": "2.1.8",
+  "generated_at": "2026-11-18T22:02:51.279177500+01:00",
+  "note": "Written by cs2-sdk after every dump. `ok` is false when a check failed; warnings list what to look at. The auto-dump pipeline adds `update`, `auto_healed` and `known_issues`.",
+  "ok": false,
+  "patch_version": "1.41.9.8",
+  "signatures": {
+    "found": 556,
+    "missing": [
+      {
+        "module": "client.dll",
+        "name": "BulkRegenIterator"
+      },
+      {
+        "module": "client.dll",
+        "name": "DrawLegs"
+      },
+      {
+        "module": "client.dll",
+        "name": "FirstPersonLegs"
+      },
+      {
+        "module": "client.dll",
+        "name": "GetChatObject"
+      },
+      {
+        "module": "client.dll",
+        "name": "GetWeaponInAccuracyRecoveryTime"
+      },
+      {
+        "module": "client.dll",
+        "name": "GloveApply_PerTick"
+      },
+      {
+        "module": "client.dll",
+        "name": "IsOverwatch"
+      },
+      {
+        "module": "client.dll",
+        "name": "RegenerateWeaponSkin"
+      },
+      {
+        "module": "client.dll",
+        "name": "RegenerateWeaponSkin_v2"
+      },
+      {
+        "module": "client.dll",
+        "name": "C_CSWeaponBase_GetRecoilOffset"
+      },
+      {
+        "module": "client.dll",
+        "name": "C_CSWeaponBase_UpdateAccuracyPenalty"
+      },
+      {
+        "module": "client.dll",
+        "name": "pWeaponRecoilTable"
+      },
+      {
+        "module": "engine2.dll",
+        "name": "PostEventAbstract"
+      },
+      {
+        "module": "networksystem.dll",
+        "name": "ProcessMessages"
+      },
+      {
+        "module": "networksystem.dll",
+        "name": "SendNetMessage"
+      },
+      {
+        "module": "networksystem.dll",
+        "name": "pNetworkSystem"
+      },
+      {
+        "module": "server.dll",
+        "name": "GameSystem_Think_CheckSteamBan"
+      },
+      {
+        "module": "soundsystem.dll",
+        "name": "pSoundChannels"
+      },
+      {
+        "module": "soundsystem.dll",
+        "name": "pSoundSystem"
+      },
+      {
+        "module": "soundsystem.dll",
+        "name": "SomeUtlSymbolFunc"
+      },
+      {
+        "module": "client.dll",
+        "name": "C_EconItemView_GetBasePlayerWeaponVData"
+      },
+      {
+        "module": "client.dll",
+        "name": "C_CSWeaponBase_UpdateCompositeMaterialSet"
+      }
+    ],
+    "total": 578,
+    "unique_functions": 509
+  },
+  "summary": {
+    "fail": 1,
+    "pass": 6,
+    "warn": 5
+  }
+}

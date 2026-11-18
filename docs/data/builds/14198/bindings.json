@@ -1,0 +1,98 @@
+{
+    "bindings":  [
+                     {
+                         "name":  "CameraTrace",
+                         "module":  "client.dll",
+                         "rva":  "0xA151F0",
+                         "status":  "ok",
+                         "bytes":  "4C 8B DC 49 89 5B 08 49 89 6B 10 49 89 73 18 49 89 7B 20 41 54 41 56 41"
+                     },
+                     {
+                         "name":  "hull",
+                         "module":  "client.dll",
+                         "rva":  "0xA151F0",
+                         "status":  "ok",
+                         "bytes":  "4C 8B DC 49 89 5B 08 49 89 6B 10 49 89 73 18 49 89 7B 20 41 54 41 56 41"
+                     },
+                     {
+                         "name":  "allocate",
+                         "module":  "client.dll",
+                         "rva":  "0x4F5700",
+                         "status":  "ok",
+                         "bytes":  "48 89 5C 24 10 57 48 83 EC 20 33 DB 48 8B F9 48 85 C9 75 2D B9 38 00 00"
+                     },
+                     {
+                         "name":  "GetPaintKit",
+                         "module":  "client.dll",
+                         "rva":  "0x11896A0",
+                         "status":  "ok",
+                         "bytes":  "48 89 5C 24 08 57 48 83 EC 40 8B 15 08 70 60 01 48 8B F9 65 48 8B 04 25"
+                     },
+                     {
+                         "name":  "UpdateCompositeOwner",
+                         "module":  "client.dll",
+                         "rva":  "0x14E3007",
+                         "status":  "ok",
+                         "bytes":  "48 89 58 08 48 89 68 10 48 8B E9 48 89 78 20 4C 89 60 F8 45 33 E4 4C 89"
+                     },
+                     {
+                         "name":  "fire_event_client_side",
+                         "module":  "client.dll",
+                         "rva":  "0x9F6990",
+                         "status":  "ok",
+                         "bytes":  "40 55 41 54 41 55 41 56 48 8D 6C 24 C1 48 81 EC"
+                     },
+                     {
+                         "name":  "worldGroup",
+                         "module":  "client.dll",
+                         "rva":  "0x3B7C20",
+                         "status":  "ok",
+                         "bytes":  "40 55 48 8B EC 48 83 EC 60 85 D2 75 16 48 8B 0D 74 72 3D 02 48 8B 01 FF"
+                     },
+                     {
+                         "name":  "SetModel",
+                         "module":  "client.dll",
+                         "rva":  "0x960350",
+                         "status":  "ok",
+                         "bytes":  "40 53 48 83 EC 20 48 8B D9 4C 8B C2 48 8B 0D CD 27 BF 01 48 8D 54 24 40"
+                     },
+                     {
+                         "name":  "UpdateCompositeSet",
+                         "module":  "client.dll",
+                         "rva":  "0x7FE300",
+                         "status":  "ok",
+                         "bytes":  "40 55 56 41 57 48 8D 6C 24 B9 48 81 EC D0 00 00 00 48 8B 05 38 D5 CB 01"
+                     },
+                     {
+                         "name":  "lightTime",
+                         "module":  "client.dll",
+                         "rva":  "0x7587C0",
+                         "status":  "ok",
+                         "bytes":  "40 53 48 83 EC 20 48 8B D9 85 D2 74 1A 48 8B 05 FC B2 AC 01 F3 0F 10 48"
+                     },
+                     {
+                         "name":  "FireEventClientSide",
+                         "module":  "client.dll",
+                         "rva":  "0x9F5F00",
+                         "status":  "ok",
+                         "bytes":  "",
+                         "alias_of":  "fire_event_client_side"
+                     },
+                     {
+                         "name":  "MouseInputEnabled",
+                         "module":  "client.dll",
+                         "rva":  "0xCDA980",
+                         "status":  "ok",
+                         "bytes":  "",
+                         "alias_of":  "CCSGOInput::slot20"
+                     },
+                     {
+                         "name":  "CEntityClassNameByIndex",
+                         "module":  "client.dll",
+                         "rva":  "0xB64160",
+                         "status":  "ok",
+                         "bytes":  "",
+                         "alias_of":  null
+                     }
+                 ]
+}
